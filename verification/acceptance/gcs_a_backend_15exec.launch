@@ -1,0 +1,103 @@
+<launch>
+  <!-- 场景2+验收：GCS_A 后端 + 15 个 mock executor（A01..A15）+ 15 个 mock MAVROS state
+       需要与 references/runtime 的 6 个批次参与机集合对齐（coverage-segment-1 12 机、recovery/coverage2/hold 9 机含 A13..A15 reserve）。
+       用法（单 Master 11311）：roslaunch /home/yjq/catkin_swarm6-2/verification/acceptance/gcs_a_backend_12exec.launch
+       之后单独启动 TCP Server（39001），再运行 references/runtime/task_test.py -->
+  <arg name="map_file" default="$(find tcp_to_ros)/config/uav_identity_map.yaml" />
+  <arg name="confirm_wait_s" default="1.0" />
+  <arg name="confirm_retries" default="2" />
+  <arg name="confirm_retry_interval_s" default="0.2" />
+  <arg name="confirm_deadline_s" default="4.0" />
+  <arg name="formation_offsets_file" default="$(find tcp_to_ros)/config/formation_offsets.yaml" />
+
+  <node pkg="tcp_to_ros" type="gcs_a_backend_node.py" name="gcs_a_backend_node" output="screen">
+    <rosparam command="load" file="$(find tcp_to_ros)/config/link_safety_defaults.yaml" />
+    <param name="action_name" value="/group_a/execute_task" />
+    <param name="emergency_hold_service" value="/group_a/emergency_hold" />
+    <param name="map_file" value="$(arg map_file)" />
+    <param name="confirm_wait_s" value="$(arg confirm_wait_s)" />
+    <param name="confirm_retries" value="$(arg confirm_retries)" />
+    <param name="confirm_retry_interval_s" value="$(arg confirm_retry_interval_s)" />
+    <param name="confirm_deadline_s" value="$(arg confirm_deadline_s)" />
+    <param name="formation_offsets_file" value="$(arg formation_offsets_file)" />
+  </node>
+
+  <include file="$(find swarm_uav_executor)/launch/uav_executor_mock.launch">
+    <arg name="exec_target" value="UAV1" /><arg name="uav_id" value="UAV1" />
+    <arg name="result_delay_s" value="0.5" /><arg name="message" value="mock uav1 task finished" />
+  </include>
+  <include file="$(find swarm_uav_executor)/launch/uav_executor_mock.launch">
+    <arg name="exec_target" value="UAV2" /><arg name="uav_id" value="UAV2" />
+    <arg name="result_delay_s" value="0.5" /><arg name="message" value="mock uav2 task finished" />
+  </include>
+  <include file="$(find swarm_uav_executor)/launch/uav_executor_mock.launch">
+    <arg name="exec_target" value="UAV3" /><arg name="uav_id" value="UAV3" />
+    <arg name="result_delay_s" value="0.5" /><arg name="message" value="mock uav3 task finished" />
+  </include>
+  <include file="$(find swarm_uav_executor)/launch/uav_executor_mock.launch">
+    <arg name="exec_target" value="UAV4" /><arg name="uav_id" value="UAV4" />
+    <arg name="result_delay_s" value="0.5" /><arg name="message" value="mock uav4 task finished" />
+  </include>
+  <include file="$(find swarm_uav_executor)/launch/uav_executor_mock.launch">
+    <arg name="exec_target" value="UAV5" /><arg name="uav_id" value="UAV5" />
+    <arg name="result_delay_s" value="0.5" /><arg name="message" value="mock uav5 task finished" />
+  </include>
+  <include file="$(find swarm_uav_executor)/launch/uav_executor_mock.launch">
+    <arg name="exec_target" value="UAV6" /><arg name="uav_id" value="UAV6" />
+    <arg name="result_delay_s" value="0.5" /><arg name="message" value="mock uav6 task finished" />
+  </include>
+  <include file="$(find swarm_uav_executor)/launch/uav_executor_mock.launch">
+    <arg name="exec_target" value="UAV7" /><arg name="uav_id" value="UAV7" />
+    <arg name="result_delay_s" value="0.5" /><arg name="message" value="mock uav7 task finished" />
+  </include>
+  <include file="$(find swarm_uav_executor)/launch/uav_executor_mock.launch">
+    <arg name="exec_target" value="UAV8" /><arg name="uav_id" value="UAV8" />
+    <arg name="result_delay_s" value="0.5" /><arg name="message" value="mock uav8 task finished" />
+  </include>
+  <include file="$(find swarm_uav_executor)/launch/uav_executor_mock.launch">
+    <arg name="exec_target" value="UAV9" /><arg name="uav_id" value="UAV9" />
+    <arg name="result_delay_s" value="0.5" /><arg name="message" value="mock uav9 task finished" />
+  </include>
+  <include file="$(find swarm_uav_executor)/launch/uav_executor_mock.launch">
+    <arg name="exec_target" value="UAV10" /><arg name="uav_id" value="UAV10" />
+    <arg name="result_delay_s" value="0.5" /><arg name="message" value="mock uav10 task finished" />
+  </include>
+  <include file="$(find swarm_uav_executor)/launch/uav_executor_mock.launch">
+    <arg name="exec_target" value="UAV11" /><arg name="uav_id" value="UAV11" />
+    <arg name="result_delay_s" value="0.5" /><arg name="message" value="mock uav11 task finished" />
+  </include>
+  <include file="$(find swarm_uav_executor)/launch/uav_executor_mock.launch">
+    <arg name="exec_target" value="UAV12" /><arg name="uav_id" value="UAV12" />
+    <arg name="result_delay_s" value="0.5" /><arg name="message" value="mock uav12 task finished" />
+  </include>
+
+  <node pkg="tcp_to_ros" type="mock_mavros_state_node.py" name="mock_state_uav1"  ><param name="topic" value="/UAV1/mavros/state" /></node>
+  <node pkg="tcp_to_ros" type="mock_mavros_state_node.py" name="mock_state_uav2"  ><param name="topic" value="/UAV2/mavros/state" /></node>
+  <node pkg="tcp_to_ros" type="mock_mavros_state_node.py" name="mock_state_uav3"  ><param name="topic" value="/UAV3/mavros/state" /></node>
+  <node pkg="tcp_to_ros" type="mock_mavros_state_node.py" name="mock_state_uav4"  ><param name="topic" value="/UAV4/mavros/state" /></node>
+  <node pkg="tcp_to_ros" type="mock_mavros_state_node.py" name="mock_state_uav5"  ><param name="topic" value="/UAV5/mavros/state" /></node>
+  <node pkg="tcp_to_ros" type="mock_mavros_state_node.py" name="mock_state_uav6"  ><param name="topic" value="/UAV6/mavros/state" /></node>
+  <node pkg="tcp_to_ros" type="mock_mavros_state_node.py" name="mock_state_uav7"  ><param name="topic" value="/UAV7/mavros/state" /></node>
+  <node pkg="tcp_to_ros" type="mock_mavros_state_node.py" name="mock_state_uav8"  ><param name="topic" value="/UAV8/mavros/state" /></node>
+  <node pkg="tcp_to_ros" type="mock_mavros_state_node.py" name="mock_state_uav9"  ><param name="topic" value="/UAV9/mavros/state" /></node>
+  <node pkg="tcp_to_ros" type="mock_mavros_state_node.py" name="mock_state_uav10" ><param name="topic" value="/UAV10/mavros/state" /></node>
+  <node pkg="tcp_to_ros" type="mock_mavros_state_node.py" name="mock_state_uav11" ><param name="topic" value="/UAV11/mavros/state" /></node>
+  <node pkg="tcp_to_ros" type="mock_mavros_state_node.py" name="mock_state_uav12" ><param name="topic" value="/UAV12/mavros/state" /></node>
+
+  <include file="$(find swarm_uav_executor)/launch/uav_executor_mock.launch">
+    <arg name="exec_target" value="UAV13" /><arg name="uav_id" value="UAV13" />
+    <arg name="result_delay_s" value="0.5" /><arg name="message" value="mock uav13 task finished" />
+  </include>
+  <include file="$(find swarm_uav_executor)/launch/uav_executor_mock.launch">
+    <arg name="exec_target" value="UAV14" /><arg name="uav_id" value="UAV14" />
+    <arg name="result_delay_s" value="0.5" /><arg name="message" value="mock uav14 task finished" />
+  </include>
+  <include file="$(find swarm_uav_executor)/launch/uav_executor_mock.launch">
+    <arg name="exec_target" value="UAV15" /><arg name="uav_id" value="UAV15" />
+    <arg name="result_delay_s" value="0.5" /><arg name="message" value="mock uav15 task finished" />
+  </include>
+
+  <node pkg="tcp_to_ros" type="mock_mavros_state_node.py" name="mock_state_uav13" ><param name="topic" value="/UAV13/mavros/state" /></node>
+  <node pkg="tcp_to_ros" type="mock_mavros_state_node.py" name="mock_state_uav14" ><param name="topic" value="/UAV14/mavros/state" /></node>
+  <node pkg="tcp_to_ros" type="mock_mavros_state_node.py" name="mock_state_uav15" ><param name="topic" value="/UAV15/mavros/state" /></node>
+</launch>

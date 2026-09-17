@@ -1,0 +1,15 @@
+uavs:
+  - {name: UAV1, ip: 127.0.0.1, port_offset: 0}
+  - {name: UAV2, ip: 127.0.0.1, port_offset: 100}
+  - {name: UAV3, ip: 127.0.0.1, port_offset: 200}
+
+topics:
+  - {name: trajectory_intent, type: swarm_uav_interfaces/UavTrajectoryIntent}
+
+max_freq: 0
+base_port: 5200
+
+topology:
+  UAV1: [UAV2, UAV3]
+  UAV2: [UAV1, UAV3]
+  UAV3: [UAV1, UAV2]

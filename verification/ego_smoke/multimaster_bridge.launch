@@ -1,0 +1,10 @@
+<launch>
+  <!-- 双/三 Master reciprocal 验证专用 bridge launch -->
+  <!-- 用法: export ROS_MASTER_URI=http://localhost:113XX; roslaunch /home/yjq/catkin_swarm6-2/verification/ego_smoke/multimaster_bridge.launch uav_name:=UAVX -->
+  <arg name="uav_name" default="UAV1" />
+
+  <node pkg="swarm_topology_bridge" type="bridge_node.py" name="swarm_bridge" output="screen">
+    <rosparam file="/home/yjq/catkin_swarm6-2/verification/ego_smoke/topology_multimaster.yaml" command="load" />
+    <param name="uav_name" value="$(arg uav_name)" />
+  </node>
+</launch>

@@ -1,0 +1,20 @@
+build/
+devel/
+logs/
+__pycache__/
+*.pyc
+*.catkin_tools
+*.pytest_cache
+*.vscode
+
+# 顶层辅助目录不纳入 catkin_swarm6-2
+/.catkin_tools/
+/.pytest_cache/
+/.vscode/
+/.tmp/
+/.ros_home/
+/runtime_logs/
+/quality_reports/
+
+# 本地保留的大文件，不入库
+/references/QGroundControl.AppImage

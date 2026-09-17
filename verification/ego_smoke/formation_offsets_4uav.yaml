@@ -1,0 +1,8 @@
+# 场景3 4机编队偏置（每台 follower executor 的 ego_swarm/formation_offsets）
+# 驱动语义：_follower_loop 按 goal.leader_id（已翻译为 exec_target UAVn）查本机偏置。
+# 每台机载 executor 只注入自己相对 leader 的偏移，key=leader exec_target，value=[x,y,z]。
+# startup_offboard_ego.sh 按 idx 注入：
+#   UAV2 (idx=2) -> 相对 UAV1 南 5m
+#   UAV3 (idx=3) -> 相对 UAV1 南 10m
+#   UAV4 (idx=4) -> 相对 UAV1 南 5m（recovery 时飞 A02 原编队位置）
+# UAV1 (leader) 为空字典，不跟随。

@@ -1,0 +1,21 @@
+[submodule "ego_planner_driver"]
+	path = src/ego_planner_driver
+	url = http://ub20tglh.local:3000/ub20tg/ego_planner_driver.git
+[submodule "runtime"]
+	path = references/runtime
+	url = git@github.com:popfishy/runtime.git
+[submodule "swarm_simulation"]
+	path = src/swarm_simulation
+	url = http://ub20tglh.local:3000/ub20tg/swarm_simulation.git
+[submodule "swarm_topology_bridge"]
+	path = src/swarm_topology_bridge
+	url = http://ub20tglh.local:3000/ub20tg/swarm_topology_bridge.git
+[submodule "swarm_uav_executor"]
+	path = src/swarm_uav_executor
+	url = http://ub20tglh.local:3000/ub20tg/swarm_uav_executor.git
+[submodule "swarm_uav_interfaces"]
+	path = src/swarm_uav_interfaces
+	url = http://ub20tglh.local:3000/ub20tg/swarm_uav_interfaces.git
+[submodule "tcp_to_ros"]
+	path = src/tcp_to_ros
+	url = http://ub20tglh.local:3000/ub20tg/tcp_to_ros.git

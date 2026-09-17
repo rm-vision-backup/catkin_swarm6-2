@@ -1,0 +1,52 @@
+<launch>
+  <!-- 4 机侦查测试的仿真地面站入口（GCS_A，本机多 Master 仿真拓扑）。
+
+       与实机入口 launch/gcs_a_real_four_uav.launch 的唯一区别是 bridge：
+       这里用仿真 topology（127.0.0.1 + port_offset），实机用生产 topology.yaml。
+
+       为什么不 include gcs_a_backend.launch：
+       它把 config/calibration_defaults.yaml（UAV1..UAV6）加载进 gcs_a_calibration
+       的私有命名空间，父 launch 覆盖不了。本测试要的是 UAV6/UAV8/UAV10/UAV12，
+       所以本文件把 calibration 节点展开并改加载四机配置。
+
+       !!! 本文件是 gcs_a_backend.launch 的展开副本 + topology_group_a_sim.launch 组合。
+       改动上游后请逐段比对。!!!
+
+       用法（Master 11310）：
+         export ROS_MASTER_URI=http://localhost:11310
+         export ROS_HOSTNAME=localhost
+         roslaunch verification/four_uav_recon/sitl/gcs_sim_four_uav.launch -->
+
+  <arg name="tcp_port" default="39001" />
+  <arg name="map_file" default="$(find tcp_to_ros)/config/uav_identity_map.yaml" />
+  <arg name="formation_offsets_file"
+       default="$(find tcp_to_ros)/config/formation_offsets_four_uav.yaml" />
+  <arg name="calibration_config_file"
+       default="$(find tcp_to_ros)/config/calibration_four_uav.yaml" />
+
+  <!-- 1. 仿真 bridge（GCS_A 角色，关掉单机 mock executor） -->
+  <include file="$(find tcp_to_ros)/launch/topology_group_a_sim.launch">
+    <arg name="uav_name" value="GCS_A" />
+    <arg name="run_uav_mock" value="false" />
+  </include>
+
+  <!-- 2. GCS_A 整组分发后端（formation_offsets_file 指向四机编队表） -->
+  <node pkg="tcp_to_ros" type="gcs_a_backend_node.py" name="gcs_a_backend_node" output="screen">
+    <rosparam command="load" file="$(find tcp_to_ros)/config/backend_defaults.yaml" />
+    <param name="map_file" value="$(arg map_file)" />
+    <param name="formation_offsets_file" value="$(arg formation_offsets_file)" />
+  </node>
+
+  <!-- 3. 原点校准（标定集合改由四机配置提供） -->
+  <node pkg="tcp_to_ros" type="gcs_a_calibration_node.py"
+        name="gcs_a_calibration" output="screen" required="true">
+    <rosparam command="load" file="$(arg calibration_config_file)" />
+    <param name="identity_file" value="$(arg map_file)" />
+  </node>
+
+  <!-- 4. TCP server -->
+  <node pkg="tcp_to_ros" type="tcp_server_node.py" name="tcp_server_node" output="screen">
+    <rosparam command="load" file="$(find tcp_to_ros)/config/transport_defaults.yaml" />
+    <param name="port" value="$(arg tcp_port)" />
+  </node>
+</launch>
