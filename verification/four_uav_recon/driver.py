@@ -32,7 +32,8 @@ from types import SimpleNamespace
 from typing import Dict, List, Optional
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-RUNTIME_SRC = REPO_ROOT / "src" / "runtime" / "src"
+# runtime 源码在 references/runtime/src（与 references/runtime/task_test.py:14-19 同范式）。
+RUNTIME_SRC = REPO_ROOT / "references" / "runtime" / "src"
 if str(RUNTIME_SRC) not in sys.path:
     sys.path.insert(0, str(RUNTIME_SRC))
 
@@ -156,6 +157,10 @@ def await_batch(
                     "command_id": feedback.command_id,
                     "status": feedback.status.value,
                     "error_code": feedback.error_code,
+                    # 机载执行器在"任务失败后安全 HOLD 也失败"时会把 error_code 统一
+                    # 写成 HOLD_FAILED，真正的原因只在 error_message 里（见
+                    # swarm_uav_executor/.../executor.py:112-141），必须一起留证。
+                    "error_message": feedback.error_message,
                 }
             )
 

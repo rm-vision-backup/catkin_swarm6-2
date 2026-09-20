@@ -27,6 +27,10 @@ NUAV=4
 KEEP_ON_FAIL=1
 MISSION_ID="four-uav-recon-001"
 
+# 机载任务执行超时（ego_swarm/task_timeout_s）：canonical 默认 200 s 短于侦查航线
+# （领机约 129 m，预计 160~200 s），会误判 DRIVER_TIMEOUT。与实机启动命令取同一值。
+export EGO_TASK_TIMEOUT_S=280
+
 while [ "$#" -gt 0 ]; do
   case "$1" in
     --keep-ros-home-on-fail) KEEP_ON_FAIL="${2:-1}"; shift 2 ;;
@@ -160,6 +164,12 @@ if [ "$KEEP_ON_FAIL" = 1 ]; then
   DEST="$WS/.ros_home_round_four_uav"
   rm -rf "$DEST"
   cp -a "$WS/.ros_home" "$DEST"
-  log "kept flight records -> $DEST"
+  # 机载各节点 stdout（driver/executor 的日志与异常栈）在 cleanup.sh:53 会被删掉，
+  # 先归档，否则失败原因无法事后定位。
+  mkdir -p "$DEST/logs"
+  for idx in $UAVS; do
+    cp -a "$WS/.tmp/logs/UAV${idx}_offboard_ego.log" "$DEST/logs/" 2>/dev/null || true
+  done
+  log "kept flight records -> $DEST (含 logs/UAV*_offboard_ego.log)"
 fi
 exit 1
