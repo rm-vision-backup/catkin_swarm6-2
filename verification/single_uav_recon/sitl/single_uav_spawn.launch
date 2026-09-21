@@ -1,0 +1,50 @@
+<launch>
+  <!-- 单机预验证专用仿真出生布局：只 spawn UAV6 / A06 -> iris_5
+       （PX4 实例号 = ID，系统号 = ID+1，所以 UAV6 用 ID=5。
+        与 [[four_uav_spawn.launch]] 的 iris_5 段逐字一致，保证同一架机在
+        "单机预验证" 与 "四机集群" 两次测试里的出生点/端口完全相同。）
+
+       为什么单独一份 launch：15sim/four_uav 都会同时 spawn 多架，单机预验证
+       只需要一架；出生点 (100,100) 与四机版的 UAV6 一致。
+
+       注意：单机标定冻结的原点 = 该机自身全球位置（calibration_uavs 只有
+       UAV6），所以它在任务坐标里起点就是 (0,0)；package/plans/plans.json 的
+       prepare 目标 (-2.5,-2.5,12) 对应"沿机头斜后 3.54 m、升到 12 m"的真实平移。
+
+       ID / mavlink_tcp_port / udp_gimbal_port 与 15sim 中同名 iris 完全一致，
+       保证 MAVLink 端口与机载 uav_offboard_ego.launch 的 udp_port=24540-1+tgt_system 对齐。
+
+       用法（Master 11300 / Gazebo 11345）：
+         export ROS_MASTER_URI=http://localhost:11300
+         export GAZEBO_MASTER_URI=http://localhost:11345
+         roslaunch verification/single_uav_recon/sitl/single_uav_spawn.launch gui:=false
+       机载层用 startup_offboard_ego.sh 6 启动。 -->
+
+  <arg name="world" default="$(find mavlink_sitl_gazebo)/worlds/empty.world"/>
+  <arg name="gui" default="false"/>
+  <arg name="debug" default="false"/>
+  <arg name="verbose" default="false"/>
+  <arg name="paused" default="false"/>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="world_name" value="$(arg world)"/>
+    <arg name="debug" value="$(arg debug)"/>
+    <arg name="verbose" value="$(arg verbose)"/>
+    <arg name="paused" value="$(arg paused)"/>
+  </include>
+
+  <!-- UAV6 / A06 -->
+  <group ns="iris_5">
+    <include file="$(find px4)/launch/single_vehicle_spawn_xtd.launch">
+      <arg name="x" value="100"/><arg name="y" value="100"/>
+      <arg name="z" value="0.5"/>
+      <arg name="R" value="0"/><arg name="P" value="0"/><arg name="Y" value="0"/>
+      <arg name="vehicle" value="iris"/><arg name="sdf" value="iris"/>
+      <arg name="ID" value="5"/><arg name="ID_in_group" value="5"/>
+      <arg name="mavlink_tcp_port" value="4565"/>
+      <arg name="udp_gimbal_port" value="13035"/>
+      <arg name="interactive" value="true"/>
+    </include>
+  </group>
+</launch>

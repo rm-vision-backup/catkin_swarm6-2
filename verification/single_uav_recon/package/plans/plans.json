@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "plans": [
+    {
+      "plan_id": "prepare-a",
+      "group_id": "GroupA",
+      "completion_policy": "ALL",
+      "robot_assignments": {
+        "A06": {
+          "robot_id": "A06",
+          "command_type": "MOVE_TO",
+          "payload": {
+            "target_pose": {
+              "x": -2.5,
+              "y": -2.5,
+              "z": 12.0,
+              "yaw": 0.0
+            }
+          }
+        }
+      }
+    },
+    {
+      "plan_id": "coverage-segment-1",
+      "group_id": "GroupA",
+      "completion_policy": "ALL",
+      "robot_assignments": {
+        "A06": {
+          "robot_id": "A06",
+          "command_type": "FOLLOW_ROUTE",
+          "payload": {
+            "waypoints": [
+              {
+                "x": -2.5,
+                "y": -2.5,
+                "z": 12.0,
+                "yaw": 0.0
+              },
+              {
+                "x": 17.5,
+                "y": -2.5,
+                "z": 12.0,
+                "yaw": 0.0
+              },
+              {
+                "x": 17.5,
+                "y": 9.5,
+                "z": 12.0,
+                "yaw": 0.0
+              },
+              {
+                "x": -2.5,
+                "y": 9.5,
+                "z": 12.0,
+                "yaw": 0.0
+              },
+              {
+                "x": -2.5,
+                "y": 21.5,
+                "z": 12.0,
+                "yaw": 0.0
+              },
+              {
+                "x": 17.5,
+                "y": 21.5,
+                "z": 12.0,
+                "yaw": 0.0
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

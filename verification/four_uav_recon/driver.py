@@ -70,10 +70,13 @@ class Phase:
     timeout_s: float
 
 
-DEFAULT_PHASES = (
-    Phase(name="prepare", plan_id="prepare-a", timeout_s=150.0),
-    Phase(name="coverage", plan_id="coverage-segment-1", timeout_s=300.0),
-)
+# 可下发的阶段登记表：--phases 按 name 选择，默认两个都下发（与旧行为一致）。
+PHASE_LIBRARY = {
+    "prepare": Phase(name="prepare", plan_id="prepare-a", timeout_s=150.0),
+    "coverage": Phase(name="coverage", plan_id="coverage-segment-1", timeout_s=300.0),
+}
+DEFAULT_PHASE_NAMES = ("prepare", "coverage")
+DEFAULT_PHASES = tuple(PHASE_LIBRARY[name] for name in DEFAULT_PHASE_NAMES)
 
 
 class JsonlLogger:
@@ -189,7 +192,13 @@ def run_mission(args: argparse.Namespace) -> int:
             f"command line has {args.mission_id!r}"
         )
 
-    phases = list(DEFAULT_PHASES)
+    selected = tuple(args.phases) if args.phases else DEFAULT_PHASE_NAMES
+    unknown = [name for name in selected if name not in PHASE_LIBRARY]
+    if unknown:
+        raise ValueError(
+            f"unknown phase(s) {unknown}; available: {sorted(PHASE_LIBRARY)}"
+        )
+    phases = [PHASE_LIBRARY[name] for name in selected]
     for phase in phases:
         if phase.plan_id not in context.plans:
             raise ValueError(
@@ -335,7 +344,7 @@ def run_mission(args: argparse.Namespace) -> int:
 
 def parse_args(argv: Optional[List[str]] = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="A 组 4 机实机测试驱动：编队准备 + 侦查"
+        description="A 组测试驱动：编队准备 +（可选）侦查"
     )
     parser.add_argument(
         "--package",
@@ -347,6 +356,14 @@ def parse_args(argv: Optional[List[str]] = None) -> argparse.Namespace:
     parser.add_argument("--tcp-port", type=int, default=39001)
     parser.add_argument("--connect-timeout-s", type=float, default=10.0)
     parser.add_argument("--log", default=None, help="JSONL 日志路径（默认不落盘）")
+    parser.add_argument(
+        "--phases",
+        nargs="+",
+        default=None,
+        metavar="NAME",
+        help=("只下发选中的阶段（默认全部：%s）；可选 %s"
+              % (" ".join(DEFAULT_PHASE_NAMES), " ".join(sorted(PHASE_LIBRARY)))),
+    )
     parser.add_argument(
         "--dry-run",
         action="store_true",

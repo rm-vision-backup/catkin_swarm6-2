@@ -28,7 +28,7 @@ KEEP_ON_FAIL=1
 MISSION_ID="four-uav-recon-001"
 
 # 机载任务执行超时（ego_swarm/task_timeout_s）：canonical 默认 200 s 短于侦查航线
-# （领机约 129 m，预计 160~200 s），会误判 DRIVER_TIMEOUT。与实机启动命令取同一值。
+# （领机约 84 m，预计 100~140 s）作为裕度保留。与实机启动命令取同一值。
 export EGO_TASK_TIMEOUT_S=280
 
 while [ "$#" -gt 0 ]; do

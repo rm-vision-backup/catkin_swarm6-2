@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "uavs": [
+    {
+      "uav_id": "A06",
+      "group_id": "GroupA",
+      "role": "Recon",
+      "is_leader": true,
+      "is_reserve": false,
+      "capabilities": [
+        "FOLLOW_ROUTE",
+        "HOVER",
+        "MOVE_TO"
+      ]
+    }
+  ]
+}
