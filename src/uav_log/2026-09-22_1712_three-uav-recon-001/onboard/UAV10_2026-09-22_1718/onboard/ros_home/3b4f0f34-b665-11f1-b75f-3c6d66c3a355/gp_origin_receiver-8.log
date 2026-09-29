@@ -1,0 +1,20 @@
+[rospy.client][INFO] 2026-09-22 17:08:54,735: init_node, name[/gp_origin_receiver], pid[4673]
+[xmlrpc][INFO] 2026-09-22 17:08:54,736: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-09-22 17:08:54,737: Started XML-RPC server [http://UAV10:33781/]
+[rospy.init][INFO] 2026-09-22 17:08:54,737: ROS Slave URI: [http://UAV10:33781/]
+[rospy.impl.masterslave][INFO] 2026-09-22 17:08:54,737: _ready: http://UAV10:33781/
+[rospy.registration][INFO] 2026-09-22 17:08:54,739: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2026-09-22 17:08:54,739: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-09-22 17:08:54,838: registered with master
+[rospy.rosout][INFO] 2026-09-22 17:08:54,838: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-09-22 17:08:54,846: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-09-22 17:08:54,848: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2026-09-22 17:08:54,865: topic[/mavros/global_position/gp_origin] adding connection to [http://UAV10:43065/], count 0
+[rospy.internal][INFO] 2026-09-22 17:08:54,874: topic[/mavros/state] adding connection to [http://UAV10:43065/], count 0
+[rospy.internal][INFO] 2026-09-22 17:08:54,917: topic[/gp_origin_confirmed] adding connection to [/uav_executor_UAV10], count 0
+[rospy.internal][INFO] 2026-09-22 17:08:54,982: topic[/GCS_A/group_a/gp_origin] adding connection to [http://UAV10:37853/], count 0
+[rospy.internal][INFO] 2026-09-22 17:08:55,079: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2026-09-22 17:08:55,112: topic[/mavros/global_position/set_gp_origin] adding connection to [/mavros], count 0
+[rospy.internal][INFO] 2026-09-22 17:08:55,324: topic[/gp_origin_confirmed] adding connection to [/swarm_bridge], count 1
+[rosout][WARNING] 2026-09-22 17:10:45,450: gp_origin readback mismatch horizontal=2.350m altitude=248.032m
+[rosout][INFO] 2026-09-22 17:10:45,454: gp_origin confirmed horizontal=0.000m altitude=0.001m

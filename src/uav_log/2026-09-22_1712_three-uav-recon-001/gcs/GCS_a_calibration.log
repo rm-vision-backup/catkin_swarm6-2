@@ -1,0 +1,32 @@
+[rospy.client][INFO] 2026-09-22 17:10:33,157: init_node, name[/gcs_a_calibration], pid[58606]
+[xmlrpc][INFO] 2026-09-22 17:10:33,157: XML-RPC server binding to 127.0.0.1:0
+[xmlrpc][INFO] 2026-09-22 17:10:33,157: Started XML-RPC server [http://localhost:46209/]
+[rospy.init][INFO] 2026-09-22 17:10:33,158: ROS Slave URI: [http://localhost:46209/]
+[rospy.impl.masterslave][INFO] 2026-09-22 17:10:33,158: _ready: http://localhost:46209/
+[rospy.registration][INFO] 2026-09-22 17:10:33,158: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2026-09-22 17:10:33,158: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-09-22 17:10:33,258: registered with master
+[rospy.rosout][INFO] 2026-09-22 17:10:33,258: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-09-22 17:10:33,262: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-09-22 17:10:33,263: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2026-09-22 17:10:33,271: calibration set=UAV8,UAV10,UAV13 all_uavs=3 identity_file=/home/yjq/catkin_swarm6-2/src/tcp_to_ros/config/uav_identity_map.yaml
+[rospy.internal][INFO] 2026-09-22 17:10:33,369: topic[/group_a/calibration_ready] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-09-22 17:10:33,371: topic[/group_a/reference_heading] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-09-22 17:10:33,426: topic[/UAV8/mavros/state] adding connection to [http://localhost:36435/], count 0
+[rospy.internal][INFO] 2026-09-22 17:10:33,428: topic[/UAV8/mavros/global_position/global] adding connection to [http://localhost:36435/], count 0
+[rospy.internal][INFO] 2026-09-22 17:10:33,429: topic[/UAV8/mavros/local_position/pose] adding connection to [http://localhost:36435/], count 0
+[rospy.internal][INFO] 2026-09-22 17:10:33,437: topic[/UAV8/gp_origin_confirmed] adding connection to [http://localhost:36435/], count 0
+[rospy.internal][INFO] 2026-09-22 17:10:33,518: topic[/group_a/gp_origin] adding connection to [/swarm_bridge], count 0
+[rospy.internal][INFO] 2026-09-22 17:10:33,522: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2026-09-22 17:10:33,526: topic[/UAV10/mavros/state] adding connection to [http://localhost:36435/], count 0
+[rospy.internal][INFO] 2026-09-22 17:10:33,528: topic[/UAV10/mavros/global_position/global] adding connection to [http://localhost:36435/], count 0
+[rospy.internal][INFO] 2026-09-22 17:10:33,529: topic[/UAV10/mavros/local_position/pose] adding connection to [http://localhost:36435/], count 0
+[rospy.internal][INFO] 2026-09-22 17:10:33,531: topic[/UAV10/gp_origin_confirmed] adding connection to [http://localhost:36435/], count 0
+[rospy.internal][INFO] 2026-09-22 17:10:33,533: topic[/UAV13/mavros/state] adding connection to [http://localhost:36435/], count 0
+[rospy.internal][INFO] 2026-09-22 17:10:33,534: topic[/UAV13/mavros/global_position/global] adding connection to [http://localhost:36435/], count 0
+[rospy.internal][INFO] 2026-09-22 17:10:33,535: topic[/UAV13/mavros/local_position/pose] adding connection to [http://localhost:36435/], count 0
+[rospy.internal][INFO] 2026-09-22 17:10:33,536: topic[/UAV13/gp_origin_confirmed] adding connection to [http://localhost:36435/], count 0
+[rosout][INFO] 2026-09-22 17:10:46,383: calibration frozen from UAV8,UAV10,UAV13 (heading gate 30deg) origin=(28.219833400,112.866868500,54.266) heading=-1.610 rad
+[rosout][INFO] 2026-09-22 17:10:46,483: Group A calibration ready: 3/3 required UAVs confirmed (UAV8,UAV10,UAV13); tracking 3 known UAVs
+[rospy.internal][INFO] 2026-09-22 17:11:13,821: topic[/group_a/calibration_ready] adding connection to [/rostopic_59393_1790068273690], count 1
+[rospy.internal][INFO] 2026-09-22 17:11:14,053: topic[/group_a/calibration_ready] removing connection to /rostopic_59393_1790068273690

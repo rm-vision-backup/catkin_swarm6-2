@@ -6,7 +6,7 @@
 
        为什么不 include gcs_a_backend.launch：
        它把 config/calibration_defaults.yaml（UAV1..UAV6）加载进 gcs_a_calibration
-       的私有命名空间，父 launch 覆盖不了。本测试要的是 UAV6/UAV8/UAV10/UAV12，
+       的私有命名空间，父 launch 覆盖不了。本测试要的是 UAV8/UAV10/UAV12/UAV13，
        所以本文件把 calibration 节点展开并改加载四机配置。
 
        !!! 本文件是 gcs_a_backend.launch 的展开副本 + topology_group_a_sim.launch 组合。

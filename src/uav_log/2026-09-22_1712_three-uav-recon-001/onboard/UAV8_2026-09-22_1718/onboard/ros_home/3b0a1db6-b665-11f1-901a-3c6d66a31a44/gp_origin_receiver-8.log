@@ -1,0 +1,20 @@
+[rospy.client][INFO] 2026-09-22 17:08:54,301: init_node, name[/gp_origin_receiver], pid[5421]
+[xmlrpc][INFO] 2026-09-22 17:08:54,302: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-09-22 17:08:54,303: Started XML-RPC server [http://UAV8:44869/]
+[rospy.init][INFO] 2026-09-22 17:08:54,303: ROS Slave URI: [http://UAV8:44869/]
+[rospy.impl.masterslave][INFO] 2026-09-22 17:08:54,303: _ready: http://UAV8:44869/
+[rospy.registration][INFO] 2026-09-22 17:08:54,305: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2026-09-22 17:08:54,305: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-09-22 17:08:54,404: registered with master
+[rospy.rosout][INFO] 2026-09-22 17:08:54,404: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-09-22 17:08:54,414: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-09-22 17:08:54,418: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2026-09-22 17:08:54,449: topic[/mavros/global_position/gp_origin] adding connection to [http://UAV8:43997/], count 0
+[rospy.internal][INFO] 2026-09-22 17:08:54,450: topic[/mavros/state] adding connection to [http://UAV8:43997/], count 0
+[rospy.internal][INFO] 2026-09-22 17:08:54,477: topic[/gp_origin_confirmed] adding connection to [/uav_executor_UAV8], count 0
+[rospy.internal][INFO] 2026-09-22 17:08:54,582: topic[/GCS_A/group_a/gp_origin] adding connection to [http://UAV8:44117/], count 0
+[rospy.internal][INFO] 2026-09-22 17:08:54,639: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2026-09-22 17:08:54,726: topic[/mavros/global_position/set_gp_origin] adding connection to [/mavros], count 0
+[rospy.internal][INFO] 2026-09-22 17:08:54,879: topic[/gp_origin_confirmed] adding connection to [/swarm_bridge], count 1
+[rosout][WARNING] 2026-09-22 17:10:45,901: gp_origin readback mismatch horizontal=5.676m altitude=5.351m
+[rosout][INFO] 2026-09-22 17:10:45,910: gp_origin confirmed horizontal=0.000m altitude=0.001m

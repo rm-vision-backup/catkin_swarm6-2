@@ -1,0 +1,15 @@
+# 本轮生效的子模块 commit
+swarm_uav_interfaces     ccab525 
+swarm_topology_bridge    c1ece96  M config/topology.yaml ?? config/topology.yaml.bak-20260923-ratelimited 
+swarm_uav_executor       2dcc67d 
+ego_planner_driver       99d3ad6 
+tcp_to_ros               6e2a5bb  M config/calibration_four_uav.yaml  M config/formation_offsets_four_uav.yaml  M launch/gcs_a_real_four_uav.launch 
+
+# 主仓
+catkin_swarm6-2          4362ef5
+
+# 四台板侧关键配置 md5
+UAV8 topology=15095e5a
+UAV10 topology=15095e5a
+UAV12 topology=15095e5a
+UAV13 topology=15095e5a

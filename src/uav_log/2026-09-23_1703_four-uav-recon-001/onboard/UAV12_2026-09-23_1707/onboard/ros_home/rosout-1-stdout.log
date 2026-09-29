@@ -1,0 +1,4 @@
+logging to /home/nvidia/catkin_swarm6-2/.ros_home/log/aded77ca-b72c-11f1-9fa2-3c6d66c3a2f4/rosout.log
+re-publishing aggregated messages to /rosout_agg
+subscribed to /rosout
+Error in XmlRpcClient::writeRequest: write error (Connection reset by peer).

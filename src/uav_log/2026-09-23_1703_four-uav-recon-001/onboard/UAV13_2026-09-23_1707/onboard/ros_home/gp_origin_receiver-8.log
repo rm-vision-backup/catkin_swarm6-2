@@ -1,0 +1,31 @@
+[rospy.client][INFO] 2026-09-23 16:47:12,132: init_node, name[/gp_origin_receiver], pid[3682]
+[xmlrpc][INFO] 2026-09-23 16:47:12,133: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-09-23 16:47:12,133: Started XML-RPC server [http://UAV13:44727/]
+[rospy.init][INFO] 2026-09-23 16:47:12,134: ROS Slave URI: [http://UAV13:44727/]
+[rospy.impl.masterslave][INFO] 2026-09-23 16:47:12,134: _ready: http://UAV13:44727/
+[rospy.registration][INFO] 2026-09-23 16:47:12,135: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2026-09-23 16:47:12,135: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-09-23 16:47:12,234: registered with master
+[rospy.rosout][INFO] 2026-09-23 16:47:12,235: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-09-23 16:47:12,243: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-09-23 16:47:12,245: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2026-09-23 16:47:12,281: topic[/mavros/state] adding connection to [http://UAV13:40141/], count 0
+[rospy.internal][INFO] 2026-09-23 16:47:12,282: topic[/mavros/global_position/gp_origin] adding connection to [http://UAV13:40141/], count 0
+[rospy.internal][INFO] 2026-09-23 16:47:12,345: topic[/gp_origin_confirmed] adding connection to [/uav_executor_UAV13], count 0
+[rospy.internal][INFO] 2026-09-23 16:47:12,453: topic[/GCS_A/group_a/gp_origin] adding connection to [http://UAV13:46137/], count 0
+[rospy.internal][INFO] 2026-09-23 16:47:12,548: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2026-09-23 16:47:12,551: topic[/mavros/global_position/set_gp_origin] adding connection to [/mavros], count 0
+[rospy.internal][INFO] 2026-09-23 16:47:12,723: topic[/gp_origin_confirmed] adding connection to [/swarm_bridge], count 1
+[rosout][WARNING] 2026-09-23 16:48:42,179: gp_origin readback mismatch horizontal=3.025m altitude=0.978m
+[rosout][INFO] 2026-09-23 16:48:42,183: gp_origin confirmed horizontal=0.005m altitude=0.001m
+[rosout][INFO] 2026-09-23 16:49:45,660: gp_origin confirmed horizontal=0.017m altitude=0.025m
+[rosout][INFO] 2026-09-23 16:50:36,659: gp_origin confirmed horizontal=0.012m altitude=0.065m
+[rospy.internal][INFO] 2026-09-23 16:51:16,210: topic[/gp_origin_confirmed] adding connection to [/rostopic_4769_1790153476029], count 2
+[rospy.internal][INFO] 2026-09-23 16:51:16,570: topic[/gp_origin_confirmed] removing connection to /rostopic_4769_1790153476029
+[rosout][INFO] 2026-09-23 16:53:46,558: gp_origin confirmed horizontal=0.010m altitude=0.007m
+[rosout][INFO] 2026-09-23 16:57:55,556: gp_origin confirmed horizontal=0.007m altitude=0.044m
+[rosout][INFO] 2026-09-23 16:59:32,577: gp_origin confirmed horizontal=0.005m altitude=0.001m
+[rospy.internal][INFO] 2026-09-23 17:00:15,302: topic[/gp_origin_confirmed] adding connection to [/rostopic_5332_1790154015120], count 2
+[rospy.internal][INFO] 2026-09-23 17:00:15,832: topic[/gp_origin_confirmed] removing connection to /rostopic_5332_1790154015120
+[rosout][WARNING] 2026-09-23 17:03:02,217: gp_origin readback mismatch horizontal=0.554m altitude=0.057m
+[rosout][INFO] 2026-09-23 17:03:02,221: gp_origin confirmed horizontal=0.005m altitude=0.001m

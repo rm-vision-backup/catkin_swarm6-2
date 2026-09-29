@@ -1,0 +1,49 @@
+# A 组编队工程测试专用编队配置（当前 3 机：A08 领机 + A10/A13 跟随，间距 5.0 m L 形）
+#
+# 2026-09-22：原 12 号机 GPS 接收故障 → A13 顶替；6 号机炸机 → A11 顶替其领机席位；
+# **随后 11 号机"机载→飞控"方向物理不通（跳线/接口，见 four_uav_recon/README §十）→ 本轮 3 机**。
+#
+# 3 机几何（沿用原 5 m 栅格，只是少了左后角那一台）：
+#   原 2x2 方阵四角（以原 A06 机位为参考）：A06(0,0) A08(+5,0) A10(0,+5) A13(+5,+5)
+#   现三机占 A08 右后 / A10 左前 / A13 右前 → 标定原点（三机全球位置中位数）= (5,5) = A13 机位
+#   于是任务坐标里：A08(0,-5)  A10(-5,0)  A13(0,0)
+#   相对领机 A08 的 offset 即：A08(0,0) A10(-5,+5) A13(0,+5)
+#   —— prepare 目标与 offset 同源，所以编队就位后进入航线段水平位移≈0（与原四机设计一致）。
+#
+# 为什么不复用 config/formation_offsets.yaml：该文件的 leader_id 是全局单值
+# （A01），而 gcs_a_backend_node.py 对 FOLLOW_ROUTE 强制 leader_id == formation_leader；
+# 本测试的四架里没有 A01。该文件同时驱动 12/15 机流程，且
+# test/test_fixed_formations.py 断言其 leader == "A01"，故不改动。
+#
+# 通过 gcs_a_real_four_uav.launch 传入本文件（formation_offsets_file 参数）。
+#
+# offboard 语义：offset 是相对领机的 ENU 增量，不随领机 yaw 旋转
+# （gcs_a_backend_node.py:1243-1246 只按冻结的参考航向换算），
+# 因此跟随者两两间距在领机机动时保持不变，只有差动跟踪误差会改变它。
+#
+# 间距 5.0 m：执行层实时门禁 min_center_distance_m = 1.0
+# （swarm_uav_executor/config/ego_swarm_defaults.yaml:11），留 4.0 m 余量，
+# 与已验证的 formation_1（5 m 栅格）同级。
+
+leader_id: A08
+mission_anchor: [0.0, 0.0, 0.0]
+
+formations:
+  formation_3uav:
+    participants: [A08, A10, A13]
+    offsets:
+      A08: [0.0, 0.0, 0.0]
+      A10: [-5.0, 5.0, 0.0]
+      A13: [0.0, 5.0, 0.0]
+
+  # 以下两条供 1 机 / 2 机分步验证使用，免去再改地面站配置。
+  formation_2uav:
+    participants: [A08, A10]
+    offsets:
+      A08: [0.0, 0.0, 0.0]
+      A10: [-5.0, 0.0, 0.0]
+
+  formation_1uav:
+    participants: [A08]
+    offsets:
+      A08: [0.0, 0.0, 0.0]

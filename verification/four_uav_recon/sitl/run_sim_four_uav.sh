@@ -1,10 +1,10 @@
 #!/bin/bash
 # =============================================================================
-# run_sim_four_uav.sh —— 4 机侦查测试（UAV6/UAV8/UAV10/UAV12）仿真单轮
+# run_sim_four_uav.sh —— 编队侦查测试（4 机：UAV8/UAV10/UAV12/UAV13）仿真单轮
 #
 # 与 15 机版（src/swarm_simulation/bashs/round_prepare_15sitl.sh）的差异只有四处：
-#   1. 仿真层用 four_uav_spawn.launch，四机出生在 2x2、5 m（不是 15sim 的散列位置）
-#   2. 机载层只起 6 8 10 12
+#   1. 仿真层用 four_uav_spawn.launch，四机出生成 2x2、5 m 方阵（不是 15sim 的散列位置）
+#   2. 机载层只起 8 10 12 13
 #   3. 地面站用 gcs_sim_four_uav.launch（四机编队表 + 四机标定集合），且 bridge/backend/
 #      calibration/tcp 合在一条 roslaunch 里 —— 消除了 15 机版 gcs_bridge_only →
 #      gcs_backend_only 的 11310 master 竞态
@@ -22,7 +22,7 @@ set -u
 WS=/home/yjq/catkin_swarm6-2
 cd "$WS" || exit 2
 
-UAVS="6 8 10 12"
+UAVS="8 10 12 13"
 NUAV=4
 KEEP_ON_FAIL=1
 MISSION_ID="four-uav-recon-001"

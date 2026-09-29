@@ -1,0 +1,697 @@
+[rosmaster.main][INFO] 2026-09-23 17:02:51,554: initialization complete, waiting for shutdown
+[rosmaster.main][INFO] 2026-09-23 17:02:51,555: Starting ROS Master Node
+[xmlrpc][INFO] 2026-09-23 17:02:51,573: XML-RPC server binding to 127.0.0.1:11311
+[xmlrpc][INFO] 2026-09-23 17:02:51,574: Started XML-RPC server [http://localhost:11311/]
+[xmlrpc][INFO] 2026-09-23 17:02:51,574: xml rpc node: starting XML-RPC server
+[rosmaster.master][INFO] 2026-09-23 17:02:51,574: Master initialized: port[11311], uri[http://localhost:11311/]
+[rosmaster.master][INFO] 2026-09-23 17:02:51,614: +PARAM [/run_id] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,615: +PARAM [/roslaunch/uris/host_localhost__36901] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,634: +PARAM [/rosversion] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,634: +PARAM [/rosdistro] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,634: +PARAM [/swarm_bridge/uavs] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,634: +PARAM [/swarm_bridge/topics] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,634: +PARAM [/swarm_bridge/max_freq] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,634: +PARAM [/swarm_bridge/base_port] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,634: +PARAM [/swarm_bridge/service_base_port] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,634: +PARAM [/swarm_bridge/services] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,634: +PARAM [/swarm_bridge/topology/GCS_A] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,634: +PARAM [/swarm_bridge/topology/UAV1] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,635: +PARAM [/swarm_bridge/topology/UAV2] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,635: +PARAM [/swarm_bridge/topology/UAV3] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,635: +PARAM [/swarm_bridge/topology/UAV4] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,635: +PARAM [/swarm_bridge/topology/UAV5] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,635: +PARAM [/swarm_bridge/topology/UAV6] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,635: +PARAM [/swarm_bridge/topology/UAV7] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,635: +PARAM [/swarm_bridge/topology/UAV8] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,635: +PARAM [/swarm_bridge/topology/UAV9] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,635: +PARAM [/swarm_bridge/topology/UAV10] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,635: +PARAM [/swarm_bridge/topology/UAV11] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,635: +PARAM [/swarm_bridge/topology/UAV12] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,635: +PARAM [/swarm_bridge/topology/UAV13] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,635: +PARAM [/swarm_bridge/topology/UAV14] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,635: +PARAM [/swarm_bridge/topology/UAV15] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,635: +PARAM [/swarm_bridge/topology/UAV16] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,635: +PARAM [/swarm_bridge/uav_name] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,635: +PARAM [/gcs_a_backend_node/action_name] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,635: +PARAM [/gcs_a_backend_node/emergency_hold_service] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,635: +PARAM [/gcs_a_backend_node/confirm_wait_s] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,635: +PARAM [/gcs_a_backend_node/confirm_retries] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,635: +PARAM [/gcs_a_backend_node/confirm_retry_interval_s] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,635: +PARAM [/gcs_a_backend_node/confirm_deadline_s] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,635: +PARAM [/gcs_a_backend_node/hold_batch_size] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,635: +PARAM [/gcs_a_backend_node/hold_retry_count] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,635: +PARAM [/gcs_a_backend_node/hold_retry_interval_s] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,635: +PARAM [/gcs_a_backend_node/require_calibration_ready] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,635: +PARAM [/gcs_a_backend_node/link_suspect_after_s] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,635: +PARAM [/gcs_a_backend_node/link_lost_after_s] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,635: +PARAM [/gcs_a_backend_node/link_healthy_window_s] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,636: +PARAM [/gcs_a_backend_node/link_health_topic] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,636: +PARAM [/gcs_a_backend_node/link_health_pre_task_wait_s] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,636: +PARAM [/gcs_a_backend_node/move_to_schedule_enabled] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,636: +PARAM [/gcs_a_backend_node/fault_exit_schedule_enabled] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,636: +PARAM [/gcs_a_backend_node/horizontal_speed_mps] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,636: +PARAM [/gcs_a_backend_node/schedule_geometric_distance_m] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,636: +PARAM [/gcs_a_backend_node/schedule_safety_margin_m] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,636: +PARAM [/gcs_a_backend_node/schedule_pose_timeout_s] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,636: +PARAM [/gcs_a_backend_node/schedule_time_epsilon_s] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,636: +PARAM [/gcs_a_backend_node/schedule_max_start_delay_s] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,636: +PARAM [/gcs_a_backend_node/schedule_max_interval_combinations] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,636: +PARAM [/gcs_a_backend_node/schedule_max_compute_time_s] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,636: +PARAM [/gcs_a_backend_node/start_service_budget_s] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,636: +PARAM [/gcs_a_backend_node/start_dispatch_jitter_margin_s] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,636: +PARAM [/gcs_a_backend_node/map_file] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,636: +SERVICE [/rosout/get_loggers] /rosout http://localhost:40915/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,636: +PARAM [/gcs_a_backend_node/formation_offsets_file] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,636: +PARAM [/gcs_a_calibration/calibration_uavs] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,636: +SERVICE [/rosout/set_logger_level] /rosout http://localhost:40915/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,636: +PARAM [/gcs_a_calibration/all_uavs] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,636: +PARAM [/gcs_a_calibration/sample_window_s] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,637: +PARAM [/gcs_a_calibration/identity_file] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,637: +PARAM [/tcp_server_node/host] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,637: +PARAM [/tcp_server_node/port] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,637: +PARAM [/tcp_server_node/action_name] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,637: +PARAM [/tcp_server_node/state_topic] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,637: +PARAM [/tcp_server_node/emergency_hold_service] by /roslaunch
+[rosmaster.master][INFO] 2026-09-23 17:02:51,637: +PUB [/rosout_agg] /rosout http://localhost:40915/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,638: +SUB [/rosout] /rosout http://localhost:40915/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,934: +PUB [/rosout] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,937: +SERVICE [/swarm_bridge/get_loggers] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,937: +SERVICE [/swarm_bridge/set_logger_level] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,960: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:51,960: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:51,961: +PUB [/UAV1/uav_task_state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,961: +PUB [/UAV1/mavros/state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,961: publisherUpdate[/rosout] -> http://localhost:40915/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:51,962: +PUB [/UAV1/mavros/time_reference] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,963: +PUB [/UAV1/mavros/global_position/global] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,964: +PUB [/UAV1/mavros/local_position/pose] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,964: +PUB [/UAV1/mavros/local_position/odom] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,965: +PUB [/rosout] /tcp_server_node http://localhost:40193/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,965: +PUB [/UAV1/mavros/rc/in] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,966: publisherUpdate[/rosout] -> http://localhost:40915/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:51,966: +PUB [/UAV1/gp_origin_confirmed] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,966: publisherUpdate[/rosout] -> http://localhost:40915/ ['http://localhost:36433/', 'http://localhost:40193/']
+[rosmaster.master][INFO] 2026-09-23 17:02:51,967: +PUB [/UAV1/trajectory_intent] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,967: publisherUpdate[/rosout] -> http://localhost:40915/ ['http://localhost:36433/', 'http://localhost:40193/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:51,969: +SERVICE [/tcp_server_node/get_loggers] /tcp_server_node http://localhost:40193/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,969: +SERVICE [/tcp_server_node/set_logger_level] /tcp_server_node http://localhost:40193/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,972: +CACHEDPARAM [/rosout_disable_topics_generation] by /tcp_server_node
+[rosmaster.master][INFO] 2026-09-23 17:02:51,972: +PUB [/group_a/group_task_state] /tcp_server_node http://localhost:40193/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,973: +PUB [/group_a/execute_task/goal] /tcp_server_node http://localhost:40193/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,973: +PUB [/group_a/execute_task/cancel] /tcp_server_node http://localhost:40193/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,974: +SUB [/group_a/execute_task/status] /tcp_server_node http://localhost:40193/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,975: +SUB [/group_a/execute_task/result] /tcp_server_node http://localhost:40193/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,975: +PUB [/rosout] /gcs_a_calibration http://localhost:44733/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,975: +SUB [/group_a/execute_task/feedback] /tcp_server_node http://localhost:40193/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,976: +CACHEDPARAM [/rosout_disable_topics_generation] by /tcp_server_node
+[rosmaster.master][INFO] 2026-09-23 17:02:51,976: +SERVICE [/gcs_a_calibration/get_loggers] /gcs_a_calibration http://localhost:44733/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,977: +SERVICE [/gcs_a_calibration/set_logger_level] /gcs_a_calibration http://localhost:44733/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,977: +PARAM [/group_a/calibration_ready] by /gcs_a_calibration
+[rosmaster.master][INFO] 2026-09-23 17:02:51,980: +PUB [/rosout] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,982: +SERVICE [/gcs_a_backend_node/get_loggers] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,983: +SERVICE [/gcs_a_backend_node/set_logger_level] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,984: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_calibration
+[rosmaster.master][INFO] 2026-09-23 17:02:51,985: +PUB [/group_a/gp_origin] /gcs_a_calibration http://localhost:44733/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,986: +PUB [/group_a/reference_heading] /gcs_a_calibration http://localhost:44733/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,986: +PUB [/group_a/calibration_ready] /gcs_a_calibration http://localhost:44733/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,986: +SUB [/UAV8/mavros/state] /gcs_a_calibration http://localhost:44733/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,987: +SUB [/UAV8/gp_origin_confirmed] /gcs_a_calibration http://localhost:44733/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,987: +SUB [/UAV8/mavros/global_position/global] /gcs_a_calibration http://localhost:44733/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,987: +SUB [/UAV8/mavros/local_position/pose] /gcs_a_calibration http://localhost:44733/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,988: +SUB [/UAV10/mavros/state] /gcs_a_calibration http://localhost:44733/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,988: +SUB [/UAV10/gp_origin_confirmed] /gcs_a_calibration http://localhost:44733/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,989: +SUB [/UAV10/mavros/global_position/global] /gcs_a_calibration http://localhost:44733/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,989: +SUB [/UAV10/mavros/local_position/pose] /gcs_a_calibration http://localhost:44733/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,989: +SUB [/UAV12/mavros/state] /gcs_a_calibration http://localhost:44733/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,990: +SUB [/UAV12/gp_origin_confirmed] /gcs_a_calibration http://localhost:44733/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,990: +SUB [/UAV12/mavros/global_position/global] /gcs_a_calibration http://localhost:44733/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,991: +SUB [/UAV12/mavros/local_position/pose] /gcs_a_calibration http://localhost:44733/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,991: +SUB [/UAV13/mavros/state] /gcs_a_calibration http://localhost:44733/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,992: +SUB [/UAV13/gp_origin_confirmed] /gcs_a_calibration http://localhost:44733/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,992: +SUB [/UAV13/mavros/global_position/global] /gcs_a_calibration http://localhost:44733/
+[rosmaster.master][INFO] 2026-09-23 17:02:51,993: +SUB [/UAV13/mavros/local_position/pose] /gcs_a_calibration http://localhost:44733/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,000: +PUB [/UAV1/gps_bias] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,001: +PUB [/UAV1/group_a/gp_origin] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,002: +PUB [/UAV2/uav_task_state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,002: +PUB [/UAV2/mavros/state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,003: +PUB [/UAV2/mavros/time_reference] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,004: +PUB [/UAV2/mavros/global_position/global] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,004: +PUB [/UAV2/mavros/local_position/pose] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,005: +PUB [/UAV2/mavros/local_position/odom] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,005: +PUB [/UAV2/mavros/rc/in] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,006: +PUB [/UAV2/gp_origin_confirmed] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,006: +PUB [/UAV2/trajectory_intent] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,006: +PUB [/UAV2/gps_bias] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,006: +PUB [/UAV2/group_a/gp_origin] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,007: +PUB [/UAV3/uav_task_state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,007: +PUB [/UAV3/mavros/state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,007: +PUB [/UAV3/mavros/time_reference] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,007: +PUB [/UAV3/mavros/global_position/global] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,008: +PUB [/UAV3/mavros/local_position/pose] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,008: +PUB [/UAV3/mavros/local_position/odom] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,008: +PUB [/UAV3/mavros/rc/in] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,009: +PUB [/UAV3/gp_origin_confirmed] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,009: +PUB [/group_a/uav_link_health] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,010: +SERVICE [/group_a/emergency_hold] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,011: +SUB [/UAV1/uav_task_state] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,011: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,012: +SUB [/UAV1/mavros/state] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,012: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,013: +SUB [/UAV1/mavros/local_position/pose] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,013: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,014: +SUB [/UAV2/uav_task_state] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,014: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,015: +SUB [/UAV2/mavros/state] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,015: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,016: +SUB [/UAV2/mavros/local_position/pose] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,016: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,018: +SUB [/UAV3/uav_task_state] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,019: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,020: +SUB [/UAV3/mavros/state] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,021: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,022: +SUB [/UAV3/mavros/local_position/pose] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,022: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,023: +SUB [/UAV4/uav_task_state] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,023: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,024: +SUB [/UAV4/mavros/state] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,024: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,025: +SUB [/UAV4/mavros/local_position/pose] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,025: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,026: +SUB [/UAV5/uav_task_state] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,026: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,027: +SUB [/UAV5/mavros/state] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,027: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,027: +SUB [/UAV5/mavros/local_position/pose] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,028: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,028: +SUB [/UAV6/uav_task_state] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,028: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,029: +SUB [/UAV6/mavros/state] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,029: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,029: +SUB [/UAV6/mavros/local_position/pose] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,029: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,030: +SUB [/UAV7/uav_task_state] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,030: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,031: +SUB [/UAV7/mavros/state] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,031: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,031: +SUB [/UAV7/mavros/local_position/pose] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,031: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,032: +SUB [/UAV8/uav_task_state] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,032: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,032: +SUB [/UAV8/mavros/state] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,033: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,033: +SUB [/UAV8/mavros/local_position/pose] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,033: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,034: +SUB [/UAV9/uav_task_state] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,034: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,035: +SUB [/UAV9/mavros/state] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,035: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,035: +SUB [/UAV9/mavros/local_position/pose] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,036: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,036: +SUB [/UAV10/uav_task_state] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,036: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,037: +SUB [/UAV10/mavros/state] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,037: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,038: +SUB [/UAV10/mavros/local_position/pose] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,038: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,039: +SUB [/UAV11/uav_task_state] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,039: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,040: +SUB [/UAV11/mavros/state] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,040: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,041: +SUB [/UAV11/mavros/local_position/pose] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,042: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,042: +SUB [/UAV12/uav_task_state] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,043: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,044: +SUB [/UAV12/mavros/state] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,044: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,045: +SUB [/UAV12/mavros/local_position/pose] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,045: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,045: +SUB [/UAV13/uav_task_state] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,046: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,046: +SUB [/UAV13/mavros/state] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,046: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,047: +SUB [/UAV13/mavros/local_position/pose] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,047: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,047: +SUB [/UAV14/uav_task_state] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,048: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,048: +SUB [/UAV14/mavros/state] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,048: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,049: +SUB [/UAV14/mavros/local_position/pose] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,049: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,050: +SUB [/UAV15/uav_task_state] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,050: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,051: +SUB [/UAV15/mavros/state] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,051: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,060: +PUB [/UAV3/trajectory_intent] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,062: +PUB [/UAV3/gps_bias] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,063: +PUB [/UAV3/group_a/gp_origin] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,065: +PUB [/UAV4/uav_task_state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,066: +PUB [/UAV4/mavros/state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,066: publisherUpdate[/rosout] -> http://localhost:40915/ ['http://localhost:36433/', 'http://localhost:40193/', 'http://localhost:44733/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,067: publisherUpdate[/rosout] -> http://localhost:40915/ ['http://localhost:36433/', 'http://localhost:40193/', 'http://localhost:44733/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,067: publisherUpdate[/rosout] -> http://localhost:40915/ ['http://localhost:36433/', 'http://localhost:40193/', 'http://localhost:44733/', 'http://localhost:37169/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,067: publisherUpdate[/rosout] -> http://localhost:40915/ ['http://localhost:36433/', 'http://localhost:40193/', 'http://localhost:44733/', 'http://localhost:37169/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,067: publisherUpdate[/UAV4/uav_task_state] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,068: +PUB [/UAV4/mavros/time_reference] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,069: +PUB [/UAV4/mavros/global_position/global] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,070: +PUB [/UAV4/mavros/local_position/pose] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,070: +PUB [/UAV4/mavros/local_position/odom] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,071: +PUB [/UAV4/mavros/rc/in] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,071: +PUB [/UAV4/gp_origin_confirmed] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,072: +PUB [/UAV4/trajectory_intent] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,073: +PUB [/UAV4/gps_bias] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,073: +PUB [/UAV4/group_a/gp_origin] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,073: +PUB [/UAV5/uav_task_state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,074: +PUB [/UAV5/mavros/state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,074: +PUB [/UAV5/mavros/time_reference] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,075: +PUB [/UAV5/mavros/global_position/global] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,075: +PUB [/UAV5/mavros/local_position/pose] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,075: +PUB [/UAV5/mavros/local_position/odom] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,076: +PUB [/UAV5/mavros/rc/in] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,076: +PUB [/UAV5/gp_origin_confirmed] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,076: +PUB [/UAV5/trajectory_intent] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,077: +PUB [/UAV5/gps_bias] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,077: +PUB [/UAV5/group_a/gp_origin] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,077: +PUB [/UAV6/uav_task_state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,077: +PUB [/UAV6/mavros/state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,078: +PUB [/UAV6/mavros/time_reference] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,078: +PUB [/UAV6/mavros/global_position/global] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,078: +PUB [/UAV6/mavros/local_position/pose] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,078: +PUB [/UAV6/mavros/local_position/odom] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,079: +PUB [/UAV6/mavros/rc/in] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,079: +PUB [/UAV6/gp_origin_confirmed] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,079: +PUB [/UAV6/trajectory_intent] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,079: +PUB [/UAV6/gps_bias] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,080: +PUB [/UAV6/group_a/gp_origin] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,080: +PUB [/UAV7/uav_task_state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,080: +PUB [/UAV7/mavros/state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,080: +PUB [/UAV7/mavros/time_reference] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,085: publisherUpdate[/UAV4/uav_task_state] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.02, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,085: +SUB [/UAV15/mavros/local_position/pose] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,085: publisherUpdate[/UAV4/mavros/state] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,086: publisherUpdate[/UAV4/mavros/state] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,086: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,086: publisherUpdate[/UAV4/mavros/local_position/pose] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,088: publisherUpdate[/UAV4/mavros/local_position/pose] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,088: publisherUpdate[/UAV5/uav_task_state] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,088: publisherUpdate[/UAV5/uav_task_state] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,089: publisherUpdate[/UAV5/mavros/state] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,089: +SUB [/UAV16/uav_task_state] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,089: publisherUpdate[/UAV5/mavros/state] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,089: publisherUpdate[/UAV5/mavros/local_position/pose] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,089: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,090: publisherUpdate[/UAV5/mavros/local_position/pose] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,090: publisherUpdate[/UAV6/uav_task_state] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,091: publisherUpdate[/UAV6/uav_task_state] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,091: +SUB [/UAV16/mavros/state] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,091: publisherUpdate[/UAV6/mavros/state] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,092: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,092: publisherUpdate[/UAV6/mavros/state] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,092: publisherUpdate[/UAV6/mavros/local_position/pose] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,093: publisherUpdate[/UAV6/mavros/local_position/pose] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,093: publisherUpdate[/UAV7/uav_task_state] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,093: publisherUpdate[/UAV7/uav_task_state] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,094: +SUB [/UAV16/mavros/local_position/pose] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,094: publisherUpdate[/UAV7/mavros/state] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,094: publisherUpdate[/UAV7/mavros/state] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,094: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,095: +SUB [/group_a/calibration_ready] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,096: +SUB [/group_a/reference_heading] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,098: +PUB [/group_a/execute_task/status] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,098: +PUB [/group_a/execute_task/result] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,099: +PUB [/group_a/execute_task/feedback] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,100: +SUB [/group_a/execute_task/goal] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,101: +SUB [/group_a/execute_task/cancel] /gcs_a_backend_node http://localhost:37169/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,102: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,117: +PUB [/UAV7/mavros/global_position/global] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,120: +PUB [/UAV7/mavros/local_position/pose] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,121: +PUB [/UAV7/mavros/local_position/odom] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,121: +PUB [/UAV7/mavros/rc/in] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,122: +PUB [/UAV7/gp_origin_confirmed] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,123: +PUB [/UAV7/trajectory_intent] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,124: +PUB [/UAV7/gps_bias] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,124: +PUB [/UAV7/group_a/gp_origin] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,124: +PUB [/UAV8/uav_task_state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,125: +PUB [/UAV8/mavros/state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,126: +PUB [/UAV8/mavros/time_reference] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,126: +PUB [/UAV8/mavros/global_position/global] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,127: +PUB [/UAV8/mavros/local_position/pose] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,127: +PUB [/UAV8/mavros/local_position/odom] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,127: +PUB [/UAV8/mavros/rc/in] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,128: +PUB [/UAV8/gp_origin_confirmed] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,128: +PUB [/UAV8/trajectory_intent] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,128: +PUB [/UAV8/gps_bias] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,129: +PUB [/UAV8/group_a/gp_origin] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,129: +PUB [/UAV9/uav_task_state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,129: +PUB [/UAV9/mavros/state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,129: +PUB [/UAV9/mavros/time_reference] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,130: +PUB [/UAV9/mavros/global_position/global] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,130: +PUB [/UAV9/mavros/local_position/pose] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,130: +PUB [/UAV9/mavros/local_position/odom] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,130: +PUB [/UAV9/mavros/rc/in] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,131: +PUB [/UAV9/gp_origin_confirmed] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,131: +PUB [/UAV9/trajectory_intent] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,131: +PUB [/UAV9/gps_bias] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,131: +PUB [/UAV9/group_a/gp_origin] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,131: +PUB [/UAV10/uav_task_state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,132: +PUB [/UAV10/mavros/state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,132: +PUB [/UAV10/mavros/time_reference] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,132: +PUB [/UAV10/mavros/global_position/global] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,132: +PUB [/UAV10/mavros/local_position/pose] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,133: +PUB [/UAV10/mavros/local_position/odom] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,133: +PUB [/UAV10/mavros/rc/in] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,133: +PUB [/UAV10/gp_origin_confirmed] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,133: +PUB [/UAV10/trajectory_intent] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,134: +PUB [/UAV10/gps_bias] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,134: +PUB [/UAV10/group_a/gp_origin] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,134: +PUB [/UAV11/uav_task_state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,134: +PUB [/UAV11/mavros/state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,135: +PUB [/UAV11/mavros/time_reference] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,135: +PUB [/UAV11/mavros/global_position/global] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,135: +PUB [/UAV11/mavros/local_position/pose] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,135: +PUB [/UAV11/mavros/local_position/odom] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,136: +PUB [/UAV11/mavros/rc/in] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,136: +PUB [/UAV11/gp_origin_confirmed] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,136: +PUB [/UAV11/trajectory_intent] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,136: +PUB [/UAV11/gps_bias] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,137: +PUB [/UAV11/group_a/gp_origin] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,137: +PUB [/UAV12/uav_task_state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,137: +PUB [/UAV12/mavros/state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,137: +PUB [/UAV12/mavros/time_reference] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,138: +PUB [/UAV12/mavros/global_position/global] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,138: +PUB [/UAV12/mavros/local_position/pose] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,138: +PUB [/UAV12/mavros/local_position/odom] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,138: +PUB [/UAV12/mavros/rc/in] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,138: +PUB [/UAV12/gp_origin_confirmed] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,139: +PUB [/UAV12/trajectory_intent] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,139: +PUB [/UAV12/gps_bias] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,139: +PUB [/UAV12/group_a/gp_origin] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,139: +PUB [/UAV13/uav_task_state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,140: +PUB [/UAV13/mavros/state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,140: +PUB [/UAV13/mavros/time_reference] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,140: +PUB [/UAV13/mavros/global_position/global] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,140: +PUB [/UAV13/mavros/local_position/pose] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,141: +PUB [/UAV13/mavros/local_position/odom] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,141: +PUB [/UAV13/mavros/rc/in] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,141: +PUB [/UAV13/gp_origin_confirmed] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,141: +PUB [/UAV13/trajectory_intent] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,142: +PUB [/UAV13/gps_bias] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,142: +PUB [/UAV13/group_a/gp_origin] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,142: +PUB [/UAV14/uav_task_state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,142: +PUB [/UAV14/mavros/state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,143: +PUB [/UAV14/mavros/time_reference] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,143: +PUB [/UAV14/mavros/global_position/global] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,143: +PUB [/UAV14/mavros/local_position/pose] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,143: +PUB [/UAV14/mavros/local_position/odom] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,168: publisherUpdate[/group_a/execute_task/status] -> http://localhost:40193/ ['http://localhost:37169/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,169: publisherUpdate[/group_a/execute_task/status] -> http://localhost:40193/ ['http://localhost:37169/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,170: publisherUpdate[/group_a/execute_task/result] -> http://localhost:40193/ ['http://localhost:37169/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,170: publisherUpdate[/UAV7/mavros/local_position/pose] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,171: publisherUpdate[/group_a/execute_task/result] -> http://localhost:40193/ ['http://localhost:37169/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,171: publisherUpdate[/group_a/execute_task/feedback] -> http://localhost:40193/ ['http://localhost:37169/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,171: publisherUpdate[/UAV7/mavros/local_position/pose] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,171: +CACHEDPARAM [/rosout/omit_topics] by /rosout
+[rosmaster.master][INFO] 2026-09-23 17:02:52,172: publisherUpdate[/UAV8/uav_task_state] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,172: publisherUpdate[/group_a/execute_task/feedback] -> http://localhost:40193/ ['http://localhost:37169/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,173: publisherUpdate[/UAV8/mavros/state] -> http://localhost:44733/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,174: publisherUpdate[/UAV8/uav_task_state] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,174: publisherUpdate[/UAV8/mavros/state] -> http://localhost:44733/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,174: publisherUpdate[/UAV8/mavros/state] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,174: publisherUpdate[/UAV8/mavros/global_position/global] -> http://localhost:44733/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,175: publisherUpdate[/UAV8/mavros/global_position/global] -> http://localhost:44733/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,175: publisherUpdate[/UAV8/mavros/local_position/pose] -> http://localhost:44733/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,176: publisherUpdate[/UAV8/mavros/local_position/pose] -> http://localhost:44733/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,176: publisherUpdate[/UAV8/gp_origin_confirmed] -> http://localhost:44733/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,176: publisherUpdate[/UAV8/mavros/state] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,176: publisherUpdate[/UAV8/mavros/local_position/pose] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,176: publisherUpdate[/UAV8/gp_origin_confirmed] -> http://localhost:44733/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,176: publisherUpdate[/UAV10/mavros/state] -> http://localhost:44733/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,177: publisherUpdate[/UAV8/mavros/local_position/pose] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,177: publisherUpdate[/UAV10/mavros/state] -> http://localhost:44733/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,177: publisherUpdate[/UAV9/uav_task_state] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,177: publisherUpdate[/UAV10/mavros/global_position/global] -> http://localhost:44733/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,177: publisherUpdate[/UAV10/mavros/global_position/global] -> http://localhost:44733/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,177: publisherUpdate[/UAV10/mavros/local_position/pose] -> http://localhost:44733/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,178: publisherUpdate[/UAV10/mavros/local_position/pose] -> http://localhost:44733/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,178: publisherUpdate[/UAV10/gp_origin_confirmed] -> http://localhost:44733/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,178: publisherUpdate[/UAV10/gp_origin_confirmed] -> http://localhost:44733/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,178: publisherUpdate[/UAV9/uav_task_state] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,178: publisherUpdate[/UAV12/mavros/state] -> http://localhost:44733/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,178: +CACHEDPARAM [/rosout_disable_topics_generation] by /tcp_server_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,178: publisherUpdate[/UAV9/mavros/state] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,179: publisherUpdate[/UAV12/mavros/state] -> http://localhost:44733/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,179: publisherUpdate[/UAV12/mavros/global_position/global] -> http://localhost:44733/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,179: +CACHEDPARAM [/rosout_disable_topics_generation] by /tcp_server_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,179: publisherUpdate[/UAV9/mavros/state] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,179: publisherUpdate[/UAV9/mavros/local_position/pose] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,180: publisherUpdate[/UAV12/mavros/global_position/global] -> http://localhost:44733/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,180: publisherUpdate[/UAV12/mavros/local_position/pose] -> http://localhost:44733/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,180: publisherUpdate[/UAV9/mavros/local_position/pose] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,181: +CACHEDPARAM [/rosout_disable_topics_generation] by /tcp_server_node
+[rosmaster.master][INFO] 2026-09-23 17:02:52,181: publisherUpdate[/UAV12/mavros/local_position/pose] -> http://localhost:44733/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,181: publisherUpdate[/UAV10/uav_task_state] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,181: publisherUpdate[/UAV12/gp_origin_confirmed] -> http://localhost:44733/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,181: publisherUpdate[/UAV10/uav_task_state] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,181: publisherUpdate[/UAV12/gp_origin_confirmed] -> http://localhost:44733/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,181: publisherUpdate[/UAV10/mavros/state] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,182: publisherUpdate[/UAV13/mavros/state] -> http://localhost:44733/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,182: publisherUpdate[/UAV10/mavros/state] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,182: publisherUpdate[/UAV10/mavros/local_position/pose] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,182: publisherUpdate[/UAV13/mavros/state] -> http://localhost:44733/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,182: publisherUpdate[/UAV13/mavros/global_position/global] -> http://localhost:44733/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,182: publisherUpdate[/UAV13/mavros/global_position/global] -> http://localhost:44733/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,182: publisherUpdate[/UAV13/mavros/local_position/pose] -> http://localhost:44733/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,183: publisherUpdate[/UAV13/mavros/local_position/pose] -> http://localhost:44733/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,183: publisherUpdate[/UAV13/gp_origin_confirmed] -> http://localhost:44733/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,183: publisherUpdate[/UAV10/mavros/local_position/pose] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,183: publisherUpdate[/UAV11/uav_task_state] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,183: publisherUpdate[/UAV13/gp_origin_confirmed] -> http://localhost:44733/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,183: publisherUpdate[/UAV11/uav_task_state] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,183: publisherUpdate[/UAV11/mavros/state] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,183: publisherUpdate[/UAV11/mavros/state] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,184: publisherUpdate[/UAV11/mavros/local_position/pose] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,184: publisherUpdate[/UAV11/mavros/local_position/pose] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,184: publisherUpdate[/UAV12/uav_task_state] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,184: +PUB [/UAV14/mavros/rc/in] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,184: publisherUpdate[/UAV12/uav_task_state] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,184: publisherUpdate[/UAV12/mavros/state] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,185: publisherUpdate[/UAV12/mavros/state] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,185: publisherUpdate[/UAV12/mavros/local_position/pose] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,185: +PUB [/UAV14/gp_origin_confirmed] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,186: +PUB [/UAV14/trajectory_intent] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,186: publisherUpdate[/UAV12/mavros/local_position/pose] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,186: publisherUpdate[/UAV13/uav_task_state] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,186: publisherUpdate[/UAV13/uav_task_state] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,186: publisherUpdate[/UAV13/mavros/state] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,186: +PUB [/UAV14/gps_bias] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,187: +PUB [/UAV14/group_a/gp_origin] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,187: publisherUpdate[/UAV13/mavros/state] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,187: publisherUpdate[/UAV13/mavros/local_position/pose] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,187: publisherUpdate[/UAV13/mavros/local_position/pose] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,187: publisherUpdate[/UAV14/uav_task_state] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,188: publisherUpdate[/UAV14/uav_task_state] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,188: publisherUpdate[/UAV14/mavros/state] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,188: +PUB [/UAV15/uav_task_state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,188: publisherUpdate[/UAV14/mavros/state] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,188: publisherUpdate[/UAV14/mavros/local_position/pose] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,188: +PUB [/UAV15/mavros/state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,189: +PUB [/UAV15/mavros/time_reference] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,189: publisherUpdate[/UAV14/mavros/local_position/pose] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,189: publisherUpdate[/UAV15/uav_task_state] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,190: +PUB [/UAV15/mavros/global_position/global] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,190: publisherUpdate[/UAV15/uav_task_state] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,190: publisherUpdate[/UAV15/mavros/state] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,190: +PUB [/UAV15/mavros/local_position/pose] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,191: publisherUpdate[/UAV15/mavros/state] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,191: publisherUpdate[/UAV15/mavros/local_position/pose] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,191: publisherUpdate[/UAV15/mavros/local_position/pose] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,192: +PUB [/UAV15/mavros/local_position/odom] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,192: +PUB [/UAV15/mavros/rc/in] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,193: +PUB [/UAV15/gp_origin_confirmed] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,194: +PUB [/UAV15/trajectory_intent] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,194: +PUB [/UAV15/gps_bias] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,195: +PUB [/UAV15/group_a/gp_origin] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,196: +PUB [/UAV16/uav_task_state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,196: +PUB [/UAV16/mavros/state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,196: +PUB [/UAV16/mavros/time_reference] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,197: +PUB [/UAV16/mavros/global_position/global] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,198: +PUB [/UAV16/mavros/local_position/pose] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,198: +PUB [/UAV16/mavros/local_position/odom] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,199: +PUB [/UAV16/mavros/rc/in] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,201: +PUB [/UAV16/gp_origin_confirmed] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,202: +PUB [/UAV16/trajectory_intent] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,203: +PUB [/UAV16/gps_bias] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,203: +PUB [/UAV16/group_a/gp_origin] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,204: +SUB [/uav_task_state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,205: +SUB [/mavros/state] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,211: +SUB [/mavros/time_reference] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,212: +SUB [/mavros/global_position/global] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,213: +SUB [/mavros/local_position/pose] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,214: +SUB [/mavros/local_position/odom] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,215: +SUB [/mavros/rc/in] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,216: +SUB [/gp_origin_confirmed] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,217: +SUB [/trajectory_intent] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,218: +SUB [/gps_bias] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,219: +SUB [/group_a/gp_origin] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,222: +SERVICE [/UAV1/uav_task] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,222: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,224: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,225: +SERVICE [/UAV1/uav_task_control] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,225: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,226: +SERVICE [/UAV1/uav_hold] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,226: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,226: +SERVICE [/UAV2/uav_task] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,227: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,227: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,227: +SERVICE [/UAV2/uav_task_control] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,228: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,228: +SERVICE [/UAV2/uav_hold] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,228: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,229: +SERVICE [/UAV3/uav_task] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,229: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,229: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,230: +SERVICE [/UAV3/uav_task_control] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,230: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,230: +SERVICE [/UAV3/uav_hold] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,230: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,231: +SERVICE [/UAV4/uav_task] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,231: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,232: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,232: +SERVICE [/UAV4/uav_task_control] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,232: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,232: +SERVICE [/UAV4/uav_hold] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,233: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,233: +SERVICE [/UAV5/uav_task] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,233: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,234: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,234: +SERVICE [/UAV5/uav_task_control] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,234: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,235: +SERVICE [/UAV5/uav_hold] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,235: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,236: +SERVICE [/UAV6/uav_task] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,236: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,236: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,237: +SERVICE [/UAV6/uav_task_control] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,237: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,237: +SERVICE [/UAV6/uav_hold] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,238: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,238: +SERVICE [/UAV7/uav_task] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,238: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,239: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,239: +SERVICE [/UAV7/uav_task_control] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,240: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,241: +SERVICE [/UAV7/uav_hold] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,241: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,241: +SERVICE [/UAV8/uav_task] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,242: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,242: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,242: +SERVICE [/UAV8/uav_task_control] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,243: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,243: +SERVICE [/UAV8/uav_hold] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,243: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,244: +SERVICE [/UAV9/uav_task] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,244: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,244: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,245: +SERVICE [/UAV9/uav_task_control] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,245: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,245: +SERVICE [/UAV9/uav_hold] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,246: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,246: +SERVICE [/UAV10/uav_task] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,246: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,247: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,247: +SERVICE [/UAV10/uav_task_control] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,247: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,248: +SERVICE [/UAV10/uav_hold] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,248: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,248: +SERVICE [/UAV11/uav_task] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,248: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,249: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,249: +SERVICE [/UAV11/uav_task_control] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,250: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,250: +SERVICE [/UAV11/uav_hold] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,250: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,251: +SERVICE [/UAV12/uav_task] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,251: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,251: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,252: +SERVICE [/UAV12/uav_task_control] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,252: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,252: +SERVICE [/UAV12/uav_hold] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,253: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,253: +SERVICE [/UAV13/uav_task] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,253: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,254: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,254: +SERVICE [/UAV13/uav_task_control] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,254: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,255: +SERVICE [/UAV13/uav_hold] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,255: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,255: +SERVICE [/UAV14/uav_task] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,255: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,256: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,256: +SERVICE [/UAV14/uav_task_control] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,257: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,257: +SERVICE [/UAV14/uav_hold] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,257: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,258: +SERVICE [/UAV15/uav_task] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,258: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,258: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,259: +SERVICE [/UAV15/uav_task_control] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,259: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,259: +SERVICE [/UAV15/uav_hold] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,260: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,260: +SERVICE [/UAV16/uav_task] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,260: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,261: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,261: +SERVICE [/UAV16/uav_task_control] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,261: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,262: +SERVICE [/UAV16/uav_hold] /swarm_bridge http://localhost:36433/
+[rosmaster.master][INFO] 2026-09-23 17:02:52,262: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-09-23 17:02:52,283: publisherUpdate[/UAV16/uav_task_state] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,284: publisherUpdate[/UAV16/uav_task_state] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,284: publisherUpdate[/UAV16/mavros/state] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,285: publisherUpdate[/UAV16/mavros/state] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:52,285: publisherUpdate[/UAV16/mavros/local_position/pose] -> http://localhost:37169/ ['http://localhost:36433/']
+[rosmaster.master][INFO] 2026-09-23 17:02:52,286: publisherUpdate[/UAV16/mavros/local_position/pose] -> http://localhost:37169/ ['http://localhost:36433/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:02:53,299: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:53,300: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:53,602: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:53,704: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:56,309: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:56,311: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:56,613: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:02:56,714: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:03:01,395: +PARAM [/group_a/frozen_reference_heading] by /gcs_a_calibration
+[rosmaster.master][INFO] 2026-09-23 17:03:01,396: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_calibration
+[rosmaster.master][INFO] 2026-09-23 17:03:01,493: +PARAM [/group_a/calibration_ready] by /gcs_a_calibration
+[rosmaster.master][INFO] 2026-09-23 17:03:01,494: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_calibration
+[rosmaster.master][INFO] 2026-09-23 17:03:07,598: +PUB [/rosout] /rostopic_64723_1790154187486 http://localhost:41377/
+[rosmaster.master][INFO] 2026-09-23 17:03:07,601: +SERVICE [/rostopic_64723_1790154187486/get_loggers] /rostopic_64723_1790154187486 http://localhost:41377/
+[rosmaster.master][INFO] 2026-09-23 17:03:07,602: +SERVICE [/rostopic_64723_1790154187486/set_logger_level] /rostopic_64723_1790154187486 http://localhost:41377/
+[rosmaster.master][INFO] 2026-09-23 17:03:07,608: publisherUpdate[/rosout] -> http://localhost:40915/ ['http://localhost:36433/', 'http://localhost:40193/', 'http://localhost:44733/', 'http://localhost:37169/', 'http://localhost:41377/']
+[rosmaster.master][INFO] 2026-09-23 17:03:07,609: +SUB [/group_a/calibration_ready] /rostopic_64723_1790154187486 http://localhost:41377/
+[rosmaster.master][INFO] 2026-09-23 17:03:07,609: publisherUpdate[/rosout] -> http://localhost:40915/ ['http://localhost:36433/', 'http://localhost:40193/', 'http://localhost:44733/', 'http://localhost:37169/', 'http://localhost:41377/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:03:07,711: -SUB [/group_a/calibration_ready] /rostopic_64723_1790154187486 http://localhost:41377/
+[rosmaster.master][INFO] 2026-09-23 17:03:07,711: -PUB [/rosout] /rostopic_64723_1790154187486 http://localhost:41377/
+[rosmaster.master][INFO] 2026-09-23 17:03:07,711: -SERVICE [/rostopic_64723_1790154187486/get_loggers] /rostopic_64723_1790154187486 rosrpc://localhost:46629
+[rosmaster.master][INFO] 2026-09-23 17:03:07,711: -SERVICE [/rostopic_64723_1790154187486/set_logger_level] /rostopic_64723_1790154187486 rosrpc://localhost:46629
+[rosmaster.master][INFO] 2026-09-23 17:03:07,712: publisherUpdate[/rosout] -> http://localhost:40915/ ['http://localhost:36433/', 'http://localhost:40193/', 'http://localhost:44733/', 'http://localhost:37169/']
+[rosmaster.master][INFO] 2026-09-23 17:03:07,712: publisherUpdate[/rosout] -> http://localhost:40915/ ['http://localhost:36433/', 'http://localhost:40193/', 'http://localhost:44733/', 'http://localhost:37169/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-09-23 17:03:38,080: +CACHEDPARAM [/rosout_disable_topics_generation] by /tcp_server_node
+[rosmaster.master][INFO] 2026-09-23 17:03:38,082: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:03:38,083: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:03:38,084: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:03:38,085: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:03:38,085: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:03:38,086: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:03:38,087: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:03:38,087: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:03:38,088: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:03:38,088: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:03:38,089: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:03:38,089: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:03:38,089: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:03:38,265: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:03:38,266: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:03:38,268: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:03:38,270: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:03:38,326: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:03:59,368: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-09-23 17:03:59,505: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node

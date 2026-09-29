@@ -1,0 +1,29 @@
+# A 组编队工程测试专用标定集合（4 机：A08/A10/A12/A13 -> UAV8/UAV10/UAV12/UAV13）
+#
+# 席位变更史：原 4 机线为 A06/A08/A10/A12。6 号机炸机后 A13 顶替其角位；
+# 12 号机 GPS 一度故障（**RTK 模块坏，已修复**）期间用过 3 机版；
+# 2026-09-23 恢复 4 机：A08 领机 + A10/A12/A13，A13 占原 A06 的角位。
+# 注意：目录名与文件名仍沿用 four_uav，语义以本注释为准。
+#
+# 必须写执行层 UAVn，不能写任务层 Axx：
+# gcs_a_backend.launch 把 identity_file 设为 uav_identity_map.yaml，
+# calibration.py:validate_calibration_config 据此要求每一项都是存在的 exec_target。
+# 写成 UAVn 之外的写法会在节点启动时直接 ValueError。
+#
+# 通过 gcs_a_real_four_uav.launch 传入（该 launch 自行展开 calibration 节点并加载本文件）。
+#
+# 注意：calibration_uavs 成员必须在线且处于 disarm，global/local pose 连续采样一段时间，
+# 四机航向差 <= 30 度，才能冻结原点。冻结的原点是这四机全球位置的中位数，
+# 即物理阵位的几何中心 —— 这正是 prepare 目标坐标取 (+-2.5, +-2.5) 的原因。
+#
+# 采样窗口（节点默认 2.0 s）：gcs_a_calibration_node._representatives 除了「窗口内样本数
+# >= min_samples_per_uav」之外，还要求「窗口内最老→最新的接收时刻跨度 >= 0.95 × 窗口」。
+# 这条跨度判据要求采样间隔 Δ <= 0.05 × 窗口，而拓扑限频后
+# global = 5 Hz (Δ = 0.2 s)：2.0 s 窗口里最多留 10 个样本、跨度只有 1.80 s，
+# 结构性差 0.02 s 永远够不着 ⇒ calibration_ready 永远 False（2026-09-23 实测 0/100）。
+# 取窗口 = 8.0 s（>= 20Δ = 4.0 s，留足余量；5 Hz 下实测跨度 ~7.8 s >= 7.6 s）。
+# 代价只是 ready 来得晚 ~8 s；飞机在地面静止，拉长窗口没有副作用。
+
+calibration_uavs: [UAV8, UAV10, UAV12, UAV13]
+all_uavs: [UAV8, UAV10, UAV12, UAV13]
+sample_window_s: 8.0

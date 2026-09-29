@@ -1,0 +1,18 @@
+[rospy.client][INFO] 2026-09-23 16:56:36,872: init_node, name[/pose_relay], pid[3506]
+[xmlrpc][INFO] 2026-09-23 16:56:36,872: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-09-23 16:56:36,873: Started XML-RPC server [http://UAV12:34503/]
+[rospy.impl.masterslave][INFO] 2026-09-23 16:56:36,873: _ready: http://UAV12:34503/
+[rospy.registration][INFO] 2026-09-23 16:56:36,874: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2026-09-23 16:56:36,875: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-09-23 16:56:36,875: ROS Slave URI: [http://UAV12:34503/]
+[rospy.init][INFO] 2026-09-23 16:56:36,875: registered with master
+[rospy.rosout][INFO] 2026-09-23 16:56:36,876: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-09-23 16:56:36,883: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-09-23 16:56:36,884: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2026-09-23 16:56:36,896: pose_relay: /mavros/local_position/pose -> /local_pose
+[rospy.internal][INFO] 2026-09-23 16:56:36,901: topic[/mavros/local_position/pose] adding connection to [http://UAV12:43231/], count 0
+[rospy.internal][INFO] 2026-09-23 16:56:37,147: topic[/local_pose] adding connection to [/uav_executor_UAV12], count 0
+[rospy.internal][INFO] 2026-09-23 16:56:37,154: topic[/local_pose] adding connection to [/ego_planner_driver], count 1
+[rospy.internal][INFO] 2026-09-23 16:56:37,155: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2026-09-23 16:57:50,035: topic[/local_pose] adding connection to [/rostopic_4028_1790153869846], count 2
+[rospy.internal][INFO] 2026-09-23 16:57:55,319: topic[/local_pose] removing connection to /rostopic_4028_1790153869846
