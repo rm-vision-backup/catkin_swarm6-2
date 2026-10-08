@@ -14,6 +14,7 @@
 | `driver.py` | 任务下发脚本（实机用）：两阶段串行发 TCP 命令；整批超时/失败/Ctrl-C 自动发 HOLD；`--dry-run` 只打印线上 JSON；`--log` 写 JSONL 证据 |
 | `package/` | 任务数据（robots / bootstrap / world / plans）；`prepare-a` + `coverage-segment-1`；leader = A08 |
 | `sitl/` | **仿真**彩排（`four_uav_spawn.launch` / `gcs_sim_four_uav.launch` / `run_sim_four_uav.sh`） |
+| `no_prop_link_test.md` | **无桨**（不装桨、不 arm）链路 + 跟随环 dry-run 验证规程；门禁 0–8 照用，门禁 9/10 不执行 |
 
 地面站侧：`src/tcp_to_ros/launch/gcs_a_real_four_uav.launch`
 （加载 `config/formation_offsets_four_uav.yaml` + `config/calibration_four_uav.yaml`；
