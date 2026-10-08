@@ -15,6 +15,7 @@ __pycache__/
 /.ros_home/
 /.ros_home_*/
 /runtime_logs/
+/.runtime_logs/
 /quality_reports/
 
 # 本地保留的大文件，不入库
