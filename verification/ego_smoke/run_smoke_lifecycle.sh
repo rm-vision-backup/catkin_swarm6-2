@@ -2,7 +2,8 @@
 # 单 Master 完整生命周期冒烟：IDLE -> EXECUTING -> COMPLETED -> IDLE -> HOLD -> IDLE
 # 用法: bash verification/ego_smoke/run_smoke_lifecycle.sh
 set -u
-WS=/home/yjq/catkin_swarm6-2
+# 工作空间根 = 脚本上一级目录的上一级（verification/ego_smoke → 工作空间根）
+WS=$(cd "$(dirname "$0")/../.." && pwd)
 PORT=11311
 LOG=/tmp/ego_smoke_lifecycle.log
 

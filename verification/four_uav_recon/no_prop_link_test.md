@@ -74,8 +74,8 @@ head -1 ~/catkin_swarm6-2/.runtime_logs/health/UAV8_bridge_health.jsonl   # heal
 
 ```bash
 python3 - <<'PY'
-import json, glob
-for f in glob.glob("/home/nvidia/catkin_swarm6-2/.runtime_logs/health/UAV1*_bridge_health.jsonl"):
+import json, glob, os
+for f in glob.glob(os.path.expanduser("~/catkin_swarm6-2/.runtime_logs/health/UAV1*_bridge_health.jsonl")):
     for line in open(f):
         d = json.loads(line)
         if d.get("event") != "sample":  continue

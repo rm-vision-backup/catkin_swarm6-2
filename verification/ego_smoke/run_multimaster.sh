@@ -5,7 +5,8 @@
 #   bash verification/ego_smoke/run_multimaster.sh up triple  # UAV1:11311 + UAV2:11312 + UAV3:11313
 #   bash verification/ego_smoke/run_multimaster.sh down
 set -u
-WS=/home/yjq/catkin_swarm6-2
+# 工作空间根 = 脚本所在目录的上一级（verification/ego_smoke → 工作空间根）
+WS=$(cd "$(dirname "$0")/../.." && pwd)
 RELAY=$WS/verification/ego_smoke/multimaster_relay.py
 BRIDGE_LAUNCH=$WS/verification/ego_smoke/multimaster_bridge.launch
 PKG_SRC=$WS/src/swarm_topology_bridge/scripts/bridge_node.py

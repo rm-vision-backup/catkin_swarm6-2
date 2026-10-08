@@ -23,7 +23,8 @@
 # 退出码：0 = 任务 SUCCESS；1 = 失败；2 = 用法错
 # =============================================================================
 set -u
-WS=/home/yjq/catkin_swarm6-2
+# 工作空间根 = 脚本上三级（verification/single_uav_recon/sitl → 工作空间根）
+WS=$(cd "$(dirname "$0")/../../.." && pwd)
 cd "$WS" || exit 2
 
 UAVS="6"

@@ -41,7 +41,7 @@ from swarm_uav_interfaces.srv import (
 PROTOCOL_VERSION = "1.0"
 GROUP_ID = "GroupA"
 GCS_MASTER = "http://localhost:11310"
-WS = Path("/home/yjq/catkin_swarm6-2")
+WS = Path(__file__).resolve().parents[2]  # verification/ego_smoke → 工作空间根
 TERMINAL = {"COMPLETED", "FAILED", "HELD"}
 
 

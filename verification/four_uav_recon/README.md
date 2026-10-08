@@ -98,7 +98,7 @@ ulog 的 `LOG_ENTRY.time_utc` 锚定）：
 ### 1.4 上位机预检（不连地面站，秒级）
 
 ```bash
-cd /home/yjq/catkin_swarm6-2
+cd "$HOME/catkin_swarm6-2"
 python3 verification/four_uav_recon/driver.py \
   --package verification/four_uav_recon/package \
   --mission-id four-uav-recon-001 --phases prepare coverage --dry-run

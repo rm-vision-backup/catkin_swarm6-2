@@ -30,7 +30,8 @@ from mavros_msgs.srv import CommandBool, ParamPush, ParamSet, SetMode
 from std_msgs.msg import String as StringMsg
 
 ROS_SETUP = "/opt/ros/noetic/setup.bash"
-WS = "/home/yjq/catkin_swarm6-2"
+# 工作空间根 = 本文件上两级（verification/ego_smoke → 工作空间根）
+WS = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 class TakeoffUAV:

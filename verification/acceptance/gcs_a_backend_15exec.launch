@@ -1,7 +1,7 @@
 <launch>
   <!-- 场景2+验收：GCS_A 后端 + 15 个 mock executor（A01..A15）+ 15 个 mock MAVROS state
        需要与 references/runtime 的 6 个批次参与机集合对齐（coverage-segment-1 12 机、recovery/coverage2/hold 9 机含 A13..A15 reserve）。
-       用法（单 Master 11311）：roslaunch /home/yjq/catkin_swarm6-2/verification/acceptance/gcs_a_backend_12exec.launch
+       用法（单 Master 11311）：roslaunch $HOME/catkin_swarm6-2/verification/acceptance/gcs_a_backend_15exec.launch
        之后单独启动 TCP Server（39001），再运行 references/runtime/task_test.py -->
   <arg name="map_file" default="$(find tcp_to_ros)/config/uav_identity_map.yaml" />
   <arg name="confirm_wait_s" default="1.0" />
