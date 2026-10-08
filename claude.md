@@ -29,3 +29,50 @@
 - 先查 `src/tcp_to_ros/plans/README.md` 的设计决策与计划状态，再查对应子包 README、`src/swarm_uav_interfaces/real_setup.md` 和具体测试记录；不要把废弃的 safety lease、旧编队席位或旧 router 修法当成当前方案。任务与协议分别查 `references/runtime/docs/容错自愈联合任务方案(初版).md`、`references/runtime/docs/实物无人机上下层TCP-IP接口对接方案.md`。
 - 验证入口：`verification/ego_smoke/`（基础检查）、`verification/single_uav_recon/`、`verification/four_uav_recon/`（分阶段规程/仿真脚本）、`quality_reports/`（现场结论）、`src/uav_log/`（实飞原始数据及索引）。新修改先做针对性测试与无桨/SITL 验证；涉及实际飞行、网络部署或飞控参数的动作必须经过现场负责人确认。
 - `src/*` 多为**独立 Git 子模块**；`references/runtime/` 也是独立子模块，原则上只读参考。不要覆盖已有未提交改动、批量同步机载代码、清理日志/构建产物或直接调整实机安全门禁；每次改动明确作用仓库、验证范围与未覆盖风险。构建使用 `catkin build`，不要编辑 `build/`、`devel/`、`logs/`。
+
+## 提交规则（多仓库工作区）
+
+本工作区是"主仓 + 独立子模块"结构：**先在各子模块分别提交，最后在主仓提交一次指针同步**。
+
+### 顺序与粒度
+
+1. 一次改动涉及几个包就在几个子模块里各提交一次；**一个提交只做一件事**（常用拆分：功能实现 /
+   该功能的文档 / 采集或工具适配 / 独立缺陷修复；不要混入"顺手改的"）。
+2. 最后在主仓提交**指针同步**：`git add <子模块路径>`（**不要 `git add -A` / `git add .`**）。
+3. 分支：`swarm_topology_bridge`=`services`，`swarm_uav_executor` / `tcp_to_ros` /
+   `references/runtime`=`main`，主仓=`master`。**提交落在各仓当前分支**；不新建分支、不改写历史
+   （amend / force-push）除非明确要求。
+
+### 提交信息格式
+
+```
+<type>(<scope>): <一句话说做了什么>          ← 标题，中文，≤50 字
+                                            ← 空行
+为什么做 / 根因（1–3 句；能引报告、现象或前一轮结论）
+- 改了什么（按文件/模块列点，关键处带 文件:行号）
+- 验证：跑了什么、结果如何（测试数量、实测数字、SITL 轮次）；没验证就写"未验证 + 原因"
+
+Co-Authored-By: Claude Code <noreply@anthropic.com>
+```
+
+- **type**：`feat` / `fix` / `docs` / `chore`（构建、配置、同步）/ `refactor`（不改行为）/ `test`；
+  scope 用包名或子系统（如 `feat(tools):`），跨包时省略。
+- 标题只写"做了什么"，**为什么必须进正文**；验证写实（"四机 SITL 彩排 ROUND RESULT: SUCCESS"、
+  "102 passed"），涉及实飞行为的改动注明未覆盖风险（如"仅 SITL，电台链路未覆盖"）。
+- 主仓同步提交要写清同步了哪几个子模块的哪件事。
+
+### 提交前必做
+
+- 跑与改动相关的测试（本工作区常用命令）：
+  - `swarm_topology_bridge`：`python3 test/test_bridge_health.py`（纯逻辑，无需 ROS master）
+  - `swarm_uav_executor`：`python3 -m unittest discover -s test -p 'test_*.py'`，**跳过 `*_ros.py`**
+    （需已初始化的 ROS 节点/rostest，裸跑会失败或挂起）
+  - `references/runtime`：`PYTHONPATH=src python3 -m pytest tests/ -q --ignore=tests/test_fields2cover_generation.py`
+  - 动过 launch：`roslaunch --nodes <包> <文件> [arg:=值 ...]` 校验可解析
+- `git status` 逐项确认**只有本次改动**（子模块里可能有他人未提交内容，不要顺手带走）。
+- 不 `--no-verify`；**不推送 / 不开 PR / 不合并**，除非明确要求。
+
+### 不要提交
+
+`src/uav_log/`、`runtime_logs/`、`.runtime_logs/`、`.ros_home/`、`quality_reports/`（均已 gitignore）；
+`references/DAG-GCBF/`、`verification/dag_recovery/`（未跟踪的独立资料，按需保留在工作区）。
