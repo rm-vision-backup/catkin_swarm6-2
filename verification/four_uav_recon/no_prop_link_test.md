@@ -61,8 +61,8 @@ ssh nvidia@192.168.5.81 'setsid bash ~/catkin_swarm6-2/src/swarm_uav_executor/ba
 
 ```bash
 # 1) 健康文件必须在 ~1 s 内出现（看不到就别继续）
-ls -l ~/catkin_swarm6-2/.runtime_logs/health/          # 至少 <UAVn>_bridge_health.jsonl
-head -1 ~/catkin_swarm6-2/.runtime_logs/health/UAV8_bridge_health.jsonl   # health_start 行
+ls -l ~/catkin_swarm6-2/.ros_home/log/health/          # 至少 <UAVn>_bridge_health.jsonl
+head -1 ~/catkin_swarm6-2/.ros_home/log/health/UAV8_bridge_health.jsonl   # health_start 行
 # 2) 门禁 4/5 照旧（四台 UP、邻机订阅 6 行），见 README.md §二
 # 3) 事件文件（*_follower_events.jsonl / *_relay_events.jsonl）在对应事件发生时才出现，起栈时没有是正常的
 ```
@@ -75,7 +75,7 @@ head -1 ~/catkin_swarm6-2/.runtime_logs/health/UAV8_bridge_health.jsonl   # heal
 ```bash
 python3 - <<'PY'
 import json, glob, os
-for f in glob.glob(os.path.expanduser("~/catkin_swarm6-2/.runtime_logs/health/UAV1*_bridge_health.jsonl")):
+for f in glob.glob(os.path.expanduser("~/catkin_swarm6-2/.ros_home/log/health/UAV1*_bridge_health.jsonl")):
     for line in open(f):
         d = json.loads(line)
         if d.get("event") != "sample":  continue
@@ -129,7 +129,7 @@ for n in 8 10 12 13; do ./src/tcp_to_ros/tools/onboard_ctl.sh stop $n; done   # 
 ./src/tcp_to_ros/tools/log_fetch.sh 8 10 12 13        # 采集包含 onboard/health/*.jsonl
 ```
 
-  GCS 侧 `<GCS 工作区>/.runtime_logs/health/*.jsonl` 手工归进采集包 `gcs/`。
+  GCS 侧 `<GCS 工作区>/.ros_home/log/health/*.jsonl` 手工归进采集包 `gcs/`。
 
 ## 五、判据表（定层口径）
 
