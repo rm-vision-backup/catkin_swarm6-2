@@ -141,7 +141,7 @@ for n in 8 10 12 13; do ./src/tcp_to_ros/tools/onboard_ctl.sh stop $n; done   # 
 | 发送侧 `rx` 走、`tx` 停 | bridge 发送路径（`drop` 可区分限频丢弃） |
 | 接收侧 `rx` 停、对端 `tx` 走 | ZMQ/电台链路（配合 `link` 事件看是否真断开重连） |
 | 接收侧 `rx` 走、但执行器无 `leader_odom_first_frame`/`follower_exit` | 执行器内部 |
-| `stuck_sockets` 非空 | 数据已在套接字里但收包线程没取，与"链路没数据"是两回事 |
+| `recv_loop_lag_s` 持续增大（>0.5 s） | 收包线程被饿死/卡住，与"链路没数据"是两回事。该标量由收包线程自己记录；`stuck_sockets` 字段已停用（2026-10-09 跨线程查 ZMQ_EVENTS 致桥堆损坏死掉，见 `quality_reports/2026-10-09_*`），恒为空 |
 
 ## 六、已知陷阱
 
