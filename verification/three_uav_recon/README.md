@@ -20,6 +20,7 @@
 | `driver.py` | 任务下发入口：补默认 package/mission-id 后换成 `four_uav_recon/driver.py`（同一实现，退出码/信号一致） |
 | `package/` | 任务数据（robots / bootstrap / world / plans）；`prepare-a` + `coverage-segment-1`；leader = A08；mission_id = `three-uav-recon-002` |
 | `no_prop_link_test.md` | **无桨**（不装桨、不 arm）链路 + 跟随环 dry-run 验证规程（当前现场轮次入口） |
+| `package_ground/` + `ground_flow.sh` | **地面贴地彩排**：飞机原地不动跑完 prepare → coverage（见 §七） |
 
 ## 零、起飞前门禁（**全绿才装桨**）
 
@@ -178,7 +179,30 @@ A10 与 A08 保持约 (−5,+5) m、A13 约 (−5,0) m（两两间距 ≥5 m）�
 `./src/tcp_to_ros/tools/log_fetch.sh 8 10 13`（采集含 `onboard/health/*.jsonl`）。
 `mavlink-routerd` 不要停（现场常驻件）。
 
-## 七、仿真彩排
+## 七、彩排
+
+### 7.1 地面彩排（原地跑完 prepare → coverage；无桨/未 arm 时用）
+
+两轮实飞的故障发生在"**prepare 完成后进入 coverage 那一瞬**"；按原任务包（层高 12/15 m）
+飞机停在地面时规划器会判 `EGO_PLAN_FAILED`、组级 ALL 立刻中止，流程**到不了 coverage**，
+复刻不了故障环节。本彩排用**贴地任务包 + 三个部署覆盖参数**，让流程在**原地不动**的情况下
+按 prepare → coverage 原序推进：
+
+```bash
+# 起栈：在 §二 的三条命令上加这三个参数（邻居清单照旧逐台）
+#   noprop:=true layer_move_to:=0.0 layer_follow_route:=0.0 [arrival_reach_thresh_m:=1.0]
+bash verification/three_uav_recon/ground_flow.sh          # 只检查（贴地参数是否生效/地面站/干跑）
+bash verification/three_uav_recon/ground_flow.sh --run    # 跑两阶段并给判定
+```
+
+- 判定：**prepare 3/3 SUCCESS**（= 原地进入 coverage，这才是本彩排的目的）；coverage 是否下发、
+  两跟随者是否 `follower_start`/`leader_odom_first_frame`；**coverage 的完成不作要求**
+  （跟随判据要求"自机距 leader+offset ≤0.2 m"，不动时满足不了）。
+- 三个参数的作用：`layer_move_to/layer_follow_route` 关掉 MOVE_TO/FOLLOW_ROUTE 的层高插入
+  （否则原地必然失败）；`arrival_reach_thresh_m` 放宽规划器到达判据（吸收现场摆位残差，默认 0.5 m 偏紧）。
+- 不覆盖：**空中链路条件**；任务态链路问题仍需实飞 + health + rosbag。
+
+### 7.2 仿真彩排（SITL）
 
 本目录暂无三机 SITL 脚本；改过配置先跑四机彩排
 （`bash verification/four_uav_recon/sitl/run_sim_four_uav.sh`，验证的是共享机制），
