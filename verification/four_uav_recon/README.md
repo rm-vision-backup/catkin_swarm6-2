@@ -392,27 +392,43 @@ bash verification/four_uav_recon/sitl/run_sim_four_uav.sh
 
 ## 九、机载 `mavlink-routerd`（现场常驻件）
 
-router 由桌面自启（`~/.config/autostart/gnome-terminal.desktop` → `~/Mavlink_Routerd_Sh/Mavlink-route.sh`）。
-2026-09-23 实测更正，三条：
+**2026-10-09 起：router 由 systemd 管理（开机自启，不再依赖桌面/终端）。**
 
-1. **启动脚本必须前台运行**（**不要** `setsid/nohup/&`）。gnome-terminal 每个标签页跑在
-   systemd 的 `vte-spawn-*.scope`(cgroup) 里：脚本一退出，标签页关闭 → scope 被撤销 →
-   cgroup 内进程被**全部杀掉**，router 跟着死（`setsid` 只换会话、换不掉 cgroup）。
-   实际现象 = **开机后 router 根本没起来**，遥测/参数全不通。判据：
-   `journalctl -b | grep -E "vte-spawn|chmod 777"` —— 有 `chmod 777` 但**同秒**跟着
-   `scope: Succeeded` 即此症。**脚本唯一正确的是"只去 `-r`、保持前台"这一个形态**
-   （2026-09-23 已在 8/10/11/12/13 上逐台重启验证）。
-2. **顺序：router 必须先于机载栈**。若 mavros 先起（或 router 中途被重启），
-   `mavros → 飞控` 的**定向**消息通道会坏掉 —— 现象极具迷惑性：遥测正常、`connected: True`、
-   `mavros/state` 看着全好，但**参数读不出、命令无 ACK、原点永远不 confirmed**（广播类如
-   TIMESYNC 却正常）。判定：`rosservice call /mavros/param/get '{param_id: "MAV_SYS_ID"}'`
-   返回 `success: False`。补救 = **重启机载栈**（router 保持运行）。
-3. **去掉 `-r`**。`-r` = `--report_msg_statistics`（每 5 s 打印 10–20 KB 统计）；旧脚本
-   前台且不重定向，一旦 stdout 没人读（终端被关/冻结）router 就阻塞在打印上，**串口 TX
-   被饿死** → 命令全发不出去（UAV6/8 实例）。去掉 `-r` 后 stdout 基本无输出，无需重定向。
+```bash
+# 判活 / 查看（逐台；判活用 pgrep 或 systemctl，不要用 ss -lunp | grep 15500
+# ——它的 UDP 是 connect 出去的 socket，不处于 LISTEN）
+systemctl is-active mavlink-routerd      # 期望 active
+pgrep -x mavlink-routerd                 # 期望 1 个进程
+sudo journalctl -u mavlink-routerd -b    # 本次开机的启动记录（四条 Opened = UART + 3 个 UDP + TCP 5760）
+# 手动起停（一般不需要；服务 enabled，开机自动起）
+sudo systemctl restart mavlink-routerd
+```
 
-**判活一条命令**：`pgrep -x mavlink-routerd`。**不要**用 `ss -lunp | grep 15500` 判 router
-死活（它的 UDP 是 connect 出去的 socket，不处于 LISTEN）。
+- unit：`tools/systemd/mavlink-routerd.service`（tcp_to_ros 仓）；实装/刷新：
+  `bash src/tcp_to_ros/tools/router_service_install.sh 8 10 13`（从 GCS 逐台，幂等；
+  前置要求机载栈没在跑）。
+- 参数与旧脚本逐项一致：`-e 192.168.5.241:15500 -e 192.168.5.242:15500 -e 127.0.0.1:15500
+  /dev/ttyTHS0:921600`；以 root 运行，**不再需要 `chmod 777 /dev/ttyTHS0`**。
+- 旧的桌面自启（`~/.config/autostart/gnome-terminal.desktop` → `Mavlink-route.sh`）已**禁用**
+  （`X-GNOME-Autostart-enabled=false` + `Hidden=true`）；脚本文件保留在板上备查。
+- 2026-10-09 已在 8/10/13 上实装并**逐台重启验证**：三台均在 boot 时自动起来、端点全 Open、
+  单实例、板钟（RTC）正常。
+
+**仍然成立的两条（与启动方式无关）**
+
+1. **顺序：router 必须先于机载栈**。若 mavros 先起（或 router 中途被重启），`mavros → 飞控`
+   的**定向**消息通道会坏掉——现象极具迷惑性：遥测正常、`connected: True`、`mavros/state`
+   看着全好，但**参数读不出、命令无 ACK、原点永远不 confirmed**（广播类如 TIMESYNC 正常）。
+   判定：`rosservice call /mavros/param/get '{param_id: "MAV_SYS_ID"}'` 返回 `success: False`。
+   2026-10-09 实测：**重启机载栈可能无效，重启 router（`systemctl restart mavlink-routerd`）
+   才恢复**——即 router 自身也会进"遥测通、定向死"的状态。
+2. **不要加 `-r`**（`--report_msg_statistics`，每 5 s 打印 10–20 KB）：stdout 没人读时会阻塞
+   打印、**串口 TX 被饿死**（UAV6/8 旧实例）。当前 unit 未带 `-r`，保持即可。
+
+**历史（为什么不再用桌面自启）**：旧方案脚本一退出，gnome-terminal 标签页关闭 →
+systemd 的 `vte-spawn-*.scope` 被撤销 → cgroup 把 router 一起杀掉（`setsid` 只换会话、
+换不掉 cgroup），表现为"开机后 router 根本没起来"；判据是
+`journalctl -b | grep -E "vte-spawn|chmod 777"` 出现 `chmod 777` 后同秒 `scope: Succeeded`。
 
 ## 十、席位变更与 UAV11 本体故障记录（历史）
 
