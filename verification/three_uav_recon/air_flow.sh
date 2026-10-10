@@ -6,18 +6,23 @@
 # no_prop_link_test.md 的 Stage 1/2 从"地面/无桨"搬到"空中/实飞"，并把 rosbag 与健康 JSONL
 # 两层证据接进流程：出现 9/22 型错误时，第一步就跑 `odom` 回答"odom 通不通、断在哪一段"。
 #
-# 前置（与 README §零/§二/§三 相同；**不带任何贴地覆盖参数、不带 noprop**）：
-#   - 三机按 README §1.2 摆好（现场踩过：摆成 A10 在原点角 → prepare 多飞 ~5 m）；
+# 前置（与对应 README §零/§二/§三 相同；**不带任何贴地覆盖参数、不带 noprop**）：
+#   - 按 three/five_uav_recon README §1.2 摆好（现场踩过：摆错原点角机 → prepare 多飞几米）；
 #   - 机载栈用实飞命令起（README §二 去掉 noprop）；GCS 起栈（README §三，含 ROS_HOSTNAME 覆盖）；
-#   - 三机遥控 arm + OFFBOARD（自动升至 5 m 悬停，遥控器在手）；
-#   - 板载 rosbag 脚本为新版：bag 子命令会先核对（旧版提示 rsync，见 README §九）。
+#   - 全体遥控 arm + OFFBOARD（自动升至 5 m 悬停，遥控器在手）；
+#   - 板载 rosbag 脚本为新版：bag 子命令会先核对（旧版提示 rsync，见 three README §九）。
 #
-# 用法（在 GCS 上跑；子命令含义见 README §九）：
+# 用法（在 GCS 上跑；子命令含义见 three README §九）：
 #   bash verification/three_uav_recon/air_flow.sh odom            # 任何时刻：odom 通畅性快查（分层）
-#   bash verification/three_uav_recon/air_flow.sh bag [秒=600]    # 三台同时录 rosbag
+#   bash verification/three_uav_recon/air_flow.sh bag [秒=600]    # 全体同时录 rosbag
 #   bash verification/three_uav_recon/air_flow.sh stage1 [秒=60]  # 空中链路观测窗 + 判定
 #   bash verification/three_uav_recon/air_flow.sh stage2          # 只发 coverage（跟随环）
 #   bash verification/three_uav_recon/air_flow.sh full            # prepare + coverage 全流程
+#
+# 机数参数化（默认 = 三机 8/10/13，向后兼容；五机见 five_uav_recon/README §五）：
+#   AIR_FLOW_UAVS="6 8 10 12 13"   机号列表（含领机）
+#   AIR_FLOW_LEADER=8              领机机号（从跟随者循环里排除；默认 8）
+#   AIR_FLOW_DIR=five_uav_recon    driver 所在目录（默认 three_uav_recon）
 #
 # 判据（stage1）：每台 remote odom 的 rx 持续增长、窗内 gt1000=0（无 ≥1 s 空档）、stalls=0、
 #   无 stall_start/link 事件；每台 local odom 的 rx/tx 同步增长。任一不满足 = 记时刻、留文件。
@@ -26,8 +31,13 @@
 set -u
 
 WS=$(cd "$(dirname "$0")/../.." && pwd)
-UAVS="8 10 13"
-LEADER=8
+UAVS=${AIR_FLOW_UAVS:-"8 10 13"}
+LEADER=${AIR_FLOW_LEADER:-8}
+FLOW_DIR=${AIR_FLOW_DIR:-three_uav_recon}
+UAVS_CSV=$(echo $UAVS | tr ' ' ',')
+NUAV=$(echo $UAVS | wc -w)
+FOLLOWERS=""
+for _n in $UAVS; do [ "$_n" = "$LEADER" ] || FOLLOWERS="$FOLLOWERS $_n"; done
 CONFIG="$WS/src/tcp_to_ros/tools/configs/onboard.env"
 [ -f "$CONFIG" ] && . "$CONFIG"
 
@@ -168,7 +178,7 @@ PY
 }
 
 followers_events() {  # $1=起始 epoch：打印各跟随者窗口内的跟随环事件
-  for n in 10 13; do
+  for n in $FOLLOWERS; do
     # shellcheck disable=SC2029
     timeout 30 sshpass -p "${BOARD_SSH_PASS:-nvidia}" ssh -T -o ConnectTimeout=8 \
       -o StrictHostKeyChecking=no "${BOARD_SSH_USER:-nvidia}@$(ip_of "$n")" "python3 - $1" <<'PY'
@@ -206,7 +216,7 @@ for d in rows:
 PY
 }
 
-check_gates() {  # stage2/full 前置：三机 armed+OFFBOARD、标定 ready、TCP 在听
+check_gates() {  # stage2/full 前置：各机 armed+OFFBOARD、标定 ready、TCP 在听
   rc=0
   ready=$(timeout 10 rostopic echo -n1 /group_a/calibration_ready 2>/dev/null | head -1)
   [ "$ready" = "data: True" ] && echo "  calibration_ready=True ✓" || { echo "  calibration_ready=${ready:-读不到} ✗"; rc=1; }
@@ -214,24 +224,24 @@ check_gates() {  # stage2/full 前置：三机 armed+OFFBOARD、标定 ready、T
     st=$(timeout 8 rostopic echo -n1 "/UAV$n/mavros/state" 2>/dev/null | grep -E "armed|mode" | tr -d ' \n')
     case "$st" in *"armed:True"*"OFFBOARD"*) echo "  UAV$n armed+OFFBOARD ✓" ;; *) echo "  UAV$n $st ✗（未 arm/未 OFFBOARD）"; rc=1 ;; esac
   done
-  nc -z "${GCS_ROBOT_IP:-192.168.5.241}" 39001 >/dev/null 2>&1 && echo "  GCS TCP 39001 在听 ✓" || { echo "  GCS TCP 39001 不通 ✗（先起 gcs_a_real_three_uav.launch）"; rc=1; }
+  nc -z "${GCS_ROBOT_IP:-192.168.5.241}" 39001 >/dev/null 2>&1 && echo "  GCS TCP 39001 在听 ✓" || { echo "  GCS TCP 39001 不通 ✗（先起对应的 gcs_a_real_*_uav.launch）"; rc=1; }
   return $rc
 }
 
 case "$CMD" in
   odom)
-    echo "== odom 通畅性快查（$(date +%H:%M:%S)；三台并行）=="
+    echo "== odom 通畅性快查（$(date +%H:%M:%S)；$NUAV 台并行）=="
     for n in $UAVS; do read_health "$(ip_of "$n")" quick 0 & done
     wait
-    cat <<'EOM'
-  判读：领机看"本机发出 odom"（rx/tx 在涨，drop 是限频丢弃属正常）；跟随者看"收到邻机
-  odom"（age_max 应 ~50 ms 内、stale_srcs 空）。stale_srcs 里出现 UAV8 = 跟随环输入断了
-  （9/22 型故障），立刻跑 `bag`（若还没录）并在两分钟后复跑本命令看是否恢复。
+    cat <<EOM
+  判读：领机（UAV$LEADER）看"本机发出 odom"（rx/tx 在涨，drop 是限频丢弃属正常）；跟随者看
+  "收到邻机 odom"（age_max 应 ~50 ms 内、stale_srcs 空）。stale_srcs 里出现 UAV$LEADER = 跟随环
+  输入断了（9/22 型故障），立刻跑 \`bag\`（若还没录）并在两分钟后复跑本命令看是否恢复。
 EOM
     ;;
   bag)
     DUR="${1:-600}"
-    echo "== 三台同录 rosbag（${DUR}s，-u 8,10,13）=="
+    echo "== 同录 rosbag（${DUR}s，-u $UAVS_CSV，$NUAV 台）=="
     rc=0
     for n in $UAVS; do
       ip=$(ip_of "$n")
@@ -242,7 +252,7 @@ EOM
       fi
       timeout 20 sshpass -p "${BOARD_SSH_PASS:-nvidia}" ssh -n -o ConnectTimeout=8 -o StrictHostKeyChecking=no \
         "${BOARD_SSH_USER:-nvidia}@$ip" \
-        "setsid bash ~/catkin_swarm6-2/src/swarm_uav_executor/bashs/record_rosbag.sh -u 8,10,13 -n air -d $DUR </dev/null >~/rosbag_record.log 2>&1 &"
+        "setsid bash ~/catkin_swarm6-2/src/swarm_uav_executor/bashs/record_rosbag.sh -u $UAVS_CSV -n air -d $DUR </dev/null >~/rosbag_record.log 2>&1 &"
       echo "  UAV$n: 已启动（>~/rosbag_record.log）"
     done
     [ "$rc" -eq 0 ] && echo "  录完/停止后：Ctrl-C 由 -d 自动收；取包 scp 见 README §九（log_fetch.sh 不采 bag）"
@@ -268,10 +278,10 @@ EOM
     if [ "$CMD" = stage2 ]; then PHASES="coverage"; else PHASES="prepare coverage"; fi
     echo "== 前置门禁 =="
     check_gates || { echo "== 门禁未过，先修（不要下发）=="; exit 1; }
-    LOG="$WS/verification/three_uav_recon/logs/air_${CMD}_$(date +%Y%m%d_%H%M%S).jsonl"
+    LOG="$WS/verification/$FLOW_DIR/logs/air_${CMD}_$(date +%Y%m%d_%H%M%S).jsonl"
     T0=$(date +%s)
     echo "== 下发：--phases $PHASES（$(date +%H:%M:%S)；证据 $LOG）=="
-    python3 "$WS/verification/three_uav_recon/driver.py" \
+    python3 "$WS/verification/$FLOW_DIR/driver.py" \
       --tcp-host "${GCS_ROBOT_IP:-192.168.5.241}" --tcp-port 39001 \
       --phases $PHASES --log "$LOG"
     drv_rc=$?
@@ -283,12 +293,12 @@ EOM
     cat <<'EOM'
   判读：跟随者应出现 follower_start → leader_odom_first_frame（wait_s ≲ 0.1 s）且**无** LEADER_LOST；
   出现 LEADER_LOST / "leader odom timed out" = 9/22 型故障复现 → 立刻跑 `air_flow.sh odom` 定层，
-  并在收工后按 rosbag 三份对齐（发送侧/接收侧/哨兵话题）。
+  并在收工后按 rosbag 各机对齐（发送侧/接收侧/哨兵话题）。
 EOM
     [ "$drv_rc" -eq 0 ] && echo "== $CMD 通过 ==" || echo "== $CMD 未全通过（阶段终态不作为唯一判据，先看跟随环事件与 odom）=="
     exit "$drv_rc"
     ;;
   *)
-    sed -n '2,34p' "$0"; exit 2
+    sed -n '2,30p' "$0"; exit 2
     ;;
 esac
