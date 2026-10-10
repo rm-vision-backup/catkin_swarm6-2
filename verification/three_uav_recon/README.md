@@ -117,11 +117,7 @@ ssh nvidia@192.168.5.131 'setsid bash ~/catkin_swarm6-2/src/swarm_uav_executor/b
   uav_task_timeout_s:=280 </dev/null >/dev/null 2>&1 &'
 ```
 
-起栈前先确认三台都没在跑（`onboard_ctl.sh status n` 逐台；有残留先 `stop n`）。
-起栈后核对门禁 4/5 见 `no_prop_link_test.md` §二 的核对段（三机同样适用）。
-不用传的参数（`formation_offsets` / `leader_odom_topic_prefix` / `uav_name`）与四机 README §二
-相同；**不要**用 `onboard_ctl.sh start 8 10 13 -- <参数>` 扇出（邻居清单每台不同，
-且该工具多目标只处理第一个）。
+
 
 ## 三、地面站启动（本机 = GCS_A，192.168.5.241）
 
@@ -235,6 +231,15 @@ bash verification/three_uav_recon/ground_flow.sh --run    # 跑两阶段并给�
   `layer_move_to/layer_follow_route/arrival_reach_thresh_m/enable_yield_candidates`——那些只属于
   §7.1 地面彩排；不传时行为与 canonical 完全一致，见四机 README §八）。
 - 摆位按 §1.2 核对（见 §八.3 的实测补记）。
+- 上电后先做 §1.3（身份 + **板钟**，先于起栈）：`stage1` 的窗判定以 GCS 时刻为基准过滤板上
+  样本，板钟停在 1970 会让判定直接失效。
+- 板上 bridge 要含 **`recv_loop_lag_s`** 的版本（be338fc 起；旧版有跨线程查 `ZMQ_EVENTS` 的
+  堆损坏 SIGABRT，症状与"跟随者拿不到领机 odom"同型，会污染本轮判定）。不起栈可先核：
+  ```bash
+  for ip in 81 101 131; do sshpass -p nvidia ssh nvidia@192.168.5.$ip \
+    'grep -c recv_loop_lag_s ~/catkin_swarm6-2/src/swarm_topology_bridge/scripts/bridge_node.py'; done
+  # 期望三台都 ≥1；出现 0 = 旧版，先 rsync swarm_topology_bridge + 板上 catkin build
+  ```
 - 板上 rosbag 脚本要新版（含"链路哨兵"话题）：旧版先同步（bash 脚本不用 build）：
   ```bash
   for ip in 81 101 131; do
@@ -250,7 +255,7 @@ bash verification/three_uav_recon/ground_flow.sh --run    # 跑两阶段并给�
 | # | 时机 | 命令 | 判据 / 用途 |
 |---|---|---|---|
 | 0 | 起飞前 | `bash .../air_flow.sh bag 1200` | 三台同录 bag（默认 600 s；**起飞前就起**，覆盖地面→空中全过程）；脚本会先核对板上脚本版本 |
-| 1 | 空中 5 m 悬停 | `bash .../air_flow.sh stage1 60` | 空中静态链路：各机 remote odom 的 rx 增长、窗内 `gt1000=0`（无 ≥1 s 空档）、`stalls=0`、无 stall/link 事件；领机 local odom 同步增长 |
+| 1 | 空中 5 m 悬停 | `bash .../air_flow.sh stage1 60` | 空中静态链路：各机 remote odom 的 rx 增长、各机 local odom 的 rx/tx 均增长、窗内 `gt1000=0`（无 ≥1 s 空档）、`stalls=0`、无 stall/link 事件（窗口内别新起/重启任何 bridge——`connected` 事件会被计 ✗） |
 | 2 | stage1 通过后 | `bash .../air_flow.sh stage2` | 只发 coverage：领机起飞到 12 m 走航线、跟随者进跟随环。看 `follower_start` → `leader_odom_first_frame`（`wait_s ≲ 0.1 s`）且**无 LEADER_LOST**；coverage 完整完成是加分项不是门槛 |
 | 3 | stage2 通过后 | `bash .../air_flow.sh full` | prepare + coverage 全流程（与 §四 等价）。建议**落地后重开一轮**再下发，状态更干净；同飞行续发也可（prepare 会把各机再拉回停机位正上方） |
 
