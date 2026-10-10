@@ -10,6 +10,9 @@
 > **本规程不能替代实飞验收**：它保证"部署正确 + 观测在工作 + 静态链路没断"，
 > 不覆盖 armed/OFFBOARD 门禁、软起飞、真实控制与飞行态负载。通过 ≠ 任务态干净。
 >
+> **空中版（2026-10-10 起）**：Stage 1/2 的实飞版本在 `README.md §九`
+> （`air_flow.sh`：stage1/stage2/full + 机载 rosbag + odom 快查），判据口径与本文件一致。
+>
 > 三机版说明（本文件 vs `four_uav_recon/no_prop_link_test.md`）：邻居清单从 3 台缩到 2 台、
 > Stage 2 换三机 GCS 配置与三机 package，其余判据/陷阱完全一致。
 

@@ -126,7 +126,11 @@ ssh nvidia@192.168.5.131 'setsid bash ~/catkin_swarm6-2/src/swarm_uav_executor/b
 ## 三、地面站启动（本机 = GCS_A，192.168.5.241）
 
 ```bash
-roslaunch src/tcp_to_ros/launch/gcs_a_real_three_uav.launch
+# 本机 ~/.bashrc 的 ROS_HOSTNAME=yjq 经 /etc/hosts 解析到不存在的 192.168.1.100（且
+# ROS_MASTER_URI 指向别机）→ 直接 roslaunch 会卡在自检（2026-10-09 实测）。必须显式覆盖：
+env -u ROS_HOSTNAME ROS_IP=192.168.5.241 ROS_MASTER_URI=http://localhost:11311 \
+  bash -c 'source /opt/ros/noetic/setup.bash && source devel/setup.bash && \
+           roslaunch src/tcp_to_ros/launch/gcs_a_real_three_uav.launch'
 ```
 
 - [ ] 启动日志无 `ValueError`；calibration 段打印 `calibration set=UAV8,UAV10,UAV13`
@@ -216,3 +220,69 @@ bash verification/three_uav_recon/ground_flow.sh --run    # 跑两阶段并给�
    增/减机（例如 12 号机归队）必须换回四机配置，不能只改 package。
 3. 三机摆位的中位数落在 **A13 机位**（角上），不是几何中心——若照四机 README §1.2
    只删一台机，prepare 目标会整体偏 ~1.7 m（无桨轮无影响，实飞会多飞一小段）。
+   **2026-10-09 实测补记**：现场把 **A10 摆在了原点角**，于是任务包（按 A13 在角上写）让
+   A13/A10 各要真飞 ~4.6/5.0 m。起飞前务必按 §1.2 核对"谁在角上"；不符就先摆位或先改包。
+
+## 九、实飞分阶段测试（stage1 → stage2 → 全流程；含机载 rosbag）
+
+目的：把 `no_prop_link_test.md` 的 Stage 1/2 从"地面/无桨"搬到**空中/实飞**，并让每一步都有
+两层证据（rosbag 连续量 + health JSONL 分项），直接回答 9/22 的老问题——**跟随者到底有没有
+拿到领机 odom、哪一段断了**。流程脚本：`verification/three_uav_recon/air_flow.sh`。
+
+### 9.1 先决条件
+
+- 起栈用**实飞命令**（README §二 去掉 `noprop:=true`，且**不带**任何贴地覆盖参数
+  `layer_move_to/layer_follow_route/arrival_reach_thresh_m/enable_yield_candidates`——那些只属于
+  §7.1 地面彩排；不传时行为与 canonical 完全一致，见四机 README §八）。
+- 摆位按 §1.2 核对（见 §八.3 的实测补记）。
+- 板上 rosbag 脚本要新版（含"链路哨兵"话题）：旧版先同步（bash 脚本不用 build）：
+  ```bash
+  for ip in 81 101 131; do
+    rsync -rc -e "sshpass -p nvidia ssh -o StrictHostKeyChecking=no" \
+      src/swarm_uav_executor/bashs/record_rosbag.sh \
+      nvidia@192.168.5.$ip:~/catkin_swarm6-2/src/swarm_uav_executor/bashs/
+  done
+  ```
+- GCS 起栈见 §三（含环境变量覆盖）；三机遥测可见（`rostopic hz /UAV8/mavros/local_position/odom`）。
+
+### 9.2 步骤（`air_flow.sh` 子命令）
+
+| # | 时机 | 命令 | 判据 / 用途 |
+|---|---|---|---|
+| 0 | 起飞前 | `bash .../air_flow.sh bag 1200` | 三台同录 bag（默认 600 s；**起飞前就起**，覆盖地面→空中全过程）；脚本会先核对板上脚本版本 |
+| 1 | 空中 5 m 悬停 | `bash .../air_flow.sh stage1 60` | 空中静态链路：各机 remote odom 的 rx 增长、窗内 `gt1000=0`（无 ≥1 s 空档）、`stalls=0`、无 stall/link 事件；领机 local odom 同步增长 |
+| 2 | stage1 通过后 | `bash .../air_flow.sh stage2` | 只发 coverage：领机起飞到 12 m 走航线、跟随者进跟随环。看 `follower_start` → `leader_odom_first_frame`（`wait_s ≲ 0.1 s`）且**无 LEADER_LOST**；coverage 完整完成是加分项不是门槛 |
+| 3 | stage2 通过后 | `bash .../air_flow.sh full` | prepare + coverage 全流程（与 §四 等价）。建议**落地后重开一轮**再下发，状态更干净；同飞行续发也可（prepare 会把各机再拉回停机位正上方） |
+
+任意时刻怀疑断链（尤其 stage2 里出现 9/22 型错误：`LEADER_LOST` / `leader odom timed out`）：
+
+```bash
+bash .../air_flow.sh odom     # 秒级分层：每台看"本机发出/收到邻机"的 age、stale_srcs、近期事件
+```
+
+### 9.3 出了 9/22 型错误时的定层口径
+
+1. **第一步永远先跑 `odom`**：领机"本机发出"在涨、跟随者"收到邻机"停 → 断在中间段（桥/链路）；
+   两边都正常但任务仍报 `LEADER_LOST` → 跟随环自身（订阅名/超时/线程）。
+2. 记下时刻，保留 `health/*.jsonl`、`*_follower_events.jsonl`、driver JSONL 与三份 bag。
+3. 收工后按 rosbag 三份对齐（同一时刻）：领机 bag 里 `/mavros/local_position/odom`（发送侧）
+   ↔ 跟随者 bag 里 `/UAV8/mavros/local_position/odom`（接收侧）↔ 哨兵话题
+   （`mavros/state`/`time_reference`/`rc/in`/`gps_bias`）——三类证据同停=整链路断，只有 odom 停=
+   该话题发布/桥接端问题。bag 话题清单与理由见 `src/swarm_uav_executor/bashs/record_rosbag.sh` 头注释。
+
+### 9.4 收尾
+
+```bash
+for n in 8 10 13; do ./src/tcp_to_ros/tools/onboard_ctl.sh stop $n; done   # 逐台
+./src/tcp_to_ros/tools/log_fetch.sh 8 10 13        # 含 onboard/health/*.jsonl；**不采 bag**
+# bag 手工取（体积大）：
+for ip in 81 101 131; do
+  rsync -rc --include='*.bag' --exclude='*' -e "sshpass -p nvidia ssh -o StrictHostKeyChecking=no" \
+    nvidia@192.168.5.$ip:'~/catkin_swarm6-2/.ros_home/log/rosbag/' \
+    "src/uav_log/$(date +%Y-%m-%d)_airflow/raw_$ip/"
+done
+```
+
+与既有文档的关系：`no_prop_link_test.md`（地面/无桨 Stage 1/2）保留作地面预演；
+`ground_flow.sh`（贴地彩排）保留作不飞行时的流程验证；本节是**空中**版，三者共用同一套
+health/事件/JSONL 判读口径。
