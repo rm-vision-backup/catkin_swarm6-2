@@ -1,0 +1,106 @@
+<launch>
+  <!-- 五机工程测试专用仿真出生布局（UAV6/8/10/12/13 -> iris_5/7/9/11/12）
+       （PX4 实例号 = ID，系统号 = ID+1，所以 UAVn 用 ID=n-1。）
+
+       出生位置按五机十字布局摆放（与 config/formation_offsets_five_uav.yaml 的
+       物理布局同构：中心 = A13 = (100,100)，5 m 网格）：
+         A13 中心 (100,100) → iris_12（与四机版同点，逐字不变）
+         A08 右   (105,100) → iris_7 （与四机版同点）
+         A10 前   (100,105) → iris_9 （与四机版同点）
+         A12 左    (95,100) → iris_11（改点：四机版在 (105,105)）
+         A06 后    (100, 95) → iris_5 （改点：单机版在 (100,100)，本布局里
+                                       与 iris_12 重叠需让位）
+       每架机的 ID / mavlink_tcp_port / udp_gimbal_port 与 15sim / four_uav /
+       single 的同名 iris 完全一致，保证 MAVLink 端口与机载
+       uav_offboard_ego.launch 的 udp_port=24540-1+tgt_system 对齐。
+
+       用法（Master 11300 / Gazebo 11345）：
+         export ROS_MASTER_URI=http://localhost:11300
+         export GAZEBO_MASTER_URI=http://localhost:11345
+         roslaunch verification/five_uav_recon/sitl/five_uav_spawn.launch gui:=false
+       机载层用 startup_offboard_ego.sh 6 8 10 12 13 启动。 -->
+
+  <arg name="world" default="$(find mavlink_sitl_gazebo)/worlds/empty.world"/>
+  <arg name="gui" default="false"/>
+  <arg name="debug" default="false"/>
+  <arg name="verbose" default="false"/>
+  <arg name="paused" default="false"/>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="world_name" value="$(arg world)"/>
+    <arg name="debug" value="$(arg debug)"/>
+    <arg name="verbose" value="$(arg verbose)"/>
+    <arg name="paused" value="$(arg paused)"/>
+  </include>
+
+  <!-- UAV6 / A06（后位） -->
+  <group ns="iris_5">
+    <include file="$(find px4)/launch/single_vehicle_spawn_xtd.launch">
+      <arg name="x" value="100"/><arg name="y" value="95"/>
+      <arg name="z" value="0.5"/>
+      <arg name="R" value="0"/><arg name="P" value="0"/><arg name="Y" value="0"/>
+      <arg name="vehicle" value="iris"/><arg name="sdf" value="iris"/>
+      <arg name="ID" value="5"/><arg name="ID_in_group" value="5"/>
+      <arg name="mavlink_tcp_port" value="4565"/>
+      <arg name="udp_gimbal_port" value="13035"/>
+      <arg name="interactive" value="true"/>
+    </include>
+  </group>
+
+  <!-- UAV8 / A08（右位，领机） -->
+  <group ns="iris_7">
+    <include file="$(find px4)/launch/single_vehicle_spawn_xtd.launch">
+      <arg name="x" value="105"/><arg name="y" value="100"/>
+      <arg name="z" value="0.5"/>
+      <arg name="R" value="0"/><arg name="P" value="0"/><arg name="Y" value="0"/>
+      <arg name="vehicle" value="iris"/><arg name="sdf" value="iris"/>
+      <arg name="ID" value="7"/><arg name="ID_in_group" value="7"/>
+      <arg name="mavlink_tcp_port" value="4567"/>
+      <arg name="udp_gimbal_port" value="13037"/>
+      <arg name="interactive" value="true"/>
+    </include>
+  </group>
+
+  <!-- UAV10 / A10（前位） -->
+  <group ns="iris_9">
+    <include file="$(find px4)/launch/single_vehicle_spawn_xtd.launch">
+      <arg name="x" value="100"/><arg name="y" value="105"/>
+      <arg name="z" value="0.5"/>
+      <arg name="R" value="0"/><arg name="P" value="0"/><arg name="Y" value="0"/>
+      <arg name="vehicle" value="iris"/><arg name="sdf" value="iris"/>
+      <arg name="ID" value="9"/><arg name="ID_in_group" value="9"/>
+      <arg name="mavlink_tcp_port" value="4569"/>
+      <arg name="udp_gimbal_port" value="13039"/>
+      <arg name="interactive" value="true"/>
+    </include>
+  </group>
+
+  <!-- UAV12 / A12（左位） -->
+  <group ns="iris_11">
+    <include file="$(find px4)/launch/single_vehicle_spawn_xtd.launch">
+      <arg name="x" value="95"/><arg name="y" value="100"/>
+      <arg name="z" value="0.5"/>
+      <arg name="R" value="0"/><arg name="P" value="0"/><arg name="Y" value="0"/>
+      <arg name="vehicle" value="iris"/><arg name="sdf" value="iris"/>
+      <arg name="ID" value="11"/><arg name="ID_in_group" value="11"/>
+      <arg name="mavlink_tcp_port" value="4571"/>
+      <arg name="udp_gimbal_port" value="13041"/>
+      <arg name="interactive" value="true"/>
+    </include>
+  </group>
+
+  <!-- UAV13 / A13（中心/原点角） -->
+  <group ns="iris_12">
+    <include file="$(find px4)/launch/single_vehicle_spawn_xtd.launch">
+      <arg name="x" value="100"/><arg name="y" value="100"/>
+      <arg name="z" value="0.5"/>
+      <arg name="R" value="0"/><arg name="P" value="0"/><arg name="Y" value="0"/>
+      <arg name="vehicle" value="iris"/><arg name="sdf" value="iris"/>
+      <arg name="ID" value="12"/><arg name="ID_in_group" value="12"/>
+      <arg name="mavlink_tcp_port" value="4572"/>
+      <arg name="udp_gimbal_port" value="13042"/>
+      <arg name="interactive" value="true"/>
+    </include>
+  </group>
+</launch>
