@@ -13,6 +13,7 @@
 #   layer_move_to:=0.0           否则 MOVE_TO 会先插一个 15 m 层
 #   layer_follow_route:=0.0      否则 FOLLOW_ROUTE 会先插一个 12 m 层
 #   arrival_reach_thresh_m:=1.0  可选：摆位残差大时放宽到达判据（默认 0.5 m 偏紧）
+#   enable_yield_candidates:=false  **必须**：贴地时避让找不到候选 → 10 s 后直接 EGO_PLAN_FAILED（2026-10-09 实测）
 #
 # 用法：
 #   bash verification/three_uav_recon/ground_flow.sh            # 只检查（不跑任务）
@@ -53,12 +54,13 @@ for n in $UAVS; do
         -o StrictHostKeyChecking=no "${BOARD_SSH_USER:-nvidia}@$ip" \
         "source /opt/ros/noetic/setup.bash >/dev/null 2>&1; source ~/catkin_swarm6-2/devel/setup.bash >/dev/null 2>&1; \
          rosparam get /uav_executor_UAV$n/ego_swarm/layer_move_to 2>/dev/null; \
-         rosparam get /uav_executor_UAV$n/ego_swarm/layer_follow_route 2>/dev/null" 2>/dev/null | tr '\n' ' ')
-  lm=$(echo "$out" | awk '{print $1}'); lf=$(echo "$out" | awk '{print $2}')
-  if [ "$lm" = "0.0" ] && [ "$lf" = "0.0" ]; then
-    echo "  UAV$n: layer_move_to=$lm layer_follow_route=$lf  OK"
+         rosparam get /uav_executor_UAV$n/ego_swarm/layer_follow_route 2>/dev/null; \
+         rosparam get /ego_planner_driver/enable_yield_candidates 2>/dev/null" 2>/dev/null | tr '\n' ' ')
+  lm=$(echo "$out" | awk '{print $1}'); lf=$(echo "$out" | awk '{print $2}'); yc=$(echo "$out" | awk '{print $3}')
+  if [ "$lm" = "0.0" ] && [ "$lf" = "0.0" ] && [ "$yc" = "false" ]; then
+    echo "  UAV$n: layer_move_to=$lm layer_follow_route=$lf yield=$yc  OK"
   else
-    echo "  UAV$n: layer_move_to=${lm:-读不到} layer_follow_route=${lf:-读不到}  ✗ 未用贴地参数起栈"
+    echo "  UAV$n: layer_move_to=${lm:-读不到} layer_follow_route=${lf:-读不到} enable_yield_candidates=${yc:-读不到}  ✗ 未用贴地参数起栈"
     rc=1
   fi
 done
@@ -66,7 +68,7 @@ if [ "$rc" -ne 0 ]; then
   cat <<'EOM'
   ⇒ 用下面这条（逐台，邻居清单每台不同）重起后再跑：
      ssh nvidia@192.168.5.<10n+1> 'setsid bash ~/catkin_swarm6-2/src/swarm_uav_executor/bashs/start_onboard.sh \
-       noprop:=true layer_move_to:=0.0 layer_follow_route:=0.0 [arrival_reach_thresh_m:=1.0] \
+       noprop:=true layer_move_to:=0.0 layer_follow_route:=0.0 enable_yield_candidates:=false [arrival_reach_thresh_m:=1.0] \
        neighbor_intents:=... neighbor_odom_topics:=... uav_task_timeout_s:=280 </dev/null >/dev/null 2>&1 &'
      （完整三条命令见 verification/three_uav_recon/README.md §二 + 本脚本头部）
 EOM
