@@ -399,7 +399,7 @@ bash verification/four_uav_recon/sitl/run_sim_four_uav.sh
 # ——它的 UDP 是 connect 出去的 socket，不处于 LISTEN）
 systemctl is-active mavlink-routerd      # 期望 active
 pgrep -x mavlink-routerd                 # 期望 1 个进程
-sudo journalctl -u mavlink-routerd -b    # 本次开机的启动记录（四条 Opened = UART + 3 个 UDP + TCP 5760）
+sudo journalctl -u mavlink-routerd -b    # 本次开机的启动记录（2026-10-10 起三条 Opened = UART + 2 个 UDP + TCP 5760）
 # 手动起停（一般不需要；服务 enabled，开机自动起）
 sudo systemctl restart mavlink-routerd
 ```
@@ -407,8 +407,9 @@ sudo systemctl restart mavlink-routerd
 - unit：`tools/systemd/mavlink-routerd.service`（tcp_to_ros 仓）；实装/刷新：
   `bash src/tcp_to_ros/tools/router_service_install.sh 8 10 13`（从 GCS 逐台，幂等；
   前置要求机载栈没在跑）。
-- 参数与旧脚本逐项一致：`-e 192.168.5.241:15500 -e 192.168.5.242:15500 -e 127.0.0.1:15500
-  /dev/ttyTHS0:921600`；以 root 运行，**不再需要 `chmod 777 /dev/ttyTHS0`**。
+- 参数：`-e 192.168.5.241:15500 -e 127.0.0.1:15500 /dev/ttyTHS0:921600`（**2026-10-10 起
+  去掉 `-e 192.168.5.242:15500`**：无消费者、纯空口冗余；见 2026-10-10 三机链路停摆分析
+  报告）；以 root 运行，**不再需要 `chmod 777 /dev/ttyTHS0`**。
 - 旧的桌面自启（`~/.config/autostart/gnome-terminal.desktop` → `Mavlink-route.sh`）已**禁用**
   （`X-GNOME-Autostart-enabled=false` + `Hidden=true`）；脚本文件保留在板上备查。
 - 2026-10-09 已在 8/10/13 上实装并**逐台重启验证**：三台均在 boot 时自动起来、端点全 Open、

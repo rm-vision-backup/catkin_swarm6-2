@@ -147,8 +147,8 @@ for n in 8 10 12 13; do ./src/tcp_to_ros/tools/onboard_ctl.sh stop $n; done   # 
 
 1. `noprop` 跳过 `connected` 检查 ⇒ §1 的人工确认不能省。
 2. 3 s 首帧宽限**只在"从未见过领机 odom"时生效**；同一进程内第二次 FOLLOW_ROUTE 直接从
-   1.0 s 严格分支起跳（`ego_swarm.py:215-216,264-267` 跨任务不清零）⇒ 反复 dry-run 要么重启该机
-   执行器节点，要么按严格分支口径判读。
+   严格新鲜度分支（`_FOLLOW_POSE_TIMEOUT_S`，2026-10-10 由 1.0 s 放宽为 3.0 s）起跳
+   （ego_swarm.py 跨任务不清零）⇒ 反复 dry-run 要么重启该机执行器节点，要么按严格分支口径判读。
 3. **重试必须换 `--mission-id`**：任务记录按 `(mission_id, command_id, uav_id)` 缓存 1 h，
    同号重发会秒回上次结果（`README.md` §4.3）。
 4. 领机 odom 话题由 `leader_id` 推导（`A02 → /UAV2/...`，`ego_swarm.py:301-306`），
