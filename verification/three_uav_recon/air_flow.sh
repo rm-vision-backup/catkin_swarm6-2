@@ -20,7 +20,7 @@
 #   bash verification/three_uav_recon/air_flow.sh full            # prepare + coverage 全流程
 #
 # 判据（stage1）：每台 remote odom 的 rx 持续增长、窗内 gt1000=0（无 ≥1 s 空档）、stalls=0、
-#   无 stall_start/link 事件；领机 local odom 的 tx 同步增长。任一不满足 = 记时刻、留文件。
+#   无 stall_start/link 事件；每台 local odom 的 rx/tx 同步增长。任一不满足 = 记时刻、留文件。
 # 退出码：0 = 该子命令判定通过；1 = 不通过（odom 子命令恒 0，只报告）。
 # =============================================================================
 set -u
@@ -79,23 +79,34 @@ def odom_of(items):
     return None
 
 
-def brief(item):
+def fmt_age_ms(value):
+    return "n/a" if value is None else "%.0fms" % value
+
+
+def brief(item, side):
     if item is None:
         return "无该话题条目"
+    gt1000 = (item.get("gt") or {}).get("gt1000", 0)
+    if side == "local":
+        # local 行字段是 age_ms（只有 remote 行有 age_max_ms）；drop 是限频丢弃，正常非零
+        return "rx=%d tx=%d drop=%d age=%s gt1000=%d stalls=%d" % (
+            item.get("rx", 0), item.get("tx", 0), item.get("drop", 0),
+            fmt_age_ms(item.get("age_ms")), gt1000, item.get("stalls", 0))
     stale = item.get("stale_srcs") or []
-    srcs = (" srcs=%s" % item.get("srcs")) if item.get("srcs") is not None else ""
-    return "rx=%d%s age_max=%.0fms%s gt1000=%d stalls=%d" % (
-        item.get("rx", 0), srcs, item.get("age_max_ms") or -1,
+    return "rx=%d srcs=%s age_max=%s%s gt1000=%d stalls=%d" % (
+        item.get("rx", 0),
+        item.get("srcs") if item.get("srcs") is not None else "?",
+        fmt_age_ms(item.get("age_max_ms")),
         ("  stale_srcs=%s" % [s.get("src") for s in stale]) if stale else "",
-        (item.get("gt") or {}).get("gt1000", 0), item.get("stalls", 0))
+        gt1000, item.get("stalls", 0))
 
 
 last = rows[-1]
 if mode == "quick":
     age_file = time.time() - os.path.getmtime(f)
     print("  [%s] 健康文件 %.1fs 前更新%s" % (uav, age_file, "" if age_file < 6 else "  ✗ 桥可能在静默"))
-    print("     本机发出 odom: " + brief(odom_of(last.get("local"))))
-    print("     收到邻机 odom: " + brief(odom_of(last.get("remote"))))
+    print("     本机发出 odom: " + brief(odom_of(last.get("local")), "local"))
+    print("     收到邻机 odom: " + brief(odom_of(last.get("remote")), "remote"))
     for ev in events[-3:]:
         print("     近期事件: %s %s %s" % (ev.get("event"), ev.get("link_event") or "",
                                         ev.get("src") or ev.get("detail") or ""))
@@ -115,16 +126,28 @@ def diff(side, label):
     global ok
     x, y = odom_of(a.get(side)), odom_of(b.get(side))
     if x is None or y is None:
-        print("  [%s] %s: 无条目" % (uav, label))
+        # 整窗没有该侧 odom 数据行 = 该窗内 odom 从没出现在账本里，必须判 ✗——
+        # 缺条目不能放行（"从未收到领机 odom"正是要抓的一型）。
+        print("  [%s] %s: 无条目 ✗（该侧窗内无 odom 数据行）" % (uav, label))
+        ok = False
         return
     drx = y.get("rx", 0) - x.get("rx", 0)
     dg1 = (y.get("gt") or {}).get("gt1000", 0) - (x.get("gt") or {}).get("gt1000", 0)
     dst = y.get("stalls", 0) - x.get("stalls", 0)
     gap = y.get("gap_max_ms") or 0  # 累计值（自进程启动）；窗口判据看 gt1000 增量
-    good = drx > 0 and dg1 == 0 and dst == 0
+    if side == "local":
+        # 发送侧：rx（mavros 到达）与 tx（限频后实发）都要增长；drop 为限频丢弃，不计入判据
+        dtx = y.get("tx", 0) - x.get("tx", 0)
+        good = drx > 0 and dtx > 0 and dg1 == 0 and dst == 0
+        print("  [%s] %s: rx +%d（%.1f/s）tx +%d（%.1f/s）gt1000 +%d stalls +%d 累计gap_max %.0fms %s"
+              % (uav, label, drx, drx / dur if dur > 0 else -1,
+                 dtx, dtx / dur if dur > 0 else -1, dg1, dst, gap, "✓" if good else "✗"))
+    else:
+        good = drx > 0 and dg1 == 0 and dst == 0
+        print("  [%s] %s: rx +%d（%.1f/s）gt1000 +%d stalls +%d 累计gap_max %.0fms %s"
+              % (uav, label, drx, drx / dur if dur > 0 else -1, dg1, dst, gap,
+                 "✓" if good else "✗"))
     ok = ok and good
-    print("  [%s] %s: rx +%d（%.1f/s）gt1000 +%d stalls +%d 累计gap_max %.0fms %s"
-          % (uav, label, drx, drx / dur if dur > 0 else -1, dg1, dst, gap, "✓" if good else "✗"))
 
 
 print("[%s] 窗口 %.0fs" % (uav, dur))
@@ -201,9 +224,9 @@ case "$CMD" in
     for n in $UAVS; do read_health "$(ip_of "$n")" quick 0 & done
     wait
     cat <<'EOM'
-  判读：领机看"本机发出 odom"（tx 在涨）；跟随者看"收到邻机 odom"（age_max 应 ~50 ms 内、
-  无 stale_srcs）。age_max 里对应 UAV8 的那路就是跟随环输入；它停了 = 9/22 型故障，立刻
-  跑 `bag`（若还没录）并在两分钟后复跑本命令看是否恢复。
+  判读：领机看"本机发出 odom"（rx/tx 在涨，drop 是限频丢弃属正常）；跟随者看"收到邻机
+  odom"（age_max 应 ~50 ms 内、stale_srcs 空）。stale_srcs 里出现 UAV8 = 跟随环输入断了
+  （9/22 型故障），立刻跑 `bag`（若还没录）并在两分钟后复跑本命令看是否恢复。
 EOM
     ;;
   bag)
