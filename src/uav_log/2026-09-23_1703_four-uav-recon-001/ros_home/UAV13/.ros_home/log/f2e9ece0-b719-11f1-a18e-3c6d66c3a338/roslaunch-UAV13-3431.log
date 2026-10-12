@@ -1,0 +1,108 @@
+[roslaunch][INFO] 2026-09-23 14:42:30,355: Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+[roslaunch][INFO] 2026-09-23 14:42:30,364: Done checking log file disk usage. Usage is <1GB.
+[roslaunch][INFO] 2026-09-23 14:42:30,365: roslaunch starting with args ['/opt/ros/noetic/bin/roslaunch', 'mavros', 'px4.launch']
+[roslaunch][INFO] 2026-09-23 14:42:30,365: roslaunch env is environ({'SHELL': '/bin/bash', 'ROS_VERSION': '1', 'PKG_CONFIG_PATH': '/home/nvidia/catkin_swarm6-2/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig', 'ROS_PYTHON_VERSION': '3', 'LANGUAGE': 'en_US:en', 'LC_ADDRESS': 'en_US.UTF-8', 'LC_NAME': 'en_US.UTF-8', 'LC_MONETARY': 'en_US.UTF-8', 'ROS_PACKAGE_PATH': '/home/nvidia/catkin_swarm6-2/src/swarm_uav_interfaces:/home/nvidia/catkin_swarm6-2/src/ego_planner_driver:/home/nvidia/catkin_swarm6-2/src/swarm_topology_bridge:/home/nvidia/catkin_swarm6-2/src/swarm_uav_executor:/opt/ros/noetic/share', 'ROSLISP_PACKAGE_DIRECTORIES': '/home/nvidia/catkin_swarm6-2/devel/share/common-lisp', 'PWD': '/home/nvidia', 'LOGNAME': 'nvidia', 'XDG_SESSION_TYPE': 'tty', 'ROS_LOG_DIR': '/home/nvidia/catkin_swarm6-2/.ros_home/log', 'MOTD_SHOWN': 'pam', 'HOME': '/home/nvidia', 'LANG': 'en_US.UTF-8', 'LC_PAPER': 'en_US.UTF-8', 'ROS_ETC_DIR': '/opt/ros/noetic/etc/ros', 'CMAKE_PREFIX_PATH': '/home/nvidia/catkin_swarm6-2/devel:/opt/ros/noetic', 'SSH_CONNECTION': '192.168.5.241 55396 192.168.5.131 22', 'XDG_SESSION_CLASS': 'user', 'PYTHONPATH': '/home/nvidia/catkin_swarm6-2/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'USER': 'nvidia', 'ROS_HOME': '/home/nvidia/catkin_swarm6-2/.ros_home', 'SHLVL': '0', 'LC_TELEPHONE': 'en_US.UTF-8', 'ROS_MASTER_URI': 'http://localhost:11311', 'LC_MEASUREMENT': 'en_US.UTF-8', 'XDG_SESSION_ID': '7', 'PAPERSIZE': 'letter', 'LD_LIBRARY_PATH': '/home/nvidia/catkin_swarm6-2/devel/lib:/opt/ros/noetic/lib', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSH_CLIENT': '192.168.5.241 55396 22', 'LC_TIME': 'en_US.UTF-8', 'PATH': '/opt/ros/noetic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ROS_ROOT': '/opt/ros/noetic/share/ros', 'ROS_DISTRO': 'noetic', 'LC_NUMERIC': 'en_US.UTF-8', 'ROS_LOG_FILENAME': '/home/nvidia/catkin_swarm6-2/.ros_home/log/f2e9ece0-b719-11f1-a18e-3c6d66c3a338/roslaunch-UAV13-3431.log'})
+[roslaunch][INFO] 2026-09-23 14:42:30,365: starting in server mode
+[roslaunch.parent][INFO] 2026-09-23 14:42:30,365: starting roslaunch parent run
+[roslaunch][INFO] 2026-09-23 14:42:30,366: loading roscore config file /opt/ros/noetic/etc/ros/roscore.xml
+[roslaunch][INFO] 2026-09-23 14:42:30,655: Added core node of type [rosout/rosout] in namespace [/]
+[roslaunch.config][INFO] 2026-09-23 14:42:30,655: loading config file /opt/ros/noetic/share/mavros/launch/px4.launch
+[roslaunch][INFO] 2026-09-23 14:42:30,753: Added node of type [mavros/mavros_node] in namespace [/]
+[roslaunch][INFO] 2026-09-23 14:42:30,753: ... selected machine [] for node of type [mavros/mavros_node]
+[roslaunch.pmon][INFO] 2026-09-23 14:42:30,756: start_process_monitor: creating ProcessMonitor
+[roslaunch.pmon][INFO] 2026-09-23 14:42:30,756: created process monitor <ProcessMonitor(ProcessMonitor-1, initial daemon)>
+[roslaunch.pmon][INFO] 2026-09-23 14:42:30,756: start_process_monitor: ProcessMonitor started
+[roslaunch.parent][INFO] 2026-09-23 14:42:30,757: starting parent XML-RPC server
+[roslaunch.server][INFO] 2026-09-23 14:42:30,757: starting roslaunch XML-RPC server
+[roslaunch.server][INFO] 2026-09-23 14:42:30,757: waiting for roslaunch XML-RPC server to initialize
+[xmlrpc][INFO] 2026-09-23 14:42:30,757: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-09-23 14:42:30,758: Started XML-RPC server [http://UAV13:34451/]
+[xmlrpc][INFO] 2026-09-23 14:42:30,758: xml rpc node: starting XML-RPC server
+[roslaunch][INFO] 2026-09-23 14:42:30,770: started roslaunch server http://UAV13:34451/
+[roslaunch.parent][INFO] 2026-09-23 14:42:30,770: ... parent XML-RPC server started
+[roslaunch][INFO] 2026-09-23 14:42:30,771: master.is_running[http://localhost:11311]
+[roslaunch][INFO] 2026-09-23 14:42:30,772: auto-starting new master
+[roslaunch][INFO] 2026-09-23 14:42:30,772: create_master_process: rosmaster, /opt/ros/noetic/share/ros, 11311, 3, None, False
+[roslaunch][INFO] 2026-09-23 14:42:30,772: process[master]: launching with args [['rosmaster', '--core', '-p', '11311', '-w', '3']]
+[roslaunch.pmon][INFO] 2026-09-23 14:42:30,772: ProcessMonitor.register[master]
+[roslaunch.pmon][INFO] 2026-09-23 14:42:30,773: ProcessMonitor.register[master] complete
+[roslaunch][INFO] 2026-09-23 14:42:30,773: process[master]: starting os process
+[roslaunch][INFO] 2026-09-23 14:42:30,773: process[master]: start w/ args [['rosmaster', '--core', '-p', '11311', '-w', '3', '__log:=/home/nvidia/catkin_swarm6-2/.ros_home/log/f2e9ece0-b719-11f1-a18e-3c6d66c3a338/master.log']]
+[roslaunch][INFO] 2026-09-23 14:42:30,773: process[master]: cwd will be [/home/nvidia/catkin_swarm6-2/.ros_home]
+[roslaunch][INFO] 2026-09-23 14:42:30,779: process[master]: started with pid [3488]
+[roslaunch][INFO] 2026-09-23 14:42:30,780: master.is_running[http://localhost:11311]
+[roslaunch][INFO] 2026-09-23 14:42:30,881: master.is_running[http://localhost:11311]
+[roslaunch][INFO] 2026-09-23 14:42:30,981: master.is_running[http://localhost:11311]
+[roslaunch][INFO] 2026-09-23 14:42:31,082: master.is_running[http://localhost:11311]
+[roslaunch][INFO] 2026-09-23 14:42:31,183: master.is_running[http://localhost:11311]
+[roslaunch][INFO] 2026-09-23 14:42:31,284: master.is_running[http://localhost:11311]
+[roslaunch][INFO] 2026-09-23 14:42:31,288: master.is_running[http://localhost:11311]
+[roslaunch][INFO] 2026-09-23 14:42:31,290: ROS_MASTER_URI=http://localhost:11311
+[roslaunch][INFO] 2026-09-23 14:42:31,292: setting /run_id to f2e9ece0-b719-11f1-a18e-3c6d66c3a338
+[roslaunch][INFO] 2026-09-23 14:42:31,294: setting /roslaunch/uris/host_uav13__34451' to http://UAV13:34451/
+[roslaunch][INFO] 2026-09-23 14:42:31,297: ... preparing to launch node of type [rosout/rosout]
+[roslaunch][INFO] 2026-09-23 14:42:31,297: create_node_process: package[rosout] type[rosout] machine[Machine(name[] env_loader[None] address[localhost] ssh_port[22] user[None] assignable[True] timeout[10.0])] master_uri[http://localhost:11311]
+[roslaunch][INFO] 2026-09-23 14:42:31,297: process[rosout-1]: env[{'SHELL': '/bin/bash', 'ROS_VERSION': '1', 'PKG_CONFIG_PATH': '/home/nvidia/catkin_swarm6-2/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig', 'ROS_PYTHON_VERSION': '3', 'LANGUAGE': 'en_US:en', 'LC_ADDRESS': 'en_US.UTF-8', 'LC_NAME': 'en_US.UTF-8', 'LC_MONETARY': 'en_US.UTF-8', 'ROS_PACKAGE_PATH': '/home/nvidia/catkin_swarm6-2/src/swarm_uav_interfaces:/home/nvidia/catkin_swarm6-2/src/ego_planner_driver:/home/nvidia/catkin_swarm6-2/src/swarm_topology_bridge:/home/nvidia/catkin_swarm6-2/src/swarm_uav_executor:/opt/ros/noetic/share', 'ROSLISP_PACKAGE_DIRECTORIES': '/home/nvidia/catkin_swarm6-2/devel/share/common-lisp', 'PWD': '/home/nvidia', 'LOGNAME': 'nvidia', 'XDG_SESSION_TYPE': 'tty', 'ROS_LOG_DIR': '/home/nvidia/catkin_swarm6-2/.ros_home/log', 'MOTD_SHOWN': 'pam', 'HOME': '/home/nvidia', 'LANG': 'en_US.UTF-8', 'LC_PAPER': 'en_US.UTF-8', 'ROS_ETC_DIR': '/opt/ros/noetic/etc/ros', 'CMAKE_PREFIX_PATH': '/home/nvidia/catkin_swarm6-2/devel:/opt/ros/noetic', 'SSH_CONNECTION': '192.168.5.241 55396 192.168.5.131 22', 'XDG_SESSION_CLASS': 'user', 'PYTHONPATH': '/home/nvidia/catkin_swarm6-2/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'USER': 'nvidia', 'ROS_HOME': '/home/nvidia/catkin_swarm6-2/.ros_home', 'SHLVL': '0', 'LC_TELEPHONE': 'en_US.UTF-8', 'ROS_MASTER_URI': 'http://localhost:11311', 'LC_MEASUREMENT': 'en_US.UTF-8', 'XDG_SESSION_ID': '7', 'PAPERSIZE': 'letter', 'LD_LIBRARY_PATH': '/home/nvidia/catkin_swarm6-2/devel/lib:/opt/ros/noetic/lib', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSH_CLIENT': '192.168.5.241 55396 22', 'LC_TIME': 'en_US.UTF-8', 'PATH': '/opt/ros/noetic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ROS_ROOT': '/opt/ros/noetic/share/ros', 'ROS_DISTRO': 'noetic', 'LC_NUMERIC': 'en_US.UTF-8', 'ROS_LOG_FILENAME': '/home/nvidia/catkin_swarm6-2/.ros_home/log/f2e9ece0-b719-11f1-a18e-3c6d66c3a338/roslaunch-UAV13-3431.log'}]
+[roslaunch][INFO] 2026-09-23 14:42:31,351: process[rosout-1]: args[['/opt/ros/noetic/lib/rosout/rosout', '__name:=rosout']]
+[roslaunch][INFO] 2026-09-23 14:42:31,351: ... created process [rosout-1]
+[roslaunch.pmon][INFO] 2026-09-23 14:42:31,351: ProcessMonitor.register[rosout-1]
+[roslaunch.pmon][INFO] 2026-09-23 14:42:31,351: ProcessMonitor.register[rosout-1] complete
+[roslaunch][INFO] 2026-09-23 14:42:31,351: ... registered process [rosout-1]
+[roslaunch][INFO] 2026-09-23 14:42:31,351: process[rosout-1]: starting os process
+[roslaunch][INFO] 2026-09-23 14:42:31,352: process[rosout-1]: start w/ args [['/opt/ros/noetic/lib/rosout/rosout', '__name:=rosout', '__log:=/home/nvidia/catkin_swarm6-2/.ros_home/log/f2e9ece0-b719-11f1-a18e-3c6d66c3a338/rosout-1.log']]
+[roslaunch][INFO] 2026-09-23 14:42:31,352: process[rosout-1]: cwd will be [/home/nvidia/catkin_swarm6-2/.ros_home]
+[roslaunch][INFO] 2026-09-23 14:42:31,359: process[rosout-1]: started with pid [3498]
+[roslaunch][INFO] 2026-09-23 14:42:31,359: ... successfully launched [rosout-1]
+[roslaunch][INFO] 2026-09-23 14:42:31,360: load_parameters starting ...
+[roslaunch][INFO] 2026-09-23 14:42:31,415: ... load_parameters complete
+[roslaunch][INFO] 2026-09-23 14:42:31,415: launch_nodes: launching local nodes ...
+[roslaunch][INFO] 2026-09-23 14:42:31,416: ... preparing to launch node of type [mavros/mavros_node]
+[roslaunch][INFO] 2026-09-23 14:42:31,416: create_node_process: package[mavros] type[mavros_node] machine[Machine(name[] env_loader[None] address[localhost] ssh_port[22] user[None] assignable[True] timeout[10.0])] master_uri[http://localhost:11311]
+[roslaunch][INFO] 2026-09-23 14:42:31,416: process[mavros-2]: env[{'SHELL': '/bin/bash', 'ROS_VERSION': '1', 'PKG_CONFIG_PATH': '/home/nvidia/catkin_swarm6-2/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig', 'ROS_PYTHON_VERSION': '3', 'LANGUAGE': 'en_US:en', 'LC_ADDRESS': 'en_US.UTF-8', 'LC_NAME': 'en_US.UTF-8', 'LC_MONETARY': 'en_US.UTF-8', 'ROS_PACKAGE_PATH': '/home/nvidia/catkin_swarm6-2/src/swarm_uav_interfaces:/home/nvidia/catkin_swarm6-2/src/ego_planner_driver:/home/nvidia/catkin_swarm6-2/src/swarm_topology_bridge:/home/nvidia/catkin_swarm6-2/src/swarm_uav_executor:/opt/ros/noetic/share', 'ROSLISP_PACKAGE_DIRECTORIES': '/home/nvidia/catkin_swarm6-2/devel/share/common-lisp', 'PWD': '/home/nvidia', 'LOGNAME': 'nvidia', 'XDG_SESSION_TYPE': 'tty', 'ROS_LOG_DIR': '/home/nvidia/catkin_swarm6-2/.ros_home/log', 'MOTD_SHOWN': 'pam', 'HOME': '/home/nvidia', 'LANG': 'en_US.UTF-8', 'LC_PAPER': 'en_US.UTF-8', 'ROS_ETC_DIR': '/opt/ros/noetic/etc/ros', 'CMAKE_PREFIX_PATH': '/home/nvidia/catkin_swarm6-2/devel:/opt/ros/noetic', 'SSH_CONNECTION': '192.168.5.241 55396 192.168.5.131 22', 'XDG_SESSION_CLASS': 'user', 'PYTHONPATH': '/home/nvidia/catkin_swarm6-2/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'USER': 'nvidia', 'ROS_HOME': '/home/nvidia/catkin_swarm6-2/.ros_home', 'SHLVL': '0', 'LC_TELEPHONE': 'en_US.UTF-8', 'ROS_MASTER_URI': 'http://localhost:11311', 'LC_MEASUREMENT': 'en_US.UTF-8', 'XDG_SESSION_ID': '7', 'PAPERSIZE': 'letter', 'LD_LIBRARY_PATH': '/home/nvidia/catkin_swarm6-2/devel/lib:/opt/ros/noetic/lib', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSH_CLIENT': '192.168.5.241 55396 22', 'LC_TIME': 'en_US.UTF-8', 'PATH': '/opt/ros/noetic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ROS_ROOT': '/opt/ros/noetic/share/ros', 'ROS_DISTRO': 'noetic', 'LC_NUMERIC': 'en_US.UTF-8', 'ROS_LOG_FILENAME': '/home/nvidia/catkin_swarm6-2/.ros_home/log/f2e9ece0-b719-11f1-a18e-3c6d66c3a338/roslaunch-UAV13-3431.log'}]
+[roslaunch][INFO] 2026-09-23 14:42:31,418: process[mavros-2]: args[['/opt/ros/noetic/lib/mavros/mavros_node', '__name:=mavros']]
+[roslaunch][INFO] 2026-09-23 14:42:31,418: ... created process [mavros-2]
+[roslaunch.pmon][INFO] 2026-09-23 14:42:31,418: ProcessMonitor.register[mavros-2]
+[roslaunch.pmon][INFO] 2026-09-23 14:42:31,418: ProcessMonitor.register[mavros-2] complete
+[roslaunch][INFO] 2026-09-23 14:42:31,418: ... registered process [mavros-2]
+[roslaunch][INFO] 2026-09-23 14:42:31,418: process[mavros-2]: starting os process
+[roslaunch][INFO] 2026-09-23 14:42:31,418: process[mavros-2]: start w/ args [['/opt/ros/noetic/lib/mavros/mavros_node', '__name:=mavros', '__log:=/home/nvidia/catkin_swarm6-2/.ros_home/log/f2e9ece0-b719-11f1-a18e-3c6d66c3a338/mavros-2.log']]
+[roslaunch][INFO] 2026-09-23 14:42:31,418: process[mavros-2]: cwd will be [/home/nvidia/catkin_swarm6-2/.ros_home]
+[roslaunch][INFO] 2026-09-23 14:42:31,425: process[mavros-2]: started with pid [3506]
+[roslaunch][INFO] 2026-09-23 14:42:31,426: ... successfully launched [mavros-2]
+[roslaunch][INFO] 2026-09-23 14:42:31,426: ... launch_nodes complete
+[roslaunch.pmon][INFO] 2026-09-23 14:42:31,426: registrations completed <ProcessMonitor(ProcessMonitor-1, started daemon 281473760993760)>
+[roslaunch.parent][INFO] 2026-09-23 14:42:31,426: ... roslaunch parent running, waiting for process exit
+[roslaunch][INFO] 2026-09-23 14:42:31,426: spin
+[roslaunch][ERROR] 2026-09-23 15:16:58,635: ================================================================================REQUIRED process [mavros-2] has died!
+process has finished cleanly
+log file: /home/nvidia/catkin_swarm6-2/.ros_home/log/f2e9ece0-b719-11f1-a18e-3c6d66c3a338/mavros-2*.log
+Initiating shutdown!
+================================================================================
+[roslaunch.pmon][INFO] 2026-09-23 15:16:58,736: ProcessMonitor._post_run <ProcessMonitor(ProcessMonitor-1, started daemon 281473760993760)>
+[roslaunch.pmon][INFO] 2026-09-23 15:16:58,736: ProcessMonitor._post_run <ProcessMonitor(ProcessMonitor-1, started daemon 281473760993760)>: remaining procs are [<roslaunch.nodeprocess.LocalProcess object at 0xffffb7aa3cd0>, <roslaunch.nodeprocess.LocalProcess object at 0xffffb7927dc0>, <roslaunch.nodeprocess.LocalProcess object at 0xffffb7927d60>]
+[roslaunch.pmon][INFO] 2026-09-23 15:16:58,737: ProcessMonitor exit: killing mavros-2
+[roslaunch][INFO] 2026-09-23 15:16:58,737: [mavros-2] killing on exit
+[roslaunch.pmon][INFO] 2026-09-23 15:16:58,739: ProcessMonitor exit: killing rosout-1
+[roslaunch][INFO] 2026-09-23 15:16:58,739: [rosout-1] killing on exit
+[roslaunch][INFO] 2026-09-23 15:16:58,739: process[rosout-1]: killing os process with pid[3498] pgid[3498]
+[roslaunch][INFO] 2026-09-23 15:16:58,739: [rosout-1] sending SIGINT to pgid [3498]
+[roslaunch][INFO] 2026-09-23 15:16:58,739: [rosout-1] sent SIGINT to pgid [3498]
+[roslaunch][INFO] 2026-09-23 15:16:58,940: process[rosout-1]: SIGINT killed with return value 0
+[roslaunch.pmon][INFO] 2026-09-23 15:16:58,940: ProcessMonitor exit: killing master
+[roslaunch][INFO] 2026-09-23 15:16:58,940: [master] killing on exit
+[roslaunch][INFO] 2026-09-23 15:16:58,940: process[master]: killing os process with pid[3488] pgid[3488]
+[roslaunch][INFO] 2026-09-23 15:16:58,941: [master] sending SIGINT to pgid [3488]
+[roslaunch][INFO] 2026-09-23 15:16:58,941: [master] sent SIGINT to pgid [3488]
+[roslaunch][INFO] 2026-09-23 15:16:59,141: process[master]: SIGINT killed with return value 0
+[roslaunch.pmon][INFO] 2026-09-23 15:16:59,142: ProcessMonitor exit: cleaning up data structures and signals
+[roslaunch.pmon][INFO] 2026-09-23 15:16:59,142: ProcessMonitor exit: pmon has shutdown
+[roslaunch][INFO] 2026-09-23 15:16:59,169: process monitor is done spinning, initiating full shutdown
+[roslaunch][INFO] 2026-09-23 15:16:59,169: runner.stop()
+[roslaunch][INFO] 2026-09-23 15:16:59,170: shutting down processing monitor...
+[roslaunch][INFO] 2026-09-23 15:16:59,170: shutting down processing monitor <ProcessMonitor(ProcessMonitor-1, stopped daemon 281473760993760)>
+[roslaunch.pmon][INFO] 2026-09-23 15:16:59,170: ProcessMonitor.shutdown <ProcessMonitor(ProcessMonitor-1, stopped daemon 281473760993760)>
+[roslaunch][INFO] 2026-09-23 15:16:59,170: ... shutting down processing monitor complete
+[roslaunch][INFO] 2026-09-23 15:16:59,170: done
+[roslaunch.pmon][INFO] 2026-09-23 15:16:59,170: ProcessMonitor.shutdown <ProcessMonitor(ProcessMonitor-1, stopped daemon 281473760993760)>
+[rospy.core][INFO] 2026-09-23 15:16:59,171: signal_shutdown [atexit]

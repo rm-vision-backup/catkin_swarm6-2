@@ -1,0 +1,40 @@
+[rospy.client][INFO] 2026-09-23 15:16:58,648: init_node, name[/uav_executor_UAV13], pid[5493]
+[xmlrpc][INFO] 2026-09-23 15:16:58,649: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-09-23 15:16:58,650: Started XML-RPC server [http://UAV13:38223/]
+[rospy.init][INFO] 2026-09-23 15:16:58,650: ROS Slave URI: [http://UAV13:38223/]
+[rospy.impl.masterslave][INFO] 2026-09-23 15:16:58,650: _ready: http://UAV13:38223/
+[rospy.registration][INFO] 2026-09-23 15:16:58,651: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2026-09-23 15:16:58,652: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-09-23 15:16:58,751: registered with master
+[rospy.rosout][INFO] 2026-09-23 15:16:58,751: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-09-23 15:16:58,758: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-09-23 15:16:58,760: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2026-09-23 15:16:58,849: topic[/mavros/state] adding connection to [http://UAV13:38133/], count 0
+[rospy.internal][INFO] 2026-09-23 15:16:58,854: topic[/gp_origin_confirmed] adding connection to [http://UAV13:40139/], count 0
+[rospy.internal][INFO] 2026-09-23 15:16:58,863: topic[/exec_state] adding connection to [http://UAV13:36841/], count 0
+[rospy.internal][INFO] 2026-09-23 15:16:58,864: topic[/local_pose] adding connection to [http://UAV13:39333/], count 0
+[rospy.internal][INFO] 2026-09-23 15:16:58,895: topic[/setpoint/follower] adding connection to [/setpoint_relay], count 0
+[rospy.internal][INFO] 2026-09-23 15:16:58,896: topic[/direct_control_active] adding connection to [/setpoint_relay], count 0
+[rospy.internal][INFO] 2026-09-23 15:16:59,106: topic[/waypoints] adding connection to [/ego_planner_driver], count 0
+[rospy.internal][INFO] 2026-09-23 15:16:59,107: topic[/goal_yaw] adding connection to [/ego_planner_driver], count 0
+[rospy.internal][INFO] 2026-09-23 15:16:59,108: topic[/hold] adding connection to [/ego_planner_driver], count 0
+[rospy.internal][INFO] 2026-09-23 15:16:59,109: topic[/brake_hold] adding connection to [/ego_planner_driver], count 0
+[rospy.internal][INFO] 2026-09-23 15:16:59,110: topic[/direct_control_active] adding connection to [/ego_planner_driver], count 1
+[rospy.internal][INFO] 2026-09-23 15:16:59,110: topic[/neighbor_intent] adding connection to [/ego_planner_driver], count 0
+[rospy.internal][INFO] 2026-09-23 15:16:59,111: topic[/goal] adding connection to [/ego_planner_driver], count 0
+[rospy.core][INFO] 2026-09-23 15:16:59,404: signal_shutdown [atexit]
+[rospy.registration][WARNING] 2026-09-23 15:16:59,406: cannot unregister with master due to network issues
+[rospy.internal][INFO] 2026-09-23 15:16:59,406: topic[/goal] removing connection to /ego_planner_driver
+[rospy.internal][INFO] 2026-09-23 15:16:59,407: topic[/goal_yaw] removing connection to /ego_planner_driver
+[rospy.internal][INFO] 2026-09-23 15:16:59,407: topic[/waypoints] removing connection to /ego_planner_driver
+[rospy.internal][INFO] 2026-09-23 15:16:59,407: topic[/hold] removing connection to /ego_planner_driver
+[rospy.internal][INFO] 2026-09-23 15:16:59,408: topic[/brake_hold] removing connection to /ego_planner_driver
+[rospy.internal][INFO] 2026-09-23 15:16:59,408: topic[/setpoint/follower] removing connection to /setpoint_relay
+[rospy.internal][INFO] 2026-09-23 15:16:59,408: topic[/direct_control_active] removing connection to /setpoint_relay
+[rospy.internal][INFO] 2026-09-23 15:16:59,409: topic[/direct_control_active] removing connection to /ego_planner_driver
+[rospy.internal][INFO] 2026-09-23 15:16:59,409: topic[/neighbor_intent] removing connection to /ego_planner_driver
+[rospy.internal][INFO] 2026-09-23 15:16:59,409: topic[/mavros/state] removing connection to http://UAV13:38133/
+[rospy.internal][INFO] 2026-09-23 15:16:59,410: topic[/gp_origin_confirmed] removing connection to http://UAV13:40139/
+[rospy.internal][INFO] 2026-09-23 15:16:59,411: topic[/exec_state] removing connection to http://UAV13:36841/
+[rospy.internal][INFO] 2026-09-23 15:16:59,411: topic[/local_pose] removing connection to http://UAV13:39333/
+[rospy.impl.masterslave][INFO] 2026-09-23 15:16:59,412: atexit

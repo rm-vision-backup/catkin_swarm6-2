@@ -1,0 +1,127 @@
+[rospy.client][INFO] 2026-10-09 14:34:27,630: init_node, name[/gcs_a_backend_node], pid[23927]
+[xmlrpc][INFO] 2026-10-09 14:34:27,630: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-10-09 14:34:27,630: Started XML-RPC server [http://192.168.5.241:40527/]
+[rospy.init][INFO] 2026-10-09 14:34:27,630: ROS Slave URI: [http://192.168.5.241:40527/]
+[rospy.impl.masterslave][INFO] 2026-10-09 14:34:27,630: _ready: http://192.168.5.241:40527/
+[rospy.registration][INFO] 2026-10-09 14:34:27,631: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2026-10-09 14:34:27,631: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-10-09 14:34:27,731: registered with master
+[rospy.rosout][INFO] 2026-10-09 14:34:27,731: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-10-09 14:34:27,735: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-10-09 14:34:27,736: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2026-10-09 14:34:27,764: GCS_A subscribed to /UAV1/uav_task_state
+[rospy.internal][INFO] 2026-10-09 14:34:27,765: topic[/UAV1/uav_task_state] adding connection to [http://192.168.5.241:36631/], count 0
+[rosout][INFO] 2026-10-09 14:34:27,767: GCS_A subscribed to /UAV1/mavros/state
+[rosout][INFO] 2026-10-09 14:34:27,768: GCS_A subscribed to /UAV1/mavros/local_position/pose
+[rosout][INFO] 2026-10-09 14:34:27,769: GCS_A subscribed to /UAV2/uav_task_state
+[rosout][INFO] 2026-10-09 14:34:27,770: GCS_A subscribed to /UAV2/mavros/state
+[rosout][INFO] 2026-10-09 14:34:27,770: GCS_A subscribed to /UAV2/mavros/local_position/pose
+[rosout][INFO] 2026-10-09 14:34:27,771: GCS_A subscribed to /UAV3/uav_task_state
+[rosout][INFO] 2026-10-09 14:34:27,772: GCS_A subscribed to /UAV3/mavros/state
+[rosout][INFO] 2026-10-09 14:34:27,772: GCS_A subscribed to /UAV3/mavros/local_position/pose
+[rosout][INFO] 2026-10-09 14:34:27,773: GCS_A subscribed to /UAV4/uav_task_state
+[rosout][INFO] 2026-10-09 14:34:27,774: GCS_A subscribed to /UAV4/mavros/state
+[rosout][INFO] 2026-10-09 14:34:27,775: GCS_A subscribed to /UAV4/mavros/local_position/pose
+[rosout][INFO] 2026-10-09 14:34:27,775: GCS_A subscribed to /UAV5/uav_task_state
+[rosout][INFO] 2026-10-09 14:34:27,776: GCS_A subscribed to /UAV5/mavros/state
+[rosout][INFO] 2026-10-09 14:34:27,777: GCS_A subscribed to /UAV5/mavros/local_position/pose
+[rosout][INFO] 2026-10-09 14:34:27,777: GCS_A subscribed to /UAV6/uav_task_state
+[rosout][INFO] 2026-10-09 14:34:27,778: GCS_A subscribed to /UAV6/mavros/state
+[rosout][INFO] 2026-10-09 14:34:27,779: GCS_A subscribed to /UAV6/mavros/local_position/pose
+[rosout][INFO] 2026-10-09 14:34:27,779: GCS_A subscribed to /UAV7/uav_task_state
+[rosout][INFO] 2026-10-09 14:34:27,780: GCS_A subscribed to /UAV7/mavros/state
+[rosout][INFO] 2026-10-09 14:34:27,781: GCS_A subscribed to /UAV7/mavros/local_position/pose
+[rosout][INFO] 2026-10-09 14:34:27,781: GCS_A subscribed to /UAV8/uav_task_state
+[rosout][INFO] 2026-10-09 14:34:27,782: GCS_A subscribed to /UAV8/mavros/state
+[rosout][INFO] 2026-10-09 14:34:27,783: GCS_A subscribed to /UAV8/mavros/local_position/pose
+[rosout][INFO] 2026-10-09 14:34:27,783: GCS_A subscribed to /UAV9/uav_task_state
+[rosout][INFO] 2026-10-09 14:34:27,784: GCS_A subscribed to /UAV9/mavros/state
+[rosout][INFO] 2026-10-09 14:34:27,785: GCS_A subscribed to /UAV9/mavros/local_position/pose
+[rosout][INFO] 2026-10-09 14:34:27,785: GCS_A subscribed to /UAV10/uav_task_state
+[rosout][INFO] 2026-10-09 14:34:27,786: GCS_A subscribed to /UAV10/mavros/state
+[rosout][INFO] 2026-10-09 14:34:27,787: GCS_A subscribed to /UAV10/mavros/local_position/pose
+[rosout][INFO] 2026-10-09 14:34:27,787: GCS_A subscribed to /UAV11/uav_task_state
+[rosout][INFO] 2026-10-09 14:34:27,788: GCS_A subscribed to /UAV11/mavros/state
+[rospy.internal][INFO] 2026-10-09 14:34:27,790: topic[/UAV1/mavros/state] adding connection to [http://192.168.5.241:36631/], count 0
+[rosout][INFO] 2026-10-09 14:34:27,789: GCS_A subscribed to /UAV11/mavros/local_position/pose
+[rosout][INFO] 2026-10-09 14:34:27,790: GCS_A subscribed to /UAV12/uav_task_state
+[rospy.internal][INFO] 2026-10-09 14:34:27,792: topic[/UAV1/mavros/local_position/pose] adding connection to [http://192.168.5.241:36631/], count 0
+[rosout][INFO] 2026-10-09 14:34:27,792: GCS_A subscribed to /UAV12/mavros/state
+[rosout][INFO] 2026-10-09 14:34:27,794: GCS_A subscribed to /UAV12/mavros/local_position/pose
+[rosout][INFO] 2026-10-09 14:34:27,796: GCS_A subscribed to /UAV13/uav_task_state
+[rosout][INFO] 2026-10-09 14:34:27,798: GCS_A subscribed to /UAV13/mavros/state
+[rosout][INFO] 2026-10-09 14:34:27,800: GCS_A subscribed to /UAV13/mavros/local_position/pose
+[rosout][INFO] 2026-10-09 14:34:27,801: GCS_A subscribed to /UAV14/uav_task_state
+[rosout][INFO] 2026-10-09 14:34:27,802: GCS_A subscribed to /UAV14/mavros/state
+[rosout][INFO] 2026-10-09 14:34:27,803: GCS_A subscribed to /UAV14/mavros/local_position/pose
+[rosout][INFO] 2026-10-09 14:34:27,803: GCS_A subscribed to /UAV15/uav_task_state
+[rosout][INFO] 2026-10-09 14:34:27,804: GCS_A subscribed to /UAV15/mavros/state
+[rosout][INFO] 2026-10-09 14:34:27,805: GCS_A subscribed to /UAV15/mavros/local_position/pose
+[rosout][INFO] 2026-10-09 14:34:27,806: GCS_A subscribed to /UAV16/uav_task_state
+[rosout][INFO] 2026-10-09 14:34:27,806: GCS_A subscribed to /UAV16/mavros/state
+[rosout][INFO] 2026-10-09 14:34:27,807: GCS_A subscribed to /UAV16/mavros/local_position/pose
+[rospy.internal][INFO] 2026-10-09 14:34:27,843: topic[/group_a/calibration_ready] adding connection to [http://192.168.5.241:34751/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,846: topic[/group_a/reference_heading] adding connection to [http://192.168.5.241:34751/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,849: topic[/UAV2/mavros/state] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,850: topic[/UAV3/mavros/local_position/pose] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,855: topic[/UAV4/mavros/state] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,857: topic[/group_a/execute_task/status] adding connection to [/tcp_server_node], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,857: topic[/group_a/execute_task/cancel] adding connection to [http://192.168.5.241:39139/], count 0
+[rosout][INFO] 2026-10-09 14:34:27,856: GCS_A backend ready: action=/group_a/execute_task service=/group_a/emergency_hold uavs=16
+[rospy.internal][INFO] 2026-10-09 14:34:27,858: topic[/UAV4/mavros/local_position/pose] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,859: topic[/group_a/execute_task/result] adding connection to [/tcp_server_node], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,860: topic[/group_a/execute_task/feedback] adding connection to [/tcp_server_node], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,862: topic[/group_a/execute_task/goal] adding connection to [http://192.168.5.241:39139/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,862: topic[/UAV5/mavros/local_position/pose] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,863: topic[/UAV6/mavros/state] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,864: topic[/UAV6/mavros/local_position/pose] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,865: topic[/UAV6/uav_task_state] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,867: topic[/UAV5/uav_task_state] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,906: topic[/UAV5/mavros/state] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,908: topic[/UAV4/uav_task_state] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,909: topic[/UAV3/mavros/state] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,909: topic[/UAV3/uav_task_state] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,910: topic[/UAV2/mavros/local_position/pose] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,911: topic[/UAV2/uav_task_state] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,915: topic[/UAV7/uav_task_state] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,917: topic[/UAV7/mavros/state] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,918: topic[/UAV7/mavros/local_position/pose] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,979: topic[/UAV8/uav_task_state] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,980: topic[/UAV8/mavros/state] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,981: topic[/UAV8/mavros/local_position/pose] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,983: topic[/UAV9/uav_task_state] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,983: topic[/UAV9/mavros/state] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,984: topic[/UAV10/uav_task_state] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,984: topic[/UAV9/mavros/local_position/pose] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,986: topic[/UAV10/mavros/state] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,988: topic[/UAV10/mavros/local_position/pose] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,988: topic[/UAV11/uav_task_state] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,989: topic[/UAV11/mavros/state] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,991: topic[/UAV11/mavros/local_position/pose] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,991: topic[/UAV12/uav_task_state] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,992: topic[/UAV12/mavros/local_position/pose] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,992: topic[/UAV13/uav_task_state] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,994: topic[/UAV13/mavros/local_position/pose] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,995: topic[/UAV14/mavros/state] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,996: topic[/UAV14/mavros/local_position/pose] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,997: topic[/UAV14/uav_task_state] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,997: topic[/UAV13/mavros/state] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:27,998: topic[/UAV12/mavros/state] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:28,013: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:28,019: topic[/UAV15/uav_task_state] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:28,021: topic[/UAV15/mavros/state] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:28,022: topic[/UAV15/mavros/local_position/pose] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:28,025: topic[/UAV16/uav_task_state] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:28,026: topic[/UAV16/mavros/state] adding connection to [http://192.168.5.241:36631/], count 0
+[rospy.internal][INFO] 2026-10-09 14:34:28,026: topic[/UAV16/mavros/local_position/pose] adding connection to [http://192.168.5.241:36631/], count 0
+[rosout][WARNING] 2026-10-09 14:34:28,410: UAV link A10/UAV10 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[rosout][WARNING] 2026-10-09 14:34:29,012: UAV link A08/UAV8 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[rosout][WARNING] 2026-10-09 14:34:29,413: UAV link A13/UAV13 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[rosout][WARNING] 2026-10-09 14:34:31,418: UAV link A10/UAV10 DISCOVERED -> HEALTHY age=0.069 reason=valid MAVROS heartbeat is stable
+[rosout][WARNING] 2026-10-09 14:34:32,021: UAV link A08/UAV8 DISCOVERED -> HEALTHY age=0.078 reason=valid MAVROS heartbeat is stable
+[rosout][WARNING] 2026-10-09 14:34:32,423: UAV link A13/UAV13 DISCOVERED -> HEALTHY age=0.043 reason=valid MAVROS heartbeat is stable
+[rosout][INFO] 2026-10-09 14:35:24,864: GCS_A goal three-uav-recon-002/tcp-9729818cdee547098339f6164097c263 command=FOLLOW_ROUTE uavs=A08,A10,A13
+[rosout][INFO] 2026-10-09 14:35:25,110: GCS_A group ACCEPTED for three-uav-recon-002/tcp-9729818cdee547098339f6164097c263 after 0.246s
+[rosout][WARNING] 2026-10-09 14:41:41,353: UAV link A08/UAV8 HEALTHY -> SUSPECT age=10.005 reason=valid MAVROS heartbeat is stale
+[rosout][WARNING] 2026-10-09 14:41:46,364: UAV link A08/UAV8 SUSPECT -> LOST age=15.017 reason=valid MAVROS heartbeat timed out
+[rosout][WARNING] 2026-10-09 14:41:48,771: UAV link A10/UAV10 HEALTHY -> SUSPECT age=10.096 reason=valid MAVROS heartbeat is stale

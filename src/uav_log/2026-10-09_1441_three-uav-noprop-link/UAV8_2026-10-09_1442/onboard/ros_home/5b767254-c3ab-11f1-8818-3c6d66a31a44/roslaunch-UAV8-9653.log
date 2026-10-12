@@ -1,0 +1,255 @@
+[roslaunch][INFO] 2026-10-09 14:33:36,716: Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+[roslaunch][INFO] 2026-10-09 14:33:36,725: Done checking log file disk usage. Usage is <1GB.
+[roslaunch][INFO] 2026-10-09 14:33:36,725: roslaunch starting with args ['/opt/ros/noetic/bin/roslaunch', 'swarm_uav_executor', 'uav_offboard_ego_real.launch', 'noprop:=true', 'neighbor_intents:=/UAV10/trajectory_intent,/UAV13/trajectory_intent', 'neighbor_odom_topics:=/UAV10/mavros/local_position/odom,/UAV13/mavros/local_position/odom', 'uav_task_timeout_s:=280']
+[roslaunch][INFO] 2026-10-09 14:33:36,726: roslaunch env is environ({'SHELL': '/bin/bash', 'ROS_VERSION': '1', 'PKG_CONFIG_PATH': '/home/nvidia/catkin_swarm6-2/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig', 'ROS_PYTHON_VERSION': '3', 'LANGUAGE': 'en_US:en', 'LC_ADDRESS': 'en_US.UTF-8', 'LC_NAME': 'en_US.UTF-8', 'LC_MONETARY': 'en_US.UTF-8', 'ROS_PACKAGE_PATH': '/home/nvidia/catkin_swarm6-2/src/swarm_uav_interfaces:/home/nvidia/catkin_swarm6-2/src/ego_planner_driver:/home/nvidia/catkin_swarm6-2/src/swarm_topology_bridge:/home/nvidia/catkin_swarm6-2/src/swarm_uav_executor:/opt/ros/noetic/share', 'ROSLISP_PACKAGE_DIRECTORIES': '/home/nvidia/catkin_swarm6-2/devel/share/common-lisp', 'PWD': '/home/nvidia/catkin_swarm6-2', 'LOGNAME': 'nvidia', 'XDG_SESSION_TYPE': 'tty', 'ROS_LOG_DIR': '/home/nvidia/catkin_swarm6-2/.ros_home/log', 'MOTD_SHOWN': 'pam', 'HOME': '/home/nvidia', 'LANG': 'en_US.UTF-8', 'LC_PAPER': 'en_US.UTF-8', 'ROS_ETC_DIR': '/opt/ros/noetic/etc/ros', 'CMAKE_PREFIX_PATH': '/home/nvidia/catkin_swarm6-2/devel:/opt/ros/noetic', 'SSH_CONNECTION': '192.168.5.241 58736 192.168.5.81 22', 'XDG_SESSION_CLASS': 'user', 'PYTHONPATH': '/home/nvidia/catkin_swarm6-2/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'USER': 'nvidia', 'ROS_HOME': '/home/nvidia/catkin_swarm6-2/.ros_home', 'SHLVL': '0', 'LC_TELEPHONE': 'en_US.UTF-8', 'ROS_MASTER_URI': 'http://localhost:11311', 'LC_MEASUREMENT': 'en_US.UTF-8', 'XDG_SESSION_ID': '67', 'PAPERSIZE': 'letter', 'LD_LIBRARY_PATH': '/home/nvidia/catkin_swarm6-2/devel/lib:/opt/ros/noetic/lib', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSH_CLIENT': '192.168.5.241 58736 22', 'LC_TIME': 'en_US.UTF-8', 'PATH': '/opt/ros/noetic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ROS_ROOT': '/opt/ros/noetic/share/ros', 'ROS_DISTRO': 'noetic', 'LC_NUMERIC': 'en_US.UTF-8', 'OLDPWD': '/home/nvidia', '_': '/opt/ros/noetic/bin/roslaunch', 'ROS_LOG_FILENAME': '/home/nvidia/catkin_swarm6-2/.ros_home/log/5b767254-c3ab-11f1-8818-3c6d66a31a44/roslaunch-UAV8-9653.log'})
+[roslaunch][INFO] 2026-10-09 14:33:36,726: starting in server mode
+[roslaunch.parent][INFO] 2026-10-09 14:33:36,726: starting roslaunch parent run
+[roslaunch][INFO] 2026-10-09 14:33:36,726: loading roscore config file /opt/ros/noetic/etc/ros/roscore.xml
+[roslaunch][INFO] 2026-10-09 14:33:37,021: Added core node of type [rosout/rosout] in namespace [/]
+[roslaunch.config][INFO] 2026-10-09 14:33:37,021: loading config file /home/nvidia/catkin_swarm6-2/src/swarm_uav_executor/launch/uav_offboard_ego_real.launch
+[roslaunch][INFO] 2026-10-09 14:33:37,117: Added node of type [mavros/mavros_node] in namespace [/]
+[roslaunch][INFO] 2026-10-09 14:33:37,142: Added node of type [ego_planner_driver/ego_planner_driver_node] in namespace [/]
+[roslaunch][INFO] 2026-10-09 14:33:37,143: Added node of type [swarm_uav_executor/pose_relay_node.py] in namespace [/]
+[roslaunch][INFO] 2026-10-09 14:33:37,144: Added node of type [swarm_uav_executor/setpoint_relay_node.py] in namespace [/]
+[roslaunch][INFO] 2026-10-09 14:33:37,159: Added node of type [swarm_uav_executor/uav_executor_node.py] in namespace [/]
+[roslaunch][INFO] 2026-10-09 14:33:37,224: Added node of type [swarm_topology_bridge/bridge_node.py] in namespace [/]
+[roslaunch][INFO] 2026-10-09 14:33:37,225: Added node of type [swarm_uav_executor/gp_origin_receiver.py] in namespace [/]
+[roslaunch][INFO] 2026-10-09 14:33:37,228: Added node of type [swarm_uav_executor/gps_bias_node.py] in namespace [/]
+[roslaunch][INFO] 2026-10-09 14:33:37,228: ... selected machine [] for node of type [mavros/mavros_node]
+[roslaunch][INFO] 2026-10-09 14:33:37,228: ... selected machine [] for node of type [ego_planner_driver/ego_planner_driver_node]
+[roslaunch][INFO] 2026-10-09 14:33:37,228: ... selected machine [] for node of type [swarm_uav_executor/pose_relay_node.py]
+[roslaunch][INFO] 2026-10-09 14:33:37,228: ... selected machine [] for node of type [swarm_uav_executor/setpoint_relay_node.py]
+[roslaunch][INFO] 2026-10-09 14:33:37,228: ... selected machine [] for node of type [swarm_uav_executor/uav_executor_node.py]
+[roslaunch][INFO] 2026-10-09 14:33:37,228: ... selected machine [] for node of type [swarm_topology_bridge/bridge_node.py]
+[roslaunch][INFO] 2026-10-09 14:33:37,228: ... selected machine [] for node of type [swarm_uav_executor/gp_origin_receiver.py]
+[roslaunch][INFO] 2026-10-09 14:33:37,229: ... selected machine [] for node of type [swarm_uav_executor/gps_bias_node.py]
+[roslaunch.pmon][INFO] 2026-10-09 14:33:37,231: start_process_monitor: creating ProcessMonitor
+[roslaunch.pmon][INFO] 2026-10-09 14:33:37,231: created process monitor <ProcessMonitor(ProcessMonitor-1, initial daemon)>
+[roslaunch.pmon][INFO] 2026-10-09 14:33:37,232: start_process_monitor: ProcessMonitor started
+[roslaunch.parent][INFO] 2026-10-09 14:33:37,232: starting parent XML-RPC server
+[roslaunch.server][INFO] 2026-10-09 14:33:37,232: starting roslaunch XML-RPC server
+[roslaunch.server][INFO] 2026-10-09 14:33:37,233: waiting for roslaunch XML-RPC server to initialize
+[xmlrpc][INFO] 2026-10-09 14:33:37,233: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-10-09 14:33:37,234: Started XML-RPC server [http://UAV8:41185/]
+[xmlrpc][INFO] 2026-10-09 14:33:37,234: xml rpc node: starting XML-RPC server
+[roslaunch][INFO] 2026-10-09 14:33:37,246: started roslaunch server http://UAV8:41185/
+[roslaunch.parent][INFO] 2026-10-09 14:33:37,246: ... parent XML-RPC server started
+[roslaunch][INFO] 2026-10-09 14:33:37,249: master.is_running[http://localhost:11311]
+[roslaunch][INFO] 2026-10-09 14:33:37,249: auto-starting new master
+[roslaunch][INFO] 2026-10-09 14:33:37,250: create_master_process: rosmaster, /opt/ros/noetic/share/ros, 11311, 3, None, False
+[roslaunch][INFO] 2026-10-09 14:33:37,250: process[master]: launching with args [['rosmaster', '--core', '-p', '11311', '-w', '3']]
+[roslaunch.pmon][INFO] 2026-10-09 14:33:37,250: ProcessMonitor.register[master]
+[roslaunch.pmon][INFO] 2026-10-09 14:33:37,250: ProcessMonitor.register[master] complete
+[roslaunch][INFO] 2026-10-09 14:33:37,250: process[master]: starting os process
+[roslaunch][INFO] 2026-10-09 14:33:37,250: process[master]: start w/ args [['rosmaster', '--core', '-p', '11311', '-w', '3', '__log:=/home/nvidia/catkin_swarm6-2/.ros_home/log/5b767254-c3ab-11f1-8818-3c6d66a31a44/master.log']]
+[roslaunch][INFO] 2026-10-09 14:33:37,250: process[master]: cwd will be [/home/nvidia/catkin_swarm6-2/.ros_home]
+[roslaunch][INFO] 2026-10-09 14:33:37,258: process[master]: started with pid [9661]
+[roslaunch][INFO] 2026-10-09 14:33:37,258: master.is_running[http://localhost:11311]
+[roslaunch][INFO] 2026-10-09 14:33:37,360: master.is_running[http://localhost:11311]
+[roslaunch][INFO] 2026-10-09 14:33:37,461: master.is_running[http://localhost:11311]
+[roslaunch][INFO] 2026-10-09 14:33:37,562: master.is_running[http://localhost:11311]
+[roslaunch][INFO] 2026-10-09 14:33:37,663: master.is_running[http://localhost:11311]
+[roslaunch][INFO] 2026-10-09 14:33:37,765: master.is_running[http://localhost:11311]
+[roslaunch][INFO] 2026-10-09 14:33:37,769: master.is_running[http://localhost:11311]
+[roslaunch][INFO] 2026-10-09 14:33:37,772: ROS_MASTER_URI=http://localhost:11311
+[roslaunch][INFO] 2026-10-09 14:33:37,774: setting /run_id to 5b767254-c3ab-11f1-8818-3c6d66a31a44
+[roslaunch][INFO] 2026-10-09 14:33:37,776: setting /roslaunch/uris/host_uav8__41185' to http://UAV8:41185/
+[roslaunch][INFO] 2026-10-09 14:33:37,778: ... preparing to launch node of type [rosout/rosout]
+[roslaunch][INFO] 2026-10-09 14:33:37,779: create_node_process: package[rosout] type[rosout] machine[Machine(name[] env_loader[None] address[localhost] ssh_port[22] user[None] assignable[True] timeout[10.0])] master_uri[http://localhost:11311]
+[roslaunch][INFO] 2026-10-09 14:33:37,779: process[rosout-1]: env[{'SHELL': '/bin/bash', 'ROS_VERSION': '1', 'PKG_CONFIG_PATH': '/home/nvidia/catkin_swarm6-2/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig', 'ROS_PYTHON_VERSION': '3', 'LANGUAGE': 'en_US:en', 'LC_ADDRESS': 'en_US.UTF-8', 'LC_NAME': 'en_US.UTF-8', 'LC_MONETARY': 'en_US.UTF-8', 'ROS_PACKAGE_PATH': '/home/nvidia/catkin_swarm6-2/src/swarm_uav_interfaces:/home/nvidia/catkin_swarm6-2/src/ego_planner_driver:/home/nvidia/catkin_swarm6-2/src/swarm_topology_bridge:/home/nvidia/catkin_swarm6-2/src/swarm_uav_executor:/opt/ros/noetic/share', 'ROSLISP_PACKAGE_DIRECTORIES': '/home/nvidia/catkin_swarm6-2/devel/share/common-lisp', 'PWD': '/home/nvidia/catkin_swarm6-2', 'LOGNAME': 'nvidia', 'XDG_SESSION_TYPE': 'tty', 'ROS_LOG_DIR': '/home/nvidia/catkin_swarm6-2/.ros_home/log', 'MOTD_SHOWN': 'pam', 'HOME': '/home/nvidia', 'LANG': 'en_US.UTF-8', 'LC_PAPER': 'en_US.UTF-8', 'ROS_ETC_DIR': '/opt/ros/noetic/etc/ros', 'CMAKE_PREFIX_PATH': '/home/nvidia/catkin_swarm6-2/devel:/opt/ros/noetic', 'SSH_CONNECTION': '192.168.5.241 58736 192.168.5.81 22', 'XDG_SESSION_CLASS': 'user', 'PYTHONPATH': '/home/nvidia/catkin_swarm6-2/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'USER': 'nvidia', 'ROS_HOME': '/home/nvidia/catkin_swarm6-2/.ros_home', 'SHLVL': '0', 'LC_TELEPHONE': 'en_US.UTF-8', 'ROS_MASTER_URI': 'http://localhost:11311', 'LC_MEASUREMENT': 'en_US.UTF-8', 'XDG_SESSION_ID': '67', 'PAPERSIZE': 'letter', 'LD_LIBRARY_PATH': '/home/nvidia/catkin_swarm6-2/devel/lib:/opt/ros/noetic/lib', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSH_CLIENT': '192.168.5.241 58736 22', 'LC_TIME': 'en_US.UTF-8', 'PATH': '/opt/ros/noetic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ROS_ROOT': '/opt/ros/noetic/share/ros', 'ROS_DISTRO': 'noetic', 'LC_NUMERIC': 'en_US.UTF-8', 'OLDPWD': '/home/nvidia', '_': '/opt/ros/noetic/bin/roslaunch', 'ROS_LOG_FILENAME': '/home/nvidia/catkin_swarm6-2/.ros_home/log/5b767254-c3ab-11f1-8818-3c6d66a31a44/roslaunch-UAV8-9653.log'}]
+[roslaunch][INFO] 2026-10-09 14:33:37,827: process[rosout-1]: args[['/opt/ros/noetic/lib/rosout/rosout', '__name:=rosout']]
+[roslaunch][INFO] 2026-10-09 14:33:37,827: ... created process [rosout-1]
+[roslaunch.pmon][INFO] 2026-10-09 14:33:37,828: ProcessMonitor.register[rosout-1]
+[roslaunch.pmon][INFO] 2026-10-09 14:33:37,828: ProcessMonitor.register[rosout-1] complete
+[roslaunch][INFO] 2026-10-09 14:33:37,828: ... registered process [rosout-1]
+[roslaunch][INFO] 2026-10-09 14:33:37,828: process[rosout-1]: starting os process
+[roslaunch][INFO] 2026-10-09 14:33:37,828: process[rosout-1]: start w/ args [['/opt/ros/noetic/lib/rosout/rosout', '__name:=rosout', '__log:=/home/nvidia/catkin_swarm6-2/.ros_home/log/5b767254-c3ab-11f1-8818-3c6d66a31a44/rosout-1.log']]
+[roslaunch][INFO] 2026-10-09 14:33:37,828: process[rosout-1]: cwd will be [/home/nvidia/catkin_swarm6-2/.ros_home]
+[roslaunch][INFO] 2026-10-09 14:33:37,837: process[rosout-1]: started with pid [9671]
+[roslaunch][INFO] 2026-10-09 14:33:37,838: ... successfully launched [rosout-1]
+[roslaunch][INFO] 2026-10-09 14:33:37,838: load_parameters starting ...
+[roslaunch][INFO] 2026-10-09 14:33:37,947: ... load_parameters complete
+[roslaunch][INFO] 2026-10-09 14:33:37,948: launch_nodes: launching local nodes ...
+[roslaunch][INFO] 2026-10-09 14:33:37,949: ... preparing to launch node of type [mavros/mavros_node]
+[roslaunch][INFO] 2026-10-09 14:33:37,949: create_node_process: package[mavros] type[mavros_node] machine[Machine(name[] env_loader[None] address[localhost] ssh_port[22] user[None] assignable[True] timeout[10.0])] master_uri[http://localhost:11311]
+[roslaunch][INFO] 2026-10-09 14:33:37,949: process[mavros-2]: env[{'SHELL': '/bin/bash', 'ROS_VERSION': '1', 'PKG_CONFIG_PATH': '/home/nvidia/catkin_swarm6-2/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig', 'ROS_PYTHON_VERSION': '3', 'LANGUAGE': 'en_US:en', 'LC_ADDRESS': 'en_US.UTF-8', 'LC_NAME': 'en_US.UTF-8', 'LC_MONETARY': 'en_US.UTF-8', 'ROS_PACKAGE_PATH': '/home/nvidia/catkin_swarm6-2/src/swarm_uav_interfaces:/home/nvidia/catkin_swarm6-2/src/ego_planner_driver:/home/nvidia/catkin_swarm6-2/src/swarm_topology_bridge:/home/nvidia/catkin_swarm6-2/src/swarm_uav_executor:/opt/ros/noetic/share', 'ROSLISP_PACKAGE_DIRECTORIES': '/home/nvidia/catkin_swarm6-2/devel/share/common-lisp', 'PWD': '/home/nvidia/catkin_swarm6-2', 'LOGNAME': 'nvidia', 'XDG_SESSION_TYPE': 'tty', 'ROS_LOG_DIR': '/home/nvidia/catkin_swarm6-2/.ros_home/log', 'MOTD_SHOWN': 'pam', 'HOME': '/home/nvidia', 'LANG': 'en_US.UTF-8', 'LC_PAPER': 'en_US.UTF-8', 'ROS_ETC_DIR': '/opt/ros/noetic/etc/ros', 'CMAKE_PREFIX_PATH': '/home/nvidia/catkin_swarm6-2/devel:/opt/ros/noetic', 'SSH_CONNECTION': '192.168.5.241 58736 192.168.5.81 22', 'XDG_SESSION_CLASS': 'user', 'PYTHONPATH': '/home/nvidia/catkin_swarm6-2/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'USER': 'nvidia', 'ROS_HOME': '/home/nvidia/catkin_swarm6-2/.ros_home', 'SHLVL': '0', 'LC_TELEPHONE': 'en_US.UTF-8', 'ROS_MASTER_URI': 'http://localhost:11311', 'LC_MEASUREMENT': 'en_US.UTF-8', 'XDG_SESSION_ID': '67', 'PAPERSIZE': 'letter', 'LD_LIBRARY_PATH': '/home/nvidia/catkin_swarm6-2/devel/lib:/opt/ros/noetic/lib', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSH_CLIENT': '192.168.5.241 58736 22', 'LC_TIME': 'en_US.UTF-8', 'PATH': '/opt/ros/noetic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ROS_ROOT': '/opt/ros/noetic/share/ros', 'ROS_DISTRO': 'noetic', 'LC_NUMERIC': 'en_US.UTF-8', 'OLDPWD': '/home/nvidia', '_': '/opt/ros/noetic/bin/roslaunch', 'ROS_LOG_FILENAME': '/home/nvidia/catkin_swarm6-2/.ros_home/log/5b767254-c3ab-11f1-8818-3c6d66a31a44/roslaunch-UAV8-9653.log'}]
+[roslaunch][INFO] 2026-10-09 14:33:37,951: process[mavros-2]: args[['/opt/ros/noetic/lib/mavros/mavros_node', '__name:=mavros']]
+[roslaunch][INFO] 2026-10-09 14:33:37,951: ... created process [mavros-2]
+[roslaunch.pmon][INFO] 2026-10-09 14:33:37,951: ProcessMonitor.register[mavros-2]
+[roslaunch.pmon][INFO] 2026-10-09 14:33:37,951: ProcessMonitor.register[mavros-2] complete
+[roslaunch][INFO] 2026-10-09 14:33:37,951: ... registered process [mavros-2]
+[roslaunch][INFO] 2026-10-09 14:33:37,951: process[mavros-2]: starting os process
+[roslaunch][INFO] 2026-10-09 14:33:37,951: process[mavros-2]: start w/ args [['/opt/ros/noetic/lib/mavros/mavros_node', '__name:=mavros', '__log:=/home/nvidia/catkin_swarm6-2/.ros_home/log/5b767254-c3ab-11f1-8818-3c6d66a31a44/mavros-2.log']]
+[roslaunch][INFO] 2026-10-09 14:33:37,952: process[mavros-2]: cwd will be [/home/nvidia/catkin_swarm6-2/.ros_home]
+[roslaunch][INFO] 2026-10-09 14:33:37,960: process[mavros-2]: started with pid [9679]
+[roslaunch][INFO] 2026-10-09 14:33:37,960: ... successfully launched [mavros-2]
+[roslaunch][INFO] 2026-10-09 14:33:37,960: ... preparing to launch node of type [ego_planner_driver/ego_planner_driver_node]
+[roslaunch][INFO] 2026-10-09 14:33:37,960: create_node_process: package[ego_planner_driver] type[ego_planner_driver_node] machine[Machine(name[] env_loader[None] address[localhost] ssh_port[22] user[None] assignable[True] timeout[10.0])] master_uri[http://localhost:11311]
+[roslaunch][INFO] 2026-10-09 14:33:37,961: process[ego_planner_driver-3]: env[{'SHELL': '/bin/bash', 'ROS_VERSION': '1', 'PKG_CONFIG_PATH': '/home/nvidia/catkin_swarm6-2/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig', 'ROS_PYTHON_VERSION': '3', 'LANGUAGE': 'en_US:en', 'LC_ADDRESS': 'en_US.UTF-8', 'LC_NAME': 'en_US.UTF-8', 'LC_MONETARY': 'en_US.UTF-8', 'ROS_PACKAGE_PATH': '/home/nvidia/catkin_swarm6-2/src/swarm_uav_interfaces:/home/nvidia/catkin_swarm6-2/src/ego_planner_driver:/home/nvidia/catkin_swarm6-2/src/swarm_topology_bridge:/home/nvidia/catkin_swarm6-2/src/swarm_uav_executor:/opt/ros/noetic/share', 'ROSLISP_PACKAGE_DIRECTORIES': '/home/nvidia/catkin_swarm6-2/devel/share/common-lisp', 'PWD': '/home/nvidia/catkin_swarm6-2', 'LOGNAME': 'nvidia', 'XDG_SESSION_TYPE': 'tty', 'ROS_LOG_DIR': '/home/nvidia/catkin_swarm6-2/.ros_home/log', 'MOTD_SHOWN': 'pam', 'HOME': '/home/nvidia', 'LANG': 'en_US.UTF-8', 'LC_PAPER': 'en_US.UTF-8', 'ROS_ETC_DIR': '/opt/ros/noetic/etc/ros', 'CMAKE_PREFIX_PATH': '/home/nvidia/catkin_swarm6-2/devel:/opt/ros/noetic', 'SSH_CONNECTION': '192.168.5.241 58736 192.168.5.81 22', 'XDG_SESSION_CLASS': 'user', 'PYTHONPATH': '/home/nvidia/catkin_swarm6-2/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'USER': 'nvidia', 'ROS_HOME': '/home/nvidia/catkin_swarm6-2/.ros_home', 'SHLVL': '0', 'LC_TELEPHONE': 'en_US.UTF-8', 'ROS_MASTER_URI': 'http://localhost:11311', 'LC_MEASUREMENT': 'en_US.UTF-8', 'XDG_SESSION_ID': '67', 'PAPERSIZE': 'letter', 'LD_LIBRARY_PATH': '/home/nvidia/catkin_swarm6-2/devel/lib:/opt/ros/noetic/lib', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSH_CLIENT': '192.168.5.241 58736 22', 'LC_TIME': 'en_US.UTF-8', 'PATH': '/opt/ros/noetic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ROS_ROOT': '/opt/ros/noetic/share/ros', 'ROS_DISTRO': 'noetic', 'LC_NUMERIC': 'en_US.UTF-8', 'OLDPWD': '/home/nvidia', '_': '/opt/ros/noetic/bin/roslaunch', 'ROS_LOG_FILENAME': '/home/nvidia/catkin_swarm6-2/.ros_home/log/5b767254-c3ab-11f1-8818-3c6d66a31a44/roslaunch-UAV8-9653.log'}]
+[roslaunch][INFO] 2026-10-09 14:33:37,963: process[ego_planner_driver-3]: args[['/home/nvidia/catkin_swarm6-2/devel/.private/ego_planner_driver/lib/ego_planner_driver/ego_planner_driver_node', '__name:=ego_planner_driver']]
+[roslaunch][INFO] 2026-10-09 14:33:37,963: ... created process [ego_planner_driver-3]
+[roslaunch.pmon][INFO] 2026-10-09 14:33:37,963: ProcessMonitor.register[ego_planner_driver-3]
+[roslaunch.pmon][INFO] 2026-10-09 14:33:37,963: ProcessMonitor.register[ego_planner_driver-3] complete
+[roslaunch][INFO] 2026-10-09 14:33:37,963: ... registered process [ego_planner_driver-3]
+[roslaunch][INFO] 2026-10-09 14:33:37,963: process[ego_planner_driver-3]: starting os process
+[roslaunch][INFO] 2026-10-09 14:33:37,963: process[ego_planner_driver-3]: start w/ args [['/home/nvidia/catkin_swarm6-2/devel/.private/ego_planner_driver/lib/ego_planner_driver/ego_planner_driver_node', '__name:=ego_planner_driver', '__log:=/home/nvidia/catkin_swarm6-2/.ros_home/log/5b767254-c3ab-11f1-8818-3c6d66a31a44/ego_planner_driver-3.log']]
+[roslaunch][INFO] 2026-10-09 14:33:37,963: process[ego_planner_driver-3]: cwd will be [/home/nvidia/catkin_swarm6-2/.ros_home]
+[roslaunch][INFO] 2026-10-09 14:33:37,969: process[ego_planner_driver-3]: started with pid [9680]
+[roslaunch][INFO] 2026-10-09 14:33:37,970: ... successfully launched [ego_planner_driver-3]
+[roslaunch][INFO] 2026-10-09 14:33:37,970: ... preparing to launch node of type [swarm_uav_executor/pose_relay_node.py]
+[roslaunch][INFO] 2026-10-09 14:33:37,970: create_node_process: package[swarm_uav_executor] type[pose_relay_node.py] machine[Machine(name[] env_loader[None] address[localhost] ssh_port[22] user[None] assignable[True] timeout[10.0])] master_uri[http://localhost:11311]
+[roslaunch][INFO] 2026-10-09 14:33:37,970: process[pose_relay-4]: env[{'SHELL': '/bin/bash', 'ROS_VERSION': '1', 'PKG_CONFIG_PATH': '/home/nvidia/catkin_swarm6-2/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig', 'ROS_PYTHON_VERSION': '3', 'LANGUAGE': 'en_US:en', 'LC_ADDRESS': 'en_US.UTF-8', 'LC_NAME': 'en_US.UTF-8', 'LC_MONETARY': 'en_US.UTF-8', 'ROS_PACKAGE_PATH': '/home/nvidia/catkin_swarm6-2/src/swarm_uav_interfaces:/home/nvidia/catkin_swarm6-2/src/ego_planner_driver:/home/nvidia/catkin_swarm6-2/src/swarm_topology_bridge:/home/nvidia/catkin_swarm6-2/src/swarm_uav_executor:/opt/ros/noetic/share', 'ROSLISP_PACKAGE_DIRECTORIES': '/home/nvidia/catkin_swarm6-2/devel/share/common-lisp', 'PWD': '/home/nvidia/catkin_swarm6-2', 'LOGNAME': 'nvidia', 'XDG_SESSION_TYPE': 'tty', 'ROS_LOG_DIR': '/home/nvidia/catkin_swarm6-2/.ros_home/log', 'MOTD_SHOWN': 'pam', 'HOME': '/home/nvidia', 'LANG': 'en_US.UTF-8', 'LC_PAPER': 'en_US.UTF-8', 'ROS_ETC_DIR': '/opt/ros/noetic/etc/ros', 'CMAKE_PREFIX_PATH': '/home/nvidia/catkin_swarm6-2/devel:/opt/ros/noetic', 'SSH_CONNECTION': '192.168.5.241 58736 192.168.5.81 22', 'XDG_SESSION_CLASS': 'user', 'PYTHONPATH': '/home/nvidia/catkin_swarm6-2/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'USER': 'nvidia', 'ROS_HOME': '/home/nvidia/catkin_swarm6-2/.ros_home', 'SHLVL': '0', 'LC_TELEPHONE': 'en_US.UTF-8', 'ROS_MASTER_URI': 'http://localhost:11311', 'LC_MEASUREMENT': 'en_US.UTF-8', 'XDG_SESSION_ID': '67', 'PAPERSIZE': 'letter', 'LD_LIBRARY_PATH': '/home/nvidia/catkin_swarm6-2/devel/lib:/opt/ros/noetic/lib', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSH_CLIENT': '192.168.5.241 58736 22', 'LC_TIME': 'en_US.UTF-8', 'PATH': '/opt/ros/noetic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ROS_ROOT': '/opt/ros/noetic/share/ros', 'ROS_DISTRO': 'noetic', 'LC_NUMERIC': 'en_US.UTF-8', 'OLDPWD': '/home/nvidia', '_': '/opt/ros/noetic/bin/roslaunch', 'ROS_LOG_FILENAME': '/home/nvidia/catkin_swarm6-2/.ros_home/log/5b767254-c3ab-11f1-8818-3c6d66a31a44/roslaunch-UAV8-9653.log'}]
+[roslaunch][INFO] 2026-10-09 14:33:37,973: process[pose_relay-4]: args[['/home/nvidia/catkin_swarm6-2/devel/.private/swarm_uav_executor/lib/swarm_uav_executor/pose_relay_node.py', '__name:=pose_relay']]
+[roslaunch][INFO] 2026-10-09 14:33:37,973: ... created process [pose_relay-4]
+[roslaunch.pmon][INFO] 2026-10-09 14:33:37,973: ProcessMonitor.register[pose_relay-4]
+[roslaunch.pmon][INFO] 2026-10-09 14:33:37,973: ProcessMonitor.register[pose_relay-4] complete
+[roslaunch][INFO] 2026-10-09 14:33:37,973: ... registered process [pose_relay-4]
+[roslaunch][INFO] 2026-10-09 14:33:37,973: process[pose_relay-4]: starting os process
+[roslaunch][INFO] 2026-10-09 14:33:37,973: process[pose_relay-4]: start w/ args [['/home/nvidia/catkin_swarm6-2/devel/.private/swarm_uav_executor/lib/swarm_uav_executor/pose_relay_node.py', '__name:=pose_relay', '__log:=/home/nvidia/catkin_swarm6-2/.ros_home/log/5b767254-c3ab-11f1-8818-3c6d66a31a44/pose_relay-4.log']]
+[roslaunch][INFO] 2026-10-09 14:33:37,973: process[pose_relay-4]: cwd will be [/home/nvidia/catkin_swarm6-2/.ros_home]
+[roslaunch][INFO] 2026-10-09 14:33:37,980: process[pose_relay-4]: started with pid [9681]
+[roslaunch][INFO] 2026-10-09 14:33:37,980: ... successfully launched [pose_relay-4]
+[roslaunch][INFO] 2026-10-09 14:33:37,980: ... preparing to launch node of type [swarm_uav_executor/setpoint_relay_node.py]
+[roslaunch][INFO] 2026-10-09 14:33:37,981: create_node_process: package[swarm_uav_executor] type[setpoint_relay_node.py] machine[Machine(name[] env_loader[None] address[localhost] ssh_port[22] user[None] assignable[True] timeout[10.0])] master_uri[http://localhost:11311]
+[roslaunch][INFO] 2026-10-09 14:33:37,981: process[setpoint_relay-5]: env[{'SHELL': '/bin/bash', 'ROS_VERSION': '1', 'PKG_CONFIG_PATH': '/home/nvidia/catkin_swarm6-2/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig', 'ROS_PYTHON_VERSION': '3', 'LANGUAGE': 'en_US:en', 'LC_ADDRESS': 'en_US.UTF-8', 'LC_NAME': 'en_US.UTF-8', 'LC_MONETARY': 'en_US.UTF-8', 'ROS_PACKAGE_PATH': '/home/nvidia/catkin_swarm6-2/src/swarm_uav_interfaces:/home/nvidia/catkin_swarm6-2/src/ego_planner_driver:/home/nvidia/catkin_swarm6-2/src/swarm_topology_bridge:/home/nvidia/catkin_swarm6-2/src/swarm_uav_executor:/opt/ros/noetic/share', 'ROSLISP_PACKAGE_DIRECTORIES': '/home/nvidia/catkin_swarm6-2/devel/share/common-lisp', 'PWD': '/home/nvidia/catkin_swarm6-2', 'LOGNAME': 'nvidia', 'XDG_SESSION_TYPE': 'tty', 'ROS_LOG_DIR': '/home/nvidia/catkin_swarm6-2/.ros_home/log', 'MOTD_SHOWN': 'pam', 'HOME': '/home/nvidia', 'LANG': 'en_US.UTF-8', 'LC_PAPER': 'en_US.UTF-8', 'ROS_ETC_DIR': '/opt/ros/noetic/etc/ros', 'CMAKE_PREFIX_PATH': '/home/nvidia/catkin_swarm6-2/devel:/opt/ros/noetic', 'SSH_CONNECTION': '192.168.5.241 58736 192.168.5.81 22', 'XDG_SESSION_CLASS': 'user', 'PYTHONPATH': '/home/nvidia/catkin_swarm6-2/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'USER': 'nvidia', 'ROS_HOME': '/home/nvidia/catkin_swarm6-2/.ros_home', 'SHLVL': '0', 'LC_TELEPHONE': 'en_US.UTF-8', 'ROS_MASTER_URI': 'http://localhost:11311', 'LC_MEASUREMENT': 'en_US.UTF-8', 'XDG_SESSION_ID': '67', 'PAPERSIZE': 'letter', 'LD_LIBRARY_PATH': '/home/nvidia/catkin_swarm6-2/devel/lib:/opt/ros/noetic/lib', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSH_CLIENT': '192.168.5.241 58736 22', 'LC_TIME': 'en_US.UTF-8', 'PATH': '/opt/ros/noetic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ROS_ROOT': '/opt/ros/noetic/share/ros', 'ROS_DISTRO': 'noetic', 'LC_NUMERIC': 'en_US.UTF-8', 'OLDPWD': '/home/nvidia', '_': '/opt/ros/noetic/bin/roslaunch', 'ROS_LOG_FILENAME': '/home/nvidia/catkin_swarm6-2/.ros_home/log/5b767254-c3ab-11f1-8818-3c6d66a31a44/roslaunch-UAV8-9653.log'}]
+[roslaunch][INFO] 2026-10-09 14:33:37,983: process[setpoint_relay-5]: args[['/home/nvidia/catkin_swarm6-2/devel/.private/swarm_uav_executor/lib/swarm_uav_executor/setpoint_relay_node.py', '__name:=setpoint_relay']]
+[roslaunch][INFO] 2026-10-09 14:33:37,984: ... created process [setpoint_relay-5]
+[roslaunch.pmon][INFO] 2026-10-09 14:33:37,984: ProcessMonitor.register[setpoint_relay-5]
+[roslaunch.pmon][INFO] 2026-10-09 14:33:37,984: ProcessMonitor.register[setpoint_relay-5] complete
+[roslaunch][INFO] 2026-10-09 14:33:37,984: ... registered process [setpoint_relay-5]
+[roslaunch][INFO] 2026-10-09 14:33:37,984: process[setpoint_relay-5]: starting os process
+[roslaunch][INFO] 2026-10-09 14:33:37,984: process[setpoint_relay-5]: start w/ args [['/home/nvidia/catkin_swarm6-2/devel/.private/swarm_uav_executor/lib/swarm_uav_executor/setpoint_relay_node.py', '__name:=setpoint_relay', '__log:=/home/nvidia/catkin_swarm6-2/.ros_home/log/5b767254-c3ab-11f1-8818-3c6d66a31a44/setpoint_relay-5.log']]
+[roslaunch][INFO] 2026-10-09 14:33:37,984: process[setpoint_relay-5]: cwd will be [/home/nvidia/catkin_swarm6-2/.ros_home]
+[roslaunch][INFO] 2026-10-09 14:33:37,992: process[setpoint_relay-5]: started with pid [9690]
+[roslaunch][INFO] 2026-10-09 14:33:37,992: ... successfully launched [setpoint_relay-5]
+[roslaunch][INFO] 2026-10-09 14:33:37,992: ... preparing to launch node of type [swarm_uav_executor/uav_executor_node.py]
+[roslaunch][INFO] 2026-10-09 14:33:37,993: create_node_process: package[swarm_uav_executor] type[uav_executor_node.py] machine[Machine(name[] env_loader[None] address[localhost] ssh_port[22] user[None] assignable[True] timeout[10.0])] master_uri[http://localhost:11311]
+[roslaunch][INFO] 2026-10-09 14:33:37,993: process[uav_executor_UAV8-6]: env[{'SHELL': '/bin/bash', 'ROS_VERSION': '1', 'PKG_CONFIG_PATH': '/home/nvidia/catkin_swarm6-2/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig', 'ROS_PYTHON_VERSION': '3', 'LANGUAGE': 'en_US:en', 'LC_ADDRESS': 'en_US.UTF-8', 'LC_NAME': 'en_US.UTF-8', 'LC_MONETARY': 'en_US.UTF-8', 'ROS_PACKAGE_PATH': '/home/nvidia/catkin_swarm6-2/src/swarm_uav_interfaces:/home/nvidia/catkin_swarm6-2/src/ego_planner_driver:/home/nvidia/catkin_swarm6-2/src/swarm_topology_bridge:/home/nvidia/catkin_swarm6-2/src/swarm_uav_executor:/opt/ros/noetic/share', 'ROSLISP_PACKAGE_DIRECTORIES': '/home/nvidia/catkin_swarm6-2/devel/share/common-lisp', 'PWD': '/home/nvidia/catkin_swarm6-2', 'LOGNAME': 'nvidia', 'XDG_SESSION_TYPE': 'tty', 'ROS_LOG_DIR': '/home/nvidia/catkin_swarm6-2/.ros_home/log', 'MOTD_SHOWN': 'pam', 'HOME': '/home/nvidia', 'LANG': 'en_US.UTF-8', 'LC_PAPER': 'en_US.UTF-8', 'ROS_ETC_DIR': '/opt/ros/noetic/etc/ros', 'CMAKE_PREFIX_PATH': '/home/nvidia/catkin_swarm6-2/devel:/opt/ros/noetic', 'SSH_CONNECTION': '192.168.5.241 58736 192.168.5.81 22', 'XDG_SESSION_CLASS': 'user', 'PYTHONPATH': '/home/nvidia/catkin_swarm6-2/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'USER': 'nvidia', 'ROS_HOME': '/home/nvidia/catkin_swarm6-2/.ros_home', 'SHLVL': '0', 'LC_TELEPHONE': 'en_US.UTF-8', 'ROS_MASTER_URI': 'http://localhost:11311', 'LC_MEASUREMENT': 'en_US.UTF-8', 'XDG_SESSION_ID': '67', 'PAPERSIZE': 'letter', 'LD_LIBRARY_PATH': '/home/nvidia/catkin_swarm6-2/devel/lib:/opt/ros/noetic/lib', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSH_CLIENT': '192.168.5.241 58736 22', 'LC_TIME': 'en_US.UTF-8', 'PATH': '/opt/ros/noetic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ROS_ROOT': '/opt/ros/noetic/share/ros', 'ROS_DISTRO': 'noetic', 'LC_NUMERIC': 'en_US.UTF-8', 'OLDPWD': '/home/nvidia', '_': '/opt/ros/noetic/bin/roslaunch', 'ROS_LOG_FILENAME': '/home/nvidia/catkin_swarm6-2/.ros_home/log/5b767254-c3ab-11f1-8818-3c6d66a31a44/roslaunch-UAV8-9653.log'}]
+[roslaunch][INFO] 2026-10-09 14:33:37,995: process[uav_executor_UAV8-6]: args[['/home/nvidia/catkin_swarm6-2/devel/.private/swarm_uav_executor/lib/swarm_uav_executor/uav_executor_node.py', '__name:=uav_executor_UAV8']]
+[roslaunch][INFO] 2026-10-09 14:33:37,995: ... created process [uav_executor_UAV8-6]
+[roslaunch.pmon][INFO] 2026-10-09 14:33:37,996: ProcessMonitor.register[uav_executor_UAV8-6]
+[roslaunch.pmon][INFO] 2026-10-09 14:33:37,996: ProcessMonitor.register[uav_executor_UAV8-6] complete
+[roslaunch][INFO] 2026-10-09 14:33:37,996: ... registered process [uav_executor_UAV8-6]
+[roslaunch][INFO] 2026-10-09 14:33:37,996: process[uav_executor_UAV8-6]: starting os process
+[roslaunch][INFO] 2026-10-09 14:33:37,996: process[uav_executor_UAV8-6]: start w/ args [['/home/nvidia/catkin_swarm6-2/devel/.private/swarm_uav_executor/lib/swarm_uav_executor/uav_executor_node.py', '__name:=uav_executor_UAV8', '__log:=/home/nvidia/catkin_swarm6-2/.ros_home/log/5b767254-c3ab-11f1-8818-3c6d66a31a44/uav_executor_UAV8-6.log']]
+[roslaunch][INFO] 2026-10-09 14:33:37,996: process[uav_executor_UAV8-6]: cwd will be [/home/nvidia/catkin_swarm6-2/.ros_home]
+[roslaunch][INFO] 2026-10-09 14:33:38,003: process[uav_executor_UAV8-6]: started with pid [9693]
+[roslaunch][INFO] 2026-10-09 14:33:38,004: ... successfully launched [uav_executor_UAV8-6]
+[roslaunch][INFO] 2026-10-09 14:33:38,004: ... preparing to launch node of type [swarm_topology_bridge/bridge_node.py]
+[roslaunch][INFO] 2026-10-09 14:33:38,004: create_node_process: package[swarm_topology_bridge] type[bridge_node.py] machine[Machine(name[] env_loader[None] address[localhost] ssh_port[22] user[None] assignable[True] timeout[10.0])] master_uri[http://localhost:11311]
+[roslaunch][INFO] 2026-10-09 14:33:38,005: process[swarm_bridge-7]: env[{'SHELL': '/bin/bash', 'ROS_VERSION': '1', 'PKG_CONFIG_PATH': '/home/nvidia/catkin_swarm6-2/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig', 'ROS_PYTHON_VERSION': '3', 'LANGUAGE': 'en_US:en', 'LC_ADDRESS': 'en_US.UTF-8', 'LC_NAME': 'en_US.UTF-8', 'LC_MONETARY': 'en_US.UTF-8', 'ROS_PACKAGE_PATH': '/home/nvidia/catkin_swarm6-2/src/swarm_uav_interfaces:/home/nvidia/catkin_swarm6-2/src/ego_planner_driver:/home/nvidia/catkin_swarm6-2/src/swarm_topology_bridge:/home/nvidia/catkin_swarm6-2/src/swarm_uav_executor:/opt/ros/noetic/share', 'ROSLISP_PACKAGE_DIRECTORIES': '/home/nvidia/catkin_swarm6-2/devel/share/common-lisp', 'PWD': '/home/nvidia/catkin_swarm6-2', 'LOGNAME': 'nvidia', 'XDG_SESSION_TYPE': 'tty', 'ROS_LOG_DIR': '/home/nvidia/catkin_swarm6-2/.ros_home/log', 'MOTD_SHOWN': 'pam', 'HOME': '/home/nvidia', 'LANG': 'en_US.UTF-8', 'LC_PAPER': 'en_US.UTF-8', 'ROS_ETC_DIR': '/opt/ros/noetic/etc/ros', 'CMAKE_PREFIX_PATH': '/home/nvidia/catkin_swarm6-2/devel:/opt/ros/noetic', 'SSH_CONNECTION': '192.168.5.241 58736 192.168.5.81 22', 'XDG_SESSION_CLASS': 'user', 'PYTHONPATH': '/home/nvidia/catkin_swarm6-2/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'USER': 'nvidia', 'ROS_HOME': '/home/nvidia/catkin_swarm6-2/.ros_home', 'SHLVL': '0', 'LC_TELEPHONE': 'en_US.UTF-8', 'ROS_MASTER_URI': 'http://localhost:11311', 'LC_MEASUREMENT': 'en_US.UTF-8', 'XDG_SESSION_ID': '67', 'PAPERSIZE': 'letter', 'LD_LIBRARY_PATH': '/home/nvidia/catkin_swarm6-2/devel/lib:/opt/ros/noetic/lib', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSH_CLIENT': '192.168.5.241 58736 22', 'LC_TIME': 'en_US.UTF-8', 'PATH': '/opt/ros/noetic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ROS_ROOT': '/opt/ros/noetic/share/ros', 'ROS_DISTRO': 'noetic', 'LC_NUMERIC': 'en_US.UTF-8', 'OLDPWD': '/home/nvidia', '_': '/opt/ros/noetic/bin/roslaunch', 'ROS_LOG_FILENAME': '/home/nvidia/catkin_swarm6-2/.ros_home/log/5b767254-c3ab-11f1-8818-3c6d66a31a44/roslaunch-UAV8-9653.log'}]
+[roslaunch][INFO] 2026-10-09 14:33:38,006: process[swarm_bridge-7]: args[['/home/nvidia/catkin_swarm6-2/src/swarm_topology_bridge/scripts/bridge_node.py', '__name:=swarm_bridge']]
+[roslaunch][INFO] 2026-10-09 14:33:38,007: ... created process [swarm_bridge-7]
+[roslaunch.pmon][INFO] 2026-10-09 14:33:38,007: ProcessMonitor.register[swarm_bridge-7]
+[roslaunch.pmon][INFO] 2026-10-09 14:33:38,007: ProcessMonitor.register[swarm_bridge-7] complete
+[roslaunch][INFO] 2026-10-09 14:33:38,007: ... registered process [swarm_bridge-7]
+[roslaunch][INFO] 2026-10-09 14:33:38,007: process[swarm_bridge-7]: starting os process
+[roslaunch][INFO] 2026-10-09 14:33:38,007: process[swarm_bridge-7]: start w/ args [['/home/nvidia/catkin_swarm6-2/src/swarm_topology_bridge/scripts/bridge_node.py', '__name:=swarm_bridge', '__log:=/home/nvidia/catkin_swarm6-2/.ros_home/log/5b767254-c3ab-11f1-8818-3c6d66a31a44/swarm_bridge-7.log']]
+[roslaunch][INFO] 2026-10-09 14:33:38,007: process[swarm_bridge-7]: cwd will be [/home/nvidia/catkin_swarm6-2/.ros_home]
+[roslaunch][INFO] 2026-10-09 14:33:38,016: process[swarm_bridge-7]: started with pid [9694]
+[roslaunch][INFO] 2026-10-09 14:33:38,017: ... successfully launched [swarm_bridge-7]
+[roslaunch][INFO] 2026-10-09 14:33:38,017: ... preparing to launch node of type [swarm_uav_executor/gp_origin_receiver.py]
+[roslaunch][INFO] 2026-10-09 14:33:38,017: create_node_process: package[swarm_uav_executor] type[gp_origin_receiver.py] machine[Machine(name[] env_loader[None] address[localhost] ssh_port[22] user[None] assignable[True] timeout[10.0])] master_uri[http://localhost:11311]
+[roslaunch][INFO] 2026-10-09 14:33:38,018: process[gp_origin_receiver-8]: env[{'SHELL': '/bin/bash', 'ROS_VERSION': '1', 'PKG_CONFIG_PATH': '/home/nvidia/catkin_swarm6-2/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig', 'ROS_PYTHON_VERSION': '3', 'LANGUAGE': 'en_US:en', 'LC_ADDRESS': 'en_US.UTF-8', 'LC_NAME': 'en_US.UTF-8', 'LC_MONETARY': 'en_US.UTF-8', 'ROS_PACKAGE_PATH': '/home/nvidia/catkin_swarm6-2/src/swarm_uav_interfaces:/home/nvidia/catkin_swarm6-2/src/ego_planner_driver:/home/nvidia/catkin_swarm6-2/src/swarm_topology_bridge:/home/nvidia/catkin_swarm6-2/src/swarm_uav_executor:/opt/ros/noetic/share', 'ROSLISP_PACKAGE_DIRECTORIES': '/home/nvidia/catkin_swarm6-2/devel/share/common-lisp', 'PWD': '/home/nvidia/catkin_swarm6-2', 'LOGNAME': 'nvidia', 'XDG_SESSION_TYPE': 'tty', 'ROS_LOG_DIR': '/home/nvidia/catkin_swarm6-2/.ros_home/log', 'MOTD_SHOWN': 'pam', 'HOME': '/home/nvidia', 'LANG': 'en_US.UTF-8', 'LC_PAPER': 'en_US.UTF-8', 'ROS_ETC_DIR': '/opt/ros/noetic/etc/ros', 'CMAKE_PREFIX_PATH': '/home/nvidia/catkin_swarm6-2/devel:/opt/ros/noetic', 'SSH_CONNECTION': '192.168.5.241 58736 192.168.5.81 22', 'XDG_SESSION_CLASS': 'user', 'PYTHONPATH': '/home/nvidia/catkin_swarm6-2/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'USER': 'nvidia', 'ROS_HOME': '/home/nvidia/catkin_swarm6-2/.ros_home', 'SHLVL': '0', 'LC_TELEPHONE': 'en_US.UTF-8', 'ROS_MASTER_URI': 'http://localhost:11311', 'LC_MEASUREMENT': 'en_US.UTF-8', 'XDG_SESSION_ID': '67', 'PAPERSIZE': 'letter', 'LD_LIBRARY_PATH': '/home/nvidia/catkin_swarm6-2/devel/lib:/opt/ros/noetic/lib', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSH_CLIENT': '192.168.5.241 58736 22', 'LC_TIME': 'en_US.UTF-8', 'PATH': '/opt/ros/noetic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ROS_ROOT': '/opt/ros/noetic/share/ros', 'ROS_DISTRO': 'noetic', 'LC_NUMERIC': 'en_US.UTF-8', 'OLDPWD': '/home/nvidia', '_': '/opt/ros/noetic/bin/roslaunch', 'ROS_LOG_FILENAME': '/home/nvidia/catkin_swarm6-2/.ros_home/log/5b767254-c3ab-11f1-8818-3c6d66a31a44/roslaunch-UAV8-9653.log'}]
+[roslaunch][INFO] 2026-10-09 14:33:38,020: process[gp_origin_receiver-8]: args[['/home/nvidia/catkin_swarm6-2/devel/.private/swarm_uav_executor/lib/swarm_uav_executor/gp_origin_receiver.py', '__name:=gp_origin_receiver']]
+[roslaunch][INFO] 2026-10-09 14:33:38,020: ... created process [gp_origin_receiver-8]
+[roslaunch.pmon][INFO] 2026-10-09 14:33:38,020: ProcessMonitor.register[gp_origin_receiver-8]
+[roslaunch.pmon][INFO] 2026-10-09 14:33:38,021: ProcessMonitor.register[gp_origin_receiver-8] complete
+[roslaunch][INFO] 2026-10-09 14:33:38,021: ... registered process [gp_origin_receiver-8]
+[roslaunch][INFO] 2026-10-09 14:33:38,021: process[gp_origin_receiver-8]: starting os process
+[roslaunch][INFO] 2026-10-09 14:33:38,021: process[gp_origin_receiver-8]: start w/ args [['/home/nvidia/catkin_swarm6-2/devel/.private/swarm_uav_executor/lib/swarm_uav_executor/gp_origin_receiver.py', '__name:=gp_origin_receiver', '__log:=/home/nvidia/catkin_swarm6-2/.ros_home/log/5b767254-c3ab-11f1-8818-3c6d66a31a44/gp_origin_receiver-8.log']]
+[roslaunch][INFO] 2026-10-09 14:33:38,021: process[gp_origin_receiver-8]: cwd will be [/home/nvidia/catkin_swarm6-2/.ros_home]
+[roslaunch][INFO] 2026-10-09 14:33:38,030: process[gp_origin_receiver-8]: started with pid [9695]
+[roslaunch][INFO] 2026-10-09 14:33:38,031: ... successfully launched [gp_origin_receiver-8]
+[roslaunch][INFO] 2026-10-09 14:33:38,031: ... preparing to launch node of type [swarm_uav_executor/gps_bias_node.py]
+[roslaunch][INFO] 2026-10-09 14:33:38,031: create_node_process: package[swarm_uav_executor] type[gps_bias_node.py] machine[Machine(name[] env_loader[None] address[localhost] ssh_port[22] user[None] assignable[True] timeout[10.0])] master_uri[http://localhost:11311]
+[roslaunch][INFO] 2026-10-09 14:33:38,032: process[gps_bias_node-9]: env[{'SHELL': '/bin/bash', 'ROS_VERSION': '1', 'PKG_CONFIG_PATH': '/home/nvidia/catkin_swarm6-2/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig', 'ROS_PYTHON_VERSION': '3', 'LANGUAGE': 'en_US:en', 'LC_ADDRESS': 'en_US.UTF-8', 'LC_NAME': 'en_US.UTF-8', 'LC_MONETARY': 'en_US.UTF-8', 'ROS_PACKAGE_PATH': '/home/nvidia/catkin_swarm6-2/src/swarm_uav_interfaces:/home/nvidia/catkin_swarm6-2/src/ego_planner_driver:/home/nvidia/catkin_swarm6-2/src/swarm_topology_bridge:/home/nvidia/catkin_swarm6-2/src/swarm_uav_executor:/opt/ros/noetic/share', 'ROSLISP_PACKAGE_DIRECTORIES': '/home/nvidia/catkin_swarm6-2/devel/share/common-lisp', 'PWD': '/home/nvidia/catkin_swarm6-2', 'LOGNAME': 'nvidia', 'XDG_SESSION_TYPE': 'tty', 'ROS_LOG_DIR': '/home/nvidia/catkin_swarm6-2/.ros_home/log', 'MOTD_SHOWN': 'pam', 'HOME': '/home/nvidia', 'LANG': 'en_US.UTF-8', 'LC_PAPER': 'en_US.UTF-8', 'ROS_ETC_DIR': '/opt/ros/noetic/etc/ros', 'CMAKE_PREFIX_PATH': '/home/nvidia/catkin_swarm6-2/devel:/opt/ros/noetic', 'SSH_CONNECTION': '192.168.5.241 58736 192.168.5.81 22', 'XDG_SESSION_CLASS': 'user', 'PYTHONPATH': '/home/nvidia/catkin_swarm6-2/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'USER': 'nvidia', 'ROS_HOME': '/home/nvidia/catkin_swarm6-2/.ros_home', 'SHLVL': '0', 'LC_TELEPHONE': 'en_US.UTF-8', 'ROS_MASTER_URI': 'http://localhost:11311', 'LC_MEASUREMENT': 'en_US.UTF-8', 'XDG_SESSION_ID': '67', 'PAPERSIZE': 'letter', 'LD_LIBRARY_PATH': '/home/nvidia/catkin_swarm6-2/devel/lib:/opt/ros/noetic/lib', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSH_CLIENT': '192.168.5.241 58736 22', 'LC_TIME': 'en_US.UTF-8', 'PATH': '/opt/ros/noetic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ROS_ROOT': '/opt/ros/noetic/share/ros', 'ROS_DISTRO': 'noetic', 'LC_NUMERIC': 'en_US.UTF-8', 'OLDPWD': '/home/nvidia', '_': '/opt/ros/noetic/bin/roslaunch', 'ROS_LOG_FILENAME': '/home/nvidia/catkin_swarm6-2/.ros_home/log/5b767254-c3ab-11f1-8818-3c6d66a31a44/roslaunch-UAV8-9653.log'}]
+[roslaunch][INFO] 2026-10-09 14:33:38,035: process[gps_bias_node-9]: args[['/home/nvidia/catkin_swarm6-2/devel/.private/swarm_uav_executor/lib/swarm_uav_executor/gps_bias_node.py', '__name:=gps_bias_node']]
+[roslaunch][INFO] 2026-10-09 14:33:38,035: ... created process [gps_bias_node-9]
+[roslaunch.pmon][INFO] 2026-10-09 14:33:38,035: ProcessMonitor.register[gps_bias_node-9]
+[roslaunch.pmon][INFO] 2026-10-09 14:33:38,035: ProcessMonitor.register[gps_bias_node-9] complete
+[roslaunch][INFO] 2026-10-09 14:33:38,035: ... registered process [gps_bias_node-9]
+[roslaunch][INFO] 2026-10-09 14:33:38,035: process[gps_bias_node-9]: starting os process
+[roslaunch][INFO] 2026-10-09 14:33:38,036: process[gps_bias_node-9]: start w/ args [['/home/nvidia/catkin_swarm6-2/devel/.private/swarm_uav_executor/lib/swarm_uav_executor/gps_bias_node.py', '__name:=gps_bias_node', '__log:=/home/nvidia/catkin_swarm6-2/.ros_home/log/5b767254-c3ab-11f1-8818-3c6d66a31a44/gps_bias_node-9.log']]
+[roslaunch][INFO] 2026-10-09 14:33:38,036: process[gps_bias_node-9]: cwd will be [/home/nvidia/catkin_swarm6-2/.ros_home]
+[roslaunch][INFO] 2026-10-09 14:33:38,046: process[gps_bias_node-9]: started with pid [9697]
+[roslaunch][INFO] 2026-10-09 14:33:38,047: ... successfully launched [gps_bias_node-9]
+[roslaunch][INFO] 2026-10-09 14:33:38,047: ... launch_nodes complete
+[roslaunch.pmon][INFO] 2026-10-09 14:33:38,048: registrations completed <ProcessMonitor(ProcessMonitor-1, started daemon 281473342947808)>
+[roslaunch.parent][INFO] 2026-10-09 14:33:38,048: ... roslaunch parent running, waiting for process exit
+[roslaunch][INFO] 2026-10-09 14:33:38,048: spin
+[roslaunch.pmon][INFO] 2026-10-09 14:41:30,356: ProcessMonitor.shutdown <ProcessMonitor(ProcessMonitor-1, started daemon 281473342947808)>
+[roslaunch.pmon][INFO] 2026-10-09 14:41:30,446: ProcessMonitor._post_run <ProcessMonitor(ProcessMonitor-1, started daemon 281473342947808)>
+[roslaunch.pmon][INFO] 2026-10-09 14:41:30,447: ProcessMonitor._post_run <ProcessMonitor(ProcessMonitor-1, started daemon 281473342947808)>: remaining procs are [<roslaunch.nodeprocess.LocalProcess object at 0xffff9eaa9130>, <roslaunch.nodeprocess.LocalProcess object at 0xffff9ebae880>, <roslaunch.nodeprocess.LocalProcess object at 0xffff9ec1fc40>, <roslaunch.nodeprocess.LocalProcess object at 0xffff9eb724c0>, <roslaunch.nodeprocess.LocalProcess object at 0xffff9eaa9400>, <roslaunch.nodeprocess.LocalProcess object at 0xffff9eaa9f40>, <roslaunch.nodeprocess.LocalProcess object at 0xffff9eaa9b50>, <roslaunch.nodeprocess.LocalProcess object at 0xffff9eaa90d0>, <roslaunch.nodeprocess.LocalProcess object at 0xffff9eaa9e80>, <roslaunch.nodeprocess.LocalProcess object at 0xffff9eaa9550>]
+[roslaunch.pmon][INFO] 2026-10-09 14:41:30,448: ProcessMonitor exit: killing gps_bias_node-9
+[roslaunch.pmon][INFO] 2026-10-09 14:41:30,448: ProcessMonitor exit: killing gp_origin_receiver-8
+[roslaunch][INFO] 2026-10-09 14:41:30,448: [gps_bias_node-9] killing on exit
+[roslaunch.pmon][INFO] 2026-10-09 14:41:30,449: ProcessMonitor exit: killing swarm_bridge-7
+[roslaunch.pmon][INFO] 2026-10-09 14:41:30,449: ProcessMonitor exit: killing uav_executor_UAV8-6
+[roslaunch][INFO] 2026-10-09 14:41:30,450: [gp_origin_receiver-8] killing on exit
+[roslaunch.pmon][INFO] 2026-10-09 14:41:30,450: ProcessMonitor exit: killing setpoint_relay-5
+[roslaunch.pmon][INFO] 2026-10-09 14:41:30,450: ProcessMonitor exit: killing pose_relay-4
+[roslaunch][INFO] 2026-10-09 14:41:30,451: [swarm_bridge-7] killing on exit
+[roslaunch][INFO] 2026-10-09 14:41:30,451: process[gps_bias_node-9]: killing os process with pid[9697] pgid[9697]
+[roslaunch.pmon][INFO] 2026-10-09 14:41:30,451: ProcessMonitor exit: killing ego_planner_driver-3
+[roslaunch][INFO] 2026-10-09 14:41:30,453: [ego_planner_driver-3] killing on exit
+[roslaunch.pmon][INFO] 2026-10-09 14:41:30,451: ProcessMonitor exit: killing mavros-2
+[roslaunch][INFO] 2026-10-09 14:41:30,452: [setpoint_relay-5] killing on exit
+[roslaunch][INFO] 2026-10-09 14:41:30,452: process[gp_origin_receiver-8]: killing os process with pid[9695] pgid[9695]
+[roslaunch][INFO] 2026-10-09 14:41:30,452: [pose_relay-4] killing on exit
+[roslaunch][INFO] 2026-10-09 14:41:30,452: process[swarm_bridge-7]: killing os process with pid[9694] pgid[9694]
+[roslaunch][INFO] 2026-10-09 14:41:30,452: [gps_bias_node-9] sending SIGINT to pgid [9697]
+[roslaunch][INFO] 2026-10-09 14:41:30,451: [uav_executor_UAV8-6] killing on exit
+[roslaunch][INFO] 2026-10-09 14:41:30,453: process[ego_planner_driver-3]: killing os process with pid[9680] pgid[9680]
+[roslaunch][INFO] 2026-10-09 14:41:30,453: [mavros-2] killing on exit
+[roslaunch][INFO] 2026-10-09 14:41:30,453: process[setpoint_relay-5]: killing os process with pid[9690] pgid[9690]
+[roslaunch][INFO] 2026-10-09 14:41:30,453: [gp_origin_receiver-8] sending SIGINT to pgid [9695]
+[roslaunch][INFO] 2026-10-09 14:41:30,454: process[pose_relay-4]: killing os process with pid[9681] pgid[9681]
+[roslaunch][INFO] 2026-10-09 14:41:30,454: [swarm_bridge-7] sending SIGINT to pgid [9694]
+[roslaunch][INFO] 2026-10-09 14:41:30,454: [gps_bias_node-9] sent SIGINT to pgid [9697]
+[roslaunch][INFO] 2026-10-09 14:41:30,454: process[uav_executor_UAV8-6]: killing os process with pid[9693] pgid[9693]
+[roslaunch][INFO] 2026-10-09 14:41:30,454: [ego_planner_driver-3] sending SIGINT to pgid [9680]
+[roslaunch][INFO] 2026-10-09 14:41:30,455: [setpoint_relay-5] sending SIGINT to pgid [9690]
+[roslaunch][INFO] 2026-10-09 14:41:30,455: process[mavros-2]: killing os process with pid[9679] pgid[9679]
+[roslaunch][INFO] 2026-10-09 14:41:30,456: [mavros-2] sending SIGINT to pgid [9679]
+[roslaunch][INFO] 2026-10-09 14:41:30,455: [pose_relay-4] sending SIGINT to pgid [9681]
+[roslaunch][INFO] 2026-10-09 14:41:30,455: [swarm_bridge-7] sent SIGINT to pgid [9694]
+[roslaunch][INFO] 2026-10-09 14:41:30,455: [uav_executor_UAV8-6] sending SIGINT to pgid [9693]
+[roslaunch][INFO] 2026-10-09 14:41:30,455: [ego_planner_driver-3] sent SIGINT to pgid [9680]
+[roslaunch][INFO] 2026-10-09 14:41:30,456: [setpoint_relay-5] sent SIGINT to pgid [9690]
+[roslaunch][INFO] 2026-10-09 14:41:30,456: [mavros-2] sent SIGINT to pgid [9679]
+[roslaunch][INFO] 2026-10-09 14:41:30,455: [gp_origin_receiver-8] sent SIGINT to pgid [9695]
+[roslaunch][INFO] 2026-10-09 14:41:30,456: [pose_relay-4] sent SIGINT to pgid [9681]
+[roslaunch][INFO] 2026-10-09 14:41:30,456: [uav_executor_UAV8-6] sent SIGINT to pgid [9693]
+[roslaunch][INFO] 2026-10-09 14:41:30,757: process[ego_planner_driver-3]: SIGINT killed with return value 0
+[roslaunch][INFO] 2026-10-09 14:41:30,958: process[mavros-2]: SIGINT killed with return value 0
+[roslaunch][INFO] 2026-10-09 14:41:31,257: process[gps_bias_node-9]: SIGINT killed with return value 0
+[roslaunch][INFO] 2026-10-09 14:41:31,258: process[gp_origin_receiver-8]: SIGINT killed with return value 0
+[roslaunch][INFO] 2026-10-09 14:41:31,260: process[pose_relay-4]: SIGINT killed with return value 0
+[roslaunch][INFO] 2026-10-09 14:41:31,459: process[setpoint_relay-5]: SIGINT killed with return value 0
+[roslaunch][INFO] 2026-10-09 14:41:31,459: process[uav_executor_UAV8-6]: SIGINT killed with return value 0
+[roslaunch][INFO] 2026-10-09 14:41:35,565: process[swarm_bridge-7]: SIGINT killed with return value 0
+[roslaunch.pmon][INFO] 2026-10-09 14:41:35,566: ProcessMonitor exit: killing rosout-1
+[roslaunch][INFO] 2026-10-09 14:41:35,566: [rosout-1] killing on exit
+[roslaunch][INFO] 2026-10-09 14:41:35,566: process[rosout-1]: killing os process with pid[9671] pgid[9671]
+[roslaunch][INFO] 2026-10-09 14:41:35,566: [rosout-1] sending SIGINT to pgid [9671]
+[roslaunch][INFO] 2026-10-09 14:41:35,567: [rosout-1] sent SIGINT to pgid [9671]
+[roslaunch][INFO] 2026-10-09 14:41:35,767: process[rosout-1]: SIGINT killed with return value 0
+[roslaunch.pmon][INFO] 2026-10-09 14:41:35,768: ProcessMonitor exit: killing master
+[roslaunch][INFO] 2026-10-09 14:41:35,768: [master] killing on exit
+[roslaunch][INFO] 2026-10-09 14:41:35,768: process[master]: killing os process with pid[9661] pgid[9661]
+[roslaunch][INFO] 2026-10-09 14:41:35,768: [master] sending SIGINT to pgid [9661]
+[roslaunch][INFO] 2026-10-09 14:41:35,769: [master] sent SIGINT to pgid [9661]
+[roslaunch][INFO] 2026-10-09 14:41:36,069: process[master]: SIGINT killed with return value 0
+[roslaunch.pmon][INFO] 2026-10-09 14:41:36,070: ProcessMonitor exit: cleaning up data structures and signals
+[roslaunch.pmon][INFO] 2026-10-09 14:41:36,070: ProcessMonitor exit: pmon has shutdown
+[roslaunch][INFO] 2026-10-09 14:41:36,071: process monitor is done spinning, initiating full shutdown
+[roslaunch][INFO] 2026-10-09 14:41:36,071: runner.stop()
+[roslaunch][INFO] 2026-10-09 14:41:36,071: shutting down processing monitor...
+[roslaunch][INFO] 2026-10-09 14:41:36,072: shutting down processing monitor <ProcessMonitor(ProcessMonitor-1, stopped daemon 281473342947808)>
+[roslaunch.pmon][INFO] 2026-10-09 14:41:36,072: ProcessMonitor.shutdown <ProcessMonitor(ProcessMonitor-1, stopped daemon 281473342947808)>
+[roslaunch][INFO] 2026-10-09 14:41:36,072: ... shutting down processing monitor complete
+[roslaunch][INFO] 2026-10-09 14:41:36,072: done
+[roslaunch.pmon][INFO] 2026-10-09 14:41:36,073: ProcessMonitor.shutdown <ProcessMonitor(ProcessMonitor-1, stopped daemon 281473342947808)>
+[rospy.core][INFO] 2026-10-09 14:41:36,073: signal_shutdown [atexit]

@@ -1,0 +1,29 @@
+[rospy.client][INFO] 2026-09-23 15:40:56,884: init_node, name[/gp_origin_receiver], pid[6214]
+[xmlrpc][INFO] 2026-09-23 15:40:56,884: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-09-23 15:40:56,885: Started XML-RPC server [http://UAV8:36315/]
+[rospy.init][INFO] 2026-09-23 15:40:56,885: ROS Slave URI: [http://UAV8:36315/]
+[rospy.impl.masterslave][INFO] 2026-09-23 15:40:56,885: _ready: http://UAV8:36315/
+[rospy.registration][INFO] 2026-09-23 15:40:56,886: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2026-09-23 15:40:56,887: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-09-23 15:40:56,986: registered with master
+[rospy.rosout][INFO] 2026-09-23 15:40:56,986: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-09-23 15:40:56,994: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-09-23 15:40:56,996: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2026-09-23 15:40:57,043: topic[/mavros/global_position/gp_origin] adding connection to [http://UAV8:32941/], count 0
+[rospy.internal][INFO] 2026-09-23 15:40:57,043: topic[/mavros/state] adding connection to [http://UAV8:32941/], count 0
+[rospy.internal][INFO] 2026-09-23 15:40:57,070: topic[/gp_origin_confirmed] adding connection to [/uav_executor_UAV8], count 0
+[rospy.internal][INFO] 2026-09-23 15:40:57,148: topic[/GCS_A/group_a/gp_origin] adding connection to [http://UAV8:33497/], count 0
+[rospy.internal][INFO] 2026-09-23 15:40:57,247: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2026-09-23 15:40:57,266: topic[/mavros/global_position/set_gp_origin] adding connection to [/mavros], count 0
+[rospy.internal][INFO] 2026-09-23 15:40:57,496: topic[/gp_origin_confirmed] adding connection to [/swarm_bridge], count 1
+[rospy.core][INFO] 2026-09-23 15:52:40,165: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2026-09-23 15:52:40,195: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2026-09-23 15:52:40,195: topic[/mavros/global_position/set_gp_origin] removing connection to /mavros
+[rospy.internal][INFO] 2026-09-23 15:52:40,198: topic[/gp_origin_confirmed] removing connection to /uav_executor_UAV8
+[rospy.internal][INFO] 2026-09-23 15:52:40,199: topic[/gp_origin_confirmed] removing connection to /swarm_bridge
+[rospy.internal][INFO] 2026-09-23 15:52:40,199: topic[/GCS_A/group_a/gp_origin] removing connection to http://UAV8:33497/
+[rospy.internal][INFO] 2026-09-23 15:52:40,200: topic[/mavros/global_position/gp_origin] removing connection to http://UAV8:32941/
+[rospy.internal][INFO] 2026-09-23 15:52:40,201: topic[/mavros/global_position/gp_origin] removing connection to http://UAV8:32941/
+[rospy.internal][INFO] 2026-09-23 15:52:40,201: topic[/mavros/state] removing connection to http://UAV8:32941/
+[rospy.impl.masterslave][INFO] 2026-09-23 15:52:40,202: signal-2
+[rospy.core][INFO] 2026-09-23 15:52:40,767: signal_shutdown [atexit]

@@ -1,0 +1,23 @@
+[rospy.client][INFO] 2026-09-23 16:38:17,809: init_node, name[/gapmulti_5280_1790152697761], pid[5280]
+[xmlrpc][INFO] 2026-09-23 16:38:17,809: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-09-23 16:38:17,810: Started XML-RPC server [http://UAV8:45225/]
+[rospy.init][INFO] 2026-09-23 16:38:17,810: ROS Slave URI: [http://UAV8:45225/]
+[rospy.impl.masterslave][INFO] 2026-09-23 16:38:17,811: _ready: http://UAV8:45225/
+[rospy.registration][INFO] 2026-09-23 16:38:17,812: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2026-09-23 16:38:17,812: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-09-23 16:38:17,911: registered with master
+[rospy.rosout][INFO] 2026-09-23 16:38:17,911: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-09-23 16:38:17,918: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-09-23 16:38:17,919: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2026-09-23 16:38:17,932: topic[/mavros/local_position/odom] adding connection to [http://UAV8:39269/], count 0
+[rospy.internal][INFO] 2026-09-23 16:38:17,936: topic[/UAV10/mavros/local_position/odom] adding connection to [http://UAV8:43863/], count 0
+[rospy.internal][INFO] 2026-09-23 16:38:17,941: topic[/UAV12/mavros/local_position/odom] adding connection to [http://UAV8:43863/], count 0
+[rospy.internal][INFO] 2026-09-23 16:38:17,942: topic[/UAV13/mavros/local_position/odom] adding connection to [http://UAV8:43863/], count 0
+[rospy.internal][INFO] 2026-09-23 16:38:18,150: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.core][INFO] 2026-09-23 16:40:18,074: signal_shutdown [atexit]
+[rospy.internal][INFO] 2026-09-23 16:40:18,079: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2026-09-23 16:40:18,080: topic[/mavros/local_position/odom] removing connection to http://UAV8:39269/
+[rospy.internal][INFO] 2026-09-23 16:40:18,081: topic[/UAV10/mavros/local_position/odom] removing connection to http://UAV8:43863/
+[rospy.internal][INFO] 2026-09-23 16:40:18,083: topic[/UAV12/mavros/local_position/odom] removing connection to http://UAV8:43863/
+[rospy.internal][INFO] 2026-09-23 16:40:18,085: topic[/UAV13/mavros/local_position/odom] removing connection to http://UAV8:43863/
+[rospy.impl.masterslave][INFO] 2026-09-23 16:40:18,085: atexit

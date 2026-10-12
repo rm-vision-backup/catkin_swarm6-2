@@ -1,0 +1,13 @@
+[rospy.client][INFO] 2026-09-23 16:51:38,965: init_node, name[/rosservice_4928_1790153498918], pid[4928]
+[xmlrpc][INFO] 2026-09-23 16:51:38,966: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-09-23 16:51:38,967: Started XML-RPC server [http://UAV13:44013/]
+[rospy.init][INFO] 2026-09-23 16:51:38,967: ROS Slave URI: [http://UAV13:44013/]
+[rospy.impl.masterslave][INFO] 2026-09-23 16:51:38,967: _ready: http://UAV13:44013/
+[rospy.registration][INFO] 2026-09-23 16:51:38,968: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2026-09-23 16:51:38,968: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-09-23 16:51:39,067: registered with master
+[rospy.rosout][INFO] 2026-09-23 16:51:39,068: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-09-23 16:51:39,071: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-09-23 16:51:39,073: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.core][INFO] 2026-09-23 16:51:39,081: signal_shutdown [atexit]
+[rospy.impl.masterslave][INFO] 2026-09-23 16:51:39,084: atexit

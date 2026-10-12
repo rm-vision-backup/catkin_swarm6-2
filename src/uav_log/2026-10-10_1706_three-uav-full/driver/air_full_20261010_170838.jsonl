@@ -1,0 +1,27 @@
+{"accept_timeout_s": 10.0, "active_ids": ["A08", "A10", "A13"], "event": "mission_start", "group_id": "GroupA", "mission_id": "three-uav-recon-002", "phases": [{"name": "prepare", "plan_id": "prepare-a"}, {"name": "coverage", "plan_id": "coverage-segment-1"}], "tcp_host": "192.168.5.241", "tcp_port": 39001}
+{"event": "tcp_connected", "host": "192.168.5.241", "port": 39001}
+{"command_type": "MOVE_TO", "event": "phase_start", "phase": "prepare", "plan_id": "prepare-a", "robot_ids": ["A08", "A10", "A13"], "timeout_s": 150.0}
+{"command_id": "prepare-a-1791623318-A08", "error_code": null, "error_message": null, "event": "command_feedback", "robot_id": "A08", "status": "ACCEPTED"}
+{"command_id": "prepare-a-1791623318-A08", "error_code": null, "error_message": null, "event": "command_feedback", "robot_id": "A08", "status": "RUNNING"}
+{"command_id": "prepare-a-1791623318-A10", "error_code": null, "error_message": null, "event": "command_feedback", "robot_id": "A10", "status": "ACCEPTED"}
+{"command_id": "prepare-a-1791623318-A10", "error_code": null, "error_message": null, "event": "command_feedback", "robot_id": "A10", "status": "RUNNING"}
+{"command_id": "prepare-a-1791623318-A13", "error_code": null, "error_message": null, "event": "command_feedback", "robot_id": "A13", "status": "ACCEPTED"}
+{"command_id": "prepare-a-1791623318-A13", "error_code": null, "error_message": null, "event": "command_feedback", "robot_id": "A13", "status": "RUNNING"}
+{"command_id": "prepare-a-1791623318-A08", "error_code": null, "error_message": null, "event": "command_feedback", "robot_id": "A08", "status": "SUCCESS"}
+{"command_id": "prepare-a-1791623318-A10", "error_code": null, "error_message": null, "event": "command_feedback", "robot_id": "A10", "status": "SUCCESS"}
+{"command_id": "prepare-a-1791623318-A13", "error_code": null, "error_message": null, "event": "command_feedback", "robot_id": "A13", "status": "SUCCESS"}
+{"event": "phase_result", "outcome": "SUCCESS", "phase": "prepare", "plan_id": "prepare-a", "statuses": {"A08": "SUCCESS", "A10": "SUCCESS", "A13": "SUCCESS"}}
+{"command_type": "FOLLOW_ROUTE", "event": "phase_start", "phase": "coverage", "plan_id": "coverage-segment-1", "robot_ids": ["A08", "A10", "A13"], "timeout_s": 300.0}
+{"command_id": "coverage-segment-1-1791623318-A08", "error_code": null, "error_message": null, "event": "command_feedback", "robot_id": "A08", "status": "ACCEPTED"}
+{"command_id": "coverage-segment-1-1791623318-A08", "error_code": null, "error_message": null, "event": "command_feedback", "robot_id": "A08", "status": "RUNNING"}
+{"command_id": "coverage-segment-1-1791623318-A10", "error_code": null, "error_message": null, "event": "command_feedback", "robot_id": "A10", "status": "ACCEPTED"}
+{"command_id": "coverage-segment-1-1791623318-A10", "error_code": null, "error_message": null, "event": "command_feedback", "robot_id": "A10", "status": "RUNNING"}
+{"command_id": "coverage-segment-1-1791623318-A13", "error_code": null, "error_message": null, "event": "command_feedback", "robot_id": "A13", "status": "ACCEPTED"}
+{"command_id": "coverage-segment-1-1791623318-A13", "error_code": null, "error_message": null, "event": "command_feedback", "robot_id": "A13", "status": "RUNNING"}
+{"command_id": "coverage-segment-1-1791623318-A08", "error_code": null, "error_message": null, "event": "command_feedback", "robot_id": "A08", "status": "SUCCESS"}
+{"command_id": "coverage-segment-1-1791623318-A10", "error_code": null, "error_message": null, "event": "command_feedback", "robot_id": "A10", "status": "SUCCESS"}
+{"command_id": "coverage-segment-1-1791623318-A13", "error_code": null, "error_message": null, "event": "command_feedback", "robot_id": "A13", "status": "SUCCESS"}
+{"event": "phase_result", "outcome": "SUCCESS", "phase": "coverage", "plan_id": "coverage-segment-1", "statuses": {"A08": "SUCCESS", "A10": "SUCCESS", "A13": "SUCCESS"}}
+{"command": "MOVE_TO", "command_id": "tcp-d0cc2badda384017857c8d6900ddccee", "event": "command_sent", "message": {"assignments": [{"uav_id": "A08", "x": 5.0, "y": 0.0, "yaw": 0.0, "z": 12.0}, {"uav_id": "A10", "x": 0.0, "y": 5.0, "yaw": 0.0, "z": 12.0}, {"uav_id": "A13", "x": 0.0, "y": 0.0, "yaw": 0.0, "z": 12.0}], "command": "MOVE_TO", "command_id": "tcp-d0cc2badda384017857c8d6900ddccee", "group_id": "GroupA", "mission_id": "three-uav-recon-002", "timeout_s": 150.0, "type": "COMMAND", "version": "1.0"}, "robot_ids": ["A08", "A10", "A13"]}
+{"command": "FOLLOW_ROUTE", "command_id": "tcp-37bf5952718f4156955796d8ee164573", "event": "command_sent", "message": {"assignments": [{"uav_id": "A08", "waypoints": [{"x": -2.5, "y": -2.5, "yaw": 0.0, "z": 12.0}, {"x": 17.5, "y": -2.5, "yaw": 0.0, "z": 12.0}, {"x": 17.5, "y": 9.5, "yaw": 0.0, "z": 12.0}, {"x": -2.5, "y": 9.5, "yaw": 0.0, "z": 12.0}, {"x": -2.5, "y": 21.5, "yaw": 0.0, "z": 12.0}, {"x": 17.5, "y": 21.5, "yaw": 0.0, "z": 12.0}]}, {"formation_follow": true, "uav_id": "A10"}, {"formation_follow": true, "uav_id": "A13"}], "command": "FOLLOW_ROUTE", "command_id": "tcp-37bf5952718f4156955796d8ee164573", "group_id": "GroupA", "leader_id": "A08", "mission_id": "three-uav-recon-002", "timeout_s": 300.0, "type": "COMMAND", "version": "1.0"}, "robot_ids": ["A08", "A10", "A13"]}
+{"event": "mission_finished", "status": "SUCCESS"}

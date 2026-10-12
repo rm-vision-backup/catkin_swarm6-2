@@ -1,0 +1,22 @@
+[rospy.client][INFO] 2026-09-23 16:52:29,035: init_node, name[/gp_origin_receiver], pid[5346]
+[xmlrpc][INFO] 2026-09-23 16:52:29,036: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-09-23 16:52:29,036: Started XML-RPC server [http://UAV8:35567/]
+[rospy.init][INFO] 2026-09-23 16:52:29,037: ROS Slave URI: [http://UAV8:35567/]
+[rospy.impl.masterslave][INFO] 2026-09-23 16:52:29,037: _ready: http://UAV8:35567/
+[rospy.registration][INFO] 2026-09-23 16:52:29,038: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2026-09-23 16:52:29,038: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-09-23 16:52:29,137: registered with master
+[rospy.rosout][INFO] 2026-09-23 16:52:29,138: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-09-23 16:52:29,155: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-09-23 16:52:29,157: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2026-09-23 16:52:29,182: topic[/mavros/global_position/gp_origin] adding connection to [http://UAV8:33165/], count 0
+[rospy.internal][INFO] 2026-09-23 16:52:29,182: topic[/mavros/state] adding connection to [http://UAV8:33165/], count 0
+[rospy.internal][INFO] 2026-09-23 16:52:29,203: topic[/gp_origin_confirmed] adding connection to [/uav_executor_UAV8], count 0
+[rospy.internal][INFO] 2026-09-23 16:52:29,320: topic[/mavros/global_position/set_gp_origin] adding connection to [/mavros], count 0
+[rospy.internal][INFO] 2026-09-23 16:52:29,327: topic[/GCS_A/group_a/gp_origin] adding connection to [http://UAV8:33035/], count 0
+[rospy.internal][INFO] 2026-09-23 16:52:29,342: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2026-09-23 16:52:29,636: topic[/gp_origin_confirmed] adding connection to [/swarm_bridge], count 1
+[rospy.internal][INFO] 2026-09-23 16:53:04,757: topic[/gp_origin_confirmed] adding connection to [/rostopic_5648_1790153584581], count 2
+[rospy.internal][INFO] 2026-09-23 16:53:05,356: topic[/gp_origin_confirmed] removing connection to /rostopic_5648_1790153584581
+[rosout][WARNING] 2026-09-23 16:54:38,981: gp_origin readback mismatch horizontal=3.355m altitude=1.279m
+[rosout][INFO] 2026-09-23 16:54:38,985: gp_origin confirmed horizontal=0.000m altitude=0.001m

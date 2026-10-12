@@ -1,0 +1,24 @@
+[rospy.client][INFO] 2026-10-10 17:05:42,918: init_node, name[/tcp_server_node], pid[52857]
+[xmlrpc][INFO] 2026-10-10 17:05:42,918: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-10-10 17:05:42,918: Started XML-RPC server [http://192.168.5.241:42763/]
+[rospy.impl.masterslave][INFO] 2026-10-10 17:05:42,918: _ready: http://192.168.5.241:42763/
+[rospy.init][INFO] 2026-10-10 17:05:42,918: ROS Slave URI: [http://192.168.5.241:42763/]
+[rospy.registration][INFO] 2026-10-10 17:05:42,919: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2026-10-10 17:05:42,919: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-10-10 17:05:43,018: registered with master
+[rospy.rosout][INFO] 2026-10-10 17:05:43,019: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-10-10 17:05:43,022: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-10-10 17:05:43,023: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][WARNING] 2026-10-10 17:05:43,029: TCP port 39001 is inside Linux ip_local_port_range and is not reserved; add it to net.ipv4.ip_local_reserved_ports on the GCS host to prevent ROS XML-RPC port collisions
+[rosout][INFO] 2026-10-10 17:05:43,035: waiting for action server /group_a/execute_task
+[rospy.internal][INFO] 2026-10-10 17:05:43,149: topic[/group_a/execute_task/status] adding connection to [http://192.168.5.241:44019/], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,150: topic[/group_a/execute_task/result] adding connection to [http://192.168.5.241:44019/], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,154: topic[/group_a/execute_task/feedback] adding connection to [http://192.168.5.241:44019/], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,158: topic[/group_a/execute_task/cancel] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,160: topic[/group_a/execute_task/goal] adding connection to [/gcs_a_backend_node], count 0
+[rosout][INFO] 2026-10-10 17:05:43,167: connected to action server /group_a/execute_task
+[rosout][INFO] 2026-10-10 17:05:43,168: waiting for service /group_a/emergency_hold
+[rosout][INFO] 2026-10-10 17:05:43,169: tcp_to_ros listening on 0.0.0.0:39001
+[rospy.internal][INFO] 2026-10-10 17:05:43,218: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2026-10-10 17:08:38,304: accepted runtime connection from ('192.168.5.241', 50938)
+[rosout][INFO] 2026-10-10 17:08:38,442: accepted runtime connection from ('192.168.5.241', 50948)

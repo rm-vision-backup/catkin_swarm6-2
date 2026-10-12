@@ -1,0 +1,12 @@
+{"pose_age_s": null, "event": "no_safe_hold", "t": 1791526114.103235, "mono": 999.541088, "uav": "UAV8", "component": "relay"}
+{"anchor": "fresh_pose", "pose_age_s": 0.005, "position": [4.836, 1.307, 3.966], "event": "hold_enter", "t": 1791526114.137106, "mono": 999.574946, "uav": "UAV8", "component": "relay"}
+{"source": "ego", "held_s": 0.2, "event": "hold_exit", "t": 1791526114.336751, "mono": 999.774593, "uav": "UAV8", "component": "relay"}
+{"pose_age_s": null, "event": "no_safe_hold", "t": 1791526614.819635, "mono": 1500.257486, "uav": "UAV8", "component": "relay"}
+{"anchor": "fresh_pose", "pose_age_s": 0.03, "position": [4.867, 1.311, 3.914], "event": "hold_enter", "t": 1791526614.85333, "mono": 1500.291168, "uav": "UAV8", "component": "relay"}
+{"source": "ego", "held_s": 0.267, "event": "hold_exit", "t": 1791526615.119866, "mono": 1500.557707, "uav": "UAV8", "component": "relay"}
+{"pose_age_s": null, "event": "no_safe_hold", "t": 1791527026.032051, "mono": 1911.469904, "uav": "UAV8", "component": "relay"}
+{"anchor": "fresh_pose", "pose_age_s": 0.026, "position": [4.875, 1.316, 3.965], "event": "hold_enter", "t": 1791527026.065728, "mono": 1911.503567, "uav": "UAV8", "component": "relay"}
+{"source": "ego", "held_s": 0.3, "event": "hold_exit", "t": 1791527026.365589, "mono": 1911.80343, "uav": "UAV8", "component": "relay"}
+{"pose_age_s": null, "event": "no_safe_hold", "t": 1791527618.738528, "mono": 2504.176379, "uav": "UAV8", "component": "relay"}
+{"anchor": "fresh_pose", "pose_age_s": 0.021, "position": [4.184, -0.359, 0.125], "event": "hold_enter", "t": 1791527618.772237, "mono": 2504.210076, "uav": "UAV8", "component": "relay"}
+{"source": "ego", "held_s": 0.267, "event": "hold_exit", "t": 1791527619.038744, "mono": 2504.476582, "uav": "UAV8", "component": "relay"}

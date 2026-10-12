@@ -1,0 +1,19 @@
+[rospy.client][INFO] 2026-09-23 15:16:58,572: init_node, name[/gps_bias_node], pid[5497]
+[xmlrpc][INFO] 2026-09-23 15:16:58,573: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-09-23 15:16:58,574: Started XML-RPC server [http://UAV13:37281/]
+[rospy.impl.masterslave][INFO] 2026-09-23 15:16:58,574: _ready: http://UAV13:37281/
+[rospy.init][INFO] 2026-09-23 15:16:58,574: ROS Slave URI: [http://UAV13:37281/]
+[rospy.registration][INFO] 2026-09-23 15:16:58,580: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2026-09-23 15:16:58,581: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-09-23 15:16:58,675: registered with master
+[rospy.rosout][INFO] 2026-09-23 15:16:58,676: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-09-23 15:16:58,682: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-09-23 15:16:58,685: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2026-09-23 15:16:58,705: topic[/mavros/time_reference] adding connection to [http://UAV13:38133/], count 0
+[rospy.internal][INFO] 2026-09-23 15:16:59,000: topic[/gps_bias] adding connection to [/ego_planner_driver], count 0
+[rospy.core][INFO] 2026-09-23 15:17:00,342: signal_shutdown [signal-2]
+[rospy.registration][WARNING] 2026-09-23 15:17:00,344: cannot unregister with master due to network issues
+[rospy.internal][INFO] 2026-09-23 15:17:00,344: topic[/gps_bias] removing connection to /ego_planner_driver
+[rospy.internal][INFO] 2026-09-23 15:17:00,344: topic[/mavros/time_reference] removing connection to http://UAV13:38133/
+[rospy.impl.masterslave][INFO] 2026-09-23 15:17:00,345: signal-2
+[rospy.core][INFO] 2026-09-23 15:17:00,944: signal_shutdown [atexit]

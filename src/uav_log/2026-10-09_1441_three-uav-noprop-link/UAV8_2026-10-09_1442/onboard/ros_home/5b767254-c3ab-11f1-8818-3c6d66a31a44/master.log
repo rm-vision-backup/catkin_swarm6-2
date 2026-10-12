@@ -1,0 +1,1694 @@
+[rosmaster.main][INFO] 2026-10-09 14:33:37,699: initialization complete, waiting for shutdown
+[rosmaster.main][INFO] 2026-10-09 14:33:37,700: Starting ROS Master Node
+[xmlrpc][INFO] 2026-10-09 14:33:37,701: XML-RPC server binding to 0.0.0.0:11311
+[xmlrpc][INFO] 2026-10-09 14:33:37,702: Started XML-RPC server [http://UAV8:11311/]
+[rosmaster.master][INFO] 2026-10-09 14:33:37,702: Master initialized: port[11311], uri[http://UAV8:11311/]
+[xmlrpc][INFO] 2026-10-09 14:33:37,702: xml rpc node: starting XML-RPC server
+[rosmaster.master][INFO] 2026-10-09 14:33:37,775: +PARAM [/run_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,776: +PARAM [/roslaunch/uris/host_uav8__41185] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,851: +SERVICE [/rosout/get_loggers] /rosout http://UAV8:39947/
+[rosmaster.master][INFO] 2026-10-09 14:33:37,852: +SERVICE [/rosout/set_logger_level] /rosout http://UAV8:39947/
+[rosmaster.master][INFO] 2026-10-09 14:33:37,854: +PUB [/rosout_agg] /rosout http://UAV8:39947/
+[rosmaster.master][INFO] 2026-10-09 14:33:37,856: +SUB [/rosout] /rosout http://UAV8:39947/
+[rosmaster.master][INFO] 2026-10-09 14:33:37,899: +PARAM [/rosversion] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,899: +PARAM [/rosdistro] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,899: +PARAM [/mavros/plugin_blacklist] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,899: +PARAM [/mavros/plugin_whitelist] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,899: +PARAM [/mavros/startup_px4_usb_quirk] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,900: +PARAM [/mavros/conn/heartbeat_rate] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,900: +PARAM [/mavros/conn/timeout] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,900: +PARAM [/mavros/conn/timesync_rate] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,900: +PARAM [/mavros/conn/system_time_rate] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,900: +PARAM [/mavros/sys/min_voltage] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,900: +PARAM [/mavros/sys/disable_diag] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,900: +PARAM [/mavros/time/time_ref_source] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,900: +PARAM [/mavros/time/timesync_mode] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,900: +PARAM [/mavros/time/timesync_avg_alpha] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,901: +PARAM [/mavros/tdr_radio/low_rssi] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,901: +PARAM [/mavros/cmd/use_comp_id_system_control] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,901: +PARAM [/mavros/global_position/frame_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,901: +PARAM [/mavros/global_position/child_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,901: +PARAM [/mavros/global_position/rot_covariance] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,901: +PARAM [/mavros/global_position/gps_uere] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,901: +PARAM [/mavros/global_position/use_relative_alt] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,901: +PARAM [/mavros/global_position/tf/send] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,902: +PARAM [/mavros/global_position/tf/frame_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,902: +PARAM [/mavros/global_position/tf/global_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,902: +PARAM [/mavros/global_position/tf/child_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,902: +PARAM [/mavros/imu/frame_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,902: +PARAM [/mavros/imu/linear_acceleration_stdev] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,902: +PARAM [/mavros/imu/angular_velocity_stdev] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,902: +PARAM [/mavros/imu/orientation_stdev] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,902: +PARAM [/mavros/imu/magnetic_stdev] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,902: +PARAM [/mavros/local_position/frame_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,903: +PARAM [/mavros/local_position/tf/send] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,903: +PARAM [/mavros/local_position/tf/frame_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,903: +PARAM [/mavros/local_position/tf/child_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,903: +PARAM [/mavros/local_position/tf/send_fcu] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,903: +PARAM [/mavros/safety_area/p1/x] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,903: +PARAM [/mavros/safety_area/p1/y] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,903: +PARAM [/mavros/safety_area/p1/z] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,903: +PARAM [/mavros/safety_area/p2/x] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,903: +PARAM [/mavros/safety_area/p2/y] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,903: +PARAM [/mavros/safety_area/p2/z] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,904: +PARAM [/mavros/setpoint_accel/send_force] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,904: +PARAM [/mavros/setpoint_attitude/reverse_thrust] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,904: +PARAM [/mavros/setpoint_attitude/use_quaternion] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,904: +PARAM [/mavros/setpoint_attitude/tf/listen] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,904: +PARAM [/mavros/setpoint_attitude/tf/frame_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,904: +PARAM [/mavros/setpoint_attitude/tf/child_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,904: +PARAM [/mavros/setpoint_attitude/tf/rate_limit] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,904: +PARAM [/mavros/setpoint_raw/thrust_scaling] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,904: +PARAM [/mavros/setpoint_position/tf/listen] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,904: +PARAM [/mavros/setpoint_position/tf/frame_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,905: +PARAM [/mavros/setpoint_position/tf/child_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,905: +PARAM [/mavros/setpoint_position/tf/rate_limit] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,905: +PARAM [/mavros/setpoint_position/mav_frame] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,905: +PARAM [/mavros/setpoint_velocity/mav_frame] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,905: +PARAM [/mavros/mission/pull_after_gcs] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,905: +PARAM [/mavros/mission/use_mission_item_int] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,905: +PARAM [/mavros/distance_sensor/hrlv_ez4_pub/id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,905: +PARAM [/mavros/distance_sensor/hrlv_ez4_pub/frame_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,905: +PARAM [/mavros/distance_sensor/hrlv_ez4_pub/orientation] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,905: +PARAM [/mavros/distance_sensor/hrlv_ez4_pub/field_of_view] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,906: +PARAM [/mavros/distance_sensor/hrlv_ez4_pub/send_tf] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,906: +PARAM [/mavros/distance_sensor/hrlv_ez4_pub/sensor_position/x] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,906: +PARAM [/mavros/distance_sensor/hrlv_ez4_pub/sensor_position/y] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,906: +PARAM [/mavros/distance_sensor/hrlv_ez4_pub/sensor_position/z] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,906: +PARAM [/mavros/distance_sensor/lidarlite_pub/id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,906: +PARAM [/mavros/distance_sensor/lidarlite_pub/frame_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,906: +PARAM [/mavros/distance_sensor/lidarlite_pub/orientation] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,906: +PARAM [/mavros/distance_sensor/lidarlite_pub/field_of_view] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,906: +PARAM [/mavros/distance_sensor/lidarlite_pub/send_tf] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,906: +PARAM [/mavros/distance_sensor/lidarlite_pub/sensor_position/x] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,907: +PARAM [/mavros/distance_sensor/lidarlite_pub/sensor_position/y] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,907: +PARAM [/mavros/distance_sensor/lidarlite_pub/sensor_position/z] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,907: +PARAM [/mavros/distance_sensor/sonar_1_sub/subscriber] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,907: +PARAM [/mavros/distance_sensor/sonar_1_sub/id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,907: +PARAM [/mavros/distance_sensor/sonar_1_sub/orientation] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,907: +PARAM [/mavros/distance_sensor/sonar_1_sub/horizontal_fov_ratio] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,907: +PARAM [/mavros/distance_sensor/sonar_1_sub/vertical_fov_ratio] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,907: +PARAM [/mavros/distance_sensor/laser_1_sub/subscriber] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,907: +PARAM [/mavros/distance_sensor/laser_1_sub/id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,907: +PARAM [/mavros/distance_sensor/laser_1_sub/orientation] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,907: +PARAM [/mavros/image/frame_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,908: +PARAM [/mavros/fake_gps/use_mocap] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,908: +PARAM [/mavros/fake_gps/mocap_transform] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,908: +PARAM [/mavros/fake_gps/use_vision] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,908: +PARAM [/mavros/fake_gps/geo_origin/lat] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,908: +PARAM [/mavros/fake_gps/geo_origin/lon] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,908: +PARAM [/mavros/fake_gps/geo_origin/alt] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,908: +PARAM [/mavros/fake_gps/eph] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,908: +PARAM [/mavros/fake_gps/epv] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,908: +PARAM [/mavros/fake_gps/satellites_visible] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,908: +PARAM [/mavros/fake_gps/fix_type] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,909: +PARAM [/mavros/fake_gps/tf/listen] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,909: +PARAM [/mavros/fake_gps/tf/send] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,909: +PARAM [/mavros/fake_gps/tf/frame_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,909: +PARAM [/mavros/fake_gps/tf/child_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,909: +PARAM [/mavros/fake_gps/tf/rate_limit] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,909: +PARAM [/mavros/fake_gps/gps_rate] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,909: +PARAM [/mavros/landing_target/listen_lt] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,909: +PARAM [/mavros/landing_target/mav_frame] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,909: +PARAM [/mavros/landing_target/land_target_type] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,909: +PARAM [/mavros/landing_target/image/width] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,909: +PARAM [/mavros/landing_target/image/height] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,910: +PARAM [/mavros/landing_target/camera/fov_x] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,910: +PARAM [/mavros/landing_target/camera/fov_y] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,910: +PARAM [/mavros/landing_target/tf/send] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,910: +PARAM [/mavros/landing_target/tf/listen] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,910: +PARAM [/mavros/landing_target/tf/frame_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,910: +PARAM [/mavros/landing_target/tf/child_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,910: +PARAM [/mavros/landing_target/tf/rate_limit] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,910: +PARAM [/mavros/landing_target/target_size/x] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,910: +PARAM [/mavros/landing_target/target_size/y] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,910: +PARAM [/mavros/mocap/use_tf] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,911: +PARAM [/mavros/mocap/use_pose] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,911: +PARAM [/mavros/mount/debounce_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,911: +PARAM [/mavros/mount/err_threshold_deg] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,911: +PARAM [/mavros/mount/negate_measured_roll] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,911: +PARAM [/mavros/mount/negate_measured_pitch] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,911: +PARAM [/mavros/mount/negate_measured_yaw] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,911: +PARAM [/mavros/odometry/fcu/odom_parent_id_des] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,911: +PARAM [/mavros/odometry/fcu/odom_child_id_des] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,911: +PARAM [/mavros/odometry/fcu/map_id_des] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,911: +PARAM [/mavros/px4flow/frame_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,911: +PARAM [/mavros/px4flow/ranger_fov] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,912: +PARAM [/mavros/px4flow/ranger_min_range] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,912: +PARAM [/mavros/px4flow/ranger_max_range] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,912: +PARAM [/mavros/vision_pose/tf/listen] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,912: +PARAM [/mavros/vision_pose/tf/frame_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,912: +PARAM [/mavros/vision_pose/tf/child_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,912: +PARAM [/mavros/vision_pose/tf/rate_limit] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,912: +PARAM [/mavros/vision_speed/listen_twist] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,912: +PARAM [/mavros/vision_speed/twist_cov] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,912: +PARAM [/mavros/vibration/frame_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,912: +PARAM [/mavros/wheel_odometry/count] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,912: +PARAM [/mavros/wheel_odometry/use_rpm] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,913: +PARAM [/mavros/wheel_odometry/wheel0/x] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,913: +PARAM [/mavros/wheel_odometry/wheel0/y] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,913: +PARAM [/mavros/wheel_odometry/wheel0/radius] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,913: +PARAM [/mavros/wheel_odometry/wheel1/x] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,913: +PARAM [/mavros/wheel_odometry/wheel1/y] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,913: +PARAM [/mavros/wheel_odometry/wheel1/radius] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,913: +PARAM [/mavros/wheel_odometry/send_raw] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,913: +PARAM [/mavros/wheel_odometry/send_twist] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,913: +PARAM [/mavros/wheel_odometry/frame_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,913: +PARAM [/mavros/wheel_odometry/child_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,914: +PARAM [/mavros/wheel_odometry/vel_error] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,914: +PARAM [/mavros/wheel_odometry/tf/send] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,914: +PARAM [/mavros/wheel_odometry/tf/frame_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,914: +PARAM [/mavros/wheel_odometry/tf/child_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,914: +PARAM [/mavros/camera/frame_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,914: +PARAM [/mavros/fcu_url] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,914: +PARAM [/mavros/gcs_url] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,914: +PARAM [/mavros/target_system_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,914: +PARAM [/mavros/target_component_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,914: +PARAM [/mavros/fcu_protocol] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,914: +PARAM [/uav_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,915: +PARAM [/exec_target] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,915: +PARAM [/ego_planner_driver/order] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,915: +PARAM [/ego_planner_driver/ts] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,915: +PARAM [/ego_planner_driver/max_vel] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,915: +PARAM [/ego_planner_driver/max_acc] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,915: +PARAM [/ego_planner_driver/swarm_clearance] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,915: +PARAM [/ego_planner_driver/planning_range] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,915: +PARAM [/ego_planner_driver/lambda_smooth] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,915: +PARAM [/ego_planner_driver/lambda_swarm] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,915: +PARAM [/ego_planner_driver/lambda_feasibility] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,915: +PARAM [/ego_planner_driver/lambda_terminal] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,916: +PARAM [/ego_planner_driver/enable_rebound] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,916: +PARAM [/ego_planner_driver/enable_time_reparam] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,916: +PARAM [/ego_planner_driver/cruise_velocity] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,916: +PARAM [/ego_planner_driver/acceleration_limit] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,916: +PARAM [/ego_planner_driver/feasibility_tolerance] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,916: +PARAM [/ego_planner_driver/max_iterations] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,916: +PARAM [/ego_planner_driver/mem_size] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,916: +PARAM [/ego_planner_driver/g_epsilon] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,916: +PARAM [/ego_planner_driver/replan_period_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,916: +PARAM [/ego_planner_driver/no_replan_thresh_m] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,917: +PARAM [/ego_planner_driver/reach_thresh_m] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,917: +PARAM [/ego_planner_driver/max_advance_dist_m] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,917: +PARAM [/ego_planner_driver/arrival_reach_thresh_m] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,917: +PARAM [/ego_planner_driver/activation_replan_attempts] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,917: +PARAM [/ego_planner_driver/plan_fail_timeout_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,917: +PARAM [/ego_planner_driver/replan_failure_fatal] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,917: +PARAM [/ego_planner_driver/setpoint_rate_hz] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,917: +PARAM [/ego_planner_driver/local_pose_timeout_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,917: +PARAM [/ego_planner_driver/arrival_stable_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,917: +PARAM [/ego_planner_driver/exec_timeout_margin_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,918: +PARAM [/ego_planner_driver/takeoff_height_m] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,918: +PARAM [/ego_planner_driver/takeoff_ascend_speed] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,918: +PARAM [/ego_planner_driver/first_plan_wait_timeout_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,918: +PARAM [/ego_planner_driver/enable_yield_candidates] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,918: +PARAM [/ego_planner_driver/yield_clearance_factor] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,918: +PARAM [/ego_planner_driver/yield_lateral_max_m] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,918: +PARAM [/ego_planner_driver/yield_slow_min_scale] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,918: +PARAM [/ego_planner_driver/yield_max_velocity_mps] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,918: +PARAM [/ego_planner_driver/yield_hovering_velocity_mps] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,918: +PARAM [/ego_planner_driver/safety_supervisor_mode] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,918: +PARAM [/ego_planner_driver/safety_supervisor_rate_hz] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,919: +PARAM [/ego_planner_driver/collision_check_rate_hz] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,919: +PARAM [/ego_planner_driver/bias_valid_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,919: +PARAM [/ego_planner_driver/safety_prediction_horizon_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,919: +PARAM [/ego_planner_driver/safety_sample_period_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,919: +PARAM [/ego_planner_driver/protected_distance_m] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,919: +PARAM [/ego_planner_driver/safety_control_delay_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,919: +PARAM [/ego_planner_driver/safety_compute_budget_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,919: +PARAM [/ego_planner_driver/peer_data_age_cap_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,919: +PARAM [/ego_planner_driver/emergency_decel_mps2] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,919: +PARAM [/ego_planner_driver/warning_buffer_m] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,919: +PARAM [/ego_planner_driver/emergency_buffer_m] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,920: +PARAM [/ego_planner_driver/warning_ttc_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,920: +PARAM [/ego_planner_driver/emergency_ttc_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,920: +PARAM [/ego_planner_driver/minimum_prediction_window_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,920: +PARAM [/ego_planner_driver/safety_episode_release_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,920: +PARAM [/ego_planner_driver/neighbor_intent_stale_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,920: +PARAM [/ego_planner_driver/max_arc_samples] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,920: +PARAM [/ego_planner_driver/max_parameterization_points] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,920: +PARAM [/ego_planner_driver/max_trajectory_samples] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,920: +PARAM [/ego_planner_driver/max_neighbor_intent_samples] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,920: +PARAM [/ego_planner_driver/segment_direction_epsilon_m] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,920: +PARAM [/ego_planner_driver/uav_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,921: +PARAM [/ego_planner_driver/exec_target] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,921: +PARAM [/ego_planner_driver/frame_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,921: +PARAM [/ego_planner_driver/setpoint_out_topic] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,921: +PARAM [/ego_planner_driver/diagnostic_log_dir] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,921: +PARAM [/ego_planner_driver/diagnostic_log_queue_size] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,921: +PARAM [/pose_relay/source_topic] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,921: +PARAM [/pose_relay/target_topic] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,921: +PARAM [/setpoint_relay/ego_topic] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,921: +PARAM [/setpoint_relay/follower_topic] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,921: +PARAM [/setpoint_relay/mode_topic] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,921: +PARAM [/setpoint_relay/local_pose_topic] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,921: +PARAM [/setpoint_relay/output_topic] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,922: +PARAM [/setpoint_relay/rate_hz] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,922: +PARAM [/setpoint_relay/candidate_timeout_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,922: +PARAM [/setpoint_relay/local_pose_timeout_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,922: +PARAM [/setpoint_relay/event_log_dir] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,922: +PARAM [/uav_executor_UAV8/driver] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,922: +PARAM [/uav_executor_UAV8/store_ttl_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,922: +PARAM [/uav_executor_UAV8/store_max_records] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,922: +PARAM [/uav_executor_UAV8/terminal_republish_count] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,922: +PARAM [/uav_executor_UAV8/terminal_republish_interval_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,922: +PARAM [/uav_executor_UAV8/ego_hold_timeout_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,923: +PARAM [/uav_executor_UAV8/mock/result_delay_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,923: +PARAM [/uav_executor_UAV8/mock/final_success] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,923: +PARAM [/uav_executor_UAV8/mock/error_code] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,923: +PARAM [/uav_executor_UAV8/mock/message] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,923: +PARAM [/uav_executor_UAV8/mock/ready] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,923: +PARAM [/uav_executor_UAV8/mock/hold_success] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,923: +PARAM [/uav_executor_UAV8/ego_swarm/namespace] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,923: +PARAM [/uav_executor_UAV8/ego_swarm/task_timeout_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,923: +PARAM [/uav_executor_UAV8/ego_swarm/min_center_distance_m] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,923: +PARAM [/uav_executor_UAV8/ego_swarm/position_tolerance_m] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,923: +PARAM [/uav_executor_UAV8/ego_swarm/arrival_stable_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,923: +PARAM [/uav_executor_UAV8/ego_swarm/pose_timeout_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,924: +PARAM [/uav_executor_UAV8/ego_swarm/mavros_state_topic] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,924: +PARAM [/uav_executor_UAV8/ego_swarm/follower_p_gain] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,924: +PARAM [/uav_executor_UAV8/ego_swarm/follower_i_gain] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,924: +PARAM [/uav_executor_UAV8/ego_swarm/follower_limit_xy] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,924: +PARAM [/uav_executor_UAV8/ego_swarm/follower_limit_z] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,924: +PARAM [/uav_executor_UAV8/ego_swarm/layer_move_to] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,924: +PARAM [/uav_executor_UAV8/ego_swarm/layer_follow_route] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,924: +PARAM [/uav_executor_UAV8/ego_swarm/layer_fault_exit] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,924: +PARAM [/uav_executor_UAV8/ego_swarm/layer_tolerance_m] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,924: +PARAM [/uav_executor_UAV8/ego_swarm/waypoint_densify_spacing] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,925: +PARAM [/uav_executor_UAV8/ego_swarm/follower_setpoint_topic] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,925: +PARAM [/uav_executor_UAV8/ego_swarm/neighbor_intents] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,925: +PARAM [/uav_executor_UAV8/ego_swarm/leader_odom_topic_prefix] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,925: +PARAM [/uav_executor_UAV8/ego_swarm/neighbor_odom_topics] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,925: +PARAM [/uav_executor_UAV8/ego_swarm/arm_service] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,925: +PARAM [/uav_executor_UAV8/ego_swarm/mode_service] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,925: +PARAM [/uav_executor_UAV8/ego_swarm/origin_confirmed_topic] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,925: +PARAM [/uav_executor_UAV8/ego_swarm/configure_px4_params] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,925: +PARAM [/uav_executor_UAV8/ego_swarm/px4_param_set_timeout_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,925: +PARAM [/uav_executor_UAV8/ego_swarm/com_rcl_except] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,925: +PARAM [/uav_executor_UAV8/ego_swarm/nav_rcl_act] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,926: +PARAM [/uav_executor_UAV8/supported_commands] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,926: +PARAM [/uav_executor_UAV8/uav_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,926: +PARAM [/uav_executor_UAV8/exec_target] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,926: +PARAM [/uav_executor_UAV8/service_namespace] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,926: +PARAM [/uav_executor_UAV8/state_topic] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,926: +PARAM [/uav_executor_UAV8/interfaces_version] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,926: +PARAM [/uav_executor_UAV8/require_explicit_start] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,926: +PARAM [/uav_executor_UAV8/ego_swarm/event_log_dir] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,926: +PARAM [/swarm_bridge/uavs] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,926: +PARAM [/swarm_bridge/topics] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,926: +PARAM [/swarm_bridge/max_freq] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,927: +PARAM [/swarm_bridge/base_port] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,927: +PARAM [/swarm_bridge/service_base_port] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,927: +PARAM [/swarm_bridge/services] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,927: +PARAM [/swarm_bridge/topology/GCS_A] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,927: +PARAM [/swarm_bridge/topology/UAV1] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,927: +PARAM [/swarm_bridge/topology/UAV2] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,927: +PARAM [/swarm_bridge/topology/UAV3] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,927: +PARAM [/swarm_bridge/topology/UAV4] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,927: +PARAM [/swarm_bridge/topology/UAV5] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,927: +PARAM [/swarm_bridge/topology/UAV6] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,927: +PARAM [/swarm_bridge/topology/UAV7] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,928: +PARAM [/swarm_bridge/topology/UAV8] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,928: +PARAM [/swarm_bridge/topology/UAV9] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,928: +PARAM [/swarm_bridge/topology/UAV10] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,928: +PARAM [/swarm_bridge/topology/UAV11] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,928: +PARAM [/swarm_bridge/topology/UAV12] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,928: +PARAM [/swarm_bridge/topology/UAV13] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,928: +PARAM [/swarm_bridge/topology/UAV14] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,928: +PARAM [/swarm_bridge/topology/UAV15] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,928: +PARAM [/swarm_bridge/topology/UAV16] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,928: +PARAM [/swarm_bridge/uav_name] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,928: +PARAM [/swarm_bridge/health_log_dir] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,929: +PARAM [/swarm_bridge/health_sample_hz] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,929: +PARAM [/swarm_bridge/health_matrix_period_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,929: +PARAM [/swarm_bridge/stall_warn_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,929: +PARAM [/swarm_bridge/zmq_heartbeat_ivl_ms] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,929: +PARAM [/swarm_bridge/zmq_heartbeat_timeout_ms] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,929: +PARAM [/swarm_bridge/zmq_reconnect_ivl_ms] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,929: +PARAM [/swarm_bridge/zmq_reconnect_ivl_max_ms] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,929: +PARAM [/swarm_bridge/zmq_dealer_sndtimeo_ms] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,929: +PARAM [/gps_bias_node/window_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,929: +PARAM [/gps_bias_node/publish_rate_hz] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,929: +PARAM [/gps_bias_node/lockout_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-09 14:33:37,984: +PUB [/rosout] /ego_planner_driver http://UAV8:35059/
+[rosmaster.master][INFO] 2026-10-09 14:33:37,985: +PUB [/rosout] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:37,986: +SERVICE [/ego_planner_driver/get_loggers] /ego_planner_driver http://UAV8:35059/
+[rosmaster.master][INFO] 2026-10-09 14:33:37,987: +SERVICE [/mavros/get_loggers] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:37,988: +SERVICE [/ego_planner_driver/set_logger_level] /ego_planner_driver http://UAV8:35059/
+[rosmaster.master][INFO] 2026-10-09 14:33:37,988: +SERVICE [/mavros/set_logger_level] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:37,991: +PUB [/diagnostics] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:37,993: +CACHEDPARAM [/mavros/diagnostic_period] by /mavros
+[rosmaster.master][INFO] 2026-10-09 14:33:38,001: publisherUpdate[/rosout] -> http://UAV8:39947/ ['http://UAV8:35059/']
+[rosmaster.master][INFO] 2026-10-09 14:33:38,010: publisherUpdate[/rosout] -> http://UAV8:39947/ ['http://UAV8:35059/']: sec=0.01, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:33:38,011: publisherUpdate[/rosout] -> http://UAV8:39947/ ['http://UAV8:35059/', 'http://UAV8:44165/']
+[rosmaster.master][INFO] 2026-10-09 14:33:38,013: publisherUpdate[/rosout] -> http://UAV8:39947/ ['http://UAV8:35059/', 'http://UAV8:44165/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:33:38,024: +SUB [/tf] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,029: +SUB [/tf_static] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,031: +PUB [/tf] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,032: +PUB [/tf_static] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,084: +CACHEDPARAM [/rosout_disable_topics_generation] by /mavros
+[rosmaster.master][INFO] 2026-10-09 14:33:38,085: +PUB [/setpoint/ego] /ego_planner_driver http://UAV8:35059/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,086: +PUB [/trajectory_intent] /ego_planner_driver http://UAV8:35059/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,087: +PUB [/exec_state] /ego_planner_driver http://UAV8:35059/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,089: +PUB [/mavlink/from] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,093: +SUB [/goal] /ego_planner_driver http://UAV8:35059/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,094: +SUB [/mavlink/to] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,098: +SUB [/goal_yaw] /ego_planner_driver http://UAV8:35059/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,102: +SUB [/waypoints] /ego_planner_driver http://UAV8:35059/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,103: publisherUpdate[/tf] -> http://UAV8:44165/ ['http://UAV8:44165/']
+[rosmaster.master][INFO] 2026-10-09 14:33:38,105: publisherUpdate[/tf] -> http://UAV8:44165/ ['http://UAV8:44165/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:33:38,106: publisherUpdate[/tf_static] -> http://UAV8:44165/ ['http://UAV8:44165/']
+[rosmaster.master][INFO] 2026-10-09 14:33:38,108: publisherUpdate[/tf_static] -> http://UAV8:44165/ ['http://UAV8:44165/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:33:38,110: +SUB [/local_pose] /ego_planner_driver http://UAV8:35059/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,112: +PUB [/mavros/radio_status] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,114: +PUB [/mavros/target_actuator_control] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,116: +SUB [/neighbor_intent] /ego_planner_driver http://UAV8:35059/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,120: +SUB [/mavros/actuator_control] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,123: +SUB [/gps_bias] /ego_planner_driver http://UAV8:35059/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,126: +SUB [/hold] /ego_planner_driver http://UAV8:35059/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,130: +PUB [/mavros/adsb/vehicle] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,131: +SUB [/brake_hold] /ego_planner_driver http://UAV8:35059/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,136: +SUB [/mavros/adsb/send] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,137: +SUB [/mavros/state] /ego_planner_driver http://UAV8:35059/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,139: +PUB [/mavros/altitude] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,141: +PUB [/mavros/cam_imu_sync/cam_imu_stamp] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,142: +SUB [/direct_control_active] /ego_planner_driver http://UAV8:35059/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,143: +PUB [/mavros/camera/image_captured] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,147: +SUB [/mavros/cellular_status/status] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,150: +SERVICE [/mavros/cmd/command] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,151: +SERVICE [/mavros/cmd/command_ack] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,153: +SERVICE [/mavros/cmd/command_int] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,154: +SERVICE [/mavros/cmd/arming] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,155: +SERVICE [/mavros/cmd/set_home] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,156: +SERVICE [/mavros/cmd/takeoff] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,157: +SERVICE [/mavros/cmd/land] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,158: +SERVICE [/mavros/cmd/trigger_control] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,159: +SERVICE [/mavros/cmd/trigger_interval] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,159: +SERVICE [/mavros/cmd/vtol_transition] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,164: +SUB [/mavros/companion_process/status] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,168: +SUB [/mavros/debug_value/send] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,169: +PUB [/mavros/debug_value/debug] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,170: +PUB [/mavros/debug_value/debug_vector] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,171: +PUB [/mavros/debug_value/debug_float_array] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,172: +PUB [/mavros/debug_value/named_value_float] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,172: +PUB [/mavros/debug_value/named_value_int] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,174: +PUB [/mavros/esc_info] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,175: +PUB [/mavros/esc_status] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,176: +PUB [/mavros/esc_telemetry] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,201: +SUB [/mavros/fake_gps/mocap/tf] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,203: +SERVICE [/mavros/ftp/list] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,204: +SERVICE [/mavros/ftp/open] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,204: +SERVICE [/mavros/ftp/close] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,205: +SERVICE [/mavros/ftp/read] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,206: +SERVICE [/mavros/ftp/write] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,207: +SERVICE [/mavros/ftp/mkdir] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,208: +SERVICE [/mavros/ftp/rmdir] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,209: +SERVICE [/mavros/ftp/remove] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,209: +SERVICE [/mavros/ftp/truncate] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,210: +SERVICE [/mavros/ftp/reset] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,211: +SERVICE [/mavros/ftp/rename] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,212: +SERVICE [/mavros/ftp/checksum] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,217: +PUB [/mavros/geofence/waypoints] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,218: +SERVICE [/mavros/geofence/pull] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,219: +SERVICE [/mavros/geofence/push] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,220: +SERVICE [/mavros/geofence/clear] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,222: +CACHEDPARAM [/rosout/omit_topics] by /rosout
+[rosmaster.master][INFO] 2026-10-09 14:33:38,231: +PUB [/mavros/global_position/raw/fix] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,232: +PUB [/mavros/global_position/raw/gps_vel] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,233: +PUB [/mavros/global_position/raw/satellites] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,234: +PUB [/mavros/global_position/global] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,234: +PUB [/mavros/global_position/local] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,235: +PUB [/mavros/global_position/rel_alt] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,236: +PUB [/mavros/global_position/compass_hdg] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,236: +PUB [/mavros/global_position/gp_origin] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,239: +SUB [/mavros/global_position/set_gp_origin] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,243: +SUB [/mavros/home_position/home] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,244: +PUB [/mavros/global_position/gp_lp_offset] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,248: +SUB [/mavros/gps_input/gps_input] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,255: +SUB [/mavros/gps_rtk/send_rtcm] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,256: +PUB [/mavros/gps_rtk/rtk_baseline] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,258: +PUB [/mavros/gpsstatus/gps1/raw] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,259: +PUB [/mavros/gpsstatus/gps2/raw] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,260: +PUB [/mavros/gpsstatus/gps1/rtk] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,261: +PUB [/mavros/gpsstatus/gps2/rtk] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,265: +PUB [/move_base_simple/goal] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,269: +SUB [/mavros/global_position/gp_origin] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,275: +SUB [/mavros/hil/state] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,279: +SUB [/mavros/hil/gps] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,283: +SUB [/mavros/hil/imu_ned] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,288: +SUB [/mavros/hil/optical_flow] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,292: +SUB [/mavros/hil/rc_inputs] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,293: +PUB [/mavros/hil/controls] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,294: +PUB [/mavros/hil/actuator_controls] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,296: +PUB [/mavros/home_position/home] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,299: +SUB [/mavros/home_position/set] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,300: +SERVICE [/mavros/home_position/req_update] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,305: publisherUpdate[/mavros/home_position/home] -> http://UAV8:44165/ ['http://UAV8:44165/']
+[rosmaster.master][INFO] 2026-10-09 14:33:38,306: +PUB [/mavros/imu/data] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,307: +PUB [/mavros/imu/mag] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,308: +PUB [/mavros/imu/temperature_imu] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,309: +PUB [/mavros/imu/temperature_baro] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,309: publisherUpdate[/mavros/home_position/home] -> http://UAV8:44165/ ['http://UAV8:44165/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:33:38,310: +PUB [/mavros/imu/static_pressure] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,311: +PUB [/mavros/imu/diff_pressure] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,312: +PUB [/mavros/imu/data_raw] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,331: +PUB [/mavros/landing_target/pose_in] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,332: +PUB [/mavros/landing_target/lt_marker] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,336: +SUB [/mavros/landing_target/pose] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,343: +PUB [/mavros/local_position/pose] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,344: +PUB [/mavros/local_position/pose_cov] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,345: +PUB [/mavros/local_position/velocity_local] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,346: +PUB [/mavros/local_position/velocity_body] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,347: +PUB [/mavros/local_position/velocity_body_cov] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,347: +PUB [/mavros/local_position/accel] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,348: +PUB [/mavros/local_position/odom] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,349: +PUB [/mavros/log_transfer/raw/log_entry] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,350: +PUB [/mavros/log_transfer/raw/log_data] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,353: +SERVICE [/mavros/log_transfer/raw/log_request_list] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,354: +SERVICE [/mavros/log_transfer/raw/log_request_data] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,355: +SERVICE [/mavros/log_transfer/raw/log_request_end] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,356: +SERVICE [/mavros/log_transfer/raw/log_request_erase] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,358: +PUB [/mavros/mag_calibration/status] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,359: +PUB [/mavros/mag_calibration/report] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,360: +PUB [/mavros/manual_control/control] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,364: +SUB [/mavros/manual_control/send] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,370: +SUB [/mavros/mocap/pose] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,376: +SUB [/mavros/mount_control/command] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,376: +PUB [/mavros/mount_control/orientation] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,377: +PUB [/mavros/mount_control/status] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,378: +SERVICE [/mavros/mount_control/configure] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,387: +PUB [/mavros/nav_controller_output] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,392: +SUB [/mavros/obstacle/send] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,396: +PUB [/mavros/odometry/in] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,399: +SUB [/mavros/odometry/out] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,403: +SUB [/mavros/onboard_computer/status] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,405: +SERVICE [/mavros/param/pull] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,406: +SERVICE [/mavros/param/push] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,407: +SERVICE [/mavros/param/set] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,408: +SERVICE [/mavros/param/get] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,409: +PUB [/mavros/param/param_value] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,413: +SUB [/mavros/play_tune] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,420: +PUB [/mavros/px4flow/raw/optical_flow_rad] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,422: +PUB [/mavros/px4flow/ground_distance] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,423: +PUB [/mavros/px4flow/temperature] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,427: +SUB [/mavros/px4flow/raw/send] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,430: +PUB [/mavros/rallypoint/waypoints] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,431: +SERVICE [/mavros/rallypoint/pull] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,432: +SERVICE [/mavros/rallypoint/push] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,433: +SERVICE [/mavros/rallypoint/clear] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,434: +PUB [/mavros/rc/in] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,435: +PUB [/mavros/rc/out] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,439: +SUB [/mavros/rc/override] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,444: +SUB [/mavros/setpoint_accel/accel] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,454: +SUB [/mavros/setpoint_attitude/thrust] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,457: +SUB [/mavros/setpoint_attitude/cmd_vel] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,465: +SUB [/mavros/setpoint_position/local] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,468: +SUB [/mavros/setpoint_position/global] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,471: +SUB [/mavros/setpoint_position/global_to_local] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,475: +SUB [/mavros/global_position/global] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,478: +SUB [/mavros/local_position/pose] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,479: +SERVICE [/mavros/setpoint_position/mav_frame] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,483: +SUB [/mavros/setpoint_raw/local] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,486: +SUB [/mavros/setpoint_raw/global] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,490: +SUB [/mavros/setpoint_raw/attitude] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,491: +PUB [/mavros/setpoint_raw/target_local] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,491: +PUB [/mavros/setpoint_raw/target_global] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,492: +PUB [/mavros/setpoint_raw/target_attitude] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,497: +SUB [/mavros/setpoint_trajectory/local] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,498: +PUB [/mavros/setpoint_trajectory/desired] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,499: +SERVICE [/mavros/setpoint_trajectory/reset] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,500: +SERVICE [/mavros/setpoint_trajectory/mav_frame] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,505: +SUB [/mavros/setpoint_velocity/cmd_vel] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,509: +SUB [/mavros/setpoint_velocity/cmd_vel_unstamped] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,510: +SERVICE [/mavros/setpoint_velocity/mav_frame] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,518: +PUB [/mavros/state] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,520: +PUB [/mavros/extended_state] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,521: +PUB [/mavros/battery] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,522: +PUB [/mavros/estimator_status] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,522: +PUB [/mavros/statustext/recv] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,523: +PUB [/mavros/sys_status] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,526: +SUB [/mavros/statustext/send] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,526: +SERVICE [/mavros/set_stream_rate] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,527: +SERVICE [/mavros/set_mode] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,528: +SERVICE [/mavros/vehicle_info_get] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,528: +SERVICE [/mavros/set_message_interval] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,536: +PUB [/mavros/time_reference] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,537: +PUB [/mavros/timesync_status] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,538: +PUB [/mavros/terrain/report] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,542: +SUB [/mavros/trajectory/generated] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,544: +SUB [/mavros/trajectory/path] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,545: +PUB [/mavros/trajectory/desired] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,548: +SUB [/mavros/tunnel/in] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,549: +PUB [/mavros/tunnel/out] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,550: +PUB [/mavros/vfr_hud] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,558: +SUB [/mavros/vision_pose/pose] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,560: +SUB [/mavros/vision_pose/pose_cov] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,566: +SUB [/mavros/vision_speed/speed_twist_cov] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,569: +PUB [/mavros/mission/waypoints] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,570: +SERVICE [/mavros/mission/pull] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,570: +SERVICE [/mavros/mission/push] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,571: +SERVICE [/mavros/mission/clear] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,572: +PUB [/mavros/mission/reached] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,572: +SERVICE [/mavros/mission/set_current] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,574: +PUB [/mavros/wind_estimation] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,610: publisherUpdate[/mavros/state] -> http://UAV8:35059/ ['http://UAV8:44165/']
+[rosmaster.master][INFO] 2026-10-09 14:33:38,612: publisherUpdate[/mavros/state] -> http://UAV8:35059/ ['http://UAV8:44165/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:33:38,620: +PUB [/rosout] /pose_relay http://UAV8:41405/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,624: +SERVICE [/pose_relay/get_loggers] /pose_relay http://UAV8:41405/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,625: +SERVICE [/pose_relay/set_logger_level] /pose_relay http://UAV8:41405/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,628: +PUB [/local_pose] /pose_relay http://UAV8:41405/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,630: +SUB [/mavros/local_position/pose] /pose_relay http://UAV8:41405/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,631: +CACHEDPARAM [/rosout_disable_topics_generation] by /pose_relay
+[rosmaster.master][INFO] 2026-10-09 14:33:38,669: +PUB [/rosout] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,670: +PUB [/rosout] /setpoint_relay http://UAV8:40141/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,674: +SERVICE [/uav_executor_UAV8/get_loggers] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,675: +SERVICE [/setpoint_relay/get_loggers] /setpoint_relay http://UAV8:40141/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,676: +PUB [/rosout] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,677: +SERVICE [/uav_executor_UAV8/set_logger_level] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,677: +SERVICE [/setpoint_relay/set_logger_level] /setpoint_relay http://UAV8:40141/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,682: +SERVICE [/swarm_bridge/get_loggers] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,684: +SERVICE [/swarm_bridge/set_logger_level] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,694: +PUB [/rosout] /gp_origin_receiver http://UAV8:45511/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,696: +PUB [/mavros/setpoint_raw/local] /setpoint_relay http://UAV8:40141/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,700: +SERVICE [/gp_origin_receiver/get_loggers] /gp_origin_receiver http://UAV8:45511/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,701: +SUB [/setpoint/ego] /setpoint_relay http://UAV8:40141/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,701: +SERVICE [/gp_origin_receiver/set_logger_level] /gp_origin_receiver http://UAV8:45511/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,704: +SUB [/setpoint/follower] /setpoint_relay http://UAV8:40141/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,707: +PUB [/rosout] /gps_bias_node http://UAV8:42779/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,712: +SUB [/direct_control_active] /setpoint_relay http://UAV8:40141/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,712: publisherUpdate[/rosout] -> http://UAV8:39947/ ['http://UAV8:35059/', 'http://UAV8:44165/', 'http://UAV8:41405/']
+[rosmaster.master][INFO] 2026-10-09 14:33:38,713: +PUB [/mavros/global_position/set_gp_origin] /gp_origin_receiver http://UAV8:45511/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,713: publisherUpdate[/local_pose] -> http://UAV8:35059/ ['http://UAV8:41405/']
+[rosmaster.master][INFO] 2026-10-09 14:33:38,715: +SERVICE [/gps_bias_node/get_loggers] /gps_bias_node http://UAV8:42779/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,717: publisherUpdate[/mavros/setpoint_raw/local] -> http://UAV8:44165/ ['http://UAV8:40141/']
+[rosmaster.master][INFO] 2026-10-09 14:33:38,717: publisherUpdate[/local_pose] -> http://UAV8:35059/ ['http://UAV8:41405/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:33:38,718: +PUB [/gp_origin_confirmed] /gp_origin_receiver http://UAV8:45511/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,721: publisherUpdate[/rosout] -> http://UAV8:39947/ ['http://UAV8:35059/', 'http://UAV8:44165/', 'http://UAV8:41405/']: sec=0.01, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:33:38,724: publisherUpdate[/rosout] -> http://UAV8:39947/ ['http://UAV8:35059/', 'http://UAV8:44165/', 'http://UAV8:41405/', 'http://UAV8:42819/']
+[rosmaster.master][INFO] 2026-10-09 14:33:38,724: +SERVICE [/gps_bias_node/set_logger_level] /gps_bias_node http://UAV8:42779/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,723: publisherUpdate[/mavros/setpoint_raw/local] -> http://UAV8:44165/ ['http://UAV8:40141/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:33:38,726: +SUB [/mavros/local_position/pose] /setpoint_relay http://UAV8:40141/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,727: publisherUpdate[/rosout] -> http://UAV8:39947/ ['http://UAV8:35059/', 'http://UAV8:44165/', 'http://UAV8:41405/', 'http://UAV8:42819/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:33:38,728: publisherUpdate[/mavros/global_position/set_gp_origin] -> http://UAV8:44165/ ['http://UAV8:45511/']
+[rosmaster.master][INFO] 2026-10-09 14:33:38,729: +SUB [/GCS_A/group_a/gp_origin] /gp_origin_receiver http://UAV8:45511/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,730: publisherUpdate[/rosout] -> http://UAV8:39947/ ['http://UAV8:35059/', 'http://UAV8:44165/', 'http://UAV8:41405/', 'http://UAV8:42819/', 'http://UAV8:40141/']
+[rosmaster.master][INFO] 2026-10-09 14:33:38,733: publisherUpdate[/mavros/global_position/set_gp_origin] -> http://UAV8:44165/ ['http://UAV8:45511/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:33:38,733: +CACHEDPARAM [/rosout_disable_topics_generation] by /setpoint_relay
+[rosmaster.master][INFO] 2026-10-09 14:33:38,735: +PUB [/gps_bias] /gps_bias_node http://UAV8:42779/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,736: publisherUpdate[/rosout] -> http://UAV8:39947/ ['http://UAV8:35059/', 'http://UAV8:44165/', 'http://UAV8:41405/', 'http://UAV8:42819/', 'http://UAV8:40141/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:33:38,738: +SUB [/mavros/global_position/gp_origin] /gp_origin_receiver http://UAV8:45511/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,739: publisherUpdate[/rosout] -> http://UAV8:39947/ ['http://UAV8:35059/', 'http://UAV8:44165/', 'http://UAV8:41405/', 'http://UAV8:42819/', 'http://UAV8:40141/', 'http://UAV8:36793/']
+[rosmaster.master][INFO] 2026-10-09 14:33:38,742: +SUB [/mavros/time_reference] /gps_bias_node http://UAV8:42779/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,743: publisherUpdate[/rosout] -> http://UAV8:39947/ ['http://UAV8:35059/', 'http://UAV8:44165/', 'http://UAV8:41405/', 'http://UAV8:42819/', 'http://UAV8:40141/', 'http://UAV8:36793/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:33:38,743: publisherUpdate[/rosout] -> http://UAV8:39947/ ['http://UAV8:35059/', 'http://UAV8:44165/', 'http://UAV8:41405/', 'http://UAV8:42819/', 'http://UAV8:40141/', 'http://UAV8:36793/', 'http://UAV8:45511/']
+[rosmaster.master][INFO] 2026-10-09 14:33:38,744: +SUB [/mavros/state] /gp_origin_receiver http://UAV8:45511/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,746: publisherUpdate[/rosout] -> http://UAV8:39947/ ['http://UAV8:35059/', 'http://UAV8:44165/', 'http://UAV8:41405/', 'http://UAV8:42819/', 'http://UAV8:40141/', 'http://UAV8:36793/', 'http://UAV8:45511/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:33:38,747: publisherUpdate[/rosout] -> http://UAV8:39947/ ['http://UAV8:35059/', 'http://UAV8:44165/', 'http://UAV8:41405/', 'http://UAV8:42819/', 'http://UAV8:40141/', 'http://UAV8:36793/', 'http://UAV8:45511/', 'http://UAV8:42779/']
+[rosmaster.master][INFO] 2026-10-09 14:33:38,749: publisherUpdate[/rosout] -> http://UAV8:39947/ ['http://UAV8:35059/', 'http://UAV8:44165/', 'http://UAV8:41405/', 'http://UAV8:42819/', 'http://UAV8:40141/', 'http://UAV8:36793/', 'http://UAV8:45511/', 'http://UAV8:42779/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:33:38,749: publisherUpdate[/gps_bias] -> http://UAV8:35059/ ['http://UAV8:42779/']
+[rosmaster.master][INFO] 2026-10-09 14:33:38,750: publisherUpdate[/gps_bias] -> http://UAV8:35059/ ['http://UAV8:42779/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:33:38,769: +SUB [/gp_origin_confirmed] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,771: +SUB [/exec_state] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,774: +SUB [/local_pose] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,777: +PUB [/goal] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,781: +PUB [/goal_yaw] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,783: +PUB [/waypoints] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,785: +PUB [/hold] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,786: +PUB [/brake_hold] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,788: +PUB [/setpoint/follower] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,789: +PUB [/direct_control_active] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,790: +PUB [/neighbor_intent] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,793: +SUB [/UAV10/trajectory_intent] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,795: +SUB [/UAV13/trajectory_intent] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,809: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:38,811: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:38,813: +PUB [/GCS_A/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,814: +PUB [/GCS_A/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,816: +PUB [/GCS_A/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,817: +PUB [/GCS_A/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,818: +PUB [/GCS_A/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,820: +PUB [/GCS_A/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,822: +PUB [/GCS_A/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,822: publisherUpdate[/goal] -> http://UAV8:35059/ ['http://UAV8:42819/']
+[rosmaster.master][INFO] 2026-10-09 14:33:38,823: +PUB [/GCS_A/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,824: publisherUpdate[/goal] -> http://UAV8:35059/ ['http://UAV8:42819/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:33:38,825: publisherUpdate[/goal_yaw] -> http://UAV8:35059/ ['http://UAV8:42819/']
+[rosmaster.master][INFO] 2026-10-09 14:33:38,826: publisherUpdate[/goal_yaw] -> http://UAV8:35059/ ['http://UAV8:42819/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:33:38,826: publisherUpdate[/waypoints] -> http://UAV8:35059/ ['http://UAV8:42819/']
+[rosmaster.master][INFO] 2026-10-09 14:33:38,827: publisherUpdate[/waypoints] -> http://UAV8:35059/ ['http://UAV8:42819/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:33:38,827: publisherUpdate[/hold] -> http://UAV8:35059/ ['http://UAV8:42819/']
+[rosmaster.master][INFO] 2026-10-09 14:33:38,828: publisherUpdate[/hold] -> http://UAV8:35059/ ['http://UAV8:42819/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:33:38,828: publisherUpdate[/brake_hold] -> http://UAV8:35059/ ['http://UAV8:42819/']
+[rosmaster.master][INFO] 2026-10-09 14:33:38,829: publisherUpdate[/brake_hold] -> http://UAV8:35059/ ['http://UAV8:42819/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:33:38,829: publisherUpdate[/setpoint/follower] -> http://UAV8:40141/ ['http://UAV8:42819/']
+[rosmaster.master][INFO] 2026-10-09 14:33:38,832: publisherUpdate[/setpoint/follower] -> http://UAV8:40141/ ['http://UAV8:42819/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:33:38,832: publisherUpdate[/direct_control_active] -> http://UAV8:35059/ ['http://UAV8:42819/']
+[rosmaster.master][INFO] 2026-10-09 14:33:38,833: publisherUpdate[/direct_control_active] -> http://UAV8:35059/ ['http://UAV8:42819/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:33:38,833: publisherUpdate[/direct_control_active] -> http://UAV8:40141/ ['http://UAV8:42819/']
+[rosmaster.master][INFO] 2026-10-09 14:33:38,835: publisherUpdate[/direct_control_active] -> http://UAV8:40141/ ['http://UAV8:42819/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:33:38,835: publisherUpdate[/neighbor_intent] -> http://UAV8:35059/ ['http://UAV8:42819/']
+[rosmaster.master][INFO] 2026-10-09 14:33:38,836: publisherUpdate[/neighbor_intent] -> http://UAV8:35059/ ['http://UAV8:42819/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:33:38,867: +PUB [/GCS_A/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,869: +PUB [/GCS_A/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,870: +PUB [/GCS_A/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,871: +PUB [/UAV1/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,873: +PUB [/UAV1/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,874: +PUB [/UAV1/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,875: +PUB [/UAV1/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,877: +PUB [/UAV1/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,879: +PUB [/UAV1/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,881: +PUB [/UAV1/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,882: +PUB [/UAV1/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,883: +PUB [/UAV1/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,885: +PUB [/UAV1/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,886: +PUB [/UAV1/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,887: +PUB [/UAV2/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,889: +PUB [/UAV2/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,890: +PUB [/UAV2/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,891: +PUB [/UAV2/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,893: +PUB [/UAV2/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,895: +PUB [/UAV2/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,935: +PUB [/UAV2/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,936: publisherUpdate[/GCS_A/group_a/gp_origin] -> http://UAV8:45511/ ['http://UAV8:36793/']
+[rosmaster.master][INFO] 2026-10-09 14:33:38,937: +PUB [/UAV2/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,939: +PUB [/UAV2/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,939: publisherUpdate[/GCS_A/group_a/gp_origin] -> http://UAV8:45511/ ['http://UAV8:36793/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:33:38,941: +PUB [/UAV2/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,943: +PUB [/UAV2/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,945: +PUB [/UAV3/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,947: +PUB [/UAV3/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,948: +PUB [/UAV3/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,949: +PUB [/UAV3/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,951: +PUB [/UAV3/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,953: +PUB [/UAV3/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,954: +PUB [/UAV3/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,956: +PUB [/UAV3/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,958: +PUB [/UAV3/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,959: +PUB [/UAV3/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,960: +PUB [/UAV3/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,961: +PUB [/UAV4/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,962: +PUB [/UAV4/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,964: +PUB [/UAV4/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,965: +PUB [/UAV4/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,966: +PUB [/UAV4/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,968: +PUB [/UAV4/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,969: +PUB [/UAV4/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,970: +PUB [/UAV4/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,971: +PUB [/UAV4/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,972: +PUB [/UAV4/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,974: +PUB [/UAV4/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,975: +PUB [/UAV5/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,976: +PUB [/UAV5/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,978: +PUB [/UAV5/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,979: +PUB [/UAV5/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,980: +PUB [/UAV5/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,982: +PUB [/UAV5/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,983: +PUB [/UAV5/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,984: +PUB [/UAV5/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,986: +PUB [/UAV5/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,987: +PUB [/UAV5/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,988: +PUB [/UAV5/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,989: +PUB [/UAV6/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:38,991: +PUB [/UAV6/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,009: +SUB [/UAV10/mavros/local_position/odom] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,011: +SUB [/UAV13/mavros/local_position/odom] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,013: +PUB [/uav_task_state] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,014: +SERVICE [/UAV8/uav_task] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,015: +SERVICE [/UAV8/uav_task_control] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,017: +SERVICE [/UAV8/uav_hold] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,019: +CACHEDPARAM [/rosout_disable_topics_generation] by /uav_executor_UAV8
+[rosmaster.master][INFO] 2026-10-09 14:33:39,031: +PUB [/UAV6/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,032: +PUB [/UAV6/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,034: +PUB [/UAV6/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,036: +PUB [/UAV6/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,037: +PUB [/UAV6/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,038: +PUB [/UAV6/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,039: +PUB [/UAV6/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,041: +PUB [/UAV6/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,042: +PUB [/UAV6/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,043: +PUB [/UAV7/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,045: +PUB [/UAV7/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,047: +PUB [/UAV7/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,048: +PUB [/UAV7/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,050: +PUB [/UAV7/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,052: +PUB [/UAV7/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,054: +PUB [/UAV7/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,055: +PUB [/UAV7/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,057: +PUB [/UAV7/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,058: +PUB [/UAV7/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,059: +PUB [/UAV7/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,061: +PUB [/UAV9/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,062: +PUB [/UAV9/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,063: +PUB [/UAV9/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,065: +PUB [/UAV9/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,066: +PUB [/UAV9/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,068: +PUB [/UAV9/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,069: +PUB [/UAV9/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,071: +PUB [/UAV9/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,072: +PUB [/UAV9/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,074: +PUB [/UAV9/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,076: +PUB [/UAV9/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,078: +PUB [/UAV10/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,079: +PUB [/UAV10/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,081: +PUB [/UAV10/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,082: +PUB [/UAV10/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,084: +PUB [/UAV10/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,085: +PUB [/UAV10/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,087: +PUB [/UAV10/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,088: +PUB [/UAV10/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,090: +PUB [/UAV10/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,091: +PUB [/UAV10/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,093: +PUB [/UAV10/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,094: +PUB [/UAV11/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,095: +PUB [/UAV11/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,096: +PUB [/UAV11/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,098: +PUB [/UAV11/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,099: +PUB [/UAV11/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,100: +PUB [/UAV11/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,102: +PUB [/UAV11/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,103: +PUB [/UAV11/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,104: +PUB [/UAV11/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,105: +PUB [/UAV11/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,107: +PUB [/UAV11/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,108: +PUB [/UAV12/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,109: +PUB [/UAV12/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,111: +PUB [/UAV12/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,112: +PUB [/UAV12/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,113: +PUB [/UAV12/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,115: +PUB [/UAV12/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,116: +PUB [/UAV12/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,118: +PUB [/UAV12/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,120: +PUB [/UAV12/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,121: +PUB [/UAV12/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,122: +PUB [/UAV12/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,124: +PUB [/UAV13/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,125: +PUB [/UAV13/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,126: +PUB [/UAV13/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,127: +PUB [/UAV13/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,129: +PUB [/UAV13/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,130: +PUB [/UAV13/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,132: +PUB [/UAV13/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,133: +PUB [/UAV13/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,134: +PUB [/UAV13/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,135: +PUB [/UAV13/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,137: +PUB [/UAV13/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,137: publisherUpdate[/UAV10/mavros/local_position/odom] -> http://UAV8:42819/ ['http://UAV8:36793/']
+[rosmaster.master][INFO] 2026-10-09 14:33:39,138: +PUB [/UAV14/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,139: +PUB [/UAV14/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,140: publisherUpdate[/UAV10/mavros/local_position/odom] -> http://UAV8:42819/ ['http://UAV8:36793/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:33:39,141: publisherUpdate[/UAV10/trajectory_intent] -> http://UAV8:42819/ ['http://UAV8:36793/']
+[rosmaster.master][INFO] 2026-10-09 14:33:39,141: +PUB [/UAV14/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,143: publisherUpdate[/UAV10/trajectory_intent] -> http://UAV8:42819/ ['http://UAV8:36793/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:33:39,143: publisherUpdate[/UAV13/mavros/local_position/odom] -> http://UAV8:42819/ ['http://UAV8:36793/']
+[rosmaster.master][INFO] 2026-10-09 14:33:39,144: +PUB [/UAV14/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,145: publisherUpdate[/UAV13/mavros/local_position/odom] -> http://UAV8:42819/ ['http://UAV8:36793/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:33:39,146: publisherUpdate[/UAV13/trajectory_intent] -> http://UAV8:42819/ ['http://UAV8:36793/']
+[rosmaster.master][INFO] 2026-10-09 14:33:39,146: +PUB [/UAV14/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,148: publisherUpdate[/UAV13/trajectory_intent] -> http://UAV8:42819/ ['http://UAV8:36793/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:33:39,186: +PUB [/UAV14/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,189: +PUB [/UAV14/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,191: +PUB [/UAV14/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,193: +PUB [/UAV14/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,195: +PUB [/UAV14/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,196: +PUB [/UAV14/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,198: +PUB [/UAV15/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,199: +PUB [/UAV15/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,200: +PUB [/UAV15/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,201: +PUB [/UAV15/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,203: +PUB [/UAV15/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,204: +PUB [/UAV15/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,206: +PUB [/UAV15/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,207: +PUB [/UAV15/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,209: +PUB [/UAV15/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,210: +PUB [/UAV15/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,211: +PUB [/UAV15/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,213: +PUB [/UAV16/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,214: +PUB [/UAV16/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,215: +PUB [/UAV16/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,216: +PUB [/UAV16/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,218: +PUB [/UAV16/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,220: +PUB [/UAV16/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,221: +PUB [/UAV16/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,223: +PUB [/UAV16/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,224: +PUB [/UAV16/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,225: +PUB [/UAV16/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,226: +PUB [/UAV16/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,228: +SUB [/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,230: +SUB [/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,234: +SUB [/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,239: +SUB [/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,244: +SUB [/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,247: +SUB [/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,252: +SUB [/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,256: +SUB [/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,259: +SUB [/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,263: +SUB [/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,268: +SUB [/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,278: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,281: +SERVICE [/UAV1/uav_task] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,282: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,285: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,287: +SERVICE [/UAV1/uav_task_control] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,288: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,290: +SERVICE [/UAV1/uav_hold] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,291: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,293: +SERVICE [/UAV2/uav_task] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,294: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,296: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,298: +SERVICE [/UAV2/uav_task_control] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,300: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,301: +SERVICE [/UAV2/uav_hold] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,302: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,304: +SERVICE [/UAV3/uav_task] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,305: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,307: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,309: +SERVICE [/UAV3/uav_task_control] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,311: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,312: +SERVICE [/UAV3/uav_hold] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,313: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,315: +SERVICE [/UAV4/uav_task] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,316: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,319: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,321: +SERVICE [/UAV4/uav_task_control] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,322: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,324: +SERVICE [/UAV4/uav_hold] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,325: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,327: +SERVICE [/UAV5/uav_task] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,328: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,330: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,332: +SERVICE [/UAV5/uav_task_control] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,334: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,335: +SERVICE [/UAV5/uav_hold] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,336: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,338: +SERVICE [/UAV6/uav_task] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,339: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,342: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,344: +SERVICE [/UAV6/uav_task_control] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,345: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,346: +SERVICE [/UAV6/uav_hold] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,347: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,349: +SERVICE [/UAV7/uav_task] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,350: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,353: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,355: +SERVICE [/UAV7/uav_task_control] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,357: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,359: +SERVICE [/UAV7/uav_hold] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,360: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,361: +SERVICE [/UAV9/uav_task] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,363: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,365: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,367: +SERVICE [/UAV9/uav_task_control] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,368: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,370: +SERVICE [/UAV9/uav_hold] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,371: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,373: +SERVICE [/UAV10/uav_task] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,374: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,376: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,378: +SERVICE [/UAV10/uav_task_control] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,379: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,381: +SERVICE [/UAV10/uav_hold] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,382: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,384: +SERVICE [/UAV11/uav_task] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,385: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,388: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,390: +SERVICE [/UAV11/uav_task_control] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,391: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,393: +SERVICE [/UAV11/uav_hold] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,395: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,396: +SERVICE [/UAV12/uav_task] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,397: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,400: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,401: +SERVICE [/UAV12/uav_task_control] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,402: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,404: +SERVICE [/UAV12/uav_hold] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,406: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,408: +SERVICE [/UAV13/uav_task] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,409: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,411: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,413: +SERVICE [/UAV13/uav_task_control] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,415: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,417: +SERVICE [/UAV13/uav_hold] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,418: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,420: +SERVICE [/UAV14/uav_task] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,421: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,424: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,426: +SERVICE [/UAV14/uav_task_control] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,427: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,428: +SERVICE [/UAV14/uav_hold] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,430: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,431: +SERVICE [/UAV15/uav_task] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,432: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,435: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,436: +SERVICE [/UAV15/uav_task_control] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,438: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,439: +SERVICE [/UAV15/uav_hold] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,441: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,442: +SERVICE [/UAV16/uav_task] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,444: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,446: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,448: +SERVICE [/UAV16/uav_task_control] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,449: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,450: +SERVICE [/UAV16/uav_hold] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,453: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,455: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-09 14:33:39,576: +PUB [/mavlink/gcs_ip] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:33:39,843: +CACHEDPARAM [/rosout_disable_topics_generation] by /gp_origin_receiver
+[rosmaster.master][INFO] 2026-10-09 14:34:35,881: +CACHEDPARAM [/rosout_disable_topics_generation] by /gp_origin_receiver
+[rosmaster.master][INFO] 2026-10-09 14:34:35,885: +CACHEDPARAM [/rosout_disable_topics_generation] by /gp_origin_receiver
+[rosmaster.master][INFO] 2026-10-09 14:35:23,765: +CACHEDPARAM [/rosout_disable_topics_generation] by /ego_planner_driver
+[rosmaster.master][INFO] 2026-10-09 14:41:30,456: -SUB [/mavros/time_reference] /gps_bias_node http://UAV8:42779/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,457: -PUB [/rosout] /gps_bias_node http://UAV8:42779/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,458: -PUB [/gps_bias] /gps_bias_node http://UAV8:42779/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,458: -SUB [/GCS_A/group_a/gp_origin] /gp_origin_receiver http://UAV8:45511/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,459: -SERVICE [/gps_bias_node/get_loggers] /gps_bias_node rosrpc://UAV8:46543
+[rosmaster.master][INFO] 2026-10-09 14:41:30,460: -SERVICE [/UAV8/uav_task_control] /uav_executor_UAV8 rosrpc://UAV8:33237
+[rosmaster.master][INFO] 2026-10-09 14:41:30,460: -SUB [/mavros/local_position/pose] /pose_relay http://UAV8:41405/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,461: -SUB [/mavros/global_position/gp_origin] /gp_origin_receiver http://UAV8:45511/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,461: -SERVICE [/gps_bias_node/set_logger_level] /gps_bias_node rosrpc://UAV8:46543
+[rosmaster.master][INFO] 2026-10-09 14:41:30,462: -PUB [/rosout] /pose_relay http://UAV8:41405/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,462: -SERVICE [/UAV8/uav_task] /uav_executor_UAV8 rosrpc://UAV8:33237
+[rosmaster.master][INFO] 2026-10-09 14:41:30,462: -SUB [/mavros/state] /gp_origin_receiver http://UAV8:45511/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,462: -PUB [/local_pose] /pose_relay http://UAV8:41405/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,463: -PUB [/rosout] /gp_origin_receiver http://UAV8:45511/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,463: -SERVICE [/pose_relay/get_loggers] /pose_relay rosrpc://UAV8:32877
+[rosmaster.master][INFO] 2026-10-09 14:41:30,463: -PUB [/mavros/global_position/set_gp_origin] /gp_origin_receiver http://UAV8:45511/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,463: -PUB [/gp_origin_confirmed] /gp_origin_receiver http://UAV8:45511/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,464: -SERVICE [/gp_origin_receiver/get_loggers] /gp_origin_receiver rosrpc://UAV8:34229
+[rosmaster.master][INFO] 2026-10-09 14:41:30,464: -SERVICE [/gp_origin_receiver/set_logger_level] /gp_origin_receiver rosrpc://UAV8:34229
+[rosmaster.master][INFO] 2026-10-09 14:41:30,464: -SERVICE [/pose_relay/set_logger_level] /pose_relay rosrpc://UAV8:32877
+[rosmaster.master][INFO] 2026-10-09 14:41:30,465: -SERVICE [/UAV8/uav_hold] /uav_executor_UAV8 rosrpc://UAV8:33237
+[rosmaster.master][INFO] 2026-10-09 14:41:30,511: publisherUpdate[/rosout] -> http://UAV8:39947/ ['http://UAV8:35059/', 'http://UAV8:44165/', 'http://UAV8:41405/', 'http://UAV8:42819/', 'http://UAV8:40141/', 'http://UAV8:36793/', 'http://UAV8:45511/']
+[rosmaster.master][INFO] 2026-10-09 14:41:30,512: publisherUpdate[/gps_bias] -> http://UAV8:35059/ []
+[rosmaster.master][INFO] 2026-10-09 14:41:30,513: publisherUpdate[/gps_bias] -> http://UAV8:36793/ []
+[rosmaster.master][INFO] 2026-10-09 14:41:30,514: publisherUpdate[/rosout] -> http://UAV8:39947/ ['http://UAV8:35059/', 'http://UAV8:44165/', 'http://UAV8:41405/', 'http://UAV8:42819/', 'http://UAV8:40141/', 'http://UAV8:36793/', 'http://UAV8:45511/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:41:30,515: publisherUpdate[/rosout] -> http://UAV8:39947/ ['http://UAV8:35059/', 'http://UAV8:44165/', 'http://UAV8:42819/', 'http://UAV8:40141/', 'http://UAV8:36793/', 'http://UAV8:45511/']
+[rosmaster.master][INFO] 2026-10-09 14:41:30,515: publisherUpdate[/gps_bias] -> http://UAV8:35059/ []: sec=0.00, result=[0, 'Unknown Error', 0]
+[rosmaster.master][INFO] 2026-10-09 14:41:30,516: publisherUpdate[/local_pose] -> http://UAV8:35059/ []
+[rosmaster.master][INFO] 2026-10-09 14:41:30,517: publisherUpdate[/gps_bias] -> http://UAV8:36793/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:41:30,517: publisherUpdate[/rosout] -> http://UAV8:39947/ ['http://UAV8:35059/', 'http://UAV8:44165/', 'http://UAV8:42819/', 'http://UAV8:40141/', 'http://UAV8:36793/', 'http://UAV8:45511/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:41:30,518: publisherUpdate[/rosout] -> http://UAV8:39947/ ['http://UAV8:35059/', 'http://UAV8:44165/', 'http://UAV8:42819/', 'http://UAV8:40141/', 'http://UAV8:36793/']
+[rosmaster.master][INFO] 2026-10-09 14:41:30,518: publisherUpdate[/local_pose] -> http://UAV8:42819/ []
+[rosmaster.master][INFO] 2026-10-09 14:41:30,517: publisherUpdate[/local_pose] -> http://UAV8:35059/ []: sec=0.00, result=[0, 'Unknown Error', 0]
+[rosmaster.master][INFO] 2026-10-09 14:41:30,518: publisherUpdate[/mavros/global_position/set_gp_origin] -> http://UAV8:44165/ []
+[rosmaster.master][INFO] 2026-10-09 14:41:30,519: publisherUpdate[/mavros/global_position/set_gp_origin] -> http://UAV8:44165/ []: sec=0.00, result=[0, 'Unknown Error', 0]
+[rosmaster.master][INFO] 2026-10-09 14:41:30,520: publisherUpdate[/rosout] -> http://UAV8:39947/ ['http://UAV8:35059/', 'http://UAV8:44165/', 'http://UAV8:42819/', 'http://UAV8:40141/', 'http://UAV8:36793/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:41:30,520: publisherUpdate[/gp_origin_confirmed] -> http://UAV8:36793/ []
+[rosmaster.master][INFO] 2026-10-09 14:41:30,522: publisherUpdate[/gp_origin_confirmed] -> http://UAV8:36793/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:41:30,527: publisherUpdate[/local_pose] -> http://UAV8:42819/ []: sec=0.01, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:41:30,527: publisherUpdate[/gp_origin_confirmed] -> http://UAV8:42819/ []
+[rosmaster.master][INFO] 2026-10-09 14:41:30,528: publisherUpdate[/gp_origin_confirmed] -> http://UAV8:42819/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:41:30,617: -PUB [/rosout] /ego_planner_driver http://UAV8:35059/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,618: -PUB [/setpoint/ego] /ego_planner_driver http://UAV8:35059/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,619: -PUB [/trajectory_intent] /ego_planner_driver http://UAV8:35059/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,620: -PUB [/rosout] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,620: publisherUpdate[/rosout] -> http://UAV8:39947/ ['http://UAV8:44165/', 'http://UAV8:42819/', 'http://UAV8:40141/', 'http://UAV8:36793/']
+[rosmaster.master][INFO] 2026-10-09 14:41:30,621: -PUB [/exec_state] /ego_planner_driver http://UAV8:35059/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,622: -PUB [/diagnostics] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,623: -SUB [/goal] /ego_planner_driver http://UAV8:35059/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,623: publisherUpdate[/setpoint/ego] -> http://UAV8:40141/ []
+[rosmaster.master][INFO] 2026-10-09 14:41:30,624: publisherUpdate[/rosout] -> http://UAV8:39947/ ['http://UAV8:44165/', 'http://UAV8:42819/', 'http://UAV8:40141/', 'http://UAV8:36793/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:41:30,624: -SUB [/goal_yaw] /ego_planner_driver http://UAV8:35059/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,626: publisherUpdate[/trajectory_intent] -> http://UAV8:36793/ []
+[rosmaster.master][INFO] 2026-10-09 14:41:30,627: -PUB [/tf] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,627: publisherUpdate[/setpoint/ego] -> http://UAV8:40141/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:41:30,628: publisherUpdate[/rosout] -> http://UAV8:39947/ ['http://UAV8:42819/', 'http://UAV8:40141/', 'http://UAV8:36793/']
+[rosmaster.master][INFO] 2026-10-09 14:41:30,628: publisherUpdate[/exec_state] -> http://UAV8:42819/ []
+[rosmaster.master][INFO] 2026-10-09 14:41:30,629: publisherUpdate[/rosout] -> http://UAV8:39947/ ['http://UAV8:42819/', 'http://UAV8:40141/', 'http://UAV8:36793/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:41:30,631: publisherUpdate[/tf] -> http://UAV8:44165/ []
+[rosmaster.master][INFO] 2026-10-09 14:41:30,631: publisherUpdate[/trajectory_intent] -> http://UAV8:36793/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:41:30,632: publisherUpdate[/tf] -> http://UAV8:44165/ []: sec=0.00, exception=<Fault -1: 'publisherUpdate: unknown method name'>
+[rosmaster.master][INFO] 2026-10-09 14:41:30,631: publisherUpdate[/exec_state] -> http://UAV8:42819/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:41:30,630: -PUB [/tf_static] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,633: publisherUpdate[/tf_static] -> http://UAV8:44165/ []
+[rosmaster.threadpool][ERROR] 2026-10-09 14:41:30,634: Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosmaster/threadpool.py", line 218, in run
+    result = cmd(*args)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosmaster/master_api.py", line 210, in publisher_update_task
+    ret = xmlrpcapi(api).publisherUpdate('/master', topic, pub_uris)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1109, in __call__
+    return self.__send(self.__name, args)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1450, in __request
+    response = self.__transport.request(
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1153, in request
+    return self.single_request(host, handler, request_body, verbose)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1169, in single_request
+    return self.parse_response(resp)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1341, in parse_response
+    return u.close()
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 655, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault -1: 'publisherUpdate: unknown method name'>
+
+[rosmaster.master][INFO] 2026-10-09 14:41:30,635: publisherUpdate[/tf_static] -> http://UAV8:44165/ []: sec=0.00, exception=<Fault -1: 'publisherUpdate: unknown method name'>
+[rosmaster.master][INFO] 2026-10-09 14:41:30,636: -SUB [/waypoints] /ego_planner_driver http://UAV8:35059/
+[rosmaster.threadpool][ERROR] 2026-10-09 14:41:30,637: Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosmaster/threadpool.py", line 218, in run
+    result = cmd(*args)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosmaster/master_api.py", line 210, in publisher_update_task
+    ret = xmlrpcapi(api).publisherUpdate('/master', topic, pub_uris)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1109, in __call__
+    return self.__send(self.__name, args)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1450, in __request
+    response = self.__transport.request(
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1153, in request
+    return self.single_request(host, handler, request_body, verbose)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1169, in single_request
+    return self.parse_response(resp)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1341, in parse_response
+    return u.close()
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 655, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault -1: 'publisherUpdate: unknown method name'>
+
+[rosmaster.master][INFO] 2026-10-09 14:41:30,637: -PUB [/mavlink/from] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,638: -SUB [/local_pose] /ego_planner_driver http://UAV8:35059/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,638: -PUB [/mavros/radio_status] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,639: -SUB [/neighbor_intent] /ego_planner_driver http://UAV8:35059/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,639: -PUB [/mavros/target_actuator_control] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,640: -SUB [/gps_bias] /ego_planner_driver http://UAV8:35059/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,641: -PUB [/mavros/adsb/vehicle] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,641: -SUB [/hold] /ego_planner_driver http://UAV8:35059/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,642: -PUB [/mavros/altitude] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,642: -SUB [/brake_hold] /ego_planner_driver http://UAV8:35059/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,643: -PUB [/mavros/cam_imu_sync/cam_imu_stamp] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,643: -SUB [/mavros/state] /ego_planner_driver http://UAV8:35059/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,644: -SUB [/direct_control_active] /ego_planner_driver http://UAV8:35059/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,645: -PUB [/mavros/camera/image_captured] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,646: -SERVICE [/ego_planner_driver/get_loggers] /ego_planner_driver rosrpc://UAV8:43395
+[rosmaster.master][INFO] 2026-10-09 14:41:30,646: -PUB [/mavros/debug_value/debug] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,647: -SERVICE [/ego_planner_driver/set_logger_level] /ego_planner_driver rosrpc://UAV8:43395
+[rosmaster.master][INFO] 2026-10-09 14:41:30,647: -PUB [/mavros/debug_value/debug_vector] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,648: -CACHEDPARAM [/rosout_disable_topics_generation] by /ego_planner_driver
+[rosmaster.master][INFO] 2026-10-09 14:41:30,648: -PUB [/mavros/debug_value/debug_float_array] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,649: -PUB [/mavros/debug_value/named_value_float] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,649: -PUB [/mavros/debug_value/named_value_int] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,650: -PUB [/mavros/esc_info] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,650: -PUB [/mavros/esc_status] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,651: -PUB [/mavros/esc_telemetry] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,652: -PUB [/mavros/geofence/waypoints] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,652: -PUB [/mavros/global_position/raw/fix] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,653: -PUB [/mavros/global_position/raw/gps_vel] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,653: -PUB [/mavros/global_position/raw/satellites] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,654: -PUB [/mavros/global_position/global] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,654: -PUB [/mavros/global_position/local] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,655: -PUB [/mavros/global_position/rel_alt] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,656: -PUB [/mavros/global_position/compass_hdg] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,656: -PUB [/mavros/global_position/gp_origin] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,657: -PUB [/mavros/global_position/gp_lp_offset] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,657: -PUB [/mavros/gps_rtk/rtk_baseline] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,658: -PUB [/mavros/gpsstatus/gps1/raw] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,659: -PUB [/mavros/gpsstatus/gps2/raw] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,659: -PUB [/mavros/gpsstatus/gps1/rtk] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,660: -PUB [/mavros/gpsstatus/gps2/rtk] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,660: -PUB [/move_base_simple/goal] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,661: -PUB [/mavros/hil/controls] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,661: -PUB [/mavros/hil/actuator_controls] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,662: -PUB [/mavros/home_position/home] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,662: -PUB [/mavros/imu/data] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,663: -PUB [/mavros/imu/mag] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,663: -PUB [/mavros/imu/temperature_imu] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,664: -PUB [/mavros/imu/temperature_baro] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,664: -PUB [/mavros/imu/static_pressure] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,665: -PUB [/mavros/imu/diff_pressure] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,665: -PUB [/mavros/imu/data_raw] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,665: -PUB [/mavros/landing_target/pose_in] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,666: -PUB [/mavros/landing_target/lt_marker] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,667: -PUB [/mavros/local_position/pose] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,667: -PUB [/mavros/local_position/pose_cov] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,668: -PUB [/mavros/local_position/velocity_local] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,669: -PUB [/mavros/local_position/velocity_body] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,669: -PUB [/mavros/local_position/velocity_body_cov] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,670: -PUB [/mavros/local_position/accel] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,670: -PUB [/mavros/local_position/odom] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,671: -PUB [/mavros/log_transfer/raw/log_entry] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,672: -PUB [/mavros/log_transfer/raw/log_data] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,673: -PUB [/mavros/mag_calibration/status] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,674: -PUB [/mavros/mag_calibration/report] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,675: -SUB [/gp_origin_confirmed] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,675: -SUB [/exec_state] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,675: -SUB [/local_pose] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,676: -SUB [/UAV10/trajectory_intent] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,676: -SUB [/UAV13/trajectory_intent] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,676: -SUB [/UAV10/mavros/local_position/odom] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,676: -SUB [/UAV13/mavros/local_position/odom] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,676: -PUB [/rosout] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,676: -PUB [/goal] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,676: -PUB [/goal_yaw] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,676: -PUB [/waypoints] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,676: -PUB [/hold] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,677: -PUB [/brake_hold] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,677: -PUB [/setpoint/follower] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,677: -PUB [/direct_control_active] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,677: -PUB [/neighbor_intent] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,677: -PUB [/uav_task_state] /uav_executor_UAV8 http://UAV8:42819/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,677: -SERVICE [/uav_executor_UAV8/get_loggers] /uav_executor_UAV8 rosrpc://UAV8:33237
+[rosmaster.master][INFO] 2026-10-09 14:41:30,677: -SERVICE [/uav_executor_UAV8/set_logger_level] /uav_executor_UAV8 rosrpc://UAV8:33237
+[rosmaster.master][INFO] 2026-10-09 14:41:30,683: -PUB [/mavros/manual_control/control] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,684: -PUB [/mavros/mount_control/orientation] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,684: -PUB [/mavros/mount_control/status] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,685: -PUB [/mavros/nav_controller_output] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,686: -PUB [/mavros/odometry/in] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,686: -PUB [/mavros/param/param_value] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,687: -PUB [/mavros/px4flow/raw/optical_flow_rad] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,687: -PUB [/mavros/px4flow/ground_distance] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,688: -PUB [/mavros/px4flow/temperature] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,689: -PUB [/mavros/rallypoint/waypoints] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,689: -PUB [/mavros/rc/in] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,690: -SUB [/setpoint/ego] /setpoint_relay http://UAV8:40141/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,690: -SUB [/setpoint/follower] /setpoint_relay http://UAV8:40141/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,690: -SUB [/direct_control_active] /setpoint_relay http://UAV8:40141/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,691: -SUB [/mavros/local_position/pose] /setpoint_relay http://UAV8:40141/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,691: -PUB [/rosout] /setpoint_relay http://UAV8:40141/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,691: -PUB [/mavros/setpoint_raw/local] /setpoint_relay http://UAV8:40141/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,691: -SERVICE [/setpoint_relay/get_loggers] /setpoint_relay rosrpc://UAV8:41767
+[rosmaster.master][INFO] 2026-10-09 14:41:30,691: -SERVICE [/setpoint_relay/set_logger_level] /setpoint_relay rosrpc://UAV8:41767
+[rosmaster.master][INFO] 2026-10-09 14:41:30,692: -PUB [/mavros/rc/out] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,693: -PUB [/mavros/setpoint_raw/target_local] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,694: -PUB [/mavros/setpoint_raw/target_global] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,695: -PUB [/mavros/setpoint_raw/target_attitude] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,696: -PUB [/mavros/setpoint_trajectory/desired] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,696: -PUB [/mavros/state] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,698: -PUB [/mavros/extended_state] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,699: -PUB [/mavros/battery] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,699: -PUB [/mavros/estimator_status] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,700: -PUB [/mavros/statustext/recv] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,700: -PUB [/mavros/sys_status] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,701: -PUB [/mavros/time_reference] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,702: -PUB [/mavros/timesync_status] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,702: -PUB [/mavros/terrain/report] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,703: -PUB [/mavros/trajectory/desired] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,703: -PUB [/mavros/tunnel/out] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,704: -PUB [/mavros/vfr_hud] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,705: -PUB [/mavros/mission/waypoints] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,705: -PUB [/mavros/mission/reached] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,706: -PUB [/mavros/wind_estimation] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,706: -PUB [/mavlink/gcs_ip] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,707: -SUB [/tf] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,708: -SUB [/tf_static] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,708: -SUB [/mavlink/to] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,709: -SUB [/mavros/actuator_control] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,710: -SUB [/mavros/adsb/send] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,710: -SUB [/mavros/cellular_status/status] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,711: -SUB [/mavros/companion_process/status] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,711: -SUB [/mavros/debug_value/send] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,712: -SUB [/mavros/fake_gps/mocap/tf] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,713: -SUB [/mavros/global_position/set_gp_origin] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,713: -SUB [/mavros/home_position/home] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,714: -SUB [/mavros/gps_input/gps_input] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,715: -SUB [/mavros/gps_rtk/send_rtcm] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,715: -SUB [/mavros/global_position/gp_origin] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,716: -SUB [/mavros/hil/state] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,716: -SUB [/mavros/hil/gps] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,717: -SUB [/mavros/hil/imu_ned] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,717: -SUB [/mavros/hil/optical_flow] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,718: -SUB [/mavros/hil/rc_inputs] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,719: -SUB [/mavros/home_position/set] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,719: -SUB [/mavros/landing_target/pose] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,720: -SUB [/mavros/manual_control/send] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,720: -SUB [/mavros/mocap/pose] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,721: -SUB [/mavros/mount_control/command] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,721: -SUB [/mavros/obstacle/send] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,722: -SUB [/mavros/odometry/out] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,723: -SUB [/mavros/onboard_computer/status] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,723: -SUB [/mavros/play_tune] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,724: -SUB [/mavros/px4flow/raw/send] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,724: -SUB [/mavros/rc/override] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,725: -SUB [/mavros/setpoint_accel/accel] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,726: -SUB [/mavros/setpoint_attitude/thrust] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,726: -SUB [/mavros/setpoint_attitude/cmd_vel] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,727: -SUB [/mavros/setpoint_position/local] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,728: -SUB [/mavros/setpoint_position/global] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,728: -SUB [/mavros/setpoint_position/global_to_local] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,729: -SUB [/mavros/global_position/global] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,730: -SUB [/mavros/local_position/pose] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,730: -SUB [/mavros/setpoint_raw/local] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,731: -SUB [/mavros/setpoint_raw/global] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,731: -SUB [/mavros/setpoint_raw/attitude] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,732: publisherUpdate[/mavros/global_position/global] -> http://UAV8:44165/ []
+[rosmaster.master][INFO] 2026-10-09 14:41:30,733: -SUB [/mavros/setpoint_trajectory/local] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,733: publisherUpdate[/mavros/global_position/global] -> http://UAV8:44165/ []: sec=0.00, exception=<Fault -1: 'publisherUpdate: unknown method name'>
+[rosmaster.master][INFO] 2026-10-09 14:41:30,734: -SUB [/mavros/setpoint_velocity/cmd_vel] /mavros http://UAV8:44165/
+[rosmaster.threadpool][ERROR] 2026-10-09 14:41:30,735: Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosmaster/threadpool.py", line 218, in run
+    result = cmd(*args)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosmaster/master_api.py", line 210, in publisher_update_task
+    ret = xmlrpcapi(api).publisherUpdate('/master', topic, pub_uris)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1109, in __call__
+    return self.__send(self.__name, args)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1450, in __request
+    response = self.__transport.request(
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1153, in request
+    return self.single_request(host, handler, request_body, verbose)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1169, in single_request
+    return self.parse_response(resp)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1341, in parse_response
+    return u.close()
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 655, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault -1: 'publisherUpdate: unknown method name'>
+
+[rosmaster.master][INFO] 2026-10-09 14:41:30,735: -SUB [/mavros/setpoint_velocity/cmd_vel_unstamped] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,735: publisherUpdate[/mavros/global_position/global] -> http://UAV8:36793/ []
+[rosmaster.master][INFO] 2026-10-09 14:41:30,736: -SUB [/mavros/statustext/send] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,736: publisherUpdate[/mavros/global_position/gp_origin] -> http://UAV8:44165/ []
+[rosmaster.master][INFO] 2026-10-09 14:41:30,737: -SUB [/mavros/trajectory/generated] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,737: publisherUpdate[/mavros/global_position/global] -> http://UAV8:36793/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:41:30,737: publisherUpdate[/mavros/local_position/pose] -> http://UAV8:40141/ []
+[rosmaster.master][INFO] 2026-10-09 14:41:30,738: -SUB [/mavros/trajectory/path] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,739: publisherUpdate[/mavros/global_position/gp_origin] -> http://UAV8:44165/ []: sec=0.00, exception=<Fault -1: 'publisherUpdate: unknown method name'>
+[rosmaster.master][INFO] 2026-10-09 14:41:30,739: publisherUpdate[/mavros/local_position/pose] -> http://UAV8:36793/ []
+[rosmaster.master][INFO] 2026-10-09 14:41:30,740: -SUB [/mavros/tunnel/in] /mavros http://UAV8:44165/
+[rosmaster.threadpool][ERROR] 2026-10-09 14:41:30,741: Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosmaster/threadpool.py", line 218, in run
+    result = cmd(*args)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosmaster/master_api.py", line 210, in publisher_update_task
+    ret = xmlrpcapi(api).publisherUpdate('/master', topic, pub_uris)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1109, in __call__
+    return self.__send(self.__name, args)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1450, in __request
+    response = self.__transport.request(
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1153, in request
+    return self.single_request(host, handler, request_body, verbose)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1169, in single_request
+    return self.parse_response(resp)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1341, in parse_response
+    return u.close()
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 655, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault -1: 'publisherUpdate: unknown method name'>
+
+[rosmaster.master][INFO] 2026-10-09 14:41:30,742: publisherUpdate[/mavros/home_position/home] -> http://UAV8:44165/ []
+[rosmaster.master][INFO] 2026-10-09 14:41:30,742: -SUB [/mavros/vision_pose/pose] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,741: publisherUpdate[/mavros/local_position/pose] -> http://UAV8:40141/ []: sec=0.00, exception=[Errno 111] Connection refused
+[rosmaster.threadpool][ERROR] 2026-10-09 14:41:30,745: Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosmaster/threadpool.py", line 218, in run
+    result = cmd(*args)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosmaster/master_api.py", line 210, in publisher_update_task
+    ret = xmlrpcapi(api).publisherUpdate('/master', topic, pub_uris)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1109, in __call__
+    return self.__send(self.__name, args)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1450, in __request
+    response = self.__transport.request(
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1153, in request
+    return self.single_request(host, handler, request_body, verbose)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1165, in single_request
+    http_conn = self.send_request(host, handler, request_body, verbose)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1278, in send_request
+    self.send_content(connection, request_body)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1308, in send_content
+    connection.endheaders(request_body)
+  File "/usr/lib/python3.8/http/client.py", line 1251, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1011, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.8/http/client.py", line 951, in send
+    self.connect()
+  File "/usr/lib/python3.8/http/client.py", line 922, in connect
+    self.sock = self._create_connection(
+  File "/usr/lib/python3.8/socket.py", line 808, in create_connection
+    raise err
+  File "/usr/lib/python3.8/socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+[rosmaster.master][INFO] 2026-10-09 14:41:30,743: -SUB [/mavros/vision_pose/pose_cov] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,743: publisherUpdate[/mavros/home_position/home] -> http://UAV8:44165/ []: sec=0.00, exception=<Fault -1: 'publisherUpdate: unknown method name'>
+[rosmaster.master][INFO] 2026-10-09 14:41:30,745: publisherUpdate[/rosout] -> http://UAV8:39947/ ['http://UAV8:40141/', 'http://UAV8:36793/']
+[rosmaster.master][INFO] 2026-10-09 14:41:30,746: publisherUpdate[/mavros/local_position/pose] -> http://UAV8:36793/ []: sec=0.01, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:41:30,746: -SUB [/mavros/vision_speed/speed_twist_cov] /mavros http://UAV8:44165/
+[rosmaster.master][INFO] 2026-10-09 14:41:30,748: publisherUpdate[/rosout] -> http://UAV8:39947/ ['http://UAV8:40141/', 'http://UAV8:36793/']: sec=0.00, result=[1, '', 0]
+[rosmaster.threadpool][ERROR] 2026-10-09 14:41:30,748: Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosmaster/threadpool.py", line 218, in run
+    result = cmd(*args)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosmaster/master_api.py", line 210, in publisher_update_task
+    ret = xmlrpcapi(api).publisherUpdate('/master', topic, pub_uris)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1109, in __call__
+    return self.__send(self.__name, args)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1450, in __request
+    response = self.__transport.request(
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1153, in request
+    return self.single_request(host, handler, request_body, verbose)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1169, in single_request
+    return self.parse_response(resp)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1341, in parse_response
+    return u.close()
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 655, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault -1: 'publisherUpdate: unknown method name'>
+
+[rosmaster.master][INFO] 2026-10-09 14:41:30,749: publisherUpdate[/setpoint/follower] -> http://UAV8:40141/ []
+[rosmaster.master][INFO] 2026-10-09 14:41:30,749: publisherUpdate[/mavros/local_position/odom] -> http://UAV8:36793/ []
+[rosmaster.master][INFO] 2026-10-09 14:41:30,748: publisherUpdate[/mavros/local_position/pose] -> http://UAV8:44165/ []
+[rosmaster.master][INFO] 2026-10-09 14:41:30,749: -SERVICE [/mavros/get_loggers] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,751: publisherUpdate[/setpoint/follower] -> http://UAV8:40141/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:41:30,751: publisherUpdate[/mavros/local_position/odom] -> http://UAV8:36793/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:41:30,753: publisherUpdate[/uav_task_state] -> http://UAV8:36793/ []
+[rosmaster.master][INFO] 2026-10-09 14:41:30,752: publisherUpdate[/mavros/local_position/pose] -> http://UAV8:44165/ []: sec=0.00, exception=<Fault -1: 'publisherUpdate: unknown method name'>
+[rosmaster.master][INFO] 2026-10-09 14:41:30,753: -SERVICE [/mavros/set_logger_level] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,752: publisherUpdate[/direct_control_active] -> http://UAV8:40141/ []
+[rosmaster.threadpool][ERROR] 2026-10-09 14:41:30,754: Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosmaster/threadpool.py", line 218, in run
+    result = cmd(*args)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosmaster/master_api.py", line 210, in publisher_update_task
+    ret = xmlrpcapi(api).publisherUpdate('/master', topic, pub_uris)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1109, in __call__
+    return self.__send(self.__name, args)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1450, in __request
+    response = self.__transport.request(
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1153, in request
+    return self.single_request(host, handler, request_body, verbose)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1169, in single_request
+    return self.parse_response(resp)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1341, in parse_response
+    return u.close()
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 655, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault -1: 'publisherUpdate: unknown method name'>
+
+[rosmaster.master][INFO] 2026-10-09 14:41:30,755: -SERVICE [/mavros/cmd/command] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,756: publisherUpdate[/uav_task_state] -> http://UAV8:36793/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:41:30,757: publisherUpdate[/mavros/rc/in] -> http://UAV8:36793/ []
+[rosmaster.master][INFO] 2026-10-09 14:41:30,756: publisherUpdate[/rosout] -> http://UAV8:39947/ ['http://UAV8:36793/']
+[rosmaster.master][INFO] 2026-10-09 14:41:30,757: -SERVICE [/mavros/cmd/command_ack] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,758: publisherUpdate[/direct_control_active] -> http://UAV8:40141/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:41:30,759: publisherUpdate[/mavros/rc/in] -> http://UAV8:36793/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:41:30,759: publisherUpdate[/rosout] -> http://UAV8:39947/ ['http://UAV8:36793/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:41:30,760: -SERVICE [/mavros/cmd/command_int] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,760: publisherUpdate[/mavros/setpoint_raw/local] -> http://UAV8:44165/ []
+[rosmaster.master][INFO] 2026-10-09 14:41:30,760: publisherUpdate[/mavros/state] -> http://UAV8:36793/ []
+[rosmaster.master][INFO] 2026-10-09 14:41:30,762: -SERVICE [/mavros/cmd/arming] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,762: publisherUpdate[/mavros/state] -> http://UAV8:36793/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:41:30,763: publisherUpdate[/mavros/time_reference] -> http://UAV8:36793/ []
+[rosmaster.master][INFO] 2026-10-09 14:41:30,763: publisherUpdate[/mavros/setpoint_raw/local] -> http://UAV8:44165/ []: sec=0.00, exception=<Fault -1: 'publisherUpdate: unknown method name'>
+[rosmaster.master][INFO] 2026-10-09 14:41:30,764: -SERVICE [/mavros/cmd/set_home] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,765: publisherUpdate[/mavros/time_reference] -> http://UAV8:36793/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.threadpool][ERROR] 2026-10-09 14:41:30,766: Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosmaster/threadpool.py", line 218, in run
+    result = cmd(*args)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosmaster/master_api.py", line 210, in publisher_update_task
+    ret = xmlrpcapi(api).publisherUpdate('/master', topic, pub_uris)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1109, in __call__
+    return self.__send(self.__name, args)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1450, in __request
+    response = self.__transport.request(
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1153, in request
+    return self.single_request(host, handler, request_body, verbose)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1169, in single_request
+    return self.parse_response(resp)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1341, in parse_response
+    return u.close()
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 655, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault -1: 'publisherUpdate: unknown method name'>
+
+[rosmaster.master][INFO] 2026-10-09 14:41:30,766: -SERVICE [/mavros/cmd/takeoff] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,767: -SERVICE [/mavros/cmd/land] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,768: -SERVICE [/mavros/cmd/trigger_control] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,768: -SERVICE [/mavros/cmd/trigger_interval] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,769: -SERVICE [/mavros/cmd/vtol_transition] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,769: -SERVICE [/mavros/ftp/list] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,770: -SERVICE [/mavros/ftp/open] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,770: -SERVICE [/mavros/ftp/close] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,771: -SERVICE [/mavros/ftp/read] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,771: -SERVICE [/mavros/ftp/write] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,772: -SERVICE [/mavros/ftp/mkdir] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,772: -SERVICE [/mavros/ftp/rmdir] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,773: -SERVICE [/mavros/ftp/remove] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,773: -SERVICE [/mavros/ftp/truncate] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,774: -SERVICE [/mavros/ftp/reset] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,774: -SERVICE [/mavros/ftp/rename] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,775: -SERVICE [/mavros/ftp/checksum] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,775: -SERVICE [/mavros/geofence/pull] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,776: -SERVICE [/mavros/geofence/push] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,776: -SERVICE [/mavros/geofence/clear] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,777: -SERVICE [/mavros/home_position/req_update] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,777: -SERVICE [/mavros/log_transfer/raw/log_request_list] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,778: -SERVICE [/mavros/log_transfer/raw/log_request_data] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,779: -SERVICE [/mavros/log_transfer/raw/log_request_end] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,779: -SERVICE [/mavros/log_transfer/raw/log_request_erase] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,780: -SERVICE [/mavros/mount_control/configure] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,780: -SERVICE [/mavros/param/pull] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,781: -SERVICE [/mavros/param/push] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,781: -SERVICE [/mavros/param/set] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,782: -SERVICE [/mavros/param/get] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,783: -SERVICE [/mavros/rallypoint/pull] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,783: -SERVICE [/mavros/rallypoint/push] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,784: -SERVICE [/mavros/rallypoint/clear] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,784: -SERVICE [/mavros/setpoint_position/mav_frame] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,785: -SERVICE [/mavros/setpoint_trajectory/reset] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,785: -SERVICE [/mavros/setpoint_trajectory/mav_frame] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,786: -SERVICE [/mavros/setpoint_velocity/mav_frame] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,786: -SERVICE [/mavros/set_stream_rate] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,787: -SERVICE [/mavros/set_mode] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,787: -SERVICE [/mavros/vehicle_info_get] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,788: -SERVICE [/mavros/set_message_interval] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,788: -SERVICE [/mavros/mission/pull] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,789: -SERVICE [/mavros/mission/push] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,789: -SERVICE [/mavros/mission/clear] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,790: -SERVICE [/mavros/mission/set_current] /mavros rosrpc://UAV8:54695
+[rosmaster.master][INFO] 2026-10-09 14:41:30,791: -CACHEDPARAM [/mavros/diagnostic_period] by /mavros
+[rosmaster.master][INFO] 2026-10-09 14:41:30,791: -CACHEDPARAM [/rosout_disable_topics_generation] by /mavros
+[rosmaster.master][INFO] 2026-10-09 14:41:34,816: -SUB [/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,817: -SUB [/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,817: -SUB [/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,817: -SUB [/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,817: -SUB [/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,817: -SUB [/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,817: -SUB [/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,818: -SUB [/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,818: -SUB [/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,818: -SUB [/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,818: -SUB [/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,818: -PUB [/rosout] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,818: -PUB [/GCS_A/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,818: -PUB [/GCS_A/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,819: -PUB [/GCS_A/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,819: -PUB [/GCS_A/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,819: -PUB [/GCS_A/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,819: -PUB [/GCS_A/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,819: -PUB [/GCS_A/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,819: -PUB [/GCS_A/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,819: -PUB [/GCS_A/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,820: -PUB [/GCS_A/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,820: -PUB [/GCS_A/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,820: -PUB [/UAV1/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,820: -PUB [/UAV1/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,820: -PUB [/UAV1/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,820: -PUB [/UAV1/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,820: -PUB [/UAV1/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,820: -PUB [/UAV1/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,821: -PUB [/UAV1/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,821: -PUB [/UAV1/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,821: -PUB [/UAV1/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,821: -PUB [/UAV1/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,821: -PUB [/UAV1/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,821: -PUB [/UAV2/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,821: -PUB [/UAV2/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,822: -PUB [/UAV2/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,822: -PUB [/UAV2/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,822: -PUB [/UAV2/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,822: -PUB [/UAV2/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,822: -PUB [/UAV2/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,822: -PUB [/UAV2/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,822: -PUB [/UAV2/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,822: -PUB [/UAV2/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,823: -PUB [/UAV2/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,823: -PUB [/UAV3/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,823: -PUB [/UAV3/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,823: -PUB [/UAV3/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,823: -PUB [/UAV3/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,823: -PUB [/UAV3/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,823: -PUB [/UAV3/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,824: -PUB [/UAV3/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,824: -PUB [/UAV3/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,824: -PUB [/UAV3/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,824: -PUB [/UAV3/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,824: -PUB [/UAV3/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,824: -PUB [/UAV4/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,824: -PUB [/UAV4/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,824: -PUB [/UAV4/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,825: -PUB [/UAV4/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,825: -PUB [/UAV4/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,825: -PUB [/UAV4/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,825: -PUB [/UAV4/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,825: -PUB [/UAV4/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,825: -PUB [/UAV4/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,825: -PUB [/UAV4/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,825: -PUB [/UAV4/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,826: -PUB [/UAV5/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,826: -PUB [/UAV5/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,826: -PUB [/UAV5/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,826: -PUB [/UAV5/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,826: -PUB [/UAV5/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,826: -PUB [/UAV5/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,826: -PUB [/UAV5/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,827: -PUB [/UAV5/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,827: -PUB [/UAV5/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,827: -PUB [/UAV5/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,827: -PUB [/UAV5/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,827: -PUB [/UAV6/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,827: -PUB [/UAV6/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,827: -PUB [/UAV6/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,827: -PUB [/UAV6/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,827: -PUB [/UAV6/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,828: -PUB [/UAV6/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,828: -PUB [/UAV6/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,828: -PUB [/UAV6/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,828: -PUB [/UAV6/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,828: -PUB [/UAV6/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,828: -PUB [/UAV6/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,828: -PUB [/UAV7/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,828: -PUB [/UAV7/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,828: -PUB [/UAV7/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,829: -PUB [/UAV7/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,829: -PUB [/UAV7/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,829: -PUB [/UAV7/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,829: -PUB [/UAV7/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,829: -PUB [/UAV7/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,829: -PUB [/UAV7/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,829: -PUB [/UAV7/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,829: -PUB [/UAV7/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,829: -PUB [/UAV9/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,829: -PUB [/UAV9/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,830: -PUB [/UAV9/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,830: -PUB [/UAV9/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,830: -PUB [/UAV9/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,830: -PUB [/UAV9/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,830: -PUB [/UAV9/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,830: -PUB [/UAV9/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,830: -PUB [/UAV9/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,830: -PUB [/UAV9/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,831: -PUB [/UAV9/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,831: -PUB [/UAV10/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,831: -PUB [/UAV10/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,831: -PUB [/UAV10/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,831: -PUB [/UAV10/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,831: -PUB [/UAV10/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,831: -PUB [/UAV10/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,832: -PUB [/UAV10/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,832: -PUB [/UAV10/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,832: -PUB [/UAV10/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,832: -PUB [/UAV10/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,832: -PUB [/UAV10/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,832: -PUB [/UAV11/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,832: -PUB [/UAV11/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,832: -PUB [/UAV11/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,833: -PUB [/UAV11/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,833: -PUB [/UAV11/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,833: -PUB [/UAV11/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,833: -PUB [/UAV11/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,833: -PUB [/UAV11/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,833: -PUB [/UAV11/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,833: -PUB [/UAV11/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,834: -PUB [/UAV11/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,834: -PUB [/UAV12/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,834: -PUB [/UAV12/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,834: -PUB [/UAV12/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,834: -PUB [/UAV12/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,834: -PUB [/UAV12/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,834: -PUB [/UAV12/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,834: -PUB [/UAV12/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,835: -PUB [/UAV12/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,835: -PUB [/UAV12/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,835: -PUB [/UAV12/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,835: -PUB [/UAV12/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,835: -PUB [/UAV13/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,835: -PUB [/UAV13/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,835: -PUB [/UAV13/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,835: -PUB [/UAV13/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,836: -PUB [/UAV13/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,836: -PUB [/UAV13/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,836: -PUB [/UAV13/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,836: -PUB [/UAV13/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,836: -PUB [/UAV13/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,836: -PUB [/UAV13/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,836: -PUB [/UAV13/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,836: -PUB [/UAV14/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,837: -PUB [/UAV14/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,837: -PUB [/UAV14/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,837: -PUB [/UAV14/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,837: -PUB [/UAV14/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,837: -PUB [/UAV14/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,837: -PUB [/UAV14/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,837: -PUB [/UAV14/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,838: -PUB [/UAV14/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,838: -PUB [/UAV14/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,838: -PUB [/UAV14/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,838: -PUB [/UAV15/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,838: -PUB [/UAV15/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,838: -PUB [/UAV15/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,838: -PUB [/UAV15/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,838: -PUB [/UAV15/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,839: -PUB [/UAV15/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,839: -PUB [/UAV15/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,839: -PUB [/UAV15/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,839: -PUB [/UAV15/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,839: -PUB [/UAV15/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,839: -PUB [/UAV15/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,839: -PUB [/UAV16/uav_task_state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,839: -PUB [/UAV16/mavros/state] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,839: -PUB [/UAV16/mavros/time_reference] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,840: -PUB [/UAV16/mavros/global_position/global] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,840: -PUB [/UAV16/mavros/local_position/pose] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,840: -PUB [/UAV16/mavros/local_position/odom] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,840: -PUB [/UAV16/mavros/rc/in] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,840: -PUB [/UAV16/gp_origin_confirmed] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,840: -PUB [/UAV16/trajectory_intent] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,840: -PUB [/UAV16/gps_bias] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,840: -PUB [/UAV16/group_a/gp_origin] /swarm_bridge http://UAV8:36793/
+[rosmaster.master][INFO] 2026-10-09 14:41:34,840: -SERVICE [/swarm_bridge/get_loggers] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,841: -SERVICE [/swarm_bridge/set_logger_level] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,841: -SERVICE [/UAV1/uav_task] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,841: -SERVICE [/UAV1/uav_task_control] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,841: -SERVICE [/UAV1/uav_hold] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,841: -SERVICE [/UAV2/uav_task] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,841: -SERVICE [/UAV2/uav_task_control] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,841: -SERVICE [/UAV2/uav_hold] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,841: -SERVICE [/UAV3/uav_task] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,841: -SERVICE [/UAV3/uav_task_control] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,841: -SERVICE [/UAV3/uav_hold] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,842: -SERVICE [/UAV4/uav_task] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,842: -SERVICE [/UAV4/uav_task_control] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,842: -SERVICE [/UAV4/uav_hold] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,842: -SERVICE [/UAV5/uav_task] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,842: -SERVICE [/UAV5/uav_task_control] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,842: -SERVICE [/UAV5/uav_hold] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,842: -SERVICE [/UAV6/uav_task] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,842: -SERVICE [/UAV6/uav_task_control] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,842: -SERVICE [/UAV6/uav_hold] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,842: -SERVICE [/UAV7/uav_task] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,843: -SERVICE [/UAV7/uav_task_control] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,843: -SERVICE [/UAV7/uav_hold] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,843: -SERVICE [/UAV9/uav_task] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,843: -SERVICE [/UAV9/uav_task_control] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,843: -SERVICE [/UAV9/uav_hold] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,843: -SERVICE [/UAV10/uav_task] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,843: -SERVICE [/UAV10/uav_task_control] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,843: -SERVICE [/UAV10/uav_hold] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,843: -SERVICE [/UAV11/uav_task] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,843: -SERVICE [/UAV11/uav_task_control] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,843: -SERVICE [/UAV11/uav_hold] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,844: -SERVICE [/UAV12/uav_task] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,844: -SERVICE [/UAV12/uav_task_control] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,844: -SERVICE [/UAV12/uav_hold] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,844: -SERVICE [/UAV13/uav_task] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,844: -SERVICE [/UAV13/uav_task_control] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,844: -SERVICE [/UAV13/uav_hold] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,844: -SERVICE [/UAV14/uav_task] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,844: -SERVICE [/UAV14/uav_task_control] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,844: -SERVICE [/UAV14/uav_hold] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,844: -SERVICE [/UAV15/uav_task] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,845: -SERVICE [/UAV15/uav_task_control] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,845: -SERVICE [/UAV15/uav_hold] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,845: -SERVICE [/UAV16/uav_task] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,845: -SERVICE [/UAV16/uav_task_control] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,845: -SERVICE [/UAV16/uav_hold] /swarm_bridge rosrpc://UAV8:35187
+[rosmaster.master][INFO] 2026-10-09 14:41:34,866: publisherUpdate[/rosout] -> http://UAV8:39947/ []
+[rosmaster.master][INFO] 2026-10-09 14:41:34,868: publisherUpdate[/rosout] -> http://UAV8:39947/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-09 14:41:35,670: -PUB [/rosout_agg] /rosout http://UAV8:39947/
+[rosmaster.master][INFO] 2026-10-09 14:41:35,671: -SUB [/rosout] /rosout http://UAV8:39947/
+[rosmaster.master][INFO] 2026-10-09 14:41:35,672: -SERVICE [/rosout/get_loggers] /rosout rosrpc://UAV8:57653
+[rosmaster.master][INFO] 2026-10-09 14:41:35,672: -SERVICE [/rosout/set_logger_level] /rosout rosrpc://UAV8:57653
+[rosmaster.master][INFO] 2026-10-09 14:41:35,673: -CACHEDPARAM [/rosout/omit_topics] by /rosout
+[rosmaster.main][INFO] 2026-10-09 14:41:35,769: keyboard interrupt, will exit
+[rosmaster.main][INFO] 2026-10-09 14:41:35,769: stopping master...
+[rospy.core][INFO] 2026-10-09 14:41:35,770: signal_shutdown [atexit]

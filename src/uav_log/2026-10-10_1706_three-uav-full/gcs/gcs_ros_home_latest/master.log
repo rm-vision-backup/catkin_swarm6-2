@@ -1,0 +1,782 @@
+[rosmaster.main][INFO] 2026-10-10 17:05:42,610: initialization complete, waiting for shutdown
+[rosmaster.main][INFO] 2026-10-10 17:05:42,610: Starting ROS Master Node
+[xmlrpc][INFO] 2026-10-10 17:05:42,627: XML-RPC server binding to 0.0.0.0:11311
+[xmlrpc][INFO] 2026-10-10 17:05:42,628: Started XML-RPC server [http://192.168.5.241:11311/]
+[rosmaster.master][INFO] 2026-10-10 17:05:42,628: Master initialized: port[11311], uri[http://192.168.5.241:11311/]
+[xmlrpc][INFO] 2026-10-10 17:05:42,628: xml rpc node: starting XML-RPC server
+[rosmaster.master][INFO] 2026-10-10 17:05:42,673: +PARAM [/run_id] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,673: +PARAM [/roslaunch/uris/host_192_168_5_241__33449] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,694: +PARAM [/rosversion] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,694: +PARAM [/rosdistro] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,694: +PARAM [/swarm_bridge/uavs] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,694: +PARAM [/swarm_bridge/topics] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/swarm_bridge/max_freq] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/swarm_bridge/base_port] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/swarm_bridge/service_base_port] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/swarm_bridge/services] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/swarm_bridge/topology/GCS_A] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/swarm_bridge/topology/UAV1] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/swarm_bridge/topology/UAV2] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/swarm_bridge/topology/UAV3] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/swarm_bridge/topology/UAV4] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/swarm_bridge/topology/UAV5] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/swarm_bridge/topology/UAV6] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/swarm_bridge/topology/UAV7] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/swarm_bridge/topology/UAV8] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/swarm_bridge/topology/UAV9] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/swarm_bridge/topology/UAV10] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/swarm_bridge/topology/UAV11] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/swarm_bridge/topology/UAV12] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/swarm_bridge/topology/UAV13] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/swarm_bridge/topology/UAV14] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/swarm_bridge/topology/UAV15] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/swarm_bridge/topology/UAV16] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/swarm_bridge/uav_name] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/swarm_bridge/health_log_dir] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/swarm_bridge/health_sample_hz] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/swarm_bridge/health_matrix_period_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/swarm_bridge/stall_warn_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/swarm_bridge/zmq_heartbeat_ivl_ms] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/swarm_bridge/zmq_heartbeat_timeout_ms] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/swarm_bridge/zmq_reconnect_ivl_ms] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/swarm_bridge/zmq_reconnect_ivl_max_ms] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/swarm_bridge/zmq_dealer_sndtimeo_ms] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/gcs_a_backend_node/action_name] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/gcs_a_backend_node/emergency_hold_service] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,695: +PARAM [/gcs_a_backend_node/confirm_wait_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/gcs_a_backend_node/confirm_retries] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/gcs_a_backend_node/confirm_retry_interval_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/gcs_a_backend_node/confirm_deadline_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/gcs_a_backend_node/hold_batch_size] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/gcs_a_backend_node/hold_retry_count] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/gcs_a_backend_node/hold_retry_interval_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/gcs_a_backend_node/require_calibration_ready] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/gcs_a_backend_node/link_suspect_after_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/gcs_a_backend_node/link_lost_after_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/gcs_a_backend_node/link_healthy_window_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/gcs_a_backend_node/link_health_topic] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/gcs_a_backend_node/link_health_pre_task_wait_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/gcs_a_backend_node/move_to_schedule_enabled] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/gcs_a_backend_node/fault_exit_schedule_enabled] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/gcs_a_backend_node/horizontal_speed_mps] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/gcs_a_backend_node/schedule_geometric_distance_m] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/gcs_a_backend_node/schedule_safety_margin_m] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/gcs_a_backend_node/schedule_pose_timeout_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/gcs_a_backend_node/schedule_time_epsilon_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/gcs_a_backend_node/schedule_max_start_delay_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/gcs_a_backend_node/schedule_max_interval_combinations] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/gcs_a_backend_node/schedule_max_compute_time_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/gcs_a_backend_node/start_service_budget_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/gcs_a_backend_node/start_dispatch_jitter_margin_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/gcs_a_backend_node/map_file] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/gcs_a_backend_node/formation_offsets_file] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/gcs_a_calibration/calibration_uavs] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/gcs_a_calibration/all_uavs] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/gcs_a_calibration/sample_window_s] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +SERVICE [/rosout/get_loggers] /rosout http://192.168.5.241:46407/
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/gcs_a_calibration/identity_file] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/tcp_server_node/host] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/tcp_server_node/port] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/tcp_server_node/action_name] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +SERVICE [/rosout/set_logger_level] /rosout http://192.168.5.241:46407/
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/tcp_server_node/state_topic] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,696: +PARAM [/tcp_server_node/emergency_hold_service] by /roslaunch
+[rosmaster.master][INFO] 2026-10-10 17:05:42,697: +PUB [/rosout_agg] /rosout http://192.168.5.241:46407/
+[rosmaster.master][INFO] 2026-10-10 17:05:42,698: +SUB [/rosout] /rosout http://192.168.5.241:46407/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,021: +PUB [/rosout] /tcp_server_node http://192.168.5.241:42763/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,022: +PUB [/rosout] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,024: +SERVICE [/tcp_server_node/get_loggers] /tcp_server_node http://192.168.5.241:42763/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,024: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,024: +SERVICE [/swarm_bridge/get_loggers] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,026: +SERVICE [/tcp_server_node/set_logger_level] /tcp_server_node http://192.168.5.241:42763/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,028: +SERVICE [/swarm_bridge/set_logger_level] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,028: +PUB [/rosout] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,028: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,029: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,030: +CACHEDPARAM [/rosout_disable_topics_generation] by /tcp_server_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,030: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,030: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/', 'http://192.168.5.241:44019/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,030: +PUB [/group_a/group_task_state] /tcp_server_node http://192.168.5.241:42763/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,031: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/', 'http://192.168.5.241:44019/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,031: +PUB [/group_a/execute_task/goal] /tcp_server_node http://192.168.5.241:42763/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,032: +SERVICE [/gcs_a_backend_node/get_loggers] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,032: +PUB [/group_a/execute_task/cancel] /tcp_server_node http://192.168.5.241:42763/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,032: +SERVICE [/gcs_a_backend_node/set_logger_level] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,033: +SUB [/group_a/execute_task/status] /tcp_server_node http://192.168.5.241:42763/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,034: +SUB [/group_a/execute_task/result] /tcp_server_node http://192.168.5.241:42763/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,035: +SUB [/group_a/execute_task/feedback] /tcp_server_node http://192.168.5.241:42763/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,035: +CACHEDPARAM [/rosout_disable_topics_generation] by /tcp_server_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,041: +PUB [/rosout] /gcs_a_calibration http://192.168.5.241:33045/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,043: +SERVICE [/gcs_a_calibration/get_loggers] /gcs_a_calibration http://192.168.5.241:33045/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,044: +SERVICE [/gcs_a_calibration/set_logger_level] /gcs_a_calibration http://192.168.5.241:33045/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,045: +PARAM [/group_a/calibration_ready] by /gcs_a_calibration
+[rosmaster.master][INFO] 2026-10-10 17:05:43,053: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_calibration
+[rosmaster.master][INFO] 2026-10-10 17:05:43,055: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,055: +PUB [/group_a/gp_origin] /gcs_a_calibration http://192.168.5.241:33045/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,056: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,056: +PUB [/group_a/reference_heading] /gcs_a_calibration http://192.168.5.241:33045/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,057: +PUB [/UAV1/uav_task_state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,057: +PUB [/group_a/calibration_ready] /gcs_a_calibration http://192.168.5.241:33045/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,058: +PUB [/UAV1/mavros/state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,059: +PUB [/UAV1/mavros/time_reference] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,059: +SUB [/UAV8/mavros/state] /gcs_a_calibration http://192.168.5.241:33045/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,060: +PUB [/UAV1/mavros/global_position/global] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,060: +PUB [/group_a/uav_link_health] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,060: +PUB [/UAV1/mavros/local_position/pose] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,061: +SUB [/UAV8/gp_origin_confirmed] /gcs_a_calibration http://192.168.5.241:33045/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,062: +PUB [/UAV1/mavros/local_position/odom] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,062: +SERVICE [/group_a/emergency_hold] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,063: +PUB [/UAV1/mavros/rc/in] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,063: +SUB [/UAV8/mavros/global_position/global] /gcs_a_calibration http://192.168.5.241:33045/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,064: +PUB [/UAV1/gp_origin_confirmed] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,064: +SUB [/UAV1/uav_task_state] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,064: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,065: +SUB [/UAV8/mavros/local_position/pose] /gcs_a_calibration http://192.168.5.241:33045/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,065: +SUB [/UAV1/mavros/state] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,066: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,067: +SUB [/UAV10/mavros/state] /gcs_a_calibration http://192.168.5.241:33045/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,067: +SUB [/UAV1/mavros/local_position/pose] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,067: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,068: +SUB [/UAV10/gp_origin_confirmed] /gcs_a_calibration http://192.168.5.241:33045/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,068: +SUB [/UAV2/uav_task_state] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,068: +SUB [/UAV10/mavros/global_position/global] /gcs_a_calibration http://192.168.5.241:33045/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,069: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,069: +SUB [/UAV10/mavros/local_position/pose] /gcs_a_calibration http://192.168.5.241:33045/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,069: +SUB [/UAV2/mavros/state] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,070: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,070: +SUB [/UAV13/mavros/state] /gcs_a_calibration http://192.168.5.241:33045/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,070: +SUB [/UAV2/mavros/local_position/pose] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,070: +SUB [/UAV13/gp_origin_confirmed] /gcs_a_calibration http://192.168.5.241:33045/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,071: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,071: +SUB [/UAV13/mavros/global_position/global] /gcs_a_calibration http://192.168.5.241:33045/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,071: +SUB [/UAV3/uav_task_state] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,072: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,072: +SUB [/UAV13/mavros/local_position/pose] /gcs_a_calibration http://192.168.5.241:33045/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,072: +SUB [/UAV3/mavros/state] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,073: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,073: +SUB [/UAV3/mavros/local_position/pose] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,074: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,074: +SUB [/UAV4/uav_task_state] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,074: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,075: +SUB [/UAV4/mavros/state] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,076: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,077: +SUB [/UAV4/mavros/local_position/pose] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,077: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,078: +SUB [/UAV5/uav_task_state] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,078: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,079: +SUB [/UAV5/mavros/state] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,080: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,080: +SUB [/UAV5/mavros/local_position/pose] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,081: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,082: +SUB [/UAV6/uav_task_state] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,082: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,083: +SUB [/UAV6/mavros/state] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,083: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,084: +SUB [/UAV6/mavros/local_position/pose] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,084: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,084: +SUB [/UAV7/uav_task_state] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,085: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,085: +SUB [/UAV7/mavros/state] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,085: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,086: +SUB [/UAV7/mavros/local_position/pose] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,086: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,087: +SUB [/UAV8/uav_task_state] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,087: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,087: +SUB [/UAV8/mavros/state] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,087: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,088: +SUB [/UAV8/mavros/local_position/pose] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,088: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,089: +SUB [/UAV9/uav_task_state] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,089: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,089: +SUB [/UAV9/mavros/state] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,090: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,090: +SUB [/UAV9/mavros/local_position/pose] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,090: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,091: +SUB [/UAV10/uav_task_state] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,091: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,091: +SUB [/UAV10/mavros/state] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,092: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,092: +SUB [/UAV10/mavros/local_position/pose] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,092: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,093: +SUB [/UAV11/uav_task_state] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,093: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,093: +PUB [/UAV1/trajectory_intent] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,094: +SUB [/UAV11/mavros/state] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,094: +PUB [/UAV1/gps_bias] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,095: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,095: +PUB [/UAV1/group_a/gp_origin] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,095: +PUB [/UAV2/uav_task_state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,096: +PUB [/UAV2/mavros/state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,096: +PUB [/UAV2/mavros/time_reference] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,097: +PUB [/UAV2/mavros/global_position/global] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,097: +PUB [/UAV2/mavros/local_position/pose] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,098: +PUB [/UAV2/mavros/local_position/odom] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,098: +SUB [/UAV11/mavros/local_position/pose] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,098: +PUB [/UAV2/mavros/rc/in] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,098: +PUB [/UAV2/gp_origin_confirmed] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,098: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,099: +SUB [/UAV12/uav_task_state] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,099: +PUB [/UAV2/trajectory_intent] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,100: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,100: +PUB [/UAV2/gps_bias] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,100: +SUB [/UAV12/mavros/state] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,101: +PUB [/UAV2/group_a/gp_origin] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,101: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,101: +PUB [/UAV3/uav_task_state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,102: +SUB [/UAV12/mavros/local_position/pose] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,102: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,102: +PUB [/UAV3/mavros/state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,103: +SUB [/UAV13/uav_task_state] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,103: +PUB [/UAV3/mavros/time_reference] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,103: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,104: +PUB [/UAV3/mavros/global_position/global] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,104: +SUB [/UAV13/mavros/state] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,104: +PUB [/UAV3/mavros/local_position/pose] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,105: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,105: +SUB [/UAV13/mavros/local_position/pose] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,105: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,106: +SUB [/UAV14/uav_task_state] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,106: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,106: +SUB [/UAV14/mavros/state] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,107: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,107: +SUB [/UAV14/mavros/local_position/pose] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,107: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,108: +SUB [/UAV15/uav_task_state] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,108: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,109: +SUB [/UAV15/mavros/state] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,109: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,109: +SUB [/UAV15/mavros/local_position/pose] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,109: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,110: +SUB [/UAV16/uav_task_state] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,110: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,111: +SUB [/UAV16/mavros/state] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,111: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,111: +SUB [/UAV16/mavros/local_position/pose] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,112: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,112: +SUB [/group_a/calibration_ready] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,115: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/', 'http://192.168.5.241:44019/', 'http://192.168.5.241:33045/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,116: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/', 'http://192.168.5.241:44019/', 'http://192.168.5.241:33045/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,116: publisherUpdate[/UAV2/uav_task_state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,138: +PUB [/UAV3/mavros/local_position/odom] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,138: publisherUpdate[/UAV2/uav_task_state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.02, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,139: publisherUpdate[/UAV2/mavros/state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,139: +SUB [/group_a/reference_heading] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,140: +PUB [/UAV3/mavros/rc/in] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,140: publisherUpdate[/UAV2/mavros/state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,141: publisherUpdate[/UAV2/mavros/local_position/pose] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,142: +PUB [/UAV3/gp_origin_confirmed] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,142: publisherUpdate[/UAV2/mavros/local_position/pose] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,142: publisherUpdate[/UAV3/uav_task_state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,143: +PUB [/group_a/execute_task/status] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,143: +PUB [/UAV3/trajectory_intent] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,144: publisherUpdate[/UAV3/uav_task_state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,144: publisherUpdate[/UAV3/mavros/state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,144: +PUB [/UAV3/gps_bias] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,145: +PUB [/UAV3/group_a/gp_origin] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,145: publisherUpdate[/UAV3/mavros/state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,145: +PUB [/group_a/execute_task/result] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,145: publisherUpdate[/UAV3/mavros/local_position/pose] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,146: +PUB [/UAV4/uav_task_state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,146: publisherUpdate[/UAV3/mavros/local_position/pose] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,146: publisherUpdate[/group_a/execute_task/status] -> http://192.168.5.241:42763/ ['http://192.168.5.241:44019/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,147: +PUB [/UAV4/mavros/state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,147: publisherUpdate[/group_a/execute_task/status] -> http://192.168.5.241:42763/ ['http://192.168.5.241:44019/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,148: +PUB [/group_a/execute_task/feedback] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,148: publisherUpdate[/group_a/execute_task/result] -> http://192.168.5.241:42763/ ['http://192.168.5.241:44019/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,148: +PUB [/UAV4/mavros/time_reference] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,149: publisherUpdate[/group_a/execute_task/result] -> http://192.168.5.241:42763/ ['http://192.168.5.241:44019/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,149: +PUB [/UAV4/mavros/global_position/global] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,149: publisherUpdate[/UAV4/uav_task_state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,150: +PUB [/UAV4/mavros/local_position/pose] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,150: +SUB [/group_a/execute_task/goal] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,150: publisherUpdate[/UAV4/uav_task_state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,151: publisherUpdate[/UAV4/mavros/state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,151: +PUB [/UAV4/mavros/local_position/odom] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,151: +PUB [/UAV4/mavros/rc/in] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,151: publisherUpdate[/UAV4/mavros/state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,152: publisherUpdate[/group_a/execute_task/feedback] -> http://192.168.5.241:42763/ ['http://192.168.5.241:44019/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,152: +PUB [/UAV4/gp_origin_confirmed] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,152: publisherUpdate[/group_a/execute_task/feedback] -> http://192.168.5.241:42763/ ['http://192.168.5.241:44019/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,152: publisherUpdate[/UAV4/mavros/local_position/pose] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,152: +PUB [/UAV4/trajectory_intent] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,153: +PUB [/UAV4/gps_bias] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,153: +SUB [/group_a/execute_task/cancel] /gcs_a_backend_node http://192.168.5.241:44019/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,153: publisherUpdate[/UAV4/mavros/local_position/pose] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,154: +PUB [/UAV4/group_a/gp_origin] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,154: +PUB [/UAV5/uav_task_state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,155: +PUB [/UAV5/mavros/state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,155: +PUB [/UAV5/mavros/time_reference] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,155: +PUB [/UAV5/mavros/global_position/global] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,156: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,156: +PUB [/UAV5/mavros/local_position/pose] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,157: +PUB [/UAV5/mavros/local_position/odom] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,157: +PUB [/UAV5/mavros/rc/in] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,157: +PUB [/UAV5/gp_origin_confirmed] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,158: +PUB [/UAV5/trajectory_intent] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,158: +PUB [/UAV5/gps_bias] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,159: +PUB [/UAV5/group_a/gp_origin] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,159: +PUB [/UAV6/uav_task_state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,159: +PUB [/UAV6/mavros/state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,159: +PUB [/UAV6/mavros/time_reference] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,160: +PUB [/UAV6/mavros/global_position/global] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,160: +PUB [/UAV6/mavros/local_position/pose] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,161: +PUB [/UAV6/mavros/local_position/odom] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,162: +PUB [/UAV6/mavros/rc/in] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,163: +PUB [/UAV6/gp_origin_confirmed] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,164: +PUB [/UAV6/trajectory_intent] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,164: +PUB [/UAV6/gps_bias] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,168: +CACHEDPARAM [/rosout_disable_topics_generation] by /tcp_server_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,168: +CACHEDPARAM [/rosout_disable_topics_generation] by /tcp_server_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,170: +CACHEDPARAM [/rosout_disable_topics_generation] by /tcp_server_node
+[rosmaster.master][INFO] 2026-10-10 17:05:43,202: +PUB [/UAV6/group_a/gp_origin] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,203: +PUB [/UAV7/uav_task_state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,204: +PUB [/UAV7/mavros/state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,204: +PUB [/UAV7/mavros/time_reference] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,205: +PUB [/UAV7/mavros/global_position/global] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,206: +PUB [/UAV7/mavros/local_position/pose] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,207: +PUB [/UAV7/mavros/local_position/odom] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,208: +PUB [/UAV7/mavros/rc/in] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,208: +PUB [/UAV7/gp_origin_confirmed] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,209: +PUB [/UAV7/trajectory_intent] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,209: +PUB [/UAV7/gps_bias] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,210: +PUB [/UAV7/group_a/gp_origin] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,210: +PUB [/UAV8/uav_task_state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,210: +PUB [/UAV8/mavros/state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,211: +PUB [/UAV8/mavros/time_reference] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,211: +PUB [/UAV8/mavros/global_position/global] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,211: +PUB [/UAV8/mavros/local_position/pose] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,212: +PUB [/UAV8/mavros/local_position/odom] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,212: +PUB [/UAV8/mavros/rc/in] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,212: +PUB [/UAV8/gp_origin_confirmed] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,213: +PUB [/UAV8/trajectory_intent] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,213: +PUB [/UAV8/gps_bias] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,213: +PUB [/UAV8/group_a/gp_origin] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,214: +PUB [/UAV9/uav_task_state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,214: +PUB [/UAV9/mavros/state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,214: +PUB [/UAV9/mavros/time_reference] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,214: +PUB [/UAV9/mavros/global_position/global] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,215: +PUB [/UAV9/mavros/local_position/pose] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,215: +PUB [/UAV9/mavros/local_position/odom] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,215: +PUB [/UAV9/mavros/rc/in] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,216: +PUB [/UAV9/gp_origin_confirmed] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,216: +PUB [/UAV9/trajectory_intent] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,216: +PUB [/UAV9/gps_bias] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,216: +PUB [/UAV9/group_a/gp_origin] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,217: +PUB [/UAV10/uav_task_state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,217: +PUB [/UAV10/mavros/state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,217: +PUB [/UAV10/mavros/time_reference] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,218: +PUB [/UAV10/mavros/global_position/global] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,218: +PUB [/UAV10/mavros/local_position/pose] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,219: +CACHEDPARAM [/rosout/omit_topics] by /rosout
+[rosmaster.master][INFO] 2026-10-10 17:05:43,219: +PUB [/UAV10/mavros/local_position/odom] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,220: publisherUpdate[/UAV5/uav_task_state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,220: +PUB [/UAV10/mavros/rc/in] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,221: +PUB [/UAV10/gp_origin_confirmed] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,221: publisherUpdate[/UAV5/uav_task_state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,221: publisherUpdate[/UAV5/mavros/state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,221: +PUB [/UAV10/trajectory_intent] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,222: publisherUpdate[/UAV5/mavros/state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,222: publisherUpdate[/UAV5/mavros/local_position/pose] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,222: +PUB [/UAV10/gps_bias] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,222: publisherUpdate[/UAV5/mavros/local_position/pose] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,222: publisherUpdate[/UAV6/uav_task_state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,223: +PUB [/UAV10/group_a/gp_origin] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,223: +PUB [/UAV11/uav_task_state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,223: publisherUpdate[/UAV6/uav_task_state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,223: publisherUpdate[/UAV6/mavros/state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,224: +PUB [/UAV11/mavros/state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,224: +PUB [/UAV11/mavros/time_reference] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,224: +PUB [/UAV11/mavros/global_position/global] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,224: +PUB [/UAV11/mavros/local_position/pose] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,225: publisherUpdate[/UAV6/mavros/state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,225: publisherUpdate[/UAV6/mavros/local_position/pose] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,225: +PUB [/UAV11/mavros/local_position/odom] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,226: publisherUpdate[/UAV6/mavros/local_position/pose] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,226: publisherUpdate[/UAV7/uav_task_state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,226: +PUB [/UAV11/mavros/rc/in] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,226: +PUB [/UAV11/gp_origin_confirmed] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,226: publisherUpdate[/UAV7/uav_task_state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,226: publisherUpdate[/UAV7/mavros/state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,227: +PUB [/UAV11/trajectory_intent] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,227: +PUB [/UAV11/gps_bias] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,227: publisherUpdate[/UAV7/mavros/state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,227: publisherUpdate[/UAV7/mavros/local_position/pose] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,228: +PUB [/UAV11/group_a/gp_origin] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,228: +PUB [/UAV12/uav_task_state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,228: publisherUpdate[/UAV7/mavros/local_position/pose] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,228: publisherUpdate[/UAV8/uav_task_state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,229: +PUB [/UAV12/mavros/state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,229: +PUB [/UAV12/mavros/time_reference] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,229: publisherUpdate[/UAV8/uav_task_state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,229: publisherUpdate[/UAV8/mavros/state] -> http://192.168.5.241:33045/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,230: +PUB [/UAV12/mavros/global_position/global] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,230: publisherUpdate[/UAV8/mavros/state] -> http://192.168.5.241:33045/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,231: +PUB [/UAV12/mavros/local_position/pose] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,231: publisherUpdate[/UAV8/mavros/state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,231: publisherUpdate[/UAV8/mavros/global_position/global] -> http://192.168.5.241:33045/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,231: publisherUpdate[/UAV8/mavros/state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,232: publisherUpdate[/UAV8/mavros/local_position/pose] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,232: +PUB [/UAV12/mavros/local_position/odom] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,232: publisherUpdate[/UAV8/mavros/global_position/global] -> http://192.168.5.241:33045/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,232: publisherUpdate[/UAV8/mavros/local_position/pose] -> http://192.168.5.241:33045/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,233: publisherUpdate[/UAV8/mavros/local_position/pose] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,233: publisherUpdate[/UAV9/uav_task_state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,233: +PUB [/UAV12/mavros/rc/in] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,233: publisherUpdate[/UAV8/mavros/local_position/pose] -> http://192.168.5.241:33045/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,233: publisherUpdate[/UAV8/gp_origin_confirmed] -> http://192.168.5.241:33045/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,233: publisherUpdate[/UAV9/uav_task_state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,233: publisherUpdate[/UAV9/mavros/state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,234: publisherUpdate[/UAV8/gp_origin_confirmed] -> http://192.168.5.241:33045/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,234: publisherUpdate[/UAV10/mavros/state] -> http://192.168.5.241:33045/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,234: publisherUpdate[/UAV9/mavros/state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,234: publisherUpdate[/UAV9/mavros/local_position/pose] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,234: publisherUpdate[/UAV10/mavros/state] -> http://192.168.5.241:33045/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,234: publisherUpdate[/UAV10/mavros/global_position/global] -> http://192.168.5.241:33045/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,235: +PUB [/UAV12/gp_origin_confirmed] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,235: publisherUpdate[/UAV9/mavros/local_position/pose] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,235: publisherUpdate[/UAV10/uav_task_state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,235: publisherUpdate[/UAV10/uav_task_state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,235: publisherUpdate[/UAV10/mavros/state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,235: publisherUpdate[/UAV10/mavros/global_position/global] -> http://192.168.5.241:33045/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,235: publisherUpdate[/UAV10/mavros/local_position/pose] -> http://192.168.5.241:33045/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,236: publisherUpdate[/UAV10/mavros/state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,236: publisherUpdate[/UAV10/mavros/local_position/pose] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,236: +PUB [/UAV12/trajectory_intent] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,236: publisherUpdate[/UAV10/mavros/local_position/pose] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,236: publisherUpdate[/UAV11/uav_task_state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,237: publisherUpdate[/UAV11/uav_task_state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,237: publisherUpdate[/UAV10/mavros/local_position/pose] -> http://192.168.5.241:33045/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,237: publisherUpdate[/UAV11/mavros/state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,237: publisherUpdate[/UAV10/gp_origin_confirmed] -> http://192.168.5.241:33045/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,237: +PUB [/UAV12/gps_bias] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,238: publisherUpdate[/UAV10/gp_origin_confirmed] -> http://192.168.5.241:33045/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,238: publisherUpdate[/UAV11/mavros/state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,238: +PUB [/UAV12/group_a/gp_origin] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,238: publisherUpdate[/UAV11/mavros/local_position/pose] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,239: +PUB [/UAV13/uav_task_state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,239: publisherUpdate[/UAV11/mavros/local_position/pose] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,239: publisherUpdate[/UAV12/uav_task_state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,239: +PUB [/UAV13/mavros/state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,239: publisherUpdate[/UAV12/uav_task_state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,240: publisherUpdate[/UAV12/mavros/state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,240: publisherUpdate[/UAV12/mavros/state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,240: publisherUpdate[/UAV12/mavros/local_position/pose] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,240: +PUB [/UAV13/mavros/time_reference] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,241: publisherUpdate[/UAV12/mavros/local_position/pose] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,241: publisherUpdate[/UAV13/uav_task_state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,241: +PUB [/UAV13/mavros/global_position/global] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,241: publisherUpdate[/UAV13/uav_task_state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,241: publisherUpdate[/UAV13/mavros/state] -> http://192.168.5.241:33045/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,241: +PUB [/UAV13/mavros/local_position/pose] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,242: publisherUpdate[/UAV13/mavros/state] -> http://192.168.5.241:33045/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,242: publisherUpdate[/UAV13/mavros/state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,242: publisherUpdate[/UAV13/mavros/state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,242: publisherUpdate[/UAV13/mavros/global_position/global] -> http://192.168.5.241:33045/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,243: publisherUpdate[/UAV13/mavros/global_position/global] -> http://192.168.5.241:33045/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,243: publisherUpdate[/UAV13/mavros/local_position/pose] -> http://192.168.5.241:33045/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,243: +PUB [/UAV13/mavros/local_position/odom] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,243: publisherUpdate[/UAV13/mavros/local_position/pose] -> http://192.168.5.241:33045/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,243: publisherUpdate[/UAV13/mavros/local_position/pose] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,243: +PUB [/UAV13/mavros/rc/in] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,244: publisherUpdate[/UAV13/mavros/local_position/pose] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,274: +PUB [/UAV13/gp_origin_confirmed] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,276: +PUB [/UAV13/trajectory_intent] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,277: +PUB [/UAV13/gps_bias] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,280: +PUB [/UAV13/group_a/gp_origin] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,281: +PUB [/UAV14/uav_task_state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,282: +PUB [/UAV14/mavros/state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,283: +PUB [/UAV14/mavros/time_reference] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,283: +PUB [/UAV14/mavros/global_position/global] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,284: +PUB [/UAV14/mavros/local_position/pose] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,285: +PUB [/UAV14/mavros/local_position/odom] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,286: +PUB [/UAV14/mavros/rc/in] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,286: +PUB [/UAV14/gp_origin_confirmed] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,287: +PUB [/UAV14/trajectory_intent] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,287: +PUB [/UAV14/gps_bias] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,287: +PUB [/UAV14/group_a/gp_origin] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,288: +PUB [/UAV15/uav_task_state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,288: +PUB [/UAV15/mavros/state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,288: +PUB [/UAV15/mavros/time_reference] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,289: +PUB [/UAV15/mavros/global_position/global] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,289: +PUB [/UAV15/mavros/local_position/pose] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,289: +PUB [/UAV15/mavros/local_position/odom] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,290: +PUB [/UAV15/mavros/rc/in] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,290: +PUB [/UAV15/gp_origin_confirmed] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,290: +PUB [/UAV15/trajectory_intent] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,291: +PUB [/UAV15/gps_bias] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,291: +PUB [/UAV15/group_a/gp_origin] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,291: +PUB [/UAV16/uav_task_state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,291: +PUB [/UAV16/mavros/state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,292: +PUB [/UAV16/mavros/time_reference] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,292: +PUB [/UAV16/mavros/global_position/global] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,292: +PUB [/UAV16/mavros/local_position/pose] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,293: +PUB [/UAV16/mavros/local_position/odom] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,293: +PUB [/UAV16/mavros/rc/in] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,293: +PUB [/UAV16/gp_origin_confirmed] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,293: +PUB [/UAV16/trajectory_intent] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,294: +PUB [/UAV16/gps_bias] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,294: +PUB [/UAV16/group_a/gp_origin] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,294: +SUB [/uav_task_state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,295: +SUB [/mavros/state] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,295: +SUB [/mavros/time_reference] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,296: +SUB [/mavros/global_position/global] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,296: +SUB [/mavros/local_position/pose] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,296: +SUB [/mavros/local_position/odom] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,297: +SUB [/mavros/rc/in] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,297: +SUB [/gp_origin_confirmed] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,298: +SUB [/trajectory_intent] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,298: +SUB [/gps_bias] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,298: +SUB [/group_a/gp_origin] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,300: +SERVICE [/UAV1/uav_task] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,300: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,302: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,303: +SERVICE [/UAV1/uav_task_control] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,305: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,305: +SERVICE [/UAV1/uav_hold] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,306: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,306: +SERVICE [/UAV2/uav_task] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,307: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,307: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,308: +SERVICE [/UAV2/uav_task_control] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,308: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,308: +SERVICE [/UAV2/uav_hold] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,309: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,309: +SERVICE [/UAV3/uav_task] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,309: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,310: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,310: +SERVICE [/UAV3/uav_task_control] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,311: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,311: +SERVICE [/UAV3/uav_hold] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,311: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,312: +SERVICE [/UAV4/uav_task] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,312: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,313: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,313: +SERVICE [/UAV4/uav_task_control] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,313: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,314: +SERVICE [/UAV4/uav_hold] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,314: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,314: +SERVICE [/UAV5/uav_task] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,315: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,315: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,315: +SERVICE [/UAV5/uav_task_control] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,316: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,316: +SERVICE [/UAV5/uav_hold] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,316: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,317: +SERVICE [/UAV6/uav_task] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,317: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,317: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,318: +SERVICE [/UAV6/uav_task_control] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,318: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,319: +SERVICE [/UAV6/uav_hold] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,319: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,319: +SERVICE [/UAV7/uav_task] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,320: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,320: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,321: +SERVICE [/UAV7/uav_task_control] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,321: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,322: +SERVICE [/UAV7/uav_hold] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,322: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,322: +SERVICE [/UAV8/uav_task] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,322: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,323: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,323: +SERVICE [/UAV8/uav_task_control] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,324: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,324: +SERVICE [/UAV8/uav_hold] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,324: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,325: +SERVICE [/UAV9/uav_task] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,325: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,326: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,326: +SERVICE [/UAV9/uav_task_control] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,326: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,327: +SERVICE [/UAV9/uav_hold] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,327: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,327: +SERVICE [/UAV10/uav_task] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,328: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,328: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,329: +SERVICE [/UAV10/uav_task_control] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,329: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,329: +SERVICE [/UAV10/uav_hold] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,330: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,330: +SERVICE [/UAV11/uav_task] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,330: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,331: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,331: +SERVICE [/UAV11/uav_task_control] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,331: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,332: +SERVICE [/UAV11/uav_hold] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,332: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,332: +SERVICE [/UAV12/uav_task] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,333: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,333: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,334: +SERVICE [/UAV12/uav_task_control] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,334: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,334: +SERVICE [/UAV12/uav_hold] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,334: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,335: +SERVICE [/UAV13/uav_task] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,335: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,336: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,336: +SERVICE [/UAV13/uav_task_control] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,336: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,337: +SERVICE [/UAV13/uav_hold] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,337: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,337: +SERVICE [/UAV14/uav_task] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,338: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,338: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,338: publisherUpdate[/UAV13/gp_origin_confirmed] -> http://192.168.5.241:33045/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,339: +SERVICE [/UAV14/uav_task_control] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,339: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,339: publisherUpdate[/UAV13/gp_origin_confirmed] -> http://192.168.5.241:33045/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,339: publisherUpdate[/UAV14/uav_task_state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,340: +SERVICE [/UAV14/uav_hold] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,340: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,341: publisherUpdate[/UAV14/uav_task_state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,341: +SERVICE [/UAV15/uav_task] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,341: publisherUpdate[/UAV14/mavros/state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,342: publisherUpdate[/UAV14/mavros/state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,342: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,342: publisherUpdate[/UAV14/mavros/local_position/pose] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,342: publisherUpdate[/UAV14/mavros/local_position/pose] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,342: publisherUpdate[/UAV15/uav_task_state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,343: publisherUpdate[/UAV15/uav_task_state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,343: publisherUpdate[/UAV15/mavros/state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,344: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,344: publisherUpdate[/UAV15/mavros/state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,344: publisherUpdate[/UAV15/mavros/local_position/pose] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,345: +SERVICE [/UAV15/uav_task_control] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,345: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,346: publisherUpdate[/UAV15/mavros/local_position/pose] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,346: publisherUpdate[/UAV16/uav_task_state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,346: +SERVICE [/UAV15/uav_hold] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,347: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,347: publisherUpdate[/UAV16/uav_task_state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,347: publisherUpdate[/UAV16/mavros/state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,347: +SERVICE [/UAV16/uav_task] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,348: publisherUpdate[/UAV16/mavros/state] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,348: publisherUpdate[/UAV16/mavros/local_position/pose] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']
+[rosmaster.master][INFO] 2026-10-10 17:05:43,348: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,350: publisherUpdate[/UAV16/mavros/local_position/pose] -> http://192.168.5.241:44019/ ['http://192.168.5.241:37321/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:05:43,350: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,351: +SERVICE [/UAV16/uav_task_control] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,352: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,352: +SERVICE [/UAV16/uav_hold] /swarm_bridge http://192.168.5.241:37321/
+[rosmaster.master][INFO] 2026-10-10 17:05:43,353: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:43,355: +CACHEDPARAM [/rosout_disable_topics_generation] by /swarm_bridge
+[rosmaster.master][INFO] 2026-10-10 17:05:44,143: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:45,047: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:45,349: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:47,154: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:48,058: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:48,361: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:05:52,174: +PARAM [/group_a/frozen_reference_heading] by /gcs_a_calibration
+[rosmaster.master][INFO] 2026-10-10 17:05:52,175: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_calibration
+[rosmaster.master][INFO] 2026-10-10 17:05:52,273: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_calibration
+[rosmaster.master][INFO] 2026-10-10 17:05:52,373: +PARAM [/group_a/calibration_ready] by /gcs_a_calibration
+[rosmaster.master][INFO] 2026-10-10 17:05:52,375: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_calibration
+[rosmaster.master][INFO] 2026-10-10 17:06:04,601: +PUB [/rosout] /rostopic_53418_1791623164487 http://yjq:33579/
+[rosmaster.master][INFO] 2026-10-10 17:06:04,604: +SERVICE [/rostopic_53418_1791623164487/get_loggers] /rostopic_53418_1791623164487 http://yjq:33579/
+[rosmaster.master][INFO] 2026-10-10 17:06:04,605: +SERVICE [/rostopic_53418_1791623164487/set_logger_level] /rostopic_53418_1791623164487 http://yjq:33579/
+[rosmaster.master][INFO] 2026-10-10 17:06:04,611: +SUB [/group_a/calibration_ready] /rostopic_53418_1791623164487 http://yjq:33579/
+[rosmaster.master][INFO] 2026-10-10 17:06:04,681: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/', 'http://192.168.5.241:44019/', 'http://192.168.5.241:33045/', 'http://yjq:33579/']
+[rosmaster.master][INFO] 2026-10-10 17:06:04,683: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/', 'http://192.168.5.241:44019/', 'http://192.168.5.241:33045/', 'http://yjq:33579/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:06:04,713: -SUB [/group_a/calibration_ready] /rostopic_53418_1791623164487 http://yjq:33579/
+[rosmaster.master][INFO] 2026-10-10 17:06:04,713: -PUB [/rosout] /rostopic_53418_1791623164487 http://yjq:33579/
+[rosmaster.master][INFO] 2026-10-10 17:06:04,714: -SERVICE [/rostopic_53418_1791623164487/get_loggers] /rostopic_53418_1791623164487 rosrpc://yjq:39647
+[rosmaster.master][INFO] 2026-10-10 17:06:04,714: -SERVICE [/rostopic_53418_1791623164487/set_logger_level] /rostopic_53418_1791623164487 rosrpc://yjq:39647
+[rosmaster.master][INFO] 2026-10-10 17:06:04,783: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/', 'http://192.168.5.241:44019/', 'http://192.168.5.241:33045/']
+[rosmaster.master][INFO] 2026-10-10 17:06:04,784: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/', 'http://192.168.5.241:44019/', 'http://192.168.5.241:33045/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:06:14,703: +PUB [/rosout] /origin_chk_53542_1791623174586 http://yjq:34957/
+[rosmaster.master][INFO] 2026-10-10 17:06:14,705: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/', 'http://192.168.5.241:44019/', 'http://192.168.5.241:33045/', 'http://yjq:34957/']
+[rosmaster.master][INFO] 2026-10-10 17:06:14,706: +SERVICE [/origin_chk_53542_1791623174586/get_loggers] /origin_chk_53542_1791623174586 http://yjq:34957/
+[rosmaster.master][INFO] 2026-10-10 17:06:14,707: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/', 'http://192.168.5.241:44019/', 'http://192.168.5.241:33045/', 'http://yjq:34957/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:06:14,707: +SERVICE [/origin_chk_53542_1791623174586/set_logger_level] /origin_chk_53542_1791623174586 http://yjq:34957/
+[rosmaster.master][INFO] 2026-10-10 17:06:14,709: +SUB [/UAV8/mavros/global_position/global] /origin_chk_53542_1791623174586 http://yjq:34957/
+[rosmaster.master][INFO] 2026-10-10 17:06:14,710: +SUB [/UAV10/mavros/global_position/global] /origin_chk_53542_1791623174586 http://yjq:34957/
+[rosmaster.master][INFO] 2026-10-10 17:06:14,712: +SUB [/UAV13/mavros/global_position/global] /origin_chk_53542_1791623174586 http://yjq:34957/
+[rosmaster.master][INFO] 2026-10-10 17:06:15,115: -SUB [/UAV8/mavros/global_position/global] /origin_chk_53542_1791623174586 http://yjq:34957/
+[rosmaster.master][INFO] 2026-10-10 17:06:15,115: -SUB [/UAV10/mavros/global_position/global] /origin_chk_53542_1791623174586 http://yjq:34957/
+[rosmaster.master][INFO] 2026-10-10 17:06:15,115: -SUB [/UAV13/mavros/global_position/global] /origin_chk_53542_1791623174586 http://yjq:34957/
+[rosmaster.master][INFO] 2026-10-10 17:06:15,115: -PUB [/rosout] /origin_chk_53542_1791623174586 http://yjq:34957/
+[rosmaster.master][INFO] 2026-10-10 17:06:15,115: -SERVICE [/origin_chk_53542_1791623174586/get_loggers] /origin_chk_53542_1791623174586 rosrpc://yjq:34427
+[rosmaster.master][INFO] 2026-10-10 17:06:15,115: -SERVICE [/origin_chk_53542_1791623174586/set_logger_level] /origin_chk_53542_1791623174586 rosrpc://yjq:34427
+[rosmaster.master][INFO] 2026-10-10 17:06:15,200: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/', 'http://192.168.5.241:44019/', 'http://192.168.5.241:33045/']
+[rosmaster.master][INFO] 2026-10-10 17:06:15,201: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/', 'http://192.168.5.241:44019/', 'http://192.168.5.241:33045/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:06:16,119: +PUB [/rosout] /rostopic_53593_1791623176004 http://yjq:42017/
+[rosmaster.master][INFO] 2026-10-10 17:06:16,121: +SERVICE [/rostopic_53593_1791623176004/get_loggers] /rostopic_53593_1791623176004 http://yjq:42017/
+[rosmaster.master][INFO] 2026-10-10 17:06:16,121: +SERVICE [/rostopic_53593_1791623176004/set_logger_level] /rostopic_53593_1791623176004 http://yjq:42017/
+[rosmaster.master][INFO] 2026-10-10 17:06:16,132: +SUB [/group_a/gp_origin] /rostopic_53593_1791623176004 http://yjq:42017/
+[rosmaster.master][INFO] 2026-10-10 17:06:16,202: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/', 'http://192.168.5.241:44019/', 'http://192.168.5.241:33045/', 'http://yjq:42017/']
+[rosmaster.master][INFO] 2026-10-10 17:06:16,202: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/', 'http://192.168.5.241:44019/', 'http://192.168.5.241:33045/', 'http://yjq:42017/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:06:16,233: -SUB [/group_a/gp_origin] /rostopic_53593_1791623176004 http://yjq:42017/
+[rosmaster.master][INFO] 2026-10-10 17:06:16,234: -PUB [/rosout] /rostopic_53593_1791623176004 http://yjq:42017/
+[rosmaster.master][INFO] 2026-10-10 17:06:16,234: -SERVICE [/rostopic_53593_1791623176004/get_loggers] /rostopic_53593_1791623176004 rosrpc://yjq:45705
+[rosmaster.master][INFO] 2026-10-10 17:06:16,234: -SERVICE [/rostopic_53593_1791623176004/set_logger_level] /rostopic_53593_1791623176004 rosrpc://yjq:45705
+[rosmaster.master][INFO] 2026-10-10 17:06:16,303: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/', 'http://192.168.5.241:44019/', 'http://192.168.5.241:33045/']
+[rosmaster.master][INFO] 2026-10-10 17:06:16,304: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/', 'http://192.168.5.241:44019/', 'http://192.168.5.241:33045/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:08:33,262: +PUB [/rosout] /rostopic_54053_1791623313144 http://192.168.5.241:40063/
+[rosmaster.master][INFO] 2026-10-10 17:08:33,265: +SERVICE [/rostopic_54053_1791623313144/get_loggers] /rostopic_54053_1791623313144 http://192.168.5.241:40063/
+[rosmaster.master][INFO] 2026-10-10 17:08:33,266: +SERVICE [/rostopic_54053_1791623313144/set_logger_level] /rostopic_54053_1791623313144 http://192.168.5.241:40063/
+[rosmaster.master][INFO] 2026-10-10 17:08:33,274: +SUB [/group_a/calibration_ready] /rostopic_54053_1791623313144 http://192.168.5.241:40063/
+[rosmaster.master][INFO] 2026-10-10 17:08:33,333: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/', 'http://192.168.5.241:44019/', 'http://192.168.5.241:33045/', 'http://192.168.5.241:40063/']
+[rosmaster.master][INFO] 2026-10-10 17:08:33,334: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/', 'http://192.168.5.241:44019/', 'http://192.168.5.241:33045/', 'http://192.168.5.241:40063/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:08:33,376: -SUB [/group_a/calibration_ready] /rostopic_54053_1791623313144 http://192.168.5.241:40063/
+[rosmaster.master][INFO] 2026-10-10 17:08:33,376: -PUB [/rosout] /rostopic_54053_1791623313144 http://192.168.5.241:40063/
+[rosmaster.master][INFO] 2026-10-10 17:08:33,376: -SERVICE [/rostopic_54053_1791623313144/get_loggers] /rostopic_54053_1791623313144 rosrpc://192.168.5.241:34655
+[rosmaster.master][INFO] 2026-10-10 17:08:33,376: -SERVICE [/rostopic_54053_1791623313144/set_logger_level] /rostopic_54053_1791623313144 rosrpc://192.168.5.241:34655
+[rosmaster.master][INFO] 2026-10-10 17:08:33,433: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/', 'http://192.168.5.241:44019/', 'http://192.168.5.241:33045/']
+[rosmaster.master][INFO] 2026-10-10 17:08:33,434: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/', 'http://192.168.5.241:44019/', 'http://192.168.5.241:33045/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:08:34,383: +PUB [/rosout] /rostopic_54118_1791623314269 http://192.168.5.241:39827/
+[rosmaster.master][INFO] 2026-10-10 17:08:34,387: +SERVICE [/rostopic_54118_1791623314269/get_loggers] /rostopic_54118_1791623314269 http://192.168.5.241:39827/
+[rosmaster.master][INFO] 2026-10-10 17:08:34,388: +SERVICE [/rostopic_54118_1791623314269/set_logger_level] /rostopic_54118_1791623314269 http://192.168.5.241:39827/
+[rosmaster.master][INFO] 2026-10-10 17:08:34,402: +SUB [/UAV8/mavros/state] /rostopic_54118_1791623314269 http://192.168.5.241:39827/
+[rosmaster.master][INFO] 2026-10-10 17:08:34,436: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/', 'http://192.168.5.241:44019/', 'http://192.168.5.241:33045/', 'http://192.168.5.241:39827/']
+[rosmaster.master][INFO] 2026-10-10 17:08:34,437: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/', 'http://192.168.5.241:44019/', 'http://192.168.5.241:33045/', 'http://192.168.5.241:39827/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:08:34,904: -SUB [/UAV8/mavros/state] /rostopic_54118_1791623314269 http://192.168.5.241:39827/
+[rosmaster.master][INFO] 2026-10-10 17:08:34,905: -PUB [/rosout] /rostopic_54118_1791623314269 http://192.168.5.241:39827/
+[rosmaster.master][INFO] 2026-10-10 17:08:34,905: -SERVICE [/rostopic_54118_1791623314269/get_loggers] /rostopic_54118_1791623314269 rosrpc://192.168.5.241:36099
+[rosmaster.master][INFO] 2026-10-10 17:08:34,905: -SERVICE [/rostopic_54118_1791623314269/set_logger_level] /rostopic_54118_1791623314269 rosrpc://192.168.5.241:36099
+[rosmaster.master][INFO] 2026-10-10 17:08:34,937: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/', 'http://192.168.5.241:44019/', 'http://192.168.5.241:33045/']
+[rosmaster.master][INFO] 2026-10-10 17:08:34,938: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/', 'http://192.168.5.241:44019/', 'http://192.168.5.241:33045/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:08:35,913: +PUB [/rosout] /rostopic_54185_1791623315794 http://192.168.5.241:46095/
+[rosmaster.master][INFO] 2026-10-10 17:08:35,916: +SERVICE [/rostopic_54185_1791623315794/get_loggers] /rostopic_54185_1791623315794 http://192.168.5.241:46095/
+[rosmaster.master][INFO] 2026-10-10 17:08:35,917: +SERVICE [/rostopic_54185_1791623315794/set_logger_level] /rostopic_54185_1791623315794 http://192.168.5.241:46095/
+[rosmaster.master][INFO] 2026-10-10 17:08:35,932: +SUB [/UAV10/mavros/state] /rostopic_54185_1791623315794 http://192.168.5.241:46095/
+[rosmaster.master][INFO] 2026-10-10 17:08:35,940: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/', 'http://192.168.5.241:44019/', 'http://192.168.5.241:33045/', 'http://192.168.5.241:46095/']
+[rosmaster.master][INFO] 2026-10-10 17:08:35,941: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/', 'http://192.168.5.241:44019/', 'http://192.168.5.241:33045/', 'http://192.168.5.241:46095/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:08:36,135: -SUB [/UAV10/mavros/state] /rostopic_54185_1791623315794 http://192.168.5.241:46095/
+[rosmaster.master][INFO] 2026-10-10 17:08:36,135: -PUB [/rosout] /rostopic_54185_1791623315794 http://192.168.5.241:46095/
+[rosmaster.master][INFO] 2026-10-10 17:08:36,135: -SERVICE [/rostopic_54185_1791623315794/get_loggers] /rostopic_54185_1791623315794 rosrpc://192.168.5.241:45951
+[rosmaster.master][INFO] 2026-10-10 17:08:36,135: -SERVICE [/rostopic_54185_1791623315794/set_logger_level] /rostopic_54185_1791623315794 rosrpc://192.168.5.241:45951
+[rosmaster.master][INFO] 2026-10-10 17:08:36,141: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/', 'http://192.168.5.241:44019/', 'http://192.168.5.241:33045/']
+[rosmaster.master][INFO] 2026-10-10 17:08:36,141: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/', 'http://192.168.5.241:44019/', 'http://192.168.5.241:33045/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:08:37,144: +PUB [/rosout] /rostopic_54250_1791623317024 http://192.168.5.241:40285/
+[rosmaster.master][INFO] 2026-10-10 17:08:37,147: +SERVICE [/rostopic_54250_1791623317024/get_loggers] /rostopic_54250_1791623317024 http://192.168.5.241:40285/
+[rosmaster.master][INFO] 2026-10-10 17:08:37,148: +SERVICE [/rostopic_54250_1791623317024/set_logger_level] /rostopic_54250_1791623317024 http://192.168.5.241:40285/
+[rosmaster.master][INFO] 2026-10-10 17:08:37,154: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/', 'http://192.168.5.241:44019/', 'http://192.168.5.241:33045/', 'http://192.168.5.241:40285/']
+[rosmaster.master][INFO] 2026-10-10 17:08:37,155: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/', 'http://192.168.5.241:44019/', 'http://192.168.5.241:33045/', 'http://192.168.5.241:40285/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:08:37,165: +SUB [/UAV13/mavros/state] /rostopic_54250_1791623317024 http://192.168.5.241:40285/
+[rosmaster.master][INFO] 2026-10-10 17:08:37,668: -SUB [/UAV13/mavros/state] /rostopic_54250_1791623317024 http://192.168.5.241:40285/
+[rosmaster.master][INFO] 2026-10-10 17:08:37,668: -PUB [/rosout] /rostopic_54250_1791623317024 http://192.168.5.241:40285/
+[rosmaster.master][INFO] 2026-10-10 17:08:37,668: -SERVICE [/rostopic_54250_1791623317024/get_loggers] /rostopic_54250_1791623317024 rosrpc://192.168.5.241:34669
+[rosmaster.master][INFO] 2026-10-10 17:08:37,668: -SERVICE [/rostopic_54250_1791623317024/set_logger_level] /rostopic_54250_1791623317024 rosrpc://192.168.5.241:34669
+[rosmaster.master][INFO] 2026-10-10 17:08:37,745: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/', 'http://192.168.5.241:44019/', 'http://192.168.5.241:33045/']
+[rosmaster.master][INFO] 2026-10-10 17:08:37,746: publisherUpdate[/rosout] -> http://192.168.5.241:46407/ ['http://192.168.5.241:42763/', 'http://192.168.5.241:37321/', 'http://192.168.5.241:44019/', 'http://192.168.5.241:33045/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-10 17:08:38,305: +CACHEDPARAM [/rosout_disable_topics_generation] by /tcp_server_node
+[rosmaster.master][INFO] 2026-10-10 17:08:38,443: +CACHEDPARAM [/rosout_disable_topics_generation] by /tcp_server_node
+[rosmaster.master][INFO] 2026-10-10 17:08:38,446: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:08:38,447: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:08:38,449: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:08:38,450: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:08:38,452: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:08:38,453: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:08:38,453: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:08:38,454: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:08:38,454: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:08:38,514: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:08:38,516: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:08:38,517: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:08:38,633: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:09:06,191: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:09:06,412: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:17:01,157: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:17:06,164: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:17:33,696: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node
+[rosmaster.master][INFO] 2026-10-10 17:17:36,701: +CACHEDPARAM [/rosout_disable_topics_generation] by /gcs_a_backend_node

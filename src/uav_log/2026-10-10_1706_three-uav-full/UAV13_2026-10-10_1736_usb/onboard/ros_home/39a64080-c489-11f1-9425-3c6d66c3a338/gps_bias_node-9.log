@@ -1,0 +1,19 @@
+[rospy.client][INFO] 2026-10-10 17:01:50,265: init_node, name[/gps_bias_node], pid[3442]
+[xmlrpc][INFO] 2026-10-10 17:01:50,266: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-10-10 17:01:50,267: Started XML-RPC server [http://UAV13:41793/]
+[rospy.init][INFO] 2026-10-10 17:01:50,267: ROS Slave URI: [http://UAV13:41793/]
+[rospy.impl.masterslave][INFO] 2026-10-10 17:01:50,267: _ready: http://UAV13:41793/
+[rospy.registration][INFO] 2026-10-10 17:01:50,269: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2026-10-10 17:01:50,269: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-10-10 17:01:50,368: registered with master
+[rospy.rosout][INFO] 2026-10-10 17:01:50,368: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-10-10 17:01:50,375: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-10-10 17:01:50,377: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2026-10-10 17:01:50,401: topic[/mavros/time_reference] adding connection to [http://UAV13:39873/], count 0
+[rospy.internal][INFO] 2026-10-10 17:01:50,537: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2026-10-10 17:01:50,648: topic[/gps_bias] adding connection to [/ego_planner_driver], count 0
+[rospy.internal][INFO] 2026-10-10 17:01:50,885: topic[/gps_bias] adding connection to [/swarm_bridge], count 1
+[rospy.internal][INFO] 2026-10-10 17:06:26,096: topic[/gps_bias] adding connection to [/record_1791623185654291314], count 2
+[rospy.internal][INFO] 2026-10-10 17:06:26,103: topic[/rosout] adding connection to [/record_1791623185654291314], count 1
+[rospy.internal][INFO] 2026-10-10 17:19:12,382: topic[/rosout] removing connection to /record_1791623185654291314
+[rospy.internal][INFO] 2026-10-10 17:19:12,383: topic[/gps_bias] removing connection to /record_1791623185654291314

@@ -1,0 +1,28 @@
+# status|source|relpath|bytes|md5|note
+# host=UAV13
+# epoch=1791618336
+# date=2026-10-10 15:45:36 CST
+# target=UAV13 ip=192.168.5.131 mav=13:1 ssh_user=- stamp=2026-10-10_1544
+OK|ssh|onboard/ego_planner/UAV13-ego-planner.log|0|d41d8cd98f00b204e9800998ecf8427e|-
+OK|ssh|onboard/health/UAV13_bridge_health.jsonl|9785344|426a5bab091abe687a6ecec21d3663b7|-
+OK|ssh|onboard/health/UAV13_follower_events.jsonl|4319|3bbe5920423c6f03a07109645689e09b|-
+OK|ssh|onboard/health/UAV13_relay_events.jsonl|12790|da7f8fb7dadc60e46b7dd270f6daa2e6|-
+OK|ssh|onboard/ros_home/64af2f9c-c477-11f1-b1b3-3c6d66c3a338/gp_origin_receiver-7.log|2424|29f4af5361ce28d7465c4df9036a04bc|-
+OK|ssh|onboard/ros_home/64af2f9c-c477-11f1-b1b3-3c6d66c3a338/gp_origin_receiver-8.log|3172|9dc174002f8bc82df257bd67420a9396|-
+OK|ssh|onboard/ros_home/64af2f9c-c477-11f1-b1b3-3c6d66c3a338/gps_bias_node-8.log|1884|5d9d975fc3b47ceee03624afcf0cb55c|-
+OK|ssh|onboard/ros_home/64af2f9c-c477-11f1-b1b3-3c6d66c3a338/gps_bias_node-9.log|2036|949798dd32363e1cac8d7316785baded|-
+OK|ssh|onboard/ros_home/64af2f9c-c477-11f1-b1b3-3c6d66c3a338/master.log|327375|5e4a03ef099c4ff3d7815a7b183cb6a2|-
+OK|ssh|onboard/ros_home/64af2f9c-c477-11f1-b1b3-3c6d66c3a338/pose_relay-3.log|1995|448765dce3c10b5e0a090ff80105c22d|-
+OK|ssh|onboard/ros_home/64af2f9c-c477-11f1-b1b3-3c6d66c3a338/pose_relay-4.log|2158|b72f01e442f22aa2c0c290c040ac07f9|-
+OK|ssh|onboard/ros_home/64af2f9c-c477-11f1-b1b3-3c6d66c3a338/roslaunch-UAV13-4256.log|48735|aaa04cb0db6ef948b360ac6ae1273182|-
+OK|ssh|onboard/ros_home/64af2f9c-c477-11f1-b1b3-3c6d66c3a338/roslaunch-UAV13-5081.log|38016|97a3689d8fa75bcd6c8a5cc20b20445b|-
+OK|ssh|onboard/ros_home/64af2f9c-c477-11f1-b1b3-3c6d66c3a338/rosout-1-stdout.log|250|141a285c027b899a190c33d65deaede5|-
+OK|ssh|onboard/ros_home/64af2f9c-c477-11f1-b1b3-3c6d66c3a338/rosout.log|1129615|95abcd6a1f95e3f26f6536e9d6604fd2|-
+OK|ssh|onboard/ros_home/64af2f9c-c477-11f1-b1b3-3c6d66c3a338/setpoint_relay-4.log|2352|7710d533cdb6d26dfefdd2230d30f7c8|-
+OK|ssh|onboard/ros_home/64af2f9c-c477-11f1-b1b3-3c6d66c3a338/setpoint_relay-5.log|2728|0a0cdc4c67092821c34b7d3730b7b396|-
+OK|ssh|onboard/ros_home/64af2f9c-c477-11f1-b1b3-3c6d66c3a338/swarm_bridge-6.log|18222|bb4bcf64d13867caf90d848e35d9d56f|-
+OK|ssh|onboard/ros_home/64af2f9c-c477-11f1-b1b3-3c6d66c3a338/swarm_bridge-7.log|11094|b00ab0923186298bdcd89001c77c8059|-
+OK|ssh|onboard/ros_home/64af2f9c-c477-11f1-b1b3-3c6d66c3a338/uav_executor_UAV13-5.log|5641|73d6045f18a1055777cf176fb4a90536|-
+OK|ssh|onboard/ros_home/64af2f9c-c477-11f1-b1b3-3c6d66c3a338/uav_executor_UAV13-6.log|6046|cf7a7ef7a36ae0489b18bf29c96ce353|-
+OK|ssh|onboard/ssh.err|80|efff4a458a4eff504332c3793c29bbfa|-
+OK|ssh|onboard/term/UAV13_offboard_ego.log|1134993|f8a01a2cea1a1a6c57631a3503cb0a42|-

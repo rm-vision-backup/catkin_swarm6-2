@@ -18,8 +18,16 @@ __pycache__/
 /.runtime_logs/
 /quality_reports/
 
+# 实飞原始日志（src/uav_log/）：录制件与逐样本遥测体积大、不可 diff，不入库
+# （被忽略的文件仍留在本地磁盘；历轮也从未入库过 bag）
+/src/uav_log/**/rosbag/
+/src/uav_log/**/*.bag
+/src/uav_log/**/*_bridge_health*.jsonl
+
 # 本地保留的大文件，不入库
 /references/QGroundControl.AppImage
+# 09-23 轮机载 planner 日志（11.5 MB，单文件超 5 MB 另列）
+/src/uav_log/2026-09-23_1703_four-uav-recon-001/ros_home/UAV8/runtime_logs/ego_planner/UAV8-ego-planner.log
 
 # 本地临时归档，不入库
 /references/*.zip

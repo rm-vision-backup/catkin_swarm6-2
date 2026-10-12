@@ -1,0 +1,152 @@
+[rospy.client][INFO] 2026-10-10 17:05:42,917: init_node, name[/swarm_bridge], pid[52854]
+[xmlrpc][INFO] 2026-10-10 17:05:42,917: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-10-10 17:05:42,917: Started XML-RPC server [http://192.168.5.241:37321/]
+[rospy.impl.masterslave][INFO] 2026-10-10 17:05:42,918: _ready: http://192.168.5.241:37321/
+[rospy.init][INFO] 2026-10-10 17:05:42,918: ROS Slave URI: [http://192.168.5.241:37321/]
+[rospy.registration][INFO] 2026-10-10 17:05:42,918: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2026-10-10 17:05:42,919: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-10-10 17:05:43,019: registered with master
+[rospy.rosout][INFO] 2026-10-10 17:05:43,019: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-10-10 17:05:43,022: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-10-10 17:05:43,023: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2026-10-10 17:05:43,054: bridge: my_name=GCS_A, port_offset=0, topics=11, health=/home/yjq/catkin_swarm6-2/.ros_home/log/health/GCS_A_bridge_health.jsonl
+[rosout][INFO] 2026-10-10 17:05:43,055: bridge: recv sources=UAV1,UAV2,UAV3,UAV4,UAV5,UAV6,UAV7,UAV8,UAV9,UAV10,UAV11,UAV12,UAV13,UAV14,UAV15,UAV16
+[rospy.internal][INFO] 2026-10-10 17:05:43,098: topic[/UAV1/mavros/state] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,099: topic[/UAV1/uav_task_state] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,100: topic[/UAV1/mavros/local_position/pose] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,149: topic[/UAV3/mavros/state] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,153: topic[/UAV3/mavros/local_position/pose] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,156: topic[/UAV3/uav_task_state] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,157: topic[/UAV4/mavros/local_position/pose] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,160: topic[/UAV4/mavros/state] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,161: topic[/UAV4/uav_task_state] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,162: topic[/UAV2/mavros/local_position/pose] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,163: topic[/UAV2/mavros/state] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,164: topic[/UAV2/uav_task_state] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,218: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,226: topic[/UAV5/uav_task_state] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,227: topic[/UAV5/mavros/state] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,229: topic[/UAV5/mavros/local_position/pose] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,232: topic[/UAV6/mavros/state] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,232: topic[/UAV7/mavros/state] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,234: topic[/UAV7/uav_task_state] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,235: topic[/UAV8/mavros/state] adding connection to [/gcs_a_calibration], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,237: topic[/UAV8/uav_task_state] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,239: topic[/UAV8/mavros/state] adding connection to [/gcs_a_backend_node], count 1
+[rospy.internal][INFO] 2026-10-10 17:05:43,239: topic[/UAV8/gp_origin_confirmed] adding connection to [/gcs_a_calibration], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,240: topic[/UAV8/mavros/global_position/global] adding connection to [/gcs_a_calibration], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,241: topic[/UAV8/mavros/local_position/pose] adding connection to [/gcs_a_calibration], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,241: topic[/UAV8/mavros/local_position/pose] adding connection to [/gcs_a_backend_node], count 1
+[rospy.internal][INFO] 2026-10-10 17:05:43,243: topic[/UAV10/mavros/state] adding connection to [/gcs_a_calibration], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,244: topic[/UAV9/mavros/state] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,245: topic[/UAV10/uav_task_state] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,245: topic[/UAV10/mavros/local_position/pose] adding connection to [/gcs_a_calibration], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,277: topic[/UAV10/gp_origin_confirmed] adding connection to [/gcs_a_calibration], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,280: topic[/UAV10/mavros/local_position/pose] adding connection to [/gcs_a_backend_node], count 1
+[rospy.internal][INFO] 2026-10-10 17:05:43,281: topic[/UAV11/uav_task_state] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,282: topic[/UAV12/uav_task_state] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,284: topic[/UAV12/mavros/state] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,284: topic[/UAV13/uav_task_state] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,285: topic[/UAV13/mavros/global_position/global] adding connection to [/gcs_a_calibration], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,286: topic[/UAV13/mavros/local_position/pose] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,286: topic[/UAV9/mavros/local_position/pose] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,287: topic[/UAV7/mavros/local_position/pose] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,287: topic[/UAV6/mavros/local_position/pose] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,288: topic[/UAV6/uav_task_state] adding connection to [/gcs_a_backend_node], count 0
+[rosout][INFO] 2026-10-10 17:05:43,300: bridge: proxying /UAV1/uav_task -> UAV1
+[rosout][INFO] 2026-10-10 17:05:43,301: bridge: dealer connected to UAV1 service router 192.168.5.11:14000
+[rospy.internal][INFO] 2026-10-10 17:05:43,303: topic[/group_a/gp_origin] adding connection to [http://192.168.5.241:33045/], count 0
+[rosout][INFO] 2026-10-10 17:05:43,303: bridge: proxying /UAV1/uav_task_control -> UAV1
+[rosout][INFO] 2026-10-10 17:05:43,306: bridge: proxying /UAV1/uav_hold -> UAV1
+[rosout][INFO] 2026-10-10 17:05:43,306: bridge: proxying /UAV2/uav_task -> UAV2
+[rosout][INFO] 2026-10-10 17:05:43,307: bridge: dealer connected to UAV2 service router 192.168.5.21:14000
+[rosout][INFO] 2026-10-10 17:05:43,308: bridge: proxying /UAV2/uav_task_control -> UAV2
+[rosout][INFO] 2026-10-10 17:05:43,309: bridge: proxying /UAV2/uav_hold -> UAV2
+[rosout][INFO] 2026-10-10 17:05:43,309: bridge: proxying /UAV3/uav_task -> UAV3
+[rosout][INFO] 2026-10-10 17:05:43,310: bridge: dealer connected to UAV3 service router 192.168.5.31:14000
+[rosout][INFO] 2026-10-10 17:05:43,310: bridge: proxying /UAV3/uav_task_control -> UAV3
+[rosout][INFO] 2026-10-10 17:05:43,311: bridge: proxying /UAV3/uav_hold -> UAV3
+[rosout][INFO] 2026-10-10 17:05:43,312: bridge: proxying /UAV4/uav_task -> UAV4
+[rosout][INFO] 2026-10-10 17:05:43,312: bridge: dealer connected to UAV4 service router 192.168.5.41:14000
+[rosout][INFO] 2026-10-10 17:05:43,313: bridge: proxying /UAV4/uav_task_control -> UAV4
+[rosout][INFO] 2026-10-10 17:05:43,314: bridge: proxying /UAV4/uav_hold -> UAV4
+[rosout][INFO] 2026-10-10 17:05:43,314: bridge: proxying /UAV5/uav_task -> UAV5
+[rosout][INFO] 2026-10-10 17:05:43,315: bridge: dealer connected to UAV5 service router 192.168.5.51:14000
+[rosout][INFO] 2026-10-10 17:05:43,316: bridge: proxying /UAV5/uav_task_control -> UAV5
+[rosout][INFO] 2026-10-10 17:05:43,316: bridge: proxying /UAV5/uav_hold -> UAV5
+[rosout][INFO] 2026-10-10 17:05:43,317: bridge: proxying /UAV6/uav_task -> UAV6
+[rosout][INFO] 2026-10-10 17:05:43,317: bridge: dealer connected to UAV6 service router 192.168.5.61:14000
+[rosout][INFO] 2026-10-10 17:05:43,318: bridge: proxying /UAV6/uav_task_control -> UAV6
+[rosout][INFO] 2026-10-10 17:05:43,319: bridge: proxying /UAV6/uav_hold -> UAV6
+[rosout][INFO] 2026-10-10 17:05:43,319: bridge: proxying /UAV7/uav_task -> UAV7
+[rosout][INFO] 2026-10-10 17:05:43,320: bridge: dealer connected to UAV7 service router 192.168.5.71:14000
+[rosout][INFO] 2026-10-10 17:05:43,321: bridge: proxying /UAV7/uav_task_control -> UAV7
+[rosout][INFO] 2026-10-10 17:05:43,322: bridge: proxying /UAV7/uav_hold -> UAV7
+[rosout][INFO] 2026-10-10 17:05:43,322: bridge: proxying /UAV8/uav_task -> UAV8
+[rosout][INFO] 2026-10-10 17:05:43,323: bridge: dealer connected to UAV8 service router 192.168.5.81:14000
+[rosout][INFO] 2026-10-10 17:05:43,324: bridge: proxying /UAV8/uav_task_control -> UAV8
+[rosout][INFO] 2026-10-10 17:05:43,324: bridge: proxying /UAV8/uav_hold -> UAV8
+[rosout][INFO] 2026-10-10 17:05:43,325: bridge: proxying /UAV9/uav_task -> UAV9
+[rosout][INFO] 2026-10-10 17:05:43,325: bridge: dealer connected to UAV9 service router 192.168.5.91:14000
+[rosout][INFO] 2026-10-10 17:05:43,326: bridge: proxying /UAV9/uav_task_control -> UAV9
+[rosout][INFO] 2026-10-10 17:05:43,327: bridge: proxying /UAV9/uav_hold -> UAV9
+[rosout][INFO] 2026-10-10 17:05:43,327: bridge: proxying /UAV10/uav_task -> UAV10
+[rosout][INFO] 2026-10-10 17:05:43,328: bridge: dealer connected to UAV10 service router 192.168.5.101:14000
+[rosout][INFO] 2026-10-10 17:05:43,329: bridge: proxying /UAV10/uav_task_control -> UAV10
+[rosout][INFO] 2026-10-10 17:05:43,329: bridge: proxying /UAV10/uav_hold -> UAV10
+[rosout][INFO] 2026-10-10 17:05:43,330: bridge: proxying /UAV11/uav_task -> UAV11
+[rosout][INFO] 2026-10-10 17:05:43,331: bridge: dealer connected to UAV11 service router 192.168.5.111:14000
+[rosout][INFO] 2026-10-10 17:05:43,331: bridge: proxying /UAV11/uav_task_control -> UAV11
+[rosout][INFO] 2026-10-10 17:05:43,332: bridge: proxying /UAV11/uav_hold -> UAV11
+[rosout][INFO] 2026-10-10 17:05:43,333: bridge: proxying /UAV12/uav_task -> UAV12
+[rosout][INFO] 2026-10-10 17:05:43,333: bridge: dealer connected to UAV12 service router 192.168.5.121:14000
+[rosout][INFO] 2026-10-10 17:05:43,334: bridge: proxying /UAV12/uav_task_control -> UAV12
+[rosout][INFO] 2026-10-10 17:05:43,334: bridge: proxying /UAV12/uav_hold -> UAV12
+[rosout][INFO] 2026-10-10 17:05:43,335: bridge: proxying /UAV13/uav_task -> UAV13
+[rosout][INFO] 2026-10-10 17:05:43,336: bridge: dealer connected to UAV13 service router 192.168.5.131:14000
+[rosout][INFO] 2026-10-10 17:05:43,336: bridge: proxying /UAV13/uav_task_control -> UAV13
+[rosout][INFO] 2026-10-10 17:05:43,337: bridge: proxying /UAV13/uav_hold -> UAV13
+[rosout][INFO] 2026-10-10 17:05:43,338: bridge: proxying /UAV14/uav_task -> UAV14
+[rosout][INFO] 2026-10-10 17:05:43,338: bridge: dealer connected to UAV14 service router 192.168.5.141:14000
+[rosout][INFO] 2026-10-10 17:05:43,339: bridge: proxying /UAV14/uav_task_control -> UAV14
+[rosout][INFO] 2026-10-10 17:05:43,340: bridge: proxying /UAV14/uav_hold -> UAV14
+[rosout][INFO] 2026-10-10 17:05:43,341: bridge: proxying /UAV15/uav_task -> UAV15
+[rospy.internal][INFO] 2026-10-10 17:05:43,343: topic[/UAV13/gp_origin_confirmed] adding connection to [/gcs_a_calibration], count 0
+[rosout][INFO] 2026-10-10 17:05:43,343: bridge: dealer connected to UAV15 service router 192.168.5.151:14000
+[rospy.internal][INFO] 2026-10-10 17:05:43,345: topic[/UAV14/uav_task_state] adding connection to [/gcs_a_backend_node], count 0
+[rosout][INFO] 2026-10-10 17:05:43,345: bridge: proxying /UAV15/uav_task_control -> UAV15
+[rosout][INFO] 2026-10-10 17:05:43,346: bridge: proxying /UAV15/uav_hold -> UAV15
+[rospy.internal][INFO] 2026-10-10 17:05:43,348: topic[/UAV14/mavros/state] adding connection to [/gcs_a_backend_node], count 0
+[rosout][INFO] 2026-10-10 17:05:43,348: bridge: proxying /UAV16/uav_task -> UAV16
+[rospy.internal][INFO] 2026-10-10 17:05:43,349: topic[/UAV14/mavros/local_position/pose] adding connection to [/gcs_a_backend_node], count 0
+[rosout][INFO] 2026-10-10 17:05:43,349: bridge: dealer connected to UAV16 service router 192.168.5.161:14000
+[rospy.internal][INFO] 2026-10-10 17:05:43,351: topic[/UAV15/uav_task_state] adding connection to [/gcs_a_backend_node], count 0
+[rosout][INFO] 2026-10-10 17:05:43,351: bridge: proxying /UAV16/uav_task_control -> UAV16
+[rospy.internal][INFO] 2026-10-10 17:05:43,353: topic[/UAV15/mavros/state] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,353: topic[/UAV15/mavros/local_position/pose] adding connection to [/gcs_a_backend_node], count 0
+[rosout][INFO] 2026-10-10 17:05:43,353: bridge: proxying /UAV16/uav_hold -> UAV16
+[rospy.internal][INFO] 2026-10-10 17:05:43,354: topic[/UAV16/mavros/state] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,355: topic[/UAV16/mavros/local_position/pose] adding connection to [/gcs_a_backend_node], count 0
+[rosout][INFO] 2026-10-10 17:05:43,354: bridge: link options HEARTBEAT_IVL,HEARTBEAT_TIMEOUT,TCP_KEEPALIVE,TCP_KEEPALIVE_IDLE,TCP_KEEPALIVE_INTVL,TCP_KEEPALIVE_CNT,RECONNECT_IVL,RECONNECT_IVL_MAX
+[rospy.internal][INFO] 2026-10-10 17:05:43,356: topic[/UAV16/uav_task_state] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:44,262: topic[/UAV11/mavros/local_position/pose] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:44,263: topic[/UAV13/mavros/state] adding connection to [/gcs_a_calibration], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:44,264: topic[/UAV10/mavros/global_position/global] adding connection to [/gcs_a_calibration], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:44,294: topic[/UAV13/mavros/local_position/pose] adding connection to [/gcs_a_calibration], count 1
+[rospy.internal][INFO] 2026-10-10 17:05:44,294: topic[/UAV11/mavros/state] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:44,295: topic[/UAV13/mavros/state] adding connection to [/gcs_a_backend_node], count 1
+[rospy.internal][INFO] 2026-10-10 17:05:44,295: topic[/UAV9/uav_task_state] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:44,296: topic[/UAV10/mavros/state] adding connection to [/gcs_a_backend_node], count 1
+[rospy.internal][INFO] 2026-10-10 17:05:44,296: topic[/UAV12/mavros/local_position/pose] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:06:14,714: topic[/UAV8/mavros/global_position/global] adding connection to [/origin_chk_53542_1791623174586], count 1
+[rospy.internal][INFO] 2026-10-10 17:06:14,715: topic[/UAV10/mavros/global_position/global] adding connection to [/origin_chk_53542_1791623174586], count 1
+[rospy.internal][INFO] 2026-10-10 17:06:14,715: topic[/UAV13/mavros/global_position/global] adding connection to [/origin_chk_53542_1791623174586], count 1
+[rospy.internal][INFO] 2026-10-10 17:06:15,284: topic[/UAV10/mavros/global_position/global] removing connection to /origin_chk_53542_1791623174586
+[rospy.internal][INFO] 2026-10-10 17:06:15,371: topic[/UAV8/mavros/global_position/global] removing connection to /origin_chk_53542_1791623174586
+[rospy.internal][INFO] 2026-10-10 17:06:15,372: topic[/UAV13/mavros/global_position/global] removing connection to /origin_chk_53542_1791623174586
+[rospy.internal][INFO] 2026-10-10 17:08:34,406: topic[/UAV8/mavros/state] adding connection to [/rostopic_54118_1791623314269], count 2
+[rospy.internal][INFO] 2026-10-10 17:08:35,156: topic[/UAV8/mavros/state] removing connection to /rostopic_54118_1791623314269
+[rospy.internal][INFO] 2026-10-10 17:08:35,936: topic[/UAV10/mavros/state] adding connection to [/rostopic_54185_1791623315794], count 2
+[rospy.internal][INFO] 2026-10-10 17:08:36,159: topic[/UAV10/mavros/state] removing connection to /rostopic_54185_1791623315794
+[rospy.internal][INFO] 2026-10-10 17:08:37,168: topic[/UAV13/mavros/state] adding connection to [/rostopic_54250_1791623317024], count 2
+[rospy.internal][INFO] 2026-10-10 17:08:38,163: topic[/UAV13/mavros/state] removing connection to /rostopic_54250_1791623317024

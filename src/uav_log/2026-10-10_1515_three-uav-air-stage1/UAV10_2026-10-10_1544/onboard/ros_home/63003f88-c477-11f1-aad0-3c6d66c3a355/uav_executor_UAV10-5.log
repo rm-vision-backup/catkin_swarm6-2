@@ -1,0 +1,49 @@
+[rospy.client][INFO] 2026-10-10 15:07:07,543: init_node, name[/uav_executor_UAV10], pid[5097]
+[xmlrpc][INFO] 2026-10-10 15:07:07,544: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-10-10 15:07:07,545: Started XML-RPC server [http://UAV10:37569/]
+[rospy.init][INFO] 2026-10-10 15:07:07,545: ROS Slave URI: [http://UAV10:37569/]
+[rospy.impl.masterslave][INFO] 2026-10-10 15:07:07,545: _ready: http://UAV10:37569/
+[rospy.registration][INFO] 2026-10-10 15:07:07,547: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2026-10-10 15:07:07,547: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-10-10 15:07:07,646: registered with master
+[rospy.rosout][INFO] 2026-10-10 15:07:07,646: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-10-10 15:07:07,654: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-10-10 15:07:07,656: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2026-10-10 15:07:07,756: topic[/mavros/state] adding connection to [http://UAV10:42881/], count 0
+[rospy.internal][INFO] 2026-10-10 15:07:07,762: topic[/gp_origin_confirmed] adding connection to [http://UAV10:44853/], count 0
+[rospy.internal][INFO] 2026-10-10 15:07:07,765: topic[/exec_state] adding connection to [http://UAV10:35137/], count 0
+[rospy.internal][INFO] 2026-10-10 15:07:07,770: topic[/local_pose] adding connection to [http://UAV10:40741/], count 0
+[rospy.internal][INFO] 2026-10-10 15:07:07,789: topic[/setpoint/follower] adding connection to [/setpoint_relay], count 0
+[rospy.internal][INFO] 2026-10-10 15:07:07,798: topic[/direct_control_active] adding connection to [/setpoint_relay], count 0
+[rospy.internal][INFO] 2026-10-10 15:07:07,847: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2026-10-10 15:07:07,899: topic[/goal] adding connection to [/ego_planner_driver], count 0
+[rospy.internal][INFO] 2026-10-10 15:07:07,901: topic[/goal_yaw] adding connection to [/ego_planner_driver], count 0
+[rospy.internal][INFO] 2026-10-10 15:07:07,901: topic[/waypoints] adding connection to [/ego_planner_driver], count 0
+[rospy.internal][INFO] 2026-10-10 15:07:07,903: topic[/hold] adding connection to [/ego_planner_driver], count 0
+[rospy.internal][INFO] 2026-10-10 15:07:07,904: topic[/brake_hold] adding connection to [/ego_planner_driver], count 0
+[rospy.internal][INFO] 2026-10-10 15:07:07,904: topic[/direct_control_active] adding connection to [/ego_planner_driver], count 1
+[rospy.internal][INFO] 2026-10-10 15:07:07,905: topic[/neighbor_intent] adding connection to [/ego_planner_driver], count 0
+[rosout][INFO] 2026-10-10 15:07:08,013: UAV executor ready identity=UAV10/UAV10 driver=ego_swarm interfaces_version=deployment-unset
+[rospy.internal][INFO] 2026-10-10 15:07:08,059: topic[/UAV8/mavros/local_position/odom] adding connection to [http://UAV10:45105/], count 0
+[rospy.internal][INFO] 2026-10-10 15:07:08,063: topic[/UAV8/trajectory_intent] adding connection to [http://UAV10:45105/], count 0
+[rospy.internal][INFO] 2026-10-10 15:07:08,123: topic[/UAV13/mavros/local_position/odom] adding connection to [http://UAV10:45105/], count 0
+[rospy.internal][INFO] 2026-10-10 15:07:08,125: topic[/UAV13/trajectory_intent] adding connection to [http://UAV10:45105/], count 0
+[rospy.internal][INFO] 2026-10-10 15:07:08,177: topic[/uav_task_state] adding connection to [/swarm_bridge], count 0
+[rospy.internal][INFO] 2026-10-10 15:16:19,409: topic[/brake_hold] adding connection to [/record_1791616579158788235], count 1
+[rospy.internal][INFO] 2026-10-10 15:16:19,519: topic[/direct_control_active] adding connection to [/record_1791616579158788235], count 2
+[rospy.internal][INFO] 2026-10-10 15:16:19,521: topic[/goal] adding connection to [/record_1791616579158788235], count 1
+[rospy.internal][INFO] 2026-10-10 15:16:19,523: topic[/hold] adding connection to [/record_1791616579158788235], count 1
+[rospy.internal][INFO] 2026-10-10 15:16:19,529: topic[/neighbor_intent] adding connection to [/record_1791616579158788235], count 1
+[rospy.internal][INFO] 2026-10-10 15:16:19,532: topic[/rosout] adding connection to [/record_1791616579158788235], count 1
+[rospy.internal][INFO] 2026-10-10 15:16:19,534: topic[/setpoint/follower] adding connection to [/record_1791616579158788235], count 1
+[rospy.internal][INFO] 2026-10-10 15:16:19,535: topic[/uav_task_state] adding connection to [/record_1791616579158788235], count 1
+[rospy.internal][INFO] 2026-10-10 15:16:19,538: topic[/waypoints] adding connection to [/record_1791616579158788235], count 1
+[rospy.internal][INFO] 2026-10-10 15:24:01,731: topic[/rosout] removing connection to /record_1791616579158788235
+[rospy.internal][INFO] 2026-10-10 15:24:01,731: topic[/goal] removing connection to /record_1791616579158788235
+[rospy.internal][INFO] 2026-10-10 15:24:01,732: topic[/waypoints] removing connection to /record_1791616579158788235
+[rospy.internal][INFO] 2026-10-10 15:24:01,732: topic[/hold] removing connection to /record_1791616579158788235
+[rospy.internal][INFO] 2026-10-10 15:24:01,732: topic[/brake_hold] removing connection to /record_1791616579158788235
+[rospy.internal][INFO] 2026-10-10 15:24:01,733: topic[/setpoint/follower] removing connection to /record_1791616579158788235
+[rospy.internal][INFO] 2026-10-10 15:24:01,733: topic[/direct_control_active] removing connection to /record_1791616579158788235
+[rospy.internal][INFO] 2026-10-10 15:24:01,733: topic[/neighbor_intent] removing connection to /record_1791616579158788235
+[rospy.internal][INFO] 2026-10-10 15:24:01,734: topic[/uav_task_state] removing connection to /record_1791616579158788235

@@ -1,0 +1,37 @@
+[rospy.client][INFO] 2026-10-10 17:05:42,936: init_node, name[/gcs_a_calibration], pid[52856]
+[xmlrpc][INFO] 2026-10-10 17:05:42,937: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-10-10 17:05:42,937: Started XML-RPC server [http://192.168.5.241:33045/]
+[rospy.init][INFO] 2026-10-10 17:05:42,937: ROS Slave URI: [http://192.168.5.241:33045/]
+[rospy.impl.masterslave][INFO] 2026-10-10 17:05:42,937: _ready: http://192.168.5.241:33045/
+[rospy.registration][INFO] 2026-10-10 17:05:42,938: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2026-10-10 17:05:42,938: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-10-10 17:05:43,038: registered with master
+[rospy.rosout][INFO] 2026-10-10 17:05:43,038: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-10-10 17:05:43,042: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-10-10 17:05:43,042: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2026-10-10 17:05:43,053: calibration set=UAV8,UAV10,UAV13 all_uavs=3 identity_file=/home/yjq/catkin_swarm6-2/src/tcp_to_ros/config/uav_identity_map.yaml
+[rospy.internal][INFO] 2026-10-10 17:05:43,145: topic[/group_a/calibration_ready] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,148: topic[/group_a/reference_heading] adding connection to [/gcs_a_backend_node], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,231: topic[/UAV8/mavros/state] adding connection to [http://192.168.5.241:37321/], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,235: topic[/UAV8/mavros/global_position/global] adding connection to [http://192.168.5.241:37321/], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,236: topic[/UAV8/gp_origin_confirmed] adding connection to [http://192.168.5.241:37321/], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,236: topic[/UAV8/mavros/local_position/pose] adding connection to [http://192.168.5.241:37321/], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,238: topic[/UAV10/mavros/state] adding connection to [http://192.168.5.241:37321/], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,239: topic[/UAV10/mavros/global_position/global] adding connection to [http://192.168.5.241:37321/], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,240: topic[/UAV10/mavros/local_position/pose] adding connection to [http://192.168.5.241:37321/], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,241: topic[/UAV10/gp_origin_confirmed] adding connection to [http://192.168.5.241:37321/], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,244: topic[/UAV13/mavros/state] adding connection to [http://192.168.5.241:37321/], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,275: topic[/UAV13/mavros/global_position/global] adding connection to [http://192.168.5.241:37321/], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,276: topic[/UAV13/mavros/local_position/pose] adding connection to [http://192.168.5.241:37321/], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,305: topic[/group_a/gp_origin] adding connection to [/swarm_bridge], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,320: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2026-10-10 17:05:43,341: topic[/UAV13/gp_origin_confirmed] adding connection to [http://192.168.5.241:37321/], count 0
+[rosout][INFO] 2026-10-10 17:05:52,174: calibration frozen from UAV8,UAV10,UAV13 (heading gate 30deg) origin=(28.219828100,112.866822600,46.429) heading=-1.559 rad
+[rosout][INFO] 2026-10-10 17:05:52,273: calibration ready pending UAVn: UAV10 (confirmed=2/3)
+[rosout][INFO] 2026-10-10 17:05:52,374: Group A calibration ready: 3/3 required UAVs confirmed (UAV8,UAV10,UAV13); tracking 3 known UAVs
+[rospy.internal][INFO] 2026-10-10 17:06:04,615: topic[/group_a/calibration_ready] adding connection to [/rostopic_53418_1791623164487], count 1
+[rospy.internal][INFO] 2026-10-10 17:06:04,850: topic[/group_a/calibration_ready] removing connection to /rostopic_53418_1791623164487
+[rospy.internal][INFO] 2026-10-10 17:06:16,136: topic[/group_a/gp_origin] adding connection to [/rostopic_53593_1791623176004], count 1
+[rospy.internal][INFO] 2026-10-10 17:06:16,355: topic[/group_a/gp_origin] removing connection to /rostopic_53593_1791623176004
+[rospy.internal][INFO] 2026-10-10 17:08:33,277: topic[/group_a/calibration_ready] adding connection to [/rostopic_54053_1791623313144], count 1
+[rospy.internal][INFO] 2026-10-10 17:08:33,425: topic[/group_a/calibration_ready] removing connection to /rostopic_54053_1791623313144

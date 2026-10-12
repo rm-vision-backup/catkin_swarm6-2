@@ -1,0 +1,20 @@
+[rospy.client][INFO] 2026-09-23 16:33:39,564: init_node, name[/gp_origin_receiver], pid[4018]
+[xmlrpc][INFO] 2026-09-23 16:33:39,564: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-09-23 16:33:39,565: Started XML-RPC server [http://UAV10:45101/]
+[rospy.impl.masterslave][INFO] 2026-09-23 16:33:39,565: _ready: http://UAV10:45101/
+[rospy.init][INFO] 2026-09-23 16:33:39,565: ROS Slave URI: [http://UAV10:45101/]
+[rospy.registration][INFO] 2026-09-23 16:33:39,567: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2026-09-23 16:33:39,567: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-09-23 16:33:39,666: registered with master
+[rospy.rosout][INFO] 2026-09-23 16:33:39,667: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-09-23 16:33:39,673: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-09-23 16:33:39,676: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2026-09-23 16:33:39,714: topic[/mavros/state] adding connection to [http://UAV10:35589/], count 0
+[rospy.internal][INFO] 2026-09-23 16:33:39,714: topic[/mavros/global_position/gp_origin] adding connection to [http://UAV10:35589/], count 0
+[rospy.internal][INFO] 2026-09-23 16:33:39,741: topic[/gp_origin_confirmed] adding connection to [/uav_executor_UAV10], count 0
+[rospy.internal][INFO] 2026-09-23 16:33:39,872: topic[/mavros/global_position/set_gp_origin] adding connection to [/mavros], count 0
+[rospy.internal][INFO] 2026-09-23 16:33:39,883: topic[/GCS_A/group_a/gp_origin] adding connection to [http://UAV10:45051/], count 0
+[rospy.internal][INFO] 2026-09-23 16:33:39,901: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2026-09-23 16:33:40,141: topic[/gp_origin_confirmed] adding connection to [/swarm_bridge], count 1
+[rosout][WARNING] 2026-09-23 16:36:20,824: gp_origin readback mismatch horizontal=3.955m altitude=0.235m
+[rosout][INFO] 2026-09-23 16:36:20,830: gp_origin confirmed horizontal=0.000m altitude=0.000m

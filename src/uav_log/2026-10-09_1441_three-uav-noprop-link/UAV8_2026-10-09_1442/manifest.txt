@@ -1,0 +1,23 @@
+# status|source|relpath|bytes|md5|note
+# host=UAV8
+# epoch=1791528119
+# date=2026-10-09 14:41:59 CST
+# target=UAV8 ip=192.168.5.81 mav=8:1 ssh_user=- stamp=2026-10-09_1442
+OK|mavlink|fcu/log_54.ulg|4416145|d440c0cd6e5a68cbb72edbdb9f65331c|-
+OK|mavlink|fcu/ulog_fetch.log|915|8375aba0185d029cc8a1290b657e47d1|-
+OK|mavlink|fcu/ulog_list.txt|3602|38bbc9ea93dec4998b0aa1e34ae6ad64|-
+OK|ssh|onboard/ego_planner/UAV8-ego-planner.log|1479217|e4cb36bfcabafdd4ce360dc3573e67f4|-
+OK|ssh|onboard/health/UAV8_bridge_health.jsonl|1817912|a30f0f61dfaaf9717cb08b6323bff92f|-
+OK|ssh|onboard/health/UAV8_relay_events.jsonl|1803|f55e7f7e3b4b20587162ca30449ff288|-
+OK|ssh|onboard/ros_home/5b767254-c3ab-11f1-8818-3c6d66a31a44/gp_origin_receiver-8.log|3265|d59db62d18f85f83d69727255f92e393|-
+OK|ssh|onboard/ros_home/5b767254-c3ab-11f1-8818-3c6d66a31a44/gps_bias_node-9.log|2031|897528930fb84404b127a617242123f8|-
+OK|ssh|onboard/ros_home/5b767254-c3ab-11f1-8818-3c6d66a31a44/master.log|186705|27e40cb9e621073133975a1d6d536fb7|-
+OK|ssh|onboard/ros_home/5b767254-c3ab-11f1-8818-3c6d66a31a44/pose_relay-4.log|2151|4b3247c0b48c13b6086445d86eeba9ad|-
+OK|ssh|onboard/ros_home/5b767254-c3ab-11f1-8818-3c6d66a31a44/roslaunch-UAV8-9653.log|50908|07fbfa8ef95ac5c4274f49573ae464d3|-
+OK|ssh|onboard/ros_home/5b767254-c3ab-11f1-8818-3c6d66a31a44/rosout-1-stdout.log|173|9156550a2108ebcc79de4de66261163d|-
+OK|ssh|onboard/ros_home/5b767254-c3ab-11f1-8818-3c6d66a31a44/rosout.log|619132|d844b0a7bc8d98a36e4fffceb681921d|-
+OK|ssh|onboard/ros_home/5b767254-c3ab-11f1-8818-3c6d66a31a44/setpoint_relay-5.log|2717|1f22fcc268ad3b343e6cff8c91755769|-
+OK|ssh|onboard/ros_home/5b767254-c3ab-11f1-8818-3c6d66a31a44/swarm_bridge-7.log|11073|ec8b562a6910eb86339ad9558016f584|-
+OK|ssh|onboard/ros_home/5b767254-c3ab-11f1-8818-3c6d66a31a44/uav_executor_UAV8-6.log|5665|e47adf280bc7375cf8749b3ad85e5908|-
+OK|ssh|onboard/ssh.err|79|2d1524f6a61726b1254db129c5367ac8|-
+OK|ssh|onboard/term/UAV8_offboard_ego.log|1132741|1db2ad0f9bcb4abf049aaf191423eedc|-

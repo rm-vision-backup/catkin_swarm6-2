@@ -1,0 +1,23 @@
+[rospy.client][INFO] 2026-10-10 15:07:07,586: init_node, name[/gp_origin_receiver], pid[5099]
+[xmlrpc][INFO] 2026-10-10 15:07:07,587: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-10-10 15:07:07,587: Started XML-RPC server [http://UAV10:44853/]
+[rospy.init][INFO] 2026-10-10 15:07:07,588: ROS Slave URI: [http://UAV10:44853/]
+[rospy.impl.masterslave][INFO] 2026-10-10 15:07:07,588: _ready: http://UAV10:44853/
+[rospy.registration][INFO] 2026-10-10 15:07:07,589: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2026-10-10 15:07:07,589: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-10-10 15:07:07,688: registered with master
+[rospy.rosout][INFO] 2026-10-10 15:07:07,689: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-10-10 15:07:07,698: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-10-10 15:07:07,701: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2026-10-10 15:07:07,727: topic[/mavros/state] adding connection to [http://UAV10:42881/], count 0
+[rospy.internal][INFO] 2026-10-10 15:07:07,727: topic[/mavros/global_position/gp_origin] adding connection to [http://UAV10:42881/], count 0
+[rospy.internal][INFO] 2026-10-10 15:07:07,765: topic[/gp_origin_confirmed] adding connection to [/uav_executor_UAV10], count 0
+[rospy.internal][INFO] 2026-10-10 15:07:07,847: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2026-10-10 15:07:07,855: topic[/GCS_A/group_a/gp_origin] adding connection to [http://UAV10:45105/], count 0
+[rospy.internal][INFO] 2026-10-10 15:07:07,960: topic[/mavros/global_position/set_gp_origin] adding connection to [/mavros], count 0
+[rospy.internal][INFO] 2026-10-10 15:07:08,205: topic[/gp_origin_confirmed] adding connection to [/swarm_bridge], count 1
+[rosout][INFO] 2026-10-10 15:13:35,381: gp_origin confirmed horizontal=0.000m altitude=0.050m
+[rospy.internal][INFO] 2026-10-10 15:16:19,522: topic[/gp_origin_confirmed] adding connection to [/record_1791616579158788235], count 2
+[rospy.internal][INFO] 2026-10-10 15:16:19,533: topic[/rosout] adding connection to [/record_1791616579158788235], count 1
+[rospy.internal][INFO] 2026-10-10 15:24:01,835: topic[/rosout] removing connection to /record_1791616579158788235
+[rospy.internal][INFO] 2026-10-10 15:24:01,836: topic[/gp_origin_confirmed] removing connection to /record_1791616579158788235

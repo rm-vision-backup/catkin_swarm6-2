@@ -1,0 +1,22 @@
+[rospy.client][INFO] 2026-10-10 14:54:11,427: init_node, name[/gps_bias_node], pid[4299]
+[xmlrpc][INFO] 2026-10-10 14:54:11,428: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-10-10 14:54:11,429: Started XML-RPC server [http://UAV13:44217/]
+[rospy.init][INFO] 2026-10-10 14:54:11,429: ROS Slave URI: [http://UAV13:44217/]
+[rospy.impl.masterslave][INFO] 2026-10-10 14:54:11,429: _ready: http://UAV13:44217/
+[rospy.registration][INFO] 2026-10-10 14:54:11,430: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2026-10-10 14:54:11,430: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-10-10 14:54:11,529: registered with master
+[rospy.rosout][INFO] 2026-10-10 14:54:11,530: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-10-10 14:54:11,536: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-10-10 14:54:11,539: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2026-10-10 14:54:11,572: topic[/mavros/time_reference] adding connection to [http://UAV13:40895/], count 0
+[rospy.internal][INFO] 2026-10-10 14:54:11,759: topic[/gps_bias] adding connection to [/ego_planner_driver], count 0
+[rospy.internal][INFO] 2026-10-10 14:54:11,767: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2026-10-10 14:54:12,104: topic[/gps_bias] adding connection to [/swarm_bridge], count 1
+[rospy.core][INFO] 2026-10-10 15:03:07,931: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2026-10-10 15:03:07,938: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2026-10-10 15:03:07,939: topic[/gps_bias] removing connection to /ego_planner_driver
+[rospy.internal][INFO] 2026-10-10 15:03:07,939: topic[/gps_bias] removing connection to /swarm_bridge
+[rospy.internal][INFO] 2026-10-10 15:03:07,940: topic[/mavros/time_reference] removing connection to http://UAV13:40895/
+[rospy.impl.masterslave][INFO] 2026-10-10 15:03:07,940: signal-2
+[rospy.core][INFO] 2026-10-10 15:03:08,532: signal_shutdown [atexit]

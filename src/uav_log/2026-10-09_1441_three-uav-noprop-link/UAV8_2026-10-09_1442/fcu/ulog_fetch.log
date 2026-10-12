@@ -1,0 +1,23 @@
+HEARTBEAT sys=8 comp=1 type=2 autopilot=12
+HEARTBEAT sys=13 comp=1 type=2 autopilot=12
+HEARTBEAT sys=10 comp=1 type=2 autopilot=12
+target sys=8 comp=1; 55 logs id 0..54
+--- id=54 size=4416145 start@0 -> src/uav_log/2026-10-09_1441_three-uav-noprop-link/UAV8_2026-10-09_1442/fcu/log_54.ulg
+    ... 262215/4416145 bytes (10s)
+    ... 524445/4416145 bytes (21s)
+    ... 786645/4416145 bytes (32s)
+    ... 1048860/4416145 bytes (43s)
+    ... 1311075/4416145 bytes (53s)
+    ... 1573275/4416145 bytes (66s)
+    ... 1835475/4416145 bytes (79s)
+    ... 2097705/4416145 bytes (89s)
+    ... 2359920/4416145 bytes (101s)
+    ... 2622135/4416145 bytes (113s)
+    ... 2884350/4416145 bytes (124s)
+    ... 3146565/4416145 bytes (136s)
+    ... 3408765/4416145 bytes (151s)
+    ... 3670950/4416145 bytes (163s)
+    ... 3933165/4416145 bytes (174s)
+    ... 4195350/4416145 bytes (191s)
+done id=54 -> 4416145 bytes in 199s
+ALL DONE

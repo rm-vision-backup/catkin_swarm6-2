@@ -1,0 +1,178 @@
+... logging to /home/yjq/catkin_swarm6-2/.ros_home/log/6f8f1c30-c489-11f1-92c4-0dcdc0b6f8bc/roslaunch-yjq-49668.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;/home/yjq/catkin_swarm6-2/src/tcp_to_ros/launch/gcs_a_real_three_uav.launch
+[1mstarted roslaunch server http://192.168.5.241:41527/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /gcs_a_backend_node/action_name: /group_a/execute_...
+ * /gcs_a_backend_node/confirm_deadline_s: 4.0
+ * /gcs_a_backend_node/confirm_retries: 2
+ * /gcs_a_backend_node/confirm_retry_interval_s: 0.2
+ * /gcs_a_backend_node/confirm_wait_s: 1.0
+ * /gcs_a_backend_node/emergency_hold_service: /group_a/emergenc...
+ * /gcs_a_backend_node/fault_exit_schedule_enabled: True
+ * /gcs_a_backend_node/formation_offsets_file: /home/yjq/catkin_...
+ * /gcs_a_backend_node/hold_batch_size: 4
+ * /gcs_a_backend_node/hold_retry_count: 2
+ * /gcs_a_backend_node/hold_retry_interval_s: 0.5
+ * /gcs_a_backend_node/horizontal_speed_mps: 0.7
+ * /gcs_a_backend_node/link_health_pre_task_wait_s: 10.0
+ * /gcs_a_backend_node/link_health_topic: /group_a/uav_link...
+ * /gcs_a_backend_node/link_healthy_window_s: 3.0
+ * /gcs_a_backend_node/link_lost_after_s: 15.0
+ * /gcs_a_backend_node/link_suspect_after_s: 10.0
+ * /gcs_a_backend_node/map_file: /home/yjq/catkin_...
+ * /gcs_a_backend_node/move_to_schedule_enabled: True
+ * /gcs_a_backend_node/require_calibration_ready: True
+ * /gcs_a_backend_node/schedule_geometric_distance_m: 1.3
+ * /gcs_a_backend_node/schedule_max_compute_time_s: 5.0
+ * /gcs_a_backend_node/schedule_max_interval_combinations: 2000
+ * /gcs_a_backend_node/schedule_max_start_delay_s: 30.0
+ * /gcs_a_backend_node/schedule_pose_timeout_s: 1.0
+ * /gcs_a_backend_node/schedule_safety_margin_m: 1.0
+ * /gcs_a_backend_node/schedule_time_epsilon_s: 1e-6
+ * /gcs_a_backend_node/start_dispatch_jitter_margin_s: 0.5
+ * /gcs_a_backend_node/start_service_budget_s: 1.5
+ * /gcs_a_calibration/all_uavs: ['UAV8', 'UAV10',...
+ * /gcs_a_calibration/calibration_uavs: ['UAV8', 'UAV10',...
+ * /gcs_a_calibration/identity_file: /home/yjq/catkin_...
+ * /gcs_a_calibration/sample_window_s: 8.0
+ * /rosdistro: noetic
+ * /rosversion: 1.17.4
+ * /swarm_bridge/base_port: 4200
+ * /swarm_bridge/health_log_dir: /home/yjq/catkin_...
+ * /swarm_bridge/health_matrix_period_s: 60.0
+ * /swarm_bridge/health_sample_hz: 0.5
+ * /swarm_bridge/max_freq: 0
+ * /swarm_bridge/service_base_port: 14000
+ * /swarm_bridge/services: [{'name': '/UAV1/...
+ * /swarm_bridge/stall_warn_s: 1.5
+ * /swarm_bridge/topics: [{'name': 'uav_ta...
+ * /swarm_bridge/topology/GCS_A: ['UAV1', 'UAV2', ...
+ * /swarm_bridge/topology/UAV10: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV11: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV12: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV13: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV14: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV15: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV16: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV1: ['GCS_A', 'UAV2',...
+ * /swarm_bridge/topology/UAV2: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV3: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV4: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV5: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV6: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV7: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV8: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV9: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/uav_name: GCS_A
+ * /swarm_bridge/uavs: [{'name': 'GCS_A'...
+ * /swarm_bridge/zmq_dealer_sndtimeo_ms: 500
+ * /swarm_bridge/zmq_heartbeat_ivl_ms: 1000
+ * /swarm_bridge/zmq_heartbeat_timeout_ms: 10000
+ * /swarm_bridge/zmq_reconnect_ivl_max_ms: 1000
+ * /swarm_bridge/zmq_reconnect_ivl_ms: 200
+ * /tcp_server_node/action_name: /group_a/execute_...
+ * /tcp_server_node/emergency_hold_service: /group_a/emergenc...
+ * /tcp_server_node/host: 0.0.0.0
+ * /tcp_server_node/port: 39001
+ * /tcp_server_node/state_topic: /group_a/group_ta...
+
+NODES
+  /
+    gcs_a_backend_node (tcp_to_ros/gcs_a_backend_node.py)
+    gcs_a_calibration (tcp_to_ros/gcs_a_calibration_node.py)
+    swarm_bridge (swarm_topology_bridge/bridge_node.py)
+    tcp_server_node (tcp_to_ros/tcp_server_node.py)
+
+auto-starting new master
+[1mprocess[master]: started with pid [49743][0m
+[1mROS_MASTER_URI=http://localhost:11311[0m
+]2;/home/yjq/catkin_swarm6-2/src/tcp_to_ros/launch/gcs_a_real_three_uav.launch http://localhost:11311
+[1msetting /run_id to 6f8f1c30-c489-11f1-92c4-0dcdc0b6f8bc[0m
+[1mprocess[rosout-1]: started with pid [49784][0m
+started core service [/rosout]
+[1mprocess[swarm_bridge-2]: started with pid [49792][0m
+[1mprocess[gcs_a_backend_node-3]: started with pid [49793][0m
+[1mprocess[gcs_a_calibration-4]: started with pid [49794][0m
+[1mprocess[tcp_server_node-5]: started with pid [49795][0m
+[WARN] [1791622999.375545]: TCP port 39001 is inside Linux ip_local_port_range and is not reserved; add it to net.ipv4.ip_local_reserved_ports on the GCS host to prevent ROS XML-RPC port collisions
+[INFO] [1791622999.379873]: waiting for action server /group_a/execute_task
+[INFO] [1791622999.423216]: calibration set=UAV8,UAV10,UAV13 all_uavs=3 identity_file=/home/yjq/catkin_swarm6-2/src/tcp_to_ros/config/uav_identity_map.yaml
+[INFO] [1791622999.437438]: GCS_A subscribed to /UAV1/uav_task_state
+[INFO] [1791622999.438277]: GCS_A subscribed to /UAV1/mavros/state
+[INFO] [1791622999.439031]: GCS_A subscribed to /UAV1/mavros/local_position/pose
+[INFO] [1791622999.439704]: GCS_A subscribed to /UAV2/uav_task_state
+[INFO] [1791622999.440376]: GCS_A subscribed to /UAV2/mavros/state
+[INFO] [1791622999.441035]: GCS_A subscribed to /UAV2/mavros/local_position/pose
+[INFO] [1791622999.441736]: GCS_A subscribed to /UAV3/uav_task_state
+[INFO] [1791622999.442671]: GCS_A subscribed to /UAV3/mavros/state
+[INFO] [1791622999.444226]: GCS_A subscribed to /UAV3/mavros/local_position/pose
+[INFO] [1791622999.445644]: GCS_A subscribed to /UAV4/uav_task_state
+[INFO] [1791622999.446912]: GCS_A subscribed to /UAV4/mavros/state
+Traceback (most recent call last):
+  File "/home/yjq/catkin_swarm6-2/src/swarm_topology_bridge/scripts/bridge_node.py", line 677, in <module>
+    main()
+  File "/home/yjq/catkin_swarm6-2/src/swarm_topology_bridge/scripts/bridge_node.py", line 672, in main
+    BridgeNode()
+  File "/home/yjq/catkin_swarm6-2/src/swarm_topology_bridge/scripts/bridge_node.py", line 141, in __init__
+    s.bind("tcp://*:%d" % (self.topic_ports[i] + my_offset))
+  File "zmq/backend/cython/socket.pyx", line 550, in zmq.backend.cython.socket.Socket.bind
+  File "zmq/backend/cython/checkrc.pxd", line 25, in zmq.backend.cython.checkrc._check_rc
+zmq.error.ZMQError: Address already in use
+[INFO] [1791622999.448795]: GCS_A subscribed to /UAV4/mavros/local_position/pose
+[INFO] [1791622999.449576]: GCS_A subscribed to /UAV5/uav_task_state
+[INFO] [1791622999.450341]: GCS_A subscribed to /UAV5/mavros/state
+[INFO] [1791622999.451027]: GCS_A subscribed to /UAV5/mavros/local_position/pose
+[INFO] [1791622999.451741]: GCS_A subscribed to /UAV6/uav_task_state
+[INFO] [1791622999.452456]: GCS_A subscribed to /UAV6/mavros/state
+[INFO] [1791622999.453096]: GCS_A subscribed to /UAV6/mavros/local_position/pose
+[INFO] [1791622999.453805]: GCS_A subscribed to /UAV7/uav_task_state
+[INFO] [1791622999.454537]: GCS_A subscribed to /UAV7/mavros/state
+[INFO] [1791622999.455180]: GCS_A subscribed to /UAV7/mavros/local_position/pose
+[INFO] [1791622999.455826]: GCS_A subscribed to /UAV8/uav_task_state
+[INFO] [1791622999.456472]: GCS_A subscribed to /UAV8/mavros/state
+[INFO] [1791622999.457896]: GCS_A subscribed to /UAV8/mavros/local_position/pose
+[INFO] [1791622999.459680]: GCS_A subscribed to /UAV9/uav_task_state
+[INFO] [1791622999.461028]: GCS_A subscribed to /UAV9/mavros/state
+[INFO] [1791622999.462232]: GCS_A subscribed to /UAV9/mavros/local_position/pose
+[INFO] [1791622999.463655]: GCS_A subscribed to /UAV10/uav_task_state
+[INFO] [1791622999.464453]: GCS_A subscribed to /UAV10/mavros/state
+[INFO] [1791622999.465193]: GCS_A subscribed to /UAV10/mavros/local_position/pose
+[INFO] [1791622999.466106]: GCS_A subscribed to /UAV11/uav_task_state
+[INFO] [1791622999.467483]: GCS_A subscribed to /UAV11/mavros/state
+[INFO] [1791622999.468725]: GCS_A subscribed to /UAV11/mavros/local_position/pose
+[INFO] [1791622999.469961]: GCS_A subscribed to /UAV12/uav_task_state
+[INFO] [1791622999.471152]: GCS_A subscribed to /UAV12/mavros/state
+[INFO] [1791622999.472335]: GCS_A subscribed to /UAV12/mavros/local_position/pose
+[INFO] [1791622999.473484]: GCS_A subscribed to /UAV13/uav_task_state
+[INFO] [1791622999.474692]: GCS_A subscribed to /UAV13/mavros/state
+[INFO] [1791622999.475527]: GCS_A subscribed to /UAV13/mavros/local_position/pose
+[INFO] [1791622999.476232]: GCS_A subscribed to /UAV14/uav_task_state
+[INFO] [1791622999.476960]: GCS_A subscribed to /UAV14/mavros/state
+[INFO] [1791622999.477678]: GCS_A subscribed to /UAV14/mavros/local_position/pose
+[INFO] [1791622999.478461]: GCS_A subscribed to /UAV15/uav_task_state
+[INFO] [1791622999.479314]: GCS_A subscribed to /UAV15/mavros/state
+[INFO] [1791622999.480091]: GCS_A subscribed to /UAV15/mavros/local_position/pose
+[INFO] [1791622999.480777]: GCS_A subscribed to /UAV16/uav_task_state
+[INFO] [1791622999.481440]: GCS_A subscribed to /UAV16/mavros/state
+[INFO] [1791622999.482127]: GCS_A subscribed to /UAV16/mavros/local_position/pose
+[INFO] [1791622999.528977]: GCS_A backend ready: action=/group_a/execute_task service=/group_a/emergency_hold uavs=16
+[INFO] [1791622999.572660]: connected to action server /group_a/execute_task
+[INFO] [1791622999.573535]: waiting for service /group_a/emergency_hold
+[INFO] [1791622999.575411]: tcp_to_ros listening on 0.0.0.0:39001
+[31m[swarm_bridge-2] process has died [pid 49792, exit code 1, cmd /home/yjq/catkin_swarm6-2/src/swarm_topology_bridge/scripts/bridge_node.py __name:=swarm_bridge __log:=/home/yjq/catkin_swarm6-2/.ros_home/log/6f8f1c30-c489-11f1-92c4-0dcdc0b6f8bc/swarm_bridge-2.log].
+log file: /home/yjq/catkin_swarm6-2/.ros_home/log/6f8f1c30-c489-11f1-92c4-0dcdc0b6f8bc/swarm_bridge-2*.log[0m
+[tcp_server_node-5] killing on exit
+[gcs_a_calibration-4] killing on exit
+[gcs_a_backend_node-3] killing on exit
+[rosout-1] killing on exit
+[master] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+[1mdone[0m

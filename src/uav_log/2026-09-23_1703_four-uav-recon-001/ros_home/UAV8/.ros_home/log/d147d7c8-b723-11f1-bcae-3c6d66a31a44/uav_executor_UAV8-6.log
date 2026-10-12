@@ -1,0 +1,38 @@
+[rospy.client][INFO] 2026-09-23 15:53:10,754: init_node, name[/uav_executor_UAV8], pid[7118]
+[xmlrpc][INFO] 2026-09-23 15:53:10,755: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-09-23 15:53:10,755: Started XML-RPC server [http://UAV8:38133/]
+[rospy.impl.masterslave][INFO] 2026-09-23 15:53:10,756: _ready: http://UAV8:38133/
+[rospy.init][INFO] 2026-09-23 15:53:10,756: ROS Slave URI: [http://UAV8:38133/]
+[rospy.registration][INFO] 2026-09-23 15:53:10,757: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2026-09-23 15:53:10,757: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-09-23 15:53:10,857: registered with master
+[rospy.rosout][INFO] 2026-09-23 15:53:10,857: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-09-23 15:53:10,864: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-09-23 15:53:10,866: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2026-09-23 15:53:10,987: topic[/mavros/state] adding connection to [http://UAV8:46693/], count 0
+[rospy.internal][INFO] 2026-09-23 15:53:10,991: topic[/gp_origin_confirmed] adding connection to [http://UAV8:32979/], count 0
+[rospy.internal][INFO] 2026-09-23 15:53:10,997: topic[/exec_state] adding connection to [http://UAV8:43079/], count 0
+[rospy.internal][INFO] 2026-09-23 15:53:11,000: topic[/local_pose] adding connection to [http://UAV8:39795/], count 0
+[rospy.internal][INFO] 2026-09-23 15:53:11,030: topic[/setpoint/follower] adding connection to [/setpoint_relay], count 0
+[rospy.internal][INFO] 2026-09-23 15:53:11,032: topic[/direct_control_active] adding connection to [/setpoint_relay], count 0
+[rospy.internal][INFO] 2026-09-23 15:53:11,123: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2026-09-23 15:53:11,136: topic[/goal] adding connection to [/ego_planner_driver], count 0
+[rospy.internal][INFO] 2026-09-23 15:53:11,233: topic[/UAV10/trajectory_intent] adding connection to [http://UAV8:37511/], count 0
+[rospy.internal][INFO] 2026-09-23 15:53:11,238: topic[/goal_yaw] adding connection to [/ego_planner_driver], count 0
+[rospy.internal][INFO] 2026-09-23 15:53:11,242: topic[/waypoints] adding connection to [/ego_planner_driver], count 0
+[rospy.internal][INFO] 2026-09-23 15:53:11,245: topic[/hold] adding connection to [/ego_planner_driver], count 0
+[rospy.internal][INFO] 2026-09-23 15:53:11,247: topic[/brake_hold] adding connection to [/ego_planner_driver], count 0
+[rospy.internal][INFO] 2026-09-23 15:53:11,248: topic[/UAV10/mavros/local_position/odom] adding connection to [http://UAV8:37511/], count 0
+[rospy.internal][INFO] 2026-09-23 15:53:11,249: topic[/direct_control_active] adding connection to [/ego_planner_driver], count 1
+[rospy.internal][INFO] 2026-09-23 15:53:11,251: topic[/neighbor_intent] adding connection to [/ego_planner_driver], count 0
+[rosout][INFO] 2026-09-23 15:53:11,255: UAV executor ready identity=UAV8/UAV8 driver=ego_swarm interfaces_version=deployment-unset
+[rospy.internal][INFO] 2026-09-23 15:53:11,336: topic[/UAV12/mavros/local_position/odom] adding connection to [http://UAV8:37511/], count 0
+[rospy.internal][INFO] 2026-09-23 15:53:11,338: topic[/UAV12/trajectory_intent] adding connection to [http://UAV8:37511/], count 0
+[rospy.internal][INFO] 2026-09-23 15:53:11,339: topic[/UAV13/mavros/local_position/odom] adding connection to [http://UAV8:37511/], count 0
+[rospy.internal][INFO] 2026-09-23 15:53:11,341: topic[/UAV13/trajectory_intent] adding connection to [http://UAV8:37511/], count 0
+[rospy.internal][INFO] 2026-09-23 15:53:11,378: topic[/uav_task_state] adding connection to [/swarm_bridge], count 0
+[rospy.core][INFO] 2026-09-23 15:58:44,604: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2026-09-23 15:58:44,631: topic[/gp_origin_confirmed] removing connection to http://UAV8:32979/
+[rospy.internal][INFO] 2026-09-23 15:58:44,638: topic[/local_pose] removing connection to http://UAV8:39795/
+[rospy.internal][INFO] 2026-09-23 15:58:44,650: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2026-0

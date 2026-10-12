@@ -1,0 +1,33 @@
+[rospy.client][INFO] 2026-09-23 16:47:09,645: init_node, name[/uav_executor_UAV10], pid[3683]
+[xmlrpc][INFO] 2026-09-23 16:47:09,646: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-09-23 16:47:09,646: Started XML-RPC server [http://UAV10:46213/]
+[rospy.init][INFO] 2026-09-23 16:47:09,647: ROS Slave URI: [http://UAV10:46213/]
+[rospy.impl.masterslave][INFO] 2026-09-23 16:47:09,647: _ready: http://UAV10:46213/
+[rospy.registration][INFO] 2026-09-23 16:47:09,648: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2026-09-23 16:47:09,648: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-09-23 16:47:09,747: registered with master
+[rospy.rosout][INFO] 2026-09-23 16:47:09,748: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-09-23 16:47:09,754: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-09-23 16:47:09,756: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2026-09-23 16:47:09,851: topic[/mavros/state] adding connection to [http://UAV10:34089/], count 0
+[rospy.internal][INFO] 2026-09-23 16:47:09,856: topic[/gp_origin_confirmed] adding connection to [http://UAV10:38821/], count 0
+[rospy.internal][INFO] 2026-09-23 16:47:09,860: topic[/exec_state] adding connection to [http://UAV10:36573/], count 0
+[rospy.internal][INFO] 2026-09-23 16:47:09,864: topic[/local_pose] adding connection to [http://UAV10:36519/], count 0
+[rospy.internal][INFO] 2026-09-23 16:47:09,918: topic[/setpoint/follower] adding connection to [/setpoint_relay], count 0
+[rospy.internal][INFO] 2026-09-23 16:47:09,923: topic[/direct_control_active] adding connection to [/setpoint_relay], count 0
+[rospy.internal][INFO] 2026-09-23 16:47:10,015: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2026-09-23 16:47:10,102: topic[/UAV8/mavros/local_position/odom] adding connection to [http://UAV10:46705/], count 0
+[rosout][INFO] 2026-09-23 16:47:10,110: UAV executor ready identity=UAV10/UAV10 driver=ego_swarm interfaces_version=deployment-unset
+[rospy.internal][INFO] 2026-09-23 16:47:10,125: topic[/UAV8/trajectory_intent] adding connection to [http://UAV10:46705/], count 0
+[rospy.internal][INFO] 2026-09-23 16:47:10,127: topic[/goal_yaw] adding connection to [/ego_planner_driver], count 0
+[rospy.internal][INFO] 2026-09-23 16:47:10,129: topic[/waypoints] adding connection to [/ego_planner_driver], count 0
+[rospy.internal][INFO] 2026-09-23 16:47:10,129: topic[/hold] adding connection to [/ego_planner_driver], count 0
+[rospy.internal][INFO] 2026-09-23 16:47:10,130: topic[/brake_hold] adding connection to [/ego_planner_driver], count 0
+[rospy.internal][INFO] 2026-09-23 16:47:10,130: topic[/direct_control_active] adding connection to [/ego_planner_driver], count 1
+[rospy.internal][INFO] 2026-09-23 16:47:10,131: topic[/neighbor_intent] adding connection to [/ego_planner_driver], count 0
+[rospy.internal][INFO] 2026-09-23 16:47:10,132: topic[/goal] adding connection to [/ego_planner_driver], count 0
+[rospy.internal][INFO] 2026-09-23 16:47:10,225: topic[/uav_task_state] adding connection to [/swarm_bridge], count 0
+[rospy.internal][INFO] 2026-09-23 16:47:10,230: topic[/UAV12/mavros/local_position/odom] adding connection to [http://UAV10:46705/], count 0
+[rospy.internal][INFO] 2026-09-23 16:47:10,233: topic[/UAV12/trajectory_intent] adding connection to [http://UAV10:46705/], count 0
+[rospy.internal][INFO] 2026-09-23 16:47:10,233: topic[/UAV13/mavros/local_position/odom] adding connection to [http://UAV10:46705/], count 0
+[rospy.internal][INFO] 2026-09-23 16:47:10,238: topic[/UAV13/trajectory_intent] adding connection to [http://UAV10:46705/], count 0

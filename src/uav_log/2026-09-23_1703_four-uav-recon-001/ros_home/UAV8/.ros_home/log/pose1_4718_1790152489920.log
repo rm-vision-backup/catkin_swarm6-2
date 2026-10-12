@@ -1,0 +1,17 @@
+[rospy.client][INFO] 2026-09-23 16:34:49,965: init_node, name[/pose1_4718_1790152489920], pid[4718]
+[xmlrpc][INFO] 2026-09-23 16:34:49,966: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-09-23 16:34:49,967: Started XML-RPC server [http://UAV8:38947/]
+[rospy.init][INFO] 2026-09-23 16:34:49,968: ROS Slave URI: [http://UAV8:38947/]
+[rospy.impl.masterslave][INFO] 2026-09-23 16:34:49,968: _ready: http://UAV8:38947/
+[rospy.registration][INFO] 2026-09-23 16:34:49,969: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2026-09-23 16:34:49,969: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-09-23 16:34:50,068: registered with master
+[rospy.rosout][INFO] 2026-09-23 16:34:50,069: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-09-23 16:34:50,076: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-09-23 16:34:50,077: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2026-09-23 16:34:50,088: topic[/mavros/local_position/pose] adding connection to [http://UAV8:39269/], count 0
+[rospy.internal][INFO] 2026-09-23 16:34:50,089: topic[/mavros/global_position/global] adding connection to [http://UAV8:39269/], count 0
+[rospy.core][INFO] 2026-09-23 16:34:50,186: signal_shutdown [atexit]
+[rospy.internal][INFO] 2026-09-23 16:34:50,192: topic[/mavros/global_position/global] removing connection to http://UAV8:39269/
+[rospy.internal][INFO] 2026-09-23 16:34:50,193: topic[/mavros/local_position/pose] removing connection to http://UAV8:39269/
+[rospy.impl.masterslave][INFO] 2026-09-23 16:34:50,193: atexit

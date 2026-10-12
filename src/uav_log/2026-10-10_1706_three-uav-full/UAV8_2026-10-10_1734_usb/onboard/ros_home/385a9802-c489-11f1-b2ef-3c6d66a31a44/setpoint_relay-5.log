@@ -1,0 +1,22 @@
+[rospy.client][INFO] 2026-10-10 17:01:48,055: init_node, name[/setpoint_relay], pid[3499]
+[xmlrpc][INFO] 2026-10-10 17:01:48,056: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-10-10 17:01:48,056: Started XML-RPC server [http://UAV8:46297/]
+[rospy.init][INFO] 2026-10-10 17:01:48,057: ROS Slave URI: [http://UAV8:46297/]
+[rospy.impl.masterslave][INFO] 2026-10-10 17:01:48,057: _ready: http://UAV8:46297/
+[rospy.registration][INFO] 2026-10-10 17:01:48,059: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2026-10-10 17:01:48,059: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-10-10 17:01:48,157: registered with master
+[rospy.rosout][INFO] 2026-10-10 17:01:48,158: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-10-10 17:01:48,166: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-10-10 17:01:48,167: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2026-10-10 17:01:48,195: topic[/setpoint/ego] adding connection to [http://UAV8:41507/], count 0
+[rospy.internal][INFO] 2026-10-10 17:01:48,203: topic[/mavros/local_position/pose] adding connection to [http://UAV8:37839/], count 0
+[rosout][INFO] 2026-10-10 17:01:48,199: setpoint_relay: sole owner of /mavros/setpoint_raw/local (rate=30.0 Hz, candidate_timeout=0.2 s, pose_timeout=1.0 s)
+[rospy.internal][INFO] 2026-10-10 17:01:48,343: topic[/setpoint/follower] adding connection to [http://UAV8:43913/], count 0
+[rospy.internal][INFO] 2026-10-10 17:01:48,348: topic[/direct_control_active] adding connection to [http://UAV8:43913/], count 0
+[rospy.internal][INFO] 2026-10-10 17:01:48,440: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2026-10-10 17:01:48,441: topic[/mavros/setpoint_raw/local] adding connection to [/mavros], count 0
+[rospy.internal][INFO] 2026-10-10 17:06:21,318: topic[/mavros/setpoint_raw/local] adding connection to [/record_1791623180964441518], count 1
+[rospy.internal][INFO] 2026-10-10 17:06:21,361: topic[/rosout] adding connection to [/record_1791623180964441518], count 1
+[rospy.internal][INFO] 2026-10-10 17:19:01,871: topic[/mavros/setpoint_raw/local] removing connection to /record_1791623180964441518
+[rospy.internal][INFO] 2026-10-10 17:19:02,342: topic[/rosout] removing connection to /record_1791623180964441518

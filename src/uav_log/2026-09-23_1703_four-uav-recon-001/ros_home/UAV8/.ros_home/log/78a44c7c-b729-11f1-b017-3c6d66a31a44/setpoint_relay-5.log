@@ -1,0 +1,18 @@
+[rospy.client][INFO] 2026-09-23 16:33:39,093: init_node, name[/setpoint_relay], pid[4200]
+[xmlrpc][INFO] 2026-09-23 16:33:39,094: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-09-23 16:33:39,095: Started XML-RPC server [http://UAV8:33099/]
+[rospy.init][INFO] 2026-09-23 16:33:39,095: ROS Slave URI: [http://UAV8:33099/]
+[rospy.impl.masterslave][INFO] 2026-09-23 16:33:39,095: _ready: http://UAV8:33099/
+[rospy.registration][INFO] 2026-09-23 16:33:39,096: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2026-09-23 16:33:39,097: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-09-23 16:33:39,196: registered with master
+[rospy.rosout][INFO] 2026-09-23 16:33:39,196: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-09-23 16:33:39,205: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-09-23 16:33:39,207: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2026-09-23 16:33:39,238: topic[/setpoint/ego] adding connection to [http://UAV8:37761/], count 0
+[rospy.internal][INFO] 2026-09-23 16:33:39,246: topic[/mavros/local_position/pose] adding connection to [http://UAV8:39269/], count 0
+[rosout][INFO] 2026-09-23 16:33:39,244: setpoint_relay: sole owner of /mavros/setpoint_raw/local (rate=30.0 Hz, candidate_timeout=0.2 s, pose_timeout=1.0 s)
+[rospy.internal][INFO] 2026-09-23 16:33:39,293: topic[/setpoint/follower] adding connection to [http://UAV8:36251/], count 0
+[rospy.internal][INFO] 2026-09-23 16:33:39,294: topic[/direct_control_active] adding connection to [http://UAV8:36251/], count 0
+[rospy.internal][INFO] 2026-09-23 16:33:39,490: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2026-09-23 16:33:39,491: topic[/mavros/setpoint_raw/local] adding connection to [/mavros], count 0

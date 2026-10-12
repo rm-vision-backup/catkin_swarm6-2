@@ -1,0 +1,6 @@
+logging to /home/yjq/catkin_swarm6-2/.ros_home/log/c52f5c86-c489-11f1-92c4-0dcdc0b6f8bc/rosout.log
+re-publishing aggregated messages to /rosout_agg
+subscribed to /rosout
+Error in XmlRpcClient::writeRequest: write error (Connection timed out).
+Error in XmlRpcClient::writeRequest: write error (Connection timed out).
+Error in XmlRpcClient::writeRequest: write error (Connection timed out).

@@ -1,0 +1,15 @@
+02eed9072143c7d517d57548ee0dffaf  ./onboard/ego_planner/UAV8-ego-planner.log
+225c3415824351bebd538db421112fde  ./onboard/health/UAV8_bridge_health.jsonl
+eb236d32c8585b29d180cf93506ac83a  ./onboard/health/UAV8_relay_events.jsonl
+6f70c925c6c0d2325adc2c695d694c46  ./onboard/ros_home/385a9802-c489-11f1-b2ef-3c6d66a31a44/gp_origin_receiver-8.log
+c1cca61bea19a823a8d843faa9e745f7  ./onboard/ros_home/385a9802-c489-11f1-b2ef-3c6d66a31a44/gps_bias_node-9.log
+87bb5aef0883bc6b567dc7aca2ade01f  ./onboard/ros_home/385a9802-c489-11f1-b2ef-3c6d66a31a44/master.log
+7c2da009e5bf0f366375e3c95de050a6  ./onboard/ros_home/385a9802-c489-11f1-b2ef-3c6d66a31a44/pose_relay-4.log
+e27be8da0bcdfab5c0c0d2997b140e6c  ./onboard/ros_home/385a9802-c489-11f1-b2ef-3c6d66a31a44/roslaunch-UAV8-3464.log
+b6d84e96b5ebafaf0307de6dc98da4a8  ./onboard/ros_home/385a9802-c489-11f1-b2ef-3c6d66a31a44/rosout-1-stdout.log
+54708e2a00a70147e6bcf878a2fa2512  ./onboard/ros_home/385a9802-c489-11f1-b2ef-3c6d66a31a44/rosout.log
+6cb31d16a538b25cf1f4dbf2c0fc1475  ./onboard/ros_home/385a9802-c489-11f1-b2ef-3c6d66a31a44/setpoint_relay-5.log
+74cbcdac999ce6aafff3bbf5c60d2264  ./onboard/ros_home/385a9802-c489-11f1-b2ef-3c6d66a31a44/swarm_bridge-7.log
+c1aa1643a5133fe0d9c4dcc3f67231dd  ./onboard/ros_home/385a9802-c489-11f1-b2ef-3c6d66a31a44/uav_executor_UAV8-6.log
+a3350c9021d0f84dfae3f687e5c958c9  ./onboard/ssh.err
+9f1acb0d43b7e3aa28f6bad5c49eca5a  ./onboard/term/UAV8_offboard_ego.log

@@ -1,0 +1,20 @@
+# status|source|relpath|bytes|md5|note
+# host=UAV8
+# epoch=1791624883
+# date=2026-10-10 17:34:43 CST
+# target=192.168.55.1 ip=192.168.55.1 mav=- ssh_user=nvidia stamp=2026-10-10_1734
+OK|ssh|onboard/ego_planner/UAV8-ego-planner.log|1982947|02eed9072143c7d517d57548ee0dffaf|-
+OK|ssh|onboard/health/UAV8_bridge_health.jsonl|13364756|225c3415824351bebd538db421112fde|-
+OK|ssh|onboard/health/UAV8_relay_events.jsonl|8653|eb236d32c8585b29d180cf93506ac83a|-
+OK|ssh|onboard/ros_home/385a9802-c489-11f1-b2ef-3c6d66a31a44/gp_origin_receiver-8.log|2723|6f70c925c6c0d2325adc2c695d694c46|-
+OK|ssh|onboard/ros_home/385a9802-c489-11f1-b2ef-3c6d66a31a44/gps_bias_node-9.log|1880|c1cca61bea19a823a8d843faa9e745f7|-
+OK|ssh|onboard/ros_home/385a9802-c489-11f1-b2ef-3c6d66a31a44/master.log|132832|87bb5aef0883bc6b567dc7aca2ade01f|-
+OK|ssh|onboard/ros_home/385a9802-c489-11f1-b2ef-3c6d66a31a44/pose_relay-4.log|1990|7c2da009e5bf0f366375e3c95de050a6|-
+OK|ssh|onboard/ros_home/385a9802-c489-11f1-b2ef-3c6d66a31a44/roslaunch-UAV8-3464.log|43162|e27be8da0bcdfab5c0c0d2997b140e6c|-
+OK|ssh|onboard/ros_home/385a9802-c489-11f1-b2ef-3c6d66a31a44/rosout-1-stdout.log|250|b6d84e96b5ebafaf0307de6dc98da4a8|-
+OK|ssh|onboard/ros_home/385a9802-c489-11f1-b2ef-3c6d66a31a44/rosout.log|574137|54708e2a00a70147e6bcf878a2fa2512|-
+OK|ssh|onboard/ros_home/385a9802-c489-11f1-b2ef-3c6d66a31a44/setpoint_relay-5.log|2345|6cb31d16a538b25cf1f4dbf2c0fc1475|-
+OK|ssh|onboard/ros_home/385a9802-c489-11f1-b2ef-3c6d66a31a44/swarm_bridge-7.log|18481|74cbcdac999ce6aafff3bbf5c60d2264|-
+OK|ssh|onboard/ros_home/385a9802-c489-11f1-b2ef-3c6d66a31a44/uav_executor_UAV8-6.log|5629|c1aa1643a5133fe0d9c4dcc3f67231dd|-
+OK|ssh|onboard/ssh.err|79|a3350c9021d0f84dfae3f687e5c958c9|-
+OK|ssh|onboard/term/UAV8_offboard_ego.log|1636268|9f1acb0d43b7e3aa28f6bad5c49eca5a|-

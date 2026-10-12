@@ -1,0 +1,110 @@
+[rospy.client][INFO] 2026-10-09 14:33:38,568: init_node, name[/swarm_bridge], pid[9694]
+[xmlrpc][INFO] 2026-10-09 14:33:38,569: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-10-09 14:33:38,569: Started XML-RPC server [http://UAV8:36793/]
+[rospy.init][INFO] 2026-10-09 14:33:38,569: ROS Slave URI: [http://UAV8:36793/]
+[rospy.impl.masterslave][INFO] 2026-10-09 14:33:38,570: _ready: http://UAV8:36793/
+[rospy.registration][INFO] 2026-10-09 14:33:38,573: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2026-10-09 14:33:38,574: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-10-09 14:33:38,670: registered with master
+[rospy.rosout][INFO] 2026-10-09 14:33:38,671: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-10-09 14:33:38,677: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-10-09 14:33:38,680: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2026-10-09 14:33:38,808: bridge: my_name=UAV8, port_offset=0, topics=11, health=/home/nvidia/catkin_swarm6-2/.ros_home/log/health/UAV8_bridge_health.jsonl
+[rosout][INFO] 2026-10-09 14:33:38,811: bridge: recv sources=GCS_A,UAV1,UAV2,UAV3,UAV4,UAV5,UAV6,UAV7,UAV9,UAV10,UAV11,UAV12,UAV13,UAV14,UAV15,UAV16
+[rospy.internal][INFO] 2026-10-09 14:33:38,945: topic[/GCS_A/group_a/gp_origin] adding connection to [/gp_origin_receiver], count 0
+[rospy.internal][INFO] 2026-10-09 14:33:38,955: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2026-10-09 14:33:39,186: topic[/UAV10/mavros/local_position/odom] adding connection to [/uav_executor_UAV8], count 0
+[rospy.internal][INFO] 2026-10-09 14:33:39,192: topic[/UAV10/trajectory_intent] adding connection to [/uav_executor_UAV8], count 0
+[rospy.internal][INFO] 2026-10-09 14:33:39,194: topic[/UAV13/mavros/local_position/odom] adding connection to [/uav_executor_UAV8], count 0
+[rospy.internal][INFO] 2026-10-09 14:33:39,195: topic[/UAV13/trajectory_intent] adding connection to [/uav_executor_UAV8], count 0
+[rospy.internal][INFO] 2026-10-09 14:33:39,235: topic[/uav_task_state] adding connection to [http://UAV8:42819/], count 0
+[rospy.internal][INFO] 2026-10-09 14:33:39,239: topic[/mavros/state] adding connection to [http://UAV8:44165/], count 0
+[rospy.internal][INFO] 2026-10-09 14:33:39,243: topic[/mavros/time_reference] adding connection to [http://UAV8:44165/], count 0
+[rospy.internal][INFO] 2026-10-09 14:33:39,247: topic[/mavros/global_position/global] adding connection to [http://UAV8:44165/], count 0
+[rospy.internal][INFO] 2026-10-09 14:33:39,251: topic[/mavros/local_position/pose] adding connection to [http://UAV8:44165/], count 0
+[rospy.internal][INFO] 2026-10-09 14:33:39,256: topic[/mavros/local_position/odom] adding connection to [http://UAV8:44165/], count 0
+[rospy.internal][INFO] 2026-10-09 14:33:39,259: topic[/mavros/rc/in] adding connection to [http://UAV8:44165/], count 0
+[rospy.internal][INFO] 2026-10-09 14:33:39,264: topic[/gp_origin_confirmed] adding connection to [http://UAV8:45511/], count 0
+[rospy.internal][INFO] 2026-10-09 14:33:39,268: topic[/trajectory_intent] adding connection to [http://UAV8:35059/], count 0
+[rospy.internal][INFO] 2026-10-09 14:33:39,275: topic[/gps_bias] adding connection to [http://UAV8:42779/], count 0
+[rosout][INFO] 2026-10-09 14:33:39,277: bridge: service router bound on 14000 (my_name=UAV8)
+[rosout][INFO] 2026-10-09 14:33:39,281: bridge: proxying /UAV1/uav_task -> UAV1
+[rosout][INFO] 2026-10-09 14:33:39,284: bridge: dealer connected to UAV1 service router 192.168.5.11:14000
+[rosout][INFO] 2026-10-09 14:33:39,287: bridge: proxying /UAV1/uav_task_control -> UAV1
+[rosout][INFO] 2026-10-09 14:33:39,291: bridge: proxying /UAV1/uav_hold -> UAV1
+[rosout][INFO] 2026-10-09 14:33:39,294: bridge: proxying /UAV2/uav_task -> UAV2
+[rosout][INFO] 2026-10-09 14:33:39,296: bridge: dealer connected to UAV2 service router 192.168.5.21:14000
+[rosout][INFO] 2026-10-09 14:33:39,299: bridge: proxying /UAV2/uav_task_control -> UAV2
+[rosout][INFO] 2026-10-09 14:33:39,302: bridge: proxying /UAV2/uav_hold -> UAV2
+[rosout][INFO] 2026-10-09 14:33:39,304: bridge: proxying /UAV3/uav_task -> UAV3
+[rosout][INFO] 2026-10-09 14:33:39,307: bridge: dealer connected to UAV3 service router 192.168.5.31:14000
+[rosout][INFO] 2026-10-09 14:33:39,310: bridge: proxying /UAV3/uav_task_control -> UAV3
+[rosout][INFO] 2026-10-09 14:33:39,313: bridge: proxying /UAV3/uav_hold -> UAV3
+[rosout][INFO] 2026-10-09 14:33:39,315: bridge: proxying /UAV4/uav_task -> UAV4
+[rosout][INFO] 2026-10-09 14:33:39,318: bridge: dealer connected to UAV4 service router 192.168.5.41:14000
+[rosout][INFO] 2026-10-09 14:33:39,321: bridge: proxying /UAV4/uav_task_control -> UAV4
+[rosout][INFO] 2026-10-09 14:33:39,324: bridge: proxying /UAV4/uav_hold -> UAV4
+[rosout][INFO] 2026-10-09 14:33:39,327: bridge: proxying /UAV5/uav_task -> UAV5
+[rosout][INFO] 2026-10-09 14:33:39,330: bridge: dealer connected to UAV5 service router 192.168.5.51:14000
+[rosout][INFO] 2026-10-09 14:33:39,333: bridge: proxying /UAV5/uav_task_control -> UAV5
+[rosout][INFO] 2026-10-09 14:33:39,336: bridge: proxying /UAV5/uav_hold -> UAV5
+[rosout][INFO] 2026-10-09 14:33:39,339: bridge: proxying /UAV6/uav_task -> UAV6
+[rosout][INFO] 2026-10-09 14:33:39,341: bridge: dealer connected to UAV6 service router 192.168.5.61:14000
+[rosout][INFO] 2026-10-09 14:33:39,344: bridge: proxying /UAV6/uav_task_control -> UAV6
+[rosout][INFO] 2026-10-09 14:33:39,347: bridge: proxying /UAV6/uav_hold -> UAV6
+[rosout][INFO] 2026-10-09 14:33:39,350: bridge: proxying /UAV7/uav_task -> UAV7
+[rosout][INFO] 2026-10-09 14:33:39,352: bridge: dealer connected to UAV7 service router 192.168.5.71:14000
+[rosout][INFO] 2026-10-09 14:33:39,356: bridge: proxying /UAV7/uav_task_control -> UAV7
+[rosout][INFO] 2026-10-09 14:33:39,359: bridge: proxying /UAV7/uav_hold -> UAV7
+[rosout][INFO] 2026-10-09 14:33:39,362: bridge: proxying /UAV9/uav_task -> UAV9
+[rosout][INFO] 2026-10-09 14:33:39,364: bridge: dealer connected to UAV9 service router 192.168.5.91:14000
+[rosout][INFO] 2026-10-09 14:33:39,367: bridge: proxying /UAV9/uav_task_control -> UAV9
+[rosout][INFO] 2026-10-09 14:33:39,370: bridge: proxying /UAV9/uav_hold -> UAV9
+[rosout][INFO] 2026-10-09 14:33:39,373: bridge: proxying /UAV10/uav_task -> UAV10
+[rosout][INFO] 2026-10-09 14:33:39,376: bridge: dealer connected to UAV10 service router 192.168.5.101:14000
+[rosout][INFO] 2026-10-09 14:33:39,379: bridge: proxying /UAV10/uav_task_control -> UAV10
+[rosout][INFO] 2026-10-09 14:33:39,381: bridge: proxying /UAV10/uav_hold -> UAV10
+[rosout][INFO] 2026-10-09 14:33:39,385: bridge: proxying /UAV11/uav_task -> UAV11
+[rosout][INFO] 2026-10-09 14:33:39,387: bridge: dealer connected to UAV11 service router 192.168.5.111:14000
+[rosout][INFO] 2026-10-09 14:33:39,391: bridge: proxying /UAV11/uav_task_control -> UAV11
+[rosout][INFO] 2026-10-09 14:33:39,394: bridge: proxying /UAV11/uav_hold -> UAV11
+[rosout][INFO] 2026-10-09 14:33:39,397: bridge: proxying /UAV12/uav_task -> UAV12
+[rosout][INFO] 2026-10-09 14:33:39,399: bridge: dealer connected to UAV12 service router 192.168.5.121:14000
+[rosout][INFO] 2026-10-09 14:33:39,402: bridge: proxying /UAV12/uav_task_control -> UAV12
+[rosout][INFO] 2026-10-09 14:33:39,405: bridge: proxying /UAV12/uav_hold -> UAV12
+[rosout][INFO] 2026-10-09 14:33:39,408: bridge: proxying /UAV13/uav_task -> UAV13
+[rosout][INFO] 2026-10-09 14:33:39,411: bridge: dealer connected to UAV13 service router 192.168.5.131:14000
+[rosout][INFO] 2026-10-09 14:33:39,414: bridge: proxying /UAV13/uav_task_control -> UAV13
+[rosout][INFO] 2026-10-09 14:33:39,418: bridge: proxying /UAV13/uav_hold -> UAV13
+[rosout][INFO] 2026-10-09 14:33:39,421: bridge: proxying /UAV14/uav_task -> UAV14
+[rosout][INFO] 2026-10-09 14:33:39,423: bridge: dealer connected to UAV14 service router 192.168.5.141:14000
+[rosout][INFO] 2026-10-09 14:33:39,426: bridge: proxying /UAV14/uav_task_control -> UAV14
+[rosout][INFO] 2026-10-09 14:33:39,429: bridge: proxying /UAV14/uav_hold -> UAV14
+[rosout][INFO] 2026-10-09 14:33:39,432: bridge: proxying /UAV15/uav_task -> UAV15
+[rosout][INFO] 2026-10-09 14:33:39,434: bridge: dealer connected to UAV15 service router 192.168.5.151:14000
+[rosout][INFO] 2026-10-09 14:33:39,437: bridge: proxying /UAV15/uav_task_control -> UAV15
+[rosout][INFO] 2026-10-09 14:33:39,440: bridge: proxying /UAV15/uav_hold -> UAV15
+[rosout][INFO] 2026-10-09 14:33:39,443: bridge: proxying /UAV16/uav_task -> UAV16
+[rosout][INFO] 2026-10-09 14:33:39,445: bridge: dealer connected to UAV16 service router 192.168.5.161:14000
+[rosout][INFO] 2026-10-09 14:33:39,448: bridge: proxying /UAV16/uav_task_control -> UAV16
+[rosout][INFO] 2026-10-09 14:33:39,452: bridge: proxying /UAV16/uav_hold -> UAV16
+[rosout][INFO] 2026-10-09 14:33:39,454: bridge: link options HEARTBEAT_IVL,HEARTBEAT_TIMEOUT,TCP_KEEPALIVE,TCP_KEEPALIVE_IDLE,TCP_KEEPALIVE_INTVL,TCP_KEEPALIVE_CNT,RECONNECT_IVL,RECONNECT_IVL_MAX
+[rospy.core][INFO] 2026-10-09 14:41:30,455: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2026-10-09 14:41:30,465: topic[/gps_bias] removing connection to http://UAV8:42779/
+[rospy.internal][INFO] 2026-10-09 14:41:30,467: topic[/gp_origin_confirmed] removing connection to http://UAV8:45511/
+[rospy.internal][INFO] 2026-10-09 14:41:30,502: topic[/GCS_A/group_a/gp_origin] removing connection to /gp_origin_receiver
+[rospy.internal][INFO] 2026-10-09 14:41:30,621: topic[/trajectory_intent] removing connection to http://UAV8:35059/
+[rospy.internal][INFO] 2026-10-09 14:41:30,655: topic[/mavros/global_position/global] removing connection to http://UAV8:44165/
+[rospy.internal][INFO] 2026-10-09 14:41:30,667: topic[/mavros/local_position/pose] removing connection to http://UAV8:44165/
+[rospy.internal][INFO] 2026-10-09 14:41:30,671: topic[/mavros/local_position/odom] removing connection to http://UAV8:44165/
+[rospy.internal][INFO] 2026-10-09 14:41:30,681: topic[/uav_task_state] removing connection to http://UAV8:42819/
+[rospy.internal][INFO] 2026-10-09 14:41:30,692: topic[/mavros/rc/in] removing connection to http://UAV8:44165/
+[rospy.internal][INFO] 2026-10-09 14:41:30,697: topic[/mavros/state] removing connection to http://UAV8:44165/
+[rospy.internal][INFO] 2026-10-09 14:41:30,702: topic[/mavros/time_reference] removing connection to http://UAV8:44165/
+[rospy.internal][INFO] 2026-10-09 14:41:30,703: topic[/UAV13/mavros/local_position/odom] removing connection to /uav_executor_UAV8
+[rospy.internal][INFO] 2026-10-09 14:41:30,753: topic[/UAV10/mavros/local_position/odom] removing connection to /uav_executor_UAV8
+[rospy.internal][INFO] 2026-10-09 14:41:31,004: topic[/UAV10/trajectory_intent] removing connection to /uav_executor_UAV8
+[rospy.internal][INFO] 2026-10-09 14:41:31,005: topic[/UAV13/trajectory_intent] removing connection to /uav_executor_UAV8
+[rospy.internal][INFO] 2026-10-09 14:41:34,866: topic[/rosout] removing connection to /rosout
+[rospy.impl.masterslave][INFO] 2026-10-09 14:41:34,868: signal-2
+[rospy.core][INFO] 2026-10-09 14:41:35,404: signal_shutdown [atexit]

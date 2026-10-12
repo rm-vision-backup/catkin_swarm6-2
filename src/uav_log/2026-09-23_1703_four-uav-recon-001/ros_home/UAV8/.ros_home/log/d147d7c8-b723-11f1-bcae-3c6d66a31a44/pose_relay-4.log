@@ -1,0 +1,23 @@
+[rospy.client][INFO] 2026-09-23 15:53:10,673: init_node, name[/pose_relay], pid[7106]
+[xmlrpc][INFO] 2026-09-23 15:53:10,674: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-09-23 15:53:10,675: Started XML-RPC server [http://UAV8:39795/]
+[rospy.init][INFO] 2026-09-23 15:53:10,675: ROS Slave URI: [http://UAV8:39795/]
+[rospy.impl.masterslave][INFO] 2026-09-23 15:53:10,676: _ready: http://UAV8:39795/
+[rospy.registration][INFO] 2026-09-23 15:53:10,678: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2026-09-23 15:53:10,678: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-09-23 15:53:10,776: registered with master
+[rospy.rosout][INFO] 2026-09-23 15:53:10,777: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-09-23 15:53:10,783: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-09-23 15:53:10,786: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2026-09-23 15:53:10,793: pose_relay: /mavros/local_position/pose -> /local_pose
+[rospy.internal][INFO] 2026-09-23 15:53:10,796: topic[/mavros/local_position/pose] adding connection to [http://UAV8:46693/], count 0
+[rospy.internal][INFO] 2026-09-23 15:53:11,002: topic[/local_pose] adding connection to [/uav_executor_UAV8], count 0
+[rospy.internal][INFO] 2026-09-23 15:53:11,019: topic[/local_pose] adding connection to [/ego_planner_driver], count 1
+[rospy.internal][INFO] 2026-09-23 15:53:11,020: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.core][INFO] 2026-09-23 15:58:44,600: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2026-09-23 15:58:44,637: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2026-09-23 15:58:44,638: topic[/local_pose] removing connection to /uav_executor_UAV8
+[rospy.internal][INFO] 2026-09-23 15:58:44,638: topic[/local_pose] removing connection to /ego_planner_driver
+[rospy.internal][INFO] 2026-09-23 15:58:44,639: topic[/mavros/local_position/pose] removing connection to http://UAV8:46693/
+[rospy.impl.masterslave][INFO] 2026-09-23 15:58:44,639: signal-2
+[rospy.core][INFO] 2026-09-23 15:58:45,202: signal_shutdown [atexit]

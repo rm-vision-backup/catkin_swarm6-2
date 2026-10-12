@@ -1,0 +1,27 @@
+[rospy.client][INFO] 2026-09-23 15:53:10,727: init_node, name[/setpoint_relay], pid[7115]
+[xmlrpc][INFO] 2026-09-23 15:53:10,727: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-09-23 15:53:10,728: Started XML-RPC server [http://UAV8:37181/]
+[rospy.init][INFO] 2026-09-23 15:53:10,728: ROS Slave URI: [http://UAV8:37181/]
+[rospy.impl.masterslave][INFO] 2026-09-23 15:53:10,728: _ready: http://UAV8:37181/
+[rospy.registration][INFO] 2026-09-23 15:53:10,730: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2026-09-23 15:53:10,730: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-09-23 15:53:10,829: registered with master
+[rospy.rosout][INFO] 2026-09-23 15:53:10,829: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-09-23 15:53:10,836: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-09-23 15:53:10,837: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2026-09-23 15:53:10,864: topic[/setpoint/ego] adding connection to [http://UAV8:43079/], count 0
+[rospy.internal][INFO] 2026-09-23 15:53:10,873: topic[/mavros/local_position/pose] adding connection to [http://UAV8:46693/], count 0
+[rosout][INFO] 2026-09-23 15:53:10,870: setpoint_relay: sole owner of /mavros/setpoint_raw/local (rate=30.0 Hz, candidate_timeout=0.2 s, pose_timeout=1.0 s)
+[rospy.internal][INFO] 2026-09-23 15:53:11,026: topic[/setpoint/follower] adding connection to [http://UAV8:38133/], count 0
+[rospy.internal][INFO] 2026-09-23 15:53:11,030: topic[/direct_control_active] adding connection to [http://UAV8:38133/], count 0
+[rospy.internal][INFO] 2026-09-23 15:53:11,088: topic[/mavros/setpoint_raw/local] adding connection to [/mavros], count 0
+[rospy.internal][INFO] 2026-09-23 15:53:11,123: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.core][INFO] 2026-09-23 15:58:44,608: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2026-09-23 15:58:44,640: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2026-09-23 15:58:44,640: topic[/mavros/setpoint_raw/local] removing connection to /mavros
+[rospy.internal][INFO] 2026-09-23 15:58:44,641: topic[/setpoint/ego] removing connection to http://UAV8:43079/
+[rospy.internal][INFO] 2026-09-23 15:58:44,641: topic[/setpoint/follower] removing connection to http://UAV8:38133/
+[rospy.internal][INFO] 2026-09-23 15:58:44,642: topic[/direct_control_active] removing connection to http://UAV8:38133/
+[rospy.internal][INFO] 2026-09-23 15:58:44,643: topic[/mavros/local_position/pose] removing connection to http://UAV8:46693/
+[rospy.impl.masterslave][INFO] 2026-09-23 15:58:44,643: signal-2
+[rospy.core][INFO] 2026-09-23 15:58:45,210: signal_shutdown [atexit]

@@ -1,0 +1,23 @@
+[rospy.client][INFO] 2026-09-23 15:16:58,663: init_node, name[/gp_origin_receiver], pid[5495]
+[xmlrpc][INFO] 2026-09-23 15:16:58,664: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-09-23 15:16:58,665: Started XML-RPC server [http://UAV13:40139/]
+[rospy.init][INFO] 2026-09-23 15:16:58,665: ROS Slave URI: [http://UAV13:40139/]
+[rospy.impl.masterslave][INFO] 2026-09-23 15:16:58,665: _ready: http://UAV13:40139/
+[rospy.registration][INFO] 2026-09-23 15:16:58,666: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2026-09-23 15:16:58,666: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-09-23 15:16:58,765: registered with master
+[rospy.rosout][INFO] 2026-09-23 15:16:58,766: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-09-23 15:16:58,773: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-09-23 15:16:58,776: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2026-09-23 15:16:58,804: topic[/mavros/global_position/gp_origin] adding connection to [http://UAV13:38133/], count 0
+[rospy.internal][INFO] 2026-09-23 15:16:58,804: topic[/mavros/state] adding connection to [http://UAV13:38133/], count 0
+[rospy.internal][INFO] 2026-09-23 15:16:58,857: topic[/gp_origin_confirmed] adding connection to [/uav_executor_UAV13], count 0
+[rospy.internal][INFO] 2026-09-23 15:16:59,102: topic[/mavros/global_position/set_gp_origin] adding connection to [/mavros], count 0
+[rospy.internal][INFO] 2026-09-23 15:16:59,803: topic[/gp_origin_confirmed] removing connection to /uav_executor_UAV13
+[rospy.core][INFO] 2026-09-23 15:17:00,342: signal_shutdown [signal-2]
+[rospy.registration][WARNING] 2026-09-23 15:17:00,344: cannot unregister with master due to network issues
+[rospy.internal][INFO] 2026-09-23 15:17:00,344: topic[/mavros/global_position/set_gp_origin] removing connection to /mavros
+[rospy.internal][INFO] 2026-09-23 15:17:00,345: topic[/mavros/global_position/gp_origin] removing connection to http://UAV13:38133/
+[rospy.internal][INFO] 2026-09-23 15:17:00,345: topic[/mavros/state] removing connection to http://UAV13:38133/
+[rospy.impl.masterslave][INFO] 2026-09-23 15:17:00,345: signal-2
+[rospy.core][INFO] 2026-09-23 15:17:00,944: signal_shutdown [atexit]

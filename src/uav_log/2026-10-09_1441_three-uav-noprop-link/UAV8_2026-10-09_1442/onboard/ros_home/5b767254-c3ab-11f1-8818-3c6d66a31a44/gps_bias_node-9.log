@@ -1,0 +1,22 @@
+[rospy.client][INFO] 2026-10-09 14:33:38,597: init_node, name[/gps_bias_node], pid[9697]
+[xmlrpc][INFO] 2026-10-09 14:33:38,598: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-10-09 14:33:38,598: Started XML-RPC server [http://UAV8:42779/]
+[rospy.init][INFO] 2026-10-09 14:33:38,599: ROS Slave URI: [http://UAV8:42779/]
+[rospy.impl.masterslave][INFO] 2026-10-09 14:33:38,599: _ready: http://UAV8:42779/
+[rospy.registration][INFO] 2026-10-09 14:33:38,600: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2026-10-09 14:33:38,600: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-10-09 14:33:38,699: registered with master
+[rospy.rosout][INFO] 2026-10-09 14:33:38,700: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-10-09 14:33:38,709: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-10-09 14:33:38,711: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2026-10-09 14:33:38,746: topic[/mavros/time_reference] adding connection to [http://UAV8:44165/], count 0
+[rospy.internal][INFO] 2026-10-09 14:33:38,938: topic[/gps_bias] adding connection to [/ego_planner_driver], count 0
+[rospy.internal][INFO] 2026-10-09 14:33:38,955: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2026-10-09 14:33:39,278: topic[/gps_bias] adding connection to [/swarm_bridge], count 1
+[rospy.core][INFO] 2026-10-09 14:41:30,454: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2026-10-09 14:41:30,463: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2026-10-09 14:41:30,463: topic[/gps_bias] removing connection to /ego_planner_driver
+[rospy.internal][INFO] 2026-10-09 14:41:30,463: topic[/gps_bias] removing connection to /swarm_bridge
+[rospy.internal][INFO] 2026-10-09 14:41:30,464: topic[/mavros/time_reference] removing connection to http://UAV8:44165/
+[rospy.impl.masterslave][INFO] 2026-10-09 14:41:30,464: signal-2
+[rospy.core][INFO] 2026-10-09 14:41:31,056: signal_shutdown [atexit]

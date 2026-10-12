@@ -1,0 +1,24 @@
+{"leader_id": "UAV8", "leader_topic": "/UAV8/mavros/local_position/odom", "offset": [-4.97745420971606, 0.47428850943267165, 0.0], "warmup_s": 3.0, "pose_timeout_s": 1.0, "event": "follower_start", "t": 1791529838.921378, "mono": 4716.487791, "uav": "UAV13", "component": "follower"}
+{"wait_s": 0.034, "event": "leader_odom_first_frame", "t": 1791529838.955039, "mono": 4716.521433, "uav": "UAV13", "component": "follower"}
+{"reason": "COMMAND_HELD", "message": "motion cancelled by HOLD", "ran_s": 12.257, "event": "follower_exit", "t": 1791529851.178321, "mono": 4728.744719, "uav": "UAV13", "component": "follower"}
+{"leader_id": "UAV8", "leader_topic": "/UAV8/mavros/local_position/odom", "offset": [-4.97745420971606, 0.47428850943267165, 0.0], "warmup_s": 3.0, "pose_timeout_s": 1.0, "event": "follower_start", "t": 1791530270.920815, "mono": 5148.487219, "uav": "UAV13", "component": "follower"}
+{"wait_s": 0.0, "event": "leader_odom_first_frame", "t": 1791530270.921018, "mono": 5148.487409, "uav": "UAV13", "component": "follower"}
+{"reason": "COMMAND_HELD", "message": "motion cancelled by HOLD", "ran_s": 12.191, "event": "follower_exit", "t": 1791530283.111855, "mono": 5160.678251, "uav": "UAV13", "component": "follower"}
+{"leader_id": "UAV8", "leader_topic": "/UAV8/mavros/local_position/odom", "offset": [-4.97745420971606, 0.47428850943267165, 0.0], "warmup_s": 3.0, "pose_timeout_s": 1.0, "event": "follower_start", "t": 1791530736.099892, "mono": 5613.666298, "uav": "UAV13", "component": "follower"}
+{"wait_s": 0.0, "event": "leader_odom_first_frame", "t": 1791530736.100091, "mono": 5613.666479, "uav": "UAV13", "component": "follower"}
+{"reason": "COMMAND_HELD", "message": "motion cancelled by HOLD", "ran_s": 12.271, "event": "follower_exit", "t": 1791530748.371235, "mono": 5625.93763, "uav": "UAV13", "component": "follower"}
+{"leader_id": "UAV8", "leader_topic": "/UAV8/mavros/local_position/odom", "offset": [-4.97745420971606, 0.47428850943267165, 0.0], "warmup_s": 3.0, "pose_timeout_s": 1.0, "event": "follower_start", "t": 1791530831.379344, "mono": 5708.945753, "uav": "UAV13", "component": "follower"}
+{"wait_s": 0.0, "event": "leader_odom_first_frame", "t": 1791530831.379539, "mono": 5708.945929, "uav": "UAV13", "component": "follower"}
+{"reason": "COMMAND_HELD", "message": "motion cancelled by HOLD", "ran_s": 9.194, "event": "follower_exit", "t": 1791530840.573428, "mono": 5718.139824, "uav": "UAV13", "component": "follower"}
+{"leader_id": "UAV8", "leader_topic": "/UAV8/mavros/local_position/odom", "offset": [-4.99986621413703, 0.036576505178124066, 0.0], "warmup_s": 3.0, "pose_timeout_s": 1.0, "event": "follower_start", "t": 1791535749.572633, "mono": 786.86399, "uav": "UAV13", "component": "follower"}
+{"wait_s": 0.101, "event": "leader_odom_first_frame", "t": 1791535749.673731, "mono": 786.965063, "uav": "UAV13", "component": "follower"}
+{"reason": "COMMAND_HELD", "message": "motion cancelled by HOLD", "ran_s": 12.188, "event": "follower_exit", "t": 1791535761.76109, "mono": 799.05242, "uav": "UAV13", "component": "follower"}
+{"leader_id": "UAV8", "leader_topic": "/UAV8/mavros/local_position/odom", "offset": [-4.970920044631831, 0.5384736854085528, 0.0], "warmup_s": 3.0, "pose_timeout_s": 1.0, "event": "follower_start", "t": 1791538782.025078, "mono": 2388.835203, "uav": "UAV13", "component": "follower"}
+{"wait_s": 0.034, "event": "leader_odom_first_frame", "t": 1791538782.059099, "mono": 2388.869194, "uav": "UAV13", "component": "follower"}
+{"reason": "COMMAND_HELD", "message": "motion cancelled by HOLD", "ran_s": 12.61, "event": "follower_exit", "t": 1791538794.635417, "mono": 2401.445513, "uav": "UAV13", "component": "follower"}
+{"leader_id": "UAV8", "leader_topic": "/UAV8/mavros/local_position/odom", "offset": [-4.970920044631831, 0.5384736854085528, 0.0], "warmup_s": 3.0, "pose_timeout_s": 1.0, "event": "follower_start", "t": 1791539382.928047, "mono": 2989.738171, "uav": "UAV13", "component": "follower"}
+{"wait_s": 0.034, "event": "leader_odom_first_frame", "t": 1791539382.961778, "mono": 2989.771871, "uav": "UAV13", "component": "follower"}
+{"reason": "COMMAND_HELD", "message": "motion cancelled by HOLD", "ran_s": 12.616, "event": "follower_exit", "t": 1791539395.544509, "mono": 3002.354607, "uav": "UAV13", "component": "follower"}
+{"leader_id": "UAV8", "leader_topic": "/UAV8/mavros/local_position/odom", "offset": [4.999633921049128, 0.06050335110494492, 0.0], "warmup_s": 3.0, "pose_timeout_s": 3.0, "event": "follower_start", "t": 1791623346.708895, "mono": 521.111952, "uav": "UAV13", "component": "follower"}
+{"wait_s": 0.034, "event": "leader_odom_first_frame", "t": 1791623346.742822, "mono": 521.145854, "uav": "UAV13", "component": "follower"}
+{"reason": "SUCCESS", "message": "follower formation reached", "ran_s": 109.798, "event": "follower_exit", "t": 1791623456.506684, "mono": 630.909723, "uav": "UAV13", "component": "follower"}

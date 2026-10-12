@@ -1,0 +1,22 @@
+# status|source|relpath|bytes|md5|note
+# host=UAV13
+# epoch=1791625000
+# date=2026-10-10 17:36:40 CST
+# target=192.168.55.1 ip=192.168.55.1 mav=- ssh_user=nvidia stamp=2026-10-10_1736
+SIZE-MISMATCH|ssh|onboard/health/UAV13_bridge_health.jsonl|13546131|-|board said 13543157 bytes
+OK|ssh|onboard/ego_planner/UAV13-ego-planner.log|285283|1b887ff3226968ee3079b3dfc93ff7ff|-
+OK|ssh|onboard/health/UAV13_bridge_health.jsonl|13546131|642b00a5d4c3d1e587bf6810c99af55f|-
+OK|ssh|onboard/health/UAV13_follower_events.jsonl|4933|7a51acc122e6ffafd836cc9ffa53d387|-
+OK|ssh|onboard/health/UAV13_relay_events.jsonl|15137|fbbd24a593f72510cad3b03ba5966446|-
+OK|ssh|onboard/ros_home/39a64080-c489-11f1-9425-3c6d66c3a338/gp_origin_receiver-8.log|2730|956d7a54cfa0d24be935cb32da82ae8a|-
+OK|ssh|onboard/ros_home/39a64080-c489-11f1-9425-3c6d66c3a338/gps_bias_node-9.log|1884|74cf17d3600cc32db8bc26d061979de0|-
+OK|ssh|onboard/ros_home/39a64080-c489-11f1-9425-3c6d66c3a338/master.log|133484|c9120e33b3873597642a246f58a7d079|-
+OK|ssh|onboard/ros_home/39a64080-c489-11f1-9425-3c6d66c3a338/pose_relay-4.log|1995|204f8effcaeb5b0a5893b0d7c86c88c5|-
+OK|ssh|onboard/ros_home/39a64080-c489-11f1-9425-3c6d66c3a338/roslaunch-UAV13-3365.log|43198|947e08568a98df9bee0f4dc526782950|-
+OK|ssh|onboard/ros_home/39a64080-c489-11f1-9425-3c6d66c3a338/rosout-1-stdout.log|250|07f7ff305a90e4a51da48b0bab60b6f1|-
+OK|ssh|onboard/ros_home/39a64080-c489-11f1-9425-3c6d66c3a338/rosout.log|575015|831d1e9a1de98f7a829d3a6b5d31d93e|-
+OK|ssh|onboard/ros_home/39a64080-c489-11f1-9425-3c6d66c3a338/setpoint_relay-5.log|2352|2f083c9650a537e38ebec36ff3b38f68|-
+OK|ssh|onboard/ros_home/39a64080-c489-11f1-9425-3c6d66c3a338/swarm_bridge-7.log|18467|91078b3f7e0c1d4fb0269079920d5845|-
+OK|ssh|onboard/ros_home/39a64080-c489-11f1-9425-3c6d66c3a338/uav_executor_UAV13-6.log|5641|2f2b60d7cf5ad07a3061b62ee43a861a|-
+OK|ssh|onboard/ssh.err|79|a3350c9021d0f84dfae3f687e5c958c9|-
+OK|ssh|onboard/term/UAV13_offboard_ego.log|1238659|8ed7ab63b357be7e6155a5297d5bcf0c|-
