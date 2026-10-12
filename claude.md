@@ -64,5 +64,6 @@ Co-Authored-By: Claude Code <noreply@anthropic.com>
 
 ### 不要提交
 
-`src/uav_log/`、`runtime_logs/`、`.runtime_logs/`、`.ros_home/`、`quality_reports/`（均已 gitignore）。
-`references/DAG-GCBF/` 已于 2026-10-12 登记为子模块并入库，不再属于未跟踪资料。
+`runtime_logs/`、`.runtime_logs/`、`.ros_home/`、`quality_reports/`（均已 gitignore）。
+`src/uav_log/` 自 2026-10-12 起按轮次整理入库：`rosbag/`、`*.bag`、`*_bridge_health*.jsonl`
+与单文件 ≥5 MB 的由 .gitignore 排除（文件留在本地磁盘），其余文本证据随轮次提交。
