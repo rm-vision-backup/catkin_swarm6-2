@@ -29,7 +29,7 @@
 - 回答“已完成/已验证”时区分**代码实现、自动测试、SITL、实飞和完整联合任务**；优先核对当前代码与配置、`quality_reports/` 最新结论和 `verification/` 证据。历史 README/计划里的“待办”可能过时，尤其注意报告中的后续更正。
 - 先查 `src/tcp_to_ros/plans/README.md` 的设计决策与计划状态，再查对应子包 README、`src/swarm_uav_interfaces/real_setup.md` 和具体测试记录；不要把废弃的 safety lease、旧编队席位或旧 router 桌面自启方案当成当前方案。任务与协议分别查 `references/runtime/docs/容错自愈联合任务方案(初版).md`、`references/runtime/docs/实物无人机上下层TCP-IP接口对接方案.md`。
 - 验证入口：`verification/ego_smoke/`（基础检查）、`verification/three_uav_recon/`（**实物测试标准形式**，2026-10-11 起沿用：任务流程可不同，但**下发任务前必须先做通信测试**——`bash verification/three_uav_recon/air_flow.sh odom`，确认能收到 odom 再走后续流程）、`verification/single_uav_recon/`、`verification/four_uav_recon/`、`verification/five_uav_recon/`（分阶段规程/仿真脚本）、`verification/airlink_test/`（电台包率/丢包实测）、`verification/dag_recovery/`（DAGL 十机拓扑恢复实验，先离线测试再 SITL）、`quality_reports/`（现场结论）、`src/uav_log/`（实飞原始数据及索引）。新修改先做针对性测试与无桨/SITL 验证；涉及实际飞行、网络部署或飞控参数的动作必须经过现场负责人确认。
-- `src/*` 多为**独立 Git 子模块**；`references/runtime/` 也是独立子模块，原则上只读参考。不要覆盖已有未提交改动、批量同步机载代码、清理日志/构建产物或直接调整实机安全门禁；每次改动明确作用仓库、验证范围与未覆盖风险。构建使用 `catkin build`，不要编辑 `build/`、`devel/`、`logs/`。
+- `src/*` 多为**独立 Git 子模块**；`references/runtime/`、`references/DAG-GCBF/` 也是独立子模块（同在 GitHub `rm-vision-backup` 组织下），原则上只读参考——DAG-GCBF 的说明性文档可改，但要在该仓自行提交并推送，再同步主仓指针。不要覆盖已有未提交改动、批量同步机载代码、清理日志/构建产物或直接调整实机安全门禁；每次改动明确作用仓库、验证范围与未覆盖风险。构建使用 `catkin build`，不要编辑 `build/`、`devel/`、`logs/`。
 
 ## 提交规则（多仓库工作区）
 
@@ -64,5 +64,5 @@ Co-Authored-By: Claude Code <noreply@anthropic.com>
 
 ### 不要提交
 
-`src/uav_log/`、`runtime_logs/`、`.runtime_logs/`、`.ros_home/`、`quality_reports/`（均已 gitignore）；
-`references/DAG-GCBF/`（未跟踪的独立资料，按需保留在工作区）。
+`src/uav_log/`、`runtime_logs/`、`.runtime_logs/`、`.ros_home/`、`quality_reports/`（均已 gitignore）。
+`references/DAG-GCBF/` 已于 2026-10-12 登记为子模块并入库，不再属于未跟踪资料。

@@ -19,3 +19,6 @@
 [submodule "tcp_to_ros"]
 	path = src/tcp_to_ros
 	url = git@github.com:rm-vision-backup/tcp_to_ros.git
+[submodule "DAG-GCBF"]
+	path = references/DAG-GCBF
+	url = git@github.com:rm-vision-backup/DAG-GCBF.git
