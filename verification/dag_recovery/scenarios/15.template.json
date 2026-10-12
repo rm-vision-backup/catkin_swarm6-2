@@ -1,0 +1,20 @@
+{
+  "approved": false,
+  "uav_ids": ["L01", "L02", "L03", "L04", "L05", "L06", "L07", "BRIDGE", "R01", "R02", "R03", "R04", "R05", "R06", "R07"],
+  "fault_id": "BRIDGE",
+  "layout_task_xy": {
+    "L01": [-6, 0], "L02": [-12, 0], "L03": [-18, 0], "L04": [-18, 6], "L05": [-18, -6], "L06": [-24, 0], "L07": [-24, 6],
+    "BRIDGE": [0, 0],
+    "R01": [6, 0], "R02": [12, 0], "R03": [18, 0], "R04": [18, 6], "R05": [18, -6], "R06": [24, 0], "R07": [24, 6]
+  },
+  "bounds_task_xy": [[-30, -15], [30, 15]],
+  "comm_radius_m": 8,
+  "edge_margin_m": 1,
+  "border_margin_m": 3,
+  "min_separation_m": 4,
+  "layout_tolerance_m": 0.75,
+  "normal_height_m": 15,
+  "fault_height_m": 8,
+  "altitude_tolerance_m": 0.7,
+  "seed": 3407
+}

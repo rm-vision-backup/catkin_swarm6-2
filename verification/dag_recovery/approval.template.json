@@ -1,0 +1,23 @@
+{
+  "flight_date": "YYYY-MM-DD",
+  "operator": "",
+  "approved_for_flight": false,
+  "site_clearance_checked": false,
+  "rc_takeover_checked": false,
+  "rosbag_recording_verified": false,
+  "airframes_checked": false,
+  "task_load_checked": false,
+  "single_setpoint_publisher_verified": false,
+  "topology_distributed_to_all": false,
+  "rtk_and_origin_checked": false,
+  "bidirectional_mavlink_checked": false,
+  "altitude_permission_checked": false,
+  "flight_paths_signed_off": false,
+  "four_aircraft_passed": false,
+  "eleven_aircraft_passed": false,
+  "scenario_sha256": "",
+  "identity_sha256": "",
+  "topology_sha256": "",
+  "calibration_sha256": "",
+  "formation_sha256": ""
+}

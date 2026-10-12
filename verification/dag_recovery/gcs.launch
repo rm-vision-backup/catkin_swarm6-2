@@ -1,0 +1,29 @@
+<launch>
+  <arg name="identity_file" />
+  <arg name="topology_file" />
+  <arg name="calibration_file" />
+  <arg name="formation_file" />
+
+  <include file="$(find swarm_topology_bridge)/launch/bridge_group_a_real.launch">
+    <arg name="config" value="$(arg topology_file)" />
+    <arg name="uav_name" value="GCS_A" />
+  </include>
+
+  <node pkg="tcp_to_ros" type="gcs_a_backend_node.py" name="gcs_a_backend_node" output="screen">
+    <rosparam command="load" file="$(find tcp_to_ros)/config/backend_defaults.yaml" />
+    <param name="map_file" value="$(arg identity_file)" />
+    <param name="formation_offsets_file" value="$(arg formation_file)" />
+    <!-- DAG 恢复实验专用：初始爬升（5→15 m）与故障退出（15→8 m）是原地高度
+         变化，水平位移为 0，会被 t_off 排程以 GEOMETRY_UNSUITABLE 拒绝
+         （time_offset_scheduler 要求 L_i > 0）。本实验的冲突规避不依赖时序
+         排程：目标间距由场景硬门禁（≥4 m）保证，执行期由 EGO 机载避碰与
+         全程三维间距监控兜底。A/B 任务默认值（true）不受影响。 -->
+    <param name="move_to_schedule_enabled" value="false" />
+    <param name="fault_exit_schedule_enabled" value="false" />
+  </node>
+
+  <node pkg="tcp_to_ros" type="gcs_a_calibration_node.py" name="gcs_a_calibration" output="screen" required="true">
+    <rosparam command="load" file="$(arg calibration_file)" />
+    <param name="identity_file" value="$(arg identity_file)" />
+  </node>
+</launch>

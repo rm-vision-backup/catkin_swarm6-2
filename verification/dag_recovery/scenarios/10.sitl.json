@@ -1,0 +1,21 @@
+{
+  "uav_ids": ["A01", "A02", "A03", "A04", "A05", "A06", "A07", "A08", "A09", "A10"],
+  "fault_sets": {
+    "3": ["A04", "A05", "A06"],
+    "4": ["A04", "A05", "A06", "A10"]
+  },
+  "layout_task_xy": {
+    "A01": [-10, 0], "A02": [-16, 0], "A03": [-16, 6],
+    "A04": [-5, 0], "A05": [0, 0], "A06": [5, 0],
+    "A07": [10, 0], "A08": [16, 0], "A09": [16, 6], "A10": [16, -6]
+  },
+  "bounds_task_xy": [[-30, -15], [30, 15]],
+  "comm_radius_m": 8,
+  "edge_margin_m": 1,
+  "min_separation_m": 4,
+  "layout_tolerance_m": 1.0,
+  "normal_height_m": 15,
+  "fault_height_m": 8,
+  "altitude_tolerance_m": 0.7,
+  "seed": 3407
+}

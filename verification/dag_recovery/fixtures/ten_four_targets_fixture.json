@@ -1,0 +1,7 @@
+{
+  "solver": "MANUAL_TEST_FIXTURE_NOT_DAGL",
+  "targets_task_xy": {
+    "A01": [-3, 0], "A02": [-9, 0], "A03": [-9, 6],
+    "A07": [3, 0], "A08": [9, 0], "A09": [9, 6]
+  }
+}

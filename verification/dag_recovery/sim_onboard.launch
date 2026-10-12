@@ -1,0 +1,39 @@
+<launch>
+  <arg name="uav_name" />
+  <arg name="tgt_system" />
+  <arg name="topology_file" />
+  <arg name="neighbor_intents" />
+  <arg name="neighbor_odom_topics" />
+  <arg name="udp_port" default="$(eval 24540 - 1 + int(arg('tgt_system')))" />
+  <arg name="gcs_port" default="$(eval 34580 - 1 + int(arg('tgt_system')))" />
+
+  <include file="$(find mavros)/launch/px4.launch">
+    <arg name="gcs_url" value="" />
+    <arg name="fcu_url" value="udp://:$(arg udp_port)@localhost:$(arg gcs_port)" />
+    <arg name="tgt_system" value="$(arg tgt_system)" />
+    <arg name="tgt_component" value="1" />
+  </include>
+
+  <include file="$(find swarm_uav_executor)/launch/uav_executor_ego.launch">
+    <arg name="uav_id" value="$(arg uav_name)" />
+    <arg name="exec_target" value="$(arg uav_name)" />
+    <arg name="service_namespace" value="$(arg uav_name)" />
+    <arg name="neighbor_intents" value="$(arg neighbor_intents)" />
+    <arg name="neighbor_odom_topics" value="$(arg neighbor_odom_topics)" />
+    <arg name="interfaces_version" value="sitl-ego-combined" />
+    <arg name="configure_px4_params" value="false" />
+    <arg name="state_topic" value="/uav_task_state" />
+  </include>
+
+  <include file="$(find swarm_topology_bridge)/launch/topology_group_a_sim.launch">
+    <arg name="uav_name" value="$(arg uav_name)" />
+    <arg name="config" value="$(arg topology_file)" />
+  </include>
+
+  <node pkg="swarm_uav_executor" type="gp_origin_receiver.py"
+        name="gp_origin_receiver" output="screen" />
+  <node pkg="swarm_uav_executor" type="gps_bias_node.py"
+        name="gps_bias_node" output="screen">
+    <rosparam command="load" file="$(find swarm_uav_executor)/config/gps_bias_defaults.yaml" />
+  </node>
+</launch>

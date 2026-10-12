@@ -1,0 +1,4 @@
+{
+  "solver": "TEST_FIXTURE_NOT_DAGL",
+  "targets_task_xy": {"A08": [-4, 0], "A12": [3, 0], "A13": [9, 0]}
+}
