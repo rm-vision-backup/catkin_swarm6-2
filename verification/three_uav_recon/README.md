@@ -101,19 +101,19 @@ python3 verification/three_uav_recon/driver.py --phases prepare coverage --dry-r
 # ── UAV8 / A08（领机）  邻居 = 10 13 ──
 ssh nvidia@192.168.5.81 'setsid bash ~/catkin_swarm6-2/src/swarm_uav_executor/bashs/start_onboard.sh \
   neighbor_intents:=/UAV10/trajectory_intent,/UAV13/trajectory_intent \
-  neighbor_odom_topics:=/UAV10/mavros/local_position/odom,/UAV13/mavros/local_position/odom \
+  neighbor_odom_topics:=/UAV10/swarm_pose,/UAV13/swarm_pose \
   uav_task_timeout_s:=280 </dev/null >/dev/null 2>&1 &'
 
 # ── UAV10 / A10  邻居 = 8 13 ──
 ssh nvidia@192.168.5.101 'setsid bash ~/catkin_swarm6-2/src/swarm_uav_executor/bashs/start_onboard.sh \
   neighbor_intents:=/UAV8/trajectory_intent,/UAV13/trajectory_intent \
-  neighbor_odom_topics:=/UAV8/mavros/local_position/odom,/UAV13/mavros/local_position/odom \
+  neighbor_odom_topics:=/UAV8/swarm_pose,/UAV13/swarm_pose \
   uav_task_timeout_s:=280 </dev/null >/dev/null 2>&1 &'
 
 # ── UAV13 / A13  邻居 = 8 10 ──
 ssh nvidia@192.168.5.131 'setsid bash ~/catkin_swarm6-2/src/swarm_uav_executor/bashs/start_onboard.sh \
   neighbor_intents:=/UAV8/trajectory_intent,/UAV10/trajectory_intent \
-  neighbor_odom_topics:=/UAV8/mavros/local_position/odom,/UAV10/mavros/local_position/odom \
+  neighbor_odom_topics:=/UAV8/swarm_pose,/UAV10/swarm_pose \
   uav_task_timeout_s:=280 </dev/null >/dev/null 2>&1 &'
 ```
 
@@ -248,7 +248,7 @@ bash verification/three_uav_recon/ground_flow.sh --run    # 跑两阶段并给�
       nvidia@192.168.5.$ip:~/catkin_swarm6-2/src/swarm_uav_executor/bashs/
   done
   ```
-- GCS 起栈见 §三（含环境变量覆盖）；三机遥测可见（`rostopic hz /UAV8/mavros/local_position/odom`）。
+- GCS 起栈见 §三（含环境变量覆盖）；三机遥测可见（`rostopic hz /UAV8/swarm_pose`）。
 
 ### 9.2 步骤（`air_flow.sh` 子命令）
 
@@ -270,8 +270,8 @@ bash .../air_flow.sh odom     # 秒级分层：每台看"本机发出/收到邻�
 1. **第一步永远先跑 `odom`**：领机"本机发出"在涨、跟随者"收到邻机"停 → 断在中间段（桥/链路）；
    两边都正常但任务仍报 `LEADER_LOST` → 跟随环自身（订阅名/超时/线程）。
 2. 记下时刻，保留 `health/*.jsonl`、`*_follower_events.jsonl`、driver JSONL 与三份 bag。
-3. 收工后按 rosbag 三份对齐（同一时刻）：领机 bag 里 `/mavros/local_position/odom`（发送侧）
-   ↔ 跟随者 bag 里 `/UAV8/mavros/local_position/odom`（接收侧）↔ 哨兵话题
+3. 收工后按 rosbag 三份对齐（同一时刻）：领机 bag 里 `/swarm_pose`（发送侧）
+   ↔ 跟随者 bag 里 `/UAV8/swarm_pose`（接收侧）↔ 哨兵话题
    （`mavros/state`/`time_reference`/`rc/in`/`gps_bias`）——三类证据同停=整链路断，只有 odom 停=
    该话题发布/桥接端问题。bag 话题清单与理由见 `src/swarm_uav_executor/bashs/record_rosbag.sh` 头注释。
 

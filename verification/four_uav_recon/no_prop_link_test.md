@@ -53,7 +53,7 @@ launch 文件改动随 rsync 生效（rospack 解析到源码目录，无需 bui
 ssh nvidia@192.168.5.81 'setsid bash ~/catkin_swarm6-2/src/swarm_uav_executor/bashs/start_onboard.sh \
   noprop:=true \
   neighbor_intents:=/UAV10/trajectory_intent,/UAV12/trajectory_intent,/UAV13/trajectory_intent \
-  neighbor_odom_topics:=/UAV10/mavros/local_position/odom,/UAV12/mavros/local_position/odom,/UAV13/mavros/local_position/odom \
+  neighbor_odom_topics:=/UAV10/swarm_pose,/UAV12/swarm_pose,/UAV13/swarm_pose \
   uav_task_timeout_s:=280 </dev/null >/dev/null 2>&1 &'
 ```
 
@@ -69,7 +69,7 @@ head -1 ~/catkin_swarm6-2/.ros_home/log/health/UAV8_bridge_health.jsonl   # heal
 
 ## 三、Stage 1：链路层（≥10 min，纯读观测）
 
-- [ ] 跟随机 `rostopic hz /UAV8/mavros/local_position/odom` ≈ **19.5–20 Hz**（拓扑限频值；领机本机源为 30 Hz）
+- [ ] 跟随机 `rostopic hz /UAV8/swarm_pose` ≈ **12 Hz**（`swarm_pose` 桥上限频；领机本机 odom 源 ~30 Hz）
 - [ ] 读 health JSONL（**接收侧**，在跟随机上）：
 
 ```bash
@@ -80,14 +80,14 @@ for f in glob.glob(os.path.expanduser("~/catkin_swarm6-2/.ros_home/log/health/UA
         d = json.loads(line)
         if d.get("event") != "sample":  continue
         for r in d["remote"]:
-            if r["topic"] == "mavros/local_position/odom":
+            if r["topic"] == "swarm_pose":
                 print(f, d["t"], "rx=%d srcs=%d age_max=%.1fms src=%s stale=%s gap_max=%.0fms gt1000=%d gt3000=%d stalls=%d"
                       % (r["rx"], r["srcs"], r["age_max_ms"], r["age_max_src"], r["stale_srcs"],
                          r["gap_max_ms"], r["gt"]["gt1000"], r["gt"]["gt3000"], r["stalls"]))
 PY
 ```
 
-- [ ] **发送侧**（在领机上，同上但读 `d["local"]`）：`mavros/local_position/odom` 的 `rx/tx` 持续增长、`tx` 频率≈限频值、`drop` 与限频丢弃一致
+- [ ] **发送侧**（在领机上，同上但读 `d["local"]`）：`swarm_pose` 的 `rx/tx` 持续增长、`tx` 频率≈限频值、`drop` 与限频丢弃一致
 - [ ] **双向**都成立：每台机对每台邻机（`matrix` 行按 `src` 逐源列出）
 
 判据：`rx` 持续增长、`age_max_ms ≲ 50`、`gt1000/gt3000 = 0`、`stale_srcs` 空、`stalls = 0`、
@@ -133,7 +133,7 @@ for n in 8 10 12 13; do ./src/tcp_to_ros/tools/onboard_ctl.sh stop $n; done   # 
 
 ## 五、判据表（定层口径）
 
-各机 + GCS 的健康文件对齐时间轴，看 `src=UAV8, topic=mavros/local_position/odom`：
+各机 + GCS 的健康文件对齐时间轴，看 `src=UAV8, topic=swarm_pose`：
 
 | 现象 | 断在哪一段 |
 |---|---|

@@ -84,7 +84,7 @@ if not rows:
 
 def odom_of(items):
     for item in items or []:
-        if item.get("topic") == "mavros/local_position/odom":
+        if item.get("topic") == "swarm_pose":
             return item
     return None
 
@@ -115,8 +115,8 @@ last = rows[-1]
 if mode == "quick":
     age_file = time.time() - os.path.getmtime(f)
     print("  [%s] 健康文件 %.1fs 前更新%s" % (uav, age_file, "" if age_file < 6 else "  ✗ 桥可能在静默"))
-    print("     本机发出 odom: " + brief(odom_of(last.get("local")), "local"))
-    print("     收到邻机 odom: " + brief(odom_of(last.get("remote")), "remote"))
+    print("     本机发出 swarm_pose: " + brief(odom_of(last.get("local")), "local"))
+    print("     收到邻机 swarm_pose: " + brief(odom_of(last.get("remote")), "remote"))
     for ev in events[-3:]:
         print("     近期事件: %s %s %s" % (ev.get("event"), ev.get("link_event") or "",
                                         ev.get("src") or ev.get("detail") or ""))

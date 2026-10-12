@@ -61,21 +61,21 @@ ssh nvidia@192.168.5.NN 'cd ~/catkin_swarm6-2 && source /opt/ros/noetic/setup.ba
 ssh nvidia@192.168.5.81 'setsid bash ~/catkin_swarm6-2/src/swarm_uav_executor/bashs/start_onboard.sh \
   noprop:=true \
   neighbor_intents:=/UAV10/trajectory_intent,/UAV13/trajectory_intent \
-  neighbor_odom_topics:=/UAV10/mavros/local_position/odom,/UAV13/mavros/local_position/odom \
+  neighbor_odom_topics:=/UAV10/swarm_pose,/UAV13/swarm_pose \
   uav_task_timeout_s:=280 </dev/null >/dev/null 2>&1 &'
 
 # ── UAV10 / A10  邻居 = 8 13 ──
 ssh nvidia@192.168.5.101 'setsid bash ~/catkin_swarm6-2/src/swarm_uav_executor/bashs/start_onboard.sh \
   noprop:=true \
   neighbor_intents:=/UAV8/trajectory_intent,/UAV13/trajectory_intent \
-  neighbor_odom_topics:=/UAV8/mavros/local_position/odom,/UAV13/mavros/local_position/odom \
+  neighbor_odom_topics:=/UAV8/swarm_pose,/UAV13/swarm_pose \
   uav_task_timeout_s:=280 </dev/null >/dev/null 2>&1 &'
 
 # ── UAV13 / A13  邻居 = 8 10 ──
 ssh nvidia@192.168.5.131 'setsid bash ~/catkin_swarm6-2/src/swarm_uav_executor/bashs/start_onboard.sh \
   noprop:=true \
   neighbor_intents:=/UAV8/trajectory_intent,/UAV10/trajectory_intent \
-  neighbor_odom_topics:=/UAV8/mavros/local_position/odom,/UAV10/mavros/local_position/odom \
+  neighbor_odom_topics:=/UAV8/swarm_pose,/UAV10/swarm_pose \
   uav_task_timeout_s:=280 </dev/null >/dev/null 2>&1 &'
 ```
 
@@ -90,7 +90,7 @@ for n in 8 10 13; do ./src/tcp_to_ros/tools/onboard_ctl.sh status $n | sed -n '3
 # 3) 邻机订阅：每台应看到 2 个邻机 ×（intent+odom）= 4 行（把 8 换成各机号）
 ssh nvidia@192.168.5.81 'source /opt/ros/noetic/setup.bash; source ~/catkin_swarm6-2/devel/setup.bash; \
   rosnode info /uav_executor_UAV8 | sed -n "/^Subscriptions/,/^Publishing/p" \
-  | grep -E "trajectory_intent|local_position/odom"'
+  | grep -E "trajectory_intent|swarm_pose"'
 # 4) 事件文件（*_follower_events.jsonl / *_relay_events.jsonl）在对应事件发生时才出现，起栈时没有是正常的
 ```
 
@@ -103,7 +103,7 @@ for ip in 81 101 131; do sshpass -p nvidia ssh nvidia@192.168.5.$ip \
   'mkdir -p ~/catkin_swarm6-2/.ros_home/log/health && rm -f ~/catkin_swarm6-2/.ros_home/log/health/*.jsonl'; done
 ```
 
-- [ ] 跟随机上 `rostopic hz /UAV8/mavros/local_position/odom` ≈ **19.5–20 Hz**（拓扑限频值；领机本机源 30 Hz）
+- [ ] 跟随机上 `rostopic hz /UAV8/swarm_pose` ≈ **12 Hz**（`swarm_pose` 桥上限频；领机本机 odom 源 ~30 Hz）
 - [ ] 读 health JSONL（在**每台机**上读**本机**文件，接收侧看 `remote`）：
 
 ```bash
@@ -115,14 +115,14 @@ for line in open(f):
     if d.get("event") != "sample":
         continue
     for r in d["remote"]:
-        if r["topic"] == "mavros/local_position/odom":
+        if r["topic"] == "swarm_pose":
             print(d["t"], "rx=%d srcs=%d age_max=%sms src=%s stale=%s gap_max=%sms gt1000=%d gt3000=%d stalls=%d"
                   % (r["rx"], r["srcs"], r["age_max_ms"], r["age_max_src"], r["stale_srcs"],
                      r["gap_max_ms"], r["gt"]["gt1000"], r["gt"]["gt3000"], r["stalls"]))
 PY
 ```
 
-- [ ] **发送侧**（在领机上，同上但读 `d["local"]`）：`mavros/local_position/odom` 的 `rx/tx`
+- [ ] **发送侧**（在领机上，同上但读 `d["local"]`）：`swarm_pose` 的 `rx/tx`
       持续增长、`tx` 频率≈限频值、`drop` 与限频丢弃一致
 - [ ] **双向**都成立：每台机对每台邻机（`matrix` 行按 `src` 逐源列出）
 
@@ -179,7 +179,7 @@ PY
 
 ## 五、判据表（定层口径）
 
-各机 + GCS 的健康文件对齐时间轴，看 `src=UAV8, topic=mavros/local_position/odom`：
+各机 + GCS 的健康文件对齐时间轴，看 `src=UAV8, topic=swarm_pose`：
 
 | 现象 | 断在哪一段 |
 |---|---|

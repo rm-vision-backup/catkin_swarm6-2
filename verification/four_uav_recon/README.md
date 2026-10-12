@@ -134,25 +134,25 @@ for n in 8 10 12 13; do ./src/tcp_to_ros/tools/onboard_ctl.sh stop $n; done     
 # ── UAV8 / A08（领机）  邻居 = 10 12 13 ──
 ssh nvidia@192.168.5.81 'setsid bash ~/catkin_swarm6-2/src/swarm_uav_executor/bashs/start_onboard.sh \
   neighbor_intents:=/UAV10/trajectory_intent,/UAV12/trajectory_intent,/UAV13/trajectory_intent \
-  neighbor_odom_topics:=/UAV10/mavros/local_position/odom,/UAV12/mavros/local_position/odom,/UAV13/mavros/local_position/odom \
+  neighbor_odom_topics:=/UAV10/swarm_pose,/UAV12/swarm_pose,/UAV13/swarm_pose \
   uav_task_timeout_s:=280 </dev/null >/dev/null 2>&1 &'
 
 # ── UAV10 / A10  邻居 = 8 12 13 ──
 ssh nvidia@192.168.5.101 'setsid bash ~/catkin_swarm6-2/src/swarm_uav_executor/bashs/start_onboard.sh \
   neighbor_intents:=/UAV8/trajectory_intent,/UAV12/trajectory_intent,/UAV13/trajectory_intent \
-  neighbor_odom_topics:=/UAV8/mavros/local_position/odom,/UAV12/mavros/local_position/odom,/UAV13/mavros/local_position/odom \
+  neighbor_odom_topics:=/UAV8/swarm_pose,/UAV12/swarm_pose,/UAV13/swarm_pose \
   uav_task_timeout_s:=280 </dev/null >/dev/null 2>&1 &'
 
 # ── UAV12 / A12  邻居 = 8 10 13 ──
 ssh nvidia@192.168.5.121 'setsid bash ~/catkin_swarm6-2/src/swarm_uav_executor/bashs/start_onboard.sh \
   neighbor_intents:=/UAV8/trajectory_intent,/UAV10/trajectory_intent,/UAV13/trajectory_intent \
-  neighbor_odom_topics:=/UAV8/mavros/local_position/odom,/UAV10/mavros/local_position/odom,/UAV13/mavros/local_position/odom \
+  neighbor_odom_topics:=/UAV8/swarm_pose,/UAV10/swarm_pose,/UAV13/swarm_pose \
   uav_task_timeout_s:=280 </dev/null >/dev/null 2>&1 &'
 
 # ── UAV13 / A13  邻居 = 8 10 12 ──
 ssh nvidia@192.168.5.131 'setsid bash ~/catkin_swarm6-2/src/swarm_uav_executor/bashs/start_onboard.sh \
   neighbor_intents:=/UAV8/trajectory_intent,/UAV10/trajectory_intent,/UAV12/trajectory_intent \
-  neighbor_odom_topics:=/UAV8/mavros/local_position/odom,/UAV10/mavros/local_position/odom,/UAV12/mavros/local_position/odom \
+  neighbor_odom_topics:=/UAV8/swarm_pose,/UAV10/swarm_pose,/UAV12/swarm_pose \
   uav_task_timeout_s:=280 </dev/null >/dev/null 2>&1 &'
 ```
 
@@ -174,7 +174,7 @@ ssh 立刻返回，断开终端不影响机载；终端转录仍逐字落在板�
 
 - `formation_offsets`：GCS 随任务逐跟随者下发（`gcs_a_backend_node.py:1237-1247`），
   只有 GCS 下发全零时机载才回退本机配置（`ego_swarm.py:498-504`）。
-- `leader_odom_topic_prefix`：留空时按 `leader_id` 自动拼 `/UAV8/mavros/local_position/odom`
+- `leader_odom_topic_prefix`：留空时按 `leader_id` 自动拼 `/UAV8/swarm_pose`
   （`ego_swarm.py:293-300`）。
 - `uav_name`：取本机 `hostname`，写错反而启动失败。
 - `neighbor_odom_topics` 其实也有默认（留空 = 自动订阅 UAV1–15 除自己，`ego_swarm.py:680-683`），
@@ -194,11 +194,11 @@ for n in 8 10 12 13; do ./src/tcp_to_ros/tools/onboard_ctl.sh status $n | sed -n
 # 5) 逐台查邻机订阅（把 8 换成各机号）
 ssh nvidia@192.168.5.81 'source /opt/ros/noetic/setup.bash; source ~/catkin_swarm6-2/devel/setup.bash; \
   rosnode info /uav_executor_UAV8 | sed -n "/^Subscriptions/,/^Publishing/p" \
-  | grep -E "trajectory_intent|local_position/odom"'
+  | grep -E "trajectory_intent|swarm_pose"'
 ```
 
 - 期望看到 **6 行**：`/UAV10` `/UAV12` `/UAV13` 各一条 `trajectory_intent` 和一条
-  `mavros/local_position/odom`（`/UAV8` 自己不该出现）。
+  `swarm_pose`（`/UAV8` 自己不该出现）。
 - **不要**用 `rosnode info … | grep -c` 计数：每个话题在 `Subscriptions` 与
   `Connections` 各出现一次，计数会翻倍，看着像"多订阅了/少订阅了"。
 - `trajectory_intent` 一条都没有 = 没传邻居清单，必须停掉重起
@@ -302,7 +302,7 @@ OFFBOARD"（`ego_swarm.py:648-669`），未 arm 回 `VEHICLE_NOT_ARMED`、没切
 
 ```bash
 ssh nvidia@192.168.5.101 'source ~/catkin_swarm6-2/devel/setup.bash; \
-  rosnode info /uav_executor_UAV10 | grep "UAV8/mavros/local_position/odom"'
+  rosnode info /uav_executor_UAV10 | grep "UAV8/swarm_pose"'
 ```
 
 ## 五、异常处置（按优先级）
