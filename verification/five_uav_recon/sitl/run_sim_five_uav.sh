@@ -1,12 +1,12 @@
 #!/bin/bash
 # =============================================================================
-# run_sim_five_uav.sh —— 五机工程测试（UAV6/8/10/12/13）仿真单轮：起飞 + 准备编队 + 侦查
+# run_sim_five_uav.sh —— 五机工程测试（UAV8/10/12/13/16）仿真单轮：起飞 + 准备编队 + 侦查
 #
-# 目的：实机前先把五机（含修复归队的 A06、A12）整条链在 SITL 上跑通——5 机标定集合、
+# 目的：实机前先把五机（含 A16、A12）整条链在 SITL 上跑通——5 机标定集合、
 #       5 机编队、5 机邻居矩阵、任务下发与整流程判定，代码路径与实机完全一致。
 #
 # 与 run_sim_single_uav.sh（单机版）的差异只有四处：
-#   1. UAVS="6 8 10 12 13"、NUAV=5
+#   1. UAVS="8 10 12 13 16"、NUAV=5
 #   2. 仿真层用 five_uav_spawn.launch（5 机十字布局，中心=iris_12=A13）
 #   3. 地面站仍用四机版的 gcs_sim_four_uav.launch，但用 arg 覆盖成五机配置
 #      （formation_offsets_five_uav.yaml / calibration_five_uav.yaml）
@@ -25,7 +25,7 @@ set -u
 WS=$(cd "$(dirname "$0")/../../.." && pwd)
 cd "$WS" || exit 2
 
-UAVS="6 8 10 12 13"
+UAVS="8 10 12 13 16"
 NUAV=5
 KEEP_ON_FAIL=1
 MISSION_ID="five-uav-recon-001"

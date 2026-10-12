@@ -1,5 +1,5 @@
 <launch>
-  <!-- 五机工程测试专用仿真出生布局（UAV6/8/10/12/13 -> iris_5/7/9/11/12）
+  <!-- 五机工程测试专用仿真出生布局（UAV8/10/12/13/16 -> iris_15/7/9/11/12）
        （PX4 实例号 = ID，系统号 = ID+1，所以 UAVn 用 ID=n-1。）
 
        出生位置按五机十字布局摆放（与 config/formation_offsets_five_uav.yaml 的
@@ -8,8 +8,8 @@
          A08 右   (105,100) → iris_7 （与四机版同点）
          A10 前   (100,105) → iris_9 （与四机版同点）
          A12 左    (95,100) → iris_11（改点：四机版在 (105,105)）
-         A06 后    (100, 95) → iris_5 （改点：单机版在 (100,100)，本布局里
-                                       与 iris_12 重叠需让位）
+         A16 后    (100, 95) → iris_15 （该位原为 iris_5=(100,100)，
+                                       与本布局的 iris_12 重叠需让位）
        每架机的 ID / mavlink_tcp_port / udp_gimbal_port 与 15sim / four_uav /
        single 的同名 iris 完全一致，保证 MAVLink 端口与机载
        uav_offboard_ego.launch 的 udp_port=24540-1+tgt_system 对齐。
@@ -18,7 +18,7 @@
          export ROS_MASTER_URI=http://localhost:11300
          export GAZEBO_MASTER_URI=http://localhost:11345
          roslaunch verification/five_uav_recon/sitl/five_uav_spawn.launch gui:=false
-       机载层用 startup_offboard_ego.sh 6 8 10 12 13 启动。 -->
+       机载层用 startup_offboard_ego.sh 8 10 12 13 16 启动。 -->
 
   <arg name="world" default="$(find mavlink_sitl_gazebo)/worlds/empty.world"/>
   <arg name="gui" default="false"/>
@@ -34,16 +34,16 @@
     <arg name="paused" value="$(arg paused)"/>
   </include>
 
-  <!-- UAV6 / A06（后位） -->
-  <group ns="iris_5">
+  <!-- UAV16 / A16（后位） -->
+  <group ns="iris_15">
     <include file="$(find px4)/launch/single_vehicle_spawn_xtd.launch">
       <arg name="x" value="100"/><arg name="y" value="95"/>
       <arg name="z" value="0.5"/>
       <arg name="R" value="0"/><arg name="P" value="0"/><arg name="Y" value="0"/>
       <arg name="vehicle" value="iris"/><arg name="sdf" value="iris"/>
-      <arg name="ID" value="5"/><arg name="ID_in_group" value="5"/>
-      <arg name="mavlink_tcp_port" value="4565"/>
-      <arg name="udp_gimbal_port" value="13035"/>
+      <arg name="ID" value="15"/><arg name="ID_in_group" value="15"/>
+      <arg name="mavlink_tcp_port" value="4575"/>
+      <arg name="udp_gimbal_port" value="13045"/>
       <arg name="interactive" value="true"/>
     </include>
   </group>

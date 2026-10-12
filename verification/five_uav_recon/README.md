@@ -1,14 +1,14 @@
-# 五机工程测试（A08 领机 + A10/A12/A13/A06；通信分阶段 + 整体流程）
+# 五机工程测试（A08 领机 + A10/A12/A13/A16；通信分阶段 + 整体流程）
 
 本目录是四机规程（`four_uav_recon/README.md`）的**五机版**：2026-10-10 决定在四机阵容
-（A08+A10/A12/A13）基础上加入 **A06**（炸机后修复归队）。任务与航线沿用历轮同一份
+（A08+A10/A12/A13）基础上加入 **A16**（顶替 A06 参训）。任务与航线沿用历轮同一份
 （`prepare-a` + `coverage-segment-1`，领机 6 航点逐字不变），只把队伍扩到 **5 架**。
 
 与四机规程的差异只有五处，**其余条目照 `four_uav_recon/README.md` 执行**：
 
 | 项 | 四机 | 五机（本目录） |
 |---|---|---|
-| 参加机 | A08 + A10/A12/A13 | **A08 + A10/A12/A13/A06** |
+| 参加机 | A08 + A10/A12/A13 | **A08 + A10/A12/A13/A16** |
 | 摆位 | 2×2 方阵、原点=方阵中心 | **5 m 十字、原点=A13 机位（中心机）**（§1.2） |
 | 标定配置 | `config/calibration_four_uav.yaml` | `config/calibration_five_uav.yaml` |
 | 编队/任务包 | `formation_offsets_four_uav` + 四机 package | `formation_offsets_five_uav` + 本目录 `package/` |
@@ -29,10 +29,10 @@
 |---|---|---|
 | 0 | 空域净空 | 相对 A13 机位（原点）：**右 ≥20 m、前 ≥30 m、左 ≥15 m、后 ≥10 m、上 ≥15 m**；无人员/建筑/其它航空器 |
 | 1 | 地面摆位 | 5 机 **5 m 十字**（§1.2），机头同向（差 ≤30°），摆好**不再挪动** |
-| 2 | 身份 + 板钟 | 每台 `hostname -s` = UAVn（61/81/101/121/131）；`date +%s` ≈ 1.79e9 |
+| 2 | 身份 + 板钟 | 每台 `hostname -s` = UAVn（81/101/121/131/161）；`date +%s` ≈ 1.79e9 |
 | 3 | 上位机预检 | `python3 verification/five_uav_recon/driver.py --dry-run`（§1.4） |
 | 4 | 五机起栈 | 逐台 `onboard_ctl.sh status n`，五台都 UP |
-| 5 | 邻机订阅 | 每台 `rosnode info /uav_executor_UAVn` 里有 **4 条** `/UAV…/trajectory_intent` + **4 条** `.../odom`（共 8 行；自己不该出现） |
+| 5 | 邻机订阅 | 每台 `rosnode info /uav_executor_UAVn` 里有 **4 条** `/UAV…/trajectory_intent` + **4 条** `/UAV…/swarm_pose`（共 8 行；自己不该出现） |
 | 6 | 地面站 | 五机 launch 无 `ValueError`；`formation_offsets_file` 指向五机那份（§三） |
 | 7 | 标定 | 五机**全部 disarm**、GPS `fix_type ≥ 3`、`/group_a/calibration_ready` = True（**必须先于 arm**） |
 | 8 | 现场项（非本工作区） | PX4 `COM_RCL_EXCEPT=4` / `NAV_RCL_ACT=0` 已按现场 RC 情况复核；遥控器在手 |
@@ -45,7 +45,7 @@
 
 任务系 x=右、y=前（都按机头方向；原点 = **A13 机位**，见 §1.2）。
 领机航线 x∈[-2.5, 17.5]、y∈[-2.5, 21.5]（与历轮同一份）；跟随者 offset
-A10(-5,+5) / A13(-5,0) / A12(-10,0) / A06(-5,-5)（`formation_offsets_five_uav.yaml` 的
+A10(-5,+5) / A13(-5,0) / A12(-10,0) / A16(-5,-5)（`formation_offsets_five_uav.yaml` 的
 `formation_5uav`），全队包络（相对 A13 机位）：
 
 | 方向 | 半径 | 怎么来的 |
@@ -53,7 +53,7 @@ A10(-5,+5) / A13(-5,0) / A12(-10,0) / A06(-5,-5)（`formation_offsets_five_uav.y
 | 右 | **20 m** | 队形最右 17.5（航线最右），领机右侧无跟随者 → 留余量 |
 | 前 | **30 m** | 队形最前 26.5（航线最前 21.5 + A10 前偏 5） |
 | 左 | **15 m** | 队形最左 −12.5（航线最左 −2.5 − A12 左偏 10）→ 留余量 |
-| 后 | **10 m** | 航线最后 −2.5 − A06 后偏 5 = −7.5 → 留余量 |
+| 后 | **10 m** | 航线最后 −2.5 − A16 后偏 5 = −7.5 → 留余量 |
 | 上 | **15 m** | prepare 阶段升到 15 m 层（`layer_move_to=15.0`） |
 
 ### 1.2 地面摆位（决定 prepare 阶段飞多远）
@@ -66,7 +66,7 @@ A10(-5,+5) / A13(-5,0) / A12(-10,0) / A06(-5,-5)（`formation_offsets_five_uav.y
 | A08（领机） | (+5, 0) A13 右侧 5 m | (+5, 0) | (+5, 0) |
 | A10 | (0, +5) A13 正前 5 m | (0, +5) | (0, +5) |
 | A12 | (−5, 0) A13 左侧 5 m | (−5, 0) | (−5, 0) |
-| A06 | (0, −5) A13 正后 5 m | (0, −5) | (0, −5) |
+| A16 | (0, −5) A13 正后 5 m | (0, −5) | (0, −5) |
 
 1. 五机按上表摆成十字、相邻 5 m；机头同向（航向差 ≤30°，否则标定不出 ready）；
 2. 摆好后不再挪动 → 标定 → 再 arm；
@@ -75,11 +75,11 @@ A10(-5,+5) / A13(-5,0) / A12(-10,0) / A06(-5,-5)（`formation_offsets_five_uav.y
 ### 1.3 上电、身份与板钟
 
 ```bash
-for ip in 61 81 101 121 131; do
+for ip in 81 101 121 131 161; do
   ssh nvidia@192.168.5.$ip 'hostname -s; date +%s'
 done
-# 期望：UAV6/8/10/12/13 与 ~1.79e9；板钟停在 1970 就先修（必须在起栈之前）：
-./src/tcp_to_ros/tools/onboard_clock_fix.sh 6 8 10 12 13
+# 期望：UAV8/10/12/13/16 与 ~1.79e9；板钟停在 1970 就先修（必须在起栈之前）：
+./src/tcp_to_ros/tools/onboard_clock_fix.sh 8 10 12 13 16
 ```
 
 ### 1.4 上位机预检（不连地面站，秒级）
@@ -88,8 +88,8 @@ done
 cd "$HOME/catkin_swarm6-2"
 python3 verification/five_uav_recon/driver.py --phases prepare coverage --dry-run
 # 期望两条 COMMAND：
-#  ① MOVE_TO：A08(+5,0) / A10(0,+5) / A12(−5,0) / A13(0,0) / A06(0,−5)，z=12
-#  ② FOLLOW_ROUTE：A08 六个航点；A10/A12/A13/A06 为 formation_follow；leader=A08
+#  ① MOVE_TO：A08(+5,0) / A10(0,+5) / A12(−5,0) / A13(0,0) / A16(0,−5)，z=12
+#  ② FOLLOW_ROUTE：A08 六个航点；A10/A12/A13/A16 为 formation_follow；leader=A08
 ```
 
 ## 二、机载启动（每台各一条；**参数逐台不同**）
@@ -98,40 +98,40 @@ python3 verification/five_uav_recon/driver.py --phases prepare coverage --dry-ru
 无桨轮参照 `no_prop_link_test.md` 的做法在实飞命令上加 `noprop:=true`。
 
 ```bash
-# ── UAV6 / A06 ── 邻居 = 8 10 12 13
-ssh nvidia@192.168.5.61 'setsid bash ~/catkin_swarm6-2/src/swarm_uav_executor/bashs/start_onboard.sh \
+# ── UAV16 / A16 ── 邻居 = 8 10 12 13
+ssh nvidia@192.168.5.161 'setsid bash ~/catkin_swarm6-2/src/swarm_uav_executor/bashs/start_onboard.sh \
   neighbor_intents:=/UAV8/trajectory_intent,/UAV10/trajectory_intent,/UAV12/trajectory_intent,/UAV13/trajectory_intent \
-  neighbor_odom_topics:=/UAV8/mavros/local_position/odom,/UAV10/mavros/local_position/odom,/UAV12/mavros/local_position/odom,/UAV13/mavros/local_position/odom \
+  neighbor_odom_topics:=/UAV8/swarm_pose,/UAV10/swarm_pose,/UAV12/swarm_pose,/UAV13/swarm_pose \
   uav_task_timeout_s:=280 </dev/null >/dev/null 2>&1 &'
 
 # ── UAV8 / A08（领机） 邻居 = 6 10 12 13 ──
 ssh nvidia@192.168.5.81 'setsid bash ~/catkin_swarm6-2/src/swarm_uav_executor/bashs/start_onboard.sh \
-  neighbor_intents:=/UAV6/trajectory_intent,/UAV10/trajectory_intent,/UAV12/trajectory_intent,/UAV13/trajectory_intent \
-  neighbor_odom_topics:=/UAV6/mavros/local_position/odom,/UAV10/mavros/local_position/odom,/UAV12/mavros/local_position/odom,/UAV13/mavros/local_position/odom \
+  neighbor_intents:=/UAV16/trajectory_intent,/UAV10/trajectory_intent,/UAV12/trajectory_intent,/UAV13/trajectory_intent \
+  neighbor_odom_topics:=/UAV16/swarm_pose,/UAV10/swarm_pose,/UAV12/swarm_pose,/UAV13/swarm_pose \
   uav_task_timeout_s:=280 </dev/null >/dev/null 2>&1 &'
 
 # ── UAV10 / A10 邻居 = 6 8 12 13 ──
 ssh nvidia@192.168.5.101 'setsid bash ~/catkin_swarm6-2/src/swarm_uav_executor/bashs/start_onboard.sh \
-  neighbor_intents:=/UAV6/trajectory_intent,/UAV8/trajectory_intent,/UAV12/trajectory_intent,/UAV13/trajectory_intent \
-  neighbor_odom_topics:=/UAV6/mavros/local_position/odom,/UAV8/mavros/local_position/odom,/UAV12/mavros/local_position/odom,/UAV13/mavros/local_position/odom \
+  neighbor_intents:=/UAV16/trajectory_intent,/UAV8/trajectory_intent,/UAV12/trajectory_intent,/UAV13/trajectory_intent \
+  neighbor_odom_topics:=/UAV16/swarm_pose,/UAV8/swarm_pose,/UAV12/swarm_pose,/UAV13/swarm_pose \
   uav_task_timeout_s:=280 </dev/null >/dev/null 2>&1 &'
 
 # ── UAV12 / A12 邻居 = 6 8 10 13 ──
 ssh nvidia@192.168.5.121 'setsid bash ~/catkin_swarm6-2/src/swarm_uav_executor/bashs/start_onboard.sh \
-  neighbor_intents:=/UAV6/trajectory_intent,/UAV8/trajectory_intent,/UAV10/trajectory_intent,/UAV13/trajectory_intent \
-  neighbor_odom_topics:=/UAV6/mavros/local_position/odom,/UAV8/mavros/local_position/odom,/UAV10/mavros/local_position/odom,/UAV13/mavros/local_position/odom \
+  neighbor_intents:=/UAV16/trajectory_intent,/UAV8/trajectory_intent,/UAV10/trajectory_intent,/UAV13/trajectory_intent \
+  neighbor_odom_topics:=/UAV16/swarm_pose,/UAV8/swarm_pose,/UAV10/swarm_pose,/UAV13/swarm_pose \
   uav_task_timeout_s:=280 </dev/null >/dev/null 2>&1 &'
 
 # ── UAV13 / A13 邻居 = 6 8 10 12 ──
 ssh nvidia@192.168.5.131 'setsid bash ~/catkin_swarm6-2/src/swarm_uav_executor/bashs/start_onboard.sh \
-  neighbor_intents:=/UAV6/trajectory_intent,/UAV8/trajectory_intent,/UAV10/trajectory_intent,/UAV12/trajectory_intent \
-  neighbor_odom_topics:=/UAV6/mavros/local_position/odom,/UAV8/mavros/local_position/odom,/UAV10/mavros/local_position/odom,/UAV12/mavros/local_position/odom \
+  neighbor_intents:=/UAV16/trajectory_intent,/UAV8/trajectory_intent,/UAV10/trajectory_intent,/UAV12/trajectory_intent \
+  neighbor_odom_topics:=/UAV16/swarm_pose,/UAV8/swarm_pose,/UAV10/swarm_pose,/UAV12/swarm_pose \
   uav_task_timeout_s:=280 </dev/null >/dev/null 2>&1 &'
 ```
 
 起栈前先确认五台都没在跑（`onboard_ctl.sh status n` 逐台；有残留先 `stop n`）；
 起栈后核对门禁 4/5（邻机订阅共 8 行）。
-**不要**用 `onboard_ctl.sh start 6 8 10 12 13 -- <参数>` 扇出（邻居清单每台不同）。
+**不要**用 `onboard_ctl.sh start 8 10 12 13 16 -- <参数>` 扇出（邻居清单每台不同）。
 
 ## 三、地面站启动（本机 = GCS_A，192.168.5.241）
 
@@ -141,7 +141,7 @@ env -u ROS_HOSTNAME ROS_IP=192.168.5.241 ROS_MASTER_URI=http://localhost:11311 \
            roslaunch tcp_to_ros gcs_a_real_five_uav.launch'
 ```
 
-- [ ] 启动日志无 `ValueError`；calibration 段打印 `calibration set=UAV6,UAV8,UAV10,UAV12,UAV13`
+- [ ] 启动日志无 `ValueError`；calibration 段打印 `calibration set=UAV16,UAV8,UAV10,UAV12,UAV13`
 - [ ] 防"静默回退"：
   ```bash
   rosparam get /gcs_a_backend_node/formation_offsets_file   # 必须是 five_uav 那份
@@ -161,14 +161,14 @@ env -u ROS_HOSTNAME ROS_IP=192.168.5.241 ROS_MASTER_URI=http://localhost:11311 \
      --log verification/five_uav_recon/logs/real_$(date +%Y%m%d_%H%M%S).jsonl
    ```
 4. **预期飞行过程**：prepare（升 15 m 层 → 水平微调 → 降 12 m，各机位移≈0）→
-   coverage（A08 绕 6 航点；A10/A12/A13/A06 按 `formation_5uav` offset 跟飞）。
+   coverage（A08 绕 6 航点；A10/A12/A13/A16 按 `formation_5uav` offset 跟飞）。
 
 ## 五、分阶段通信测试（air_flow，五机）
 
 `air_flow.sh` 已机数参数化（默认仍是三机），五机加两个环境变量即可：
 
 ```bash
-export AIR_FLOW_UAVS="6 8 10 12 13"
+export AIR_FLOW_UAVS="8 10 12 13 16"
 export AIR_FLOW_DIR=five_uav_recon          # driver 用本目录包装
 
 bash verification/three_uav_recon/air_flow.sh odom          # 秒级分层快查
@@ -187,8 +187,8 @@ bash verification/three_uav_recon/air_flow.sh full          # prepare + coverage
 - 观测与异常处置同 `four_uav_recon/README.md` §五/§六（遥控接管第一优先）。
 - 收尾：
   ```bash
-  for n in 6 8 10 12 13; do ./src/tcp_to_ros/tools/onboard_ctl.sh stop $n; done   # 逐台
-  ./src/tcp_to_ros/tools/log_fetch.sh 6 8 10 12 13        # 不含 ulog；bag 手工取（见三机 §9.4）
+  for n in 8 10 12 13 16; do ./src/tcp_to_ros/tools/onboard_ctl.sh stop $n; done   # 逐台
+  ./src/tcp_to_ros/tools/log_fetch.sh 8 10 12 13 16        # 不含 ulog；bag 手工取（见三机 §9.4）
   ```
   `mavlink-routerd` 不要停（现场常驻件）。
 
@@ -206,9 +206,10 @@ bash verification/five_uav_recon/sitl/run_sim_five_uav.sh
 
 1. 四机 README §八 的 1–5 条**全部适用**（`onboard_ctl.sh` 多目标只处理第一个、
    跟随者完成判据死区、formation 静默回退、标定 ALL 语义、参考值）。
-2. **五机特有**：`formation_5uav` 的 participants 必须精确等于 {A06,A08,A10,A12,A13}；
+2. **五机特有**：`formation_5uav` 的 participants 必须精确等于 {A16,A08,A10,A12,A13}；
    增/减机必须换配置（三机轮用 three 那份、四机轮用 four 那份）。
-3. **A06 是炸机修复后首次参训、A12 是 GPS 修复后首次参训**——两者都建议先在
+3. **A16 顶替 A06 首次进入本阵容、A12 是 GPS 修复后首次参训**——两者都建议先在
    §七 SITL / 地面干跑里过一遍，再上五机实飞。
 4. 五机邻居矩阵为 4×5=20 条机间流（此前三机是 6 条），链路负载明显上升——沿用
-   当前减负配置（odom 12 Hz、router 去 242），并按 air_flow `stage1` 的判据观察。
+   当前减负配置（机间位姿流 `swarm_pose` 12 Hz、每流 ~45 B、router 去 242），
+   并按 air_flow `stage1` 的判据观察。
