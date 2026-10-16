@@ -1,5 +1,7 @@
 # 无桨链路验证 + 跟随环 dry-run（4 机：A08 领 + A10/A12/A13，全程不 arm）
 
+> **专项任务链路 dry-run**，不是每轮必做的 20 s UDP/ping 快测。先完成 [统一上机工作流](../real_uav_workflow/README.md) 的准备步骤；下文 `noprop:=true` 会跳过部分飞行门禁，仅用于拆桨专项测试，后续实飞必须恢复正式参数并重新检查/标定。
+
 > 目的：在**不装桨、不 arm、不起飞**的前提下验证三件事——
 > ① 机间 odom/pose 经电台的**双向**传递；② 2026-10-08 新增的健康/事件观测能在实机上落盘、可判读；
 > ③ GCS→bridge→执行器的 PREPARE/START/FOLLOW_ROUTE 全链路能在真机体上跑起来。
@@ -36,7 +38,7 @@ launch 文件改动随 rsync 生效（rospack 解析到源码目录，无需 bui
 
 - [ ] 四机**桨叶全部拆下**；2×2、5 m 间隔、机头同向（同 `README.md` §1.2，保持与实飞相近的电台近场条件）
 - [ ] 开阔天空，GPS `fix_type ≥ 3`；摆好不再挪动
-- [ ] 板钟（`tools/onboard_clock_fix.sh`，必须早于起栈）→ router 起（现场常驻件，前台运行）→
+- [ ] 板钟（`tools/onboard_clock_fix.sh`，必须早于起栈）→ router 起（现场常驻 systemd 服务）→
       人工确认 mavros 连通（**必做**，驱动内检查已被 noprop 关掉）：
   ```bash
   ssh nvidia@192.168.5.81 'source ~/catkin_swarm6-2/devel/setup.bash && rostopic echo -n1 /mavros/state'
@@ -69,7 +71,7 @@ head -1 ~/catkin_swarm6-2/.ros_home/log/health/UAV8_bridge_health.jsonl   # heal
 
 ## 三、Stage 1：链路层（≥10 min，纯读观测）
 
-- [ ] 跟随机 `rostopic hz /UAV8/swarm_pose` ≈ **12 Hz**（`swarm_pose` 桥上限频；领机本机 odom 源 ~30 Hz）
+- [ ] 跟随机 `rostopic hz /UAV8/swarm_pose` ≈ **10 Hz**（当前 bundle tick 与 `swarm_pose` 桥上限频；领机本机 odom 源 ~30 Hz）
 - [ ] 读 health JSONL（**接收侧**，在跟随机上）：
 
 ```bash

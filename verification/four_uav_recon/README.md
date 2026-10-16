@@ -1,5 +1,7 @@
 # 编队实机测试：准备编队 + 侦查（4 机：A08 领机 + A10 / A12 / A13）
 
+> 日常上机先按 [统一工作流](../real_uav_workflow/README.md) 做部署、通信与标定；本文保留四机摆位、参数、任务和分阶段方法。当前桥默认 bundle / `swarm_pose` 10 Hz；历史实测按记录日期解读。
+
 本目录是 `src/swarm_uav_interfaces/real_setup.md` §7.1 已批准的**编队工程测试**落地件。
 当前参加机 = **A08/A10/A12/A13（执行层 UAV8/UAV10/UAV12/UAV13）**，按 **5 m 间隔 2×2 方阵**
 只跑两个阶段 —— **准备编队（MOVE_TO）+ 侦查（FOLLOW_ROUTE）**，与 12/15 机联合验收完全分离。
@@ -341,7 +343,7 @@ ssh nvidia@192.168.5.101 'source ~/catkin_swarm6-2/devel/setup.bash; \
 ```bash
 for n in 8 10 12 13; do ./src/tcp_to_ros/tools/onboard_ctl.sh stop $n; done    # 或现场规程遥控接管后逐台停
 for n in 8 10 12 13; do ./src/tcp_to_ros/tools/onboard_ctl.sh status $n | sed -n '3p'; done  # 期望四行 DOWN
-./src/tcp_to_ros/tools/log_fetch.sh 8 10 12 13         # 机载日志 + 飞控 ulog
+./src/tcp_to_ros/tools/log_fetch.sh 8 10 12 13         # 机载日志；需飞控 ulog 时落地后加 --ulog
 ```
 
 - [ ] 按现场规程**遥控接管**降落/返航（不要就地重启机载栈）

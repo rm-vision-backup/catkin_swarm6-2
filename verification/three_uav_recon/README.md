@@ -1,5 +1,7 @@
 # 编队实机测试：准备编队 + 侦查（3 机：A08 领机 + A10/A13）
 
+> 日常上机先按 [统一工作流](../real_uav_workflow/README.md) 做部署、通信与标定；本文保留三机摆位、参数、任务和分阶段方法。当前桥默认 bundle / `swarm_pose` 10 Hz；历史实测按记录日期解读。
+
 本目录是四机规程（`four_uav_recon/README.md`）的**三机版**：2026-10-09 现场只启用 3 台
 （12 号机缺席），四机配置的标定集合与 formation 都含 A12（均为精确匹配/ALL 语义），
 缺机时任务会被 `CALIBRATION_NOT_READY` / `INVALID_FORMATION_*` 拒 —— 故单开三机一套。
@@ -33,7 +35,7 @@
 | 2 | 身份 + 板钟 | 每台 `hostname -s` = UAVn；`date +%s` ≈ 1.79e9 |
 | 3 | 上位机预检 | `driver.py --dry-run`（§1.4） |
 | 4 | 三机起栈 | 逐台 `onboard_ctl.sh status <n>`，三台都 UP |
-| 5 | 邻机订阅 | 每台 `rosnode info /uav_executor_UAVn` 里有 **2 条** `/UAV…/trajectory_intent` + **2 条** `.../odom`（共 4 行；自己不该出现） |
+| 5 | 邻机订阅 | 每台 `rosnode info /uav_executor_UAVn` 里有 **2 条** `/UAV…/trajectory_intent` + **2 条** `/UAV…/swarm_pose`（共 4 行；自己不该出现） |
 | 6 | 地面站 | 三机 launch 无 `ValueError`；`formation_offsets_file` 指向三机那份（§三） |
 | 7 | 标定 | 三机**全部 disarm**、GPS `fix_type ≥ 3`、`/group_a/calibration_ready` = True（**必须先于 arm**） |
 | 8 | 现场项（非本工作区） | PX4 `COM_RCL_EXCEPT=4` / `NAV_RCL_ACT=0` 已按现场 RC 情况复核；遥控器在手，模式开关与应急开关已试过 |

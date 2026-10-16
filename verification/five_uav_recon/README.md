@@ -1,5 +1,7 @@
 # 五机工程测试（A08 领机 + A10/A12/A13/A16；通信分阶段 + 整体流程）
 
+> 日常上机先按 [统一工作流](../real_uav_workflow/README.md) 做部署、通信与标定；本文保留五机摆位、参数、任务和分阶段方法。当前桥默认 bundle / `swarm_pose` 10 Hz；历史实测按记录日期解读。
+
 本目录是四机规程（`four_uav_recon/README.md`）的**五机版**：2026-10-10 决定在四机阵容
 （A08+A10/A12/A13）基础上加入 **A16**（顶替 A06 参训）。任务与航线沿用历轮同一份
 （`prepare-a` + `coverage-segment-1`，领机 6 航点逐字不变），只把队伍扩到 **5 架**。
@@ -104,25 +106,25 @@ ssh nvidia@192.168.5.161 'setsid bash ~/catkin_swarm6-2/src/swarm_uav_executor/b
   neighbor_odom_topics:=/UAV8/swarm_pose,/UAV10/swarm_pose,/UAV12/swarm_pose,/UAV13/swarm_pose \
   uav_task_timeout_s:=280 </dev/null >/dev/null 2>&1 &'
 
-# ── UAV8 / A08（领机） 邻居 = 6 10 12 13 ──
+# ── UAV8 / A08（领机） 邻居 = 16 10 12 13 ──
 ssh nvidia@192.168.5.81 'setsid bash ~/catkin_swarm6-2/src/swarm_uav_executor/bashs/start_onboard.sh \
   neighbor_intents:=/UAV16/trajectory_intent,/UAV10/trajectory_intent,/UAV12/trajectory_intent,/UAV13/trajectory_intent \
   neighbor_odom_topics:=/UAV16/swarm_pose,/UAV10/swarm_pose,/UAV12/swarm_pose,/UAV13/swarm_pose \
   uav_task_timeout_s:=280 </dev/null >/dev/null 2>&1 &'
 
-# ── UAV10 / A10 邻居 = 6 8 12 13 ──
+# ── UAV10 / A10 邻居 = 16 8 12 13 ──
 ssh nvidia@192.168.5.101 'setsid bash ~/catkin_swarm6-2/src/swarm_uav_executor/bashs/start_onboard.sh \
   neighbor_intents:=/UAV16/trajectory_intent,/UAV8/trajectory_intent,/UAV12/trajectory_intent,/UAV13/trajectory_intent \
   neighbor_odom_topics:=/UAV16/swarm_pose,/UAV8/swarm_pose,/UAV12/swarm_pose,/UAV13/swarm_pose \
   uav_task_timeout_s:=280 </dev/null >/dev/null 2>&1 &'
 
-# ── UAV12 / A12 邻居 = 6 8 10 13 ──
+# ── UAV12 / A12 邻居 = 16 8 10 13 ──
 ssh nvidia@192.168.5.121 'setsid bash ~/catkin_swarm6-2/src/swarm_uav_executor/bashs/start_onboard.sh \
   neighbor_intents:=/UAV16/trajectory_intent,/UAV8/trajectory_intent,/UAV10/trajectory_intent,/UAV13/trajectory_intent \
   neighbor_odom_topics:=/UAV16/swarm_pose,/UAV8/swarm_pose,/UAV10/swarm_pose,/UAV13/swarm_pose \
   uav_task_timeout_s:=280 </dev/null >/dev/null 2>&1 &'
 
-# ── UAV13 / A13 邻居 = 6 8 10 12 ──
+# ── UAV13 / A13 邻居 = 16 8 10 12 ──
 ssh nvidia@192.168.5.131 'setsid bash ~/catkin_swarm6-2/src/swarm_uav_executor/bashs/start_onboard.sh \
   neighbor_intents:=/UAV16/trajectory_intent,/UAV8/trajectory_intent,/UAV10/trajectory_intent,/UAV12/trajectory_intent \
   neighbor_odom_topics:=/UAV16/swarm_pose,/UAV8/swarm_pose,/UAV10/swarm_pose,/UAV12/swarm_pose \
@@ -172,7 +174,7 @@ export AIR_FLOW_UAVS="8 10 12 13 16"
 export AIR_FLOW_DIR=five_uav_recon          # driver 用本目录包装
 
 bash verification/three_uav_recon/air_flow.sh odom          # 秒级分层快查
-bash verification/three_uav_recon/air_flow.sh bag 1800      # 五台同录 rosbag（-u 6,8,10,12,13）
+bash verification/three_uav_recon/air_flow.sh bag 1800      # 五台同录 rosbag（-u 8,10,12,13,16）
 bash verification/three_uav_recon/air_flow.sh stage1 60     # 空中静态链路窗 + 判定
 bash verification/three_uav_recon/air_flow.sh stage2        # 只发 coverage（跟随环事件）
 bash verification/three_uav_recon/air_flow.sh full          # prepare + coverage 全流程
@@ -211,5 +213,5 @@ bash verification/five_uav_recon/sitl/run_sim_five_uav.sh
 3. **A16 顶替 A06 首次进入本阵容、A12 是 GPS 修复后首次参训**——两者都建议先在
    §七 SITL / 地面干跑里过一遍，再上五机实飞。
 4. 五机邻居矩阵为 4×5=20 条机间流（此前三机是 6 条），链路负载明显上升——沿用
-   当前减负配置（机间位姿流 `swarm_pose` 12 Hz、每流 ~45 B、router 去 242），
+   当前减负配置（机间位姿流 `swarm_pose` 10 Hz、bundle tick 10 Hz、router 去 `.242:15500`），
    并按 air_flow `stage1` 的判据观察。
