@@ -51,7 +51,7 @@
 bash src/tcp_to_ros/tools/router_service_install.sh <新机编号>
 ```
 
-脚本安装/启用 systemd 服务并禁用旧 router 桌面自启。现有 [unit 模板](../../src/tcp_to_ros/tools/systemd/mavlink-routerd.service) 已去掉 **`192.168.5.242:15500` 端点**，保留 `.241:15500` 与 `127.0.0.1:15500`，不在本流程继续删减转发。模板绑定 `/home/nvidia/Mavlink_Routerd_Sh/mavlink-routerd`、`/dev/ttyTHS0:921600`；新机不同则先核实，不能硬套。
+脚本安装/启用 systemd 服务并禁用旧 router 桌面自启。现有 [unit 模板](../../src/tcp_to_ros/tools/systemd/mavlink-routerd.service) 已依次去掉 `192.168.5.242:15500`（2026-10-10）和 `192.168.5.241:15500`（2026-10-18；GCS 侧无 MAVLink 消费者，转发遥测只抬高电台包率），现只保留 `127.0.0.1:15500` 供本机 mavros 使用。模板绑定 `/home/nvidia/Mavlink_Routerd_Sh/mavlink-routerd`、`/dev/ttyTHS0:921600`；新机不同则先核实，不能硬套。
 
 ## 3. 每架机检查 router
 
@@ -65,7 +65,7 @@ pgrep -ax mavlink-routerd
 journalctl -u mavlink-routerd -b -n 30 --no-pager
 ```
 
-通过：enabled、active、只有一个实例且 PID 对得上；实际参数无 `.242:15500`，本地及 `.241` 端点保留，日志无持续重启/串口错误。已登记机若不符合，记配置漂移并修复后复查，不以“以前改过”跳过。服务 active 不能代替步骤 7 的 MAVROS 双向健康检查。
+通过：enabled、active、只有一个实例且 PID 对得上；实际参数只有 `127.0.0.1:15500`，无 `.241:15500` / `.242:15500`，日志无持续重启/串口错误。已登记机若不符合，记配置漂移并修复后复查，不以“以前改过”跳过。服务 active 不能代替步骤 7 的 MAVROS 双向健康检查。
 
 ## 4. 检查并同步板钟（在启动/构建前）
 
