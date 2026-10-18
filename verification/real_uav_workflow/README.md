@@ -97,9 +97,10 @@ rsync -rcn --itemize-changes --exclude='.git' --exclude='__pycache__/' --exclude
 
 ## 6. 提醒用户选择通信测试
 
-准备完成后告知：“部署检查完成。是否做启动前后各 20 s 通信测试？默认每机 UDP 1 Mbps、1200 B，并测 ping RTT。” 等待选择；本轮已明确选择则直接沿用。
+准备完成后告知：“部署检查完成。是否做 20 s 通信测试？冷测=栈停并每机模拟 UDP 1 Mbps、1200 B；热测=栈开、不注入负载，只测 ping RTT。” 等待选择；本轮已明确选择则直接沿用。
 
-- **需要**：先按 [通信方法](communication.md) 做**冷测**（我方机载/GCS 栈停止、router 保留）；再启动机载程序并稳定后（**无需标定、不要求启动 GCS**）用完全相同条件做**热测**，输出表格。全机同步参加每轮负载，不逐机串行压测。
+- **需要**：按 [通信方法](communication.md) 做**冷测**（我方机载/GCS 栈停止、router 保留，各机并发模拟 1 Mbps 上行）和/或**热测**（机载程序启动稳定后，**不注入 UDP**；**以每架 UAV 的 `swarm_pose` 是否被全部在线邻机收到为主判据**，并测 ping RTT；**无需标定、不要求启动 GCS**），输出表格。全机同步参加每轮，不逐机串行压测。
+- 冷测/热测**不检查拆桨、disarm 或 OFFBOARD**：机载程序不会 arm、切 OFFBOARD 或启动任务（2026-10-18 现场口径）。测试不构成飞行授权。
 - **不需要**：记录 SKIP，直接执行步骤 7；**启动、标定及实际消息连通性检查仍须完成**。你原设想的第 8 项按此理解。
 - 新合包版本本轮尚无实机验证证据：可以只部署/启动观察；跳过测试不能写为链路验收通过，进入飞行前须补足对应无桨验证证据。
 
@@ -126,7 +127,7 @@ rsync -rcn --itemize-changes --exclude='.git' --exclude='__pycache__/' --exclude
 
 4. 查询终端先 source 对应工作区环境，ROS Master 指向该机本地；GCS 查询同样清除 `ROS_HOSTNAME`、设置 `ROS_IP=192.168.5.241`、`ROS_MASTER_URI=http://localhost:11311`。每机核对：`/mavros/state` 为 connected=True、armed=False、非 OFFBOARD；MAVROS 实际目标正确；`/mavros/setpoint_raw/local` **唯一发布者是 `/setpoint_relay`**（用机载本地 `rostopic info`）。读取当前 launch 的 health_start/启动日志确认 GCS 与每机实际为 bundle，无 `proto_mismatch`/解码错误；不能只看 YAML。
 5. GCS 核对实际 formation/标定集合与机队一致，`39001` 监听、逐机任务 service 可见；GPS `fix_type ≥3`、航向差 ≤30°、有效采样满足现有标定规则。**全部 disarm 时**完成标定，确认 `/group_a/calibration_ready=True`，并逐机确认 `/<UAVn>/gp_origin_confirmed=True`；保存本轮原点、参考航向及 ready 清单，不能沿用旧轮 latched True。
-6. 显式设置本轮 `AIR_FLOW_UAVS`、`AIR_FLOW_LEADER`、`AIR_FLOW_DIR` 后执行 `bash verification/three_uav_recon/air_flow.sh odom`，保存每机本地发出及**各邻机**接收新鲜度；缺机/缺流不能通过。若需通信测试，此时做 B 并归档。这里不运行会下发飞行任务的 `stage2/full`。
+6. 显式设置本轮 `AIR_FLOW_UAVS`、`AIR_FLOW_LEADER`、`AIR_FLOW_DIR` 后执行 `bash verification/three_uav_recon/air_flow.sh odom`，保存每机本地发出及**各邻机**接收新鲜度；缺机/缺流不能通过。若需通信测试，此时做热测并归档。这里不运行会下发飞行任务的 `stage2/full`。
 
 ## 8. 输出通信表并判断是否可交接
 
