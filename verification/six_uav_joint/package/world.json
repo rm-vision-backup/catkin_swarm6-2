@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "coordinate_frame": "mission_enu",
+  "target_config_version": "six-joint-ground-v2",
+  "flight_area": {
+    "min_x": -30.0,
+    "max_x": 20.0,
+    "min_y": -15.0,
+    "max_y": 40.0,
+    "safety_margin_m": 5.0
+  },
+  "targets": {
+    "mock-target-9": {
+      "x": 5.0,
+      "y": 15.0,
+      "z": 0.0,
+      "yaw": 0.0
+    },
+    "mock-target-10": {
+      "x": 10.0,
+      "y": 15.0,
+      "z": 0.0,
+      "yaw": 0.0
+    }
+  }
+}

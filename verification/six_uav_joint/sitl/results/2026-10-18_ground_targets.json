@@ -1,0 +1,144 @@
+{
+  "date": "2026-10-18",
+  "simulation": "PX4_Gazebo_SITL",
+  "status": "SUCCESS",
+  "target_config_version": "six-joint-ground-v2",
+  "local_run_dir": ".tmp/six_uav_joint/sitl_ground_targets_20261018_04",
+  "mission_id": "six-uav-joint-001-sitl-7807f9deb6",
+  "phases": [
+    {
+      "phase": "prepare",
+      "result": "SUCCESS",
+      "duration_s": 9.58,
+      "observation_only": false
+    },
+    {
+      "phase": "coverage1",
+      "result": "SUCCESS",
+      "duration_s": 36.58,
+      "observation_only": false
+    },
+    {
+      "phase": "fault",
+      "result": "SUCCESS",
+      "duration_s": 18.56,
+      "observation_only": false
+    },
+    {
+      "phase": "recovery",
+      "result": "SUCCESS",
+      "duration_s": 30.56,
+      "observation_only": false
+    },
+    {
+      "phase": "coverage2",
+      "result": "SUCCESS",
+      "duration_s": 35.58,
+      "observation_only": false
+    },
+    {
+      "phase": "strike",
+      "result": "SUCCESS",
+      "duration_s": 33.57,
+      "observation_only": false
+    },
+    {
+      "phase": "strike_hold",
+      "result": "SUCCESS",
+      "duration_s": 3.01,
+      "observation_only": true
+    },
+    {
+      "phase": "return_a",
+      "result": "SUCCESS",
+      "duration_s": 48.11,
+      "observation_only": false
+    },
+    {
+      "phase": "hold",
+      "result": "SUCCESS",
+      "duration_s": 3.01,
+      "observation_only": true
+    }
+  ],
+  "motion_batches": 7,
+  "per_uav_requests": 19,
+  "unit_tests_passed": 23,
+  "flight_telemetry_samples_5hz": 1216,
+  "recorded_duration_s": 243.26,
+  "minimum_sampled_3d_distance_m": 3.938,
+  "b_hold_verification": {
+    "A09": {
+      "height_min_m": 4.894,
+      "height_max_m": 5.08,
+      "max_horizontal_error_m": 0.083,
+      "verified_hold_s": 56.86
+    },
+    "A10": {
+      "height_min_m": 4.9,
+      "height_max_m": 5.099,
+      "max_horizontal_error_m": 0.089,
+      "verified_hold_s": 56.86
+    }
+  },
+  "ground_targets": {
+    "A09": [
+      5,
+      15,
+      0
+    ],
+    "A10": [
+      10,
+      15,
+      0
+    ]
+  },
+  "final_positions_task": {
+    "A06": [
+      -20.04590661123082,
+      14.9755231709781,
+      8.038360595703125
+    ],
+    "A07": [
+      -5.04432477200923,
+      -0.04520820664877323,
+      12.037337303161621
+    ],
+    "A08": [
+      -0.03908397036670585,
+      0.012764575283359846,
+      11.97339153289795
+    ],
+    "A09": [
+      4.966773613676028,
+      14.987489388543604,
+      5.043971061706543
+    ],
+    "A10": [
+      9.961245599047045,
+      14.974049463080046,
+      5.0521111488342285
+    ],
+    "A11": [
+      -10.035295359982532,
+      -5.008696123836092,
+      12.034483909606934
+    ]
+  },
+  "distance_basis": "六机原点全部确认后的起飞至完成阶段；5Hz采样统计",
+  "limitations": [
+    "仅本机SITL，实飞/电台尚未验收",
+    "B组使用A组执行链路，本地协调",
+    "结束于悬停，不包含人工最终降落"
+  ],
+  "input_sha256": {
+    "driver.py": "8d1502c347d6b4cb3572b1e12904dfd7a6adb46ef90596d56733daa46721364d",
+    "flight_guard.py": "baf9c9c0cbef59d4d09f75dc4a078a2204d5a93f173999bc8669af6e32baf9d7",
+    "package/bootstrap.json": "31cf17ca97aa5a307b14de686fc94024b9611e406c5e83743e224e0b4c98078a",
+    "package/plans/plans.json": "d6dbc5bfc4d7375519db5b19e12faa24d5c2010d5d2ebf3f6a2ec67881073694",
+    "package/robots.json": "de1a6d34736502ae546066715ffc0d0d21bf73c038100620f6fa2eb3a097d1d4",
+    "package/world.json": "f5d12f80466b60230ec3d3373db7eacf3dbb214ff512763dd8323dc90d5bd82f",
+    "config/calibration.yaml": "f21ab8f956ab8f695b76d55977c0eda7aee5ba0a99d92485da45dac1f404a027",
+    "config/formation_offsets.yaml": "15df55555f364de0f0677510ea9b869c23ba579b545209f6fe3ed0dda0e29794"
+  }
+}

@@ -1,0 +1,5 @@
+# 同排五机取全球位置中位数；理想摆位原点=UAV8，不随场地整体航向改变。
+# UAV11参与逐机原点确认，但不参与原点计算；标定仍在全部disarm时完成。
+calibration_uavs: [UAV6, UAV7, UAV8, UAV9, UAV10]
+all_uavs: [UAV6, UAV7, UAV8, UAV9, UAV10, UAV11]
+sample_window_s: 8.0

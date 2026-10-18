@@ -1,0 +1,80 @@
+<launch>
+  <!-- 只生成 UAV6–11；原点=UAV8，机头沿 Gazebo +Y，与任务前方一致。 -->
+  <arg name="gui" default="false"/>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="world_name" value="$(find mavlink_sitl_gazebo)/worlds/empty.world"/>
+  </include>
+  <group ns="iris_5">
+    <include file="$(find px4)/launch/single_vehicle_spawn_xtd.launch">
+      <arg name="x" value="90"/><arg name="y" value="100"/>
+      <arg name="z" value="0.5"/>
+      <arg name="R" value="0"/><arg name="P" value="0"/><arg name="Y" value="1.57079632679"/>
+      <arg name="vehicle" value="iris"/><arg name="sdf" value="iris"/>
+      <arg name="ID" value="5"/><arg name="ID_in_group" value="5"/>
+      <arg name="mavlink_tcp_port" value="4565"/>
+      <arg name="udp_gimbal_port" value="13035"/>
+      <arg name="interactive" value="true"/>
+    </include>
+  </group>
+  <group ns="iris_6">
+    <include file="$(find px4)/launch/single_vehicle_spawn_xtd.launch">
+      <arg name="x" value="95"/><arg name="y" value="100"/>
+      <arg name="z" value="0.5"/>
+      <arg name="R" value="0"/><arg name="P" value="0"/><arg name="Y" value="1.57079632679"/>
+      <arg name="vehicle" value="iris"/><arg name="sdf" value="iris"/>
+      <arg name="ID" value="6"/><arg name="ID_in_group" value="6"/>
+      <arg name="mavlink_tcp_port" value="4566"/>
+      <arg name="udp_gimbal_port" value="13036"/>
+      <arg name="interactive" value="true"/>
+    </include>
+  </group>
+  <group ns="iris_7">
+    <include file="$(find px4)/launch/single_vehicle_spawn_xtd.launch">
+      <arg name="x" value="100"/><arg name="y" value="100"/>
+      <arg name="z" value="0.5"/>
+      <arg name="R" value="0"/><arg name="P" value="0"/><arg name="Y" value="1.57079632679"/>
+      <arg name="vehicle" value="iris"/><arg name="sdf" value="iris"/>
+      <arg name="ID" value="7"/><arg name="ID_in_group" value="7"/>
+      <arg name="mavlink_tcp_port" value="4567"/>
+      <arg name="udp_gimbal_port" value="13037"/>
+      <arg name="interactive" value="true"/>
+    </include>
+  </group>
+  <group ns="iris_8">
+    <include file="$(find px4)/launch/single_vehicle_spawn_xtd.launch">
+      <arg name="x" value="105"/><arg name="y" value="100"/>
+      <arg name="z" value="0.5"/>
+      <arg name="R" value="0"/><arg name="P" value="0"/><arg name="Y" value="1.57079632679"/>
+      <arg name="vehicle" value="iris"/><arg name="sdf" value="iris"/>
+      <arg name="ID" value="8"/><arg name="ID_in_group" value="8"/>
+      <arg name="mavlink_tcp_port" value="4568"/>
+      <arg name="udp_gimbal_port" value="13038"/>
+      <arg name="interactive" value="true"/>
+    </include>
+  </group>
+  <group ns="iris_9">
+    <include file="$(find px4)/launch/single_vehicle_spawn_xtd.launch">
+      <arg name="x" value="110"/><arg name="y" value="100"/>
+      <arg name="z" value="0.5"/>
+      <arg name="R" value="0"/><arg name="P" value="0"/><arg name="Y" value="1.57079632679"/>
+      <arg name="vehicle" value="iris"/><arg name="sdf" value="iris"/>
+      <arg name="ID" value="9"/><arg name="ID_in_group" value="9"/>
+      <arg name="mavlink_tcp_port" value="4569"/>
+      <arg name="udp_gimbal_port" value="13039"/>
+      <arg name="interactive" value="true"/>
+    </include>
+  </group>
+  <group ns="iris_10">
+    <include file="$(find px4)/launch/single_vehicle_spawn_xtd.launch">
+      <arg name="x" value="90"/><arg name="y" value="95"/>
+      <arg name="z" value="0.5"/>
+      <arg name="R" value="0"/><arg name="P" value="0"/><arg name="Y" value="1.57079632679"/>
+      <arg name="vehicle" value="iris"/><arg name="sdf" value="iris"/>
+      <arg name="ID" value="10"/><arg name="ID_in_group" value="10"/>
+      <arg name="mavlink_tcp_port" value="4570"/>
+      <arg name="udp_gimbal_port" value="13040"/>
+      <arg name="interactive" value="true"/>
+    </include>
+  </group>
+</launch>

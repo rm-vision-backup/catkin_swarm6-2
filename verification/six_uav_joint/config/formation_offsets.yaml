@@ -1,0 +1,16 @@
+# 任务系：右/前/上，原点UAV8机位；偏置不随领机yaw转动。
+leader_id: A07
+mission_anchor: [0.0, 0.0, 0.0]
+formations:
+  recon_initial:
+    participants: [A06, A07, A08]
+    offsets:
+      A06: [-5.0, 0.0, 0.0]
+      A07: [0.0, 0.0, 0.0]
+      A08: [5.0, 0.0, 0.0]
+  recon_recovered:
+    participants: [A07, A08, A11]
+    offsets:
+      A07: [0.0, 0.0, 0.0]
+      A08: [5.0, 0.0, 0.0]
+      A11: [-5.0, 0.0, 0.0]

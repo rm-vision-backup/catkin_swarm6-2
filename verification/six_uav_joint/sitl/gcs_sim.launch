@@ -1,0 +1,8 @@
+<launch>
+  <arg name="tcp_port" default="39001"/>
+  <include file="$(dirname)/../../four_uav_recon/sitl/gcs_sim_four_uav.launch">
+    <arg name="tcp_port" value="$(arg tcp_port)"/>
+    <arg name="formation_offsets_file" value="$(dirname)/../config/formation_offsets.yaml"/>
+    <arg name="calibration_config_file" value="$(dirname)/../config/calibration.yaml"/>
+  </include>
+</launch>

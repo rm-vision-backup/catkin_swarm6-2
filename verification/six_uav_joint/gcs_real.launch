@@ -1,0 +1,7 @@
+<launch>
+  <!-- 只替换本轮编队/标定配置；生产桥、身份、TCP与安全参数沿用现有入口。 -->
+  <include file="$(find tcp_to_ros)/launch/gcs_a_real_four_uav.launch">
+    <arg name="formation_offsets_file" value="$(dirname)/config/formation_offsets.yaml"/>
+    <arg name="calibration_config_file" value="$(dirname)/config/calibration.yaml"/>
+  </include>
+</launch>
