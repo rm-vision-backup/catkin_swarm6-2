@@ -14,7 +14,7 @@
 #
 # 用法（在 GCS 上跑；子命令含义见 three README §九）：
 #   bash verification/three_uav_recon/air_flow.sh odom            # 任何时刻：odom 通畅性快查（分层）
-#   bash verification/three_uav_recon/air_flow.sh bag [秒=600]    # 全体同时录 rosbag
+#   bash verification/three_uav_recon/air_flow.sh bag [秒=600]    # 全体同时录 rosbag（跟机录 leader，领机录其余所有机）
 #   bash verification/three_uav_recon/air_flow.sh stage1 [秒=60]  # 空中链路观测窗 + 判定
 #   bash verification/three_uav_recon/air_flow.sh stage2          # 只发 coverage（跟随环）
 #   bash verification/three_uav_recon/air_flow.sh full            # prepare + coverage 全流程
@@ -56,6 +56,16 @@ source "$WS/devel/setup.bash" 2>/dev/null
 set -u
 
 ip_of() { echo "${BOARD_IP_PREFIX:-192.168.5.}$((10 * $1 + 1))"; }
+
+peers_for() {  # $1=当前机号；输出要记录其转发话题的对端（跟机=领机；领机=其余所有机）
+  local me="$1" out=""
+  if [ "$me" = "$LEADER" ]; then
+    for p in $UAVS; do [ "$p" = "$me" ] || out+="${out:+,}$p"; done
+  else
+    out="$LEADER"
+  fi
+  printf '%s' "$out"
+}
 
 read_health() {  # $1=ip $2=mode(quick|window) $3=窗起点 epoch（window 模式用）
   # shellcheck disable=SC2029
@@ -241,10 +251,14 @@ EOM
     ;;
   bag)
     DUR="${1:-600}"
-    echo "== 同录 rosbag（${DUR}s，-u $UAVS_CSV，$NUAV 台）=="
+    if ! echo " $UAVS " | grep -q " $LEADER "; then
+      echo "AIR_FLOW_LEADER=$LEADER 不在 AIR_FLOW_UAVS 中" >&2; exit 2
+    fi
+    echo "== 同录 rosbag（${DUR}s，$NUAV 台；跟机录 leader，领机录其余所有机）=="
     rc=0
     for n in $UAVS; do
       ip=$(ip_of "$n")
+      peers=$(peers_for "$n"); [ -n "$peers" ] || peers="none"
       # 板上脚本版本核对：新版含"链路哨兵"注释；旧版先 rsync（README §九）
       if ! timeout 20 sshpass -p "${BOARD_SSH_PASS:-nvidia}" ssh -n -o ConnectTimeout=8 -o StrictHostKeyChecking=no \
              "${BOARD_SSH_USER:-nvidia}@$ip" 'grep -q "链路哨兵" ~/catkin_swarm6-2/src/swarm_uav_executor/bashs/record_rosbag.sh'; then
@@ -252,8 +266,8 @@ EOM
       fi
       timeout 20 sshpass -p "${BOARD_SSH_PASS:-nvidia}" ssh -n -o ConnectTimeout=8 -o StrictHostKeyChecking=no \
         "${BOARD_SSH_USER:-nvidia}@$ip" \
-        "setsid bash ~/catkin_swarm6-2/src/swarm_uav_executor/bashs/record_rosbag.sh -u $UAVS_CSV -n air -d $DUR </dev/null >~/rosbag_record.log 2>&1 &"
-      echo "  UAV$n: 已启动（>~/rosbag_record.log）"
+        "setsid bash ~/catkin_swarm6-2/src/swarm_uav_executor/bashs/record_rosbag.sh -u $peers -n air -d $DUR </dev/null >~/rosbag_record.log 2>&1 &"
+      echo "  UAV$n: 已启动（-u $peers，>~/rosbag_record.log）"
     done
     [ "$rc" -eq 0 ] && echo "  录完/停止后：Ctrl-C 由 -d 自动收；取包 scp 见 README §九（log_fetch.sh 不采 bag）"
     exit "$rc"
