@@ -2,7 +2,7 @@
 
 适用：GCS_A + 多架 UAV 的部署、地面通信快测、标定及实飞交接。详细部署查 [real_setup](../../src/swarm_uav_interfaces/real_setup.md)，通信测量查 [20 秒测试方法](communication.md)。**按编号执行；没有证据的步骤不得标为通过。**
 
-用户已通过三机实飞；跨话题合包已实现、尚未实机验证（2026-10-16 用户说明）。历史记录 [10-12 报告](../../quality_reports/2026-10-12_airlink_scaling_test.md) 的 §8–§11 为本轮背景，预期 RTT/pps 不能填成实测结果。
+用户已通过三机实飞；跨话题合包已实现，2026-10-18 六机地面 bundle 运行与 odom 快查通过，完整实飞尚未验收。历史记录 [10-12 报告](../../quality_reports/2026-10-12_airlink_scaling_test.md) 的 §8–§11 为本轮背景，预期 RTT/pps 不能填成实测结果。
 
 ## 执行约定
 
@@ -97,14 +97,16 @@ rsync -rcn --itemize-changes --exclude='.git' --exclude='__pycache__/' --exclude
 
 ## 6. 提醒用户选择通信测试
 
-准备完成后告知：“部署检查完成。是否做 20 s 通信测试？冷测=栈停并每机模拟 UDP 1 Mbps、1200 B；热测=栈开、不注入负载，只测 ping RTT。” 等待选择；本轮已明确选择则直接沿用。
+准备完成后告知：“部署检查完成。是否做 20 s 通信测试？冷测=栈停并每机模拟 UDP 1 Mbps、1200 B；热测=栈开、不注入负载，只测 ping RTT。” 等待选择；本轮已明确选择则直接沿用。**冷测和热测是二选一，不是两轮都做**：以飞行准备为目的时只做热测；冷测只在需要链路对比时做，且必须在起机载栈之前（栈停）完成。
 
-- **需要**：按 [通信方法](communication.md) 做**冷测**（我方机载/GCS 栈停止、router 保留，各机并发模拟 1 Mbps 上行）和/或**热测**（机载程序启动稳定后，**不注入 UDP**；**以每架 UAV 的 `swarm_pose` 是否被全部在线邻机收到为主判据**，并测 ping RTT；**无需标定、不要求启动 GCS**），输出表格。全机同步参加每轮，不逐机串行压测。
+- **需要**：按 [通信方法](communication.md) 做**热测**（机载程序启动稳定后，**不注入 UDP**；**以每架 UAV 的 `swarm_pose` 是否被全部在线邻机收到为主判据**，并测 ping RTT；**无需标定、不要求启动 GCS**）或**冷测**（我方机载/GCS 栈停止、router 保留，各机并发模拟 1 Mbps 上行），输出表格。全机同步参加每轮，不逐机串行压测。热测若在 GCS 启动后做，须记录 GCS 额外节点负载；冷测不得在起栈后做。
 - 冷测/热测**不检查拆桨、disarm 或 OFFBOARD**：机载程序不会 arm、切 OFFBOARD 或启动任务（2026-10-18 现场口径）。测试不构成飞行授权。
 - **不需要**：记录 SKIP，直接执行步骤 7；**启动、标定及实际消息连通性检查仍须完成**。你原设想的第 8 项按此理解。
 - 新合包版本本轮尚无实机验证证据：可以只部署/启动观察；跳过测试不能写为链路验收通过，进入飞行前须补足对应无桨验证证据。
 
 ## 7. 启动机载与 GCS，完成标定（无论是否压测）
+
+执行顺序：冷测（若选，必须在起栈前）→ 起机载栈 → 热测（若选，起 GCS 前）→ 起 GCS → 标定 → odom。热测不要放在标定之后；冷测不要放在起栈之后。
 
 1. 按步骤 0 选定任务的摆位/航向/净空要求放好飞机，标定后不再移动。逐机准备邻居参数（**排除自己，包含全部本轮邻机**），实飞保留默认安全门禁，不带 `noprop:=true` 或贴地覆盖参数。**拆桨不等于需要 noprop；本步骤不下发任务。**
 2. 使用 `start_onboard.sh`。推荐从 GCS 逐台调用包装工具，它最终执行该脚本并保留转录；每机参数不同，不能给多机套同一邻居列表：
@@ -117,7 +119,8 @@ rsync -rcn --itemize-changes --exclude='.git' --exclude='__pycache__/' --exclude
    ```
 
    `280` 是上表 recon 测试入口的部署参数，其它任务按各自配置核实。底层 [start_onboard.sh](../../src/swarm_uav_executor/bashs/start_onboard.sh) 不做前置检查；“进程在”不是就绪判据。
-3. GCS 选定 launch 在独立终端/受控会话启动并留日志（替换文件名）：
+3. 若本轮选择热测，在起 GCS 前按 [通信方法](communication.md) 完成一次 20 s 热测并归档；热测不要求 GCS/标定。未选择则跳过。
+4. GCS 选定 launch 在独立终端/受控会话启动并留日志（替换文件名）：
 
    ```bash
    env -u ROS_HOSTNAME ROS_IP=192.168.5.241 ROS_MASTER_URI=http://localhost:11311 \
@@ -125,9 +128,9 @@ rsync -rcn --itemize-changes --exclude='.git' --exclude='__pycache__/' --exclude
               roslaunch tcp_to_ros <本轮GCS入口.launch>'
    ```
 
-4. 查询终端先 source 对应工作区环境，ROS Master 指向该机本地；GCS 查询同样清除 `ROS_HOSTNAME`、设置 `ROS_IP=192.168.5.241`、`ROS_MASTER_URI=http://localhost:11311`。每机核对：`/mavros/state` 为 connected=True、armed=False、非 OFFBOARD；MAVROS 实际目标正确；`/mavros/setpoint_raw/local` **唯一发布者是 `/setpoint_relay`**（用机载本地 `rostopic info`）。读取当前 launch 的 health_start/启动日志确认 GCS 与每机实际为 bundle，无 `proto_mismatch`/解码错误；不能只看 YAML。
-5. GCS 核对实际 formation/标定集合与机队一致，`39001` 监听、逐机任务 service 可见；GPS `fix_type ≥3`、航向差 ≤30°、有效采样满足现有标定规则。**全部 disarm 时**完成标定，确认 `/group_a/calibration_ready=True`，并逐机确认 `/<UAVn>/gp_origin_confirmed=True`；保存本轮原点、参考航向及 ready 清单，不能沿用旧轮 latched True。
-6. 显式设置本轮 `AIR_FLOW_UAVS`、`AIR_FLOW_LEADER`、`AIR_FLOW_DIR` 后执行 `bash verification/three_uav_recon/air_flow.sh odom`，保存每机本地发出及**各邻机**接收新鲜度；缺机/缺流不能通过。若需通信测试，此时做热测并归档。这里不运行会下发飞行任务的 `stage2/full`。
+5. 查询终端先 source 对应工作区环境，ROS Master 指向该机本地；GCS 查询同样清除 `ROS_HOSTNAME`、设置 `ROS_IP=192.168.5.241`、`ROS_MASTER_URI=http://localhost:11311`。每机核对：`/mavros/state` 为 connected=True、armed=False、非 OFFBOARD；MAVROS 实际目标正确；`/mavros/setpoint_raw/local` **唯一发布者是 `/setpoint_relay`**（用机载本地 `rostopic info`）。读取当前 launch 的 health_start/启动日志确认 GCS 与每机实际为 bundle，无 `proto_mismatch`/解码错误；不能只看 YAML。
+6. GCS 核对实际 formation/标定集合与机队一致，`39001` 监听、逐机任务 service 可见；GPS `fix_type ≥3`、航向差 ≤30°、有效采样满足现有标定规则。**全部 disarm 时**完成标定，确认 `/group_a/calibration_ready=True`，并逐机确认 `/<UAVn>/gp_origin_confirmed=True`；保存本轮原点、参考航向及 ready 清单，不能沿用旧轮 latched True。**任何机载栈重启、换电或飞机移动后，必须重启 GCS 标定节点（或整个 GCS 栈）重新标定。**
+7. 显式设置本轮 `AIR_FLOW_UAVS`、`AIR_FLOW_LEADER`、`AIR_FLOW_DIR` 后执行 `bash verification/three_uav_recon/air_flow.sh odom`，保存每机本地发出及**各邻机**接收新鲜度；缺机/缺流不能通过。这里只做 quick odom 快查（不是再次 20 s 热测）；若本轮选择热测，已在第 3 步完成，不要在此重复。`stage1 20` 仅在未做正式热测时作为替代观察窗。不运行会下发飞行任务的 `stage2/full`。
 
 ## 8. 输出通信表并判断是否可交接
 
@@ -149,7 +152,7 @@ python3 verification/<本轮任务目录>/driver.py --phases prepare coverage \
   --tcp-host 192.168.5.241 --tcp-port 39001 --log <本轮记录目录>/driver.jsonl
 ```
 
-起飞后 odom 快查是必做项，不向空中链路注入 UDP 压力流量。首次新机数/新链路版本按任务专用规程分阶段飞行（可选 `air_flow.sh stage1 20` 观察窗口），不自动进入 coverage。任务 dry-run 应在地面准备期间完成；这里交付的是最终命令及明确的执行时机。
+地面 odom/热测通过即可作为通信门禁；起飞后 odom 快查由现场负责人决定，默认建议做一次约 10 s 的 quick odom，但不再作为硬性门禁。若跳过，在 `session.md` 记 `SKIP（原因）`。地面检查不能覆盖空中姿态、天线朝向、多径和电机干扰的差异；新机数、新链路版本或曾出现空中断流时，仍建议起飞后快查。不向空中链路注入 UDP 压力流量；若本轮已做正式 20 s 热测，起飞后只做 quick odom，不重复 20 s 窗口。`air_flow.sh stage1 20` 仅在未做正式热测时作为替代观察窗。首次新机数/新链路版本按任务专用规程分阶段飞行，不自动进入 coverage。任务 dry-run 应在地面准备期间完成；这里交付的是最终命令及明确的执行时机。
 
 ## 10. 落地收尾与下轮复用
 
