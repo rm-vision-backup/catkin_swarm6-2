@@ -108,7 +108,17 @@ bash verification/six_uav_joint/flow.sh onboard-commands
 
 1. 按统一工作流核对六机身份、router、时钟、机载部署指纹和单setpoint发布者。仅编写本测试不构成部署/启动授权。
 2. `flow.sh onboard-commands` **只打印六条命令**；核对后按现场授权逐条执行。每架订阅其余5架的 `trajectory_intent` 与 `swarm_pose`，不含自己；保留已退出UAV6的订阅。机载任务超时为180s，与本驱动运动批次一致。
-3. 本轮GCS启动命令（在独立终端运行并保存输出）：
+3. **地面热测（本轮默认只做热测）**：机载栈稳定后、起 GCS 前完成。冷测是另一类实验，必须在第2步之前（栈停）完成，不要和热测混在同一轮。按 [通信方法](../real_uav_workflow/communication.md) 做一次 20 s 热测（其中包含 odom 基线和 ping）；正式的 20 s 窗口与 `flow.sh stage1 20` 二选一，不要重复跑。热测不要求 GCS/标定；若 GCS 已在运行，记录额外节点负载。本轮是6–11号，实际在线背景仍按现场16架记录；六机栈间消息必须逐源、逐接收者核对，不凭GCS单侧收到消息判断全互通。
+
+   ```bash
+   # 快速基线 / 只做快查时：
+   bash verification/six_uav_joint/flow.sh odom
+   # 需要 20 s 判定且未做正式热测时（与上面的正式热测二选一）：
+   bash verification/six_uav_joint/flow.sh stage1 20
+   # 录包不在热测窗口内进行；地面标定完成后见第 5.1 步（可选）
+   ```
+
+4. 本轮GCS启动命令（在独立终端运行并保存输出）：
 
    ```bash
    env -u ROS_HOSTNAME ROS_IP=192.168.5.241 ROS_MASTER_URI=http://localhost:11311 \
@@ -116,31 +126,38 @@ bash verification/six_uav_joint/flow.sh onboard-commands
               roslaunch verification/six_uav_joint/gcs_real.launch'
    ```
 
-4. 查询终端设置相同GCS环境并source工作区。核对 `/gcs_a_backend_node/formation_offsets_file` 和 `/gcs_a_calibration/calibration_uavs` 实际加载本目录配置。全部disarm时标定，确认六机原点回读与 `/group_a/calibration_ready=True`。
-5. 按 [通信方法](../real_uav_workflow/communication.md) 完成当轮通信测试；本轮是6–11号，实际在线背景仍按现场16架记录。六机栈间消息必须逐源、逐接收者核对，不凭GCS单侧收到消息判断全互通。
+5. 查询终端设置相同GCS环境并source工作区。核对 `/gcs_a_backend_node/formation_offsets_file` 和 `/gcs_a_calibration/calibration_uavs` 实际加载本目录配置。全部disarm时标定，确认六机原点回读与 `/group_a/calibration_ready=True`。**任何机载栈重启、换电或飞机移动后，必须重启 GCS 标定节点（或整个 GCS 栈）重新标定，不能沿用旧 ready。**
+
+5.1 **可选：启动机载 bag 录制（实验数据留存）**。地面标定完成并核对通过、飞机仍 disarm 且未移动时，在 GCS 执行：
 
    ```bash
-   bash verification/six_uav_joint/flow.sh odom
-   # 需要录包时，复用三机的逐机录包工具；不在空中下载
    bash verification/six_uav_joint/flow.sh bag 1200
    ```
 
-6. 飞手让六机依次进入armed/OFFBOARD，确认各机实际约5m悬停。起飞后再次 `flow.sh odom`，必要时 `flow.sh stage1 20` 检查空中静态链路；没有再次核对机间消息前不下发任务。
-7. 以下命令交给**GCS操作员**。终端保持上述GCS ROS环境，证据目录先按统一工作流建立：
+   - 录制口径（`air_flow.sh bag` 自动按角色传 `-u`）：**跟机录本机完整话题 + 领机 UAV7 的转发话题**（`swarm_pose`、`mavros/state` 等）；**领机录本机完整话题 + 其余所有机的转发话题**，作为全组互联证据。GCS 的 `group_a/gp_origin`、`gps_bias` 始终保留。
+   - 本机完整话题含轨迹/状态/控制/任务：`mavros/local_position/{odom,pose}`、`mavros/state`、`mavros/setpoint_raw/local`、`setpoint/ego|follower`、`exec_state`、`uav_task_state`、`trajectory_intent`、`rc/in`、`battery`、`rosout` 等；用于验收时还原飞行路线、控制输入与任务阶段。
+   - `1200` 为默认时长（秒），按预计实验时长调整。正常实验建议保留此项，后续用 bag 支撑轨迹/链路结论。
+   - 文件在各机 `~/catkin_swarm6-2/.ros_home/log/rosbag/<UAV>_<时间>_air.bag`；**落地 disarm 后再停止或取回，不在空中下载**。
+   - bag/ulog 等大文件走 USB 或落地后归档；电台只取 health、terminal、driver 等小文件。
+   - bag 只依赖机载栈，不依赖 GCS；若标定因重启/换电/移动而失效，需重新标定，bag 可继续录制。
+
+6. 飞手让六机依次进入armed/OFFBOARD，确认各机实际约5m悬停。地面 `flow.sh odom`/热测通过即可作为通信门禁；起飞后是否再做一次 quick odom 由现场负责人决定（默认建议做一次约10s，但不作为硬性门禁）。若跳过，在 `session.md` 记 `SKIP（原因）`。地面检查不能覆盖空中姿态、天线朝向、多径和电机干扰差异；新链路版本或曾出现空中断流时仍建议快查。若本轮已做完整 20 s 热测，空中只做 quick odom，不重复 20 s 窗口。地面或空中核对完成后再下发任务。
+7. 以下命令交给**GCS操作员**：在 `/home/yjq/catkin_swarm6-2` 直接复制执行。命令已包含 GCS ROS 环境覆盖；driver 会自动在 `src/uav_log/<时间>_six-uav-joint/driver.jsonl` 落盘（需要自定义时再加 `--log`）：
 
    ```bash
-   python3 verification/six_uav_joint/driver.py --execute \
-     --tcp-host 192.168.5.241 --tcp-port 39001 \
-     --log src/uav_log/<本轮目录>/driver.jsonl
+   env -u ROS_HOSTNAME ROS_IP=192.168.5.241 ROS_MASTER_URI=http://localhost:11311 \
+     bash -c 'source /opt/ros/noetic/setup.bash && source devel/setup.bash &&
+              python3 verification/six_uav_joint/driver.py --execute \
+                --tcp-host 192.168.5.241 --tcp-port 39001'
    ```
 
-   `<本轮目录>`必须先替换。驱动在启动、模拟退出、接替及模拟打击前显示现场检查项，操作员输入精确的 `CONTINUE` 才推进；等待输入期间也监测六机。通信测试证据和净空由现场确认，driver的GCS观测不能代替机间全互通检查。
+   执行前必须已完成第6步（六机 armed/OFFBOARD、约5m稳定悬停、起飞后 odom 快查通过）。driver 启动后自动执行全部阶段，不再等待 `CONTINUE`；失败、超时、断线或飞手切出 OFFBOARD 时自动中止并请求 HOLD。通信测试证据和净空由现场确认，driver的GCS观测不能代替机间全互通检查。
 
 8. 首轮可先 `--until prepare` 或 `--until coverage1`，只运行从准备开始的前缀；记录为 `PARTIAL_SUCCESS`。停止后保持当前悬停，最终人工收尾。**不支持跳过前序、从半途中续跑；下一轮须重新回到已标定起始机位上方约5m，移动地面飞机或重启后按工作流重做准备/标定。** 不能套用旧`air_flow.sh full/stage2`：本测试使用`flow.sh run`或本driver执行整体流程。
 
 ## 6. 监测、中止与验收口径
 
-驱动使用收到消息的本机单调时钟检查新鲜度：六机 `swarm_pose` 接收年龄≤1s、MAVROS state≤3s；全程connected/armed/OFFBOARD、标定ready、逐机原点已确认，三维间距不低于既有1m门禁。它还检查起始位置（水平≤2m、5m高度±1m），每批成功后核对实测终点（水平/高度各≤1m），覆盖跟机终点由本轮±5m偏置计算；目标停留3s期间也持续检查。以上是本测试的额外观测条件，不修改机载生产参数。
+驱动只核对六机最新 MAVROS state 的内容（connected/armed/OFFBOARD）与标定 ready，不再设置状态年龄上限；链路丢失由 backend 的 `UavLinkMonitor`（10 s suspect / 15 s lost）和机载执行器负责。连续的 `swarm_pose` 新鲜度与机间距离由机载执行器负责（领机 odom 超时 3.0s → `LEADER_LOST`；三维中心距 <1m → HOLD），地面站不再重复设置更严的门槛。逐机 `gp_origin_confirmed=True` **不进入 driver 自动检查**：桥上中继不保留 latch，晚启动的 driver 收不到标定时一次性发布的 True；须由操作员起飞前人工核对六架，尤其 UAV11（不在 `calibration_ready` 门槛内）。driver 不再自动检查起始位置/高度；操作员必须在起飞前确认六机按预期摆位并稳定在约5m。每批成功后核对实测终点（水平≤2m、高度≤1m），覆盖跟机终点由本轮±5m偏置计算；目标停留3s期间也持续检查。以上是本测试的额外观测条件，不修改机载生产参数。
 
 失败、超时、Ctrl-C或飞手切出OFFBOARD时，停止后续命令，先请求TCP HOLD，再经现有 `/UAVn/uav_hold` 向六机发送 `RUNTIME_BRAKE_HOLD`（每批3架、有界等待）。**TCP HOLD本身只覆盖当前活动批次；逐机服务的accepted也只表示接收请求。** JSONL逐机保留请求结果和未确认清单，飞手仍须确认实际悬停并接管；有失败或服务超时不宣称全组六机已安全悬停。安全锁存后不在空中自动复位或重试任务。
 

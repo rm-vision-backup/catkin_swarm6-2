@@ -135,7 +135,6 @@ def main():
         print("TAKEOFF command complete, settling 15s", flush=True)
         time.sleep(15)
         guard.wait_ready()
-        guard.check_initial_positions()
         transport = driver.TcpCommandTransport(package, driver.SystemClock(), "127.0.0.1", 39061)
         transport.wait_until_ready()
         class Log(driver.JsonlLogger):

@@ -38,9 +38,6 @@ class Observer:
     def check(self):
         pass
 
-    def check_initial_positions(self):
-        pass
-
     def check_targets(self, plan_id):
         self.checked.append(plan_id)
         if plan_id == self.fail_target:
@@ -332,21 +329,13 @@ class GuardTests(unittest.TestCase):
             p = assignment.payload["target_pose"]
             prefix = "/UAV%d/" % int(uav[1:])
             guard.receive(NS(connected=True, armed=True, mode="OFFBOARD"), prefix + "mavros/state")
-            guard.receive(NS(data=True), prefix + "gp_origin_confirmed")
             guard.receive(NS(point=NS(x=p["x"], y=p["y"], z=5)), prefix + "swarm_pose")
         self.guard = guard
 
-    def test_initial_pose_and_state_pass(self):
+    def test_state_pass(self):
         self.guard.check()
-        self.guard.check_initial_positions()
 
-    def test_stale_peer_or_manual_takeover_stops_mission(self):
-        key = "/UAV9/swarm_pose"
-        _, message = self.guard.samples[key]
-        self.guard.samples[key] = (time.monotonic()-2, message)
-        with self.assertRaisesRegex(RuntimeError, "过期"):
-            self.guard.check()
-        self.guard.receive(message, key)
+    def test_manual_takeover_stops_mission(self):
         self.guard.receive(NS(connected=True, armed=True, mode="POSCTL"), "/UAV9/mavros/state")
         with self.assertRaisesRegex(RuntimeError, "OFFBOARD"):
             self.guard.check()
@@ -372,12 +361,6 @@ class GuardTests(unittest.TestCase):
         msg.mission_id = self.guard.package.context.mission_id
         self.guard.receive(msg, "/UAV6/uav_task_state")
         with self.assertRaisesRegex(RuntimeError, "TEST"):
-            self.guard.check()
-
-    def test_minimum_distance_breach_aborts(self):
-        point = self.guard.samples["/UAV7/swarm_pose"][1]
-        self.guard.receive(point, "/UAV6/swarm_pose")
-        with self.assertRaisesRegex(RuntimeError, "三维间距"):
             self.guard.check()
 
 

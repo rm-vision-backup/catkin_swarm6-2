@@ -19,6 +19,12 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 sys.path.insert(0, str(ROOT))
 
+
+def default_log_path():
+    """默认证据路径：src/uav_log/<时间>_six-uav-joint/driver.jsonl。"""
+    stamp = time.strftime("%Y-%m-%d_%H%M%S")
+    return ROOT / "src" / "uav_log" / ("%s_six-uav-joint" % stamp) / "driver.jsonl"
+
 from verification.four_uav_recon.driver import JsonlLogger, build_batch
 from uav_bt_runtime.actions import RecoverReconGroupHandler, SimulateDamageHandler
 from uav_bt_runtime.clock import SystemClock
@@ -135,11 +141,9 @@ def run_sequence(package, transport, guard, logger, phases=PHASES, confirm=None)
                   "run_id": run_id, "participants": list(IDS),
                   "coordination": "local_mock_b", "phases": [p.name for p in phases]})
     try:
-        guard.wait_ready()
         if confirm:
             confirm("start", "确认本轮六机通信检查通过、机位与净空已核对；六机已人工起飞并稳定在约5m。")
         guard.check()
-        guard.check_initial_positions()
         for phase in phases:
             if phase.requires and phase.requires not in events:
                 raise RuntimeError("缺少阶段事件 %s" % phase.requires)
@@ -210,16 +214,6 @@ def run_sequence(package, transport, guard, logger, phases=PHASES, confirm=None)
         return 1
 
 
-def operator_confirm(name, prompt):
-    print("\n[%s] %s 输入 CONTINUE 继续；其它输入中止。" % (name, prompt), flush=True)
-    # select 使等待确认期间仍持续检查机队；由 main 设置回调。
-    import select
-    while not select.select([sys.stdin], [], [], 0.1)[0]:
-        operator_confirm.guard.check()
-    if sys.stdin.readline().strip() != "CONTINUE":
-        raise RuntimeError("操作员中止 %s" % name)
-
-
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     mode = parser.add_mutually_exclusive_group()
@@ -229,10 +223,12 @@ def main(argv=None):
     parser.add_argument("--tcp-port", type=int, default=39001)
     parser.add_argument("--until", choices=[p.name for p in PHASES], default="hold",
                         help="从准备开始，完成指定阶段后停止；不能跳过前序阶段")
-    parser.add_argument("--log", help="JSONL证据路径；实机执行必须指定")
+    parser.add_argument("--log", help="JSONL证据路径；默认自动生成 src/uav_log/<时间>_six-uav-joint/driver.jsonl")
     args = parser.parse_args(argv)
-    if args.execute and (not args.log or not sys.stdin.isatty()):
-        parser.error("--execute 必须指定 --log 并在交互终端中运行")
+    log_path = Path(args.log) if args.log else None
+    if args.execute and log_path is None:
+        log_path = default_log_path()
+        print("[driver] log: %s" % log_path, flush=True)
     package = load_package()
     if args.execute:
         # 同日重跑不消费上轮 latched FAILED；每轮日志记录实际 mission_id。
@@ -256,12 +252,11 @@ def main(argv=None):
             return 0
         from verification.six_uav_joint.flight_guard import RosFlightGuard
         guard = RosFlightGuard(package)
-        operator_confirm.guard = guard
-        with JsonlLogger(Path(args.log)) as logger:
+        with JsonlLogger(log_path) as logger:
             # 先检查观测就绪再连接，连接失败时没有发送任何飞行任务。
             guard.wait_ready()
             transport.wait_until_ready()
-            return run_sequence(package, transport, guard, logger, phases, operator_confirm)
+            return run_sequence(package, transport, guard, logger, phases)
     finally:
         transport.close()
 

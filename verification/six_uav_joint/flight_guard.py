@@ -5,6 +5,11 @@ import time
 
 from verification.six_uav_joint.driver import IDS
 
+# 阶段终点核对时本机 swarm_pose 的最大年龄。与机载跟随环的领机 odom 超时对齐
+# （ego_swarm._FOLLOW_POSE_TIMEOUT_S = 3.0 s，2026-10-10 依实测 1.1–5.2 s 空档放宽）：
+# 地面站不再用更严的 1 s 门槛，避免已知量级的链路空档在终点核对瞬间误触发中止。
+TARGET_POSE_MAX_AGE_S = 3.0
+
 
 class RosFlightGuard:
     def __init__(self, package):
@@ -28,7 +33,7 @@ class RosFlightGuard:
         for uav in IDS:
             number = int(uav[1:])
             for suffix, kind in (("swarm_pose", PointStamped), ("mavros/state", State),
-                                 ("gp_origin_confirmed", Bool), ("uav_task_state", UavTaskState)):
+                                 ("uav_task_state", UavTaskState)):
                 topic = "/UAV%d/%s" % (number, suffix)
                 self.subscribers.append(rospy.Subscriber(topic, kind, self.receive,
                                                         callback_args=topic, queue_size=10))
@@ -47,38 +52,37 @@ class RosFlightGuard:
         return message
 
     def check(self):
+        """运行期只核对状态内容与任务失败锁存。
+
+        calibration_ready/参考航向不在每轮循环检查（与三机流程一致）：
+        启动时由 wait_ready 一次性核对，之后 backend 的 require_calibration_ready
+        会在每批下发前拒单。mavros/state 只看最新消息内容、不看年龄；
+        链路丢失由 backend 的 UavLinkMonitor（10 s suspect / 15 s lost）和
+        机载执行器负责。连续的 swarm_pose 新鲜度与机间距离同样由机载执行器负责
+        （领机 odom 超时 3.0 s -> LEADER_LOST；三维中心距 <1 m -> HOLD），
+        地面站只在阶段结束用 check_targets 核对实测终点。
+        """
         with self.lock:
             if self.ros.is_shutdown():
                 raise RuntimeError("ROS 已关闭")
             if self.task_failure:
                 raise RuntimeError(self.task_failure)
-            if not self.sample("/group_a/calibration_ready").data:
-                raise RuntimeError("calibration_ready=False")
-            heading = self.sample("/group_a/reference_heading").data
-            if not math.isfinite(heading):
-                raise RuntimeError("参考航向无效")
-            points = []
             for uav in IDS:
                 prefix = "/UAV%d/" % int(uav[1:])
-                state = self.sample(prefix + "mavros/state", 3.0)
+                state = self.sample(prefix + "mavros/state")
                 if not (state.connected and state.armed and state.mode == "OFFBOARD"):
                     raise RuntimeError("%s 未 connected/armed/OFFBOARD" % uav)
-                if not self.sample(prefix + "gp_origin_confirmed").data:
-                    raise RuntimeError("%s 原点未确认" % uav)
-                point = self.sample(prefix + "swarm_pose", 1.0).point
-                if not all(math.isfinite(v) for v in (point.x, point.y, point.z)):
-                    raise RuntimeError("%s 位姿无效" % uav)
-                points.append((uav, point))
-            for i, (name, point) in enumerate(points):
-                for other, q in points[i + 1:]:
-                    distance = math.sqrt((point.x-q.x)**2 + (point.y-q.y)**2 + (point.z-q.z)**2)
-                    if distance < 1.0:
-                        raise RuntimeError("%s/%s 三维间距 %.2fm < 1m" % (name, other, distance))
 
     def wait_ready(self):
+        """启动前一次性门禁：标定 ready、参考航向有效，然后六机状态持续就绪。"""
         deadline = time.monotonic() + 10.0
         while True:
             try:
+                if not self.sample("/group_a/calibration_ready").data:
+                    raise RuntimeError("calibration_ready=False")
+                heading = self.sample("/group_a/reference_heading").data
+                if not math.isfinite(heading):
+                    raise RuntimeError("参考航向无效")
                 self.check()
                 return
             except (KeyError, RuntimeError) as error:
@@ -86,22 +90,19 @@ class RosFlightGuard:
                     raise RuntimeError("观测未就绪：%s" % error)
                 time.sleep(0.1)
 
-    def check_pose(self, uav, pose, initial=False):
+    def check_pose(self, uav, pose):
         heading = self.sample("/group_a/reference_heading").data
+        if not math.isfinite(heading):
+            raise RuntimeError("参考航向无效")
         # 与 tcp_to_ros.calibration.task_vector_to_enu 相同的右/前 -> ENU 变换。
         east = pose["x"] * math.sin(heading) + pose["y"] * math.cos(heading)
         north = -pose["x"] * math.cos(heading) + pose["y"] * math.sin(heading)
-        point = self.sample("/UAV%d/swarm_pose" % int(uav[1:]), 1.0).point
+        point = self.sample("/UAV%d/swarm_pose" % int(uav[1:]),
+                            TARGET_POSE_MAX_AGE_S).point
         horizontal = math.hypot(point.x-east, point.y-north)
         vertical = abs(point.z - pose["z"])
-        if horizontal > (2.0 if initial else 1.0) or vertical > 1.0:
+        if horizontal > 2.0 or vertical > 1.0:
             raise RuntimeError("%s 实测位置不符：水平误差%.2fm，高度误差%.2fm" % (uav, horizontal, vertical))
-
-    def check_initial_positions(self):
-        with self.lock:
-            for uav, assignment in self.package.context.plans["prepare-all"].robot_assignments.items():
-                pose = dict(assignment.payload["target_pose"], z=5.0)
-                self.check_pose(uav, pose, initial=True)
 
     def check_targets(self, plan_id):
         with self.lock:
