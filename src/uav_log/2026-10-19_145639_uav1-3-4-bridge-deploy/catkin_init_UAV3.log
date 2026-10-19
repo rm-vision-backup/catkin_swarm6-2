@@ -1,0 +1,34 @@
+Initializing catkin workspace in `/home/nvidia/catkin_swarm6-2`.
+-----------------------------------------------------------------
+Profile:                     default
+Extending:                   None
+Workspace:                   /home/nvidia/catkin_swarm6-2
+-----------------------------------------------------------------
+Build Space:       [missing] /home/nvidia/catkin_swarm6-2/build
+Devel Space:       [missing] /home/nvidia/catkin_swarm6-2/devel
+Install Space:      [unused] /home/nvidia/catkin_swarm6-2/install
+Log Space:         [missing] /home/nvidia/catkin_swarm6-2/logs
+Source Space:       [exists] /home/nvidia/catkin_swarm6-2/src
+DESTDIR:            [unused] None
+-----------------------------------------------------------------
+Devel Space Layout:          linked
+Install Space Layout:        None
+-----------------------------------------------------------------
+Additional CMake Args:       None
+Additional Make Args:        None
+Additional catkin Make Args: None
+Internal Make Job Server:    True
+Cache Job Environments:      False
+-----------------------------------------------------------------
+Buildlisted Packages:        None
+Skiplisted Packages:         None
+-----------------------------------------------------------------
+
+
+-----------------------------------------------------------------
+WARNING: Your workspace is not extending any other result space,
+but it is set to use a `linked` devel space layout. This
+requires the `catkin` CMake package in your source space in
+order to be built.
+-----------------------------------------------------------------
+
