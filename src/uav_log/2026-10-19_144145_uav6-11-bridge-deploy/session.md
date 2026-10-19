@@ -54,9 +54,28 @@ UAV11 neighbor_intents:=/UAV6/trajectory_intent  neighbor_odom_topics:=/UAV6/swa
 
 结论：UAV6↔UAV11 三话题桥接 PASS；两机均 disarm、POSCTL。
 
+## GCS 栈启动（14:50）
+
+启动命令（后台，日志 `gcs_real.log`）：
+
+```bash
+env -u ROS_HOSTNAME ROS_IP=192.168.5.241 ROS_MASTER_URI=http://localhost:11311 \
+  roslaunch verification/six_uav_joint/gcs_real.launch
+```
+
+- Master `11311` 与 TCP `39001` 已监听。
+- 节点：`/swarm_bridge`、`/tcp_server_node`、`/gcs_a_backend_node`、
+  `/gcs_a_calibration`、`/rosout`。
+- GCS 端 `/UAV6`、`/UAV11` 三话题均存在，类型正确。
+
+| GCS 端检查 | UAV6 | UAV11 |
+|---|---|---|
+| battery | 25.597 V, 100% | 23.415 V, 51% |
+| state | connected, disarmed, POSCTL | 同左 |
+| GPS fix_type | 6 | 6 |
+
 ## 未完成 / 下一步
 
-- GCS 栈当前未运行；监视窗口只显示 `--` 属预期。
-- 监视应用需重启以加载 `sensor_msgs/BatteryState` 修正。
-- 启动 GCS 栈后才可从 GCS 查看 `/UAV6/...`、`/UAV11/...` 并进入标定流程。
+- 监视应用需（重新）启动并接入当前 Master；建议使用同一 GCS 环境覆盖。
+- 标定节点已启动，但 UAV7–10 不在线，六机标定/ready 无法完成。
 - 若后续 UAV7–10 上线，UAV6/11 需用六机完整邻机列表重启。
