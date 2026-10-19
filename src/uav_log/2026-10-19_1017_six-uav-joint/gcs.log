@@ -1,0 +1,260 @@
+[WARN] [1792377910.462885]: TCP port 39001 is inside Linux ip_local_port_range and is not reserved; add it to net.ipv4.ip_local_reserved_ports on the GCS host to prevent ROS XML-RPC port collisions
+[INFO] [1792377910.467248]: waiting for action server /group_a/execute_task
+[INFO] [1792377910.659722]: connected to action server /group_a/execute_task
+[INFO] [1792377910.660265]: waiting for service /group_a/emergency_hold
+[INFO] [1792377910.661397]: tcp_to_ros listening on 0.0.0.0:39001
+[INFO] [1792377921.943056]: accepted runtime connection from ('127.0.0.1', 43446)
+shutdown request: [/tcp_server_node] Reason: new node registered with same name
+[INFO] [1792377910.484159]: calibration set=UAV6,UAV7,UAV8,UAV9,UAV10 all_uavs=6 identity_file=/home/yjq/catkin_swarm6-2/src/tcp_to_ros/config/uav_identity_map.yaml
+shutdown request: [/gcs_a_calibration] Reason: new node registered with same name
+[WARN] [1792377911.173465]: UAV link A08/UAV8 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[WARN] [1792377911.576347]: UAV link A06/UAV6 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[WARN] [1792377911.578405]: UAV link A11/UAV11 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[WARN] [1792377911.880732]: UAV link A09/UAV9 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[WARN] [1792377912.183490]: UAV link A10/UAV10 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[WARN] [1792377914.190476]: UAV link A08/UAV8 DISCOVERED -> HEALTHY age=0.052 reason=valid MAVROS heartbeat is stable
+[WARN] [1792377914.593430]: UAV link A06/UAV6 DISCOVERED -> HEALTHY age=0.065 reason=valid MAVROS heartbeat is stable
+[WARN] [1792377914.595672]: UAV link A11/UAV11 DISCOVERED -> HEALTHY age=0.038 reason=valid MAVROS heartbeat is stable
+[WARN] [1792377914.897877]: UAV link A09/UAV9 DISCOVERED -> HEALTHY age=0.053 reason=valid MAVROS heartbeat is stable
+[WARN] [1792377915.200696]: UAV link A10/UAV10 DISCOVERED -> HEALTHY age=0.052 reason=valid MAVROS heartbeat is stable
+[INFO] [1792377910.496439]: GCS_A subscribed to /UAV1/uav_task_state
+[INFO] [1792377910.498845]: GCS_A subscribed to /UAV1/mavros/state
+[INFO] [1792377910.500591]: GCS_A subscribed to /UAV1/mavros/local_position/pose
+[INFO] [1792377910.501879]: GCS_A subscribed to /UAV2/uav_task_state
+[INFO] [1792377910.502683]: GCS_A subscribed to /UAV2/mavros/state
+[INFO] [1792377910.504169]: GCS_A subscribed to /UAV2/mavros/local_position/pose
+[INFO] [1792377910.505168]: GCS_A subscribed to /UAV3/uav_task_state
+[INFO] [1792377910.505865]: GCS_A subscribed to /UAV3/mavros/state
+[INFO] [1792377910.506559]: GCS_A subscribed to /UAV3/mavros/local_position/pose
+[INFO] [1792377910.507244]: GCS_A subscribed to /UAV4/uav_task_state
+[INFO] [1792377910.507909]: GCS_A subscribed to /UAV4/mavros/state
+[INFO] [1792377910.508580]: GCS_A subscribed to /UAV4/mavros/local_position/pose
+[INFO] [1792377910.509225]: GCS_A subscribed to /UAV5/uav_task_state
+[INFO] [1792377910.510030]: GCS_A subscribed to /UAV5/mavros/state
+[INFO] [1792377910.510704]: GCS_A subscribed to /UAV5/mavros/local_position/pose
+[INFO] [1792377910.511453]: GCS_A subscribed to /UAV6/uav_task_state
+[INFO] [1792377910.512118]: GCS_A subscribed to /UAV6/mavros/state
+[INFO] [1792377910.512774]: GCS_A subscribed to /UAV6/mavros/local_position/pose
+[INFO] [1792377910.513426]: GCS_A subscribed to /UAV7/uav_task_state
+[INFO] [1792377910.514069]: GCS_A subscribed to /UAV7/mavros/state
+[INFO] [1792377910.514705]: GCS_A subscribed to /UAV7/mavros/local_position/pose
+[INFO] [1792377910.515330]: GCS_A subscribed to /UAV8/uav_task_state
+[INFO] [1792377910.515953]: GCS_A subscribed to /UAV8/mavros/state
+[INFO] [1792377910.516579]: GCS_A subscribed to /UAV8/mavros/local_position/pose
+[INFO] [1792377910.517211]: GCS_A subscribed to /UAV9/uav_task_state
+[INFO] [1792377910.517840]: GCS_A subscribed to /UAV9/mavros/state
+[INFO] [1792377910.518467]: GCS_A subscribed to /UAV9/mavros/local_position/pose
+[INFO] [1792377910.519146]: GCS_A subscribed to /UAV10/uav_task_state
+[INFO] [1792377910.519842]: GCS_A subscribed to /UAV10/mavros/state
+[INFO] [1792377910.520872]: GCS_A subscribed to /UAV10/mavros/local_position/pose
+[INFO] [1792377910.521954]: GCS_A subscribed to /UAV11/uav_task_state
+[INFO] [1792377910.523013]: GCS_A subscribed to /UAV11/mavros/state
+[INFO] [1792377910.524025]: GCS_A subscribed to /UAV11/mavros/local_position/pose
+[INFO] [1792377910.525039]: GCS_A subscribed to /UAV12/uav_task_state
+[INFO] [1792377910.526044]: GCS_A subscribed to /UAV12/mavros/state
+[INFO] [1792377910.527024]: GCS_A subscribed to /UAV12/mavros/local_position/pose
+[INFO] [1792377910.527685]: GCS_A subscribed to /UAV13/uav_task_state
+[INFO] [1792377910.528319]: GCS_A subscribed to /UAV13/mavros/state
+[INFO] [1792377910.529002]: GCS_A subscribed to /UAV13/mavros/local_position/pose
+[INFO] [1792377910.529685]: GCS_A subscribed to /UAV14/uav_task_state
+[INFO] [1792377910.530403]: GCS_A subscribed to /UAV14/mavros/state
+[INFO] [1792377910.531087]: GCS_A subscribed to /UAV14/mavros/local_position/pose
+[INFO] [1792377910.531840]: GCS_A subscribed to /UAV15/uav_task_state
+[INFO] [1792377910.532490]: GCS_A subscribed to /UAV15/mavros/state
+[INFO] [1792377910.533123]: GCS_A subscribed to /UAV15/mavros/local_position/pose
+[INFO] [1792377910.533745]: GCS_A subscribed to /UAV16/uav_task_state
+[INFO] [1792377910.534452]: GCS_A subscribed to /UAV16/mavros/state
+[INFO] [1792377910.536247]: GCS_A subscribed to /UAV16/mavros/local_position/pose
+[INFO] [1792377910.580524]: GCS_A backend ready: action=/group_a/execute_task service=/group_a/emergency_hold uavs=16
+shutdown request: [/gcs_a_backend_node] Reason: new node registered with same name
+[INFO] [1792377910.489829]: bridge: my_name=GCS_A, port_offset=0, packing=bundle, transport=tcp, topics=11, health=/home/yjq/catkin_swarm6-2/.ros_home/log/health/GCS_A_bridge_health.jsonl
+[INFO] [1792377910.490893]: bridge: recv sources=UAV1,UAV2,UAV3,UAV4,UAV5,UAV6,UAV7,UAV8,UAV9,UAV10,UAV11,UAV12,UAV13,UAV14,UAV15,UAV16
+[INFO] [1792377910.729077]: bridge: proxying /UAV1/uav_task -> UAV1
+[INFO] [1792377910.729931]: bridge: dealer connected to UAV1 service router 192.168.5.11:14000
+[INFO] [1792377910.731164]: bridge: proxying /UAV1/uav_task_control -> UAV1
+[INFO] [1792377910.732255]: bridge: proxying /UAV1/uav_hold -> UAV1
+[INFO] [1792377910.733163]: bridge: proxying /UAV2/uav_task -> UAV2
+[INFO] [1792377910.735750]: bridge: dealer connected to UAV2 service router 192.168.5.21:14000
+[INFO] [1792377910.736345]: bridge: proxying /UAV2/uav_task_control -> UAV2
+[INFO] [1792377910.737116]: bridge: proxying /UAV2/uav_hold -> UAV2
+[INFO] [1792377910.738328]: bridge: proxying /UAV3/uav_task -> UAV3
+[INFO] [1792377910.738932]: bridge: dealer connected to UAV3 service router 192.168.5.31:14000
+[INFO] [1792377910.740327]: bridge: proxying /UAV3/uav_task_control -> UAV3
+[INFO] [1792377910.741410]: bridge: proxying /UAV3/uav_hold -> UAV3
+[INFO] [1792377910.742349]: bridge: proxying /UAV4/uav_task -> UAV4
+[INFO] [1792377910.742997]: bridge: dealer connected to UAV4 service router 192.168.5.41:14000
+[INFO] [1792377910.744321]: bridge: proxying /UAV4/uav_task_control -> UAV4
+[INFO] [1792377910.744916]: bridge: proxying /UAV4/uav_hold -> UAV4
+[INFO] [1792377910.745511]: bridge: proxying /UAV5/uav_task -> UAV5
+[INFO] [1792377910.746027]: bridge: dealer connected to UAV5 service router 192.168.5.51:14000
+[INFO] [1792377910.746637]: bridge: proxying /UAV5/uav_task_control -> UAV5
+[INFO] [1792377910.747217]: bridge: proxying /UAV5/uav_hold -> UAV5
+[INFO] [1792377910.747773]: bridge: proxying /UAV6/uav_task -> UAV6
+[INFO] [1792377910.748411]: bridge: dealer connected to UAV6 service router 192.168.5.61:14000
+[INFO] [1792377910.749390]: bridge: proxying /UAV6/uav_task_control -> UAV6
+[INFO] [1792377910.750828]: bridge: proxying /UAV6/uav_hold -> UAV6
+[INFO] [1792377910.751998]: bridge: proxying /UAV7/uav_task -> UAV7
+[INFO] [1792377910.752520]: bridge: dealer connected to UAV7 service router 192.168.5.71:14000
+[INFO] [1792377910.754232]: bridge: proxying /UAV7/uav_task_control -> UAV7
+[INFO] [1792377910.756186]: bridge: proxying /UAV7/uav_hold -> UAV7
+[INFO] [1792377910.756953]: bridge: proxying /UAV8/uav_task -> UAV8
+[INFO] [1792377910.757992]: bridge: dealer connected to UAV8 service router 192.168.5.81:14000
+[INFO] [1792377910.758867]: bridge: proxying /UAV8/uav_task_control -> UAV8
+[INFO] [1792377910.759665]: bridge: proxying /UAV8/uav_hold -> UAV8
+[INFO] [1792377910.760256]: bridge: proxying /UAV9/uav_task -> UAV9
+[INFO] [1792377910.760716]: bridge: dealer connected to UAV9 service router 192.168.5.91:14000
+[INFO] [1792377910.761303]: bridge: proxying /UAV9/uav_task_control -> UAV9
+[INFO] [1792377910.761859]: bridge: proxying /UAV9/uav_hold -> UAV9
+[INFO] [1792377910.762434]: bridge: proxying /UAV10/uav_task -> UAV10
+[INFO] [1792377910.762897]: bridge: dealer connected to UAV10 service router 192.168.5.101:14000
+[INFO] [1792377910.763493]: bridge: proxying /UAV10/uav_task_control -> UAV10
+[INFO] [1792377910.764070]: bridge: proxying /UAV10/uav_hold -> UAV10
+[INFO] [1792377910.764623]: bridge: proxying /UAV11/uav_task -> UAV11
+[INFO] [1792377910.765060]: bridge: dealer connected to UAV11 service router 192.168.5.111:14000
+[INFO] [1792377910.765644]: bridge: proxying /UAV11/uav_task_control -> UAV11
+[INFO] [1792377910.766194]: bridge: proxying /UAV11/uav_hold -> UAV11
+[INFO] [1792377910.766765]: bridge: proxying /UAV12/uav_task -> UAV12
+[INFO] [1792377910.767216]: bridge: dealer connected to UAV12 service router 192.168.5.121:14000
+[INFO] [1792377910.767813]: bridge: proxying /UAV12/uav_task_control -> UAV12
+[INFO] [1792377910.768395]: bridge: proxying /UAV12/uav_hold -> UAV12
+[INFO] [1792377910.768969]: bridge: proxying /UAV13/uav_task -> UAV13
+[INFO] [1792377910.769499]: bridge: dealer connected to UAV13 service router 192.168.5.131:14000
+[INFO] [1792377910.770089]: bridge: proxying /UAV13/uav_task_control -> UAV13
+[INFO] [1792377910.770789]: bridge: proxying /UAV13/uav_hold -> UAV13
+[INFO] [1792377910.771361]: bridge: proxying /UAV14/uav_task -> UAV14
+[INFO] [1792377910.771885]: bridge: dealer connected to UAV14 service router 192.168.5.141:14000
+[INFO] [1792377910.772491]: bridge: proxying /UAV14/uav_task_control -> UAV14
+[INFO] [1792377910.773054]: bridge: proxying /UAV14/uav_hold -> UAV14
+[INFO] [1792377910.773603]: bridge: proxying /UAV15/uav_task -> UAV15
+[INFO] [1792377910.774105]: bridge: dealer connected to UAV15 service router 192.168.5.151:14000
+[INFO] [1792377910.774713]: bridge: proxying /UAV15/uav_task_control -> UAV15
+[INFO] [1792377910.775324]: bridge: proxying /UAV15/uav_hold -> UAV15
+[INFO] [1792377910.775886]: bridge: proxying /UAV16/uav_task -> UAV16
+[INFO] [1792377910.776402]: bridge: dealer connected to UAV16 service router 192.168.5.161:14000
+[INFO] [1792377910.777003]: bridge: proxying /UAV16/uav_task_control -> UAV16
+[INFO] [1792377910.777576]: bridge: proxying /UAV16/uav_hold -> UAV16
+[INFO] [1792377910.778062]: bridge: link options HEARTBEAT_IVL,HEARTBEAT_TIMEOUT,TCP_KEEPALIVE,TCP_KEEPALIVE_IDLE,TCP_KEEPALIVE_INTVL,TCP_KEEPALIVE_CNT,RECONNECT_IVL,RECONNECT_IVL_MAX
+shutdown request: [/swarm_bridge] Reason: new node registered with same name
+[31m================================================================================REQUIRED process [gcs_a_calibration-4] has died!
+process has finished cleanly
+log file: /home/yjq/.ros/log/19a39172-cb67-11f1-a0dc-1faf5d83fe45/gcs_a_calibration-4*.log
+Initiating shutdown!
+================================================================================[0m
+... logging to /home/yjq/.ros/log/19a39172-cb67-11f1-a0dc-1faf5d83fe45/roslaunch-yjq-21501.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;verification/six_uav_joint/gcs_real.launch
+[1mstarted roslaunch server http://192.168.5.241:39257/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /gcs_a_backend_node/action_name: /group_a/execute_...
+ * /gcs_a_backend_node/confirm_deadline_s: 4.0
+ * /gcs_a_backend_node/confirm_retries: 2
+ * /gcs_a_backend_node/confirm_retry_interval_s: 0.2
+ * /gcs_a_backend_node/confirm_wait_s: 1.0
+ * /gcs_a_backend_node/emergency_hold_service: /group_a/emergenc...
+ * /gcs_a_backend_node/fault_exit_schedule_enabled: True
+ * /gcs_a_backend_node/formation_offsets_file: /home/yjq/catkin_...
+ * /gcs_a_backend_node/hold_batch_size: 4
+ * /gcs_a_backend_node/hold_retry_count: 2
+ * /gcs_a_backend_node/hold_retry_interval_s: 0.5
+ * /gcs_a_backend_node/horizontal_speed_mps: 0.7
+ * /gcs_a_backend_node/link_health_pre_task_wait_s: 10.0
+ * /gcs_a_backend_node/link_health_topic: /group_a/uav_link...
+ * /gcs_a_backend_node/link_healthy_window_s: 3.0
+ * /gcs_a_backend_node/link_lost_after_s: 15.0
+ * /gcs_a_backend_node/link_suspect_after_s: 10.0
+ * /gcs_a_backend_node/map_file: /home/yjq/catkin_...
+ * /gcs_a_backend_node/move_to_schedule_enabled: True
+ * /gcs_a_backend_node/require_calibration_ready: True
+ * /gcs_a_backend_node/schedule_geometric_distance_m: 1.3
+ * /gcs_a_backend_node/schedule_max_compute_time_s: 5.0
+ * /gcs_a_backend_node/schedule_max_interval_combinations: 2000
+ * /gcs_a_backend_node/schedule_max_start_delay_s: 30.0
+ * /gcs_a_backend_node/schedule_pose_timeout_s: 2.0
+ * /gcs_a_backend_node/schedule_safety_margin_m: 1.0
+ * /gcs_a_backend_node/schedule_time_epsilon_s: 1e-6
+ * /gcs_a_backend_node/start_dispatch_jitter_margin_s: 0.5
+ * /gcs_a_backend_node/start_service_budget_s: 1.5
+ * /gcs_a_calibration/all_uavs: ['UAV6', 'UAV7', ...
+ * /gcs_a_calibration/calibration_uavs: ['UAV6', 'UAV7', ...
+ * /gcs_a_calibration/identity_file: /home/yjq/catkin_...
+ * /gcs_a_calibration/sample_window_s: 8.0
+ * /rosdistro: noetic
+ * /rosversion: 1.17.4
+ * /swarm_bridge/base_port: 4200
+ * /swarm_bridge/bundle_max_bytes: 1400
+ * /swarm_bridge/bundle_port: 4200
+ * /swarm_bridge/bundle_queue_max: 100
+ * /swarm_bridge/bundle_tick_hz: 10.0
+ * /swarm_bridge/bundle_transport: tcp
+ * /swarm_bridge/health_log_dir: /home/yjq/catkin_...
+ * /swarm_bridge/health_matrix_period_s: 60.0
+ * /swarm_bridge/health_sample_hz: 0.5
+ * /swarm_bridge/max_freq: 0
+ * /swarm_bridge/packing: bundle
+ * /swarm_bridge/service_base_port: 14000
+ * /swarm_bridge/services: [{'name': '/UAV1/...
+ * /swarm_bridge/stall_warn_s: 1.5
+ * /swarm_bridge/topics: [{'name': 'uav_ta...
+ * /swarm_bridge/topology/GCS_A: ['UAV1', 'UAV2', ...
+ * /swarm_bridge/topology/UAV10: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV11: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV12: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV13: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV14: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV15: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV16: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV1: ['GCS_A', 'UAV2',...
+ * /swarm_bridge/topology/UAV2: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV3: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV4: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV5: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV6: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV7: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV8: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV9: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/uav_name: GCS_A
+ * /swarm_bridge/uavs: [{'name': 'GCS_A'...
+ * /swarm_bridge/zmq_dealer_sndtimeo_ms: 500
+ * /swarm_bridge/zmq_heartbeat_ivl_ms: 1000
+ * /swarm_bridge/zmq_heartbeat_timeout_ms: 10000
+ * /swarm_bridge/zmq_reconnect_ivl_max_ms: 1000
+ * /swarm_bridge/zmq_reconnect_ivl_ms: 200
+ * /tcp_server_node/action_name: /group_a/execute_...
+ * /tcp_server_node/emergency_hold_service: /group_a/emergenc...
+ * /tcp_server_node/host: 0.0.0.0
+ * /tcp_server_node/port: 39001
+ * /tcp_server_node/state_topic: /group_a/group_ta...
+
+NODES
+  /
+    gcs_a_backend_node (tcp_to_ros/gcs_a_backend_node.py)
+    gcs_a_calibration (tcp_to_ros/gcs_a_calibration_node.py)
+    swarm_bridge (swarm_topology_bridge/bridge_node.py)
+    tcp_server_node (tcp_to_ros/tcp_server_node.py)
+
+auto-starting new master
+[1mprocess[master]: started with pid [21576][0m
+[1mROS_MASTER_URI=http://localhost:11311[0m
+]2;verification/six_uav_joint/gcs_real.launch http://localhost:11311
+[1msetting /run_id to 19a39172-cb67-11f1-a0dc-1faf5d83fe45[0m
+[1mprocess[rosout-1]: started with pid [21617][0m
+started core service [/rosout]
+[1mprocess[swarm_bridge-2]: started with pid [21625][0m
+[1mprocess[gcs_a_backend_node-3]: started with pid [21626][0m
+[1mprocess[gcs_a_calibration-4]: started with pid [21627][0m
+[1mprocess[tcp_server_node-5]: started with pid [21628][0m
+[tcp_server_node-5] killing on exit
+[gcs_a_calibration-4] killing on exit
+[gcs_a_backend_node-3] killing on exit
+[swarm_bridge-2] killing on exit
+[rosout-1] killing on exit
+[master] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+[1mdone[0m

@@ -1,0 +1,36 @@
+== Stage 1：空中链路观测（20s 窗；飞机应在 5 m 悬停）==
+-- 窗内快查（起点基线）--
+ssh: connect to host 192.168.5.101 port 22: No route to host
+ssh: connect to host 192.168.5.61 port 22: No route to host
+ssh: connect to host 192.168.5.81 port 22: No route to host
+ssh: connect to host 192.168.5.71 port 22: No route to host
+ssh: connect to host 192.168.5.111 port 22: No route to host
+ssh: connect to host 192.168.5.91 port 22: No route to host
+-- 观测中 20s（10:32:20 起）--
+-- 窗后判定（起点 10:32:20）--
+[UAV6] 窗口 20s
+  [UAV6] 本机发出: rx +603（30.1/s）tx +201（10.0/s）gt1000 +0 stalls +0 累计gap_max 109ms ✓
+  [UAV6] 收到邻机: rx +823（41.1/s）gt1000 +11 stalls +0 累计gap_max 2700ms ✗
+  [UAV6] 窗口内无 stall/link 事件 ✓
+[UAV7] 窗口 24s
+  [UAV7] 本机发出: rx +722（30.0/s）tx +240（10.0/s）gt1000 +0 stalls +0 累计gap_max 42ms ✓
+  [UAV7] 收到邻机: rx +989（41.1/s）gt1000 +12 stalls +0 累计gap_max 3500ms ✗
+  [UAV7] 窗口内无 stall/link 事件 ✓
+[UAV8] 窗口 28s
+  [UAV8] 本机发出: rx +842（30.0/s）tx +280（10.0/s）gt1000 +0 stalls +0 累计gap_max 41ms ✓
+  [UAV8] 收到邻机: rx +1148（40.9/s）gt1000 +16 stalls +0 累计gap_max 3801ms ✗
+  [UAV8] 窗口内无 stall/link 事件 ✓
+[UAV9] 窗口 32s
+  [UAV9] 本机发出: rx +962（30.0/s）tx +321（10.0/s）gt1000 +0 stalls +0 累计gap_max 50ms ✓
+  [UAV9] 收到邻机: rx +1315（41.0/s）gt1000 +15 stalls +0 累计gap_max 4400ms ✗
+  [UAV9] 窗口内无 stall/link 事件 ✓
+[UAV10] 窗口 40s
+  [UAV10] 本机发出: rx +1204（30.0/s）tx +401（10.0/s）gt1000 +0 stalls +0 累计gap_max 42ms ✓
+  [UAV10] 收到邻机: rx +1644（41.0/s）gt1000 +23 stalls +0 累计gap_max 3502ms ✗
+  [UAV10] 窗口内无 stall/link 事件 ✓
+[UAV11] 窗口 40s
+  [UAV11] 本机发出: rx +40（1.0/s）tx +40（1.0/s）gt1000 +17 stalls +0 累计gap_max 1008ms ✗
+  [UAV11] 收到邻机: rx +2003（50.0/s）gt1000 +0 stalls +0 累计gap_max 4601ms ✓
+  [UAV11] 窗口内无 stall/link 事件 ✓
+  证据：各机 <ws>/.ros_home/log/health/UAVn_bridge_health.jsonl（出现 ✗ 的时刻记下来）
+== Stage 1 不通过：按上面 ✗ 项定层（发送/桥/链路/接收）==

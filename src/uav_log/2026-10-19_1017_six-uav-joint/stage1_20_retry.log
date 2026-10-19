@@ -1,0 +1,18 @@
+== Stage 1：空中链路观测（20s 窗；飞机应在 5 m 悬停）==
+-- 窗内快查（起点基线）--
+ssh: connect to host 192.168.5.91 port 22: Connection timed out
+ssh: connect to host 192.168.5.101 port 22: Connection timed out
+ssh: connect to host 192.168.5.81 port 22: Connection timed out
+ssh: connect to host 192.168.5.71 port 22: Connection timed out
+ssh: connect to host 192.168.5.61 port 22: Connection timed out
+ssh: connect to host 192.168.5.111 port 22: Connection timed out
+-- 观测中 20s（10:30:18 起）--
+-- 窗后判定（起点 10:30:18）--
+ssh: connect to host 192.168.5.61 port 22: No route to host
+ssh: connect to host 192.168.5.71 port 22: Connection timed out
+ssh: connect to host 192.168.5.81 port 22: Connection timed out
+ssh: connect to host 192.168.5.91 port 22: No route to host
+ssh: connect to host 192.168.5.101 port 22: Connection timed out
+ssh: connect to host 192.168.5.111 port 22: Connection timed out
+  证据：各机 <ws>/.ros_home/log/health/UAVn_bridge_health.jsonl（出现 ✗ 的时刻记下来）
+== Stage 1 不通过：按上面 ✗ 项定层（发送/桥/链路/接收）==

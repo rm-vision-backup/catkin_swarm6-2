@@ -1,0 +1,24 @@
+=== bash src/tcp_to_ros/tools/onboard_ctl.sh start 6 -- neighbor_intents:=/UAV7/trajectory_intent,/UAV8/trajectory_intent,/UAV9/trajectory_intent,/UAV10/trajectory_intent,/UAV11/trajectory_intent neighbor_odom_topics:=/UAV7/swarm_pose,/UAV8/swarm_pose,/UAV9/swarm_pose,/UAV10/swarm_pose,/UAV11/swarm_pose uav_task_timeout_s:=180
+TARGET   IP              PROCS  STARTED  TRANSCRIPT           RESULT
+--------------------------------------------------------------------------------------
+UAV6     192.168.5.61    1      1        2026-10-19 10:23:16  PASS
+=== bash src/tcp_to_ros/tools/onboard_ctl.sh start 7 -- neighbor_intents:=/UAV6/trajectory_intent,/UAV8/trajectory_intent,/UAV9/trajectory_intent,/UAV10/trajectory_intent,/UAV11/trajectory_intent neighbor_odom_topics:=/UAV6/swarm_pose,/UAV8/swarm_pose,/UAV9/swarm_pose,/UAV10/swarm_pose,/UAV11/swarm_pose uav_task_timeout_s:=180
+TARGET   IP              PROCS  STARTED  TRANSCRIPT           RESULT
+--------------------------------------------------------------------------------------
+UAV7     192.168.5.71    1      1        2026-10-19 10:23:20  PASS
+=== bash src/tcp_to_ros/tools/onboard_ctl.sh start 8 -- neighbor_intents:=/UAV6/trajectory_intent,/UAV7/trajectory_intent,/UAV9/trajectory_intent,/UAV10/trajectory_intent,/UAV11/trajectory_intent neighbor_odom_topics:=/UAV6/swarm_pose,/UAV7/swarm_pose,/UAV9/swarm_pose,/UAV10/swarm_pose,/UAV11/swarm_pose uav_task_timeout_s:=180
+TARGET   IP              PROCS  STARTED  TRANSCRIPT           RESULT
+--------------------------------------------------------------------------------------
+UAV8     192.168.5.81    1      1        2026-10-19 10:23:25  PASS
+=== bash src/tcp_to_ros/tools/onboard_ctl.sh start 9 -- neighbor_intents:=/UAV6/trajectory_intent,/UAV7/trajectory_intent,/UAV8/trajectory_intent,/UAV10/trajectory_intent,/UAV11/trajectory_intent neighbor_odom_topics:=/UAV6/swarm_pose,/UAV7/swarm_pose,/UAV8/swarm_pose,/UAV10/swarm_pose,/UAV11/swarm_pose uav_task_timeout_s:=180
+TARGET   IP              PROCS  STARTED  TRANSCRIPT           RESULT
+--------------------------------------------------------------------------------------
+UAV9     192.168.5.91    1      1        2026-10-19 10:23:28  PASS
+=== bash src/tcp_to_ros/tools/onboard_ctl.sh start 10 -- neighbor_intents:=/UAV6/trajectory_intent,/UAV7/trajectory_intent,/UAV8/trajectory_intent,/UAV9/trajectory_intent,/UAV11/trajectory_intent neighbor_odom_topics:=/UAV6/swarm_pose,/UAV7/swarm_pose,/UAV8/swarm_pose,/UAV9/swarm_pose,/UAV11/swarm_pose uav_task_timeout_s:=180
+TARGET   IP              PROCS  STARTED  TRANSCRIPT           RESULT
+--------------------------------------------------------------------------------------
+UAV10    192.168.5.101   1      1        2026-10-19 10:23:34  PASS
+=== bash src/tcp_to_ros/tools/onboard_ctl.sh start 11 -- neighbor_intents:=/UAV6/trajectory_intent,/UAV7/trajectory_intent,/UAV8/trajectory_intent,/UAV9/trajectory_intent,/UAV10/trajectory_intent neighbor_odom_topics:=/UAV6/swarm_pose,/UAV7/swarm_pose,/UAV8/swarm_pose,/UAV9/swarm_pose,/UAV10/swarm_pose uav_task_timeout_s:=180
+TARGET   IP              PROCS  STARTED  TRANSCRIPT           RESULT
+--------------------------------------------------------------------------------------
+UAV11    192.168.5.111   1      1        2026-10-19 10:23:38  PASS

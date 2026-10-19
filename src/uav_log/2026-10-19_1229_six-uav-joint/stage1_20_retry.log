@@ -1,0 +1,66 @@
+== Stage 1：空中链路观测（20s 窗；飞机应在 5 m 悬停）==
+-- 窗内快查（起点基线）--
+  [UAV11] 健康文件 0.0s 前更新
+     本机发出 swarm_pose: rx=3315 tx=1103 drop=2210 age=10ms gt1000=0 stalls=0
+     收到邻机 swarm_pose: rx=5501 srcs=5 age_max=51ms gt1000=4 stalls=2
+     近期事件: stall_end  UAV10
+     近期事件: stall_end  UAV10
+     近期事件: matrix  
+  [UAV6] 健康文件 0.0s 前更新
+     本机发出 swarm_pose: rx=3321 tx=1103 drop=2216 age=31ms gt1000=0 stalls=0
+     收到邻机 swarm_pose: rx=5507 srcs=5 age_max=44ms gt1000=0 stalls=0
+     近期事件: matrix  
+     近期事件: health_start  
+     近期事件: matrix  
+  [UAV9] 健康文件 0.4s 前更新
+     本机发出 swarm_pose: rx=3315 tx=1103 drop=2209 age=1ms gt1000=0 stalls=0
+     收到邻机 swarm_pose: rx=5500 srcs=5 age_max=97ms gt1000=0 stalls=0
+     近期事件: link connected UAV6
+     近期事件: link handshake_succeeded UAV6
+     近期事件: matrix  
+  [UAV7] 健康文件 0.4s 前更新
+     本机发出 swarm_pose: rx=3314 tx=1103 drop=2209 age=21ms gt1000=0 stalls=0
+     收到邻机 swarm_pose: rx=5503 srcs=5 age_max=89ms gt1000=0 stalls=0
+     近期事件: link handshake_succeeded UAV8
+     近期事件: link handshake_succeeded UAV11
+     近期事件: matrix  
+  [UAV10] 健康文件 0.5s 前更新
+     本机发出 swarm_pose: rx=3376 tx=1123 drop=2251 age=25ms gt1000=0 stalls=0
+     收到邻机 swarm_pose: rx=5599 srcs=5 age_max=48ms gt1000=7 stalls=1
+     近期事件: stall_end  UAV11
+     近期事件: stall_end  UAV11
+     近期事件: matrix  
+  [UAV8] 健康文件 0.7s 前更新
+     本机发出 swarm_pose: rx=3377 tx=1124 drop=2253 age=7ms gt1000=0 stalls=0
+     收到邻机 swarm_pose: rx=5608 srcs=5 age_max=67ms gt1000=0 stalls=0
+     近期事件: matrix  
+     近期事件: health_start  
+     近期事件: matrix  
+-- 观测中 20s（12:32:15 起）--
+-- 窗后判定（起点 12:32:15）--
+[UAV6] 窗口 20s
+  [UAV6] 本机发出: rx +603（30.1/s）tx +201（10.0/s）gt1000 +0 stalls +0 累计gap_max 48ms ✓
+  [UAV6] 收到邻机: rx +1000（49.9/s）gt1000 +0 stalls +0 累计gap_max 102ms ✓
+  [UAV6] 窗口内无 stall/link 事件 ✓
+[UAV7] 窗口 22s
+  [UAV7] 本机发出: rx +662（30.0/s）tx +221（10.0/s）gt1000 +0 stalls +0 累计gap_max 47ms ✓
+  [UAV7] 收到邻机: rx +1105（50.1/s）gt1000 +0 stalls +0 累计gap_max 102ms ✓
+  [UAV7] 窗口内无 stall/link 事件 ✓
+[UAV8] 窗口 28s
+  [UAV8] 本机发出: rx +843（30.1/s）tx +280（10.0/s）gt1000 +0 stalls +0 累计gap_max 47ms ✓
+  [UAV8] 收到邻机: rx +1404（50.1/s）gt1000 +0 stalls +0 累计gap_max 102ms ✓
+  [UAV8] 窗口内无 stall/link 事件 ✓
+[UAV9] 窗口 30s
+  [UAV9] 本机发出: rx +902（30.0/s）tx +301（10.0/s）gt1000 +0 stalls +0 累计gap_max 49ms ✓
+  [UAV9] 收到邻机: rx +1502（50.0/s）gt1000 +0 stalls +0 累计gap_max 102ms ✓
+  [UAV9] 窗口内无 stall/link 事件 ✓
+[UAV10] 窗口 38s
+  [UAV10] 本机发出: rx +1143（30.0/s）tx +381（10.0/s）gt1000 +0 stalls +0 累计gap_max 50ms ✓
+  [UAV10] 收到邻机: rx +1903（50.0/s）gt1000 +1 stalls +0 累计gap_max 3202ms ✗
+  [UAV10] 窗口内无 stall/link 事件 ✓
+[UAV11] 窗口 40s
+  [UAV11] 本机发出: rx +1204（30.0/s）tx +401（10.0/s）gt1000 +0 stalls +0 累计gap_max 45ms ✓
+  [UAV11] 收到邻机: rx +2005（50.0/s）gt1000 +1 stalls +0 累计gap_max 3000ms ✗
+  [UAV11] 窗口内无 stall/link 事件 ✓
+  证据：各机 <ws>/.ros_home/log/health/UAVn_bridge_health.jsonl（出现 ✗ 的时刻记下来）
+== Stage 1 不通过：按上面 ✗ 项定层（发送/桥/链路/接收）==

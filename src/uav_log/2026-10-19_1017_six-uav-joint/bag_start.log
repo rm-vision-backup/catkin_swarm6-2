@@ -1,0 +1,8 @@
+== 同录 rosbag（1200s，-u 6,7,8,9,10,11，6 台）==
+  UAV6: 已启动（>~/rosbag_record.log）
+  UAV7: 已启动（>~/rosbag_record.log）
+  UAV8: 已启动（>~/rosbag_record.log）
+  UAV9: 已启动（>~/rosbag_record.log）
+  UAV10: 已启动（>~/rosbag_record.log）
+  UAV11: 已启动（>~/rosbag_record.log）
+  录完/停止后：Ctrl-C 由 -d 自动收；取包 scp 见 README §九（log_fetch.sh 不采 bag）

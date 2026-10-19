@@ -1,0 +1,39 @@
+== Stage 1：空中链路观测（20s 窗；飞机应在 5 m 悬停）==
+-- 窗内快查（起点基线）--
+  [UAV11] 健康文件 0.4s 前更新
+     本机发出 swarm_pose: rx=13965 tx=4649 drop=9313 age=3ms gt1000=0 stalls=0
+     收到邻机 swarm_pose: rx=23231 srcs=5 age_max=69ms gt1000=9 stalls=2
+     近期事件: link connected GCS_A
+     近期事件: link handshake_succeeded GCS_A
+     近期事件: matrix  
+  [UAV6] 健康文件 0.4s 前更新
+     本机发出 swarm_pose: rx=13993 tx=4649 drop=9342 age=24ms gt1000=0 stalls=0
+     收到邻机 swarm_pose: rx=23237 srcs=5 age_max=55ms gt1000=0 stalls=0
+     近期事件: link connected GCS_A
+     近期事件: link handshake_succeeded GCS_A
+     近期事件: matrix  
+  [UAV7] 健康文件 0.9s 前更新
+     本机发出 swarm_pose: rx=13962 tx=4649 drop=9311 age=30ms gt1000=0 stalls=0
+     收到邻机 swarm_pose: rx=23233 srcs=5 age_max=98ms gt1000=0 stalls=0
+     近期事件: link connected GCS_A
+     近期事件: link handshake_succeeded GCS_A
+     近期事件: matrix  
+  [UAV9] 健康文件 0.9s 前更新
+     本机发出 swarm_pose: rx=13963 tx=4650 drop=9312 age=20ms gt1000=0 stalls=0
+     收到邻机 swarm_pose: rx=23233 srcs=5 age_max=59ms gt1000=0 stalls=0
+     近期事件: link connected GCS_A
+     近期事件: link handshake_succeeded GCS_A
+     近期事件: matrix  
+  [UAV10] 健康文件 0.8s 前更新
+     本机发出 swarm_pose: rx=14030 tx=4669 drop=9359 age=25ms gt1000=0 stalls=0
+     收到邻机 swarm_pose: rx=23334 srcs=5 age_max=60ms gt1000=14 stalls=2
+     近期事件: link handshake_succeeded GCS_A
+     近期事件: matrix  
+     近期事件: matrix  
+  [UAV8] 健康文件 1.0s 前更新
+     本机发出 swarm_pose: rx=14034 tx=4671 drop=9363 age=21ms gt1000=0 stalls=0
+     收到邻机 swarm_pose: rx=23343 srcs=5 age_max=79ms gt1000=0 stalls=0
+     近期事件: link connected GCS_A
+     近期事件: link handshake_succeeded GCS_A
+     近期事件: matrix  
+-- 观测中 20s（12:38:10 起）--
