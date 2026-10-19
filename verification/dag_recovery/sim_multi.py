@@ -173,6 +173,31 @@ class SimCase:
         return tuple(tuple(uav for uav in self.survivors if uav in group)
                      for group in groups)
 
+    def validate_recovery_step(self, starts, targets, fault_positions):
+        """全体幸存机同轮运动的几何门禁；中间点允许尚未连通。
+
+        同步直线检查只是候选路径筛选，实际 EGO 曲线仍由全程 watchdog 监控。
+        不调用 movement_batches：靠拢后分量可以合并，不再是执行批次。
+        """
+        if (set(starts) != set(self.survivors) or set(targets) != set(self.survivors)
+                or set(fault_positions) != set(self.fault_ids)):
+            raise ValueError("recovery step must include every survivor and all fault positions")
+        starts = {uav: _pair(point) for uav, point in starts.items()}
+        targets = {uav: _pair(point) for uav, point in targets.items()}
+        faults = [_pair(point) for point in fault_positions.values()]
+        for uav in self.survivors:
+            if not self.within_bounds(starts[uav]) or not self.within_bounds(targets[uav]):
+                raise ValueError("recovery step outside SITL inner bounds: " + uav)
+            for fault in faults:
+                if math.hypot(segment_distance(starts[uav], targets[uav], fault, fault),
+                              self.normal_height - self.fault_height) < self.min_separation:
+                    raise ValueError("recovery step too close to failed aircraft")
+        for index, first in enumerate(self.survivors):
+            for second in self.survivors[index + 1:]:
+                if synchronous_distance(starts[first], targets[first], starts[second],
+                                        targets[second]) < self.min_separation:
+                    raise ValueError("simultaneous recovery trajectories violate separation")
+
     def assembly_input(self, positions):
         """编队阶段输入：fault_ids 为空，目标 = 全体十机同时机动连成一张图。"""
         payload = self.solver_input(positions)
@@ -254,6 +279,9 @@ def plan(scenario, initial, recorder, python, health=lambda: None, fixture=None,
     scenario.validate_targets({uav: initial[uav] for uav in scenario.survivors}, targets,
                               {uav: initial[uav] for uav in scenario.fault_ids},
                               batches=batches)
+    scenario.validate_recovery_step(
+        {uav: initial[uav] for uav in scenario.survivors}, targets,
+        {uav: initial[uav] for uav in scenario.fault_ids})
     recorder.event("plan_validated", targets=targets)
     return targets
 
@@ -274,14 +302,72 @@ def plan_assembly(scenario, initial, recorder, python, health=lambda: None, chec
     return targets
 
 
+def recover_together(scenario, fleet, targets, recorder, step_m=2.0, max_rounds=30):
+    """一次 DAGL 终点求解，全体幸存机按最新实测位置分多轮短程靠近。
+
+    使用共同插值比例以保持候选路径的同步几何关系；每轮只发一个全员任务，
+    等完成并稳定后再读位置。没有运动中抢占，也不重新调用 DAGL。
+    """
+    if not math.isfinite(step_m) or step_m <= 1.0 or max_rounds < 1:
+        raise ValueError("recovery step must exceed 1 m arrival tolerance; positive round limit required")
+    if set(targets) != set(scenario.survivors):
+        raise ValueError("recovery targets must include every survivor")
+    targets = {uav: _pair(point) for uav, point in targets.items()}
+    stalled = 0
+    final_goal_sent = False
+    for round_index in range(max_rounds + 1):
+        fleet.assert_healthy()
+        snapshot = fleet.snapshot()
+        starts = {uav: snapshot["poses_task"][uav][:2] for uav in scenario.survivors}
+        remaining = max(distance(starts[uav], targets[uav]) for uav in scenario.survivors)
+        if final_goal_sent and remaining <= 1.0:
+            # 到点与图恢复分开验收；不能因候选终点连通就报告实测恢复。
+            fleet.wait_connected()
+            fleet.assert_healthy()
+            final = fleet.snapshot()["poses_task"]
+            remaining = max(distance(final[uav][:2], targets[uav])
+                            for uav in scenario.survivors)
+            if remaining > 1.0:
+                raise RuntimeError("survivors drifted from final recovery targets")
+            recorder.event("recovery_finished", rounds=round_index,
+                           max_target_error_m=remaining)
+            return {"recovery_rounds": round_index, "recovery_step_m": step_m,
+                    "max_target_error_m": remaining}
+        if round_index == max_rounds:
+            raise RuntimeError("simultaneous recovery exceeded round limit")
+        fraction = step_m / remaining if remaining > step_m else 1.0
+        waypoints = {uav: tuple(starts[uav][axis]
+                               + fraction * (targets[uav][axis] - starts[uav][axis])
+                               for axis in range(2)) for uav in scenario.survivors}
+        scenario.validate_recovery_step(
+            starts, waypoints,
+            {uav: snapshot["poses_task"][uav][:2] for uav in scenario.fault_ids})
+        recorder.event("recovery_round_started", round=round_index + 1,
+                       starts_task_xy=starts, waypoints_task_xy=waypoints,
+                       final_targets_task_xy=targets, max_target_error_m=remaining,
+                       components=components(starts, scenario.radius))
+        fleet.send_goal("MOVE_TO", {uav: (*waypoints[uav], scenario.normal_height)
+                                    for uav in scenario.survivors}, timeout_s=60.0)
+        final_goal_sent = fraction == 1.0
+        actual = fleet.snapshot()["poses_task"]
+        error = max(distance(actual[uav][:2], targets[uav]) for uav in scenario.survivors)
+        recorder.event("recovery_round_completed", round=round_index + 1,
+                       poses_task=actual, max_target_error_m=error,
+                       components=components({uav: actual[uav][:2]
+                                              for uav in scenario.survivors}, scenario.radius))
+        stalled = stalled + 1 if remaining - error < 0.1 else 0
+        if stalled >= 3:
+            raise RuntimeError("simultaneous recovery stalled for three rounds")
+
+
 def run_sitl(scenario, identity, recorder, python, checkpoint):
     from ros_adapter import RosFleet
 
-    # 散布起步（编队演示）：起飞/编队/故障退出/重组全部"单命令全体同时下发"；
-    # 排程已由实验用 gcs.launch 关闭，安全性由 DAGL 硬门禁 + EGO 机载避碰兜底。
+    # 散布起步仍控制爬升/编队时序；恢复阶段统一使用全体幸存机短程同轮运动。
+    # 排程已由实验用 gcs.launch 关闭，实际 START 存在服务分发时差。
     simultaneous = scenario.initial_scattered
     fleet = RosFleet(scenario, identity, recorder.run_dir.name, recorder,
-                     max_batch=len(scenario.uav_ids) if simultaneous else 4)
+                     max_batch=len(scenario.uav_ids))
     try:
         fleet.wait_ready(timeout_s=90)
         deadline = time.monotonic() + 120.0
@@ -344,26 +430,17 @@ def run_sitl(scenario, identity, recorder, python, checkpoint):
             scenario.validate_fixture({uav: pose[:2] for uav, pose in after["poses_task"].items()})
         recorder.save("post_fault_snapshot.json", after)
         fleet.remove_fault()
-        targets = plan(scenario, {uav: pose[:2] for uav, pose in before["poses_task"].items()},
+        targets = plan(scenario, {uav: pose[:2] for uav, pose in after["poses_task"].items()},
                        recorder, python, fleet.assert_healthy, checkpoint=checkpoint)
-        batches = ((tuple(scenario.survivors),) if simultaneous
-                   else scenario.movement_batches({uav: after["poses_task"][uav][:2]
-                                                   for uav in scenario.survivors}))
-        for batch in batches:
-            fleet.assert_healthy()
-            current = fleet.snapshot()["poses_task"]
-            scenario.validate_targets({uav: current[uav][:2] for uav in scenario.survivors},
-                                      targets, {uav: current[uav][:2] for uav in scenario.fault_ids},
-                                      batches=batches)
-            fleet.send_goal("MOVE_TO", {uav: (*targets[uav], scenario.normal_height)
-                                        for uav in batch})
-        fleet.wait_connected()
+        recovery = recover_together(scenario, fleet, targets, recorder)
         final = fleet.snapshot()
         recorder.save("final_snapshot.json", final)
         summary = {"status": "SITL_DAGL_EGO_GRAPH_RECOVERED", "fault_ids": scenario.fault_ids,
                    "recovery_duration_s": time.monotonic() - fleet.fault_time,
                    "min_3d_separation_m": fleet._last_min_distance,
-                   "targets_task_xy": targets}
+                   "targets_task_xy": targets,
+                   "recovery_mode": "all_survivors_short_steps",
+                   "recovery_dagl_solves": 1, **recovery}
         recorder.save("summary.json", summary)
         return summary
     except BaseException as error:

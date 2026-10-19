@@ -5,13 +5,18 @@ import subprocess
 import sys
 import tempfile
 import unittest
+import itertools
+from contextlib import closing
 from pathlib import Path
+from types import SimpleNamespace
 from xml.etree import ElementTree
+from unittest.mock import Mock, patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from core import components, enu_to_task
-from sim_multi import SimCase, synchronous_distance
+from core import components, distance, enu_to_task
+from pipeline import Recorder
+from sim_multi import SimCase, plan, recover_together, run_sitl, synchronous_distance
 from sim_setup import prepare
 
 DIRECTORY = Path(__file__).resolve().parent
@@ -21,7 +26,182 @@ IDENTITY = ROOT / "src/tcp_to_ros/config/uav_identity_map.yaml"
 TOPOLOGY = ROOT / "src/swarm_topology_bridge/config/topology_group_a_sim.yaml"
 
 
+class RecoveryFleet:
+    """Kinematic task fake: no ROS, control, collision avoidance or PX4 claims."""
+
+    def __init__(self, scenario, undershoot=0.0, stuck=False):
+        self.poses = {uav: (*point, scenario.fault_height if uav in scenario.fault_ids
+                            else scenario.normal_height) for uav, point in scenario.layout.items()}
+        self.commands = []
+        self.health_checks = 0
+        self.connected_checks = 0
+        self.scenario = scenario
+        self.undershoot = undershoot
+        self.stuck = stuck
+
+    def assert_healthy(self):
+        self.health_checks += 1
+
+    def snapshot(self):
+        return {"poses_task": dict(self.poses)}
+
+    def send_goal(self, command, targets, timeout_s=180.0):
+        self.commands.append(dict(targets))
+        if self.stuck:
+            return
+        for uav, target in targets.items():
+            start = self.poses[uav]
+            length = distance(start[:2], target[:2])
+            fraction = max(0.0, 1 - self.undershoot / length) if length else 1.0
+            self.poses[uav] = (*(start[i] + fraction * (target[i] - start[i])
+                                 for i in range(2)), target[2])
+
+    def wait_connected(self):
+        self.connected_checks += 1
+        if len(components({uav: self.poses[uav][:2] for uav in self.scenario.survivors},
+                          self.scenario.radius)) != 1:
+            raise RuntimeError("measured graph disconnected")
+
+
 class TenAircraftSimulationTest(unittest.TestCase):
+    def test_sitl_wires_one_solve_to_whole_fleet_recovery_and_holds_on_failure(self):
+        for fail in (False, True):
+            with self.subTest(fail=fail), tempfile.TemporaryDirectory() as temporary:
+                scenario = SimCase.load(SCENARIO, 3)
+                fleet = RecoveryFleet(scenario)
+                fleet.poses = {uav: (*point[:2], 5.0) for uav, point in fleet.poses.items()}
+                for method in ("wait_ready", "activate", "remove_fault", "close", "hold_all"):
+                    setattr(fleet, method, Mock())
+                fleet.fault_time = 0.0
+                fleet._last_min_distance = 6.0
+                constructor = Mock(return_value=fleet)
+                output = json.loads((DIRECTORY / "fixtures/ten_three_targets_fixture.json")
+                                    .read_text())
+                output["dag_estimated_time"] = 7.0
+                # Exercise SITL orchestration without importing ROS, sleeping or starting PX4.
+                with closing(Recorder(Path(temporary) / "run")) as recorder, \
+                        patch.dict(sys.modules, {"ros_adapter": SimpleNamespace(RosFleet=constructor)}), \
+                        patch("sim_multi.time.monotonic", side_effect=itertools.count(1.0)), \
+                        patch("sim_multi.time.sleep"), \
+                        patch("sim_multi.run_solver", return_value=output) as solver, \
+                        patch("sim_multi.recover_together", wraps=recover_together,
+                              side_effect=RuntimeError("recovery failed") if fail else None):
+                    if fail:
+                        with self.assertRaisesRegex(RuntimeError, "recovery failed"):
+                            run_sitl(scenario, IDENTITY, recorder, sys.executable, Path("model.pt"))
+                        fleet.hold_all.assert_called_once()
+                        self.assertEqual(json.loads((recorder.run_dir / "summary.json")
+                                                    .read_text())["status"], "FAILED")
+                    else:
+                        result = run_sitl(scenario, IDENTITY, recorder, sys.executable, Path("model.pt"))
+                        self.assertEqual(result["recovery_rounds"], 4)
+                        self.assertTrue(all(set(command) == set(scenario.survivors)
+                                            for command in fleet.commands[-4:]))
+                        fleet.hold_all.assert_not_called()
+                    solver.assert_called_once()
+                    self.assertEqual(constructor.call_args.kwargs["max_batch"], 10)
+                    fleet.close.assert_called_once()
+
+    def test_one_plan_all_survivors_move_in_short_rounds(self):
+        for count, label in ((3, "three"), (4, "four")):
+            for undershoot in (0.0, 0.5):
+                with self.subTest(faults=count, undershoot=undershoot), \
+                        tempfile.TemporaryDirectory() as temporary:
+                    scenario = SimCase.load(SCENARIO, count)
+                    fixture = DIRECTORY / ("fixtures/ten_%s_targets_fixture.json" % label)
+                    fleet = RecoveryFleet(scenario, undershoot=undershoot)
+                    with closing(Recorder(Path(temporary) / "run")) as recorder:
+                        # A single solve produces the final goals; recovery must never solve again.
+                        output = json.loads(fixture.read_text())
+                        output["dag_estimated_time"] = 7.0
+                        with patch("sim_multi.run_solver", return_value=output) as solver:
+                            targets = plan(scenario, scenario.layout, recorder, sys.executable,
+                                           checkpoint=Path("unused-model.pt"))
+                            result = recover_together(scenario, fleet, targets, recorder)
+                            self.assertEqual(solver.call_count, 1)
+                        events = [json.loads(line) for line in
+                                  (recorder.run_dir / "events.jsonl").read_text().splitlines()]
+                    rounds = [row for row in events if row["type"] == "recovery_round_started"]
+                    self.assertGreaterEqual(len(rounds), 4)
+                    self.assertEqual(len(rounds), result["recovery_rounds"])
+                    for command, row in zip(fleet.commands, rounds):
+                        self.assertEqual(set(command), set(scenario.survivors))
+                        self.assertTrue(all(distance(row["starts_task_xy"][uav], target[:2])
+                                            <= 2.0 + 1e-9 for uav, target in command.items()))
+                    self.assertEqual(len(rounds[0]["components"]), 2)
+                    self.assertEqual(fleet.connected_checks, 1)
+                    self.assertLessEqual(result["max_target_error_m"], 1.0)
+                    for fault in scenario.fault_ids:
+                        self.assertEqual(fleet.poses[fault][:2], scenario.layout[fault])
+
+    def test_simultaneous_step_allows_merge_but_rejects_crossing(self):
+        scenario = SimCase.load(SCENARIO, 3)
+        goals = json.loads((DIRECTORY / "fixtures/ten_three_targets_fixture.json")
+                           .read_text())["targets_task_xy"]
+        faults = {uav: scenario.layout[uav] for uav in scenario.fault_ids}
+        starts = {uav: scenario.layout[uav] for uav in scenario.survivors}
+        # A short intermediate step may still be disconnected.
+        intermediate = {uav: (point[0] + (2 if point[0] < 0 else -2), point[1])
+                        for uav, point in starts.items()}
+        self.assertEqual(len(components(intermediate, 8)), 2)
+        scenario.validate_recovery_step(starts, intermediate, faults)
+        # The legacy two-group condition is inapplicable after merging.
+        with self.assertRaises(ValueError):
+            scenario.movement_batches(goals)
+        scenario.validate_recovery_step(goals, goals, faults)
+        crossing = {**starts, "A01": starts["A07"], "A07": starts["A01"]}
+        for invalid in (crossing, {**goals, "A01": (100, 0)},
+                        {**goals, "A01": (float("nan"), 0)},
+                        {uav: point for uav, point in goals.items() if uav != "A01"}):
+            with self.subTest(targets=invalid), self.assertRaises(ValueError):
+                scenario.validate_recovery_step(starts, invalid, faults)
+
+    def test_recovery_stall_limit_and_watchdog_failures_propagate(self):
+        scenario = SimCase.load(SCENARIO, 3)
+        goals = json.loads((DIRECTORY / "fixtures/ten_three_targets_fixture.json")
+                           .read_text())["targets_task_xy"]
+        for limit, message, commands in ((30, "stalled", 3), (2, "round limit", 2)):
+            with self.subTest(limit=limit), tempfile.TemporaryDirectory() as temporary:
+                fleet = RecoveryFleet(scenario, stuck=True)
+                with closing(Recorder(Path(temporary) / "run")) as recorder:
+                    with self.assertRaisesRegex(RuntimeError, message):
+                        recover_together(scenario, fleet, goals, recorder, max_rounds=limit)
+                self.assertEqual(len(fleet.commands), commands)
+                self.assertEqual(fleet.connected_checks, 0)
+        with tempfile.TemporaryDirectory() as temporary:
+            fleet = RecoveryFleet(scenario)
+            with closing(Recorder(Path(temporary) / "run")) as recorder:
+                with patch.object(fleet, "assert_healthy", side_effect=RuntimeError("watchdog")):
+                    with self.assertRaisesRegex(RuntimeError, "watchdog"):
+                        recover_together(scenario, fleet, goals, recorder)
+            self.assertFalse(fleet.commands)
+
+    def test_target_arrival_does_not_replace_measured_connectivity(self):
+        scenario = SimCase.load(SCENARIO, 3)
+        # Artificial goals at the disconnected start: loop must still ask for graph verification.
+        goals = {uav: scenario.layout[uav] for uav in scenario.survivors}
+        fleet = RecoveryFleet(scenario)
+        with tempfile.TemporaryDirectory() as temporary:
+            with closing(Recorder(Path(temporary) / "run")) as recorder:
+                with self.assertRaisesRegex(RuntimeError, "measured graph disconnected"):
+                    recover_together(scenario, fleet, goals, recorder)
+            self.assertEqual(fleet.connected_checks, 1)
+
+    def test_target_drift_during_connectivity_wait_fails(self):
+        scenario = SimCase.load(SCENARIO, 3)
+        goals = json.loads((DIRECTORY / "fixtures/ten_three_targets_fixture.json")
+                           .read_text())["targets_task_xy"]
+        fleet = RecoveryFleet(scenario)
+
+        def drift():
+            fleet.poses["A01"] = (20.0, 0.0, scenario.normal_height)
+
+        with tempfile.TemporaryDirectory() as temporary:
+            with closing(Recorder(Path(temporary) / "run")) as recorder:
+                with patch.object(fleet, "wait_connected", side_effect=drift):
+                    with self.assertRaisesRegex(RuntimeError, "drifted"):
+                        recover_together(scenario, fleet, goals, recorder)
+
     def test_three_and_four_fault_graphs_and_targets(self):
         for count, label in ((3, "three"), (4, "four")):
             with self.subTest(faults=count):

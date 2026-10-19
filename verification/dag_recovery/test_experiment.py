@@ -3,6 +3,7 @@
 import datetime
 import json
 import math
+import os
 import subprocess
 import sys
 import tempfile
@@ -95,10 +96,12 @@ class PipelineTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temporary:
             folder = Path(temporary)
             fake = folder / "fake.py"
-            fake.write_text("import json,sys\nprint('x'*100000)\n"
+            fake.write_text("import json,sys,os\nos.chdir(sys.argv[3])\nprint('x'*100000)\n"
                             "json.dump({'targets_task_xy': {'A08': [-4,0], 'A12':[3,0],"
                             "'A13':[9,0]}, 'dag_estimated_time':3}, open(sys.argv[2],'w'))\n")
             recorder = Recorder(folder / "run")
+            # Match documented relative --outdir and the real worker's cwd change.
+            recorder.run_dir = Path(os.path.relpath(recorder.run_dir))
             try:
                 result = run_solver(solver_input(Scenario.load(FOUR), Scenario.load(FOUR).layout),
                                     recorder, script=fake)

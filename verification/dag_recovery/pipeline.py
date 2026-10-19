@@ -60,8 +60,9 @@ def run_solver(payload: dict, recorder: Recorder, python: str = sys.executable,
     if timeout_s <= 0:
         raise ValueError("solver timeout must be positive")
     worker = script or Path(__file__).with_name("dag_worker.py")
-    input_path = recorder.run_dir / "dag_input.json"
-    output_path = recorder.run_dir / "dag_output.json"
+    # DAG worker changes cwd to the reference repository before writing its result.
+    input_path = (recorder.run_dir / "dag_input.json").resolve()
+    output_path = (recorder.run_dir / "dag_output.json").resolve()
     recorder.save("dag_input.json", payload)
     begin = time.monotonic()
     with (recorder.run_dir / "worker.log").open("wb") as log:
