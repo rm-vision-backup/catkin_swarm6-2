@@ -1,0 +1,18 @@
+<launch>
+  <!-- 仿真 GCS 入口：沿用四机 SITL 的 11310 Master 与 topology_group_a_sim，
+       只替换本轮的生成编队/标定配置。TCP 39061 避免与实机 39001 冲突。 -->
+  <arg name="tcp_port" default="39061"/>
+  <!-- 默认读 generated；跑 15/14 备份包时由 record_run.py 按 spec 所在目录
+       显式覆盖，避免加载到另一规模的编队成员表。 -->
+  <arg name="formation_offsets_file" default="$(dirname)/../generated/config/formation_offsets.yaml"/>
+  <arg name="calibration_config_file" default="$(dirname)/../generated/config/calibration.yaml"/>
+  <include file="$(dirname)/../../four_uav_recon/sitl/gcs_sim_four_uav.launch">
+    <arg name="tcp_port" value="$(arg tcp_port)"/>
+    <arg name="formation_offsets_file" value="$(arg formation_offsets_file)"/>
+    <arg name="calibration_config_file" value="$(arg calibration_config_file)"/>
+    <arg name="confirm_wait_s" value="1.5"/>
+    <arg name="confirm_deadline_s" value="15.0"/>
+    <!-- 与实机入口一致：备用机补位强制错峰。 -->
+    <arg name="schedule_geometric_distance_m" value="8.0"/>
+  </include>
+</launch>

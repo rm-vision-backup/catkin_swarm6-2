@@ -1,0 +1,21 @@
+calibration_uavs:
+- UAV1
+- UAV2
+- UAV3
+all_uavs:
+- UAV1
+- UAV2
+- UAV3
+- UAV4
+- UAV5
+- UAV6
+- UAV7
+- UAV8
+- UAV9
+- UAV10
+- UAV11
+- UAV12
+- UAV13
+- UAV14
+- UAV15
+sample_window_s: 8.0

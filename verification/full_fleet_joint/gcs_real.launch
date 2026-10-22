@@ -1,0 +1,16 @@
+<launch>
+  <!-- 只替换本轮编队/标定配置；生产桥、身份、TCP与安全参数沿用现有入口。
+       当前部署按 UDP 合包运行，显式传 bundle_transport:=udp；空值则不覆盖 YAML。 -->
+  <arg name="bundle_transport" default="udp"/>
+  <include file="$(find tcp_to_ros)/launch/gcs_a_real_four_uav.launch">
+    <arg name="formation_offsets_file" value="$(dirname)/generated/config/formation_offsets.yaml"/>
+    <arg name="calibration_config_file" value="$(dirname)/generated/config/calibration.yaml"/>
+    <arg name="bundle_transport" value="$(arg bundle_transport)"/>
+    <!-- B 打击期间 A 组服务空闲约 2 分钟；给 confirm 每个尝试更多重连时间。 -->
+    <arg name="confirm_wait_s" value="1.5"/>
+    <!-- 排程错峰后最大启动延迟约 9 s，确认预算须覆盖该延迟。 -->
+    <arg name="confirm_deadline_s" value="15.0"/>
+    <!-- 备用机 A05/A09 同批补位时强制错峰；默认 1.3 时两机横向最近约 1.5 m。 -->
+    <arg name="schedule_geometric_distance_m" value="8.0"/>
+  </include>
+</launch>

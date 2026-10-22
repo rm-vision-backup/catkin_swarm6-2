@@ -1,0 +1,646 @@
+{
+  "schema_version": "1.0",
+  "mission_id": "two-teams-recon-team1",
+  "team_key": "1",
+  "team_name": "编队1",
+  "teams_file": "/home/yjq/catkin_swarm6-2/verification/two_teams_recon/teams.yaml",
+  "environment_launch": "src/swarm_simulation/launch/multi_uav_ego_15sim.launch",
+  "available_uavs": [
+    "UAV1",
+    "UAV2",
+    "UAV3",
+    "UAV4",
+    "UAV5",
+    "UAV6",
+    "UAV7"
+  ],
+  "all_ids": [
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A05",
+    "A06",
+    "A07"
+  ],
+  "initial_ids": [
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A05",
+    "A06"
+  ],
+  "survivor_ids": [
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A06"
+  ],
+  "faulted_ids": [
+    "A05"
+  ],
+  "spare_ids": [
+    "A07"
+  ],
+  "recovered_ids": [
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A06",
+    "A07"
+  ],
+  "replacements": {
+    "A05": "A07"
+  },
+  "leader_id": "A02",
+  "ground_positions": {
+    "A01": {
+      "x": -5.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "A02": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "A03": {
+      "x": 5.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "A04": {
+      "x": -5.0,
+      "y": -5.0,
+      "z": 0.0
+    },
+    "A05": {
+      "x": 0.0,
+      "y": -5.0,
+      "z": 0.0
+    },
+    "A06": {
+      "x": 5.0,
+      "y": -5.0,
+      "z": 0.0
+    },
+    "A07": {
+      "x": -5.0,
+      "y": -10.0,
+      "z": 0.0
+    }
+  },
+  "formation_offsets": {
+    "recon_initial": {
+      "A01": [
+        -5.0,
+        0.0,
+        0.0
+      ],
+      "A02": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "A03": [
+        5.0,
+        0.0,
+        0.0
+      ],
+      "A04": [
+        -5.0,
+        -5.0,
+        0.0
+      ],
+      "A05": [
+        0.0,
+        -5.0,
+        0.0
+      ],
+      "A06": [
+        5.0,
+        -5.0,
+        0.0
+      ]
+    },
+    "recon_recovered": {
+      "A01": [
+        -5.0,
+        0.0,
+        0.0
+      ],
+      "A02": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "A03": [
+        5.0,
+        0.0,
+        0.0
+      ],
+      "A04": [
+        -5.0,
+        -5.0,
+        0.0
+      ],
+      "A06": [
+        5.0,
+        -5.0,
+        0.0
+      ],
+      "A07": [
+        0.0,
+        -5.0,
+        0.0
+      ]
+    }
+  },
+  "coverage": {
+    "alt_m": 12.0,
+    "strips": 4,
+    "lateral_step_m": 10.0,
+    "segment_length_m": 50.0,
+    "area": {
+      "min_x": -40.0,
+      "max_x": 0.0,
+      "min_y": 0.0,
+      "max_y": 50.0
+    },
+    "coverage1_waypoints": [
+      [
+        -35.0,
+        0.0
+      ],
+      [
+        -35.0,
+        50.0
+      ]
+    ],
+    "coverage2_waypoints": [
+      [
+        -25.0,
+        50.0
+      ],
+      [
+        -25.0,
+        0.0
+      ],
+      [
+        -15.0,
+        0.0
+      ],
+      [
+        -15.0,
+        50.0
+      ],
+      [
+        -5.0,
+        50.0
+      ],
+      [
+        -5.0,
+        0.0
+      ]
+    ],
+    "return_point": [
+      0.0,
+      1.0
+    ],
+    "final_point": [
+      -5.0,
+      0.0
+    ]
+  },
+  "phases": [
+    {
+      "name": "prepare",
+      "timeout_s": 240.0,
+      "steps": [
+        {
+          "plan_id": "prepare-formation-back",
+          "observe_only": false
+        },
+        {
+          "plan_id": "prepare-formation-front",
+          "observe_only": false
+        },
+        {
+          "plan_id": "prepare-spares",
+          "observe_only": true
+        }
+      ]
+    },
+    {
+      "name": "coverage1",
+      "timeout_s": 240.0,
+      "steps": [
+        {
+          "plan_id": "coverage-segment-1",
+          "observe_only": false
+        }
+      ]
+    },
+    {
+      "name": "fault",
+      "timeout_s": 180.0,
+      "steps": [
+        {
+          "plan_id": "fault-exit",
+          "observe_only": false
+        }
+      ]
+    },
+    {
+      "name": "recovery",
+      "timeout_s": 240.0,
+      "steps": [
+        {
+          "plan_id": "recovery-spares",
+          "observe_only": false
+        },
+        {
+          "plan_id": "recovery-hold",
+          "observe_only": true
+        }
+      ]
+    },
+    {
+      "name": "coverage2",
+      "timeout_s": 480.0,
+      "steps": [
+        {
+          "plan_id": "coverage-segment-2",
+          "observe_only": false
+        }
+      ],
+      "publishes": "RECON_COMPLETE"
+    },
+    {
+      "name": "return",
+      "timeout_s": 240.0,
+      "steps": [
+        {
+          "plan_id": "return-formation",
+          "observe_only": false
+        }
+      ]
+    },
+    {
+      "name": "hold",
+      "timeout_s": 30.0,
+      "dwell_s": 3.0,
+      "steps": [
+        {
+          "plan_id": "hold-end",
+          "observe_only": true
+        }
+      ]
+    }
+  ],
+  "plan_members": {
+    "prepare-formation-back": [
+      "A04",
+      "A05",
+      "A06"
+    ],
+    "prepare-formation-front": [
+      "A01",
+      "A02",
+      "A03"
+    ],
+    "prepare-spares": [
+      "A07"
+    ],
+    "coverage-segment-1": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06"
+    ],
+    "fault-exit": [
+      "A05"
+    ],
+    "recovery-spares": [
+      "A07"
+    ],
+    "recovery-hold": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A06",
+      "A07"
+    ],
+    "coverage-segment-2": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A06",
+      "A07"
+    ],
+    "return-formation": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A06",
+      "A07"
+    ],
+    "hold-end": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07"
+    ]
+  },
+  "expected_targets": {
+    "prepare-formation-back": {
+      "A04": {
+        "x": -5.0,
+        "y": -4.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A05": {
+        "x": 0.0,
+        "y": -4.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A06": {
+        "x": 5.0,
+        "y": -4.0,
+        "z": 12.0,
+        "yaw": 0.0
+      }
+    },
+    "prepare-formation-front": {
+      "A01": {
+        "x": -5.0,
+        "y": 1.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A02": {
+        "x": 0.0,
+        "y": 1.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A03": {
+        "x": 5.0,
+        "y": 1.0,
+        "z": 12.0,
+        "yaw": 0.0
+      }
+    },
+    "coverage-segment-1": {
+      "A01": {
+        "x": -40.0,
+        "y": 50.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A02": {
+        "x": -35.0,
+        "y": 50.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A03": {
+        "x": -30.0,
+        "y": 50.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A04": {
+        "x": -40.0,
+        "y": 45.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A05": {
+        "x": -35.0,
+        "y": 45.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A06": {
+        "x": -30.0,
+        "y": 45.0,
+        "z": 12.0,
+        "yaw": 0.0
+      }
+    },
+    "fault-exit": {
+      "A05": {
+        "x": -35.0,
+        "y": 45.0,
+        "z": 8.0,
+        "yaw": 0.0
+      }
+    },
+    "recovery-spares": {
+      "A07": {
+        "x": -35.0,
+        "y": 45.0,
+        "z": 12.0,
+        "yaw": 0.0
+      }
+    },
+    "recovery-hold": {
+      "A01": {
+        "x": -40.0,
+        "y": 50.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A02": {
+        "x": -35.0,
+        "y": 50.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A03": {
+        "x": -30.0,
+        "y": 50.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A04": {
+        "x": -40.0,
+        "y": 45.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A06": {
+        "x": -30.0,
+        "y": 45.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A07": {
+        "x": -35.0,
+        "y": 45.0,
+        "z": 12.0,
+        "yaw": 0.0
+      }
+    },
+    "coverage-segment-2": {
+      "A01": {
+        "x": -10.0,
+        "y": 0.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A02": {
+        "x": -5.0,
+        "y": 0.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A03": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A04": {
+        "x": -10.0,
+        "y": -5.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A06": {
+        "x": 0.0,
+        "y": -5.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A07": {
+        "x": -5.0,
+        "y": -5.0,
+        "z": 12.0,
+        "yaw": 0.0
+      }
+    },
+    "return-formation": {
+      "A01": {
+        "x": -5.0,
+        "y": 1.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A02": {
+        "x": 0.0,
+        "y": 1.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A03": {
+        "x": 5.0,
+        "y": 1.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A04": {
+        "x": -5.0,
+        "y": -4.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A06": {
+        "x": 5.0,
+        "y": -4.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A07": {
+        "x": 0.0,
+        "y": -4.0,
+        "z": 12.0,
+        "yaw": 0.0
+      }
+    },
+    "hold-end": {
+      "A01": {
+        "x": -5.0,
+        "y": 1.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A02": {
+        "x": 0.0,
+        "y": 1.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A03": {
+        "x": 5.0,
+        "y": 1.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A04": {
+        "x": -5.0,
+        "y": -4.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A06": {
+        "x": 5.0,
+        "y": -4.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A07": {
+        "x": 0.0,
+        "y": -4.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A05": {
+        "x": -35.0,
+        "y": 45.0,
+        "z": 8.0,
+        "yaw": 0.0
+      }
+    }
+  },
+  "calibration": {
+    "calibration_uavs": [
+      "UAV1",
+      "UAV2",
+      "UAV3"
+    ],
+    "all_uavs": [
+      "UAV1",
+      "UAV2",
+      "UAV3",
+      "UAV4",
+      "UAV5",
+      "UAV6",
+      "UAV7",
+      "UAV8",
+      "UAV9",
+      "UAV10",
+      "UAV11",
+      "UAV12",
+      "UAV13",
+      "UAV14",
+      "UAV15"
+    ],
+    "sample_window_s": 8.0,
+    "origin_uav": "UAV2"
+  }
+}

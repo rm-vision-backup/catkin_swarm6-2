@@ -1,0 +1,88 @@
+# 14 架事故后任务参数源（UAV3/UAV7 不可用，UAV13 恢复）。
+# 任务坐标：右 x / 前 y / 上 z；原点=标定计算集所在排的中心机位（UAV8）。
+# 地面：第 1 排 4 架、第 2/3 排各 5 架；初始 3×3 取第 1–3 列。
+# B 组 3 架（2 架打击 + 1 架补打），2 个目标。
+
+schema_version: "1.0"
+
+grid:
+  columns_m: [-10.0, -5.0, 0.0, 5.0, 10.0]
+  row_y_m: [5.0, 0.0, -5.0]
+  row_uavs:
+    - [UAV1, UAV2, UAV4, UAV5]
+    - [UAV6, UAV16, UAV8, UAV9, UAV10]
+    - [UAV11, UAV12, UAV13, UAV14, UAV15]
+  # 不参飞、也不在 row_uavs 中的飞机；生成器会跳过 UAV1..UAV16 完整性检查。
+  absent_uavs: [UAV3, UAV7]
+
+field:
+  min_x: -50.0
+  max_x: 50.0
+  min_y: -15.0
+  max_y: 140.0
+  safety_margin_m: 5.0
+
+mission:
+  b_count: 3                 # 2 strike + 1 replacement
+  b_strike_count: 2
+  b_uavs: [UAV10, UAV14, UAV15]
+  # 排序后的打击机为 [A10, A14]；index 1 = A14 首次打击失败，A15 补打。
+  b_failed_index: 1
+  b_failed_hover_dx_m: -6.0
+  b_failed_hover_dy_m: 0.0
+  slot_replacements: {}
+  formation_block: left
+  formation_survivors: 9
+  prepare_forward_m: 1.0
+  spare_hold_alt_m: 5.0
+  segment_length_m: 60.0
+  coverage_strips: 3          # 初始 1 条 + 重构后 2 条（原为 4 = 1 + 3）
+  coverage_lateral_step_m: 12.0
+  scan_band_m: 8.0
+  coverage_alt_m: 12.0
+  fault_exit_alt_m: 8.0
+  # 先沿 +y 离开编队占用区，再向左远距离退出；执行器按 waypoint 路线飞行。
+  fault_exit_dx_m: 30.0
+  fault_exit_dy_m: 0.0
+  fault_exit_clearance_y_m: 10.0
+  b_transit_alt_m: 8.0
+  b_strike_alt_m: 5.0
+  b_start_alt_m: 5.0
+  # A10 打右侧近目标，A14 打左侧近目标；两条打击航迹不交叉。
+  # A14 失败后悬停 (-14,30)，A15 补打 (-8,30)。
+  b_targets:
+    - {x: 10.0, y: 65.0}
+    - {x: 0.0, y: 65.0}   # 目标2 = 目标1 左边 10m
+  # 布局推导的断言（不是覆盖）：不符时生成失败，防止行序/B 组变化后静默漂移。
+  expected_faulted_uavs: [UAV4, UAV8]
+  expected_spare_uavs: [UAV5, UAV9]
+
+calibration:
+  preferred_rows:
+    - [UAV6, UAV16, UAV8, UAV9, UAV10]
+    - [UAV11, UAV12, UAV13, UAV14, UAV15]
+    - [UAV1, UAV2, UAV4, UAV5]
+  min_compute_uavs: 3
+  sample_window_s: 8.0
+
+geometry:
+  min_pairwise_m: 5.0
+  min_b_a_strike_3d_m: 4.0
+  min_b_a_vertical_m: 5.0
+  min_fault_b_horizontal_m: 4.0
+  min_fault_formation_vertical_m: 3.0
+  min_prepare_batch_clearance_m: 5.0
+  min_move_to_displacement_m: 0.5
+  target_pose_max_age_s: 3.0
+  target_horizontal_tolerance_m: 2.0
+  target_vertical_tolerance_m: 1.0
+
+scheduler:
+  horizontal_speed_mps: 0.7
+  geometric_distance_m: 1.3
+  safety_margin_m: 1.0
+  time_epsilon_s: 1.0e-6
+  max_start_delay_s: 30.0
+  max_interval_combinations: 2000
+  max_compute_time_s: 5.0
+  timeout_slack_s: 2.0

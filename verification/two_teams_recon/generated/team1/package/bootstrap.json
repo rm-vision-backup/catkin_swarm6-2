@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "mission_id": "two-teams-recon-team1",
+  "group_id": "GroupA",
+  "roster": {
+    "group_id": "GroupA",
+    "active_ids": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06"
+    ],
+    "reserve_ids": [
+      "A07"
+    ],
+    "failed_ids": [],
+    "inactive_ids": []
+  },
+  "initial_states": [
+    {
+      "uav_id": "A01",
+      "online": true,
+      "available": true
+    },
+    {
+      "uav_id": "A02",
+      "online": true,
+      "available": true
+    },
+    {
+      "uav_id": "A03",
+      "online": true,
+      "available": true
+    },
+    {
+      "uav_id": "A04",
+      "online": true,
+      "available": true
+    },
+    {
+      "uav_id": "A05",
+      "online": true,
+      "available": true
+    },
+    {
+      "uav_id": "A06",
+      "online": true,
+      "available": true
+    },
+    {
+      "uav_id": "A07",
+      "online": true,
+      "available": true
+    }
+  ],
+  "blackboard": {
+    "mission_armed": true
+  },
+  "planned_fault_count": 1,
+  "planned_recovery_count": 1
+}

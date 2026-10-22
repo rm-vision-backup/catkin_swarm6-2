@@ -1,0 +1,75 @@
+<launch>
+  <!-- 两批次共用一套 GCS：一个 bridge、一个标定节点、两个 backend/TCP server。
+       - 标定只做一次，calibration_uavs 为第一排 UAV1–3，原点 = UAV2 机位。
+       - 两个 backend 各自加载本队 formation 配置（各自 leader），共享同一
+         reference_heading / mission_anchor；批次串行，不会同时有 active group。
+       - fault_exit_schedule_enabled=false：原地下降到 8 m 的水平位移为 0。 -->
+  <arg name="tcp_port_team1" default="39061"/>
+  <arg name="tcp_port_team2" default="39062"/>
+  <arg name="formation_team1"
+       default="$(dirname)/../generated/combined/formation_team1.yaml"/>
+  <arg name="formation_team2"
+       default="$(dirname)/../generated/combined/formation_team2.yaml"/>
+  <arg name="calibration_config_file"
+       default="$(dirname)/../generated/combined/calibration.yaml"/>
+  <arg name="map_file" default="$(find tcp_to_ros)/config/uav_identity_map.yaml"/>
+  <arg name="confirm_deadline_s" default="15.0"/>
+  <arg name="confirm_wait_s" default="1.5"/>
+  <arg name="schedule_geometric_distance_m" default="8.0"/>
+
+  <include file="$(find tcp_to_ros)/launch/topology_group_a_sim.launch">
+    <arg name="uav_name" value="GCS_A"/>
+    <arg name="run_uav_mock" value="false"/>
+  </include>
+
+  <!-- 共享标定：15 机一起标定一次 -->
+  <node pkg="tcp_to_ros" type="gcs_a_calibration_node.py"
+        name="gcs_a_calibration" output="screen" required="true">
+    <rosparam command="load" file="$(arg calibration_config_file)"/>
+    <param name="identity_file" value="$(arg map_file)"/>
+  </node>
+
+  <group ns="team1">
+    <node pkg="tcp_to_ros" type="gcs_a_backend_node.py" name="gcs_a_backend" output="screen">
+      <rosparam command="load" file="$(find tcp_to_ros)/config/backend_defaults.yaml"/>
+      <param name="map_file" value="$(arg map_file)"/>
+      <param name="formation_offsets_file" value="$(arg formation_team1)"/>
+      <param name="action_name" value="/team1/execute_task"/>
+      <param name="emergency_hold_service" value="/team1/emergency_hold"/>
+      <param name="link_health_topic" value="/team1/uav_link_health"/>
+      <param name="confirm_deadline_s" value="$(arg confirm_deadline_s)"/>
+      <param name="confirm_wait_s" value="$(arg confirm_wait_s)"/>
+      <param name="schedule_geometric_distance_m" value="$(arg schedule_geometric_distance_m)"/>
+      <param name="fault_exit_schedule_enabled" value="false"/>
+    </node>
+    <node pkg="tcp_to_ros" type="tcp_server_node.py" name="tcp_server" output="screen">
+      <rosparam command="load" file="$(find tcp_to_ros)/config/transport_defaults.yaml"/>
+      <param name="port" value="$(arg tcp_port_team1)"/>
+      <param name="action_name" value="/team1/execute_task"/>
+      <param name="emergency_hold_service" value="/team1/emergency_hold"/>
+      <param name="state_topic" value="/team1/group_task_state"/>
+    </node>
+  </group>
+
+  <group ns="team2">
+    <node pkg="tcp_to_ros" type="gcs_a_backend_node.py" name="gcs_a_backend" output="screen">
+      <rosparam command="load" file="$(find tcp_to_ros)/config/backend_defaults.yaml"/>
+      <param name="map_file" value="$(arg map_file)"/>
+      <param name="formation_offsets_file" value="$(arg formation_team2)"/>
+      <param name="action_name" value="/team2/execute_task"/>
+      <param name="emergency_hold_service" value="/team2/emergency_hold"/>
+      <param name="link_health_topic" value="/team2/uav_link_health"/>
+      <param name="confirm_deadline_s" value="$(arg confirm_deadline_s)"/>
+      <param name="confirm_wait_s" value="$(arg confirm_wait_s)"/>
+      <param name="schedule_geometric_distance_m" value="$(arg schedule_geometric_distance_m)"/>
+      <param name="fault_exit_schedule_enabled" value="false"/>
+    </node>
+    <node pkg="tcp_to_ros" type="tcp_server_node.py" name="tcp_server" output="screen">
+      <rosparam command="load" file="$(find tcp_to_ros)/config/transport_defaults.yaml"/>
+      <param name="port" value="$(arg tcp_port_team2)"/>
+      <param name="action_name" value="/team2/execute_task"/>
+      <param name="emergency_hold_service" value="/team2/emergency_hold"/>
+      <param name="state_topic" value="/team2/group_task_state"/>
+    </node>
+  </group>
+</launch>

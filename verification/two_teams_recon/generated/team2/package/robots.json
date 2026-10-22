@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0",
+  "uavs": [
+    {
+      "uav_id": "A08",
+      "group_id": "GroupA",
+      "role": "Reserve",
+      "is_leader": false,
+      "is_reserve": true,
+      "capabilities": [
+        "MOVE_TO",
+        "FOLLOW_ROUTE"
+      ]
+    },
+    {
+      "uav_id": "A09",
+      "group_id": "GroupA",
+      "role": "Reserve",
+      "is_leader": false,
+      "is_reserve": true,
+      "capabilities": [
+        "MOVE_TO",
+        "FOLLOW_ROUTE"
+      ]
+    },
+    {
+      "uav_id": "A10",
+      "group_id": "GroupA",
+      "role": "Recon",
+      "is_leader": false,
+      "is_reserve": false,
+      "capabilities": [
+        "MOVE_TO",
+        "FOLLOW_ROUTE",
+        "FAULT_EXIT"
+      ]
+    },
+    {
+      "uav_id": "A11",
+      "group_id": "GroupA",
+      "role": "Recon",
+      "is_leader": true,
+      "is_reserve": false,
+      "capabilities": [
+        "MOVE_TO",
+        "FOLLOW_ROUTE"
+      ]
+    },
+    {
+      "uav_id": "A12",
+      "group_id": "GroupA",
+      "role": "Recon",
+      "is_leader": false,
+      "is_reserve": false,
+      "capabilities": [
+        "MOVE_TO",
+        "FOLLOW_ROUTE"
+      ]
+    },
+    {
+      "uav_id": "A13",
+      "group_id": "GroupA",
+      "role": "Recon",
+      "is_leader": false,
+      "is_reserve": false,
+      "capabilities": [
+        "MOVE_TO",
+        "FOLLOW_ROUTE"
+      ]
+    },
+    {
+      "uav_id": "A14",
+      "group_id": "GroupA",
+      "role": "Recon",
+      "is_leader": false,
+      "is_reserve": false,
+      "capabilities": [
+        "MOVE_TO",
+        "FOLLOW_ROUTE"
+      ]
+    },
+    {
+      "uav_id": "A15",
+      "group_id": "GroupA",
+      "role": "Recon",
+      "is_leader": false,
+      "is_reserve": false,
+      "capabilities": [
+        "MOVE_TO",
+        "FOLLOW_ROUTE",
+        "FAULT_EXIT"
+      ]
+    }
+  ]
+}

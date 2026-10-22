@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-22T00:42:45+0800",
+  "teams_file": "/home/yjq/catkin_swarm6-2/verification/two_teams_recon/teams.yaml",
+  "teams_sha256": "0db880270dd4ca9cb5530931841e3f931775afeeb16e2f50301c2912c09d6c46",
+  "team": "2",
+  "team_name": "编队2",
+  "participants": [
+    "UAV8",
+    "UAV9",
+    "UAV10",
+    "UAV11",
+    "UAV12",
+    "UAV13",
+    "UAV14",
+    "UAV15"
+  ],
+  "initial": [
+    "A10",
+    "A11",
+    "A12",
+    "A13",
+    "A14",
+    "A15"
+  ],
+  "faulted": [
+    "A10",
+    "A15"
+  ],
+  "spares": [
+    "A08",
+    "A09"
+  ],
+  "recovered": [
+    "A08",
+    "A09",
+    "A11",
+    "A12",
+    "A13",
+    "A14"
+  ],
+  "replacements": {
+    "A10": "A08",
+    "A15": "A09"
+  },
+  "leader": "A11",
+  "coverage": {
+    "alt_m": 12.0,
+    "strips": 4,
+    "lateral_step_m": 10.0,
+    "segment_length_m": 50.0,
+    "area": {
+      "min_x": 0.0,
+      "max_x": 40.0,
+      "min_y": 0.0,
+      "max_y": 50.0
+    },
+    "coverage1_waypoints": [
+      [
+        5.0,
+        0.0
+      ],
+      [
+        5.0,
+        50.0
+      ]
+    ],
+    "coverage2_waypoints": [
+      [
+        15.0,
+        50.0
+      ],
+      [
+        15.0,
+        0.0
+      ],
+      [
+        25.0,
+        0.0
+      ],
+      [
+        25.0,
+        50.0
+      ],
+      [
+        35.0,
+        50.0
+      ],
+      [
+        35.0,
+        0.0
+      ]
+    ],
+    "return_point": [
+      0.0,
+      -14.0
+    ],
+    "final_point": [
+      35.0,
+      0.0
+    ]
+  },
+  "calibration": {
+    "calibration_uavs": [
+      "UAV1",
+      "UAV2",
+      "UAV3"
+    ],
+    "all_uavs": [
+      "UAV1",
+      "UAV2",
+      "UAV3",
+      "UAV4",
+      "UAV5",
+      "UAV6",
+      "UAV7",
+      "UAV8",
+      "UAV9",
+      "UAV10",
+      "UAV11",
+      "UAV12",
+      "UAV13",
+      "UAV14",
+      "UAV15"
+    ],
+    "sample_window_s": 8.0,
+    "origin_uav": "UAV2"
+  },
+  "file_sha256": {
+    "package/robots.json": "ac5e7a13ff6c7e2bd8570524e7058b40ab3ac7636f7b7f36a89ece789e019b50",
+    "package/bootstrap.json": "89241a7ec8549e1c5b3686a1965db1cc26b8909e523a5539f45283b384a1b25b",
+    "package/world.json": "283351f8d21224da86082fdb80a715328f1d6b4f2ab3be1365e4a81110c08e16",
+    "package/plans/plans.json": "46d26bde7d08ab1b46a2be1e71bcfc5211f09dc8057ad3083535a05d4bcd05d3",
+    "config/formation_offsets.yaml": "6fb974ff0143b9f3ee8c7e4e9714c47662b08d3580d5f97a50de2ee0ff4591b0",
+    "mission_spec.json": "06df5ecd7319d7fa243cc5ec8c7ebd4d6cd1a0f34662523848205e3981349088",
+    "onboard_commands.sh": "412f9443df175f587132fbeea2afbaa4186ce2fa11413ba33ca7d495daa816e9",
+    "flow_env.sh": "ce71c6b95271b7d2114d192d3c3ba8d5eecb42643f18c8914fa108f97bd385bb"
+  }
+}

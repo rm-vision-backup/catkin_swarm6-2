@@ -1,0 +1,70 @@
+# 两个编队侦查流程参数源（同一环境、两批次运行）。
+# 环境固定使用 src/swarm_simulation/launch/multi_uav_ego_15sim.launch。
+# 任务坐标：右 x / 前 y / 上 z；原点 = 集群标定原点（calibration origin_uav 的机位）。
+schema_version: "1.0"
+
+cluster:
+  # 与 multi_uav_ego_15sim.launch 的标称出生布局一致（以 UAV1 为 0,0，
+  # 列向右 +5 m，排向后 5 m；实际出生带 ±0.8 m 随机偏差，由标定原点吸收）。
+  columns_m: [0.0, 5.0, 10.0]
+  row_y_m: [0.0, -5.0, -10.0, -15.0, -20.0]
+  row_uavs:
+    - [UAV1, UAV2, UAV3]
+    - [UAV4, UAV5, UAV6]
+    - [UAV7, UAV8, UAV9]
+    - [UAV10, UAV11, UAV12]
+    - [UAV13, UAV14, UAV15]
+  calibration_uavs: [UAV1, UAV2, UAV3]   # 第一排，关于中点对称
+  origin_uav: UAV2                        # 原点 = 该机地面机位
+
+world:
+  mission_prefix: two-teams-recon
+  flight_area:
+    min_x: -60.0
+    max_x: 60.0
+    min_y: -50.0
+    max_y: 80.0
+    safety_margin_m: 5.0
+
+defaults:
+  coverage_alt_m: 12.0
+  prepare_forward_m: 1.0       # 与已验证流程一致；prepare 分前后排两批下发
+  spare_hold_alt_m: 5.0
+  fault_exit_alt_m: 8.0
+  coverage_strips: 4          # 40 m 宽区域按 10 m 扫描带分 4 条
+  coverage_lateral_step_m: 10.0
+  sample_window_s: 8.0
+  timeouts_s:
+    prepare: 240.0
+    coverage1: 240.0
+    fault: 180.0
+    recovery: 240.0
+    coverage2: 480.0
+    return: 240.0
+    hold: 30.0
+  onboard:
+    uav_task_timeout_s: 480
+    bundle_transport: udp
+
+teams:
+  team1:
+    name: "编队1"
+    available: [UAV1, UAV2, UAV3, UAV4, UAV5, UAV6, UAV7]
+    formation: [UAV1, UAV2, UAV3, UAV4, UAV5, UAV6]   # 前两排
+    leader: UAV2                                       # 前排中间；不能是损毁机
+    faults: [UAV5]
+    spares: [UAV7]
+    replacements: {UAV5: UAV7}
+    # 侦查区域：原点向左 30 m、向前 50 m
+    area: {min_x: -40.0, max_x: 0.0, min_y: 0.0, max_y: 50.0}
+
+  team2:
+    name: "编队2"
+    available: [UAV8, UAV9, UAV10, UAV11, UAV12, UAV13, UAV14, UAV15]
+    formation: [UAV10, UAV11, UAV12, UAV13, UAV14, UAV15]   # 第 4、5 排
+    leader: UAV11                                            # 前排中间；UAV10 损毁
+    faults: [UAV10, UAV15]
+    spares: [UAV8, UAV9]
+    replacements: {UAV10: UAV8, UAV15: UAV9}
+    # 侦查区域：原点向右 30 m、向前 50 m
+    area: {min_x: 0.0, max_x: 40.0, min_y: 0.0, max_y: 50.0}

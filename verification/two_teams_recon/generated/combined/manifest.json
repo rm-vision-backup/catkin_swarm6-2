@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-22T00:42:45+0800",
+  "environment_launch": "src/swarm_simulation/launch/multi_uav_ego_15sim.launch",
+  "calibration": {
+    "calibration_uavs": [
+      "UAV1",
+      "UAV2",
+      "UAV3"
+    ],
+    "all_uavs": [
+      "UAV1",
+      "UAV2",
+      "UAV3",
+      "UAV4",
+      "UAV5",
+      "UAV6",
+      "UAV7",
+      "UAV8",
+      "UAV9",
+      "UAV10",
+      "UAV11",
+      "UAV12",
+      "UAV13",
+      "UAV14",
+      "UAV15"
+    ],
+    "sample_window_s": 8.0
+  },
+  "teams": {
+    "1": [
+      "UAV1",
+      "UAV2",
+      "UAV3",
+      "UAV4",
+      "UAV5",
+      "UAV6",
+      "UAV7"
+    ],
+    "2": [
+      "UAV8",
+      "UAV9",
+      "UAV10",
+      "UAV11",
+      "UAV12",
+      "UAV13",
+      "UAV14",
+      "UAV15"
+    ]
+  },
+  "leaders": {
+    "1": "A02",
+    "2": "A11"
+  },
+  "areas": {
+    "1": {
+      "min_x": -40.0,
+      "max_x": 0.0,
+      "min_y": 0.0,
+      "max_y": 50.0
+    },
+    "2": {
+      "min_x": 0.0,
+      "max_x": 40.0,
+      "min_y": 0.0,
+      "max_y": 50.0
+    }
+  },
+  "file_sha256": {
+    "calibration.yaml": "c5583b23f234d53d663a0484de7a3a5db574253f84af82d27226e49c3fc5dcef",
+    "formation_team1.yaml": "8dfbeea9c757b6323208c09e168a58cefa62910b7de6cceedfd23b2aec0438f1",
+    "formation_team2.yaml": "6fb974ff0143b9f3ee8c7e4e9714c47662b08d3580d5f97a50de2ee0ff4591b0"
+  }
+}
