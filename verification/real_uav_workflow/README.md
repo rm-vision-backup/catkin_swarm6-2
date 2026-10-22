@@ -2,7 +2,7 @@
 
 适用：GCS_A + 多架 UAV 的部署、地面通信快测、标定及实飞交接。详细部署查 [real_setup](../../src/swarm_uav_interfaces/real_setup.md)，通信测量查 [20 秒测试方法](communication.md)。**按编号执行；没有证据的步骤不得标为通过。**
 
-用户已通过三机实飞；跨话题合包已实现，2026-10-18 六机地面 bundle 运行与 odom 快查通过，完整实飞尚未验收。历史记录 [10-12 报告](../../quality_reports/2026-10-12_airlink_scaling_test.md) 的 §8–§11 为本轮背景，预期 RTT/pps 不能填成实测结果。
+用户已通过三机实飞；跨话题合包已实现；2026-10-19 六机 bundle 九阶段实飞通过（最终栈热测 SKIP，ulog 待 USB 核验），30+ 架容量未验收。历史记录 [10-12 报告](../../quality_reports/2026-10-12_airlink_scaling_test.md) 的 §8–§11 为本轮背景，预期 RTT/pps 不能填成实测结果。
 
 ## 执行约定
 

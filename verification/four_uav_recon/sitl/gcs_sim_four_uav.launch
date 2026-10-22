@@ -18,6 +18,10 @@
          roslaunch verification/four_uav_recon/sitl/gcs_sim_four_uav.launch -->
 
   <arg name="tcp_port" default="39001" />
+  <arg name="confirm_deadline_s" default="" />
+  <arg name="confirm_wait_s" default="" />
+  <arg name="confirm_retries" default="" />
+  <arg name="schedule_geometric_distance_m" default="" />
   <arg name="map_file" default="$(find tcp_to_ros)/config/uav_identity_map.yaml" />
   <arg name="formation_offsets_file"
        default="$(find tcp_to_ros)/config/formation_offsets_four_uav.yaml" />
@@ -35,6 +39,10 @@
     <rosparam command="load" file="$(find tcp_to_ros)/config/backend_defaults.yaml" />
     <param name="map_file" value="$(arg map_file)" />
     <param name="formation_offsets_file" value="$(arg formation_offsets_file)" />
+    <param name="confirm_deadline_s" value="$(arg confirm_deadline_s)" if="$(eval arg('confirm_deadline_s') != '')" />
+    <param name="confirm_wait_s" value="$(arg confirm_wait_s)" if="$(eval arg('confirm_wait_s') != '')" />
+    <param name="confirm_retries" value="$(arg confirm_retries)" if="$(eval arg('confirm_retries') != '')" />
+    <param name="schedule_geometric_distance_m" value="$(arg schedule_geometric_distance_m)" if="$(eval arg('schedule_geometric_distance_m') != '')" />
   </node>
 
   <!-- 3. 原点校准（标定集合改由四机配置提供） -->

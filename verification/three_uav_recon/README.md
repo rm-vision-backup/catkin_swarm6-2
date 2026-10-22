@@ -257,7 +257,7 @@ bash verification/three_uav_recon/ground_flow.sh --run    # 跑两阶段并给�
 | # | 时机 | 命令 | 判据 / 用途 |
 |---|---|---|---|
 | 0 | 起飞前 | `bash .../air_flow.sh bag 1200` | 三台同录 bag（默认 600 s；**起飞前就起**，覆盖地面→空中全过程）；脚本会先核对板上脚本版本 |
-| 1 | 空中 5 m 悬停 | `bash .../air_flow.sh stage1 60` | 空中静态链路：各机 remote odom 的 rx 增长、各机 local odom 的 rx/tx 均增长、窗内 `gt1000=0`（无 ≥1 s 空档）、`stalls=0`、无 stall/link 事件（窗口内别新起/重启任何 bridge——`connected` 事件会被计 ✗） |
+| 1 | 空中 5 m 悬停 | `bash .../air_flow.sh stage1 60` | 空中静态链路：各机 remote odom 的 rx 增长、各机 local odom 的 rx/tx 均增长；窗内非领机源 `gt1000=0`（无 ≥1 s 空档）、`stalls=0`，领机源 `gt3000=0`（1–3 s 记 ⚠、不判失败）；无 link/连接事件（窗口内别新起/重启任何 bridge——`connected` 事件会被计 ✗） |
 | 2 | stage1 通过后 | `bash .../air_flow.sh stage2` | 只发 coverage：领机起飞到 12 m 走航线、跟随者进跟随环。看 `follower_start` → `leader_odom_first_frame`（`wait_s ≲ 0.1 s`）且**无 LEADER_LOST**；coverage 完整完成是加分项不是门槛 |
 | 3 | stage2 通过后 | `bash .../air_flow.sh full` | prepare + coverage 全流程（与 §四 等价）。建议**落地后重开一轮**再下发，状态更干净；同飞行续发也可（prepare 会把各机再拉回停机位正上方） |
 

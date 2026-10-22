@@ -1,6 +1,6 @@
 # 项目背景与协作约定
 
-> 供后续 AI 对话快速了解本工作区；当前入口与通信进度于 2026-10-19 复核，历史实测按各条日期解读。这里是索引，不代替代码、现场规程或最新验证记录。文档与代码冲突时，先确认版本和实际运行配置，不凭早期方案推断已交付能力。
+> 供后续 AI 对话快速了解本工作区；当前入口与通信进度于 2026-10-19 六机实飞后复核，历史实测按各条日期解读。这里是索引，不代替代码、现场规程或最新验证记录。文档与代码冲突时，先确认版本和实际运行配置，不凭早期方案推断已交付能力。
 
 ## 目标与边界
 
@@ -18,21 +18,24 @@
 
 ## 已有验证与未解决问题
 
-- **当前进度（2026-10-18/19 六机地面调试）**：三机实飞已通过（历史）；2026-10-18 完成 UAV6–11 六机地面部署、bundle 桥接和标定；`flow.sh odom` 快查六机 `swarm_pose` 全互联（每机 5/5 源、无 stale），正式 20 s 热测窗口未完成（现场中止）。调整 router 转发后通信问题已基本解决。六机入口 `verification/six_uav_joint/`，GCS `gcs_real.launch`；标定计算集 UAV6–10、确认集六架。**六机完整任务实飞尚未执行/验收，30+ 架容量未验证。**
-- A 组主要链路已实现、部署，并做过自动测试与 SITL（2026-09-11 的 15 机 prepare SITL、观测加固后四机彩排两轮均通过）；这不代表完整覆盖、故障恢复或 A/B 联合实飞通过。
+- **当前进度（2026-10-19 六机实飞）**：三机实飞已通过（历史）；2026-10-19 中午 UAV6–11 完成一次完整九阶段联合任务实飞，driver 9 阶段全部 SUCCESS、`mission_finished=SUCCESS`：A06 模拟故障退出、A11 接替、RECON_COMPLETE 后模拟 B 组打击、A 组返回。证据 `src/uav_log/2026-10-19_125029_six-uav-joint/driver.jsonl`，结论与限制见 `quality_reports/2026-10-19_six_uav_joint_flight.md`。**该 SUCCESS 仅代表 driver 阶段与 GCS 观测条件通过；本轮最终栈未做正式 20 s 热测（现场 SKIP），ulog 待 USB 导出核验，最终飞行轮未录 bag；30+ 架容量与真实 B 组仍未验证。** 六机入口 `verification/six_uav_joint/`，GCS `gcs_real.launch`；标定计算集 UAV6–10、确认集六架。
+- A 组主要链路已实现、部署，并做过自动测试与 SITL（2026-09-11 的 15 机 prepare SITL、观测加固后四机彩排两轮均通过）；2026-10-19 六机联合任务实飞（含故障退出/接替/模拟 B 组打击）已通过，但不代表 30+ 架、真实 B 组或跨进程 A/B 联合已通过。
 - **2026-09-22/23 两轮实飞失败根因已定位**（`quality_reports/2026-10-08_*.md`）：`coverage` 开始后跟随者 0–3 s 收不到领机 odom，而领机正常飞行、订阅早已建好 ⇒ 断点在 bridge 经电台的中继段，且该层当时无观测、无自愈。两轮成败表里的 “SUCCESS” 是 runtime 合成的（已修），不能当飞行事实；四机轮 A12 更以 ulog 证伪（基本未移动）。不要沿用“跟机 planner 日志停写 = planner 卡死”的已推翻判断。
-- **链路停摆是真实设备行为（历史，2026-10-09/10）**：2026-10-09 地面实测电台链路自发单向断（GCS→UAV10 ping 全丢、反向 MAVLink 仍通，断电重上才恢复）；2026-10-10 三机空中 5 m 悬停 6 分钟内 8 次整链路静默 **1.1–5.2 s**，全部发生在 UAV13 的机间链路（到 8、到 10 双向同时；GCS↔13 仅 2 次受波及），8↔10 零断口；数据不丢（TCP 积压后补发），定层在 **RF/电台链路余量**（`quality_reports/2026-10-10_*.md`）。2026-10-18 六机地面 odom 快查（router 转发调整、bundle）未复现断口，正式 20 s 热测窗口未完成；现场据此决定：地面 `flow.sh odom`/热测通过即作为通信门禁，起飞后 quick odom 可选，跳过须记 `SKIP（原因）`；新链路版本或出现异常时仍建议空中快查。
-- 历史缓解（2026-10-10）：odom 桥接限频 **20→12 Hz**、`LEADER_LOST` 超时 **1→3 s**；后续已换轻量 `swarm_pose` 并对齐 bundle 10 Hz。UAV13 射频排查为历史遗留，不在当前 UAV6–11 六机测试范围；空中长时稳定性及 30+ 机分发容量仍须对应实测证据。
-- router：2026-10-09 起为 **systemd 服务**（`tools/router_service_install.sh` 部署，取代桌面自启），2026-10-10 去掉 `.242:15500` 冗余转发，2026-10-18 去掉 `.241:15500` 的 GCS 遥测转发（GCS 无 MAVLink 消费者，转发只抬高电台包率；现只保留 `127.0.0.1:15500`）。2026-10-18 六机逐机复核 enabled/active/单实例/参数一致；**已出现的 UAV 已修改，新机需首次配置**，每轮仍须只读复核并登记。已知定向通道死（遥测正常但 `param/get` 或 `set_gp_origin` 命令超时）可通过重启 `mavlink-routerd` + 机载栈恢复；UAV7/9 本轮实测复现并恢复。定向通道异常要区分 router、启动顺序与机载→飞控物理链路，不能单凭遥测正常判定双向健康。
+- **链路停摆是真实设备行为（历史 2026-10-09/10，2026-10-19 仍复现）**：2026-10-09 地面实测电台链路自发单向断（GCS→UAV10 ping 全丢、反向 MAVLink 仍通，断电重上才恢复）；2026-10-10 三机空中 5 m 悬停 6 分钟内 8 次整链路静默 **1.1–5.2 s**，全部发生在 UAV13 的机间链路（到 8、到 10 双向同时；GCS↔13 仅 2 次受波及），8↔10 零断口；数据不丢（TCP 积压后补发），定层在 **RF/电台链路余量**（`quality_reports/2026-10-10_*.md`）。2026-10-19 六机实飞前仍出现 UAV7 自行重启（10:49）、UAV6/UAV9 随机失联、UAV10↔UAV11 双向 stall（约 2 s）；10:41 旧栈 20 s 热测通过，但最终飞行栈热测 SKIP。现场口径：地面 `flow.sh odom`/热测通过即作为通信门禁，起飞后 quick odom 可选，跳过须记 `SKIP（原因）`；新链路版本或出现异常时仍建议空中快查。链路余量问题尚未根治，扩大规模前须专项排查。
+- 历史缓解（2026-10-10）：odom 桥接限频 **20→12 Hz**、`LEADER_LOST` 超时 **1→3 s**；后续已换轻量 `swarm_pose` 并对齐 bundle 10 Hz。UAV13 射频排查为历史遗留，不在 UAV6–11 六机轮范围；空中长时稳定性及 30+ 机分发容量仍须对应实测证据。
+- router：2026-10-09 起为 **systemd 服务**（`tools/router_service_install.sh` 部署，取代桌面自启），2026-10-10 去掉 `.242:15500` 冗余转发，2026-10-18 去掉 `.241:15500` 的 GCS 遥测转发（GCS 无 MAVLink 消费者，转发只抬高电台包率；现只保留 `127.0.0.1:15500`）。2026-10-18 六机逐机复核 enabled/active/单实例/参数一致；**已出现的 UAV 已修改，新机需首次配置**，每轮仍须只读复核并登记。已知定向通道死（遥测正常但 `param/get` 或 `set_gp_origin` 命令超时）可通过重启 `mavlink-routerd` + 机载栈恢复；2026-10-18 六机轮 UAV7/9 实测复现并恢复。定向通道异常要区分 router、启动顺序与机载→飞控物理链路，不能单凭遥测正常判定双向健康。
+- **MAVLink 伴飞口模式（2026-10-19）**：UAV11 的伴飞链路在 TELEM2，但实例是 `MAV_2_CONFIG=102`、`MAV_2_MODE=0`（Normal），本机 `/mavros/local_position/pose` 仅 1 Hz；改为 `MAV_2_MODE=2`（Onboard）并重启飞控后恢复 30 Hz。新机/换机须核对伴飞口实例 MODE=2、本机位姿 ≥10 Hz，否则热测会出现该机 `swarm_pose` 1 Hz、其他机 `gt1000` 增长。
+- **UAV7/UAV9 RTC 保持异常（2026-10-19）**：整机断电后系统钟回到 1970（上午写入的 RTC 未保持）；已用 `onboard_clock_fix.sh` 修正，建议更换 CR1220。每轮起栈前仍须查板钟；时间错误会污染标定、日志与热测窗口。
 
 ## AI 工作规范与资料入口
 
-- 常规上机按 [`verification/real_uav_workflow/README.md`](verification/real_uav_workflow/README.md) 执行：首次接入登记 → 每轮残留/router/板钟检查 → 按部署指纹决定是否 rsync → 通信测试（冷/热二选一；飞行准备默认只做热测，冷测必须在起栈前）→ 起机载/GCS、标定、通信门禁 → 飞手起飞与 GCS 任务交接。GCS 启动/查询须覆盖 `ROS_HOSTNAME`：`env -u ROS_HOSTNAME ROS_IP=192.168.5.241 ROS_MASTER_URI=http://localhost:11311`。详细命令/历史排查仍查 `real_setup.md` 和任务专用规程；本流程不代表已完成合包实机验收。
+- 常规上机按 [`verification/real_uav_workflow/README.md`](verification/real_uav_workflow/README.md) 执行：首次接入登记 → 每轮残留/router/板钟检查 → 按部署指纹决定是否 rsync → 通信测试（冷/热二选一；飞行准备默认只做热测，冷测必须在起栈前）→ 起机载/GCS、标定、通信门禁 → 飞手起飞与 GCS 任务交接。GCS 启动/查询须覆盖 `ROS_HOSTNAME`：`env -u ROS_HOSTNAME ROS_IP=192.168.5.241 ROS_MASTER_URI=http://localhost:11311`。详细命令/历史排查仍查 `real_setup.md` 和任务专用规程；2026-10-19 六机 bundle 实飞已走通该流程，30+ 架容量仍未验收。
 - runtime 的 TCP 协议继续维护，联合任务初版仅作需求背景；历史状态机提案/快照不作为当前操作依据。
 - 回答“已完成/已验证”时区分**代码实现、自动测试、SITL、实飞和完整联合任务**；优先核对当前代码与配置、`quality_reports/` 最新结论和 `verification/` 证据。历史 README/计划里的“待办”可能过时，尤其注意报告中的后续更正。
 - 先查 `src/tcp_to_ros/plans/README.md` 的设计决策与计划状态，再查对应子包 README、`src/swarm_uav_interfaces/real_setup.md` 和具体测试记录；不要把废弃的 safety lease、旧编队席位或旧 router 桌面自启方案当成当前方案。任务与协议分别查 `references/runtime/docs/容错自愈联合任务方案(初版).md`、`references/runtime/docs/实物无人机上下层TCP-IP接口对接方案.md`。
-- 验证入口：`verification/ego_smoke/`（基础检查）、`verification/six_uav_joint/`（**当前六机 UAV6–11 联合任务**，GCS `gcs_real.launch`）、`verification/three_uav_recon/`（历史标准形式；任务流程可不同，但下发任务前须完成地面通信检查——热测/`air_flow.sh odom` 通过；起飞后 quick odom 可选，跳过记 `SKIP`）、`verification/single_uav_recon/`、`verification/four_uav_recon/`、`verification/five_uav_recon/`（分阶段规程/仿真脚本）、`verification/airlink_test/`（电台包率/丢包实测）、`verification/dag_recovery/`（DAGL 十机拓扑恢复实验，先离线测试再 SITL）、`quality_reports/`（现场结论）、`src/uav_log/`（实飞原始数据及索引）。新修改先做针对性测试与无桨/SITL 验证；涉及实际飞行、网络部署或飞控参数的动作必须经过现场负责人确认。
-- 六机 driver 当前口径（`verification/six_uav_joint/driver.py`）：自动生成 `src/uav_log/<时间>_six-uav-joint/driver.jsonl`，不需要 `CONTINUE` 或交互终端；不自动检查逐机 `gp_origin_confirmed`、起始位置/高度、连续 `swarm_pose` 新鲜度和 1m 间距（机载负责 3s `LEADER_LOST`/1m HOLD，backend 负责 10/15s 链路判定）；阶段终点核对水平≤2m、高度≤1m；UAV11 不参与启动全局位姿门槛。起始位置/高度和 5m 网格摆位由操作员起飞前人工保证。
+- 验证入口：`verification/ego_smoke/`（基础检查）、`verification/six_uav_joint/`（**当前六机 UAV6–11 联合任务**，GCS `gcs_real.launch`；2026-10-19 九阶段实飞通过）、`verification/three_uav_recon/`（历史标准形式；任务流程可不同，但下发任务前须完成地面通信检查——热测/`air_flow.sh odom` 通过；起飞后 quick odom 可选，跳过记 `SKIP`）、`verification/single_uav_recon/`、`verification/four_uav_recon/`、`verification/five_uav_recon/`（分阶段规程/仿真脚本）、`verification/airlink_test/`（电台包率/丢包实测）、`verification/dag_recovery/`（DAGL 十机拓扑恢复实验，先离线测试再 SITL）、`quality_reports/`（现场结论）、`src/uav_log/`（实飞原始数据及索引）。新修改先做针对性测试与无桨/SITL 验证；涉及实际飞行、网络部署或飞控参数的动作必须经过现场负责人确认。
+- 六机 driver 当前口径（`verification/six_uav_joint/driver.py`）：自动生成 `src/uav_log/<时间>_six-uav-joint/driver.jsonl`，不需要 `CONTINUE` 或交互终端；不自动检查逐机 `gp_origin_confirmed`、起始位置/高度、连续 `swarm_pose` 新鲜度和 1m 间距（机载负责 3s `LEADER_LOST`/1m HOLD，backend 负责 10/15s 链路判定）；阶段终点核对水平≤2m、高度≤1m；UAV11 不参与启动全局位姿门槛。起始位置/高度和 5m 网格摆位由操作员起飞前人工保证。2026-10-19 九阶段实飞已按此口径通过。
+- 六机 bag 录制（`README` 5.1，可选）：地面标定完成并核对后启动；`flow.sh bag` 按角色传 `-u`——跟机录本机完整话题 + 领机转发话题，领机录本机 + 其余所有机，作为全互联证据。bag/ulog 等大文件走 USB，不空中下载。
 - `src/*` 多为**独立 Git 子模块**；`references/runtime/`、`references/DAG-GCBF/` 也是独立子模块（同在 GitHub `rm-vision-backup` 组织下），原则上只读参考——DAG-GCBF 的说明性文档可改，但要在该仓自行提交并推送，再同步主仓指针。不要覆盖已有未提交改动、批量同步机载代码、清理日志/构建产物或直接调整实机安全门禁；每次改动明确作用仓库、验证范围与未覆盖风险。构建使用 `catkin build`，不要编辑 `build/`、`devel/`、`logs/`。
 
 ## 提交规则（多仓库工作区）

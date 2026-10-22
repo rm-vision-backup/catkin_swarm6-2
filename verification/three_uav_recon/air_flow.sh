@@ -24,8 +24,12 @@
 #   AIR_FLOW_LEADER=8              领机机号（从跟随者循环里排除；默认 8）
 #   AIR_FLOW_DIR=five_uav_recon    driver 所在目录（默认 three_uav_recon）
 #
-# 判据（stage1）：每台 remote odom 的 rx 持续增长、窗内 gt1000=0（无 ≥1 s 空档）、stalls=0、
-#   无 stall_start/link 事件；每台 local odom 的 rx/tx 同步增长。任一不满足 = 记时刻、留文件。
+# 判据（stage1，按消费方分档）：
+#   - 非领机源（1 m 避碰门禁，pose_timeout=1 s）：gt1000=0、stalls=0、age ≤1 s；
+#   - 领机源（跟随环 LEADER_LOST=3 s）：gt3000=0、age ≤3 s；1–3 s 空档记 ⚠，不判失败；
+#   - 所有源：rx/msgs 持续增长、无缺源；link/连接类事件仍判失败。
+#   可用 AIR_FLOW_LEADER_TOL_S（默认 3.0）/ AIR_FLOW_PEER_TOL_S（默认 1.0）覆盖。
+#   每台 local odom 的 rx/tx 同步增长。任一不满足 = 记时刻、留文件。
 # 退出码：0 = 该子命令判定通过；1 = 不通过（odom 子命令恒 0，只报告）。
 # =============================================================================
 set -u
@@ -34,6 +38,8 @@ WS=$(cd "$(dirname "$0")/../.." && pwd)
 UAVS=${AIR_FLOW_UAVS:-"8 10 13"}
 LEADER=${AIR_FLOW_LEADER:-8}
 FLOW_DIR=${AIR_FLOW_DIR:-three_uav_recon}
+LEADER_TOL_S=${AIR_FLOW_LEADER_TOL_S:-3.0}
+PEER_TOL_S=${AIR_FLOW_PEER_TOL_S:-1.0}
 UAVS_CSV=$(echo $UAVS | tr ' ' ',')
 NUAV=$(echo $UAVS | wc -w)
 FOLLOWERS=""
@@ -67,14 +73,21 @@ peers_for() {  # $1=当前机号；输出要记录其转发话题的对端（跟
   printf '%s' "$out"
 }
 
-read_health() {  # $1=ip $2=mode(quick|window) $3=窗起点 epoch（window 模式用）
+read_health() {  # $1=ip $2=mode(quick|window) $3=窗起点 $4=领机机号 $5=在线邻机数 $6=领机容忍s $7=其他源容忍s
   # shellcheck disable=SC2029
   timeout 40 sshpass -p "${BOARD_SSH_PASS:-nvidia}" ssh -T -o ConnectTimeout=8 \
-    -o StrictHostKeyChecking=no "${BOARD_SSH_USER:-nvidia}@$1" "python3 - $2 ${3:-0}" <<'PY'
+    -o StrictHostKeyChecking=no "${BOARD_SSH_USER:-nvidia}@$1" \
+    "python3 - '$2' '${3:-0}' '${4:-}' '${5:-}' '${6:-$LEADER_TOL_S}' '${7:-$PEER_TOL_S}'" <<'PY'
 import json, os, socket, sys, time
 
 mode = sys.argv[1] if len(sys.argv) > 1 else "quick"
 t0 = float(sys.argv[2]) if len(sys.argv) > 2 else 0.0
+leader_raw = sys.argv[3].strip() if len(sys.argv) > 3 else ""
+expect_peers = int(sys.argv[4]) if len(sys.argv) > 4 and sys.argv[4].strip() else None
+leader_tol = float(sys.argv[5]) if len(sys.argv) > 5 and sys.argv[5].strip() else 3.0
+peer_tol = float(sys.argv[6]) if len(sys.argv) > 6 and sys.argv[6].strip() else 1.0
+leader_src = ((leader_raw if leader_raw.upper().startswith("UAV")
+               else "UAV" + leader_raw) if leader_raw else "")
 uav = socket.gethostname()
 f = os.path.expanduser("~/catkin_swarm6-2/.ros_home/log/health/%s_bridge_health.jsonl" % uav)
 if not os.path.exists(f):
@@ -142,46 +155,148 @@ dur = (b.get("t") or 0.0) - (a.get("t") or 0.0)
 ok = True
 
 
-def diff(side, label):
+def diff_local():
     global ok
-    x, y = odom_of(a.get(side)), odom_of(b.get(side))
+    x, y = odom_of(a.get("local")), odom_of(b.get("local"))
     if x is None or y is None:
-        # 整窗没有该侧 odom 数据行 = 该窗内 odom 从没出现在账本里，必须判 ✗——
-        # 缺条目不能放行（"从未收到领机 odom"正是要抓的一型）。
-        print("  [%s] %s: 无条目 ✗（该侧窗内无 odom 数据行）" % (uav, label))
+        # 整窗没有该侧 odom 数据行 = 该窗内 odom 从没出现在账本里，必须判 ✗。
+        print("  [%s] 本机发出: 无条目 ✗（窗内无 local odom 数据行）" % uav)
         ok = False
         return
     drx = y.get("rx", 0) - x.get("rx", 0)
+    dtx = y.get("tx", 0) - x.get("tx", 0)
     dg1 = (y.get("gt") or {}).get("gt1000", 0) - (x.get("gt") or {}).get("gt1000", 0)
     dst = y.get("stalls", 0) - x.get("stalls", 0)
     gap = y.get("gap_max_ms") or 0  # 累计值（自进程启动）；窗口判据看 gt1000 增量
-    if side == "local":
-        # 发送侧：rx（mavros 到达）与 tx（限频后实发）都要增长；drop 为限频丢弃，不计入判据
-        dtx = y.get("tx", 0) - x.get("tx", 0)
-        good = drx > 0 and dtx > 0 and dg1 == 0 and dst == 0
-        print("  [%s] %s: rx +%d（%.1f/s）tx +%d（%.1f/s）gt1000 +%d stalls +%d 累计gap_max %.0fms %s"
-              % (uav, label, drx, drx / dur if dur > 0 else -1,
-                 dtx, dtx / dur if dur > 0 else -1, dg1, dst, gap, "✓" if good else "✗"))
-    else:
-        good = drx > 0 and dg1 == 0 and dst == 0
-        print("  [%s] %s: rx +%d（%.1f/s）gt1000 +%d stalls +%d 累计gap_max %.0fms %s"
-              % (uav, label, drx, drx / dur if dur > 0 else -1, dg1, dst, gap,
-                 "✓" if good else "✗"))
-    ok = ok and good
+    # 发送侧：rx（mavros 到达）与 tx（限频后实发）都要增长；drop 为限频丢弃，不计入判据
+    good = drx > 0 and dtx > 0 and dg1 == 0 and dst == 0
+    print("  [%s] 本机发出: rx +%d（%.1f/s）tx +%d（%.1f/s）gt1000 +%d stalls +%d 累计gap_max %.0fms %s"
+          % (uav, drx, drx / dur if dur > 0 else -1,
+             dtx, dtx / dur if dur > 0 else -1, dg1, dst, gap, "✓" if good else "✗"))
+    if not good:
+        ok = False
 
 
-print("[%s] 窗口 %.0fs" % (uav, dur))
-diff("local", "本机发出")
-diff("remote", "收到邻机")
+def src_map(sample):
+    return {s.get("src"): s for s in (sample.get("sources") or []) if s.get("src")}
+
+
+def gt_delta(x, y, key):
+    return ((y.get("gt") or {}).get(key, 0) - (x.get("gt") or {}).get(key, 0))
+
+
+def remote_check():
+    global ok
+    ra, rb = odom_of(a.get("remote")), odom_of(b.get("remote"))
+    if ra is None or rb is None:
+        print("  [%s] 收到邻机 swarm_pose: 无条目 ✗" % uav)
+        ok = False
+        return
+    drx = rb.get("rx", 0) - ra.get("rx", 0)
+    if drx <= 0:
+        print("  [%s] 收到邻机: rx 未增长（+%d）✗" % (uav, drx))
+        ok = False
+    if expect_peers is not None and (rb.get("srcs") or 0) != expect_peers:
+        print("  [%s] 收到邻机: srcs=%s，期望 %d ✗"
+              % (uav, rb.get("srcs"), expect_peers))
+        ok = False
+    sa, sb = src_map(a), src_map(b)
+    if not sb:
+        print("  [%s] 收到邻机: 无 sources 明细 ✗" % uav)
+        ok = False
+        return
+    bad, warned = [], []
+    for src in sorted(set(sa) | set(sb)):
+        x, y = sa.get(src), sb.get(src)
+        if x is None or y is None:
+            print("  [%s] 源 %-6s: 窗口%s无记录 ✗"
+                  % (uav, src, "末" if y is None else "首"))
+            ok = False
+            continue
+        dmsgs = y.get("msgs", 0) - x.get("msgs", 0)
+        dg1 = gt_delta(x, y, "gt1000")
+        dg3 = gt_delta(x, y, "gt3000")
+        dst = y.get("stalls", 0) - x.get("stalls", 0)
+        age = y.get("age_ms")
+        is_leader = (src == leader_src)
+        tol = leader_tol if is_leader else peer_tol
+        if dmsgs <= 0:
+            good = False
+        elif is_leader:
+            # 跟随环 3 s 才判 LEADER_LOST；1–3 s 空档只记警告。
+            good = (dg3 == 0 and age is not None and age <= tol * 1000)
+        else:
+            # 1 m 距离门禁用 pose_timeout_s=1 s，非领机源仍按 1 s。
+            good = (dg1 == 0 and dst == 0 and age is not None
+                    and age <= tol * 1000)
+        if not good:
+            bad.append((src, is_leader, dmsgs, dg1, dg3, dst, age))
+            print("  [%s] 源 %-6s%s: msgs +%d gt1000 +%d gt3000 +%d stalls +%d age %s ✗"
+                  % (uav, src, "(领机)" if is_leader else "",
+                     dmsgs, dg1, dg3, dst, fmt_age_ms(age)))
+            ok = False
+        elif is_leader and (dg1 > 0 or dst > 0):
+            warned.append(src)
+            print("  [%s] 源 %-6s(领机): msgs +%d gt1000 +%d gt3000 +%d stalls +%d age %s ⚠"
+                  % (uav, src, dmsgs, dg1, dg3, dst, fmt_age_ms(age)))
+    print("  [%s] 源连续性: %d 源检查，%d 失败，%d 领机警告"
+          % (uav, len(set(sa) | set(sb)), len(bad), len(warned)))
+    # aggregate remote 行的 stale_srcs/age_max 带源名，用于抓“整包在走、单话题 stale”。
+    for item in (rb.get("stale_srcs") or []):
+        src = item.get("src") or ""
+        age = item.get("age_ms") or 0.0
+        tol = leader_tol if src == leader_src else peer_tol
+        if age > tol * 1000:
+            print("  [%s] swarm_pose 源 %-6s stale %.0fms > %.1fs ✗"
+                  % (uav, src, age, tol))
+            ok = False
+        else:
+            print("  [%s] swarm_pose 源 %-6s stale %.0fms（≤%.1fs，警告）⚠"
+                  % (uav, src, age, tol))
+    am, asrc = rb.get("age_max_ms"), rb.get("age_max_src") or ""
+    if am is not None and asrc:
+        tol = leader_tol if asrc == leader_src else peer_tol
+        if am > tol * 1000:
+            print("  [%s] swarm_pose age_max %.0fms（%s）> %.1fs ✗"
+                  % (uav, am, asrc, tol))
+            ok = False
+        elif asrc == leader_src and am > peer_tol * 1000:
+            print("  [%s] swarm_pose age_max %.0fms（领机 %s），按 %.1fs 容忍 ⚠"
+                  % (uav, am, asrc, leader_tol))
+        else:
+            print("  [%s] swarm_pose age_max %.0fms（%s）≤%.1fs ✓"
+                  % (uav, am, asrc, tol))
+
+
+print("[%s] 窗口 %.0fs（领机源 %.1fs / 其他源 %.1fs）"
+      % (uav, dur, leader_tol, peer_tol))
+diff_local()
+remote_check()
 evs = [e for e in events if (e.get("t") or 0.0) >= t0
        and e.get("event") in ("stall_start", "stall_end", "link", "connect_retried",
                               "connect_delayed", "connected", "disconnected", "handshake_succeeded")]
-if evs:
+fail_evs, warn_evs = [], []
+for e in evs:
+    src = e.get("src") or ""
+    if src and src == leader_src and e.get("event") in ("stall_start", "stall_end"):
+        # 领机源：只有 ≥3 s 的 stall 才算失败，1–3 s 记录为警告。
+        if e.get("event") == "stall_start" and (e.get("silent_s") or 0) >= leader_tol:
+            fail_evs.append(e)
+        else:
+            warn_evs.append(e)
+    else:
+        fail_evs.append(e)
+if fail_evs:
     ok = False
-    for e in evs[-6:]:
+    for e in fail_evs[-6:]:
         print("  [%s] ✗ 窗口内事件 %s %s %s" % (uav, e.get("event"), e.get("link_event") or "",
                                               e.get("src") or ""))
-else:
+if warn_evs:
+    for e in warn_evs[-6:]:
+        print("  [%s] ⚠ 领机链路事件（≤%.1fs 容忍）%s %s %s"
+              % (uav, leader_tol, e.get("event"), e.get("link_event") or "",
+                 e.get("src") or ""))
+if not evs:
     print("  [%s] 窗口内无 stall/link 事件 ✓" % uav)
 sys.exit(0 if ok else 1)
 PY
@@ -274,7 +389,8 @@ EOM
     ;;
   stage1)
     SEC="${1:-60}"
-    echo "== Stage 1：空中链路观测（${SEC}s 窗；飞机应在 5 m 悬停）=="
+    EXPECT_PEERS=$((NUAV - 1))
+    echo "== Stage 1：链路观测（${SEC}s 窗；领机源 ${LEADER_TOL_S}s / 其他源 ${PEER_TOL_S}s）=="
     echo "-- 窗内快查（起点基线）--"
     for n in $UAVS; do read_health "$(ip_of "$n")" quick 0 & done
     wait
@@ -282,10 +398,23 @@ EOM
     echo "-- 观测中 ${SEC}s（$(date +%H:%M:%S) 起）--"
     sleep "$SEC"
     echo "-- 窗后判定（起点 $(date -d @$T0 +%H:%M:%S)）--"
+    # 并行读取：窗口对所有机一致，避免逐机串行把后段窗口越拉越长。
+    TMPD=$(mktemp -d)
+    for n in $UAVS; do
+      ( out=$(read_health "$(ip_of "$n")" window "$T0" "$LEADER" "$EXPECT_PEERS" \
+                "$LEADER_TOL_S" "$PEER_TOL_S" 2>&1); rc=$?
+        printf '%s\n' "$out" > "$TMPD/$n.out"
+        echo "$rc" > "$TMPD/$n.rc" ) &
+    done
+    wait
     rc=0
-    for n in $UAVS; do read_health "$(ip_of "$n")" window "$T0" || rc=1; done
-    echo "  证据：各机 <ws>/.ros_home/log/health/UAVn_bridge_health.jsonl（出现 ✗ 的时刻记下来）"
-    [ "$rc" -eq 0 ] && echo "== Stage 1 通过：空中静态链路无明显缺口 ==" || echo "== Stage 1 不通过：按上面 ✗ 项定层（发送/桥/链路/接收）=="
+    for n in $UAVS; do
+      cat "$TMPD/$n.out"
+      [ "$(cat "$TMPD/$n.rc")" -eq 0 ] || rc=1
+    done
+    rm -rf "$TMPD"
+    echo "  证据：各机 <ws>/.ros_home/log/health/UAVn_bridge_health.jsonl（⚠=领机源 1–3 s 容忍）"
+    [ "$rc" -eq 0 ] && echo "== Stage 1 通过：窗内无超出容忍的链路缺口 ==" || echo "== Stage 1 不通过：按上面 ✗ 项定层（发送/桥/链路/接收）=="
     exit "$rc"
     ;;
   stage2|full)

@@ -71,8 +71,8 @@
      bash verification/three_uav_recon/air_flow.sh odom
    ```
 
-   逐机核对：本机 local `swarm_pose` 的 rx/tx 在增长；remote `swarm_pose` 的 `srcs` 必须等于**在线邻机数（不含自己）**，每个源 rx 持续增长，`stale_srcs` 为空，`age_max` ≤1 s，`gt1000=0`、`stalls=0`。缺源、无该话题条目或存在 stale 源 = FAIL。
-3. 记录窗口起点后等待 20 s，再执行一次同样的 `odom` 快查（或直接对比窗口前后 health 样本）：每个 remote 源的 `swarm_pose` rx 应继续增长（约 20 s × 10 Hz，允许少量限频/调度偏差），本地 tx 同步增长；窗内不得出现该话题的 `stall_start` 或 ≥1 s 空档。
+   逐机核对：本机 local `swarm_pose` 的 rx/tx 在增长；remote `swarm_pose` 的 `srcs` 必须等于**在线邻机数（不含自己）**，每个源 rx 持续增长。**非领机源**：`stale_srcs` 为空、`age_max` ≤1 s、`gt1000=0`、`stalls=0`；**领机源**（跟随环 `LEADER_LOST=3 s`）：`age_max` ≤3 s、`gt3000=0`，1–3 s 空档记 ⚠、不判 FAIL。缺源或无该话题条目 = FAIL。阈值可用 `AIR_FLOW_LEADER_TOL_S`（默认 3.0）/ `AIR_FLOW_PEER_TOL_S`（默认 1.0）覆盖，须在测试前写入记录。
+3. 记录窗口起点后等待 20 s，再执行一次同样的 `odom` 快查（或直接对比窗口前后 health 样本）：每个 remote 源的 `swarm_pose` rx 应继续增长（约 20 s × 10 Hz，允许少量限频/调度偏差），本地 tx 同步增长；窗内非领机源不得出现该话题的 `stall_start` 或 ≥1 s 空档，领机源不得出现 ≥3 s 空档（1–3 s 记 ⚠）。
 4. 并发逐机 ping 20 s 记录 RTT 与 ICMP 丢包（命令同冷测第 2 步，去掉 tx/rx 和接收器），作为通信延迟指标；同时做 GCS 与各机计数器采样。
 5. 保存 bridge `health_start`、窗口前后 health 样本、各邻机 `swarm_pose` 收发与 stall / link / 协议错误。原始文件在各机 `~/catkin_swarm6-2/.ros_home/log/health/`，测量结束后再下载。
 6. 核对 ping 与 `swarm_pose` 检查是否覆盖完整窗口；任一缺源、断口或协议错误写 FAIL。
@@ -83,7 +83,7 @@
 - **冷测 UDP**：从每个 tx 最终包数和对应 rx 收到包数核对损失；rx 的 seq 区间丢包率漏计首尾全丢，不能只照抄。全窗完整时可用 `(tx包数-rx包数)/tx包数`；有重复/乱序等异常先核查（现工具不去重），不报负丢包率。来源缺失但 tx 证实发送完整时写 100% 丢包。
 - **包率/吞吐**：实际电台网卡 `ΔRX_packets/Δt`、`ΔTX_packets/Δt`；Mbps 用 `8×Δbytes/Δt/10^6`。记录每台 UAV，不能只读 GCS——机间流量不经过 GCS。接口统计含探测、MAVLink、TCP ACK 等背景流量；不冒称“纯 bridge 包率”或全网空口 pps。
 - **TCP 重传**：同窗 `/proc/net/snmp` 的 `Tcp RetransSegs/OutSegs` 增量，标为整机统计。bridge health 的帧/消息计数不是实际网卡包数，不可直接等同。
-- **热测 `swarm_pose` 全互联（主判据）**：每台在线 UAV 的 remote `swarm_pose` 必须包含**全部在线邻机**作为 source，且窗前后各源 rx/tx 持续增长；`age_max` ≤1 s、`gt1000=0`、`stalls=0`、无 `stale_srcs`、无 `stall_start`。缺源即该机热测 FAIL，不能用 ping 通替代。对比窗前后增量时，历史累计 gap 最大值不等于本轮新断口；限频丢弃/`latest` 替换中间样本不等同网络丢包。`mavros/state` 等低频话题的 1 s 级间隔是发布周期，不算链路 stall。板钟仅粗对齐时，跨机窗口筛选有边界误差，须同时保存各机本地起止采样。
+- **热测 `swarm_pose` 全互联（主判据）**：每台在线 UAV 的 remote `swarm_pose` 必须包含**全部在线邻机**作为 source，且窗前后各源 rx/tx 持续增长。**非领机源**（1 m 距离门禁，`pose_timeout_s=1 s`）：`age_max ≤1 s`、`gt1000=0`、`stalls=0`、无 `stale_srcs`。**领机源**（跟随环 `LEADER_LOST=3 s`）：`age_max ≤3 s`、`gt3000=0`；1–3 s 空档记 ⚠，不判失败，但出现 ≥3 s 断口或 `LEADER_LOST` 即 FAIL。缺源即该机热测 FAIL，不能用 ping 通替代。注意领机 1–3 s 空档期间该源不满足避碰门禁的 1 s 新鲜度，会暂时不参与 1 m 距离保护。阈值用 `AIR_FLOW_LEADER_TOL_S=3.0` / `AIR_FLOW_PEER_TOL_S=1.0` 覆盖，测试前写入记录。对比窗前后增量时，历史累计 gap 最大值不等于本轮新断口；限频丢弃/`latest` 替换中间样本不等同网络丢包。`mavros/state` 等低频话题的 1 s 级间隔是发布周期，不算链路 stall。板钟仅粗对齐时，跨机窗口筛选有边界误差，须同时保存各机本地起止采样。
 
 ## 结果表与判读
 
@@ -95,6 +95,6 @@
 
 先判断本轮是否有效，再判断是否存在延迟回归。**没有项目已验收的统一 RTT 上限，不凭历史 60–90 ms 或预测 pps 自动盖 PASS。** 若本轮另有现场确认的阈值，测试前写入记录，不能看结果后改线。
 
-热测中任一在线机的 `swarm_pose` 缺源、`stale_srcs` 非空或窗内出现 ≥1 s 断口，直接判 FAIL，停止飞行交接。发现 500 ms 级排队、异常丢包、≥1 s 机间断口或协议失配，标异常并停止飞行交接，保留证据定位；高 UDP 压力导致异常时，可停止压力流量补测热测，但须分别报告，不能覆盖原失败结果。无异常写“20 s 地面快测未发现异常，实飞未验证”。20 s 快测不证明 30+ 机容量或长时稳定性。
+热测中任一在线机的 `swarm_pose` 缺源、非领机源存在 `stale_srcs` 或 ≥1 s 断口、领机源 ≥3 s 断口或出现 `LEADER_LOST`，直接判 FAIL，停止飞行交接。发现 500 ms 级排队、异常丢包、非领机源 ≥1 s（或领机源 ≥3 s）的机间断口、或协议失配，标异常并停止飞行交接，保留证据定位；高 UDP 压力导致异常时，可停止压力流量补测热测，但须分别报告，不能覆盖原失败结果。无异常写“20 s 地面快测未发现异常，实飞未验证”。20 s 快测不证明 30+ 机容量或长时稳定性。
 
 不自动进行 legacy 回滚或修改合包频率；需要专门对比时另建地面实验，确保全队及 GCS 一致切换并保留原配置。
