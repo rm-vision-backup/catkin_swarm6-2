@@ -43,8 +43,8 @@ def main() -> int:
                         help="完成后本进程退出但保留环境（自动化验证用）")
     parser.add_argument("--attach-environment", action="store_true",
                         help="复用已在运行的 multi_uav_ego_15sim 环境，不再启动 Gazebo/PX4")
-    parser.add_argument("--tcp-team1", type=int, default=39061)
-    parser.add_argument("--tcp-team2", type=int, default=39062)
+    parser.add_argument("--tcp-team1", type=int, default=11561)
+    parser.add_argument("--tcp-team2", type=int, default=11562)
     args = parser.parse_args()
 
     out = args.outdir.resolve()

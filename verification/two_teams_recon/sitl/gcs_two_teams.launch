@@ -4,8 +4,8 @@
        - 两个 backend 各自加载本队 formation 配置（各自 leader），共享同一
          reference_heading / mission_anchor；批次串行，不会同时有 active group。
        - fault_exit_schedule_enabled=false：原地下降到 8 m 的水平位移为 0。 -->
-  <arg name="tcp_port_team1" default="39061"/>
-  <arg name="tcp_port_team2" default="39062"/>
+  <arg name="tcp_port_team1" default="11561"/>
+  <arg name="tcp_port_team2" default="11562"/>
   <arg name="formation_team1"
        default="$(dirname)/../generated/combined/formation_team1.yaml"/>
   <arg name="formation_team2"

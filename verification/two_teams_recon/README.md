@@ -83,7 +83,7 @@ bash verification/two_teams_recon/flow.sh onboard-commands --team 1|2
 
 ## 5. 一键运行（15 机同环境、两批次）
 
-先停止其它占用 **11300 / 11310 / 11345 / 39061 / 39062** 的仿真，再执行：
+先停止其它占用 **11300 / 11310 / 11345 / 11561 / 11562** 的仿真，再执行：
 
 ```bash
 bash verification/two_teams_recon/sitl/run_recording.sh \
@@ -91,7 +91,7 @@ bash verification/two_teams_recon/sitl/run_recording.sh \
 ```
 
 - 启动 `multi_uav_ego_15sim.launch`（GUI 默认开启；`--headless` 关闭）。
-- 启动 15 机机载栈（11311–11325）与**双 backend** GCS（39061 / 39062），共享一次标定。
+- 启动 15 机机载栈（11311–11325）与**双 backend** GCS（11561 / 11562），共享一次标定。
 - 等 15 机 `gp_origin_confirmed` 后：
   1. 批次1（UAV1–7）起飞 → 任务 → **AUTO.LAND** → 等待 disarm；
   2. 批次2（UAV8–15）起飞 → 任务 → 保持悬停。
@@ -106,7 +106,7 @@ bash verification/two_teams_recon/sitl/run_recording.sh \
 ## 6. 双 backend 与关键实现
 
 - `sitl/gcs_two_teams.launch`：一个 bridge + 一个标定节点 + 两个 backend
-  （`/team1/*`、`/team2/*`）与两个 TCP server（39061/39062）。两个 backend 各自加载
+  （`/team1/*`、`/team2/*`）与两个 TCP server（11561/11562）。两个 backend 各自加载
   本队 formation 配置，因此每队可以有独立领机；批次串行，不会同时存在 active group。
 - 两个 backend 都设 `fault_exit_schedule_enabled=false`：原地下降到 8 m 的水平位移为 0，
   时间偏移排程会以 `GEOMETRY_UNSUITABLE` 拒绝。
