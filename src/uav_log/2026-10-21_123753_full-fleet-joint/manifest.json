@@ -1,0 +1,220 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-21T09:40:34+0800",
+  "fleet_file": "/home/yjq/catkin_swarm6-2/verification/full_fleet_joint/fleet.yaml",
+  "fleet_sha256": "3d659ba299387c91c8570f178c2b5a1d71d63217c46a0870b32a840ec68859f0",
+  "available_input": [
+    "UAV1",
+    "UAV2",
+    "UAV3",
+    "UAV4",
+    "UAV5",
+    "UAV6",
+    "UAV7",
+    "UAV8",
+    "UAV9",
+    "UAV10",
+    "UAV11",
+    "UAV12",
+    "UAV14",
+    "UAV15",
+    "UAV16"
+  ],
+  "participants": [
+    "UAV1",
+    "UAV2",
+    "UAV3",
+    "UAV6",
+    "UAV7",
+    "UAV8",
+    "UAV11",
+    "UAV12",
+    "UAV16",
+    "UAV4",
+    "UAV9",
+    "UAV5",
+    "UAV10",
+    "UAV14",
+    "UAV15"
+  ],
+  "unused": [],
+  "formation_block": "left",
+  "slot_replacements": {
+    "UAV13": "UAV16"
+  },
+  "initial": [
+    "A01",
+    "A02",
+    "A03",
+    "A06",
+    "A07",
+    "A08",
+    "A11",
+    "A12",
+    "A16"
+  ],
+  "spares": [
+    "A04",
+    "A09"
+  ],
+  "faulted": [
+    "A03",
+    "A08"
+  ],
+  "b_uavs": [
+    "UAV5",
+    "UAV10",
+    "UAV14",
+    "UAV15"
+  ],
+  "b_strike_ids": [
+    "A05",
+    "A10",
+    "A14"
+  ],
+  "b_reserve_id": "A15",
+  "b_failed_id": "A10",
+  "b_final_ids": [
+    "A05",
+    "A14",
+    "A15"
+  ],
+  "b_failed_hover": {
+    "x": 4.0,
+    "y": 80.0,
+    "z": 5.0,
+    "yaw": 0.0
+  },
+  "coverage_strips": 4,
+  "coverage_step_m": 12.0,
+  "leader": "UAV6",
+  "calibration": [
+    "UAV6",
+    "UAV7",
+    "UAV8",
+    "UAV9",
+    "UAV10"
+  ],
+  "shift_y": -0.0,
+  "geometry_checks": {
+    "min_slot_spacing_m": 5.0,
+    "coverage_envelope": {
+      "min_x": -10.0,
+      "max_x": 36.0,
+      "min_y": -4.0,
+      "max_y": 126.0
+    },
+    "b_targets_inside_coverage": true,
+    "coverage_scan_rects": [
+      [
+        -14.0,
+        4.0,
+        -4.0,
+        66.0
+      ],
+      [
+        -2.0,
+        16.0,
+        56.0,
+        126.0
+      ],
+      [
+        10.0,
+        28.0,
+        56.0,
+        126.0
+      ],
+      [
+        22.0,
+        40.0,
+        56.0,
+        126.0
+      ]
+    ],
+    "min_b_a_strike_3d_m": 36.276714294434115,
+    "b_a_vertical_m": 7.0,
+    "min_fault_b_horizontal_m": 16.278820596099706,
+    "fault_formation_vertical_m": 4.0,
+    "min_prepare_batch_clearance_m": 5.0,
+    "min_move_to_displacement_m": 1.0,
+    "calibration_median_x_m": 0.0,
+    "calibration_row_y_m": 0.0,
+    "shift_y_m": -0.0
+  },
+  "scheduler": [
+    {
+      "plan_id": "prepare-a-1",
+      "schedule_status": "SCHEDULE_OK",
+      "max_tau_s": 0.0,
+      "max_horizontal_time_s": 1.4285714285714286,
+      "budget_s": 3.428571428571429,
+      "timeout_s": 240.0,
+      "non_global_optimal": false
+    },
+    {
+      "plan_id": "prepare-a-2",
+      "schedule_status": "SCHEDULE_OK",
+      "max_tau_s": 0.0,
+      "max_horizontal_time_s": 1.4285714285714286,
+      "budget_s": 3.428571428571429,
+      "timeout_s": 240.0,
+      "non_global_optimal": false
+    },
+    {
+      "plan_id": "recovery-spares",
+      "schedule_status": "SCHEDULE_OK",
+      "max_tau_s": 0.0,
+      "max_horizontal_time_s": 87.43510713199632,
+      "budget_s": 89.43510713199632,
+      "timeout_s": 180.0,
+      "non_global_optimal": false
+    },
+    {
+      "plan_id": "mock-b-strike",
+      "schedule_status": "SCHEDULE_OK",
+      "max_tau_s": 0.0,
+      "max_horizontal_time_s": 124.42520907380957,
+      "budget_s": 126.42520907380957,
+      "timeout_s": 180.0,
+      "non_global_optimal": false
+    },
+    {
+      "plan_id": "mock-b-fail",
+      "schedule_status": "SCHEDULE_OK",
+      "max_tau_s": 0.0,
+      "max_horizontal_time_s": 8.571428571428571,
+      "budget_s": 10.571428571428571,
+      "timeout_s": 180.0,
+      "non_global_optimal": false
+    },
+    {
+      "plan_id": "mock-b-reinforce",
+      "schedule_status": "SCHEDULE_OK",
+      "max_tau_s": 0.0,
+      "max_horizontal_time_s": 121.42857142857143,
+      "budget_s": 123.42857142857143,
+      "timeout_s": 180.0,
+      "non_global_optimal": false
+    },
+    {
+      "plan_id": "fault-exit",
+      "schedule_status": "SCHEDULE_OK",
+      "max_tau_s": 0.0,
+      "max_horizontal_time_s": 28.571428571428573,
+      "budget_s": 30.571428571428573,
+      "timeout_s": 180.0,
+      "non_global_optimal": false
+    }
+  ],
+  "file_sha256": {
+    "package/robots.json": "9da3294dbb87d967ad550116d99846df3a9cc014a3b01fb01a16060f815861bd",
+    "package/bootstrap.json": "0e131571f7ade4af31692b7183f931f3ce8ef0c7781cdb06faa448868957a224",
+    "package/world.json": "6351ec5e4c8bebd1290829d7c4f12781494b1a2f11db6920bb4e7254cfb87983",
+    "package/plans/plans.json": "00514087a3df3d6b2d29c4a03dc936683ae2d42f06abc6eadfb55f743c9a4796",
+    "config/formation_offsets.yaml": "00a76cf77c15bd65ca6b5d794d81c3cc54ee44b3da857d2970ce97b26f981f63",
+    "config/calibration.yaml": "50978e58458e06327a457b1c6c6d5c76990307afa07da2d450c0189b80423526",
+    "mission_spec.json": "e33eb2c0e036c7ca87a68126cf02c968730b49bf95087a9894553959dafaff4c",
+    "onboard_commands.sh": "79a7db4427d9f157e6dbdd96c056e02f75708d8816b4001e2c28afeac0bbbb7d",
+    "flow_env.sh": "7b20898eac0bd6791e22520a63f88d8eea42d070ae629c1aca59efea0f53932f"
+  }
+}

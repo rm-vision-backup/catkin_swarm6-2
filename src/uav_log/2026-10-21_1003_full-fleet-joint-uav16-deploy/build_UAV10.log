@@ -1,0 +1,43 @@
+-----------------------------------------------------------------
+Profile:                     default
+Extending:          [cached] /opt/ros/noetic
+Workspace:                   /home/nvidia/catkin_swarm6-2
+-----------------------------------------------------------------
+Build Space:        [exists] /home/nvidia/catkin_swarm6-2/build
+Devel Space:        [exists] /home/nvidia/catkin_swarm6-2/devel
+Install Space:      [unused] /home/nvidia/catkin_swarm6-2/install
+Log Space:          [exists] /home/nvidia/catkin_swarm6-2/logs
+Source Space:       [exists] /home/nvidia/catkin_swarm6-2/src
+DESTDIR:            [unused] None
+-----------------------------------------------------------------
+Devel Space Layout:          linked
+Install Space Layout:        None
+-----------------------------------------------------------------
+Additional CMake Args:       None
+Additional Make Args:        None
+Additional catkin Make Args: None
+Internal Make Job Server:    True
+Cache Job Environments:      False
+-----------------------------------------------------------------
+Buildlisted Packages:        None
+Skiplisted Packages:         None
+-----------------------------------------------------------------
+Workspace configuration appears valid.
+-----------------------------------------------------------------
+[build] Found 4 packages in 0.0 seconds.                                       
+[build] Package table is up to date.                                           
+Starting >>> swarm_uav_interfaces                
+Finished <<< swarm_uav_interfaces                 [ 0.6 seconds ]
+Starting >>> ego_planner_driver                  
+Starting >>> swarm_topology_bridge               
+Starting >>> swarm_uav_executor                  
+Finished <<< ego_planner_driver                   [ 0.5 seconds ]
+Finished <<< swarm_uav_executor                   [ 0.3 seconds ]
+Finished <<< swarm_topology_bridge                [ 1.9 seconds ]
+[build] Summary: All 4 packages succeeded!
+[build] Ignored: None.
+[build] Warnings: None.
+[build] Abandoned: No packages were abandoned.
+[build] Failed: No packages failed.
+[build] Runtime: 2.7 seconds total.
+BUILD_EXIT=0

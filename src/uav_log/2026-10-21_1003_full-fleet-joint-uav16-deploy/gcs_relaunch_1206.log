@@ -1,0 +1,504 @@
+[WARN] [1792555533.083718]: UAV link A02/UAV2 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[WARN] [1792555533.085492]: UAV link A16/UAV16 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[WARN] [1792555533.187288]: UAV link A11/UAV11 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[WARN] [1792555533.188967]: UAV link A04/UAV4 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[WARN] [1792555533.290316]: UAV link A09/UAV9 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[WARN] [1792555533.492312]: UAV link A07/UAV7 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[WARN] [1792555533.594211]: UAV link A12/UAV12 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[WARN] [1792555533.595372]: UAV link A14/UAV14 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[WARN] [1792555533.596748]: UAV link A01/UAV1 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[WARN] [1792555533.798548]: UAV link A10/UAV10 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[WARN] [1792555534.100760]: UAV link A06/UAV6 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[WARN] [1792555534.302797]: UAV link A08/UAV8 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[WARN] [1792555534.705149]: UAV link A15/UAV15 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[WARN] [1792555536.009446]: UAV link A02/UAV2 DISCOVERED -> HEALTHY age=0.135 reason=valid MAVROS heartbeat is stable
+[WARN] [1792555536.117010]: UAV link A16/UAV16 DISCOVERED -> HEALTHY age=0.065 reason=valid MAVROS heartbeat is stable
+[WARN] [1792555536.219503]: UAV link A04/UAV4 DISCOVERED -> HEALTHY age=0.034 reason=valid MAVROS heartbeat is stable
+[WARN] [1792555536.221478]: UAV link A09/UAV9 DISCOVERED -> HEALTHY age=0.004 reason=valid MAVROS heartbeat is stable
+[WARN] [1792555536.223205]: UAV link A11/UAV11 DISCOVERED -> HEALTHY age=0.096 reason=valid MAVROS heartbeat is stable
+[WARN] [1792555536.425068]: UAV link A07/UAV7 DISCOVERED -> HEALTHY age=0.023 reason=valid MAVROS heartbeat is stable
+[WARN] [1792555536.627574]: UAV link A01/UAV1 DISCOVERED -> HEALTHY age=0.059 reason=valid MAVROS heartbeat is stable
+[WARN] [1792555536.629412]: UAV link A12/UAV12 DISCOVERED -> HEALTHY age=0.098 reason=valid MAVROS heartbeat is stable
+[WARN] [1792555536.630933]: UAV link A14/UAV14 DISCOVERED -> HEALTHY age=0.088 reason=valid MAVROS heartbeat is stable
+[WARN] [1792555536.732669]: UAV link A10/UAV10 DISCOVERED -> HEALTHY age=0.014 reason=valid MAVROS heartbeat is stable
+[WARN] [1792555537.135380]: UAV link A06/UAV6 DISCOVERED -> HEALTHY age=0.040 reason=valid MAVROS heartbeat is stable
+[WARN] [1792555537.237558]: UAV link A08/UAV8 DISCOVERED -> HEALTHY age=0.031 reason=valid MAVROS heartbeat is stable
+[WARN] [1792555537.740456]: UAV link A15/UAV15 DISCOVERED -> HEALTHY age=0.095 reason=valid MAVROS heartbeat is stable
+[WARN] [1792555632.631321]: UAV link A01/UAV1 HEALTHY -> SUSPECT age=10.065 reason=valid MAVROS heartbeat is stale
+[WARN] [1792555633.735335]: UAV link A01/UAV1 SUSPECT -> DISCOVERED age=0.069 reason=waiting for healthy stability window
+[WARN] [1792555636.743548]: UAV link A01/UAV1 DISCOVERED -> HEALTHY age=0.077 reason=valid MAVROS heartbeat is stable
+[WARN] [1792555643.958532]: UAV link A02/UAV2 HEALTHY -> SUSPECT age=10.085 reason=valid MAVROS heartbeat is stale
+[WARN] [1792555648.969950]: UAV link A02/UAV2 SUSPECT -> LOST age=15.097 reason=valid MAVROS heartbeat timed out
+[WARN] [1792555673.221304]: UAV link A02/UAV2 LOST -> RECOVERED age=0.050 reason=valid MAVROS heartbeat recovered
+[WARN] [1792555676.229037]: UAV link A02/UAV2 RECOVERED -> HEALTHY age=0.057 reason=valid MAVROS heartbeat is stable
+[WARN] [1792555682.243315]: UAV link A09/UAV9 HEALTHY -> SUSPECT age=10.031 reason=valid MAVROS heartbeat is stale
+[WARN] [1792555683.147471]: UAV link A16/UAV16 HEALTHY -> SUSPECT age=10.099 reason=valid MAVROS heartbeat is stale
+[WARN] [1792555687.257521]: UAV link A09/UAV9 SUSPECT -> LOST age=15.045 reason=valid MAVROS heartbeat timed out
+[WARN] [1792555688.061453]: UAV link A16/UAV16 SUSPECT -> LOST age=15.013 reason=valid MAVROS heartbeat timed out
+[WARN] [1792555688.264332]: UAV link A09/UAV9 LOST -> RECOVERED age=0.053 reason=valid MAVROS heartbeat recovered
+[WARN] [1792555691.272254]: UAV link A09/UAV9 RECOVERED -> HEALTHY age=1.060 reason=valid MAVROS heartbeat is stable
+[WARN] [1792555710.610747]: UAV link A16/UAV16 LOST -> RECOVERED age=0.063 reason=valid MAVROS heartbeat recovered
+[WARN] [1792555713.616861]: UAV link A16/UAV16 RECOVERED -> HEALTHY age=0.070 reason=valid MAVROS heartbeat is stable
+[WARN] [1792555734.257240]: UAV link A09/UAV9 HEALTHY -> SUSPECT age=10.046 reason=valid MAVROS heartbeat is stale
+[WARN] [1792555739.271023]: UAV link A09/UAV9 SUSPECT -> LOST age=15.060 reason=valid MAVROS heartbeat timed out
+[WARN] [1792555750.295339]: UAV link A09/UAV9 LOST -> RECOVERED age=0.086 reason=valid MAVROS heartbeat recovered
+[WARN] [1792555753.302860]: UAV link A09/UAV9 RECOVERED -> HEALTHY age=0.094 reason=valid MAVROS heartbeat is stable
+[WARN] [1792555790.280427]: UAV link A09/UAV9 HEALTHY -> SUSPECT age=10.071 reason=valid MAVROS heartbeat is stale
+[WARN] [1792555795.290024]: UAV link A09/UAV9 SUSPECT -> LOST age=15.081 reason=valid MAVROS heartbeat timed out
+[WARN] [1792555801.301937]: UAV link A09/UAV9 LOST -> RECOVERED age=0.094 reason=valid MAVROS heartbeat recovered
+[WARN] [1792555804.209297]: UAV link A09/UAV9 RECOVERED -> HEALTHY age=0.000 reason=valid MAVROS heartbeat is stable
+[WARN] [1792555852.295289]: UAV link A09/UAV9 HEALTHY -> SUSPECT age=10.087 reason=valid MAVROS heartbeat is stale
+[WARN] [1792555857.305555]: UAV link A09/UAV9 SUSPECT -> LOST age=15.098 reason=valid MAVROS heartbeat timed out
+[WARN] [1792555858.209706]: UAV link A09/UAV9 LOST -> RECOVERED age=0.003 reason=valid MAVROS heartbeat recovered
+[WARN] [1792555861.217162]: UAV link A09/UAV9 RECOVERED -> HEALTHY age=3.010 reason=valid MAVROS heartbeat is stable
+[WARN] [1792555866.227749]: UAV link A08/UAV8 HEALTHY -> SUSPECT age=10.027 reason=valid MAVROS heartbeat is stale
+[WARN] [1792555868.234654]: UAV link A09/UAV9 HEALTHY -> SUSPECT age=10.028 reason=valid MAVROS heartbeat is stale
+[WARN] [1792555870.240715]: UAV link A08/UAV8 SUSPECT -> DISCOVERED age=0.040 reason=waiting for healthy stability window
+[WARN] [1792555873.248133]: UAV link A08/UAV8 DISCOVERED -> HEALTHY age=2.048 reason=valid MAVROS heartbeat is stable
+[WARN] [1792555873.250329]: UAV link A09/UAV9 SUSPECT -> LOST age=15.041 reason=valid MAVROS heartbeat timed out
+[WARN] [1792555874.254226]: UAV link A09/UAV9 LOST -> RECOVERED age=0.048 reason=valid MAVROS heartbeat recovered
+[WARN] [1792555877.261632]: UAV link A09/UAV9 RECOVERED -> HEALTHY age=2.056 reason=valid MAVROS heartbeat is stable
+[WARN] [1792555929.256528]: UAV link A09/UAV9 HEALTHY -> SUSPECT age=10.050 reason=valid MAVROS heartbeat is stale
+[WARN] [1792555930.260651]: UAV link A09/UAV9 SUSPECT -> DISCOVERED age=0.055 reason=waiting for healthy stability window
+[WARN] [1792555933.267796]: UAV link A09/UAV9 DISCOVERED -> HEALTHY age=1.063 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556064.710289]: UAV link A15/UAV15 HEALTHY -> SUSPECT age=10.074 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556065.714203]: UAV link A15/UAV15 SUSPECT -> DISCOVERED age=0.079 reason=waiting for healthy stability window
+[WARN] [1792556068.721448]: UAV link A15/UAV15 DISCOVERED -> HEALTHY age=3.087 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556075.636873]: UAV link A15/UAV15 HEALTHY -> SUSPECT age=10.002 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556076.640285]: UAV link A15/UAV15 SUSPECT -> DISCOVERED age=0.005 reason=waiting for healthy stability window
+[WARN] [1792556079.648610]: UAV link A15/UAV15 DISCOVERED -> HEALTHY age=0.013 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556090.473134]: UAV link A07/UAV7 HEALTHY -> SUSPECT age=10.082 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556091.477641]: UAV link A07/UAV7 SUSPECT -> DISCOVERED age=0.086 reason=waiting for healthy stability window
+[WARN] [1792556094.486651]: UAV link A07/UAV7 DISCOVERED -> HEALTHY age=0.096 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556240.581697]: UAV link A12/UAV12 HEALTHY -> SUSPECT age=10.065 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556240.583501]: UAV link A16/UAV16 HEALTHY -> SUSPECT age=10.045 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556240.785475]: UAV link A15/UAV15 HEALTHY -> SUSPECT age=10.054 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556241.187764]: UAV link A02/UAV2 HEALTHY -> SUSPECT age=10.027 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556241.389960]: UAV link A07/UAV7 HEALTHY -> SUSPECT age=10.002 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556241.592204]: UAV link A12/UAV12 SUSPECT -> DISCOVERED age=0.077 reason=waiting for healthy stability window
+[WARN] [1792556242.595934]: UAV link A01/UAV1 HEALTHY -> SUSPECT age=10.039 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556242.597724]: UAV link A16/UAV16 SUSPECT -> DISCOVERED age=0.060 reason=waiting for healthy stability window
+[WARN] [1792556244.602436]: UAV link A12/UAV12 DISCOVERED -> HEALTHY age=0.087 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556245.405663]: UAV link A07/UAV7 SUSPECT -> DISCOVERED age=0.019 reason=waiting for healthy stability window
+[WARN] [1792556245.607800]: UAV link A16/UAV16 DISCOVERED -> HEALTHY age=0.071 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556245.809772]: UAV link A15/UAV15 SUSPECT -> DISCOVERED age=0.079 reason=waiting for healthy stability window
+[WARN] [1792556246.111938]: UAV link A06/UAV6 HEALTHY -> SUSPECT age=10.029 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556246.213865]: UAV link A02/UAV2 SUSPECT -> LOST age=15.053 reason=valid MAVROS heartbeat timed out
+[WARN] [1792556247.217148]: UAV link A02/UAV2 LOST -> RECOVERED age=0.057 reason=valid MAVROS heartbeat recovered
+[WARN] [1792556247.619478]: UAV link A01/UAV1 SUSPECT -> LOST age=15.062 reason=valid MAVROS heartbeat timed out
+[WARN] [1792556247.721306]: UAV link A10/UAV10 HEALTHY -> SUSPECT age=10.017 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556248.423965]: UAV link A07/UAV7 DISCOVERED -> HEALTHY age=0.037 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556248.626011]: UAV link A01/UAV1 LOST -> RECOVERED age=0.070 reason=valid MAVROS heartbeat recovered
+[WARN] [1792556248.827974]: UAV link A15/UAV15 DISCOVERED -> HEALTHY age=0.097 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556250.231725]: UAV link A02/UAV2 RECOVERED -> HEALTHY age=0.072 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556251.134686]: UAV link A06/UAV6 SUSPECT -> LOST age=15.052 reason=valid MAVROS heartbeat timed out
+[WARN] [1792556251.637002]: UAV link A01/UAV1 RECOVERED -> HEALTHY age=0.080 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556252.742174]: UAV link A10/UAV10 SUSPECT -> LOST age=15.038 reason=valid MAVROS heartbeat timed out
+[WARN] [1792556253.747552]: UAV link A10/UAV10 LOST -> RECOVERED age=0.044 reason=valid MAVROS heartbeat recovered
+[WARN] [1792556256.756128]: UAV link A10/UAV10 RECOVERED -> HEALTHY age=0.051 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556259.163709]: UAV link A06/UAV6 LOST -> RECOVERED age=0.080 reason=valid MAVROS heartbeat recovered
+[WARN] [1792556261.170285]: UAV link A02/UAV2 HEALTHY -> SUSPECT age=10.011 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556262.174889]: UAV link A02/UAV2 SUSPECT -> DISCOVERED age=0.014 reason=waiting for healthy stability window
+[WARN] [1792556262.176868]: UAV link A06/UAV6 RECOVERED -> HEALTHY age=1.091 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556262.278952]: UAV link A09/UAV9 HEALTHY -> SUSPECT age=10.080 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556262.782427]: UAV link A15/UAV15 HEALTHY -> SUSPECT age=10.051 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556265.189833]: UAV link A02/UAV2 DISCOVERED -> HEALTHY age=3.029 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556267.295979]: UAV link A09/UAV9 SUSPECT -> LOST age=15.097 reason=valid MAVROS heartbeat timed out
+[WARN] [1792556267.799149]: UAV link A15/UAV15 SUSPECT -> LOST age=15.068 reason=valid MAVROS heartbeat timed out
+[WARN] [1792556272.209837]: UAV link A02/UAV2 HEALTHY -> SUSPECT age=10.049 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556274.616364]: UAV link A14/UAV14 HEALTHY -> SUSPECT age=10.090 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556275.621633]: UAV link A14/UAV14 SUSPECT -> DISCOVERED age=0.097 reason=waiting for healthy stability window
+[WARN] [1792556276.225030]: UAV link A04/UAV4 HEALTHY -> SUSPECT age=10.053 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556277.229658]: UAV link A02/UAV2 SUSPECT -> LOST age=15.069 reason=valid MAVROS heartbeat timed out
+[WARN] [1792556277.237545]: UAV link A09/UAV9 LOST -> RECOVERED age=0.032 reason=valid MAVROS heartbeat recovered
+[WARN] [1792556278.543800]: UAV link A14/UAV14 DISCOVERED -> HEALTHY age=1.018 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556279.748391]: UAV link A15/UAV15 LOST -> RECOVERED age=0.018 reason=valid MAVROS heartbeat recovered
+[WARN] [1792556280.252025]: UAV link A09/UAV9 RECOVERED -> HEALTHY age=1.054 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556281.257174]: UAV link A04/UAV4 SUSPECT -> LOST age=15.085 reason=valid MAVROS heartbeat timed out
+[WARN] [1792556282.461346]: UAV link A07/UAV7 HEALTHY -> SUSPECT age=10.074 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556282.764818]: UAV link A15/UAV15 RECOVERED -> HEALTHY age=3.034 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556283.267787]: UAV link A08/UAV8 HEALTHY -> SUSPECT age=10.075 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556285.173870]: UAV link A04/UAV4 LOST -> RECOVERED age=0.003 reason=valid MAVROS heartbeat recovered
+[WARN] [1792556287.481054]: UAV link A07/UAV7 SUSPECT -> LOST age=15.094 reason=valid MAVROS heartbeat timed out
+[WARN] [1792556288.185278]: UAV link A04/UAV4 RECOVERED -> HEALTHY age=2.015 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556288.287662]: UAV link A08/UAV8 SUSPECT -> LOST age=15.095 reason=valid MAVROS heartbeat timed out
+[WARN] [1792556289.292185]: UAV link A09/UAV9 HEALTHY -> SUSPECT age=10.094 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556289.595257]: UAV link A12/UAV12 HEALTHY -> SUSPECT age=10.081 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556289.597397]: UAV link A14/UAV14 HEALTHY -> SUSPECT age=10.070 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556291.503977]: UAV link A08/UAV8 LOST -> RECOVERED age=0.009 reason=valid MAVROS heartbeat recovered
+[WARN] [1792556294.211720]: UAV link A09/UAV9 SUSPECT -> DISCOVERED age=0.014 reason=waiting for healthy stability window
+[WARN] [1792556294.514319]: UAV link A08/UAV8 RECOVERED -> HEALTHY age=1.320 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556294.516349]: UAV link A12/UAV12 SUSPECT -> LOST age=15.000 reason=valid MAVROS heartbeat timed out
+[WARN] [1792556294.618340]: UAV link A14/UAV14 SUSPECT -> DISCOVERED age=0.092 reason=waiting for healthy stability window
+[WARN] [1792556294.821347]: UAV link A15/UAV15 HEALTHY -> SUSPECT age=10.089 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556295.825528]: UAV link A15/UAV15 SUSPECT -> DISCOVERED age=0.095 reason=waiting for healthy stability window
+[WARN] [1792556296.528984]: UAV link A12/UAV12 LOST -> RECOVERED age=0.015 reason=valid MAVROS heartbeat recovered
+[WARN] [1792556297.232285]: UAV link A09/UAV9 DISCOVERED -> HEALTHY age=1.034 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556297.534723]: UAV link A14/UAV14 DISCOVERED -> HEALTHY age=0.011 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556298.738650]: UAV link A15/UAV15 DISCOVERED -> HEALTHY age=0.008 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556299.542914]: UAV link A12/UAV12 RECOVERED -> HEALTHY age=2.030 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556301.254602]: UAV link A04/UAV4 HEALTHY -> SUSPECT age=10.083 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556301.758504]: UAV link A10/UAV10 HEALTHY -> SUSPECT age=10.054 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556305.770940]: UAV link A10/UAV10 SUSPECT -> DISCOVERED age=0.068 reason=waiting for healthy stability window
+[WARN] [1792556306.174291]: UAV link A04/UAV4 SUSPECT -> DISCOVERED age=0.004 reason=waiting for healthy stability window
+[WARN] [1792556306.276688]: UAV link A09/UAV9 HEALTHY -> SUSPECT age=10.078 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556307.180530]: UAV link A02/UAV2 LOST -> RECOVERED age=0.021 reason=valid MAVROS heartbeat recovered
+[WARN] [1792556308.184185]: UAV link A07/UAV7 LOST -> RECOVERED age=0.094 reason=valid MAVROS heartbeat recovered
+[WARN] [1792556308.286760]: UAV link A09/UAV9 SUSPECT -> DISCOVERED age=0.090 reason=waiting for healthy stability window
+[WARN] [1792556308.790327]: UAV link A10/UAV10 DISCOVERED -> HEALTHY age=0.088 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556309.193219]: UAV link A04/UAV4 DISCOVERED -> HEALTHY age=0.024 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556310.197147]: UAV link A02/UAV2 RECOVERED -> HEALTHY age=1.038 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556311.101407]: UAV link A07/UAV7 RECOVERED -> HEALTHY age=1.715 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556311.203516]: UAV link A09/UAV9 DISCOVERED -> HEALTHY age=2.006 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556319.123061]: UAV link A06/UAV6 HEALTHY -> SUSPECT age=10.043 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556319.225755]: UAV link A02/UAV2 HEALTHY -> SUSPECT age=10.067 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556319.227885]: UAV link A04/UAV4 HEALTHY -> SUSPECT age=10.057 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556319.228572]: UAV link A08/UAV8 HEALTHY -> SUSPECT age=10.034 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556319.429969]: UAV link A07/UAV7 HEALTHY -> SUSPECT age=10.044 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556320.133324]: UAV link A06/UAV6 SUSPECT -> DISCOVERED age=0.053 reason=waiting for healthy stability window
+[WARN] [1792556320.235323]: UAV link A04/UAV4 SUSPECT -> DISCOVERED age=0.065 reason=waiting for healthy stability window
+[WARN] [1792556320.437920]: UAV link A07/UAV7 SUSPECT -> DISCOVERED age=0.052 reason=waiting for healthy stability window
+[WARN] [1792556323.145177]: UAV link A06/UAV6 DISCOVERED -> HEALTHY age=0.065 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556323.246943]: UAV link A04/UAV4 DISCOVERED -> HEALTHY age=3.077 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556323.449607]: UAV link A07/UAV7 DISCOVERED -> HEALTHY age=3.063 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556324.253973]: UAV link A02/UAV2 SUSPECT -> LOST age=15.095 reason=valid MAVROS heartbeat timed out
+[WARN] [1792556324.256150]: UAV link A08/UAV8 SUSPECT -> LOST age=15.062 reason=valid MAVROS heartbeat timed out
+[WARN] [1792556325.260278]: UAV link A08/UAV8 LOST -> RECOVERED age=0.068 reason=valid MAVROS heartbeat recovered
+[WARN] [1792556328.268966]: UAV link A08/UAV8 RECOVERED -> HEALTHY age=3.076 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556344.104909]: UAV link A06/UAV6 HEALTHY -> SUSPECT age=10.025 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556344.207181]: UAV link A09/UAV9 HEALTHY -> SUSPECT age=10.009 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556346.613869]: UAV link A01/UAV1 HEALTHY -> SUSPECT age=10.060 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556348.220081]: UAV link A08/UAV8 HEALTHY -> SUSPECT age=10.028 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556348.422171]: UAV link A07/UAV7 HEALTHY -> SUSPECT age=10.036 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556349.125945]: UAV link A06/UAV6 SUSPECT -> LOST age=15.046 reason=valid MAVROS heartbeat timed out
+[WARN] [1792556349.228232]: UAV link A09/UAV9 SUSPECT -> LOST age=15.030 reason=valid MAVROS heartbeat timed out
+[WARN] [1792556349.731471]: UAV link A10/UAV10 HEALTHY -> SUSPECT age=10.029 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556350.134598]: UAV link A11/UAV11 HEALTHY -> SUSPECT age=10.027 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556350.237174]: UAV link A09/UAV9 LOST -> RECOVERED age=0.041 reason=valid MAVROS heartbeat recovered
+[WARN] [1792556350.640268]: UAV link A01/UAV1 SUSPECT -> DISCOVERED age=0.087 reason=waiting for healthy stability window
+[WARN] [1792556351.243881]: UAV link A08/UAV8 SUSPECT -> DISCOVERED age=0.053 reason=waiting for healthy stability window
+[WARN] [1792556351.748097]: UAV link A15/UAV15 HEALTHY -> SUSPECT age=10.014 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556353.255784]: UAV link A02/UAV2 LOST -> RECOVERED age=0.098 reason=valid MAVROS heartbeat recovered
+[WARN] [1792556353.258098]: UAV link A09/UAV9 RECOVERED -> HEALTHY age=3.059 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556353.460406]: UAV link A07/UAV7 SUSPECT -> LOST age=15.075 reason=valid MAVROS heartbeat timed out
+[WARN] [1792556353.563311]: UAV link A01/UAV1 DISCOVERED -> HEALTHY age=2.011 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556353.565457]: UAV link A12/UAV12 HEALTHY -> SUSPECT age=10.014 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556353.768544]: UAV link A10/UAV10 SUSPECT -> DISCOVERED age=0.066 reason=waiting for healthy stability window
+[WARN] [1792556354.273034]: UAV link A08/UAV8 DISCOVERED -> HEALTHY age=3.082 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556355.177837]: UAV link A11/UAV11 SUSPECT -> DISCOVERED age=0.071 reason=waiting for healthy stability window
+[WARN] [1792556355.480846]: UAV link A07/UAV7 LOST -> RECOVERED age=0.095 reason=valid MAVROS heartbeat recovered
+[WARN] [1792556356.185103]: UAV link A02/UAV2 RECOVERED -> HEALTHY age=0.027 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556356.789511]: UAV link A10/UAV10 DISCOVERED -> HEALTHY age=2.088 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556356.791779]: UAV link A15/UAV15 SUSPECT -> LOST age=15.056 reason=valid MAVROS heartbeat timed out
+[WARN] [1792556357.094331]: UAV link A06/UAV6 LOST -> RECOVERED age=0.015 reason=valid MAVROS heartbeat recovered
+[WARN] [1792556358.198949]: UAV link A11/UAV11 DISCOVERED -> HEALTHY age=2.092 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556358.401719]: UAV link A07/UAV7 RECOVERED -> HEALTHY age=2.016 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556358.604345]: UAV link A12/UAV12 SUSPECT -> LOST age=15.055 reason=valid MAVROS heartbeat timed out
+[WARN] [1792556360.109987]: UAV link A06/UAV6 RECOVERED -> HEALTHY age=0.029 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556361.214601]: UAV link A08/UAV8 HEALTHY -> SUSPECT age=10.023 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556362.620203]: UAV link A16/UAV16 HEALTHY -> SUSPECT age=10.080 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556363.825144]: UAV link A15/UAV15 LOST -> RECOVERED age=0.093 reason=valid MAVROS heartbeat recovered
+[WARN] [1792556364.233321]: UAV link A09/UAV9 HEALTHY -> SUSPECT age=10.037 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556364.738077]: UAV link A10/UAV10 HEALTHY -> SUSPECT age=10.036 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556365.742696]: UAV link A10/UAV10 SUSPECT -> DISCOVERED age=0.041 reason=waiting for healthy stability window
+[WARN] [1792556366.246553]: UAV link A08/UAV8 SUSPECT -> LOST age=15.055 reason=valid MAVROS heartbeat timed out
+[WARN] [1792556366.248639]: UAV link A09/UAV9 SUSPECT -> DISCOVERED age=0.050 reason=waiting for healthy stability window
+[WARN] [1792556366.450927]: UAV link A07/UAV7 HEALTHY -> SUSPECT age=10.065 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556366.753809]: UAV link A15/UAV15 RECOVERED -> HEALTHY age=3.022 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556367.557794]: UAV link A16/UAV16 SUSPECT -> LOST age=15.017 reason=valid MAVROS heartbeat timed out
+[WARN] [1792556368.763384]: UAV link A10/UAV10 DISCOVERED -> HEALTHY age=1.061 reason=valid MAVROS heartbeat is stable
+[WARN] [1792555532.761886]: TCP port 39001 is inside Linux ip_local_port_range and is not reserved; add it to net.ipv4.ip_local_reserved_ports on the GCS host to prevent ROS XML-RPC port collisions
+[INFO] [1792555532.769363]: waiting for action server /group_a/execute_task
+[INFO] [1792555532.910856]: connected to action server /group_a/execute_task
+[INFO] [1792555532.911345]: waiting for service /group_a/emergency_hold
+[INFO] [1792555532.912649]: tcp_to_ros listening on 0.0.0.0:39001
+[INFO] [1792555532.748325]: calibration set=UAV6,UAV7,UAV8,UAV9,UAV10 all_uavs=15 identity_file=/home/yjq/catkin_swarm6-2/src/tcp_to_ros/config/uav_identity_map.yaml
+[INFO] [1792555538.482762]: calibration frozen from UAV6,UAV7,UAV8,UAV9,UAV10 (heading gate 30deg) origin=(38.498454400,103.206310300,1348.684) heading=-1.127 rad
+[INFO] [1792555538.581397]: calibration ready pending UAVn: UAV6,UAV7,UAV8,UAV9,UAV10 (confirmed=0/5)
+[INFO] [1792555538.782918]: Group A calibration ready: 5/5 required UAVs confirmed (UAV6,UAV7,UAV8,UAV9,UAV10); tracking 15 known UAVs
+[WARN] [1792556369.267149]: UAV link A09/UAV9 DISCOVERED -> HEALTHY age=0.070 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556369.575701]: UAV link A16/UAV16 LOST -> RECOVERED age=0.041 reason=valid MAVROS heartbeat recovered
+[WARN] [1792556370.579904]: UAV link A12/UAV12 LOST -> RECOVERED age=0.067 reason=valid MAVROS heartbeat recovered
+[WARN] [1792556371.383628]: UAV link A07/UAV7 SUSPECT -> DISCOVERED age=0.065 reason=waiting for healthy stability window
+[WARN] [1792556372.588260]: UAV link A16/UAV16 RECOVERED -> HEALTHY age=0.053 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556373.592285]: UAV link A12/UAV12 RECOVERED -> HEALTHY age=0.080 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556373.794842]: UAV link A15/UAV15 HEALTHY -> SUSPECT age=10.063 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556374.398220]: UAV link A07/UAV7 DISCOVERED -> HEALTHY age=1.079 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556377.205906]: UAV link A08/UAV8 LOST -> RECOVERED age=0.014 reason=valid MAVROS heartbeat recovered
+[WARN] [1792556378.811063]: UAV link A15/UAV15 SUSPECT -> LOST age=15.079 reason=valid MAVROS heartbeat timed out
+[WARN] [1792556379.013437]: UAV link A15/UAV15 LOST -> RECOVERED age=0.081 reason=valid MAVROS heartbeat recovered
+[WARN] [1792556380.217376]: UAV link A08/UAV8 RECOVERED -> HEALTHY age=0.027 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556382.021826]: UAV link A15/UAV15 RECOVERED -> HEALTHY age=0.293 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556614.979607]: UAV link A03/UAV3 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[WARN] [1792556617.986819]: UAV link A03/UAV3 DISCOVERED -> HEALTHY age=0.025 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556619.391093]: UAV link A05/UAV5 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[WARN] [1792556622.397268]: UAV link A05/UAV5 DISCOVERED -> HEALTHY age=0.023 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556767.485537]: UAV link A05/UAV5 HEALTHY -> SUSPECT age=10.100 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556772.399620]: UAV link A05/UAV5 SUSPECT -> LOST age=15.014 reason=valid MAVROS heartbeat timed out
+[WARN] [1792556792.145139]: UAV link A08/UAV8 HEALTHY -> SUSPECT age=10.038 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556797.157406]: UAV link A08/UAV8 SUSPECT -> LOST age=15.050 reason=valid MAVROS heartbeat timed out
+[WARN] [1792556805.181465]: UAV link A08/UAV8 LOST -> RECOVERED age=0.074 reason=valid MAVROS heartbeat recovered
+[WARN] [1792556808.190481]: UAV link A08/UAV8 RECOVERED -> HEALTHY age=3.083 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556834.659118]: UAV link A12/UAV12 HEALTHY -> SUSPECT age=10.030 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556839.172102]: UAV link A08/UAV8 HEALTHY -> SUSPECT age=10.063 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556839.675751]: UAV link A12/UAV12 SUSPECT -> LOST age=15.046 reason=valid MAVROS heartbeat timed out
+[WARN] [1792556842.182316]: UAV link A08/UAV8 SUSPECT -> DISCOVERED age=0.072 reason=waiting for healthy stability window
+[WARN] [1792556845.192133]: UAV link A08/UAV8 DISCOVERED -> HEALTHY age=3.082 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556862.133671]: UAV link A08/UAV8 HEALTHY -> SUSPECT age=10.023 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556866.151235]: UAV link A08/UAV8 SUSPECT -> DISCOVERED age=0.040 reason=waiting for healthy stability window
+[WARN] [1792556869.161496]: UAV link A08/UAV8 DISCOVERED -> HEALTHY age=0.050 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556890.206478]: UAV link A08/UAV8 HEALTHY -> SUSPECT age=10.094 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556895.116825]: UAV link A08/UAV8 SUSPECT -> LOST age=15.004 reason=valid MAVROS heartbeat timed out
+[WARN] [1792556899.124935]: UAV link A08/UAV8 LOST -> RECOVERED age=0.012 reason=valid MAVROS heartbeat recovered
+[WARN] [1792556902.131233]: UAV link A08/UAV8 RECOVERED -> HEALTHY age=0.019 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556921.167187]: UAV link A08/UAV8 HEALTHY -> SUSPECT age=10.054 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556926.179492]: UAV link A08/UAV8 SUSPECT -> LOST age=15.066 reason=valid MAVROS heartbeat timed out
+[WARN] [1792556926.482509]: UAV link A07/UAV7 HEALTHY -> SUSPECT age=10.075 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556929.490499]: UAV link A07/UAV7 SUSPECT -> DISCOVERED age=0.082 reason=waiting for healthy stability window
+[WARN] [1792556932.498153]: UAV link A07/UAV7 DISCOVERED -> HEALTHY age=3.090 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556935.205777]: UAV link A08/UAV8 LOST -> RECOVERED age=0.092 reason=valid MAVROS heartbeat recovered
+[WARN] [1792556938.213218]: UAV link A08/UAV8 RECOVERED -> HEALTHY age=2.099 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556946.128357]: UAV link A08/UAV8 HEALTHY -> SUSPECT age=10.014 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556951.138927]: UAV link A08/UAV8 SUSPECT -> LOST age=15.025 reason=valid MAVROS heartbeat timed out
+[WARN] [1792556952.142299]: UAV link A08/UAV8 LOST -> RECOVERED age=0.027 reason=valid MAVROS heartbeat recovered
+[WARN] [1792556955.150679]: UAV link A08/UAV8 RECOVERED -> HEALTHY age=3.036 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556962.164937]: UAV link A08/UAV8 HEALTHY -> SUSPECT age=10.050 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556967.179023]: UAV link A08/UAV8 SUSPECT -> LOST age=15.064 reason=valid MAVROS heartbeat timed out
+[WARN] [1792556969.486297]: UAV link A07/UAV7 HEALTHY -> SUSPECT age=10.076 reason=valid MAVROS heartbeat is stale
+[WARN] [1792556973.494997]: UAV link A07/UAV7 SUSPECT -> DISCOVERED age=0.084 reason=waiting for healthy stability window
+[WARN] [1792556976.501255]: UAV link A07/UAV7 DISCOVERED -> HEALTHY age=0.090 reason=valid MAVROS heartbeat is stable
+[WARN] [1792556979.207429]: UAV link A08/UAV8 LOST -> RECOVERED age=0.091 reason=valid MAVROS heartbeat recovered
+[WARN] [1792556982.214539]: UAV link A08/UAV8 RECOVERED -> HEALTHY age=0.097 reason=valid MAVROS heartbeat is stable
+[WARN] [1792557011.175738]: UAV link A08/UAV8 HEALTHY -> SUSPECT age=10.058 reason=valid MAVROS heartbeat is stale
+[WARN] [1792557013.182308]: UAV link A08/UAV8 SUSPECT -> DISCOVERED age=0.064 reason=waiting for healthy stability window
+[WARN] [1792557016.190833]: UAV link A08/UAV8 DISCOVERED -> HEALTHY age=0.073 reason=valid MAVROS heartbeat is stable
+[INFO] [1792555532.793657]: GCS_A subscribed to /UAV1/uav_task_state
+[INFO] [1792555532.795001]: GCS_A subscribed to /UAV1/mavros/state
+[INFO] [1792555532.797057]: GCS_A subscribed to /UAV1/mavros/local_position/pose
+[INFO] [1792555532.799699]: GCS_A subscribed to /UAV2/uav_task_state
+[INFO] [1792555532.800849]: GCS_A subscribed to /UAV2/mavros/state
+[INFO] [1792555532.802050]: GCS_A subscribed to /UAV2/mavros/local_position/pose
+[INFO] [1792555532.803118]: GCS_A subscribed to /UAV3/uav_task_state
+[INFO] [1792555532.804183]: GCS_A subscribed to /UAV3/mavros/state
+[INFO] [1792555532.805292]: GCS_A subscribed to /UAV3/mavros/local_position/pose
+[INFO] [1792555532.806159]: GCS_A subscribed to /UAV4/uav_task_state
+[INFO] [1792555532.806926]: GCS_A subscribed to /UAV4/mavros/state
+[INFO] [1792555532.807697]: GCS_A subscribed to /UAV4/mavros/local_position/pose
+[INFO] [1792555532.808468]: GCS_A subscribed to /UAV5/uav_task_state
+[INFO] [1792555532.809104]: GCS_A subscribed to /UAV5/mavros/state
+[INFO] [1792555532.809771]: GCS_A subscribed to /UAV5/mavros/local_position/pose
+[INFO] [1792555532.810396]: GCS_A subscribed to /UAV6/uav_task_state
+[INFO] [1792555532.811012]: GCS_A subscribed to /UAV6/mavros/state
+[INFO] [1792555532.811625]: GCS_A subscribed to /UAV6/mavros/local_position/pose
+[INFO] [1792555532.812304]: GCS_A subscribed to /UAV7/uav_task_state
+[INFO] [1792555532.812917]: GCS_A subscribed to /UAV7/mavros/state
+[INFO] [1792555532.813558]: GCS_A subscribed to /UAV7/mavros/local_position/pose
+[INFO] [1792555532.814167]: GCS_A subscribed to /UAV8/uav_task_state
+[INFO] [1792555532.814796]: GCS_A subscribed to /UAV8/mavros/state
+[INFO] [1792555532.815405]: GCS_A subscribed to /UAV8/mavros/local_position/pose
+[INFO] [1792555532.816090]: GCS_A subscribed to /UAV9/uav_task_state
+[INFO] [1792555532.816684]: GCS_A subscribed to /UAV9/mavros/state
+[INFO] [1792555532.817401]: GCS_A subscribed to /UAV9/mavros/local_position/pose
+[INFO] [1792555532.818147]: GCS_A subscribed to /UAV10/uav_task_state
+[INFO] [1792555532.818790]: GCS_A subscribed to /UAV10/mavros/state
+[INFO] [1792555532.819535]: GCS_A subscribed to /UAV10/mavros/local_position/pose
+[INFO] [1792555532.820203]: GCS_A subscribed to /UAV11/uav_task_state
+[INFO] [1792555532.820831]: GCS_A subscribed to /UAV11/mavros/state
+[INFO] [1792555532.821509]: GCS_A subscribed to /UAV11/mavros/local_position/pose
+[INFO] [1792555532.822155]: GCS_A subscribed to /UAV12/uav_task_state
+[INFO] [1792555532.822776]: GCS_A subscribed to /UAV12/mavros/state
+[INFO] [1792555532.823442]: GCS_A subscribed to /UAV12/mavros/local_position/pose
+[INFO] [1792555532.824072]: GCS_A subscribed to /UAV13/uav_task_state
+[INFO] [1792555532.824693]: GCS_A subscribed to /UAV13/mavros/state
+[INFO] [1792555532.825346]: GCS_A subscribed to /UAV13/mavros/local_position/pose
+[INFO] [1792555532.825972]: GCS_A subscribed to /UAV14/uav_task_state
+[INFO] [1792555532.826591]: GCS_A subscribed to /UAV14/mavros/state
+[INFO] [1792555532.866229]: GCS_A subscribed to /UAV14/mavros/local_position/pose
+[INFO] [1792555532.868390]: GCS_A subscribed to /UAV15/uav_task_state
+[INFO] [1792555532.870937]: GCS_A subscribed to /UAV15/mavros/state
+[INFO] [1792555532.873600]: GCS_A subscribed to /UAV15/mavros/local_position/pose
+[INFO] [1792555532.875580]: GCS_A subscribed to /UAV16/uav_task_state
+[INFO] [1792555532.877581]: GCS_A subscribed to /UAV16/mavros/state
+[INFO] [1792555532.879378]: GCS_A subscribed to /UAV16/mavros/local_position/pose
+[INFO] [1792555532.889796]: GCS_A backend ready: action=/group_a/execute_task service=/group_a/emergency_hold uavs=16
+[INFO] [1792555532.781133]: bridge: UDP bundle bind=192.168.5.241:4200 peers=15 rcvbuf=425984 sndbuf=425984
+[INFO] [1792555532.781594]: bridge: my_name=GCS_A, port_offset=0, packing=bundle, transport=udp, topics=13, health=/home/yjq/catkin_swarm6-2/.ros_home/log/health/GCS_A_bridge_health.jsonl
+[INFO] [1792555532.782188]: bridge: recv sources=UAV1,UAV2,UAV3,UAV4,UAV5,UAV6,UAV7,UAV8,UAV9,UAV10,UAV11,UAV12,UAV14,UAV15,UAV16
+[INFO] [1792555532.999392]: bridge: proxying /UAV1/uav_task -> UAV1
+[INFO] [1792555533.000067]: bridge: dealer connected to UAV1 service router 192.168.5.11:14000
+[INFO] [1792555533.000608]: bridge: proxying /UAV1/uav_task_control -> UAV1
+[INFO] [1792555533.001308]: bridge: proxying /UAV1/uav_hold -> UAV1
+[INFO] [1792555533.001822]: bridge: proxying /UAV2/uav_task -> UAV2
+[INFO] [1792555533.002189]: bridge: dealer connected to UAV2 service router 192.168.5.21:14000
+[INFO] [1792555533.002697]: bridge: proxying /UAV2/uav_task_control -> UAV2
+[INFO] [1792555533.003183]: bridge: proxying /UAV2/uav_hold -> UAV2
+[INFO] [1792555533.003649]: bridge: proxying /UAV3/uav_task -> UAV3
+[INFO] [1792555533.004032]: bridge: dealer connected to UAV3 service router 192.168.5.31:14000
+[INFO] [1792555533.004527]: bridge: proxying /UAV3/uav_task_control -> UAV3
+[INFO] [1792555533.005003]: bridge: proxying /UAV3/uav_hold -> UAV3
+[INFO] [1792555533.005554]: bridge: proxying /UAV4/uav_task -> UAV4
+[INFO] [1792555533.006149]: bridge: dealer connected to UAV4 service router 192.168.5.41:14000
+[INFO] [1792555533.006666]: bridge: proxying /UAV4/uav_task_control -> UAV4
+[INFO] [1792555533.007166]: bridge: proxying /UAV4/uav_hold -> UAV4
+[INFO] [1792555533.007632]: bridge: proxying /UAV5/uav_task -> UAV5
+[INFO] [1792555533.008018]: bridge: dealer connected to UAV5 service router 192.168.5.51:14000
+[INFO] [1792555533.008519]: bridge: proxying /UAV5/uav_task_control -> UAV5
+[INFO] [1792555533.008982]: bridge: proxying /UAV5/uav_hold -> UAV5
+[INFO] [1792555533.009472]: bridge: proxying /UAV6/uav_task -> UAV6
+[INFO] [1792555533.009863]: bridge: dealer connected to UAV6 service router 192.168.5.61:14000
+[INFO] [1792555533.010353]: bridge: proxying /UAV6/uav_task_control -> UAV6
+[INFO] [1792555533.010813]: bridge: proxying /UAV6/uav_hold -> UAV6
+[INFO] [1792555533.011290]: bridge: proxying /UAV7/uav_task -> UAV7
+[INFO] [1792555533.011677]: bridge: dealer connected to UAV7 service router 192.168.5.71:14000
+[INFO] [1792555533.012185]: bridge: proxying /UAV7/uav_task_control -> UAV7
+[INFO] [1792555533.012700]: bridge: proxying /UAV7/uav_hold -> UAV7
+[INFO] [1792555533.013229]: bridge: proxying /UAV8/uav_task -> UAV8
+[INFO] [1792555533.013594]: bridge: dealer connected to UAV8 service router 192.168.5.81:14000
+[INFO] [1792555533.014071]: bridge: proxying /UAV8/uav_task_control -> UAV8
+[INFO] [1792555533.014853]: bridge: proxying /UAV8/uav_hold -> UAV8
+[INFO] [1792555533.015742]: bridge: proxying /UAV9/uav_task -> UAV9
+[INFO] [1792555533.016276]: bridge: dealer connected to UAV9 service router 192.168.5.91:14000
+[INFO] [1792555533.017100]: bridge: proxying /UAV9/uav_task_control -> UAV9
+[INFO] [1792555533.017941]: bridge: proxying /UAV9/uav_hold -> UAV9
+[INFO] [1792555533.018727]: bridge: proxying /UAV10/uav_task -> UAV10
+[INFO] [1792555533.019284]: bridge: dealer connected to UAV10 service router 192.168.5.101:14000
+[INFO] [1792555533.020291]: bridge: proxying /UAV10/uav_task_control -> UAV10
+[INFO] [1792555533.021107]: bridge: proxying /UAV10/uav_hold -> UAV10
+[INFO] [1792555533.021896]: bridge: proxying /UAV11/uav_task -> UAV11
+[INFO] [1792555533.022739]: bridge: dealer connected to UAV11 service router 192.168.5.111:14000
+[INFO] [1792555533.023766]: bridge: proxying /UAV11/uav_task_control -> UAV11
+[INFO] [1792555533.024648]: bridge: proxying /UAV11/uav_hold -> UAV11
+[INFO] [1792555533.025509]: bridge: proxying /UAV12/uav_task -> UAV12
+[INFO] [1792555533.026095]: bridge: dealer connected to UAV12 service router 192.168.5.121:14000
+[INFO] [1792555533.026910]: bridge: proxying /UAV12/uav_task_control -> UAV12
+[INFO] [1792555533.027649]: bridge: proxying /UAV12/uav_hold -> UAV12
+[INFO] [1792555533.028546]: bridge: proxying /UAV14/uav_task -> UAV14
+[INFO] [1792555533.029117]: bridge: dealer connected to UAV14 service router 192.168.5.141:14000
+[INFO] [1792555533.029959]: bridge: proxying /UAV14/uav_task_control -> UAV14
+[INFO] [1792555533.030527]: bridge: proxying /UAV14/uav_hold -> UAV14
+[INFO] [1792555533.030985]: bridge: proxying /UAV15/uav_task -> UAV15
+[INFO] [1792555533.031413]: bridge: dealer connected to UAV15 service router 192.168.5.151:14000
+[INFO] [1792555533.031908]: bridge: proxying /UAV15/uav_task_control -> UAV15
+[INFO] [1792555533.032366]: bridge: proxying /UAV15/uav_hold -> UAV15
+[INFO] [1792555533.032816]: bridge: proxying /UAV16/uav_task -> UAV16
+[INFO] [1792555533.033240]: bridge: dealer connected to UAV16 service router 192.168.5.161:14000
+[INFO] [1792555533.033741]: bridge: proxying /UAV16/uav_task_control -> UAV16
+[INFO] [1792555533.034201]: bridge: proxying /UAV16/uav_hold -> UAV16
+[INFO] [1792555533.034858]: bridge: link options (none)
+... logging to /home/yjq/.ros/log/a8c56580-cd04-11f1-99df-d11d630efd1f/roslaunch-yjq-66524.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;verification/full_fleet_joint/gcs_real.launch
+[1mstarted roslaunch server http://192.168.5.241:45949/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /gcs_a_backend_node/action_name: /group_a/execute_...
+ * /gcs_a_backend_node/confirm_deadline_s: 4.0
+ * /gcs_a_backend_node/confirm_retries: 2
+ * /gcs_a_backend_node/confirm_retry_interval_s: 0.2
+ * /gcs_a_backend_node/confirm_wait_s: 1.5
+ * /gcs_a_backend_node/emergency_hold_service: /group_a/emergenc...
+ * /gcs_a_backend_node/fault_exit_schedule_enabled: True
+ * /gcs_a_backend_node/formation_offsets_file: /home/yjq/catkin_...
+ * /gcs_a_backend_node/hold_batch_size: 4
+ * /gcs_a_backend_node/hold_retry_count: 2
+ * /gcs_a_backend_node/hold_retry_interval_s: 0.5
+ * /gcs_a_backend_node/horizontal_speed_mps: 0.7
+ * /gcs_a_backend_node/link_health_pre_task_wait_s: 10.0
+ * /gcs_a_backend_node/link_health_topic: /group_a/uav_link...
+ * /gcs_a_backend_node/link_healthy_window_s: 3.0
+ * /gcs_a_backend_node/link_lost_after_s: 15.0
+ * /gcs_a_backend_node/link_suspect_after_s: 10.0
+ * /gcs_a_backend_node/map_file: /home/yjq/catkin_...
+ * /gcs_a_backend_node/move_to_schedule_enabled: True
+ * /gcs_a_backend_node/require_calibration_ready: True
+ * /gcs_a_backend_node/schedule_geometric_distance_m: 1.3
+ * /gcs_a_backend_node/schedule_max_compute_time_s: 5.0
+ * /gcs_a_backend_node/schedule_max_interval_combinations: 2000
+ * /gcs_a_backend_node/schedule_max_start_delay_s: 30.0
+ * /gcs_a_backend_node/schedule_pose_timeout_s: 2.0
+ * /gcs_a_backend_node/schedule_safety_margin_m: 1.0
+ * /gcs_a_backend_node/schedule_time_epsilon_s: 1e-6
+ * /gcs_a_backend_node/start_dispatch_jitter_margin_s: 0.5
+ * /gcs_a_backend_node/start_service_budget_s: 1.5
+ * /gcs_a_calibration/all_uavs: ['UAV1', 'UAV2', ...
+ * /gcs_a_calibration/calibration_uavs: ['UAV6', 'UAV7', ...
+ * /gcs_a_calibration/identity_file: /home/yjq/catkin_...
+ * /gcs_a_calibration/sample_window_s: 8.0
+ * /rosdistro: noetic
+ * /rosversion: 1.17.4
+ * /swarm_bridge/base_port: 4200
+ * /swarm_bridge/bundle_max_bytes: 1400
+ * /swarm_bridge/bundle_port: 4200
+ * /swarm_bridge/bundle_queue_max: 100
+ * /swarm_bridge/bundle_tick_hz: 10.0
+ * /swarm_bridge/bundle_transport: udp
+ * /swarm_bridge/health_log_dir: /home/yjq/catkin_...
+ * /swarm_bridge/health_matrix_period_s: 60.0
+ * /swarm_bridge/health_sample_hz: 0.5
+ * /swarm_bridge/max_freq: 0
+ * /swarm_bridge/packing: bundle
+ * /swarm_bridge/service_base_port: 14000
+ * /swarm_bridge/services: [{'name': '/UAV1/...
+ * /swarm_bridge/stall_warn_s: 1.5
+ * /swarm_bridge/topics: [{'name': 'uav_ta...
+ * /swarm_bridge/topology/GCS_A: ['UAV1', 'UAV2', ...
+ * /swarm_bridge/topology/UAV10: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV11: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV12: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV14: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV15: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV16: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV1: ['GCS_A', 'UAV2',...
+ * /swarm_bridge/topology/UAV2: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV3: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV4: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV5: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV6: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV7: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV8: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV9: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/uav_name: GCS_A
+ * /swarm_bridge/uavs: [{'name': 'GCS_A'...
+ * /swarm_bridge/zmq_dealer_sndtimeo_ms: 500
+ * /swarm_bridge/zmq_heartbeat_ivl_ms: 1000
+ * /swarm_bridge/zmq_heartbeat_timeout_ms: 10000
+ * /swarm_bridge/zmq_reconnect_ivl_max_ms: 1000
+ * /swarm_bridge/zmq_reconnect_ivl_ms: 200
+ * /tcp_server_node/action_name: /group_a/execute_...
+ * /tcp_server_node/emergency_hold_service: /group_a/emergenc...
+ * /tcp_server_node/host: 0.0.0.0
+ * /tcp_server_node/port: 39001
+ * /tcp_server_node/state_topic: /group_a/group_ta...
+
+NODES
+  /
+    gcs_a_backend_node (tcp_to_ros/gcs_a_backend_node.py)
+    gcs_a_calibration (tcp_to_ros/gcs_a_calibration_node.py)
+    swarm_bridge (swarm_topology_bridge/bridge_node.py)
+    tcp_server_node (tcp_to_ros/tcp_server_node.py)
+
+auto-starting new master
+[1mprocess[master]: started with pid [66616][0m
+[1mROS_MASTER_URI=http://localhost:11311[0m
+]2;verification/full_fleet_joint/gcs_real.launch http://localhost:11311
+[1msetting /run_id to a8c56580-cd04-11f1-99df-d11d630efd1f[0m
+[1mprocess[rosout-1]: started with pid [66658][0m
+started core service [/rosout]
+[1mprocess[swarm_bridge-2]: started with pid [66665][0m
+[1mprocess[gcs_a_backend_node-3]: started with pid [66666][0m
+[1mprocess[gcs_a_calibration-4]: started with pid [66667][0m
+[1mprocess[tcp_server_node-5]: started with pid [66668][0m
+[tcp_server_node-5] killing on exit
+[gcs_a_calibration-4] killing on exit
+[gcs_a_backend_node-3] killing on exit
+[swarm_bridge-2] killing on exit
+[rosout-1] killing on exit
+[master] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+[1mdone[0m

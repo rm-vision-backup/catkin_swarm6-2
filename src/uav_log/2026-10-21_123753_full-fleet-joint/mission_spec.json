@@ -1,0 +1,1278 @@
+{
+  "schema_version": "1.0",
+  "mission_id": "full-fleet-joint-001",
+  "fleet_file": "/home/yjq/catkin_swarm6-2/verification/full_fleet_joint/fleet.yaml",
+  "available_uavs": [
+    "UAV1",
+    "UAV2",
+    "UAV3",
+    "UAV6",
+    "UAV7",
+    "UAV8",
+    "UAV11",
+    "UAV12",
+    "UAV16",
+    "UAV4",
+    "UAV9",
+    "UAV5",
+    "UAV10",
+    "UAV14",
+    "UAV15"
+  ],
+  "unused_uavs": [],
+  "formation_block": "left",
+  "slot_replacements": {
+    "UAV13": "UAV16"
+  },
+  "ground_positions": {
+    "A01": {
+      "x": -10.0,
+      "y": 5.0,
+      "z": 0.0,
+      "yaw": 0.0
+    },
+    "A02": {
+      "x": -5.0,
+      "y": 5.0,
+      "z": 0.0,
+      "yaw": 0.0
+    },
+    "A03": {
+      "x": 0.0,
+      "y": 5.0,
+      "z": 0.0,
+      "yaw": 0.0
+    },
+    "A06": {
+      "x": -10.0,
+      "y": 0.0,
+      "z": 0.0,
+      "yaw": 0.0
+    },
+    "A07": {
+      "x": -5.0,
+      "y": 0.0,
+      "z": 0.0,
+      "yaw": 0.0
+    },
+    "A08": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "yaw": 0.0
+    },
+    "A11": {
+      "x": -10.0,
+      "y": -5.0,
+      "z": 0.0,
+      "yaw": 0.0
+    },
+    "A12": {
+      "x": -5.0,
+      "y": -5.0,
+      "z": 0.0,
+      "yaw": 0.0
+    },
+    "A16": {
+      "x": 0.0,
+      "y": -5.0,
+      "z": 0.0,
+      "yaw": 0.0
+    },
+    "A04": {
+      "x": 5.0,
+      "y": 5.0,
+      "z": 0.0,
+      "yaw": 0.0
+    },
+    "A09": {
+      "x": 5.0,
+      "y": 0.0,
+      "z": 0.0,
+      "yaw": 0.0
+    },
+    "A05": {
+      "x": 10.0,
+      "y": 5.0,
+      "z": 0.0,
+      "yaw": 0.0
+    },
+    "A10": {
+      "x": 10.0,
+      "y": 0.0,
+      "z": 0.0,
+      "yaw": 0.0
+    },
+    "A14": {
+      "x": 5.0,
+      "y": -5.0,
+      "z": 0.0,
+      "yaw": 0.0
+    },
+    "A15": {
+      "x": 10.0,
+      "y": -5.0,
+      "z": 0.0,
+      "yaw": 0.0
+    }
+  },
+  "initial_ids": [
+    "A01",
+    "A02",
+    "A03",
+    "A06",
+    "A07",
+    "A08",
+    "A11",
+    "A12",
+    "A16"
+  ],
+  "core_ids": [
+    "A01",
+    "A02",
+    "A04",
+    "A06",
+    "A07",
+    "A09",
+    "A11",
+    "A12",
+    "A16"
+  ],
+  "faulted_ids": [
+    "A03",
+    "A08"
+  ],
+  "spare_ids": [
+    "A04",
+    "A09"
+  ],
+  "survivor_ids": [
+    "A01",
+    "A02",
+    "A06",
+    "A07",
+    "A11",
+    "A12",
+    "A16"
+  ],
+  "leader_id": "A06",
+  "b_uavs": [
+    "UAV5",
+    "UAV10",
+    "UAV14",
+    "UAV15"
+  ],
+  "b_ids": [
+    "A05",
+    "A10",
+    "A14",
+    "A15"
+  ],
+  "b_strike_ids": [
+    "A05",
+    "A10",
+    "A14"
+  ],
+  "b_reserve_id": "A15",
+  "b_failed_id": "A10",
+  "b_final_ids": [
+    "A05",
+    "A14",
+    "A15"
+  ],
+  "coverage_strips": 4,
+  "coverage_step_m": 12.0,
+  "all_ids": [
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A05",
+    "A06",
+    "A07",
+    "A08",
+    "A09",
+    "A10",
+    "A11",
+    "A12",
+    "A14",
+    "A15",
+    "A16"
+  ],
+  "fault_count": 2,
+  "b_targets": {
+    "A05": {
+      "x": -8.0,
+      "y": 50.0,
+      "z": 5.0,
+      "yaw": 0.0
+    },
+    "A10": {
+      "x": 10.0,
+      "y": 80.0,
+      "z": 5.0,
+      "yaw": 0.0
+    },
+    "A14": {
+      "x": 24.0,
+      "y": 80.0,
+      "z": 5.0,
+      "yaw": 0.0
+    }
+  },
+  "b_failed_hover": {
+    "x": 4.0,
+    "y": 80.0,
+    "z": 5.0,
+    "yaw": 0.0
+  },
+  "phases": [
+    {
+      "name": "prepare",
+      "timeout_s": 240.0,
+      "requires": "",
+      "publishes": "GROUPS_READY",
+      "dwell_s": 0.0,
+      "steps": [
+        {
+          "plan_id": "prepare-a-1",
+          "observe_only": false
+        },
+        {
+          "plan_id": "prepare-a-2",
+          "observe_only": false
+        },
+        {
+          "plan_id": "prepare-spares",
+          "observe_only": true
+        },
+        {
+          "plan_id": "prepare-b-hold",
+          "observe_only": true
+        }
+      ]
+    },
+    {
+      "name": "coverage1",
+      "timeout_s": 240.0,
+      "requires": "GROUPS_READY",
+      "publishes": "",
+      "dwell_s": 0.0,
+      "steps": [
+        {
+          "plan_id": "coverage-segment-1",
+          "observe_only": false
+        }
+      ]
+    },
+    {
+      "name": "fault",
+      "timeout_s": 180.0,
+      "requires": "",
+      "publishes": "",
+      "dwell_s": 0.0,
+      "steps": [
+        {
+          "plan_id": "fault-exit",
+          "observe_only": false
+        }
+      ]
+    },
+    {
+      "name": "recovery",
+      "timeout_s": 180.0,
+      "requires": "",
+      "publishes": "",
+      "dwell_s": 0.0,
+      "steps": [
+        {
+          "plan_id": "recovery-spares",
+          "observe_only": false
+        },
+        {
+          "plan_id": "recovery-hold",
+          "observe_only": true
+        }
+      ]
+    },
+    {
+      "name": "coverage2",
+      "timeout_s": 360.0,
+      "requires": "",
+      "publishes": "RECON_COMPLETE",
+      "dwell_s": 0.0,
+      "steps": [
+        {
+          "plan_id": "coverage-segment-2",
+          "observe_only": false
+        }
+      ]
+    },
+    {
+      "name": "strike",
+      "timeout_s": 180.0,
+      "requires": "RECON_COMPLETE",
+      "publishes": "",
+      "dwell_s": 0.0,
+      "steps": [
+        {
+          "plan_id": "mock-b-strike",
+          "observe_only": false
+        }
+      ]
+    },
+    {
+      "name": "strike_fail",
+      "timeout_s": 180.0,
+      "requires": "",
+      "publishes": "",
+      "dwell_s": 0.0,
+      "steps": [
+        {
+          "plan_id": "mock-b-fail",
+          "observe_only": false
+        }
+      ]
+    },
+    {
+      "name": "strike_reinforce",
+      "timeout_s": 180.0,
+      "requires": "",
+      "publishes": "",
+      "dwell_s": 0.0,
+      "steps": [
+        {
+          "plan_id": "mock-b-reinforce",
+          "observe_only": false
+        }
+      ]
+    },
+    {
+      "name": "strike_hold",
+      "timeout_s": 30.0,
+      "requires": "",
+      "publishes": "STRIKE_COMPLETE",
+      "dwell_s": 3.0,
+      "steps": [
+        {
+          "plan_id": "mock-b-hold",
+          "observe_only": true
+        }
+      ]
+    },
+    {
+      "name": "return_a",
+      "timeout_s": 300.0,
+      "requires": "STRIKE_COMPLETE",
+      "publishes": "",
+      "dwell_s": 0.0,
+      "steps": [
+        {
+          "plan_id": "return-a",
+          "observe_only": false
+        }
+      ]
+    },
+    {
+      "name": "hold",
+      "timeout_s": 30.0,
+      "requires": "",
+      "publishes": "",
+      "dwell_s": 3.0,
+      "steps": [
+        {
+          "plan_id": "hold-end",
+          "observe_only": true
+        }
+      ]
+    }
+  ],
+  "plan_members": {
+    "prepare-a-1": [
+      "A01",
+      "A06",
+      "A11"
+    ],
+    "prepare-a-2": [
+      "A02",
+      "A03",
+      "A07",
+      "A08",
+      "A12",
+      "A16"
+    ],
+    "prepare-spares": [
+      "A04",
+      "A09"
+    ],
+    "prepare-b-hold": [
+      "A05",
+      "A10",
+      "A14",
+      "A15"
+    ],
+    "coverage-segment-1": [
+      "A01",
+      "A02",
+      "A03",
+      "A06",
+      "A07",
+      "A08",
+      "A11",
+      "A12",
+      "A16"
+    ],
+    "fault-exit": [
+      "A03",
+      "A08"
+    ],
+    "recovery-spares": [
+      "A04",
+      "A09"
+    ],
+    "recovery-hold": [
+      "A01",
+      "A02",
+      "A04",
+      "A06",
+      "A07",
+      "A09",
+      "A11",
+      "A12",
+      "A16"
+    ],
+    "coverage-segment-2": [
+      "A01",
+      "A02",
+      "A04",
+      "A06",
+      "A07",
+      "A09",
+      "A11",
+      "A12",
+      "A16"
+    ],
+    "mock-b-strike": [
+      "A05",
+      "A10",
+      "A14"
+    ],
+    "mock-b-fail": [
+      "A10"
+    ],
+    "mock-b-reinforce": [
+      "A15"
+    ],
+    "mock-b-hold": [
+      "A05",
+      "A10",
+      "A14",
+      "A15"
+    ],
+    "return-a": [
+      "A01",
+      "A02",
+      "A04",
+      "A06",
+      "A07",
+      "A09",
+      "A11",
+      "A12",
+      "A16"
+    ],
+    "hold-end": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "A08",
+      "A09",
+      "A10",
+      "A11",
+      "A12",
+      "A14",
+      "A15",
+      "A16"
+    ]
+  },
+  "expected_targets": {
+    "prepare-a-1": {
+      "A01": {
+        "x": -10.0,
+        "y": 6.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A06": {
+        "x": -10.0,
+        "y": 1.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A11": {
+        "x": -10.0,
+        "y": -4.0,
+        "z": 12.0,
+        "yaw": 0.0
+      }
+    },
+    "prepare-a-2": {
+      "A02": {
+        "x": -5.0,
+        "y": 6.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A03": {
+        "x": 0.0,
+        "y": 6.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A07": {
+        "x": -5.0,
+        "y": 1.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A08": {
+        "x": 0.0,
+        "y": 1.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A12": {
+        "x": -5.0,
+        "y": -4.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A16": {
+        "x": 0.0,
+        "y": -4.0,
+        "z": 12.0,
+        "yaw": 0.0
+      }
+    },
+    "prepare-spares": {
+      "A04": {
+        "x": 5.0,
+        "y": 5.0,
+        "z": 5.0,
+        "yaw": 0.0
+      },
+      "A09": {
+        "x": 5.0,
+        "y": 0.0,
+        "z": 5.0,
+        "yaw": 0.0
+      }
+    },
+    "prepare-b-hold": {
+      "A05": {
+        "x": 10.0,
+        "y": 5.0,
+        "z": 5.0,
+        "yaw": 0.0
+      },
+      "A10": {
+        "x": 10.0,
+        "y": 0.0,
+        "z": 5.0,
+        "yaw": 0.0
+      },
+      "A14": {
+        "x": 5.0,
+        "y": -5.0,
+        "z": 5.0,
+        "yaw": 0.0
+      },
+      "A15": {
+        "x": 10.0,
+        "y": -5.0,
+        "z": 5.0,
+        "yaw": 0.0
+      }
+    },
+    "coverage-segment-1": {
+      "A01": {
+        "x": -10.0,
+        "y": 66.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A02": {
+        "x": -5.0,
+        "y": 66.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A03": {
+        "x": 0.0,
+        "y": 66.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A06": {
+        "x": -10.0,
+        "y": 61.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A07": {
+        "x": -5.0,
+        "y": 61.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A08": {
+        "x": 0.0,
+        "y": 61.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A11": {
+        "x": -10.0,
+        "y": 56.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A12": {
+        "x": -5.0,
+        "y": 56.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A16": {
+        "x": 0.0,
+        "y": 56.0,
+        "z": 12.0,
+        "yaw": 0.0
+      }
+    },
+    "fault-exit": {
+      "A03": {
+        "x": -20.0,
+        "y": 66.0,
+        "z": 8.0,
+        "yaw": 0.0
+      },
+      "A08": {
+        "x": -20.0,
+        "y": 61.0,
+        "z": 8.0,
+        "yaw": 0.0
+      }
+    },
+    "recovery-spares": {
+      "A04": {
+        "x": 0.0,
+        "y": 66.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A09": {
+        "x": 0.0,
+        "y": 61.0,
+        "z": 12.0,
+        "yaw": 0.0
+      }
+    },
+    "recovery-hold": {
+      "A01": {
+        "x": -10.0,
+        "y": 66.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A02": {
+        "x": -5.0,
+        "y": 66.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A06": {
+        "x": -10.0,
+        "y": 61.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A07": {
+        "x": -5.0,
+        "y": 61.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A11": {
+        "x": -10.0,
+        "y": 56.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A12": {
+        "x": -5.0,
+        "y": 56.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A16": {
+        "x": 0.0,
+        "y": 56.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A04": {
+        "x": 0.0,
+        "y": 66.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A09": {
+        "x": 0.0,
+        "y": 61.0,
+        "z": 12.0,
+        "yaw": 0.0
+      }
+    },
+    "coverage-segment-2": {
+      "A01": {
+        "x": 26.0,
+        "y": 126.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A02": {
+        "x": 31.0,
+        "y": 126.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A04": {
+        "x": 36.0,
+        "y": 126.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A06": {
+        "x": 26.0,
+        "y": 121.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A07": {
+        "x": 31.0,
+        "y": 121.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A09": {
+        "x": 36.0,
+        "y": 121.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A11": {
+        "x": 26.0,
+        "y": 116.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A12": {
+        "x": 31.0,
+        "y": 116.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A16": {
+        "x": 36.0,
+        "y": 116.0,
+        "z": 12.0,
+        "yaw": 0.0
+      }
+    },
+    "mock-b-strike": {
+      "A05": {
+        "x": -8.0,
+        "y": 50.0,
+        "z": 5.0,
+        "yaw": 0.0
+      },
+      "A10": {
+        "x": 10.0,
+        "y": 80.0,
+        "z": 5.0,
+        "yaw": 0.0
+      },
+      "A14": {
+        "x": 24.0,
+        "y": 80.0,
+        "z": 5.0,
+        "yaw": 0.0
+      }
+    },
+    "mock-b-fail": {
+      "A10": {
+        "x": 4.0,
+        "y": 80.0,
+        "z": 5.0,
+        "yaw": 0.0
+      }
+    },
+    "mock-b-reinforce": {
+      "A15": {
+        "x": 10.0,
+        "y": 80.0,
+        "z": 5.0,
+        "yaw": 0.0
+      }
+    },
+    "mock-b-hold": {
+      "A05": {
+        "x": -8.0,
+        "y": 50.0,
+        "z": 5.0,
+        "yaw": 0.0
+      },
+      "A14": {
+        "x": 24.0,
+        "y": 80.0,
+        "z": 5.0,
+        "yaw": 0.0
+      },
+      "A15": {
+        "x": 10.0,
+        "y": 80.0,
+        "z": 5.0,
+        "yaw": 0.0
+      },
+      "A10": {
+        "x": 4.0,
+        "y": 80.0,
+        "z": 5.0,
+        "yaw": 0.0
+      }
+    },
+    "return-a": {
+      "A01": {
+        "x": -10.0,
+        "y": 6.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A02": {
+        "x": -5.0,
+        "y": 6.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A04": {
+        "x": 0.0,
+        "y": 6.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A06": {
+        "x": -10.0,
+        "y": 1.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A07": {
+        "x": -5.0,
+        "y": 1.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A09": {
+        "x": 0.0,
+        "y": 1.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A11": {
+        "x": -10.0,
+        "y": -4.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A12": {
+        "x": -5.0,
+        "y": -4.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A16": {
+        "x": 0.0,
+        "y": -4.0,
+        "z": 12.0,
+        "yaw": 0.0
+      }
+    },
+    "hold-end": {
+      "A01": {
+        "x": -10.0,
+        "y": 6.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A02": {
+        "x": -5.0,
+        "y": 6.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A04": {
+        "x": 0.0,
+        "y": 6.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A06": {
+        "x": -10.0,
+        "y": 1.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A07": {
+        "x": -5.0,
+        "y": 1.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A09": {
+        "x": 0.0,
+        "y": 1.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A11": {
+        "x": -10.0,
+        "y": -4.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A12": {
+        "x": -5.0,
+        "y": -4.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A16": {
+        "x": 0.0,
+        "y": -4.0,
+        "z": 12.0,
+        "yaw": 0.0
+      },
+      "A03": {
+        "x": -20.0,
+        "y": 66.0,
+        "z": 8.0,
+        "yaw": 0.0
+      },
+      "A08": {
+        "x": -20.0,
+        "y": 61.0,
+        "z": 8.0,
+        "yaw": 0.0
+      },
+      "A05": {
+        "x": -8.0,
+        "y": 50.0,
+        "z": 5.0,
+        "yaw": 0.0
+      },
+      "A14": {
+        "x": 24.0,
+        "y": 80.0,
+        "z": 5.0,
+        "yaw": 0.0
+      },
+      "A15": {
+        "x": 10.0,
+        "y": 80.0,
+        "z": 5.0,
+        "yaw": 0.0
+      },
+      "A10": {
+        "x": 4.0,
+        "y": 80.0,
+        "z": 5.0,
+        "yaw": 0.0
+      }
+    }
+  },
+  "calibration": {
+    "compute": [
+      "UAV6",
+      "UAV7",
+      "UAV8",
+      "UAV9",
+      "UAV10"
+    ],
+    "all": [
+      "UAV1",
+      "UAV2",
+      "UAV3",
+      "UAV4",
+      "UAV5",
+      "UAV6",
+      "UAV7",
+      "UAV8",
+      "UAV9",
+      "UAV10",
+      "UAV11",
+      "UAV12",
+      "UAV14",
+      "UAV15",
+      "UAV16"
+    ],
+    "row_index": 1,
+    "row_center": "UAV8",
+    "origin_y_nominal": 0.0,
+    "shift_y": -0.0,
+    "sample_window_s": 8.0
+  },
+  "geometry_checks": {
+    "min_slot_spacing_m": 5.0,
+    "coverage_envelope": {
+      "min_x": -10.0,
+      "max_x": 36.0,
+      "min_y": -4.0,
+      "max_y": 126.0
+    },
+    "b_targets_inside_coverage": true,
+    "coverage_scan_rects": [
+      [
+        -14.0,
+        4.0,
+        -4.0,
+        66.0
+      ],
+      [
+        -2.0,
+        16.0,
+        56.0,
+        126.0
+      ],
+      [
+        10.0,
+        28.0,
+        56.0,
+        126.0
+      ],
+      [
+        22.0,
+        40.0,
+        56.0,
+        126.0
+      ]
+    ],
+    "min_b_a_strike_3d_m": 36.276714294434115,
+    "b_a_vertical_m": 7.0,
+    "min_fault_b_horizontal_m": 16.278820596099706,
+    "fault_formation_vertical_m": 4.0,
+    "min_prepare_batch_clearance_m": 5.0,
+    "min_move_to_displacement_m": 1.0,
+    "calibration_median_x_m": 0.0,
+    "calibration_row_y_m": 0.0,
+    "shift_y_m": -0.0
+  },
+  "scheduler": [
+    {
+      "plan_id": "prepare-a-1",
+      "schedule_status": "SCHEDULE_OK",
+      "max_tau_s": 0.0,
+      "max_horizontal_time_s": 1.4285714285714286,
+      "budget_s": 3.428571428571429,
+      "timeout_s": 240.0,
+      "non_global_optimal": false
+    },
+    {
+      "plan_id": "prepare-a-2",
+      "schedule_status": "SCHEDULE_OK",
+      "max_tau_s": 0.0,
+      "max_horizontal_time_s": 1.4285714285714286,
+      "budget_s": 3.428571428571429,
+      "timeout_s": 240.0,
+      "non_global_optimal": false
+    },
+    {
+      "plan_id": "recovery-spares",
+      "schedule_status": "SCHEDULE_OK",
+      "max_tau_s": 0.0,
+      "max_horizontal_time_s": 87.43510713199632,
+      "budget_s": 89.43510713199632,
+      "timeout_s": 180.0,
+      "non_global_optimal": false
+    },
+    {
+      "plan_id": "mock-b-strike",
+      "schedule_status": "SCHEDULE_OK",
+      "max_tau_s": 0.0,
+      "max_horizontal_time_s": 124.42520907380957,
+      "budget_s": 126.42520907380957,
+      "timeout_s": 180.0,
+      "non_global_optimal": false
+    },
+    {
+      "plan_id": "mock-b-fail",
+      "schedule_status": "SCHEDULE_OK",
+      "max_tau_s": 0.0,
+      "max_horizontal_time_s": 8.571428571428571,
+      "budget_s": 10.571428571428571,
+      "timeout_s": 180.0,
+      "non_global_optimal": false
+    },
+    {
+      "plan_id": "mock-b-reinforce",
+      "schedule_status": "SCHEDULE_OK",
+      "max_tau_s": 0.0,
+      "max_horizontal_time_s": 121.42857142857143,
+      "budget_s": 123.42857142857143,
+      "timeout_s": 180.0,
+      "non_global_optimal": false
+    },
+    {
+      "plan_id": "fault-exit",
+      "schedule_status": "SCHEDULE_OK",
+      "max_tau_s": 0.0,
+      "max_horizontal_time_s": 28.571428571428573,
+      "budget_s": 30.571428571428573,
+      "timeout_s": 180.0,
+      "non_global_optimal": false
+    }
+  ],
+  "formation_offsets": {
+    "leader_id": "A06",
+    "mission_anchor": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "formations": {
+      "recon_initial": {
+        "participants": [
+          "A01",
+          "A02",
+          "A03",
+          "A06",
+          "A07",
+          "A08",
+          "A11",
+          "A12",
+          "A16"
+        ],
+        "offsets": {
+          "A01": [
+            0.0,
+            5.0,
+            0.0
+          ],
+          "A02": [
+            5.0,
+            5.0,
+            0.0
+          ],
+          "A03": [
+            10.0,
+            5.0,
+            0.0
+          ],
+          "A06": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "A07": [
+            5.0,
+            0.0,
+            0.0
+          ],
+          "A08": [
+            10.0,
+            0.0,
+            0.0
+          ],
+          "A11": [
+            0.0,
+            -5.0,
+            0.0
+          ],
+          "A12": [
+            5.0,
+            -5.0,
+            0.0
+          ],
+          "A16": [
+            10.0,
+            -5.0,
+            0.0
+          ]
+        }
+      },
+      "recon_recovered": {
+        "participants": [
+          "A01",
+          "A02",
+          "A04",
+          "A06",
+          "A07",
+          "A09",
+          "A11",
+          "A12",
+          "A16"
+        ],
+        "offsets": {
+          "A01": [
+            0.0,
+            5.0,
+            0.0
+          ],
+          "A02": [
+            5.0,
+            5.0,
+            0.0
+          ],
+          "A06": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "A07": [
+            5.0,
+            0.0,
+            0.0
+          ],
+          "A11": [
+            0.0,
+            -5.0,
+            0.0
+          ],
+          "A12": [
+            5.0,
+            -5.0,
+            0.0
+          ],
+          "A16": [
+            10.0,
+            -5.0,
+            0.0
+          ],
+          "A04": [
+            10.0,
+            5.0,
+            0.0
+          ],
+          "A09": [
+            10.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    }
+  }
+}

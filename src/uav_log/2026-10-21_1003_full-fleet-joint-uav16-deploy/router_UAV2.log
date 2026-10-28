@@ -1,0 +1,12 @@
+Warning: Permanently added '192.168.5.21' (ECDSA) to the list of known hosts.
+ENABLED=enabled
+ACTIVE=active
+MainPID=1004
+NRestarts=0
+ExecStart={ path=/home/nvidia/Mavlink_Routerd_Sh/mavlink-routerd ; argv[]=/home/nvidia/Mavlink_Routerd_Sh/mavlink-routerd -e 127.0.0.1:15500 /dev/ttyTHS0:921600 ; ignore_errors=no ; start_time=[Wed 2026-10-21 10:13:15 CST] ; stop_time=[n/a] ; pid=1004 ; code=(null) ; status=0/0 }
+INSTANCES=1
+1004 /home/nvidia/Mavlink_Routerd_Sh/mavlink-routerd -e 127.0.0.1:15500 /dev/ttyTHS0:921600
+Oct 21 10:13:15 UAV2 systemd[1]: Started mavlink-routerd (UAV onboard MAVLink router: FCU UART <-> local mavros).
+Oct 21 10:13:15 UAV2 mavlink-routerd[1004]: Error while trying to write serial port latency on /dev/ttyTHS0: Invalid argument
+Oct 21 10:13:15 UAV2 mavlink-routerd[1004]: Opened UART [4]CLI: /dev/ttyTHS0
+Oct 21 10:13:15 UAV2 mavlink-routerd[1004]: Opened UDP Client [5]CLI: 127.0.0.1:15500

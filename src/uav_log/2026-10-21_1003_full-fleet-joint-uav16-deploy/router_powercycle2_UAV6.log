@@ -1,0 +1,7 @@
+ENABLED=enabled
+ACTIVE=active
+MainPID=1022
+NRestarts=0
+ExecStart={ path=/home/nvidia/Mavlink_Routerd_Sh/mavlink-routerd ; argv[]=/home/nvidia/Mavlink_Routerd_Sh/mavlink-routerd -e 127.0.0.1:15500 /dev/ttyTHS0:921600 ; ignore_errors=no ; start_time=[Wed 2026-10-21 11:31:19 CST] ; stop_time=[n/a] ; pid=1022 ; code=(null) ; status=0/0 }
+INSTANCES=1
+1022 /home/nvidia/Mavlink_Routerd_Sh/mavlink-routerd -e 127.0.0.1:15500 /dev/ttyTHS0:921600

@@ -1,0 +1,42 @@
+TARGET         SYS_OFF    SYS_TIME              RTC_TIME                      RTC_DEV  RTC_DELTA  RESULT
+------------------------------------------------------------------------------------------------------
+UAV1           0s         2026-10-21 10:14:06 CST 2026-10-21 10:14:09 CST       /dev/rtc0 3s         PASS
+    base=1792548846 sys_before=1792548848 sys_step=-2s rtc_all=rtc1:1s rtc0:3s  rtc_src=hwclock rtc_before=n/a adjtime=UTC
+UAV2           0s         2026-10-21 10:14:12 CST 2026-10-21 10:14:15 CST       /dev/rtc0 3s         PASS
+    base=1792548852 sys_before=1792548853 sys_step=-1s rtc_all=rtc1:1s rtc0:3s  rtc_src=hwclock rtc_before=n/a adjtime=UTC
+UAV3           0s         2026-10-21 10:14:17 CST 2026-10-21 10:14:20 CST       /dev/rtc0 3s         PASS
+    base=1792548857 sys_before=1792548859 sys_step=-2s rtc_all=rtc1:1s rtc0:3s  rtc_src=hwclock rtc_before=n/a adjtime=UTC
+UAV4           -          -                     -                             -        -          FAIL(unreachable: ssh: connect to host 192.168.5.41 port 22: No route to host)
+UAV5           0s         2026-10-21 10:14:26 CST 2026-10-21 10:14:29 CST       /dev/rtc0 3s         PASS
+    base=1792548866 sys_before=1792548867 sys_step=-1s rtc_all=rtc1:1s rtc0:3s  rtc_src=hwclock rtc_before=n/a adjtime=UTC
+UAV6           0s         2026-10-21 10:14:32 CST 2026-10-21 10:14:35 CST       /dev/rtc0 3s         PASS
+    base=1792548872 sys_before=1792548874 sys_step=-2s rtc_all=rtc1:1s rtc0:3s  rtc_src=hwclock rtc_before=n/a adjtime=UTC
+UAV7           0s         2026-10-21 10:14:38 CST 2026-10-21 10:14:41 CST       /dev/rtc0 3s         PASS
+    base=1792548878 sys_before=86 sys_step=1792548792s rtc_all=rtc1:1s rtc0:3s  rtc_src=hwclock rtc_before=n/a adjtime=UTC
+UAV8           0s         2026-10-21 10:14:43 CST 2026-10-21 10:14:46 CST       /dev/rtc0 3s         PASS
+    base=1792548883 sys_before=1792548885 sys_step=-2s rtc_all=rtc1:1s rtc0:3s  rtc_src=hwclock rtc_before=n/a adjtime=UTC
+UAV9           0s         2026-10-21 10:14:49 CST 2026-10-21 10:14:52 CST       /dev/rtc0 3s         PASS
+    base=1792548889 sys_before=119 sys_step=1792548770s rtc_all=rtc1:1s rtc0:3s  rtc_src=hwclock rtc_before=n/a adjtime=UTC
+UAV10          0s         2026-10-21 10:14:55 CST 2026-10-21 10:14:58 CST       /dev/rtc0 3s         PASS
+    base=1792548895 sys_before=1792548898 sys_step=-3s rtc_all=rtc1:1s rtc0:3s  rtc_src=hwclock rtc_before=n/a adjtime=UTC
+UAV11          0s         2026-10-21 10:15:01 CST 2026-10-21 10:15:04 CST       /dev/rtc0 3s         PASS
+    base=1792548901 sys_before=1792548903 sys_step=-2s rtc_all=rtc1:1s rtc0:3s  rtc_src=hwclock rtc_before=n/a adjtime=UTC
+UAV12          0s         2026-10-21 10:15:06 CST 2026-10-21 10:15:08 CST       /dev/rtc1 2s         PASS
+    base=1792548906 sys_before=149 sys_step=1792548757s rtc_all=rtc0:1s rtc1:2s  rtc_src=hwclock rtc_before=n/a adjtime=UTC
+UAV14          0s         2026-10-21 10:15:10 CST 2026-10-21 10:15:13 CST       /dev/rtc0 3s         PASS
+    base=1792548910 sys_before=1792548911 sys_step=-1s rtc_all=rtc1:1s rtc0:3s  rtc_src=hwclock rtc_before=n/a adjtime=UTC
+UAV15          -          -                     -                             -        -          FAIL(unreachable: ssh: connect to host 192.168.5.151 port 22: No route to host)
+UAV16          0s         2026-10-21 10:15:19 CST 2026-10-21 10:15:22 CST       /dev/rtc0 3s         PASS
+    base=1792548919 sys_before=1792548918 sys_step=1s rtc_all=rtc1:1s rtc0:3s  rtc_src=hwclock rtc_before=n/a adjtime=UTC
+TARGET         SYS_OFF    SYS_TIME              RTC_TIME                      RTC_DEV  RTC_DELTA  RESULT
+------------------------------------------------------------------------------------------------------
+UAV4           -          -                     -                             -        -          FAIL(unreachable: ssh: connect to host 192.168.5.41 port 22: No route to host)
+UAV15          -          -                     -                             -        -          FAIL(unreachable: ssh: connect to host 192.168.5.151 port 22: No route to host)
+TARGET         SYS_OFF    SYS_TIME              RTC_TIME                      RTC_DEV  RTC_DELTA  RESULT
+------------------------------------------------------------------------------------------------------
+UAV4           0s         2026-10-21 10:18:53 CST 2026-10-21 10:18:56 CST       /dev/rtc0 3s         PASS
+    base=1792549133 sys_before=1792549160 sys_step=-27s rtc_all=rtc1:1s rtc0:3s  rtc_src=hwclock rtc_before=n/a adjtime=UTC
+TARGET         SYS_OFF    SYS_TIME              RTC_TIME                      RTC_DEV  RTC_DELTA  RESULT
+------------------------------------------------------------------------------------------------------
+UAV15          0s         2026-10-21 10:21:20 CST 2026-10-21 10:21:22 CST       /dev/rtc1 2s         PASS
+    base=1792549280 sys_before=1792549286 sys_step=-6s rtc_all=rtc0:1s rtc1:2s  rtc_src=hwclock rtc_before=n/a adjtime=UTC

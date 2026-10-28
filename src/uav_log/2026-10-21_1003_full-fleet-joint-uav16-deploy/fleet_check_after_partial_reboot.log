@@ -1,0 +1,15 @@
+UAV1 epoch=1792556915 time=12:28:35 up=up57minutes roslaunch=1 
+UAV2 epoch=1792556915 time=12:28:35 up=up56minutes roslaunch=1 
+UAV3 epoch=1792556914 time=12:28:34 up=up47minutes roslaunch=1 
+UAV4 epoch=1792556915 time=12:28:35 up=up56minutes roslaunch=1 
+UAV5 epoch=1792556916 time=12:28:36 up=up0minutes roslaunch=0 
+UAV6 epoch=1792556917 time=12:28:37 up=up57minutes roslaunch=1 
+UAV7 ssh: connect to host 192.168.5.71 port 22: Connection timed out 
+UAV8 ssh: connect to host 192.168.5.81 port 22: Connection timed out 
+UAV9 epoch=1792556917 time=12:28:37 up=up24minutes roslaunch=1 
+UAV10 epoch=1792556917 time=12:28:37 up=up56minutes roslaunch=1 
+UAV11 epoch=1792556933 time=12:28:53 up=up57minutes roslaunch=1 
+UAV12 ssh: connect to host 192.168.5.121 port 22: No route to host 
+UAV14 epoch=1792556925 time=12:28:45 up=up54minutes roslaunch=1 
+UAV15 epoch=1792556925 time=12:28:45 up=up57minutes roslaunch=1 
+UAV16 epoch=1792556925 time=12:28:45 up=up58minutes roslaunch=1 

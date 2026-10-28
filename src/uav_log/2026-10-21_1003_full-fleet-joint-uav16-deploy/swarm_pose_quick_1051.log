@@ -1,0 +1,94 @@
+== odom 通畅性快查（10:52:21；15 台并行）==
+  [UAV3] 健康文件 1.8s 前更新
+     本机发出 swarm_pose: rx=4999 tx=1666 drop=3331 age=2ms gt1000=0 stalls=0
+     收到邻机 swarm_pose: rx=18222 srcs=14 age_max=39644ms  stale_srcs=['UAV5'] gt1000=25 stalls=21
+     近期事件: stall_end  UAV16
+     近期事件: stall_end  UAV16
+     近期事件: matrix  
+  [UAV14] 健康文件 2.0s 前更新
+     本机发出 swarm_pose: rx=3551 tx=1185 drop=2366 age=10ms gt1000=0 stalls=0
+     收到邻机 swarm_pose: rx=14960 srcs=14 age_max=96ms gt1000=47 stalls=23
+     近期事件: stall_end  UAV15
+     近期事件: stall_end  UAV15
+     近期事件: matrix  
+  [UAV15] 健康文件 1.7s 前更新
+     本机发出 swarm_pose: rx=3438 tx=1146 drop=2291 age=13ms gt1000=0 stalls=0
+     收到邻机 swarm_pose: rx=11537 srcs=14 age_max=101ms gt1000=79 stalls=61
+     近期事件: stall_end  UAV10
+     近期事件: stall_end  UAV14
+     近期事件: matrix  
+  [UAV5] 健康文件 0.9s 前更新
+     本机发出 swarm_pose: rx=3858 tx=1286 drop=2570 age=18ms gt1000=0 stalls=0
+     收到邻机 swarm_pose: rx=10430 srcs=14 age_max=40979ms  stale_srcs=['UAV1', 'UAV2', 'UAV3', 'UAV6', 'UAV11', 'UAV10'] gt1000=107 stalls=56
+     近期事件: stall_start  UAV1
+     近期事件: stall_end  UAV12
+     近期事件: matrix  
+  [UAV4] 健康文件 1.6s 前更新
+     本机发出 swarm_pose: rx=4097 tx=1366 drop=2730 age=29ms gt1000=0 stalls=0
+     收到邻机 swarm_pose: rx=17472 srcs=14 age_max=98ms gt1000=15 stalls=14
+     近期事件: stall_end  UAV5
+     近期事件: stall_end  UAV5
+     近期事件: matrix  
+  [UAV2] 健康文件 0.0s 前更新
+     本机发出 swarm_pose: rx=5196 tx=1727 drop=3468 age=15ms gt1000=0 stalls=0
+     收到邻机 swarm_pose: rx=18382 srcs=14 age_max=4314ms  stale_srcs=['UAV5'] gt1000=29 stalls=23
+     近期事件: stall_start  UAV5
+     近期事件: stall_start  UAV5
+     近期事件: matrix  
+  [UAV6] 健康文件 0.5s 前更新
+     本机发出 swarm_pose: rx=4954 tx=1646 drop=3306 age=30ms gt1000=0 stalls=0
+     收到邻机 swarm_pose: rx=18523 srcs=14 age_max=5453ms  stale_srcs=['UAV5'] gt1000=28 stalls=20
+     近期事件: stall_start  UAV5
+     近期事件: stall_start  UAV5
+     近期事件: matrix  
+  [UAV11] 健康文件 1.8s 前更新
+     本机发出 swarm_pose: rx=4524 tx=1506 drop=3016 age=8ms gt1000=0 stalls=0
+     收到邻机 swarm_pose: rx=17701 srcs=14 age_max=4533ms  stale_srcs=['UAV5'] gt1000=27 stalls=17
+     近期事件: stall_start  UAV5
+     近期事件: stall_start  UAV5
+     近期事件: matrix  
+  [UAV1] 健康文件 0.0s 前更新
+     本机发出 swarm_pose: rx=5362 tx=1787 drop=3574 age=23ms gt1000=0 stalls=0
+     收到邻机 swarm_pose: rx=18838 srcs=14 age_max=1810ms  stale_srcs=['UAV5'] gt1000=27 stalls=21
+     近期事件: stall_start  UAV5
+     近期事件: stall_start  UAV5
+     近期事件: matrix  
+  [UAV9] 健康文件 0.3s 前更新
+     本机发出 swarm_pose: rx=4043 tx=1346 drop=2694 age=5ms gt1000=0 stalls=0
+     收到邻机 swarm_pose: rx=17312 srcs=14 age_max=810ms gt1000=22 stalls=16
+     近期事件: stall_end  UAV5
+     近期事件: stall_end  UAV5
+     近期事件: matrix  
+  [UAV7] 健康文件 0.5s 前更新
+     本机发出 swarm_pose: rx=4823 tx=1606 drop=3215 age=10ms gt1000=0 stalls=0
+     收到邻机 swarm_pose: rx=18003 srcs=14 age_max=93ms gt1000=39 stalls=33
+     近期事件: stall_end  UAV5
+     近期事件: stall_end  UAV5
+     近期事件: matrix  
+  [UAV12] 健康文件 1.6s 前更新
+     本机发出 swarm_pose: rx=4406 tx=1466 drop=2938 age=3ms gt1000=0 stalls=0
+     收到邻机 swarm_pose: rx=17735 srcs=14 age_max=89ms gt1000=32 stalls=25
+     近期事件: stall_end  UAV5
+     近期事件: stall_end  UAV5
+     近期事件: matrix  
+  [UAV16] 健康文件 1.4s 前更新
+     本机发出 swarm_pose: rx=4288 tx=1425 drop=2862 age=19ms gt1000=0 stalls=0
+     收到邻机 swarm_pose: rx=17555 srcs=14 age_max=258ms gt1000=30 stalls=19
+     近期事件: stall_end  UAV5
+     近期事件: stall_end  UAV5
+     近期事件: matrix  
+  [UAV10] 健康文件 1.7s 前更新
+     本机发出 swarm_pose: rx=3803 tx=1266 drop=2536 age=4ms gt1000=0 stalls=0
+     收到邻机 swarm_pose: rx=14274 srcs=14 age_max=41125ms  stale_srcs=['UAV5'] gt1000=58 stalls=19
+     近期事件: stall_start  UAV5
+     近期事件: stall_start  UAV5
+     近期事件: matrix  
+  [UAV8] 健康文件 1.0s 前更新
+     本机发出 swarm_pose: rx=4769 tx=1587 drop=3179 age=27ms gt1000=0 stalls=0
+     收到邻机 swarm_pose: rx=19031 srcs=14 age_max=91ms gt1000=31 stalls=20
+     近期事件: stall_end  UAV5
+     近期事件: stall_end  UAV5
+     近期事件: matrix  
+  判读：领机（UAV6）看"本机发出 odom"（rx/tx 在涨，drop 是限频丢弃属正常）；跟随者看
+  "收到邻机 odom"（age_max 应 ~50 ms 内、stale_srcs 空）。stale_srcs 里出现 UAV6 = 跟随环
+  输入断了（9/22 型故障），立刻跑 `bag`（若还没录）并在两分钟后复跑本命令看是否恢复。

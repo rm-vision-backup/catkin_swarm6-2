@@ -1,0 +1,11 @@
+ENABLED=enabled
+ACTIVE=active
+MainPID=1026
+NRestarts=0
+ExecStart={ path=/home/nvidia/Mavlink_Routerd_Sh/mavlink-routerd ; argv[]=/home/nvidia/Mavlink_Routerd_Sh/mavlink-routerd -e 127.0.0.1:15500 /dev/ttyTHS0:921600 ; ignore_errors=no ; start_time=[Thu 1970-01-01 08:00:35 CST] ; stop_time=[n/a] ; pid=1026 ; code=(null) ; status=0/0 }
+INSTANCES=1
+1026 /home/nvidia/Mavlink_Routerd_Sh/mavlink-routerd -e 127.0.0.1:15500 /dev/ttyTHS0:921600
+Jan 01 08:00:35 UAV9 systemd[1]: Started mavlink-routerd (UAV onboard MAVLink router: FCU UART <-> local mavros).
+Jan 01 08:00:35 UAV9 mavlink-routerd[1026]: Error while trying to write serial port latency on /dev/ttyTHS0: Invalid argument
+Jan 01 08:00:35 UAV9 mavlink-routerd[1026]: Opened UART [4]CLI: /dev/ttyTHS0
+Jan 01 08:00:35 UAV9 mavlink-routerd[1026]: Opened UDP Client [5]CLI: 127.0.0.1:15500

@@ -1,0 +1,563 @@
+[ERROR] [1792554294.838024]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554296.938118]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554298.938257]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554301.037867]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554303.038172]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554305.138111]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554307.238089]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554309.238227]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554311.337982]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554313.338036]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554315.338149]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554317.438147]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554319.538246]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554321.538264]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554323.638174]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554325.738007]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554327.738288]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554329.838360]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554331.938111]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554334.038381]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554336.138065]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554338.138305]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554340.238371]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554342.238379]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554378.638205]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554380.638298]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554383.638020]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554385.638300]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554389.838236]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554407.438306]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554409.538334]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554429.638207]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554431.738249]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554433.838157]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554435.838192]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554448.638012]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554457.338000]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554459.338227]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554471.038301]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554473.138107]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554475.138557]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554477.238241]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554479.338283]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554481.338284]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554483.338456]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554485.438261]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554487.438419]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554489.538427]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554501.838382]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554513.438508]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554515.537952]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554520.638357]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554529.138098]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554531.238010]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554533.238266]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554535.338063]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554537.438370]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554539.638043]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554541.638255]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554543.738123]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554545.838473]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554556.038211]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554558.138345]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554560.238163]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554562.338382]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554564.338500]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554566.438105]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554568.438411]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554570.538474]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554572.637954]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554574.638317]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554576.638388]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554578.738410]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554580.738442]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554582.738538]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554584.838552]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554586.938479]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554589.038598]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554591.138111]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554593.238352]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554595.338452]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554597.338473]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554599.438362]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554601.538417]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554603.637971]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554605.637985]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554607.638067]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554609.738243]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554612.438069]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554614.438299]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554616.538339]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554618.637995]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554620.638237]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554622.738239]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554624.838197]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554626.938174]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554637.238336]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554639.338343]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554641.438374]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554643.438571]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554645.537836]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554647.538422]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554649.638399]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554651.738236]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554653.738264]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554655.838217]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554657.838473]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554659.838580]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554661.938373]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554663.938415]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554665.938496]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554667.938596]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554670.038866]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554672.138398]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554674.238452]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554676.338415]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554678.438227]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554680.438352]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554682.438474]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554684.538124]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554686.638239]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554688.738253]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554690.838240]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554692.838453]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554694.938118]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554697.038306]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554699.138066]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554706.438234]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554708.438377]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554710.538436]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554712.638365]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554714.738340]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554716.738387]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554718.738386]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554720.838416]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554722.938363]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554725.038451]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554727.138489]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554729.238332]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554731.338278]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554733.438267]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554735.538280]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554737.538435]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554739.638131]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554741.638350]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554743.638488]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554745.737687]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554747.738292]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554749.738470]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554751.837823]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554753.838394]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554755.838403]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554757.838494]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554759.938353]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554762.038470]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554764.138538]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554766.238022]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554768.238374]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554770.238433]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554772.338530]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554774.438195]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554776.538218]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554778.638246]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554780.638375]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554782.738467]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554784.838392]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554786.838475]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554788.938331]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554791.038519]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554793.138085]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554852.238131]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554854.238409]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554856.338211]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554858.338425]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554860.438214]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554862.438299]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554864.438397]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554866.538309]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554868.538383]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554870.638388]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554872.738205]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554874.738206]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554876.738258]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554878.838403]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554880.938346]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554882.938361]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554884.938433]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554887.038115]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554889.038349]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554891.038377]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554893.138083]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554895.138202]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554897.237836]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554899.238104]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554901.338108]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554903.338207]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554905.338233]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554907.338309]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554909.438271]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554911.538353]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554913.638240]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554915.738441]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554917.838318]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554919.938172]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554922.038188]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554924.138072]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554926.138172]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554928.238161]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554930.238202]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554932.238337]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554934.338192]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554936.338201]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554938.438233]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554940.538258]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554942.638156]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554944.737952]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[WARN] [1792554276.930522]: UAV link A02/UAV2 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[WARN] [1792554277.132706]: UAV link A06/UAV6 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[WARN] [1792554277.234807]: UAV link A04/UAV4 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[WARN] [1792554277.436900]: UAV link A07/UAV7 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[WARN] [1792554277.539016]: UAV link A09/UAV9 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[WARN] [1792554277.641027]: UAV link A14/UAV14 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[WARN] [1792554277.642737]: UAV link A01/UAV1 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[WARN] [1792554277.744548]: UAV link A10/UAV10 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[WARN] [1792554278.146864]: UAV link A16/UAV16 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[WARN] [1792554278.248956]: UAV link A11/UAV11 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[WARN] [1792554278.751432]: UAV link A15/UAV15 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[WARN] [1792554279.955308]: UAV link A02/UAV2 DISCOVERED -> HEALTHY age=0.056 reason=valid MAVROS heartbeat is stable
+[WARN] [1792554280.157853]: UAV link A06/UAV6 DISCOVERED -> HEALTHY age=0.038 reason=valid MAVROS heartbeat is stable
+[WARN] [1792554280.260098]: UAV link A04/UAV4 DISCOVERED -> HEALTHY age=0.051 reason=valid MAVROS heartbeat is stable
+[WARN] [1792554280.462071]: UAV link A07/UAV7 DISCOVERED -> HEALTHY age=0.037 reason=valid MAVROS heartbeat is stable
+[WARN] [1792554280.463660]: UAV link A09/UAV9 DISCOVERED -> HEALTHY age=0.026 reason=valid MAVROS heartbeat is stable
+[WARN] [1792554280.565512]: UAV link A12/UAV12 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[WARN] [1792554280.567522]: UAV link A14/UAV14 DISCOVERED -> HEALTHY age=0.001 reason=valid MAVROS heartbeat is stable
+[WARN] [1792554280.669183]: UAV link A01/UAV1 DISCOVERED -> HEALTHY age=0.076 reason=valid MAVROS heartbeat is stable
+[WARN] [1792554280.771358]: UAV link A10/UAV10 DISCOVERED -> HEALTHY age=0.028 reason=valid MAVROS heartbeat is stable
+[WARN] [1792554281.174013]: UAV link A11/UAV11 DISCOVERED -> HEALTHY age=0.027 reason=valid MAVROS heartbeat is stable
+[WARN] [1792554281.175251]: UAV link A16/UAV16 DISCOVERED -> HEALTHY age=0.099 reason=valid MAVROS heartbeat is stable
+[WARN] [1792554281.677078]: UAV link A15/UAV15 DISCOVERED -> HEALTHY age=0.008 reason=valid MAVROS heartbeat is stable
+[WARN] [1792554283.581657]: UAV link A12/UAV12 DISCOVERED -> HEALTHY age=0.029 reason=valid MAVROS heartbeat is stable
+[WARN] [1792554289.697278]: UAV link A08/UAV8 UNDISCOVERED -> DISCOVERED age=-1.000 reason=first MAVROS state received
+[WARN] [1792554292.704888]: UAV link A08/UAV8 DISCOVERED -> HEALTHY age=3.072 reason=valid MAVROS heartbeat is stable
+[WARN] [1792554347.708412]: UAV link A08/UAV8 HEALTHY -> SUSPECT age=10.077 reason=valid MAVROS heartbeat is stale
+[WARN] [1792554352.518286]: UAV link A07/UAV7 HEALTHY -> SUSPECT age=10.094 reason=valid MAVROS heartbeat is stale
+[WARN] [1792554352.720244]: UAV link A08/UAV8 SUSPECT -> LOST age=15.089 reason=valid MAVROS heartbeat timed out
+[WARN] [1792554357.430800]: UAV link A07/UAV7 SUSPECT -> LOST age=15.006 reason=valid MAVROS heartbeat timed out
+[WARN] [1792554361.440222]: UAV link A07/UAV7 LOST -> RECOVERED age=0.017 reason=valid MAVROS heartbeat recovered
+[WARN] [1792554364.446218]: UAV link A07/UAV7 RECOVERED -> HEALTHY age=1.022 reason=valid MAVROS heartbeat is stable
+[WARN] [1792554364.748809]: UAV link A15/UAV15 HEALTHY -> SUSPECT age=10.081 reason=valid MAVROS heartbeat is stale
+[WARN] [1792554367.755206]: UAV link A15/UAV15 SUSPECT -> DISCOVERED age=0.087 reason=waiting for healthy stability window
+[WARN] [1792554370.762401]: UAV link A15/UAV15 DISCOVERED -> HEALTHY age=0.094 reason=valid MAVROS heartbeat is stable
+[WARN] [1792554372.667625]: UAV link A08/UAV8 LOST -> RECOVERED age=0.038 reason=valid MAVROS heartbeat recovered
+[WARN] [1792554375.674669]: UAV link A08/UAV8 RECOVERED -> HEALTHY age=3.045 reason=valid MAVROS heartbeat is stable
+[WARN] [1792554399.720135]: UAV link A08/UAV8 HEALTHY -> SUSPECT age=10.092 reason=valid MAVROS heartbeat is stale
+[WARN] [1792554400.723199]: UAV link A08/UAV8 SUSPECT -> DISCOVERED age=0.095 reason=waiting for healthy stability window
+[WARN] [1792554403.629517]: UAV link A08/UAV8 DISCOVERED -> HEALTHY age=2.001 reason=valid MAVROS heartbeat is stable
+[WARN] [1792554417.652997]: UAV link A08/UAV8 HEALTHY -> SUSPECT age=10.024 reason=valid MAVROS heartbeat is stale
+[WARN] [1792554418.656523]: UAV link A08/UAV8 SUSPECT -> DISCOVERED age=0.028 reason=waiting for healthy stability window
+[WARN] [1792554421.663190]: UAV link A08/UAV8 DISCOVERED -> HEALTHY age=3.035 reason=valid MAVROS heartbeat is stable
+[WARN] [1792554428.677936]: UAV link A08/UAV8 HEALTHY -> SUSPECT age=10.049 reason=valid MAVROS heartbeat is stale
+[WARN] [1792554429.681887]: UAV link A08/UAV8 SUSPECT -> DISCOVERED age=0.053 reason=waiting for healthy stability window
+[WARN] [1792554432.689127]: UAV link A08/UAV8 DISCOVERED -> HEALTHY age=2.060 reason=valid MAVROS heartbeat is stable
+[WARN] [1792554440.705384]: UAV link A08/UAV8 HEALTHY -> SUSPECT age=10.076 reason=valid MAVROS heartbeat is stale
+[WARN] [1792554445.717254]: UAV link A08/UAV8 SUSPECT -> LOST age=15.088 reason=valid MAVROS heartbeat timed out
+[WARN] [1792554448.724405]: UAV link A08/UAV8 LOST -> RECOVERED age=0.096 reason=valid MAVROS heartbeat recovered
+[WARN] [1792554451.633247]: UAV link A08/UAV8 RECOVERED -> HEALTHY age=3.005 reason=valid MAVROS heartbeat is stable
+[WARN] [1792554464.659814]: UAV link A08/UAV8 HEALTHY -> SUSPECT age=10.032 reason=valid MAVROS heartbeat is stale
+[WARN] [1792554465.662736]: UAV link A08/UAV8 SUSPECT -> DISCOVERED age=0.034 reason=waiting for healthy stability window
+[WARN] [1792554468.669672]: UAV link A08/UAV8 DISCOVERED -> HEALTHY age=3.041 reason=valid MAVROS heartbeat is stable
+[WARN] [1792554494.719347]: UAV link A08/UAV8 HEALTHY -> SUSPECT age=10.092 reason=valid MAVROS heartbeat is stale
+[WARN] [1792554495.723195]: UAV link A08/UAV8 SUSPECT -> DISCOVERED age=0.096 reason=waiting for healthy stability window
+[WARN] [1792554498.630422]: UAV link A08/UAV8 DISCOVERED -> HEALTHY age=2.003 reason=valid MAVROS heartbeat is stable
+[WARN] [1792554506.646639]: UAV link A08/UAV8 HEALTHY -> SUSPECT age=10.020 reason=valid MAVROS heartbeat is stale
+[WARN] [1792554507.650187]: UAV link A08/UAV8 SUSPECT -> DISCOVERED age=0.023 reason=waiting for healthy stability window
+[WARN] [1792554510.657231]: UAV link A08/UAV8 DISCOVERED -> HEALTHY age=3.030 reason=valid MAVROS heartbeat is stable
+[WARN] [1792554550.631760]: UAV link A08/UAV8 HEALTHY -> SUSPECT age=10.006 reason=valid MAVROS heartbeat is stale
+[WARN] [1792554552.638154]: UAV link A08/UAV8 SUSPECT -> DISCOVERED age=0.012 reason=waiting for healthy stability window
+[WARN] [1792554555.645924]: UAV link A08/UAV8 DISCOVERED -> HEALTHY age=0.020 reason=valid MAVROS heartbeat is stable
+[WARN] [1792554632.691976]: UAV link A08/UAV8 HEALTHY -> SUSPECT age=10.067 reason=valid MAVROS heartbeat is stale
+[WARN] [1792554633.695402]: UAV link A08/UAV8 SUSPECT -> DISCOVERED age=0.069 reason=waiting for healthy stability window
+[WARN] [1792554636.703032]: UAV link A08/UAV8 DISCOVERED -> HEALTHY age=0.078 reason=valid MAVROS heartbeat is stable
+[WARN] [1792554797.312025]: UAV link A08/UAV8 HEALTHY -> SUSPECT age=10.091 reason=valid MAVROS heartbeat is stale
+[WARN] [1792554802.223070]: UAV link A08/UAV8 SUSPECT -> LOST age=15.002 reason=valid MAVROS heartbeat timed out
+[WARN] [1792554848.314144]: UAV link A08/UAV8 LOST -> RECOVERED age=0.093 reason=valid MAVROS heartbeat recovered
+[WARN] [1792554851.221626]: UAV link A08/UAV8 RECOVERED -> HEALTHY age=0.001 reason=valid MAVROS heartbeat is stable
+[WARN] [1792554276.607757]: TCP port 39001 is inside Linux ip_local_port_range and is not reserved; add it to net.ipv4.ip_local_reserved_ports on the GCS host to prevent ROS XML-RPC port collisions
+[INFO] [1792554276.614698]: waiting for action server /group_a/execute_task
+[INFO] [1792554276.776883]: connected to action server /group_a/execute_task
+[INFO] [1792554276.778500]: waiting for service /group_a/emergency_hold
+[INFO] [1792554276.779817]: tcp_to_ros listening on 0.0.0.0:39001
+[ERROR] [1792554946.738426]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554948.838166]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554950.838547]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554952.838560]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554954.838847]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554956.938456]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554959.038471]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554961.137937]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554963.138384]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554965.238455]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554967.338274]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554969.338363]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554971.438438]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554973.438454]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554975.438491]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554977.438520]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554979.538522]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554981.538547]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554983.538545]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554985.638558]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554987.738506]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554989.838576]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554991.938561]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554994.038519]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554996.138430]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792554998.238530]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792555000.338542]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792555002.438470]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792555004.538431]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792555006.638458]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792555008.638456]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792555010.738425]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792555012.738479]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792555014.738501]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[ERROR] [1792555016.838483]: calibration blocked: heading spread in UAV6,UAV7,UAV8,UAV9,UAV10 exceeds 30 degrees
+[INFO] [1792554276.609221]: calibration set=UAV6,UAV7,UAV8,UAV9,UAV10 all_uavs=15 identity_file=/home/yjq/catkin_swarm6-2/src/tcp_to_ros/config/uav_identity_map.yaml
+[INFO] [1792555017.040257]: calibration frozen from UAV6,UAV7,UAV8,UAV9,UAV10 (heading gate 30deg) origin=(38.498451400,103.206311400,1348.704) heading=-1.064 rad
+[INFO] [1792555017.137847]: calibration ready pending UAVn: UAV6,UAV7,UAV8,UAV9,UAV10 (confirmed=0/5)
+[INFO] [1792555017.339371]: Group A calibration ready: 5/5 required UAVs confirmed (UAV6,UAV7,UAV8,UAV9,UAV10); tracking 15 known UAVs
+[WARN] [1792555376.499918]: UAV link A09/UAV9 HEALTHY -> SUSPECT age=10.084 reason=valid MAVROS heartbeat is stale
+[WARN] [1792555381.512089]: UAV link A09/UAV9 SUSPECT -> LOST age=15.096 reason=valid MAVROS heartbeat timed out
+[WARN] [1792555485.300955]: UAV link A09/UAV9 LOST -> RECOVERED age=0.085 reason=valid MAVROS heartbeat recovered
+[WARN] [1792555488.307595]: UAV link A09/UAV9 RECOVERED -> HEALTHY age=0.091 reason=valid MAVROS heartbeat is stable
+[INFO] [1792554276.639891]: GCS_A subscribed to /UAV1/uav_task_state
+[INFO] [1792554276.641397]: GCS_A subscribed to /UAV1/mavros/state
+[INFO] [1792554276.643301]: GCS_A subscribed to /UAV1/mavros/local_position/pose
+[INFO] [1792554276.644742]: GCS_A subscribed to /UAV2/uav_task_state
+[INFO] [1792554276.646199]: GCS_A subscribed to /UAV2/mavros/state
+[INFO] [1792554276.647547]: GCS_A subscribed to /UAV2/mavros/local_position/pose
+[INFO] [1792554276.649376]: GCS_A subscribed to /UAV3/uav_task_state
+[INFO] [1792554276.650478]: GCS_A subscribed to /UAV3/mavros/state
+[INFO] [1792554276.651562]: GCS_A subscribed to /UAV3/mavros/local_position/pose
+[INFO] [1792554276.652680]: GCS_A subscribed to /UAV4/uav_task_state
+[INFO] [1792554276.653717]: GCS_A subscribed to /UAV4/mavros/state
+[INFO] [1792554276.654742]: GCS_A subscribed to /UAV4/mavros/local_position/pose
+[INFO] [1792554276.655929]: GCS_A subscribed to /UAV5/uav_task_state
+[INFO] [1792554276.656984]: GCS_A subscribed to /UAV5/mavros/state
+[INFO] [1792554276.657754]: GCS_A subscribed to /UAV5/mavros/local_position/pose
+[INFO] [1792554276.658473]: GCS_A subscribed to /UAV6/uav_task_state
+[INFO] [1792554276.659161]: GCS_A subscribed to /UAV6/mavros/state
+[INFO] [1792554276.659825]: GCS_A subscribed to /UAV6/mavros/local_position/pose
+[INFO] [1792554276.660488]: GCS_A subscribed to /UAV7/uav_task_state
+[INFO] [1792554276.661173]: GCS_A subscribed to /UAV7/mavros/state
+[INFO] [1792554276.661840]: GCS_A subscribed to /UAV7/mavros/local_position/pose
+[INFO] [1792554276.662497]: GCS_A subscribed to /UAV8/uav_task_state
+[INFO] [1792554276.663161]: GCS_A subscribed to /UAV8/mavros/state
+[INFO] [1792554276.663820]: GCS_A subscribed to /UAV8/mavros/local_position/pose
+[INFO] [1792554276.664476]: GCS_A subscribed to /UAV9/uav_task_state
+[INFO] [1792554276.665153]: GCS_A subscribed to /UAV9/mavros/state
+[INFO] [1792554276.665831]: GCS_A subscribed to /UAV9/mavros/local_position/pose
+[INFO] [1792554276.666497]: GCS_A subscribed to /UAV10/uav_task_state
+[INFO] [1792554276.667161]: GCS_A subscribed to /UAV10/mavros/state
+[INFO] [1792554276.667860]: GCS_A subscribed to /UAV10/mavros/local_position/pose
+[INFO] [1792554276.668516]: GCS_A subscribed to /UAV11/uav_task_state
+[INFO] [1792554276.669195]: GCS_A subscribed to /UAV11/mavros/state
+[INFO] [1792554276.671056]: GCS_A subscribed to /UAV11/mavros/local_position/pose
+[INFO] [1792554276.676104]: GCS_A subscribed to /UAV12/uav_task_state
+[INFO] [1792554276.677338]: GCS_A subscribed to /UAV12/mavros/state
+[INFO] [1792554276.678434]: GCS_A subscribed to /UAV12/mavros/local_position/pose
+[INFO] [1792554276.679890]: GCS_A subscribed to /UAV13/uav_task_state
+[INFO] [1792554276.681122]: GCS_A subscribed to /UAV13/mavros/state
+[INFO] [1792554276.681937]: GCS_A subscribed to /UAV13/mavros/local_position/pose
+[INFO] [1792554276.683289]: GCS_A subscribed to /UAV14/uav_task_state
+[INFO] [1792554276.718879]: GCS_A subscribed to /UAV14/mavros/state
+[INFO] [1792554276.721843]: GCS_A subscribed to /UAV14/mavros/local_position/pose
+[INFO] [1792554276.723604]: GCS_A subscribed to /UAV15/uav_task_state
+[INFO] [1792554276.725238]: GCS_A subscribed to /UAV15/mavros/state
+[INFO] [1792554276.726636]: GCS_A subscribed to /UAV15/mavros/local_position/pose
+[INFO] [1792554276.727472]: GCS_A subscribed to /UAV16/uav_task_state
+[INFO] [1792554276.728191]: GCS_A subscribed to /UAV16/mavros/state
+[INFO] [1792554276.728912]: GCS_A subscribed to /UAV16/mavros/local_position/pose
+[INFO] [1792554276.736454]: GCS_A backend ready: action=/group_a/execute_task service=/group_a/emergency_hold uavs=16
+[INFO] [1792554276.611878]: bridge: UDP bundle bind=192.168.5.241:4200 peers=15 rcvbuf=425984 sndbuf=425984
+[INFO] [1792554276.612598]: bridge: my_name=GCS_A, port_offset=0, packing=bundle, transport=udp, topics=13, health=/home/yjq/catkin_swarm6-2/.ros_home/log/health/GCS_A_bridge_health.jsonl
+[INFO] [1792554276.613486]: bridge: recv sources=UAV1,UAV2,UAV3,UAV4,UAV5,UAV6,UAV7,UAV8,UAV9,UAV10,UAV11,UAV12,UAV14,UAV15,UAV16
+[INFO] [1792554276.777877]: bridge: proxying /UAV1/uav_task -> UAV1
+[INFO] [1792554276.780046]: bridge: dealer connected to UAV1 service router 192.168.5.11:14000
+[INFO] [1792554276.781799]: bridge: proxying /UAV1/uav_task_control -> UAV1
+[INFO] [1792554276.784003]: bridge: proxying /UAV1/uav_hold -> UAV1
+[INFO] [1792554276.785284]: bridge: proxying /UAV2/uav_task -> UAV2
+[INFO] [1792554276.815110]: bridge: dealer connected to UAV2 service router 192.168.5.21:14000
+[INFO] [1792554276.817497]: bridge: proxying /UAV2/uav_task_control -> UAV2
+[INFO] [1792554276.821223]: bridge: proxying /UAV2/uav_hold -> UAV2
+[INFO] [1792554276.823168]: bridge: proxying /UAV3/uav_task -> UAV3
+[INFO] [1792554276.824648]: bridge: dealer connected to UAV3 service router 192.168.5.31:14000
+[INFO] [1792554276.826736]: bridge: proxying /UAV3/uav_task_control -> UAV3
+[INFO] [1792554276.828419]: bridge: proxying /UAV3/uav_hold -> UAV3
+[INFO] [1792554276.830745]: bridge: proxying /UAV4/uav_task -> UAV4
+[INFO] [1792554276.831612]: bridge: dealer connected to UAV4 service router 192.168.5.41:14000
+[INFO] [1792554276.833173]: bridge: proxying /UAV4/uav_task_control -> UAV4
+[INFO] [1792554276.834385]: bridge: proxying /UAV4/uav_hold -> UAV4
+[INFO] [1792554276.835561]: bridge: proxying /UAV5/uav_task -> UAV5
+[INFO] [1792554276.836526]: bridge: dealer connected to UAV5 service router 192.168.5.51:14000
+[INFO] [1792554276.837927]: bridge: proxying /UAV5/uav_task_control -> UAV5
+[INFO] [1792554276.839887]: bridge: proxying /UAV5/uav_hold -> UAV5
+[INFO] [1792554276.841372]: bridge: proxying /UAV6/uav_task -> UAV6
+[INFO] [1792554276.844075]: bridge: dealer connected to UAV6 service router 192.168.5.61:14000
+[INFO] [1792554276.844887]: bridge: proxying /UAV6/uav_task_control -> UAV6
+[INFO] [1792554276.845540]: bridge: proxying /UAV6/uav_hold -> UAV6
+[INFO] [1792554276.846147]: bridge: proxying /UAV7/uav_task -> UAV7
+[INFO] [1792554276.846539]: bridge: dealer connected to UAV7 service router 192.168.5.71:14000
+[INFO] [1792554276.847122]: bridge: proxying /UAV7/uav_task_control -> UAV7
+[INFO] [1792554276.847607]: bridge: proxying /UAV7/uav_hold -> UAV7
+[INFO] [1792554276.848075]: bridge: proxying /UAV8/uav_task -> UAV8
+[INFO] [1792554276.848508]: bridge: dealer connected to UAV8 service router 192.168.5.81:14000
+[INFO] [1792554276.849030]: bridge: proxying /UAV8/uav_task_control -> UAV8
+[INFO] [1792554276.849512]: bridge: proxying /UAV8/uav_hold -> UAV8
+[INFO] [1792554276.849970]: bridge: proxying /UAV9/uav_task -> UAV9
+[INFO] [1792554276.850340]: bridge: dealer connected to UAV9 service router 192.168.5.91:14000
+[INFO] [1792554276.850912]: bridge: proxying /UAV9/uav_task_control -> UAV9
+[INFO] [1792554276.851924]: bridge: proxying /UAV9/uav_hold -> UAV9
+[INFO] [1792554276.852959]: bridge: proxying /UAV10/uav_task -> UAV10
+[INFO] [1792554276.853638]: bridge: dealer connected to UAV10 service router 192.168.5.101:14000
+[INFO] [1792554276.854579]: bridge: proxying /UAV10/uav_task_control -> UAV10
+[INFO] [1792554276.855455]: bridge: proxying /UAV10/uav_hold -> UAV10
+[INFO] [1792554276.856318]: bridge: proxying /UAV11/uav_task -> UAV11
+[INFO] [1792554276.856973]: bridge: dealer connected to UAV11 service router 192.168.5.111:14000
+[INFO] [1792554276.857944]: bridge: proxying /UAV11/uav_task_control -> UAV11
+[INFO] [1792554276.858815]: bridge: proxying /UAV11/uav_hold -> UAV11
+[INFO] [1792554276.859671]: bridge: proxying /UAV12/uav_task -> UAV12
+[INFO] [1792554276.860265]: bridge: dealer connected to UAV12 service router 192.168.5.121:14000
+[INFO] [1792554276.860878]: bridge: proxying /UAV12/uav_task_control -> UAV12
+[INFO] [1792554276.861477]: bridge: proxying /UAV12/uav_hold -> UAV12
+[INFO] [1792554276.862048]: bridge: proxying /UAV14/uav_task -> UAV14
+[INFO] [1792554276.862537]: bridge: dealer connected to UAV14 service router 192.168.5.141:14000
+[INFO] [1792554276.863235]: bridge: proxying /UAV14/uav_task_control -> UAV14
+[INFO] [1792554276.863874]: bridge: proxying /UAV14/uav_hold -> UAV14
+[INFO] [1792554276.864462]: bridge: proxying /UAV15/uav_task -> UAV15
+[INFO] [1792554276.864957]: bridge: dealer connected to UAV15 service router 192.168.5.151:14000
+[INFO] [1792554276.865606]: bridge: proxying /UAV15/uav_task_control -> UAV15
+[INFO] [1792554276.866195]: bridge: proxying /UAV15/uav_hold -> UAV15
+[INFO] [1792554276.866786]: bridge: proxying /UAV16/uav_task -> UAV16
+[INFO] [1792554276.867310]: bridge: dealer connected to UAV16 service router 192.168.5.161:14000
+[INFO] [1792554276.867951]: bridge: proxying /UAV16/uav_task_control -> UAV16
+[INFO] [1792554276.868496]: bridge: proxying /UAV16/uav_hold -> UAV16
+[INFO] [1792554276.869448]: bridge: link options (none)
+... logging to /home/yjq/.ros/log/bc0aacf2-cd01-11f1-99df-d11d630efd1f/roslaunch-yjq-61694.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;verification/full_fleet_joint/gcs_real.launch
+[1mstarted roslaunch server http://192.168.5.241:43711/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /gcs_a_backend_node/action_name: /group_a/execute_...
+ * /gcs_a_backend_node/confirm_deadline_s: 4.0
+ * /gcs_a_backend_node/confirm_retries: 2
+ * /gcs_a_backend_node/confirm_retry_interval_s: 0.2
+ * /gcs_a_backend_node/confirm_wait_s: 1.5
+ * /gcs_a_backend_node/emergency_hold_service: /group_a/emergenc...
+ * /gcs_a_backend_node/fault_exit_schedule_enabled: True
+ * /gcs_a_backend_node/formation_offsets_file: /home/yjq/catkin_...
+ * /gcs_a_backend_node/hold_batch_size: 4
+ * /gcs_a_backend_node/hold_retry_count: 2
+ * /gcs_a_backend_node/hold_retry_interval_s: 0.5
+ * /gcs_a_backend_node/horizontal_speed_mps: 0.7
+ * /gcs_a_backend_node/link_health_pre_task_wait_s: 10.0
+ * /gcs_a_backend_node/link_health_topic: /group_a/uav_link...
+ * /gcs_a_backend_node/link_healthy_window_s: 3.0
+ * /gcs_a_backend_node/link_lost_after_s: 15.0
+ * /gcs_a_backend_node/link_suspect_after_s: 10.0
+ * /gcs_a_backend_node/map_file: /home/yjq/catkin_...
+ * /gcs_a_backend_node/move_to_schedule_enabled: True
+ * /gcs_a_backend_node/require_calibration_ready: True
+ * /gcs_a_backend_node/schedule_geometric_distance_m: 1.3
+ * /gcs_a_backend_node/schedule_max_compute_time_s: 5.0
+ * /gcs_a_backend_node/schedule_max_interval_combinations: 2000
+ * /gcs_a_backend_node/schedule_max_start_delay_s: 30.0
+ * /gcs_a_backend_node/schedule_pose_timeout_s: 2.0
+ * /gcs_a_backend_node/schedule_safety_margin_m: 1.0
+ * /gcs_a_backend_node/schedule_time_epsilon_s: 1e-6
+ * /gcs_a_backend_node/start_dispatch_jitter_margin_s: 0.5
+ * /gcs_a_backend_node/start_service_budget_s: 1.5
+ * /gcs_a_calibration/all_uavs: ['UAV1', 'UAV2', ...
+ * /gcs_a_calibration/calibration_uavs: ['UAV6', 'UAV7', ...
+ * /gcs_a_calibration/identity_file: /home/yjq/catkin_...
+ * /gcs_a_calibration/sample_window_s: 8.0
+ * /rosdistro: noetic
+ * /rosversion: 1.17.4
+ * /swarm_bridge/base_port: 4200
+ * /swarm_bridge/bundle_max_bytes: 1400
+ * /swarm_bridge/bundle_port: 4200
+ * /swarm_bridge/bundle_queue_max: 100
+ * /swarm_bridge/bundle_tick_hz: 10.0
+ * /swarm_bridge/bundle_transport: udp
+ * /swarm_bridge/health_log_dir: /home/yjq/catkin_...
+ * /swarm_bridge/health_matrix_period_s: 60.0
+ * /swarm_bridge/health_sample_hz: 0.5
+ * /swarm_bridge/max_freq: 0
+ * /swarm_bridge/packing: bundle
+ * /swarm_bridge/service_base_port: 14000
+ * /swarm_bridge/services: [{'name': '/UAV1/...
+ * /swarm_bridge/stall_warn_s: 1.5
+ * /swarm_bridge/topics: [{'name': 'uav_ta...
+ * /swarm_bridge/topology/GCS_A: ['UAV1', 'UAV2', ...
+ * /swarm_bridge/topology/UAV10: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV11: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV12: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV14: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV15: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV16: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV1: ['GCS_A', 'UAV2',...
+ * /swarm_bridge/topology/UAV2: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV3: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV4: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV5: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV6: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV7: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV8: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/topology/UAV9: ['GCS_A', 'UAV1',...
+ * /swarm_bridge/uav_name: GCS_A
+ * /swarm_bridge/uavs: [{'name': 'GCS_A'...
+ * /swarm_bridge/zmq_dealer_sndtimeo_ms: 500
+ * /swarm_bridge/zmq_heartbeat_ivl_ms: 1000
+ * /swarm_bridge/zmq_heartbeat_timeout_ms: 10000
+ * /swarm_bridge/zmq_reconnect_ivl_max_ms: 1000
+ * /swarm_bridge/zmq_reconnect_ivl_ms: 200
+ * /tcp_server_node/action_name: /group_a/execute_...
+ * /tcp_server_node/emergency_hold_service: /group_a/emergenc...
+ * /tcp_server_node/host: 0.0.0.0
+ * /tcp_server_node/port: 39001
+ * /tcp_server_node/state_topic: /group_a/group_ta...
+
+NODES
+  /
+    gcs_a_backend_node (tcp_to_ros/gcs_a_backend_node.py)
+    gcs_a_calibration (tcp_to_ros/gcs_a_calibration_node.py)
+    swarm_bridge (swarm_topology_bridge/bridge_node.py)
+    tcp_server_node (tcp_to_ros/tcp_server_node.py)
+
+auto-starting new master
+[1mprocess[master]: started with pid [61786][0m
+[1mROS_MASTER_URI=http://localhost:11311[0m
+]2;verification/full_fleet_joint/gcs_real.launch http://localhost:11311
+[1msetting /run_id to bc0aacf2-cd01-11f1-99df-d11d630efd1f[0m
+[1mprocess[rosout-1]: started with pid [61828][0m
+started core service [/rosout]
+[1mprocess[swarm_bridge-2]: started with pid [61835][0m
+[1mprocess[gcs_a_backend_node-3]: started with pid [61836][0m
+[1mprocess[gcs_a_calibration-4]: started with pid [61837][0m
+[1mprocess[tcp_server_node-5]: started with pid [61838][0m
+[tcp_server_node-5] killing on exit
+[gcs_a_calibration-4] killing on exit
+[swarm_bridge-2] killing on exit
+[gcs_a_backend_node-3] killing on exit
+[rosout-1] killing on exit
+[master] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+[1mdone[0m
